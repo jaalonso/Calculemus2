@@ -5,4 +5,8 @@ Calculemus]] para demostrarlos con asistentes de pruebas (como Lean4 e
 Isabelle/HOL). Es una continuación del [[https://github.com/jaalonso/Calculemus/blob/main/README.org][repositorio anterior]] en el que se
 usaba Lean3 en lugar de Lean4.
 
-+ [[./textos/El_producto_por_un_par_es_par.md][El producto por un par es par]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean]]).
++ [[./textos/El_producto_por_un_par_es_par.md][∀ m n ∈ ℕ, Even n → Even (m * n)]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean4]]).
++ [[./textos/Asociativa_conmutativa_de_los_reales.md][∀ a b c ∈ ℝ, (a * b) * c = b * (a * c)]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean4]]).
++ [[./textos/(cb)a_eq_b(ac).md][∀ a b c ∈ ℝ, (c * b) * a = b * (a * c)]] (En [[./src/(cb)a_eq_b(ac).lean][Lean4]]).
++ [[./textos/a(bc)_eq_b(ac).md][∀ a b c ∈ ℝ, a * (b * c) = b * (a * c)]] (En [[./src/a(bc)_eq_b(ac).lean][Lean4]]).
++ [[./textos/a(be)_eq_c(df).md][Si ab = cd y e = f, entonces a(be) = c(df)]] (En [[./src/a(be)_eq_c(df).lean][Lean4]]).
