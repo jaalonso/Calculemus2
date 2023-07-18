@@ -68,6 +68,8 @@ example : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
 by rw [add_mul, mul_add, mul_add, ←add_assoc]
 </pre>
 
+Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. [Mathematics in Lean](https://bit.ly/3U4UjBk), p. 8.
++ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.

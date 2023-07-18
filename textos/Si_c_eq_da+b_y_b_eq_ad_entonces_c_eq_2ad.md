@@ -103,6 +103,8 @@ example
 by linarith
 </pre>
 
+Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https:/w/raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. [Mathematics in Lean](https://bit.ly/3U4UjBk), p. 8.
++ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.
