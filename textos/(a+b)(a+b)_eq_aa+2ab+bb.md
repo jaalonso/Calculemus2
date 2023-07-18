@@ -92,7 +92,7 @@ example :
 by linarith
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FCalculemus2%2Fmain%2Fsrc%2F(a+b)(a+b)_eq_aa+2ab+bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)_eq_aa+2ab+bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
