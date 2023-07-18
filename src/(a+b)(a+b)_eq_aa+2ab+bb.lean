@@ -5,7 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio. Demostrar que si a y b son números reales, entonces
+-- Demostrar que si a y b son números reales, entonces
 --    (a + b) * (a + b) = a * a + 2 * (a * b) + b * b
 -- ---------------------------------------------------------------------
 
@@ -62,7 +62,6 @@ by
   rw [mul_comm b a]
   rw [←two_mul]
 
-
 -- 6ª demostración
 example :
   (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
@@ -70,3 +69,8 @@ by
   rw [mul_add, add_mul, add_mul]
   rw [←add_assoc, add_assoc (a * a)]
   rw [mul_comm b a, ←two_mul]
+
+-- 7ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+by linarith

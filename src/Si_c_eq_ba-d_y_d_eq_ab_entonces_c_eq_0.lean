@@ -1,3 +1,9 @@
+-- Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean
+-- Si c = ba-d y d = ab, entonces c = 0
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 18-julio-2023
+-- ---------------------------------------------------------------------
+
 -- ---------------------------------------------------------------------
 -- Ejercicio. Demostrar que si a, b, c y d son números reales tales
 -- que
@@ -16,11 +22,11 @@ example
   (h1 : c = b * a - d)
   (h2 : d = a * b)
   : c = 0 :=
-by
-  rw [h1]
-  rw [mul_comm]
-  rw [h2]
-  rw [sub_self]
+calc
+  c = b * a - d     := by rw [h1]
+  _ = a * b - d     := by rw [mul_comm]
+  _ = a * b - a * b := by rw [h2]
+  _ = 0             := by rw [sub_self]
 
 -- 2ª demostración
 example
@@ -28,8 +34,8 @@ example
   (h1 : c = b * a - d)
   (h2 : d = a * b)
   : c = 0 :=
-calc
-  c = b * a - d     := by rw [h1]
-  _ = a * b - d     := by rw [mul_comm]
-  _ = a * b - a * b := by rw [h2]
-  _ = 0             := by rw [sub_self]
+by
+  rw [h1]
+  rw [mul_comm]
+  rw [h2]
+  rw [sub_self]
