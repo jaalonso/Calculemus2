@@ -27,7 +27,17 @@ sorry
 </pre>
 <!--more-->
 
-<b>Soluciones con Lean</b>
+<b>Demostración en lenguaje natural</b>
+
+[mathjax]
+Por la siguiente cadena de igualdades
+\begin{align}
+   (a + b)(a + b)
+   &= (a + b)c        &&\text{[por la hipótesis]}   \\
+   &= ac + bc         &&\text{[por la distributiva]}
+\end{align}
+
+<b>Demostraciones con Lean</b>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -53,8 +63,12 @@ by
   rw [add_mul]
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia%2Bb_eq_c_entonces_(a%2Bb)(a%2Bb)_eq_ac%2Bbc.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+<b>Demostraciones interactivas</b>
+
+Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia%2Bb_eq_c_entonces_(a%2Bb)(a%2Bb)_eq_ac%2Bbc.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 9.
+<ul>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 9.</li>
+</ul>

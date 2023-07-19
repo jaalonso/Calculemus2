@@ -11,6 +11,17 @@
 --    (a + b) * (a + b) = a * c + b * c
 -- ---------------------------------------------------------------------
 
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(a + b)
+--    = (a + b)c        [por la hipótesis]
+--    = ac + bc         [por la distributiva]
+
+-- Demostraciones con Lean4
+-- ========================
+
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
