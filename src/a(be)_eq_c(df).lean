@@ -1,3 +1,9 @@
+-- a(be)_eq_c(df).lean
+-- Si ab = cd y e = f, entonces a(be) = c(df).
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 14-julio-2023
+-- ---------------------------------------------------------------------
+
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
 --    a * b = c * d y
@@ -5,6 +11,19 @@
 -- entonces
 --    a * (b * e) = c * (d * f)
 -- ---------------------------------------------------------------------
+
+-- Demostración en leguaje natural
+-- ===============================
+
+-- Por la siguiente cadena de igualdades
+--    a(be)
+--    = a(bf) [por la segunda hipótesis]
+--    = (ab)f [por la asociativa]
+--    = (cd)f [por la primera hipótesis]
+--    = c(df) [por la asociativa]
+
+-- Demostraciones en Lean4
+-- =======================
 
 import Mathlib.Tactic
 import Mathlib.Data.Real.Basic
