@@ -1,5 +1,5 @@
 -- (a+b)(a-b)_eq_aa-bb.lean
--- (a + b) * (a - b) = a^2 - b^2
+-- (a+b)(a-b) = a^2-b^2
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 21-julio-2023
 -- ---------------------------------------------------------------------
@@ -8,6 +8,29 @@
 -- Demostrar que si a y b son números reales, entonces
 --    (a + b) * (a - b) = a^2 - b^2
 -- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades:
+--    (a + b)(a - b)
+--    = a(a - b) + b(a - b)            [por la distributiva]
+--    = (aa - ab) + b(a - b)           [por la distributiva]
+--    = (a^2 - ab) + b(a - b)          [por def. de cuadrado]
+--    = (a^2 - ab) + (ba - bb)         [por la distributiva]
+--    = (a^2 - ab) + (ba - b^2)        [por def. de cuadrado]
+--    = (a^2 + -(ab)) + (ba - b^2)     [por def. de resta]
+--    = a^2 + (-(ab) + (ba - b^2))     [por la asociativa]
+--    = a^2 + (-(ab) + (ba + -b^2))    [por def. de resta]
+--    = a^2 + ((-(ab) + ba) + -b^2)    [por la asociativa]
+--    = a^2 + ((-(ab) + ab) + -b^2)    [por la conmutativa]
+--    = a^2 + (0 + -b^2)               [por def. de opuesto]
+--    = (a^2 + 0) + -b^2               [por asociativa]
+--    = a^2 + -b^2                     [por def. de cero]
+--    = a^2 - b^2                      [por def. de resta]
+
+-- Demostraciones con Lean4
+-- ========================
 
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic

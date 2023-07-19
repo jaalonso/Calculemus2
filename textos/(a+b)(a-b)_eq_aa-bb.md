@@ -1,5 +1,5 @@
 ---
-Título: (a + b) * (a - b) = a^2 - b^2
+Título: (a+b)(a-b) = a^2-b^2
 Autor:  José A. Alonso
 ---
 
@@ -21,7 +21,29 @@ sorry
 </pre>
 <!--more-->
 
-<b>Soluciones con Lean</b>
+<b>Demostración en lenguaje natural</b>
+
+[mathjax]
+Por la siguiente cadena de igualdades:
+\begin{align}
+(a + b)(a - b)
+&= a(a - b) + b(a - b)            &&\text{[por la distributiva]} \\
+&= (aa - ab) + b(a - b)           &&\text{[por la distributiva]} \\
+&= (a^2 - ab) + b(a - b)          &&\text{[por def. de cuadrado]} \\
+&= (a^2 - ab) + (ba - bb)         &&\text{[por la distributiva]} \\
+&= (a^2 - ab) + (ba - b^2)        &&\text{[por def. de cuadrado]} \\
+&= (a^2 + -(ab)) + (ba - b^2)     &&\text{[por def. de resta]} \\
+&= a^2 + (-(ab) + (ba - b^2))     &&\text{[por la asociativa]} \\
+&= a^2 + (-(ab) + (ba + -b^2))    &&\text{[por def. de resta]} \\
+&= a^2 + ((-(ab) + ba) + -b^2)    &&\text{[por la asociativa]} \\
+&= a^2 + ((-(ab) + ab) + -b^2)    &&\text{[por la conmutativa]} \\
+&= a^2 + (0 + -b^2)               &&\text{[por def. de opuesto]} \\
+&= (a^2 + 0) + -b^2               &&\text{[por asociativa]} \\
+&= a^2 + -b^2                     &&\text{[por def. de cero]} \\
+&= a^2 - b^2                      &&\text{[por def. de resta]}
+\end{align}
+
+<b>Demostraciones con Lean</b>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -101,8 +123,12 @@ by
   rw [← sub_eq_add_neg]
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)_eq_aa-bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+<b>Demostraciones interactivas</b>
+
+Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)_eq_aa-bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.
+<ul>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.</li>
+</ul>
