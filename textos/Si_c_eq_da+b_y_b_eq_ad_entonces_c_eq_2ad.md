@@ -29,7 +29,19 @@ sorry
 </pre>
 <!--more-->
 
-<b>Soluciones con Lean</b>
+<b>Demostración en lenguaje natural</b>
+
+[mathjax]
+Por la siguiente cadena de igualdades
+\begin{align}
+   c &= da + b     &&\text{[por la primera hipótesis]} \\
+     &= da + ad    &&\text{[por la segunda hipótesis]} \\
+     &= ad + ad    &&\text{[por la conmutativa]} \\
+     &= 2(ad)      &&\text{[por la def. de doble]} \\
+     &= 2ad        &&\text{[por la asociativa]}
+\end{align}
+
+<b>Demostraciones con Lean</b>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -103,8 +115,12 @@ example
 by linarith
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_da%252Bb_y_b_eq_ad_entonces_c_eq_2ad.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+<b>Demostraciones interactivas</b>
+
+Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_da%252Bb_y_b_eq_ad_entonces_c_eq_2ad.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.
+<ul>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 8.</li>
+</ul>

@@ -1,16 +1,29 @@
 -- Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean
--- Si c = d * a + b y b = a * d, entonces c = 2 * a * d.
+-- Si c = da+b y b = ad, entonces c = 2ad.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 24-julio-2023
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio. Demostrar que si a, b, c y d son números reales tales que
+-- Demostrar que si a, b, c y d son números reales tales que
 --    c = d * a + b
 --    b = a * d
 -- entonces
 --    c = 2 * a * d
 -- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    c = da + b     [por la primera hipótesis]
+--      = da + ad    [por la segunda hipótesis]
+--      = ad + ad    [por la conmutativa]
+--      = 2(ad)      [por la def. de doble]
+--      = 2ad        [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
 
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
