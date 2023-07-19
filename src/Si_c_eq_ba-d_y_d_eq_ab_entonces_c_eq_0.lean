@@ -16,9 +16,9 @@
 -- ================================
 
 -- Por la siguiente cadena de igualdades
---    c = b * a - d        [por la primera hipótesis]
---      = a * b - d        [por la conmutativa]
---      = a * b - a * b    [por la segunda hipótesis]
+--    c = ba - d     [por la primera hipótesis]
+--      = ab - d     [por la conmutativa]
+--      = ab - ab    [por la segunda hipótesis]
 --      = 0
 
 -- Demostraciones en Lean4

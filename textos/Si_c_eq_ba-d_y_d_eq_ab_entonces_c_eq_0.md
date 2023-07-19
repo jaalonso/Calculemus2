@@ -30,11 +30,12 @@ by sorry
 
 <b>Demostración en lenguaje natural</b>
 
+[mathjax]
 Por la siguiente cadena de igualdades
 \begin{align}
-   c &= b * a - d        &&\text{[por la primera hipótesis]} \\
-     &= a * b - d        &&\text{[por la conmutativa]}       \\
-     &= a * b - a * b    &&\text{[por la segunda hipótesis]}
+   c &= ba - d     &&\text{[por la primera hipótesis]} \\
+     &= ab - d     &&\text{[por la conmutativa]}       \\
+     &= ab - ab    &&\text{[por la segunda hipótesis]} \\
      &= 0
 \end{align}
 
