@@ -112,7 +112,7 @@ example : ∀ m n : Nat, Even n → Even (m * n) := by
   intros; simp [*, parity_simps]
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El_producto_por_un_par_es_par" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El_producto_por_un_par_es_par.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
