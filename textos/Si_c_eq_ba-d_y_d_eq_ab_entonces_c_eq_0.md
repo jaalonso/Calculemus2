@@ -33,10 +33,10 @@ by sorry
 [mathjax]
 Por la siguiente cadena de igualdades
 \begin{align}
-   c &= ba - d     &&\text{[por la primera hipótesis]} \\
-     &= ab - d     &&\text{[por la conmutativa]}       \\
-     &= ab - ab    &&\text{[por la segunda hipótesis]} \\
-     &= 0
+c &= ba - d     &&\text{[por la primera hipótesis]} \\
+  &= ab - d     &&\text{[por la conmutativa]}       \\
+  &= ab - ab    &&\text{[por la segunda hipótesis]} \\
+  &= 0
 \end{align}
 
 <b>Demostraciones con Lean</b>

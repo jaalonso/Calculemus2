@@ -22,7 +22,21 @@ sorry
 </pre>
 <!--more-->
 
-<b>Soluciones con Lean</b>
+<b>Demostración en lenguaje natural</b>
+
+Por la siguiente cadena de igualdades
+\begin{align}
+(a + b)(a + b)
+&= (a + b)a + (a + b)b    &&\text{[por la distributiva]} \\
+&= aa + ba + (a + b)b     &&\text{[por la distributiva]} \\
+&= aa + ba + (ab + bb)    &&\text{[por la distributiva]} \\
+&= aa + ba + ab + bb      &&\text{[por la asociativa]} \\
+&= aa + (ba + ab) + bb    &&\text{[por la asociativa]} \\
+&= aa + (ab + ab) + bb    &&\text{[por la conmutativa]} \\
+&= aa + 2(ab) + bb        &&\text{[por def. de doble]} \\
+\end{align}
+
+<b>Demostraciones con Lean4</b>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -92,8 +106,12 @@ example :
 by linarith
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)_eq_aa+2ab+bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+<b>Demostraciones interactivas</b>
+
+Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)_eq_aa+2ab+bb.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 7.
+<ul>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 7.</li>
+</ul>

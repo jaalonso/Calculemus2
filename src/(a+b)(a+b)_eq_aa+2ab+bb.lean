@@ -9,6 +9,22 @@
 --    (a + b) * (a + b) = a * a + 2 * (a * b) + b * b
 -- ---------------------------------------------------------------------
 
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(a + b)
+--    = (a + b)a + (a + b)b    [por la distributiva]
+--    = aa + ba + (a + b)b     [por la distributiva]
+--    = aa + ba + (ab + bb)    [por la distributiva]
+--    = aa + ba + ab + bb      [por la asociativa]
+--    = aa + (ba + ab) + bb    [por la asociativa]
+--    = aa + (ab + ab) + bb    [por la conmutativa]
+--    = aa + 2(ab) + bb        [por def. de doble]
+
+-- Demostraciones con Lean4
+-- ========================
+
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
