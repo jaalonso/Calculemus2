@@ -24,9 +24,9 @@ by sorry
 Por la siguiente cadena de igualdades:
 \begin{align}
    (cb)a
-   &= (bc)a    \text{[por la conmutativa]} \\
-   &= b(ca)    \text{[por la asociativa]} \\
-   &= b(ac)    \text{[por la conmutativa]
+   &= (bc)a    &&\text{[por la conmutativa]} \\
+   &= b(ca)    &&\text{[por la asociativa]} \\
+   &= b(ac)    &&\text{[por la conmutativa]}
 \end{align}
 
 <b>Demostraciones con Lean4</b>
