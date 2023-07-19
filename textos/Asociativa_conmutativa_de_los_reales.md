@@ -18,8 +18,7 @@ example (a b c : ℝ) : (a * b) * c = b * (a * c) := by
 sorry
 </pre>
 
--- Demostración en lenguaje natural
--- ================================
+<b>Demostración en lenguaje natural</b>
 
 [mathjax]
 Por la siguiente cadena de igualdades
