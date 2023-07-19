@@ -21,7 +21,8 @@ sorry
 -- Demostración en lenguaje natural
 -- ================================
 
-Se tiene por la siguiente cadena de igualdades
+[mathjax]
+Por la siguiente cadena de igualdades
 \begin{align*}
 (ab)c &= (ba)c   &&\text{[por la conmutativa]} \\
       &= b(ac)   &&\text{[por la asociativa]}

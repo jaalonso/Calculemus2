@@ -12,9 +12,9 @@
 -- Demostración en lenguaje natural
 -- ================================
 
--- Se tiene por la siguiente cadena de igualdades
--- (ab)c = (ba)c   [por la conmutativa]
---       = b(ac)   [por la asociativa]
+-- Por la siguiente cadena de igualdades
+--    (ab)c = (ba)c   [por la conmutativa]
+--          = b(ac)   [por la asociativa]
 
 -- Demostraciones con Lean4
 -- ========================
