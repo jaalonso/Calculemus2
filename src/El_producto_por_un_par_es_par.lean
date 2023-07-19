@@ -9,6 +9,19 @@
 -- pares son pares.
 -- ---------------------------------------------------------------------
 
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Si n es par, entonces (por la definición de `Even`) existe un k tal que
+--    n = k + k         (1)
+-- Por tanto,
+--    mn = m(k + k)     (por (1))
+--       = mk + mk      (por la propiedad distributiva)
+-- Por consiguiente, mn es par.
+
+-- Demostraciones en Lean4
+-- =======================
+
 import Mathlib.Data.Nat.Basic
 import Mathlib.Data.Nat.Parity
 import Mathlib.Tactic
@@ -16,6 +29,8 @@ import Mathlib.Tactic
 open Nat
 
 -- 1ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩
   use m * k
@@ -23,6 +38,8 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
   ring
 
 -- 2ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩
   use m * k
@@ -30,25 +47,35 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rw [mul_add]
 
 -- 3ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩
   use m * k
   rw [hk, mul_add]
 
 -- 4ª demostración
+-- ===============
+
 example : ∀ m n : Nat, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩; use m * k; rw [hk, mul_add]
 
 -- 5ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩
   exact ⟨m * k, by rw [hk, mul_add]⟩
 
 -- 6ª demostración
+-- ===============
+
 example : ∀ m n : Nat, Even n → Even (m * n) :=
 fun m n ⟨k, hk⟩ ↦ ⟨m * k, by rw [hk, mul_add]⟩
 
 -- 7ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   rintro m n ⟨k, hk⟩
   use m * k
@@ -56,6 +83,8 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
   exact mul_add m k k
 
 -- 8ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   intros m n hn
   unfold Even at *
@@ -65,6 +94,8 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
     rw [hk, mul_add]
 
 -- 9ª demostración
+-- ===============
+
 example : ∀ m n : ℕ, Even n → Even (m * n) := by
   intros m n hn
   unfold Even at *
@@ -76,5 +107,7 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
      _ = m * k + m * k := by exact mul_add m k k
 
 -- 10ª demostración
+-- ================
+
 example : ∀ m n : Nat, Even n → Even (m * n) := by
   intros; simp [*, parity_simps]
