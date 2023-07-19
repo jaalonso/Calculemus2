@@ -5,13 +5,24 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio. Demostrar que si a, b, c y d son números reales tales
--- que
+-- Demostrar que si a, b, c y d son números reales tales que
 --    c = b * a - d
 --    d = a * b
 -- entonces
 --    c = 0
 -- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    c = b * a - d        [por la primera hipótesis]
+--      = a * b - d        [por la conmutativa]
+--      = a * b - a * b    [por la segunda hipótesis]
+--      = 0
+
+-- Demostraciones en Lean4
+-- =======================
 
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
@@ -39,3 +50,12 @@ by
   rw [mul_comm]
   rw [h2]
   rw [sub_self]
+
+-- 3ª demostración
+example
+  (a b c d : ℝ)
+  (h1 : c = b * a - d)
+  (h2 : d = a * b)
+  : c = 0 :=
+by
+  rw [h1, mul_comm, h2, sub_self]

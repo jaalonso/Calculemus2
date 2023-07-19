@@ -28,7 +28,17 @@ by sorry
 </pre>
 <!--more-->
 
-<b>Soluciones con Lean</b>
+<b>Demostración en lenguaje natural</b>
+
+Por la siguiente cadena de igualdades
+\begin{align}
+   c &= b * a - d        &&\text{[por la primera hipótesis]} \\
+     &= a * b - d        &&\text{[por la conmutativa]}       \\
+     &= a * b - a * b    &&\text{[por la segunda hipótesis]}
+     &= 0
+\end{align}
+
+<b>Demostraciones con Lean</b>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -57,10 +67,23 @@ by
   rw [mul_comm]
   rw [h2]
   rw [sub_self]
+
+-- 3ª demostración
+example
+  (a b c d : ℝ)
+  (h1 : c = b * a - d)
+  (h2 : d = a * b)
+  : c = 0 :=
+by
+  rw [h1, mul_comm, h2, sub_self]
 </pre>
 
-Se puede interactuar con las pruebas anteriores en <a href="https://lean.math.hhu.de/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FCalculemus2%2Fmain%2Fsrc%2FSi_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+<b>Demostraciones interactivas</b>
+
+Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
-+ J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 7.
+<ul>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 7.</li>
+</ul>

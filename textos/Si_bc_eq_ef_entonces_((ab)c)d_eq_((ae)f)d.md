@@ -23,11 +23,11 @@ by sorry
 
 [mathjax]
 Por la siguiente cadena de igualdades
-\begin{aling}
+\begin{align}
    ((ab)c)d
-   &= (a(bc))d    \text{[por la asociativa]} \\
-   &= (a(ef))d    \text{[por la hipótesis]}  \\
-   &= ((ae)f)d    \text{[por la asociativa]}
+   &= (a(bc))d    &&\text{[por la asociativa]} \\
+   &= (a(ef))d    &&\text{[por la hipótesis]}  \\
+   &= ((ae)f)d    &&\text{[por la asociativa]}
 \end{align}
 
 <b>Demostraciones con Lean</b>
