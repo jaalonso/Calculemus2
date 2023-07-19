@@ -14,7 +14,7 @@ usaba Lean3 en lugar de Lean4.
 + L17 [[./textos/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.md][Si bc = ef, entonces ((ab)c)d = ((ae)f)d]] (En [[./src/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.lean][Lean4]]).
 + M18 [[./textos/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.md][Si c = ba-d y d = ab, entonces c = 0]] (En [[./src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean][Lean4]]).
 + X19 [[./textos/(a+b)(a+b)_eq_aa+2ab+bb.md][(a+b)(a+b) = aa+2ab+bb]] (En [[./src/(a+b)(a+b)_eq_aa+2ab+bb.lean][Lean4]]).
-+ J20 [[./textos/(a+b)(c+d)_eq_ac+ad+bc+bd.md][(a + b) * (c + d) = a * c + a * d + b * c + b * d]] (En [[./src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean][Lean4]]).
++ J20 [[./textos/(a+b)(c+d)_eq_ac+ad+bc+bd.md][(a + b)(c + d) = ac + ad + bc + bd]] (En [[./src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean][Lean4]]).
 + V21 [[./textos/(a+b)(a-b)_eq_aa-bb.md][(a + b) * (a - b) = a^2 - b^2]] (En [[./src/(a+b)(a-b)_eq_aa-bb.lean][Lean4]]).
 + L24 [[./textos/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.md][Si c = d * a + b y b = a * d, entonces c = 2 * a * d]] (En [[./src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean4]]).
 + M25 [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][Si a + b = c, entonces (a + b)(a + b) = ac + bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).

@@ -1,13 +1,26 @@
 -- (a+b)(c+d)_eq_ac+ad+bc+bd.lean
--- (a + b) * (c + d) = a * c + a * d + b * c + b * d
+-- (a + b)(c + d) = ac + ad + bc + bd
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 20-julio-2023
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Ejercicio. Demostrar que si a, b, c y d son números reales, entonces
+-- Demostrar que si a, b, c y d son números reales, entonces
 --    (a + b) * (c + d) = a * c + a * d + b * c + b * d
 -- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(c + d)
+--    = a(c + d) + b(c + d)    [por la distributiva]
+--    = ac + ad + b(c + d)     [por la distributiva]
+--    = ac + ad + (bc + bd)    [por la distributiva]
+--    = ac + ad + bc + bd      [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
 
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic

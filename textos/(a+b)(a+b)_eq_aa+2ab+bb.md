@@ -24,6 +24,7 @@ sorry
 
 <b>Demostración en lenguaje natural</b>
 
+[mathjax]
 Por la siguiente cadena de igualdades
 \begin{align}
 (a + b)(a + b)
