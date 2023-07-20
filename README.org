@@ -18,3 +18,4 @@ usaba Lean3 en lugar de Lean4.
 + V21 [[./textos/(a+b)(a-b)_eq_aa-bb.md][(a+b)(a-b) = a^2-b^2]] (En [[./src/(a+b)(a-b)_eq_aa-bb.lean][Lean4]]).
 + L24 [[./textos/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.md][Si c = da+b y b = ad, entonces c = 2ad]] (En [[./src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean4]]).
 + M25 [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][Si a+b = c, entonces (a+b)(a+b) = ac+bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).
++ X26 [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
