@@ -20,3 +20,4 @@ usaba Lean3 en lugar de Lean4.
 + M25 [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][Si a+b = c, entonces (a+b)(a+b) = ac+bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).
 + X26 [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
 + J27 [[./textos/Suma_con_opuesto.md][Si R es un anillo y a ∈ R, entonces a + -a = 0]] (En [[./src/Suma_con_opuesto.lean][Lean4]]).
++ V28 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean4]]).
