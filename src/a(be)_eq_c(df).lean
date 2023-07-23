@@ -17,10 +17,10 @@
 
 -- Por la siguiente cadena de igualdades
 --    a(be)
---    = a(bf) [por la segunda hipótesis]
---    = (ab)f [por la asociativa]
---    = (cd)f [por la primera hipótesis]
---    = c(df) [por la asociativa]
+--    = a(bf)    [por la segunda hipótesis]
+--    = (ab)f    [por la asociativa]
+--    = (cd)f    [por la primera hipótesis]
+--    = c(df)    [por la asociativa]
 
 -- Demostraciones en Lean4
 -- =======================
