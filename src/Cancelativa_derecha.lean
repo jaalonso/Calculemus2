@@ -5,7 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- Demostrar que si
+-- Demostrar que si R es un anillo y a, b, c ∈ R tales que
 --    a + b = c + b
 -- entonces
 --    a = c
@@ -88,3 +88,11 @@ example
   : a = c :=
 by
   rw [← add_neg_cancel_right a b, h, add_neg_cancel_right]
+
+-- 5ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+add_right_cancel h
