@@ -26,3 +26,4 @@ usaba Lean3 en lugar de Lean4.
 * Agosto de 2023
 + M01 [[./textos/Cancelativa_izquierda.md][Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c]] (En [[./src/Cancelativa_izquierda.lean][Lean4]]).
 + X02 [[./textos/Cancelativa_derecha.md][Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c]] (En [[./src/Cancelativa_derecha.lean][Lean4]]).
++ J03 [[./textos/Multiplicacion_por_cero.md][Si R es un anillo y a ∈ R, entonces a.0 = 0]] (En [[./src/Multiplicacion_por_cero.lean][Lean4]]).
