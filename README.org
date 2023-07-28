@@ -29,3 +29,4 @@ usaba Lean3 en lugar de Lean4.
 + J03 [[./textos/Multiplicacion_por_cero.md][Si R es un anillo y a ∈ R, entonces a.0 = 0]] (En [[./src/Multiplicacion_por_cero.lean][Lean4]]).
 + V04 [[./textos/Multiplicacion_por_cero_izquierda.md][Si R es un anillo y a ∈ R, entonces 0.a = 0]] (En [[./src/Multiplicacion_por_cero_izquierda.lean][Lean4]]).
 + L07 [[./textos/Opuesto_ig_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b]] (En [[./src/Opuesto_ig_si_suma_ig_cero.lean][Lean4]]).
++ M08 [[./textos/Ig_opuesto_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b]] (En [[./src/Ig_opuesto_si_suma_ig_cero.lean][Lean4]]).

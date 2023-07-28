@@ -32,8 +32,7 @@ sorry
 <b>Demostraciones en lenguaje natural (LN)</b>
 
 [mathjax]
--- 1ª demostración en LN
--- ---------------------
+<b>1ª demostración en LN</b>
 
 Por la siguiente cadena de igualdades
 \begin{align}
@@ -42,16 +41,14 @@ Por la siguiente cadena de igualdades
       &= b               &&\text{[por cancelativa]}
 \end{align}
 
--- 2ª demostración en LN
--- ---------------------
+<b>2ª demostración en LN</b>
 
 Sumando \(-a\) a ambos lados de la hipótesis, se tiene
 \[-a + (a + b) = -a + 0\]
-El término de la izquierda se reduce a \(b\) (por la cancelativa) y el de
-la derecha a \(-a) (por la suma con cero). Por tanto, se tiene
+El término de la izquierda se reduce a \(b\) (por la cancelativa) y el de la derecha a \(-a\) (por la suma con cero). Por tanto, se tiene
 \[b = -a\]
 Por la simetría de la igualdad, se tiene
-\[-a = b]
+\[-a = b\]
 
 <b>Demostraciones con Lean4</b>
 
