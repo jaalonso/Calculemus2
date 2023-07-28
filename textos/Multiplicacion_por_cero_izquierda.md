@@ -28,7 +28,7 @@ sorry
 Basta aplicar la propiedad cancelativa a
 \[0.a + 0.a = 0.a + 0\]
 que se demuestra mediante la siguiente cadena de igualdades
-begin{align}
+\begin{align}
    0.a + 0.a &= (0 + 0).a    &&\text{[por la distributiva]} \\
              &= 0.a          &&\text{[por suma con cero]} \\
              &= 0.a + 0      &&\text{[por suma con cero]}
