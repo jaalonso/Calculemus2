@@ -5,20 +5,7 @@
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- En Lean4, se declara que R es un anillo mediante la expresión
---    variable {R : Type _} [Ring R]
--- Como consecuencia, se tiene los siguientes axiomas
---    add_assoc    : ∀ a b c : R, (a + b) + c = a + (b + c)
---    add_comm     : ∀ a b : R,   a + b = b + a
---    zero_add     : ∀ a : R,     0 + a = a
---    add_left_neg : ∀ a : R,     -a + a = 0
---    mul_assoc    : ∀ a b c : R, a * b * c = a * (b * c)
---    mul_one      : ∀ a : R,     a * 1 = a
---    one_mul      : ∀ a : R,     1 * a = a
---    mul_add      : ∀ a b c : R, a * (b + c) = a * b + a * c
---    add_mul      : ∀ a b c : R, (a + b) * c = a * c + b * c
---
--- Demostrar que si R es un anillo, entonces
+-- Demostrar en Lean4 que si R es un anillo, entonces
 --    ∀ a : R, a + -a = 0
 -- ---------------------------------------------------------------------
 

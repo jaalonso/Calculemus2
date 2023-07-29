@@ -44,8 +44,7 @@ Por la siguiente cadena de igualdades
 
 Sumando \(-a\) a ambos lados de la hipótesis, se tiene
 \[(a + b) + -b = 0 + -b\]
-El término de la izquierda se reduce a \(a) (por la cancelativa) y el de
-la derecha a \(-b\) (por la suma con cero). Por tanto, se tiene
+El término de la izquierda se reduce a \(a\) (por la cancelativa) y el de la derecha a \(-b\) (por la suma con cero). Por tanto, se tiene
 \[a = -b\]
 
 <b>Demostraciones con Lean4</b>
