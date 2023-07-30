@@ -37,3 +37,6 @@
 /lake-packages/*
 /Calculemus2.out
 /_minted-Calculemus2/
+*.bbl
+*.out
+libro/_minted_Calculemus2/

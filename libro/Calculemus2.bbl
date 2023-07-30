@@ -1,0 +1,201 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alonso-21-LpM}
+J.~A. Alonso.
+\newblock \href{https://github.com/jaalonso/Lean_para_matematicos} {Lean para
+  matemáticos
+  \footnote{\url{https://github.com/jaalonso/Lean_para_matematicos}}}, 2021.
+
+\bibitem{Alonso-21-MeL}
+J.~A. Alonso.
+\newblock \href{https://github.com/jaalonso/Matematicas_en_Lean} {Matemáticas
+  en {L}ean \footnote{\url{https://github.com/jaalonso/Matematicas_en_Lean}}},
+  2021.
+
+\bibitem{Alonso-21-DAO}
+J.~A. Alonso.
+\newblock
+  \href{https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/DAO_con_Lean.pdf}
+  {DAO ({D}emostración {A}sistida por {O}rdenador) con {L}ean
+  \footnote{\url{https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/DAO_con_Lean.pdf}}},
+  2021.
+
+\bibitem{Alonso-21-Cal}
+J.~A. Alonso.
+\newblock
+  {\href{https://raw.githubusercontent.com/jaalonso/Calculemus/master/Calculemus.pdf}
+  {Calculemus (Vol. 1: Demostraciones con Isabelle/HOL y Lean3)
+  \footnote{\url{https://raw.githubusercontent.com/jaalonso/Calculemus/master/Calculemus.pdf}}
+  }}, 2021.
+
+\bibitem{Avigad-21-TPeL}
+J.~Avigad, L.~de~Moura, and S.~Kong.
+\newblock \href{https://leanprover.github.io/theorem_proving_in_lean4/}
+  {Theorem Proving in {L}ean4
+  \footnote{\url{https://leanprover.github.io/theorem_proving_in_lean4/}}},
+  2021.
+
+\bibitem{Avigad-21-Manual}
+J.~Avigad, G.~Ebner, and S.~Ullrich.
+\newblock \href{https://leanprover.github.io/lean4/doc/} {The {L}ean4 Manual
+  \footnote{\url{https://leanprover.github.io/lean4/doc/}}}, 2021.
+
+\bibitem{Avigad-23a}
+J.~Avigad, M.~J.~H. Heule, and W.~Nawrocki.
+\newblock
+  \href{https://avigad.github.io/lamr/logic_and_mechanized_reasoning.pdf}
+  {Logic and mechanized reasoning
+  \footnote{\url{https://avigad.github.io/lamr/logic_and_mechanized_reasoning.pdf}}
+  }, 2023.
+
+\bibitem{Avigad-21a}
+J.~Avigad, R.~Y. Lewis, and F.~van Doorn.
+\newblock
+  \href{https://leanprover.github.io/logic_and_proof/logic_and_proof.pdf}
+  {Logic and proof
+  \footnote{\url{https://leanprover.github.io/logic_and_proof/logic_and_proof.pdf}}
+  }, 2021.
+
+\bibitem{Avigad-23-MeL}
+J.~Avigad and P.~Massot.
+\newblock \href{https://leanprover-community.github.io/mathematics_in_lean/}
+  {Mathematics in {L}ean
+  \footnote{\url{https://leanprover-community.github.io/mathematics_in_lean/}}
+  }, 2023.
+
+\bibitem{Baanen-20}
+A.~Baanen, A.~Bentkamp, J.~Blanchette, J.~Hölzl, and J.~Limperg.
+\newblock
+  \href{https://raw.githubusercontent.com/blanchette/logical_verification_2020/master/hitchhikers_guide.pdf}
+  {The {H}itchhiker's {G}uide to {L}ogical {V}erification
+  \footnote{\url{https://raw.githubusercontent.com/blanchette/logical_verification_2020/master/hitchhikers_guide.pdf}}},
+  2020.
+
+\bibitem{Ballard}
+M.~Ballard.
+\newblock \href{https://300.f22.matthewrobertballard.com/} {Transition to
+  advanced mathematics (Thinking and communicating like a mathematician)
+  \footnote{\url{https://300.f22.matthewrobertballard.com/}}}.
+
+\bibitem{Buzzard-M40001_C1}
+K.~Buzzard.
+\newblock
+  \href{https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C1.html}
+  {Sets and logic (in Lean)
+  \footnote{\url{https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C1.html}}}.
+
+\bibitem{Buzzard-M40001_C2}
+K.~Buzzard.
+\newblock
+  \href{https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C2.html}
+  {Functions and relations (in Lean)
+  \footnote{\url{https://www.ma.imperial.ac.uk/~buzzard/M4000x_html/M40001/M40001_C2.html}}}.
+
+\bibitem{Buzzard-21a}
+K.~Buzzard.
+\newblock
+  \href{https://github.com/ImperialCollegeLondon/formalising-mathematics}
+  {Course on formalising mathematics
+  \footnote{\url{https://github.com/ImperialCollegeLondon/formalising-mathematics}}},
+  2021.
+
+\bibitem{Buzzard-23a}
+K.~Buzzard.
+\newblock
+  \href{https://github.com/ImperialCollegeLondon/formalising-mathematics-2023}
+  {Course on formalising mathematics
+  \footnote{\url{https://github.com/ImperialCollegeLondon/formalising-mathematics-2023}}},
+  2023.
+
+\bibitem{Buzzard-20}
+K.~Buzzard and M.~Pedramfar.
+\newblock
+  \href{https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/} {The
+  Natural Number Game, version 1.3.3
+  \footnote{\url{https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/}}}.
+
+\bibitem{Christiansen-23}
+D.~T. Christiansen.
+\newblock \href{https://leanprover.github.io/functional_programming_in_lean/}
+  {Functional programming in Lean
+  \footnote{\url{https://leanprover.github.io/functional_programming_in_lean/}}},
+  2023.
+
+\bibitem{Dvořák}
+M.~Dvořák.
+\newblock
+  \href{https://raw.githubusercontent.com/madvorak/lean4-cheatsheet/main/lean-tactics.pdf}
+  {Lean 4 Cheatsheet
+  \footnote{\url{https://raw.githubusercontent.com/madvorak/lean4-cheatsheet/main/lean-tactics.pdf}}}.
+
+\bibitem{Hazratpour-22a}
+S.~Hazratpour.
+\newblock \href{https://introproofs.github.io/s22/} {Introduction to proofs
+  \footnote{\url{https://introproofs.github.io/s22/}}}, 2022.
+
+\bibitem{Hazratpour-22b}
+S.~Hazratpour.
+\newblock
+  \href{https://sinhp.github.io/teaching/2022-introduction-to-proofs-with-Lean}
+  {Introduction to proofs with Lean proof assistant
+  \footnote{\url{https://sinhp.github.io/teaching/2022-introduction-to-proofs-with-Lean}}},
+  2022.
+
+\bibitem{Lewis-22}
+R.~Lewis.
+\newblock \href{https://github.com/BrownCS1951x/fpv2022} {Formal proof and
+  verification, 2022 \footnote{\url{https://github.com/BrownCS1951x/fpv2022}}},
+  2022.
+
+\bibitem{Lewis-23}
+R.~Lewis.
+\newblock \href{https://github.com/brown-cs22/CS22-Lean-2023} {Discrete
+  structures and probability
+  \footnote{\url{https://github.com/brown-cs22/CS22-Lean-2023}}}, 2023.
+
+\bibitem{Löh-22}
+C.~Löh.
+\newblock \href{https://loeh.app.uni-regensburg.de/mapa/main.pdf} {Exploring
+  formalisation (A primer in human-readable mathematics in Lean 3 with examples
+  from simplicial topology)
+  \footnote{\url{https://loeh.app.uni-regensburg.de/mapa/main.pdf}}}, 2022.
+
+\bibitem{Macbeth-23}
+H.~Macbeth.
+\newblock \href{https://hrmacbeth.github.io/math2001/index.html} {The mechanics
+  of proof \footnote{\url{https://hrmacbeth.github.io/math2001/index.html}}},
+  2023.
+
+\bibitem{Massot}
+P.~Massot.
+\newblock
+  \href{https://www.imo.universite-paris-saclay.fr/~pmassot/enseignement/math114/}
+  {Introduction aux mathématiques formalisées
+  \footnote{\url{https://www.imo.universite-paris-saclay.fr/~pmassot/enseignement/math114/}}}.
+
+\bibitem{Roux-20}
+F.~L. Roux.
+\newblock \href{https://github.com/FredericLeRoux/LEAN_ESPACES_METRIQUES} {Code
+  Lean contenant les preuves d'un cours standard sur les espaces métriques
+  \footnote{\url{https://github.com/FredericLeRoux/LEAN_ESPACES_METRIQUES}}},
+  2020.
+
+\bibitem{Schulze}
+W.~Schulze.
+\newblock
+  \href{https://youtube.com/playlist?list=PLYwF9EIrl42RFQgbmcR_LSCWRIx2WKbXs}
+  {Learning LeanProver
+  \footnote{\url{https://youtube.com/playlist?list=PLYwF9EIrl42RFQgbmcR_LSCWRIx2WKbXs}}}.
+
+\bibitem{LFTCM2020}
+Varios.
+\newblock \href{https://leanprover-community.github.io/lftcm2020/schedule.html}
+  {LFTCM 2020: Lean for the Curious Mathematician 2020
+  \footnote{\url{https://leanprover-community.github.io/lftcm2020/schedule.html}}}.
+
+\bibitem{Velleman}
+D.~J. Velleman.
+\newblock \href{https://djvelleman.github.io/HTPIwL/} {How to prove it with
+  Lean \footnote{\url{https://djvelleman.github.io/HTPIwL/}}}.
+
+\end{thebibliography}

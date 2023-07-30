@@ -1,0 +1,52 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostrar en Lean4 que si R es un anillo, entonces}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    ∀ a, b : R, (a + b) + \PYGZhy{}b = a}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostración en lenguaje natural}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ================================}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Por la siguiente cadena de igualdades}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    (a + b) + \PYGZhy{}b = a + (b + \PYGZhy{}b)    [por la asociativa]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}               \PYGZus{} = a + 0           [por suma con opuesto]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}               \PYGZus{} = a               [por suma con cero]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostraciones con Lean4}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ========================}
+
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Algebra.Ring.Defs}
+
+\PYG{k+kd}{variable} \PYG{o}{\PYGZob{}}\PYG{n}{R} \PYG{o}{:} \PYG{k+kt}{Type} \PYG{n}{\PYGZus{}}\PYG{o}{\PYGZcb{}} \PYG{o}{[}\PYG{n}{Ring} \PYG{n}{R}\PYG{o}{]}
+\PYG{k+kd}{variable} \PYG{o}{(}\PYG{n}{a} \PYG{n}{b} \PYG{o}{:} \PYG{n}{R}\PYG{o}{)}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 1ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+\PYG{k}{calc}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{]}
+             \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{0}        \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}right\PYGZus{}neg}\PYG{o}{]}
+             \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a}            \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}zero}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 2ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+\PYG{k+kd}{by}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}right\PYGZus{}neg}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}zero}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+\PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{,} \PYG{n}{add\PYGZus{}right\PYGZus{}neg}\PYG{o}{,} \PYG{n}{add\PYGZus{}zero}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 4ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+  \PYG{n}{add\PYGZus{}neg\PYGZus{}cancel\PYGZus{}right} \PYG{n}{a} \PYG{n}{b}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 5ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+  \PYG{n}{add\PYGZus{}neg\PYGZus{}cancel\PYGZus{}right} \PYG{n}{\PYGZus{}} \PYG{n}{\PYGZus{}}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 6ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n+nb+bp}{\PYGZhy{}}\PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{o}{:=}
+\PYG{k+kd}{by} \PYG{n}{simp}
+\end{Verbatim}

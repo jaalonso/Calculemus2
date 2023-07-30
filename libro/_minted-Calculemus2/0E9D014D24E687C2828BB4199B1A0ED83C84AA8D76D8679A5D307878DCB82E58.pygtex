@@ -1,0 +1,88 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostrar que si a y b son números reales, entonces}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    (a + b) * (a + b) = a * a + 2 * (a * b) + b * b}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostración en lenguaje natural}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ================================}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Por la siguiente cadena de igualdades}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    (a + b)(a + b)}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = (a + b)a + (a + b)b    [por la distributiva]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + ba + (a + b)b     [por la distributiva]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + ba + (ab + bb)    [por la distributiva]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + ba + ab + bb      [por la asociativa]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + (ba + ab) + bb    [por la asociativa]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + (ab + ab) + bb    [por la conmutativa]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = aa + 2(ab) + bb        [por def. de doble]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostraciones con Lean4}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ========================}
+
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Data.Real.Basic}
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Tactic}
+
+\PYG{k+kd}{variable} \PYG{o}{(}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{o}{:} \PYG{n}{ℝ}\PYG{o}{)}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 1ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k}{calc}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)}
+    \PYG{n+nb+bp}{=} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{n}{b}       \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{n}{b}     \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}   \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}assoc} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a}\PYG{o}{)]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}comm} \PYG{n}{b} \PYG{n}{a}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}     \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{two\PYGZus{}mul}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 2ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k}{calc}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)}
+    \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}add}\PYG{o}{,} \PYG{n}{add\PYGZus{}mul}\PYG{o}{,} \PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{,} \PYG{n}{add\PYGZus{}assoc} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a}\PYG{o}{)]}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}     \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}comm} \PYG{n}{b} \PYG{n}{a}\PYG{o}{,} \PYG{n+nb+bp}{←}\PYG{n}{two\PYGZus{}mul}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k}{calc}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)}
+    \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{ring}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{o}{(}\PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{ring}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b}     \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{ring}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 4ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k+kd}{by} \PYG{n}{ring}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 5ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k+kd}{by}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}assoc} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a}\PYG{o}{)]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}comm} \PYG{n}{b} \PYG{n}{a}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{two\PYGZus{}mul}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 6ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k+kd}{by}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}add}\PYG{o}{,} \PYG{n}{add\PYGZus{}mul}\PYG{o}{,} \PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n+nb+bp}{←}\PYG{n}{add\PYGZus{}assoc}\PYG{o}{,} \PYG{n}{add\PYGZus{}assoc} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a}\PYG{o}{)]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}comm} \PYG{n}{b} \PYG{n}{a}\PYG{o}{,} \PYG{n+nb+bp}{←}\PYG{n}{two\PYGZus{}mul}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 7ª demostración}
+\PYG{k+kd}{example} \PYG{o}{:}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{l+m+mi}{2} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{b} \PYG{o}{:=}
+\PYG{k+kd}{by} \PYG{n}{linarith}
+\end{Verbatim}

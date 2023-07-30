@@ -1,0 +1,109 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostrar que los productos de los números naturales por números}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} pares son pares.}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostración en lenguaje natural}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ================================}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Si n es par, entonces (por la definición de `Even`) existe un k tal que}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    n = k + k         (1)}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Por tanto,}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    mn = m(k + k)     (por (1))}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}       = mk + mk      (por la propiedad distributiva)}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Por consiguiente, mn es par.}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostraciones en Lean4}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} =======================}
+
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Data.Nat.Basic}
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Data.Nat.Parity}
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Tactic}
+
+\PYG{k+kn}{open} \PYG{n}{Nat}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 1ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}
+  \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{]}
+  \PYG{n}{ring}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 2ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}
+  \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}
+  \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{,} \PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 4ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{Nat}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}\PYG{n+nb+bp}{;} \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}\PYG{n+nb+bp}{;} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{,} \PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 5ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}
+  \PYG{n}{exact} \PYG{o}{⟨}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}\PYG{o}{,} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{,} \PYG{n}{mul\PYGZus{}add}\PYG{o}{]⟩}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 6ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{Nat}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=}
+\PYG{k}{fun} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩} \PYG{n+nb+bp}{↦} \PYG{o}{⟨}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}\PYG{o}{,} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{,} \PYG{n}{mul\PYGZus{}add}\PYG{o}{]⟩}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 7ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{rintro} \PYG{n}{m} \PYG{n}{n} \PYG{o}{⟨}\PYG{n}{k}\PYG{o}{,} \PYG{n}{hk}\PYG{o}{⟩}
+  \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{]}
+  \PYG{n}{exact} \PYG{n}{mul\PYGZus{}add} \PYG{n}{m} \PYG{n}{k} \PYG{n}{k}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 8ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{intros} \PYG{n}{m} \PYG{n}{n} \PYG{n}{hn}
+  \PYG{n}{unfold} \PYG{n}{Even} \PYG{n}{at} \PYG{n+nb+bp}{*}
+  \PYG{n}{cases} \PYG{n}{hn} \PYG{k}{with}
+  \PYG{n+nb+bp}{|} \PYG{n}{intro} \PYG{n}{k} \PYG{n}{hk} \PYG{n+nb+bp}{=\PYGZgt{}}
+    \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+    \PYG{n}{rw} \PYG{o}{[}\PYG{n}{hk}\PYG{o}{,} \PYG{n}{mul\PYGZus{}add}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 9ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ===============}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{ℕ}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{intros} \PYG{n}{m} \PYG{n}{n} \PYG{n}{hn}
+  \PYG{n}{unfold} \PYG{n}{Even} \PYG{n}{at} \PYG{n+nb+bp}{*}
+  \PYG{n}{cases} \PYG{n}{hn} \PYG{k}{with}
+  \PYG{n+nb+bp}{|} \PYG{n}{intro} \PYG{n}{k} \PYG{n}{hk} \PYG{n+nb+bp}{=\PYGZgt{}}
+    \PYG{n}{use} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k}
+    \PYG{k}{calc} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}
+       \PYG{n+nb+bp}{=} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{k} \PYG{n+nb+bp}{+} \PYG{n}{k}\PYG{o}{)}   \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{exact} \PYG{n}{congrArg} \PYG{o}{(}\PYG{n}{HMul.hMul} \PYG{n}{m}\PYG{o}{)} \PYG{n}{hk}
+     \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k} \PYG{n+nb+bp}{+} \PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{k} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{exact} \PYG{n}{mul\PYGZus{}add} \PYG{n}{m} \PYG{n}{k} \PYG{n}{k}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 10ª demostración}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ================}
+
+\PYG{k+kd}{example} \PYG{o}{:} \PYG{n+nb+bp}{∀} \PYG{n}{m} \PYG{n}{n} \PYG{o}{:} \PYG{n}{Nat}\PYG{o}{,} \PYG{n}{Even} \PYG{n}{n} \PYG{n+nb+bp}{→} \PYG{n}{Even} \PYG{o}{(}\PYG{n}{m} \PYG{n+nb+bp}{*} \PYG{n}{n}\PYG{o}{)} \PYG{o}{:=} \PYG{k+kd}{by}
+  \PYG{n}{intros}\PYG{n+nb+bp}{;} \PYG{n}{simp} \PYG{o}{[}\PYG{n+nb+bp}{*}\PYG{o}{,} \PYG{n}{parity\PYGZus{}simps}\PYG{o}{]}
+\end{Verbatim}

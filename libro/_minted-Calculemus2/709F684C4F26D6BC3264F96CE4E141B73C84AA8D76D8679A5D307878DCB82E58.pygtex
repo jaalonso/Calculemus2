@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostrar que si a, b y c son números reales tales que}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    a + b = c,}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} entonces}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    (a + b) * (a + b) = a * c + b * c}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostración en lenguaje natural}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ================================}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Por la siguiente cadena de igualdades}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    (a + b)(a + b)}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = (a + b)c        [por la hipótesis]}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}    = ac + bc         [por la distributiva]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Demostraciones con Lean4}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ========================}
+
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Data.Real.Basic}
+\PYG{k+kn}{import} \PYG{n}{Mathlib.Tactic}
+
+\PYG{k+kd}{variable} \PYG{o}{(}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{o}{:} \PYG{n}{ℝ}\PYG{o}{)}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 1ª demostración}
+\PYG{k+kd}{example}
+  \PYG{o}{(}\PYG{n}{h} \PYG{o}{:} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{c}\PYG{o}{)}
+  \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{o}{:=}
+\PYG{k}{calc}
+  \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)}
+    \PYG{n+nb+bp}{=} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{n}{c}   \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{exact} \PYG{n}{congrArg} \PYG{o}{(}\PYG{n}{HMul.hMul} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{))} \PYG{n}{h}
+  \PYG{n}{\PYGZus{}} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{o}{:=} \PYG{k+kd}{by} \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 2ª demostración}
+\PYG{k+kd}{example}
+  \PYG{o}{(}\PYG{n}{h} \PYG{o}{:} \PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{=} \PYG{n}{c}\PYG{o}{)}
+  \PYG{o}{:} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{*} \PYG{o}{(}\PYG{n}{a} \PYG{n+nb+bp}{+} \PYG{n}{b}\PYG{o}{)} \PYG{n+nb+bp}{=} \PYG{n}{a} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{n+nb+bp}{+} \PYG{n}{b} \PYG{n+nb+bp}{*} \PYG{n}{c} \PYG{o}{:=}
+\PYG{k+kd}{by}
+  \PYG{n}{nth\PYGZus{}rewrite} \PYG{l+m+mi}{2} \PYG{o}{[}\PYG{n}{h}\PYG{o}{]}
+  \PYG{n}{rw} \PYG{o}{[}\PYG{n}{add\PYGZus{}mul}\PYG{o}{]}
+\end{Verbatim}
