@@ -3,10 +3,9 @@ Título: Si R es un anillo y a, b ∈ R, entonces a - b = a + -b
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(R) es un anillo y \(a, b \in R\), entonces
-<pre lang="text">
-a - b = a + -b
-</pre>
+[mathjax]
+Demostrar con Lean4 que si \(R\) es un anillo y \(a, b \in R\), entonces
+\[a - b = a + -b\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -23,7 +22,6 @@ sorry
 
 <b>Demostración en lenguaje natural</b>
 
-[mathjax]
 Por la definición de la resta.
 
 <b>Demostraciones con Lean4</b>
