@@ -1,0 +1,1707 @@
+\input Calculemus2_preambulo
+
+\chapter{Introducción}
+\label{sec:org7f7e514}
+
+Este libro es una recopilación de los ejercicios de demostración con
+Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
+blog \href{https://www.glc.us.es}{Calculemus}.
+
+La ordenación de los ejercicios es simplemente temporal según su fecha
+de publicación en Calculemus y el orden de los ejercicios en Calculemus
+responde a los que me voy encontrando en mis \href{https://github.com/jaalonso/Lecturas\_GLC}{lecturas}.
+
+En cada ejercicio, se comienza proponiendo soluciones en lenguaje
+natural y, a continuación, se exponen distintas demostraciones con Lean4
+ordenadas desde las más detalladas a las más automáticas.
+
+Las soluciones del libro están en \href{https://github.com/jaalonso/Calculemus2}{este repositorio de GitHub}.
+
+El libro se irá actualizando periódicamente con los nuevos ejercicios que se
+proponen diariamente en \href{https://www.glc.us.es}{Calculemus}.
+
+Este libro es una continuación de
+\begin{itemize}
+\item \href{https://raw.githubusercontent.com/jaalonso/DAO\_con\_Lean/master/DAO\_con\_Lean.pdf}{DAO (Demostración Asistida por Ordenador) con Lean} que es una
+introducción a la demostración con Lean3 y
+\item \href{https://raw.githubusercontent.com/jaalonso/Calculemus/master/Calculemus.pdf}{Calculemus (Vol. 1: Demostraciones con Isabelle/HOL y Lean3)} que es la
+recopilación de la primera parte de los ejercicios del blog con
+demostraciones en Isabelle/HOL y Lean3.
+\end{itemize}
+
+\chapter{Demostraciones de una propiedad de los números enteros}
+\label{sec:org830c1c2}
+
+\section{∀ m n ∈ ℕ, Even n → Even (m * n)}
+\label{sec:orgb6bf9b4}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que los productos de los números naturales por números
+-- pares son pares.
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Si n es par, entonces (por la definición de `Even`) existe un k tal que
+--    n = k + k         (1)
+-- Por tanto,
+--    mn = m(k + k)     (por (1))
+--       = mk + mk      (por la propiedad distributiva)
+-- Por consiguiente, mn es par.
+
+-- Demostraciones en Lean4
+-- =======================
+
+import Mathlib.Data.Nat.Basic
+import Mathlib.Data.Nat.Parity
+import Mathlib.Tactic
+
+open Nat
+
+-- 1ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩
+  use m * k
+  rw [hk]
+  ring
+
+-- 2ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩
+  use m * k
+  rw [hk]
+  rw [mul_add]
+
+-- 3ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩
+  use m * k
+  rw [hk, mul_add]
+
+-- 4ª demostración
+-- ===============
+
+example : ∀ m n : Nat, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩; use m * k; rw [hk, mul_add]
+
+-- 5ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩
+  exact ⟨m * k, by rw [hk, mul_add]⟩
+
+-- 6ª demostración
+-- ===============
+
+example : ∀ m n : Nat, Even n → Even (m * n) :=
+fun m n ⟨k, hk⟩ ↦ ⟨m * k, by rw [hk, mul_add]⟩
+
+-- 7ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  rintro m n ⟨k, hk⟩
+  use m * k
+  rw [hk]
+  exact mul_add m k k
+
+-- 8ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  intros m n hn
+  unfold Even at *
+  cases hn with
+  | intro k hk =>
+    use m * k
+    rw [hk, mul_add]
+
+-- 9ª demostración
+-- ===============
+
+example : ∀ m n : ℕ, Even n → Even (m * n) := by
+  intros m n hn
+  unfold Even at *
+  cases hn with
+  | intro k hk =>
+    use m * k
+    calc m * n
+       = m * (k + k)   := by exact congrArg (HMul.hMul m) hk
+     _ = m * k + m * k := by exact mul_add m k k
+
+-- 10ª demostración
+-- ================
+
+example : ∀ m n : Nat, Even n → Even (m * n) := by
+  intros; simp [*, parity_simps]
+\end{verbatim}
+
+\chapter{Propiedades elementales de los números reales}
+\label{sec:orge29f418}
+
+\section{En ℝ, (ab)c = b(ac)}
+\label{sec:orgff986f9}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que los números reales tienen la siguiente propiedad
+--    (a * b) * c = b * (a * c)
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (ab)c = (ba)c   [por la conmutativa]
+--          = b(ac)   [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+
+-- 1ª demostración
+example
+  (a b c : ℝ)
+  : (a * b) * c = b * (a * c) :=
+calc
+  (a * b) * c = (b * a) * c := by rw [mul_comm a b]
+            _ = b * (a * c) := by rw [mul_assoc b a c]
+
+-- 2ª demostración
+example (a b c : ℝ) : (a * b) * c = b * (a * c) :=
+by
+  rw [mul_comm a b]
+  rw [mul_assoc b a c]
+
+-- 3ª demostración
+example (a b c : ℝ) : (a * b) * c = b * (a * c) :=
+by ring
+\end{verbatim}
+
+\section{En ℝ, (cb)a = b(ac)}
+\label{sec:orgb1adba4}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que los números reales tienen la siguiente propiedad
+--    (c * b) * a = b * (a * c)
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades:
+--    (c * b) * a
+--    = (b * c) * a    [por la conmutativa]
+--    = b * (c * a)    [por la asociativa]
+--    = b * (a * c)    [por la conmutativa]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+
+-- 1ª demostración
+example
+  (a b c : ℝ)
+  : (c * b) * a = b * (a * c) :=
+calc
+  (c * b) * a
+    = (b * c) * a := by rw [mul_comm c b]
+  _ = b * (c * a) := by rw [mul_assoc]
+  _ = b * (a * c) := by rw [mul_comm c a]
+
+-- 2ª demostración
+example
+  (a b c : ℝ)
+  : (c * b) * a = b * (a * c) :=
+by
+  rw [mul_comm c b]
+  rw [mul_assoc]
+  rw [mul_comm c a]
+
+-- 3ª demostración
+example
+  (a b c : ℝ)
+  : (c * b) * a = b * (a * c) :=
+by ring
+\end{verbatim}
+
+\section{En ℝ, a(bc) = b(ac)}
+\label{sec:org8bc0b9a}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que los números reales tienen la siguiente propiedad
+--    a * (b * c) = b * (a * c)
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades:
+--    a(bc)
+--    = (ab)c    [por la asociativa]
+--    = (ba)c    [por la conmutativa]
+--    = b(ac)    [por la asociativa]
+
+-- Demostraciones en Lean4
+-- =======================
+
+import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+
+-- 1ª demostración
+example
+  (a b c : ℝ) : a * (b * c) = b * (a * c) :=
+calc
+  a * (b * c)
+    = (a * b) * c := by rw [←mul_assoc]
+  _ = (b * a) * c := by rw [mul_comm a b]
+  _ = b * (a * c) := by rw [mul_assoc]
+
+-- 2ª demostración
+example
+  (a b c : ℝ) : a * (b * c) = b * (a * c) :=
+by
+  rw [←mul_assoc]
+  rw [mul_comm a b]
+  rw [mul_assoc]
+
+-- 3ª demostración
+example
+  (a b c : ℝ) : a * (b * c) = b * (a * c) :=
+by ring
+\end{verbatim}
+
+\section{En ℝ, si ab = cd y e = f, entonces a(be) = c(df)}
+\label{sec:org49426f4}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c, d, e y f son números reales tales que
+--    a * b = c * d y
+--    e = f,
+-- entonces
+--    a * (b * e) = c * (d * f)
+-- ---------------------------------------------------------------------
+
+-- Demostración en leguaje natural
+-- ===============================
+
+-- Por la siguiente cadena de igualdades
+--    a(be)
+--    = a(bf)    [por la segunda hipótesis]
+--    = (ab)f    [por la asociativa]
+--    = (cd)f    [por la primera hipótesis]
+--    = c(df)    [por la asociativa]
+
+-- Demostraciones en Lean4
+-- =======================
+
+import Mathlib.Tactic
+import Mathlib.Data.Real.Basic
+
+-- 1ª demostración
+example
+  (a b c d e f : ℝ)
+  (h1 : a * b = c * d)
+  (h2 : e = f)
+  : a * (b * e) = c * (d * f) :=
+calc
+  a * (b * e)
+    = a * (b * f) := by rw [h2]
+  _ = (a * b) * f := by rw [←mul_assoc]
+  _ = (c * d) * f := by rw [h1]
+  _ = c * (d * f) := by rw [mul_assoc]
+
+-- 2ª demostración
+example
+  (a b c d e f : ℝ)
+  (h1 : a * b = c * d)
+  (h2 : e = f)
+  : a * (b * e) = c * (d * f) :=
+by
+  rw [h2]
+  rw [←mul_assoc]
+  rw [h1]
+  rw [mul_assoc]
+
+-- 3ª demostración
+example
+  (a b c d e f : ℝ)
+  (h1 : a * b = c * d)
+  (h2 : e = f)
+  : a * (b * e) = c * (d * f) :=
+by
+  simp [*, ←mul_assoc]
+\end{verbatim}
+
+\section{En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d}
+\label{sec:org2748b80}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c, d, e y f son números reales tales que
+--    b * c = e * f
+-- entonces
+--    ((a * b) * c) * d = ((a * e) * f) * d
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    ((ab)c)d
+--    = (a(bc))d    [por la asociativa]
+--    = (a(ef))d    [por la hipótesis]
+--    = ((ae)f)d    [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+-- 1ª demostración
+example
+  (a b c d e f : ℝ)
+  (h : b * c = e * f)
+  : ((a * b) * c) * d = ((a * e) * f) * d :=
+calc
+  ((a * b) * c) * d
+    = (a * (b * c)) * d := by rw [mul_assoc a]
+  _ = (a * (e * f)) * d := by rw [h]
+  _ = ((a * e) * f) * d := by rw [←mul_assoc a]
+
+-- 2ª demostración
+example
+  (a b c d e f : ℝ)
+  (h : b * c = e * f)
+  : ((a * b) * c) * d = ((a * e) * f) * d :=
+by
+  rw [mul_assoc a]
+  rw [h]
+  rw [←mul_assoc a]
+
+-- 3ª demostración
+example
+  (a b c d e f : ℝ)
+  (h : b * c = e * f)
+  : ((a * b) * c) * d = ((a * e) * f) * d :=
+by
+  rw [mul_assoc a, h, ←mul_assoc a]
+\end{verbatim}
+
+\section{En ℝ, si c = ba-d y d = ab, entonces c = 0}
+\label{sec:org1da5eec}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c y d son números reales tales que
+--    c = b * a - d
+--    d = a * b
+-- entonces
+--    c = 0
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    c = ba - d     [por la primera hipótesis]
+--      = ab - d     [por la conmutativa]
+--      = ab - ab    [por la segunda hipótesis]
+--      = 0
+
+-- Demostraciones en Lean4
+-- =======================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+-- 1ª demostración
+example
+  (a b c d : ℝ)
+  (h1 : c = b * a - d)
+  (h2 : d = a * b)
+  : c = 0 :=
+calc
+  c = b * a - d     := by rw [h1]
+  _ = a * b - d     := by rw [mul_comm]
+  _ = a * b - a * b := by rw [h2]
+  _ = 0             := by rw [sub_self]
+
+-- 2ª demostración
+example
+  (a b c d : ℝ)
+  (h1 : c = b * a - d)
+  (h2 : d = a * b)
+  : c = 0 :=
+by
+  rw [h1]
+  rw [mul_comm]
+  rw [h2]
+  rw [sub_self]
+
+-- 3ª demostración
+example
+  (a b c d : ℝ)
+  (h1 : c = b * a - d)
+  (h2 : d = a * b)
+  : c = 0 :=
+by
+  rw [h1, mul_comm, h2, sub_self]
+\end{verbatim}
+
+\section{En ℝ, (a+b)(a+b) = aa+2ab+bb}
+\label{sec:org2389c0f}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a y b son números reales, entonces
+--    (a + b) * (a + b) = a * a + 2 * (a * b) + b * b
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(a + b)
+--    = (a + b)a + (a + b)b    [por la distributiva]
+--    = aa + ba + (a + b)b     [por la distributiva]
+--    = aa + ba + (ab + bb)    [por la distributiva]
+--    = aa + ba + ab + bb      [por la asociativa]
+--    = aa + (ba + ab) + bb    [por la asociativa]
+--    = aa + (ab + ab) + bb    [por la conmutativa]
+--    = aa + 2(ab) + bb        [por def. de doble]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+variable (a b c : ℝ)
+
+-- 1ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+calc
+  (a + b) * (a + b)
+    = (a + b) * a + (a + b) * b       := by rw [mul_add]
+  _ = a * a + b * a + (a + b) * b     := by rw [add_mul]
+  _ = a * a + b * a + (a * b + b * b) := by rw [add_mul]
+  _ = a * a + b * a + a * b + b * b   := by rw [←add_assoc]
+  _ = a * a + (b * a + a * b) + b * b := by rw [add_assoc (a * a)]
+  _ = a * a + (a * b + a * b) + b * b := by rw [mul_comm b a]
+  _ = a * a + 2 * (a * b) + b * b     := by rw [←two_mul]
+
+-- 2ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+calc
+  (a + b) * (a + b)
+    = a * a + b * a + (a * b + b * b) := by rw [mul_add, add_mul, add_mul]
+  _ = a * a + (b * a + a * b) + b * b := by rw [←add_assoc, add_assoc (a * a)]
+  _ = a * a + 2 * (a * b) + b * b     := by rw [mul_comm b a, ←two_mul]
+
+-- 3ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+calc
+  (a + b) * (a + b)
+    = a * a + b * a + (a * b + b * b) := by ring
+  _ = a * a + (b * a + a * b) + b * b := by ring
+  _ = a * a + 2 * (a * b) + b * b     := by ring
+
+-- 4ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+by ring
+
+-- 5ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+by
+  rw [mul_add]
+  rw [add_mul]
+  rw [add_mul]
+  rw [←add_assoc]
+  rw [add_assoc (a * a)]
+  rw [mul_comm b a]
+  rw [←two_mul]
+
+-- 6ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+by
+  rw [mul_add, add_mul, add_mul]
+  rw [←add_assoc, add_assoc (a * a)]
+  rw [mul_comm b a, ←two_mul]
+
+-- 7ª demostración
+example :
+  (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
+by linarith
+\end{verbatim}
+
+\section{En ℝ, (a+b)(c+d) = ac+ad+bc+bd}
+\label{sec:org34cde98}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c y d son números reales, entonces
+--    (a + b) * (c + d) = a * c + a * d + b * c + b * d
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(c + d)
+--    = a(c + d) + b(c + d)    [por la distributiva]
+--    = ac + ad + b(c + d)     [por la distributiva]
+--    = ac + ad + (bc + bd)    [por la distributiva]
+--    = ac + ad + bc + bd      [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+variable (a b c d : ℝ)
+
+-- 1ª demostración
+example
+  : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+calc
+  (a + b) * (c + d)
+    = a * (c + d) + b * (c + d)       := by rw [add_mul]
+  _ = a * c + a * d + b * (c + d)     := by rw [mul_add]
+  _ = a * c + a * d + (b * c + b * d) := by rw [mul_add]
+  _ = a * c + a * d + b * c + b * d   := by rw [←add_assoc]
+
+-- 2ª demostración
+example
+  : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+calc
+  (a + b) * (c + d)
+    = a * (c + d) + b * (c + d)       := by ring
+  _ = a * c + a * d + b * (c + d)     := by ring
+  _ = a * c + a * d + (b * c + b * d) := by ring
+  _ = a * c + a * d + b * c + b * d   := by ring
+
+-- 3ª demostración
+example : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+by ring
+
+-- 4ª demostración
+example
+  : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+by
+   rw [add_mul]
+   rw [mul_add]
+   rw [mul_add]
+   rw [← add_assoc]
+
+-- 5ª demostración
+example : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+by rw [add_mul, mul_add, mul_add, ←add_assoc]
+\end{verbatim}
+
+\section{En ℝ, (a+b)(a-b) = a\^{}2-b\^{}2}
+\label{sec:orgfa255f8}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a y b son números reales, entonces
+--    (a + b) * (a - b) = a^2 - b^2
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades:
+--    (a + b)(a - b)
+--    = a(a - b) + b(a - b)            [por la distributiva]
+--    = (aa - ab) + b(a - b)           [por la distributiva]
+--    = (a^2 - ab) + b(a - b)          [por def. de cuadrado]
+--    = (a^2 - ab) + (ba - bb)         [por la distributiva]
+--    = (a^2 - ab) + (ba - b^2)        [por def. de cuadrado]
+--    = (a^2 + -(ab)) + (ba - b^2)     [por def. de resta]
+--    = a^2 + (-(ab) + (ba - b^2))     [por la asociativa]
+--    = a^2 + (-(ab) + (ba + -b^2))    [por def. de resta]
+--    = a^2 + ((-(ab) + ba) + -b^2)    [por la asociativa]
+--    = a^2 + ((-(ab) + ab) + -b^2)    [por la conmutativa]
+--    = a^2 + (0 + -b^2)               [por def. de opuesto]
+--    = (a^2 + 0) + -b^2               [por asociativa]
+--    = a^2 + -b^2                     [por def. de cero]
+--    = a^2 - b^2                      [por def. de resta]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+variable (a b : ℝ)
+
+-- 1ª demostración
+-- ===============
+
+example : (a + b) * (a - b) = a^2 - b^2 :=
+calc
+  (a + b) * (a - b)
+    = a * (a - b) + b * (a - b)         := by rw [add_mul]
+  _ = (a * a - a * b) + b * (a - b)     := by rw [mul_sub]
+  _ = (a^2 - a * b) + b * (a - b)       := by rw [← pow_two]
+  _ = (a^2 - a * b) + (b * a - b * b)   := by rw [mul_sub]
+  _ = (a^2 - a * b) + (b * a - b^2)     := by rw [← pow_two]
+  _ = (a^2 + -(a * b)) + (b * a - b^2)  := by ring
+  _ = a^2 + (-(a * b) + (b * a - b^2))  := by rw [add_assoc]
+  _ = a^2 + (-(a * b) + (b * a + -b^2)) := by ring
+  _ = a^2 + ((-(a * b) + b * a) + -b^2) := by rw [← add_assoc
+                                              (-(a * b)) (b * a) (-b^2)]
+  _ = a^2 + ((-(a * b) + a * b) + -b^2) := by rw [mul_comm]
+  _ = a^2 + (0 + -b^2)                  := by rw [neg_add_self (a * b)]
+  _ = (a^2 + 0) + -b^2                  := by rw [← add_assoc]
+  _ = a^2 + -b^2                        := by rw [add_zero]
+  _ = a^2 - b^2                         := by linarith
+
+-- 2ª demostración
+-- ===============
+
+example : (a + b) * (a - b) = a^2 - b^2 :=
+calc
+  (a + b) * (a - b)
+    = a * (a - b) + b * (a - b)         := by ring
+  _ = (a * a - a * b) + b * (a - b)     := by ring
+  _ = (a^2 - a * b) + b * (a - b)       := by ring
+  _ = (a^2 - a * b) + (b * a - b * b)   := by ring
+  _ = (a^2 - a * b) + (b * a - b^2)     := by ring
+  _ = (a^2 + -(a * b)) + (b * a - b^2)  := by ring
+  _ = a^2 + (-(a * b) + (b * a - b^2))  := by ring
+  _ = a^2 + (-(a * b) + (b * a + -b^2)) := by ring
+  _ = a^2 + ((-(a * b) + b * a) + -b^2) := by ring
+  _ = a^2 + ((-(a * b) + a * b) + -b^2) := by ring
+  _ = a^2 + (0 + -b^2)                  := by ring
+  _ = (a^2 + 0) + -b^2                  := by ring
+  _ = a^2 + -b^2                        := by ring
+  _ = a^2 - b^2                         := by ring
+
+-- 3ª demostración
+-- ===============
+
+example : (a + b) * (a - b) = a^2 - b^2 :=
+by ring
+
+-- 4ª demostración
+-- ===============
+
+-- El lema anterior es
+lemma aux : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
+by ring
+
+-- La demostración es
+example : (a + b) * (a - b) = a^2 - b^2 :=
+by
+  rw [sub_eq_add_neg]
+  rw [aux]
+  rw [mul_neg]
+  rw [add_assoc (a * a)]
+  rw [mul_comm b a]
+  rw [neg_add_self]
+  rw [add_zero]
+  rw [← pow_two]
+  rw [mul_neg]
+  rw [← pow_two]
+  rw [← sub_eq_add_neg]
+\end{verbatim}
+
+\section{En ℝ, si c = da+b y b = ad, entonces c = 2ad}
+\label{sec:orge8c3687}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c y d son números reales tales que
+--    c = d * a + b
+--    b = a * d
+-- entonces
+--    c = 2 * a * d
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    c = da + b     [por la primera hipótesis]
+--      = da + ad    [por la segunda hipótesis]
+--      = ad + ad    [por la conmutativa]
+--      = 2(ad)      [por la def. de doble]
+--      = 2ad        [por la asociativa]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+variable (a b c d : ℝ)
+
+-- 1ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+calc
+  c = d * a + b     := by rw [h1]
+  _ = d * a + a * d := by rw [h2]
+  _ = a * d + a * d := by rw [mul_comm d a]
+  _ = 2 * (a * d)   := by rw [← two_mul (a * d)]
+  _ = 2 * a * d     := by rw [mul_assoc]
+
+-- 2ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by
+  rw [h2] at h1
+  clear h2
+  rw [mul_comm d a] at h1
+  rw [← two_mul (a*d)] at h1
+  rw [← mul_assoc 2 a d] at h1
+  exact h1
+
+-- 3ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by rw [h1, h2, mul_comm d a, ← two_mul (a * d), mul_assoc]
+
+-- 4ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by
+  rw [h1]
+  rw [h2]
+  ring
+
+-- 5ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by
+  rw [h1, h2]
+  ring
+
+-- 6ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by rw [h1, h2] ; ring
+
+-- 7ª demostración
+example
+  (h1 : c = d * a + b)
+  (h2 : b = a * d)
+  : c = 2 * a * d :=
+by linarith
+\end{verbatim}
+
+\section{En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc}
+\label{sec:org88d36f1}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b y c son números reales tales que
+--    a + b = c,
+-- entonces
+--    (a + b) * (a + b) = a * c + b * c
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b)(a + b)
+--    = (a + b)c        [por la hipótesis]
+--    = ac + bc         [por la distributiva]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
+variable (a b c : ℝ)
+
+-- 1ª demostración
+example
+  (h : a + b = c)
+  : (a + b) * (a + b) = a * c + b * c :=
+calc
+  (a + b) * (a + b)
+    = (a + b) * c   := by exact congrArg (HMul.hMul (a + b)) h
+  _ = a * c + b * c := by rw [add_mul]
+
+-- 2ª demostración
+example
+  (h : a + b = c)
+  : (a + b) * (a + b) = a * c + b * c :=
+by
+  nth_rewrite 2 [h]
+  rw [add_mul]
+\end{verbatim}
+
+\chapter{Propiedades elementales de los anillos}
+\label{sec:org711217f}
+
+\section{Si R es un anillo y a ∈ R, entonces a + 0 = a}
+\label{sec:orgc380161}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar en Lean4 que si R es un anillo, entonces
+--    ∀ a : R, a + 0 = a
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    a + 0 = 0 + a    [por la conmutativa de la suma]
+--          = a        [por el axioma del cero por la izquierda]
+
+import Mathlib.Algebra.Ring.Defs
+
+variable {R : Type _} [Ring R]
+variable (a : R)
+
+-- Demostraciones con Lean4
+-- ========================
+
+-- 1ª demostración
+example : a + 0 = a :=
+calc a + 0
+     = 0 + a := by rw [add_comm]
+   _ = a     := by rw [zero_add]
+
+-- 2ª demostración
+example : a + 0 = a :=
+by
+  rw [add_comm]
+  rw [zero_add]
+
+-- 3ª demostración
+example : a + 0 = a :=
+by rw [add_comm, zero_add]
+
+-- 4ª demostración
+example : a + 0 = a :=
+by exact add_zero a
+
+-- 5ª demostración
+example : a + 0 = a :=
+  add_zero a
+
+-- 5ª demostración
+example : a + 0 = a :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a ∈ R, entonces a + -a = 0}
+\label{sec:orgd7a43af}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar en Lean4 que si R es un anillo, entonces
+--    ∀ a : R, a + -a = 0
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    a + -a = -a + a    [por la conmutativa de la suma]
+--           = 0         [por el axioma de inverso por la izquierda]
+
+import Mathlib.Algebra.Ring.Defs
+
+variable {R : Type _} [Ring R]
+variable (a : R)
+
+-- 1ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+calc a + -a = -a + a := by rw [add_comm]
+          _ = 0      := by rw [add_left_neg]
+
+-- 2ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+by
+  rw [add_comm]
+  rw [add_left_neg]
+
+-- 3ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+by rw [add_comm, add_left_neg]
+
+-- 4ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+by exact add_neg_self a
+
+-- 5ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+  add_neg_self a
+
+-- 6ª demostración
+-- ===============
+
+example : a + -a = 0 :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b}
+\label{sec:orgb3d651b}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar en Lean4 que si R es un anillo, entonces
+--    ∀ a, b : R, -a + (a + b) = b
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    -a + (a + b) = (-a + a) + b [por la asociativa]
+--                 = 0 + b        [por inverso por la izquierda]
+--                 = b            [por cero por la izquierda]
+
+import Mathlib.Algebra.Ring.Defs
+
+variable {R : Type _} [Ring R]
+variable (a b : R)
+
+-- Demostraciones con Lean4
+-- ========================
+
+-- 1ª demostración
+example : -a + (a + b) = b :=
+calc -a + (a + b) = (-a + a) + b := by rw [← add_assoc]
+                _ = 0 + b        := by rw [add_left_neg]
+                _ = b            := by rw [zero_add]
+
+-- 2ª demostración
+example : -a + (a + b) = b :=
+by
+  rw [←add_assoc]
+  rw [add_left_neg]
+  rw [zero_add]
+
+-- 3ª demostración
+example : -a + (a + b) = b :=
+by rw [←add_assoc, add_left_neg, zero_add]
+
+-- 4ª demostración
+example : -a + (a + b) = b :=
+by exact neg_add_cancel_left a b
+
+-- 5ª demostración
+example : -a + (a + b) = b :=
+  neg_add_cancel_left a b
+
+-- 6ª demostración
+example : -a + (a + b) = b :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a}
+\label{sec:org3e57bd7}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar en Lean4 que si R es un anillo, entonces
+--    ∀ a, b : R, (a + b) + -b = a
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    (a + b) + -b = a + (b + -b)    [por la asociativa]
+--               _ = a + 0           [por suma con opuesto]
+--               _ = a               [por suma con cero]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+
+variable {R : Type _} [Ring R]
+variable (a b : R)
+
+-- 1ª demostración
+example : (a + b) + -b = a :=
+calc
+  (a + b) + -b = a + (b + -b) := by rw [add_assoc]
+             _ = a + 0        := by rw [add_right_neg]
+             _ = a            := by rw [add_zero]
+
+-- 2ª demostración
+example : (a + b) + -b = a :=
+by
+  rw [add_assoc]
+  rw [add_right_neg]
+  rw [add_zero]
+
+-- 3ª demostración
+example : (a + b) + -b = a :=
+by rw [add_assoc, add_right_neg, add_zero]
+
+-- 4ª demostración
+example : (a + b) + -b = a :=
+  add_neg_cancel_right a b
+
+-- 5ª demostración
+example : (a + b) + -b = a :=
+  add_neg_cancel_right _ _
+
+-- 6ª demostración
+example : (a + b) + -b = a :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c}
+\label{sec:orgbc4350d}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a, b, c ∈ R tales que
+--    a + b = a + c
+-- entonces
+--    b = c
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- ======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de igualdades
+--    b = 0 + b           [por suma con cero]
+--      = (-a + a) + b    [por suma con opuesto]
+--      = -a + (a + b)    [por asociativa]
+--      = -a + (a + c)    [por hipótesis]
+--      = (-a + a) + c    [por asociativa]
+--      = 0 + c           [por suma con opuesto]
+--      = c               [por suma con cero]
+
+-- 2ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de implicaciones
+--    a + b = a + c
+--    ==> -a + (a + b) = -a + (a + c)     [sumando -a]
+--    ==>  (-a + a) + b = (-a + a) + c    [por la asociativa]
+--    ==>  0 + b = 0 + b                  [suma con opuesto]
+--    ==>  b = c                          [suma con cero]
+
+-- 3ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de igualdades
+--    b = -a + (a + b)
+--      = -a + (a + c)   [por la hipótesis]
+--      = c
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable {a b c : R}
+
+-- 1ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+calc
+  b = 0 + b        := by rw [zero_add]
+  _ = (-a + a) + b := by rw [add_left_neg]
+  _ = -a + (a + b) := by rw [add_assoc]
+  _ = -a + (a + c) := by rw [h]
+  _ = (-a + a) + c := by rw [←add_assoc]
+  _ = 0 + c        := by rw [add_left_neg]
+  _ = c            := by rw [zero_add]
+
+-- 2ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+by
+  have h1 : -a + (a + b) = -a + (a + c) :=
+    congrArg (HAdd.hAdd (-a)) h
+  clear h
+  rw [← add_assoc] at h1
+  rw [add_left_neg] at h1
+  rw [zero_add] at h1
+  rw [← add_assoc] at h1
+  rw [add_left_neg] at h1
+  rw [zero_add] at h1
+  exact h1
+
+-- 3ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+calc
+  b = -a + (a + b) := by rw [neg_add_cancel_left a b]
+  _ = -a + (a + c) := by rw [h]
+  _ = c            := by rw [neg_add_cancel_left]
+
+-- 4ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+by
+  rw [← neg_add_cancel_left a b]
+  rw [h]
+  rw [neg_add_cancel_left]
+
+-- 5ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+by
+  rw [← neg_add_cancel_left a b, h, neg_add_cancel_left]
+
+-- 6ª demostración
+example
+  (h : a + b = a + c)
+  : b = c :=
+add_left_cancel h
+\end{verbatim}
+
+\section{Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c}
+\label{sec:org73a64ca}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a, b, c ∈ R tales que
+--    a + b = c + b
+-- entonces
+--    a = c
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de igualdades
+--    a = a + 0           [por suma con cero]
+--      = a + (b + -b)    [por suma con opuesto]
+--      = (a + b) + -b    [por asociativa]
+--      = (c + b) + -b    [por hipótesis]
+--      = c + (b + -b)    [por asociativa]
+--      = c + 0           [por suma con opuesto]
+--      = c               [por suma con cero]
+
+-- 2ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de igualdades
+--    a = (a + b) + -b
+--      = (c + b) + -b    [por hipótesis]
+--      = c
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable {a b c : R}
+
+-- 1ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+calc
+  a = a + 0        := by rw [add_zero]
+  _ = a + (b + -b) := by rw [add_right_neg]
+  _ = (a + b) + -b := by rw [add_assoc]
+  _ = (c + b) + -b := by rw [h]
+  _ = c + (b + -b) := by rw [← add_assoc]
+  _ = c + 0        := by rw [← add_right_neg]
+  _ = c            := by rw [add_zero]
+
+-- 2ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+calc
+  a = (a + b) + -b := (add_neg_cancel_right a b).symm
+  _ = (c + b) + -b := by rw [h]
+  _ = c            := add_neg_cancel_right c b
+
+-- 3ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+by
+  rw [← add_neg_cancel_right a b]
+  rw [h]
+  rw [add_neg_cancel_right]
+
+-- 4ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+by
+  rw [← add_neg_cancel_right a b, h, add_neg_cancel_right]
+
+-- 5ª demostración con Lean4
+-- =========================
+
+example
+  (h : a + b = c + b)
+  : a = c :=
+add_right_cancel h
+\end{verbatim}
+
+\section{Si R es un anillo y a ∈ R, entonces a.0 = 0}
+\label{sec:org9c1b95c}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a ∈ R, entonces
+--    a * 0 = 0
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Basta aplicar la propiedad cancelativa a
+--    a.0 + a.0 = a.0 + 0
+-- que se demuestra mediante la siguiente cadena de igualdades
+--    a.0 + a.0 = a.(0 + 0)    [por la distributiva]
+--              = a.0          [por suma con cero]
+--              = a.0 + 0      [por suma con cero]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable (a : R)
+
+-- 1ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+by
+  have h : a * 0 + a * 0 = a * 0 + 0 :=
+    calc a * 0 + a * 0 = a * (0 + 0) := by rw [mul_add a 0 0]
+                     _ = a * 0       := by rw [add_zero 0]
+                     _ = a * 0 + 0   := by rw [add_zero (a * 0)]
+  rw [add_left_cancel h]
+
+-- 2ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+by
+  have h : a * 0 + a * 0 = a * 0 + 0 :=
+    calc a * 0 + a * 0 = a * (0 + 0) := by rw [← mul_add]
+                     _ = a * 0       := by rw [add_zero]
+                     _ = a * 0 + 0   := by rw [add_zero]
+  rw [add_left_cancel h]
+
+-- 3ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+by
+  have h : a * 0 + a * 0 = a * 0 + 0 :=
+    by rw [← mul_add, add_zero, add_zero]
+  rw [add_left_cancel h]
+
+-- 4ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+by
+  have : a * 0 + a * 0 = a * 0 + 0 :=
+    calc a * 0 + a * 0 = a * (0 + 0) := by simp
+                     _ = a * 0       := by simp
+                     _ = a * 0 + 0   := by simp
+  simp
+
+-- 5ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+  mul_zero a
+
+-- 6ª demostración
+-- ===============
+
+example : a * 0 = 0 :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a ∈ R, entonces 0.a = 0}
+\label{sec:orgb130dd3}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a ∈ R, entonces
+--    0 * a = 0
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Basta aplicar la propiedad cancelativa a
+--    0.a + 0.a = 0.a + 0
+-- que se demuestra mediante la siguiente cadena de igualdades
+--    0.a + 0.a = (0 + 0).a    [por la distributiva]
+--              = 0.a          [por suma con cero]
+--              = 0.a + 0      [por suma con cero]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable (a : R)
+
+-- 1ª demostración
+example : 0 * a = 0 :=
+by
+  have h : 0 * a + 0 * a = 0 * a + 0 :=
+    calc 0 * a + 0 * a = (0 + 0) * a := by rw [add_mul]
+                     _ = 0 * a       := by rw [add_zero]
+                     _ = 0 * a + 0   := by rw [add_zero]
+  rw [add_left_cancel h]
+
+-- 2ª demostración
+example : 0 * a = 0 :=
+by
+  have h : 0 * a + 0 * a = 0 * a + 0 :=
+    by rw [←add_mul, add_zero, add_zero]
+  rw [add_left_cancel h]
+
+-- 3ª demostración
+example : 0 * a = 0 :=
+by
+  have : 0 * a + 0 * a = 0 * a + 0 :=
+    calc 0 * a + 0 * a = (0 + 0) * a := by simp
+                     _ = 0 * a       := by simp
+                     _ = 0 * a + 0   := by simp
+  simp
+
+-- 4ª demostración
+example : 0 * a = 0 :=
+by
+  have : 0 * a + 0 * a = 0 * a + 0 := by simp
+  simp
+
+-- 5ª demostración
+example : 0 * a = 0 :=
+by simp
+
+-- 6ª demostración
+example : 0 * a = 0 :=
+zero_mul a
+\end{verbatim}
+
+\section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b}
+\label{sec:orgb777e47}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si es un anillo y a, b ∈ R tales que
+--    a + b = 0
+-- entonces
+--    -a = b
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- ---------------------
+
+-- Por la siguiente cadena de igualdades
+--    -a = -a + 0          [por suma cero]
+--       = -a + (a + b)    [por hipótesis]
+--       = b               [por cancelativa]
+
+-- 2ª demostración en LN
+-- ---------------------
+
+-- Sumando -a a ambos lados de la hipótesis, se tiene
+--    -a + (a + b) = -a + 0
+-- El término de la izquierda se reduce a b (por la cancelativa) y el de
+-- la derecha a -a (por la suma con cero). Por tanto, se tiene
+--     b = -a
+-- Por la simetría de la igualdad, se tiene
+--     -a = b
+
+-- Demostraciones con Lean 4
+-- =========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable {a b : R}
+
+-- 1ª demostración (basada en la 1º en LN)
+example
+  (h : a + b = 0)
+  : -a = b :=
+calc
+  -a = -a + 0       := by rw [add_zero]
+   _ = -a + (a + b) := by rw [h]
+   _ = b            := by rw [neg_add_cancel_left]
+
+-- 2ª demostración (basada en la 1º en LN)
+example
+  (h : a + b = 0)
+  : -a = b :=
+calc
+  -a = -a + 0       := by simp
+   _ = -a + (a + b) := by rw [h]
+   _ = b            := by simp
+
+-- 3ª demostración (basada en la 2º en LN)
+example
+  (h : a + b = 0)
+  : -a = b :=
+by
+  have h1 : -a + (a + b) = -a + 0 := congrArg (HAdd.hAdd (-a)) h
+  have h2 : -a + (a + b) = b := neg_add_cancel_left a b
+  have h3 : -a + 0 = -a := add_zero (-a)
+  rw [h2, h3] at h1
+  exact h1.symm
+
+-- 4ª demostración
+example
+  (h : a + b = 0)
+  : -a = b :=
+neg_eq_iff_add_eq_zero.mpr h
+\end{verbatim}
+
+\section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b}
+\label{sec:org9cb1b63}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a, b ∈ R tales que
+--    a + b = 0
+-- entonces
+--    a = -b
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- ---------------------
+
+-- Por la siguiente cadena de igualdades
+--    a = (a + b) + -b    [por la concelativa]
+--      = 0 + -b          [por la hipótesis]
+--      = -b              [por la suma con cero]
+
+-- 2ª demostración en LN
+-- ---------------------
+
+-- Sumando -a a ambos lados de la hipótesis, se tiene
+--    (a + b) + -b = 0 + -b
+-- El término de la izquierda se reduce a a (por la cancelativa) y el de
+-- la derecha a -b (por la suma con cero). Por tanto, se tiene
+--     a = -b
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable {a b : R}
+
+-- 1ª demostración (basada en la 1ª en LN)
+example
+  (h : a + b = 0)
+  : a = -b :=
+calc
+  a = (a + b) + -b := by rw [add_neg_cancel_right]
+  _ = 0 + -b       := by rw [h]
+  _ = -b           := by rw [zero_add]
+
+-- 2ª demostración (basada en la 1ª en LN)
+example
+  (h : a + b = 0)
+  : a = -b :=
+calc
+  a = (a + b) + -b := by simp
+  _ = 0 + -b       := by rw [h]
+  _ = -b           := by simp
+
+-- 3ª demostración (basada en la 1ª en LN)
+example
+  (h : a + b = 0)
+  : a = -b :=
+by
+  have h1 : (a + b) + -b = 0 + -b := by rw [h]
+  have h2 : (a + b) + -b = a := add_neg_cancel_right a b
+  have h3 : 0 + -b = -b := zero_add (-b)
+  rwa [h2, h3] at h1
+
+-- 4ª demostración
+example
+  (h : a + b = 0)
+  : a = -b :=
+add_eq_zero_iff_eq_neg.mp h
+\end{verbatim}
+
+\section{Si R es un anillo, entonces -0 = 0}
+\label{sec:org09181e6}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo, entonces
+--    -0 = 0
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- Por la suma con cero se tiene
+--    0 + 0 = 0
+-- Aplicándole la propiedad
+--    ∀ a b ∈ R, a + b = 0 → -a = b
+-- se obtiene
+--    -0 = 0
+
+-- 2ª demostración en LN
+-- =====================
+
+-- Puesto que
+--    ∀ a b ∈ R, a + b = 0 → -a = b
+-- basta demostrar que
+--    0 + 0 = 0
+-- que es cierta por la suma con cero.
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+
+-- 1ª demostración (basada en la 1ª en LN)
+example : (-0 : R) = 0 :=
+by
+  have h1 : (0 : R) + 0 = 0 := add_zero 0
+  show (-0 : R) = 0
+  exact neg_eq_of_add_eq_zero_left h1
+
+-- 2ª demostración (basada en la 2ª en LN)
+example : (-0 : R) = 0 :=
+by
+  apply neg_eq_of_add_eq_zero_left
+  rw [add_zero]
+
+-- 3ª demostración
+example : (-0 : R) = 0 :=
+  neg_zero
+
+-- 4ª demostración
+example : (-0 : R) = 0 :=
+by simp
+\end{verbatim}
+
+\section{Si R es un anillo y a ∈ R, entonces -(-a) = a}
+\label{sec:org0d22fab}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si R es un anillo y a ∈ R, entonces
+--     -(-a) = a
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Es consecuencia de las siguiente propiedades demostradas en
+-- ejercicios anteriores:
+--    ∀ a b ∈ R, a + b = 0 → -a = b
+--    ∀ a ∈ R, -a + a = 0
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Tactic
+
+variable {R : Type _} [Ring R]
+variable {a : R}
+
+-- 1ª demostración
+example : -(-a) = a :=
+by
+  have h1 : -a + a = 0 := add_left_neg a
+  show -(-a) = a
+  exact neg_eq_of_add_eq_zero_right h1
+
+-- 2ª demostración
+example : -(-a) = a :=
+by
+  apply neg_eq_of_add_eq_zero_right
+  rw [add_left_neg]
+
+-- 3ª demostración
+example : -(-a) = a :=
+neg_neg a
+
+-- 4ª demostración
+example : -(-a) = a :=
+by simp
+\end{verbatim}
+
+\input Calculemus2_bibliografia
+
+\end{document}

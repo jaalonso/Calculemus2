@@ -1,6 +1,5 @@
 *.aux
 *.bbl
-*.bib
 *.blg
 *.idx
 *.ilg
@@ -9,7 +8,6 @@
 *.olean
 *.org#
 *.out
-*.tex
 *.toc
 *.bbl
 /.vscode

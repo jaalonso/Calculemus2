@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt,twoside]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Paquetes adicionales                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración para XeLaTeX
+\usepackage{tocloft}
+\setlength{\cftbeforechapskip}{2ex}
+\setlength{\cftbeforesecskip}{0.5ex}
+\setlength{\cftchapnumwidth}{2em}
+\setlength{\cftsecnumwidth}{3em}
+\cftsetindents{chapter}{0em}{\cftchapnumwidth}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle} % inicial
+\setromanfont{DejaVu Sans} % inicial
+\setmonofont{DejaVu Sans Mono}[Scale={0.90}] % inicial
+
+% \setsansfont{Arial}
+
+% \setmainfont{DejaVu Math TeX Gyre}
+% \setmonofont{DejaVu Math TeX Gyre}[Scale={1.1}]
+
+% Notas: La lista de fuentes disponibles se obtiene con fc-list
+
+\usepackage[spanish]{babel}          % Castellanización.
+% \usepackage{ucs}
+% \usepackage[utf8]{inputenc}        % Acentos de UTF8
+% \usepackage[T1]{fontenc}           % Codificación T1
+% \usepackage{graphicx}
+% \usepackage{fancyvrb}                % Verbatim extendido
+% \usepackage{mathpazo}              % Fuentes semejante a palatino
+% \usepackage[scaled=.90]{helvet}
+% \usepackage{cmtt}
+% \renewcommand{\ttdefault}{cmtt}
+\usepackage{a4wide}
+% \usepackage{amsmath,amssymb,amstext}
+\usepackage{amssymb, amsmath, mathtools}
+
+\usepackage{newunicodechar}
+\newunicodechar{⟹}{\ensuremath{\mathnormal\Longrightarrow}}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{minted}
+\usemintedstyle{emacs}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\newminted{lean}{bgcolor=bg, autogobble=true}
+
+\setminted{fontsize=\small,baselinestretch=1}
+
+\linespread{1.05}                  % Distancia entre líneas
+\setlength{\parindent}{2em}        % Indentación de comienzo de párrafo
+% \deactivatetilden                  % Elima uso de ~ para la eñe
+\raggedbottom                      % No ajusta los espacios verticales.
+
+\usepackage[%
+  colorlinks=true,
+  urlcolor=blue,
+  % pdftex,
+  pdfauthor={José A. Alonso <jalonso@us.es>},%
+  pdftitle={Calculemus con Lean},%
+  pdfstartview=FitH,%
+  bookmarks=false]{hyperref}
+
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{4}
+
+% No indenta los item
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+\usepackage{makeidx}
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Cabeceras                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+
+\addtolength{\headheight}{\baselineskip}
+
+\pagestyle{fancy}
+
+\cfoot{}
+
+%\fancyhead{}
+%\fancyhead[RE]{\mdseries\sffamily \nouppercase{\leftmark}}
+%\fancyhead[LO]{\mdseries\sffamily \nouppercase{\rightmark}}
+%\fancyhead[LE,RO]{\mdseries\sffamily \thepage}
+
+\fancyhead{}
+\fancyhead[RE]{\mdseries \nouppercase{\leftmark}}
+\fancyhead[LO]{\mdseries \nouppercase{\rightmark}}
+\fancyhead[LE,RO]{\mdseries \thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Definiciones                                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input definiciones
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Título                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+  {\LARGE Calculemus \\
+    (Vol. 2: Demostraciones con Lean4)}}
+\author{
+  \href{http://www.cs.us.es/~jalonso}{José A. Alonso Jiménez}}
+\date{\vfill \hrule \vspace*{2mm}
+  \begin{tabular}{l}
+      \href{http://www.cs.us.es/glc}
+           {Grupo de Lógica Computacional} \\
+      \href{http://www.cs.us.es}
+           {Dpto. de Ciencias de la Computación e Inteligencia Artificial} \\
+      \href{http://www.us.es}
+           {Universidad de Sevilla}  \\
+    Sevilla, 10 de julio de 2023 (versión del \today)
+  \end{tabular}\hfill\mbox{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Documento                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \includeonly{}
+
+% \includexmp{licencia}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\input{Licencia/licenciaCC}
+\newpage
+
+\tableofcontents
+\clearpage

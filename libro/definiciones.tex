@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ejercicios                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{ejercicio}{Ejercicio}[chapter]
+\newtheorem{ejercicio*}{Ejercicio}[section]
+
+\newenvironment{solucion}
+  {\noindent \textbf{Solución: }}
+  {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Código                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DefineVerbatimEnvironment{code}{Verbatim}
+{fontsize=\normalsize,
+ fontfamily=cmtt,
+ frame=single}
+
+\DefineVerbatimEnvironment{code*}{Verbatim}
+{fontsize=\normalsize,
+ fontfamily=cmtt,
+ frame=single}
+
+\DefineVerbatimEnvironment{sesion}{Verbatim}
+{commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ fontshape=n,
+ xleftmargin=3mm,
+ frame=leftline}
+
+
+\DefineVerbatimEnvironment{sesion*}{Verbatim}
+{%commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontshape=n,
+ fontfamily=cmtt,
+ xleftmargin=3mm,
+ frame=leftline}
+
+\DefineVerbatimEnvironment{preludio}{Verbatim}
+{% commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ frame=single,
+ framesep=2mm,
+ label=\mbox{Prelude}}
+
+\DefineVerbatimEnvironment{erroneo}{Verbatim}
+{% commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ frame=single,
+ framesep=2mm,
+ label=\mbox{Código erróneo}}
+
+\DefineVerbatimEnvironment{codigo}{Verbatim}
+{% commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ frame=single}
+
+\DefineVerbatimEnvironment{nverbatim}{Verbatim}
+{commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ xleftmargin=3mm}
+
+\DefineVerbatimEnvironment{nverbatim*}{Verbatim}
+{% commandchars=\\\{\},
+ codes={\catcode`$=3\catcode`$=3},
+ fontsize=\normalsize,
+ fontfamily=cmtt,
+ xleftmargin=3mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Definiciones                                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\alert}[1]{\emph{#1}}
+\newcommand{\entrada}[1]{\input{../codigo/#1.lhs}}
+\newcommand{\liff}{\leftrightarrow}
+\newcommand{\lif}{\to}
+\newcommand{\note}[1]{}
+\newcommand{\valor}{$\leadsto$}
+\newcommand{\practica}[1]{%
+  \stepcounter{chapter}
+  \setcounter{section}{0}
+  \chapter*{#1}
+  \addcontentsline{toc}{chapter}{#1}}
+\newcommand{\programa}[1]{\VerbatimInput[% frame=single,
+                                         firstline=6]
+                                        {../#1_sol.hs}}
+\newcommand{\algoritmo}[1]{\VerbatimInput[% frame=single,
+                                          firstline=6]
+                                         {../AlgoritmosMatematicos/#1.hs}}
+
+% \newcommand{\examen}[1]{\VerbatimInput[% frame=single
+%                                       , firstline=0
+%                                       , baselinestretch=1
+%                                       ]
+%                                       {#1}}
+
+\newcommand{\examen}[1]{\inputminted{haskell}{../Examenes/#1}}
+
+
+% \newcommand{\programa}[1]{\lstinputlisting[% frame=single,
+%                                            firstline=6]
+%                                            {../#1/#1_sol.hs}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% § Autores                                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{suffix}
+
+\newcommand\chapterauthor[1]{\authortoc{#1}\printchapterauthor{#1}}
+\WithSuffix\newcommand\chapterauthor*[1]{\printchapterauthor{#1}}
+
+\makeatletter
+\newcommand{\printchapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\newcommand{\authortoc}[1]{%
+  \addtocontents{toc}{\vskip-10pt}%
+  \addtocontents{toc}{%
+    \protect\contentsline{chapter}%
+    {\hskip1.3em\mdseries#1}{}{}}
+  \addtocontents{toc}{\vskip5pt}%
+}
+\makeatother
+
+\let\verbatim\leancode
+\let\endverbatim\endleancode
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
