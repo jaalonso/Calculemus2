@@ -34,3 +34,4 @@ usaba Lean3 en lugar de Lean4.
 + J10 [[./textos/Opuesto_del_opuesto.md][Si R es un anillo y a ∈ R, entonces -(-a) = a]] (En [[./src/Opuesto_del_opuesto.lean][Lean4]]).
 + V11 [[./textos/Resta_igual_suma_opuesto.md][Si R es un anillo y a, b ∈ R, entonces a - b = a + -b]] (En [[./src/Resta_igual_suma_opuesto.lean][Lean4]]).
 + L14 [[./textos/Resta_consigo_mismo.md][Si R es un anillo y a ∈ R, entonces a - a = 0]] (En [[./src/Resta_consigo_mismo.lean][Lean4]]).
++ M15 [[./textos/Uno_mas_uno_es_dos.md][En los anillos, 1 + 1 = 2]] (En [[./src/Uno_mas_uno_es_dos.lean][Lean4]]).

@@ -3,8 +3,9 @@ Título: Si R es un anillo y a ∈ R, entonces a - a = 0
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(R) es un anillo y \(a \in R), entonces
-\[a - a = 0]
+[mathjax]
+Demostrar con Lean4 que si \(R\) es un anillo y \(a \in R\), entonces
+\[a - a = 0\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -20,7 +21,6 @@ sorry
 
 <b>Demostración en lenguaje natural</b>
 
-[mathjax]
 Por la siguiente cadena de igualdades:
 \begin{align}
    a - a &= a + -a    &&\text{[por definición de resta]} \\
