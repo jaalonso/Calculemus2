@@ -25,12 +25,11 @@ sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Es consecuencia de las siguiente propiedades demostradas en
-ejercicios anteriores:
-\begin{itemize}
- \item \(\forall a \ b \in R, a + b = 0 \to -a = b\)
- \item \(\forall a in R, -a + a = 0\)
-\end{itemize}
+Es consecuencia de las siguiente propiedades demostradas en ejercicios anteriores:
+\begin{align}
+ &\forall a \ b \in R, a + b = 0 \to -a = b \\
+ &\forall a \in R, -a + a = 0
+\end{align}
 
 <b>Demostraciones con Lean4</b>
 
