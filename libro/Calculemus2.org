@@ -22,7 +22,9 @@ responde a los que me voy encontrando en mis [[https://github.com/jaalonso/Lectu
 
 En cada ejercicio, se comienza proponiendo soluciones en lenguaje
 natural y, a continuación, se exponen distintas demostraciones con Lean4
-ordenadas desde las más detalladas a las más automáticas.
+ordenadas desde las más detalladas a las más automáticas. Al final de
+cada ejercicio hay un enlace para interactuar con sus soluciones en
+[[https://lean.math.hhu.de/][Lean4 Web]].
 
 Las soluciones del libro están en [[https://github.com/jaalonso/Calculemus2][este repositorio de GitHub]].
 
@@ -40,79 +42,103 @@ Este libro es una continuación de
 
 ** ∀ m n ∈ ℕ, Even n → Even (m * n)
 #+INCLUDE: "../src/El_producto_por_un_par_es_par.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El_producto_por_un_par_es_par.lean][Lean 4 Web]].
 
 * Propiedades elementales de los números reales
 
 ** En ℝ, (ab)c = b(ac)
 #+INCLUDE: "../src/Asociativa_conmutativa_de_los_reales.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociativa_conmutativa_de_los_reales.lean][Lean 4 Web]].
 
 ** En ℝ, (cb)a = b(ac)
 #+INCLUDE: "../src/(cb)a_eq_b(ac).lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(cb)a_eq_b(ac).lean][Lean 4 Web]].
 
 ** En ℝ, a(bc) = b(ac)
 #+INCLUDE: "../src/a(bc)_eq_b(ac).lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(bc)_eq_b(ac).lean][Lean 4 Web]].
 
 ** En ℝ, si ab = cd y e = f, entonces a(be) = c(df)
 #+INCLUDE: "../src/a(be)_eq_c(df).lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(be)_eq_c(df).lean][Lean 4 Web]].
 
 ** En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d
 #+INCLUDE: "../src/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.lean][Lean 4 Web]].
 
 ** En ℝ, si c = ba-d y d = ab, entonces c = 0
 #+INCLUDE: "../src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean][Lean 4 Web]].
 
 ** En ℝ, (a+b)(a+b) = aa+2ab+bb
 #+INCLUDE: "../src/(a+b)(a+b)_eq_aa+2ab+bb.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)_eq_aa+2ab+bb.lean][Lean 4 Web]].
 
 ** En ℝ, (a+b)(c+d) = ac+ad+bc+bd
 #+INCLUDE: "../src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean][Lean 4 Web]].
 
 ** En ℝ, (a+b)(a-b) = a^2-b^2
 #+INCLUDE: "../src/(a+b)(a-b)_eq_aa-bb.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)_eq_aa-bb.lean][Lean 4 Web]].
 
 ** En ℝ, si c = da+b y b = ad, entonces c = 2ad
 #+INCLUDE: "../src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean 4 Web]].
 
 ** En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc
 #+INCLUDE: "../src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean 4 Web]].
 
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
 #+INCLUDE: "../src/Suma_con_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_con_cero.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a ∈ R, entonces a + -a = 0
 #+INCLUDE: "../src/Suma_con_opuesto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_con_opuesto.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b
 #+INCLUDE: "../src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a
 #+INCLUDE: "../src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c
 #+INCLUDE: "../src/Cancelativa_izquierda.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa_izquierda.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c
 #+INCLUDE: "../src/Cancelativa_derecha.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa_derecha.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a ∈ R, entonces a.0 = 0
 #+INCLUDE: "../src/Multiplicacion_por_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion_por_cero.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a ∈ R, entonces 0.a = 0
 #+INCLUDE: "../src/Multiplicacion_por_cero_izquierda.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion_por_cero_izquierda.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b
 #+INCLUDE: "../src/Opuesto_ig_si_suma_ig_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_ig_si_suma_ig_cero.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b
 #+INCLUDE: "../src/Ig_opuesto_si_suma_ig_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig_opuesto_si_suma_ig_cero.lean][Lean 4 Web]].
 
 ** Si R es un anillo, entonces -0 = 0
 #+INCLUDE: "../src/Opuesto_del_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_cero.lean][Lean 4 Web]].
 
 ** Si R es un anillo y a ∈ R, entonces -(-a) = a
 #+INCLUDE: "../src/Opuesto_del_opuesto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_opuesto.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
 
