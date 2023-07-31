@@ -36,14 +36,14 @@ sorry
 [mathjax]
 Por la siguiente cadena de igualdades
 \begin{align}
-   a·a⁻¹ &= 1·(a·a⁻¹)                 &&\text[[por producto con uno]} \\
-         &= (1·a)·a⁻¹                 &&\text[[por asociativa]} \\
-         &= (((a⁻¹)⁻¹·a⁻¹) ·a)·a⁻¹    &&\text[[por producto con inverso]} \\
-         &= ((a⁻¹)⁻¹·(a⁻¹ ·a))·a⁻¹    &&\text[[por asociativa]} \\
-         &= ((a⁻¹)⁻¹·1)·a⁻¹           &&\text[[por producto con inverso]} \\
-         &= (a⁻¹)⁻¹·(1·a⁻¹)           &&\text[[por asociativa]} \\
-         &= (a⁻¹)⁻¹·a⁻¹               &&\text[[por producto con uno]} \\
-         &= 1                         &&\text[[por producto con inverso]}
+   a·a⁻¹ &= 1·(a·a⁻¹)                 &&\text{[por producto con uno]} \\
+         &= (1·a)·a⁻¹                 &&\text{[por asociativa]} \\
+         &= (((a⁻¹)⁻¹·a⁻¹) ·a)·a⁻¹    &&\text{[por producto con inverso]} \\
+         &= ((a⁻¹)⁻¹·(a⁻¹ ·a))·a⁻¹    &&\text{[por asociativa]} \\
+         &= ((a⁻¹)⁻¹·1)·a⁻¹           &&\text{[por producto con inverso]} \\
+         &= (a⁻¹)⁻¹·(1·a⁻¹)           &&\text{[por asociativa]} \\
+         &= (a⁻¹)⁻¹·a⁻¹               &&\text{[por producto con uno]} \\
+         &= 1                         &&\text{[por producto con inverso]}
 \end{align}
 
 <b>Demostraciones con Lean4</b>
