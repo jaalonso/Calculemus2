@@ -38,3 +38,4 @@ usaba Lean3 en lugar de Lean4.
 + X16 [[./textos/Producto_por_dos.md][Si R es un anillo y a ∈ R, entonces 2a = a+a]] (En [[./src/Producto_por_dos.lean][Lean4]]).
 + J17 [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
 + V18 [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
++ L21 [[./textos/CS_de_inverso.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
