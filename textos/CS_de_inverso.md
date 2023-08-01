@@ -25,11 +25,11 @@ sorry
 [mathjax]
 Se tiene a partir de la siguente cadena de igualdades
 \begin{align}
-   a⁻¹ &= a⁻¹ * 1           &&\text{[por producto por uno]} \\
-       &= a⁻¹ * (a * b)     &&\text{[por hipótesis]} \\
-       &= (a⁻¹ * a) * b     &&\text{[por asociativa]} \\
-       &= 1 * b             &&\text{[por producto con inverso]} \\
-       &= b                 &&\text{[por producto por uno]}
+   a⁻¹ &= a⁻¹·1         &&\text{[por producto por uno]} \\
+       &= a⁻¹·(a·b)     &&\text{[por hipótesis]} \\
+       &= (a⁻¹·a)·b     &&\text{[por asociativa]} \\
+       &= 1·b           &&\text{[por producto con inverso]} \\
+       &= b             &&\text{[por producto por uno]}
 \end{align}
 
 <b>Demostraciones con Lean4</b>
