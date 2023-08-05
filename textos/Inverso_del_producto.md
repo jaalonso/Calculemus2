@@ -3,7 +3,7 @@ Título: Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(G\) es un grupo y \(a, b \in G), entonces \((ab)^{-1} = b^{-1}a^{-1}\).
+Demostrar con Lean4 que si \(G\) es un grupo y \(a, b \in G\), entonces \((ab)^{-1} = b^{-1}a^{-1}\).
 
 Para ello, completar la siguiente teoría de Lean4:
 

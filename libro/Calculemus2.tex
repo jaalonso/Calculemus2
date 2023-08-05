@@ -1,7 +1,7 @@
 \input Calculemus2_preambulo
 
 \chapter{Introducción}
-\label{sec:org79e9174}
+\label{sec:org3037ae1}
 
 Este libro es una recopilación de los ejercicios de demostración con
 Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
@@ -32,10 +32,10 @@ demostraciones en Isabelle/HOL y Lean3.
 \end{itemize}
 
 \chapter{Demostraciones de una propiedad de los números enteros}
-\label{sec:orgfca12e4}
+\label{sec:orgfe76fc0}
 
 \section{∀ m n ∈ ℕ, Even n → Even (m * n)}
-\label{sec:org9387a9b}
+\label{sec:orgf47dcd9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los productos de los números naturales por números
@@ -148,10 +148,10 @@ example : ∀ m n : Nat, Even n → Even (m * n) := by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El\_producto\_por\_un\_par\_es\_par.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los números reales}
-\label{sec:org77143f1}
+\label{sec:orgc226d7f}
 
 \section{En ℝ, (ab)c = b(ac)}
-\label{sec:org074cb82}
+\label{sec:org594c8e3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -192,7 +192,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociativa\_conmutativa\_de\_los\_reales.lean}{Lean 4 Web}.
 
 \section{En ℝ, (cb)a = b(ac)}
-\label{sec:orgd922ebb}
+\label{sec:org4f8b54c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -242,7 +242,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(cb)a\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, a(bc) = b(ac)}
-\label{sec:orgb4f58e1}
+\label{sec:org00feaff}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -289,7 +289,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(bc)\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, si ab = cd y e = f, entonces a(be) = c(df)}
-\label{sec:org45a8cae}
+\label{sec:org310a592}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -352,7 +352,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(be)\_eq\_c(df).lean}{Lean 4 Web}.
 
 \section{En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d}
-\label{sec:org9ff6f4f}
+\label{sec:org8c1c1f8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -408,7 +408,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_bc\_eq\_ef\_entonces\_((ab)c)d\_eq\_((ae)f)d.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = ba-d y d = ab, entonces c = 0}
-\label{sec:org31c1419}
+\label{sec:orgcc327a1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -469,7 +469,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_ba-d\_y\_d\_eq\_ab\_entonces\_c\_eq\_0.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a+b) = aa+2ab+bb}
-\label{sec:org7137cde}
+\label{sec:orgbb0dad6}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -561,7 +561,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)\_eq\_aa+2ab+bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(c+d) = ac+ad+bc+bd}
-\label{sec:orge26f481}
+\label{sec:org3096f77}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales, entonces
@@ -626,7 +626,7 @@ by rw [add_mul, mul_add, mul_add, ←add_assoc]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)\_eq\_ac+ad+bc+bd.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a-b) = a\^{}2-b\^{}2}
-\label{sec:orgc67b42b}
+\label{sec:org4d7ed00}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -735,7 +735,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)\_eq\_aa-bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = da+b y b = ad, entonces c = 2ad}
-\label{sec:orgf2d5dd3}
+\label{sec:orgef4fd65}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -831,7 +831,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_da+b\_y\_b\_eq\_ad\_entonces\_c\_eq\_2ad.lean}{Lean 4 Web}.
 
 \section{En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc}
-\label{sec:orgcf6ca04}
+\label{sec:org61bd63b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -876,10 +876,10 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b\_eq\_c\_entonces\_(a+b)(a+b)\_eq\_ac+bc.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los anillos}
-\label{sec:org0189707}
+\label{sec:org321cd8f}
 
 \section{Si R es un anillo y a ∈ R, entonces a + 0 = a}
-\label{sec:org8dbdd90}
+\label{sec:orgb04d9f5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -932,7 +932,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a + -a = 0}
-\label{sec:orgae8a789}
+\label{sec:orgfd0020a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -993,7 +993,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b}
-\label{sec:org551b6f6}
+\label{sec:orgd515693}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1048,7 +1048,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a}
-\label{sec:orgc1e6779}
+\label{sec:org87f585f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1104,7 +1104,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c}
-\label{sec:org9d23ce7}
+\label{sec:org52cf5bb}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1218,7 +1218,7 @@ add_left_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c}
-\label{sec:org05fe953}
+\label{sec:orge14c976}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1316,7 +1316,7 @@ add_right_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a.0 = 0}
-\label{sec:org7b9fdb6}
+\label{sec:org09056e4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1399,7 +1399,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 0.a = 0}
-\label{sec:org6932844}
+\label{sec:org5d5f96f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1465,268 +1465,6 @@ example : 0 * a = 0 :=
 zero_mul a
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero\_izquierda.lean}{Lean 4 Web}.
-
-\section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b}
-\label{sec:org334f637}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si es un anillo y a, b ∈ R tales que
---    a + b = 0
--- entonces
---    -a = b
--- ----------------------------------------------------------------------
-
--- Demostraciones en lenguaje natural (LN)
--- =======================================
-
--- 1ª demostración en LN
--- ---------------------
-
--- Por la siguiente cadena de igualdades
---    -a = -a + 0          [por suma cero]
---       = -a + (a + b)    [por hipótesis]
---       = b               [por cancelativa]
-
--- 2ª demostración en LN
--- ---------------------
-
--- Sumando -a a ambos lados de la hipótesis, se tiene
---    -a + (a + b) = -a + 0
--- El término de la izquierda se reduce a b (por la cancelativa) y el de
--- la derecha a -a (por la suma con cero). Por tanto, se tiene
---     b = -a
--- Por la simetría de la igualdad, se tiene
---     -a = b
-
--- Demostraciones con Lean 4
--- =========================
-
-import Mathlib.Algebra.Ring.Defs
-import Mathlib.Tactic
-
-variable {R : Type _} [Ring R]
-variable {a b : R}
-
--- 1ª demostración (basada en la 1º en LN)
-example
-  (h : a + b = 0)
-  : -a = b :=
-calc
-  -a = -a + 0       := by rw [add_zero]
-   _ = -a + (a + b) := by rw [h]
-   _ = b            := by rw [neg_add_cancel_left]
-
--- 2ª demostración (basada en la 1º en LN)
-example
-  (h : a + b = 0)
-  : -a = b :=
-calc
-  -a = -a + 0       := by simp
-   _ = -a + (a + b) := by rw [h]
-   _ = b            := by simp
-
--- 3ª demostración (basada en la 2º en LN)
-example
-  (h : a + b = 0)
-  : -a = b :=
-by
-  have h1 : -a + (a + b) = -a + 0 := congrArg (HAdd.hAdd (-a)) h
-  have h2 : -a + (a + b) = b := neg_add_cancel_left a b
-  have h3 : -a + 0 = -a := add_zero (-a)
-  rw [h2, h3] at h1
-  exact h1.symm
-
--- 4ª demostración
-example
-  (h : a + b = 0)
-  : -a = b :=
-neg_eq_iff_add_eq_zero.mpr h
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_ig\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
-
-\section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b}
-\label{sec:org52279c7}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si R es un anillo y a, b ∈ R tales que
---    a + b = 0
--- entonces
---    a = -b
--- ----------------------------------------------------------------------
-
--- Demostraciones en lenguaje natural (LN)
--- =======================================
-
--- 1ª demostración en LN
--- ---------------------
-
--- Por la siguiente cadena de igualdades
---    a = (a + b) + -b    [por la concelativa]
---      = 0 + -b          [por la hipótesis]
---      = -b              [por la suma con cero]
-
--- 2ª demostración en LN
--- ---------------------
-
--- Sumando -a a ambos lados de la hipótesis, se tiene
---    (a + b) + -b = 0 + -b
--- El término de la izquierda se reduce a a (por la cancelativa) y el de
--- la derecha a -b (por la suma con cero). Por tanto, se tiene
---     a = -b
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Ring.Defs
-import Mathlib.Tactic
-
-variable {R : Type _} [Ring R]
-variable {a b : R}
-
--- 1ª demostración (basada en la 1ª en LN)
-example
-  (h : a + b = 0)
-  : a = -b :=
-calc
-  a = (a + b) + -b := by rw [add_neg_cancel_right]
-  _ = 0 + -b       := by rw [h]
-  _ = -b           := by rw [zero_add]
-
--- 2ª demostración (basada en la 1ª en LN)
-example
-  (h : a + b = 0)
-  : a = -b :=
-calc
-  a = (a + b) + -b := by simp
-  _ = 0 + -b       := by rw [h]
-  _ = -b           := by simp
-
--- 3ª demostración (basada en la 1ª en LN)
-example
-  (h : a + b = 0)
-  : a = -b :=
-by
-  have h1 : (a + b) + -b = 0 + -b := by rw [h]
-  have h2 : (a + b) + -b = a := add_neg_cancel_right a b
-  have h3 : 0 + -b = -b := zero_add (-b)
-  rwa [h2, h3] at h1
-
--- 4ª demostración
-example
-  (h : a + b = 0)
-  : a = -b :=
-add_eq_zero_iff_eq_neg.mp h
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig\_opuesto\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
-
-\section{Si R es un anillo, entonces -0 = 0}
-\label{sec:orgb98a613}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si R es un anillo, entonces
---    -0 = 0
--- ----------------------------------------------------------------------
-
--- Demostraciones en lenguaje natural (LN)
--- =======================================
-
--- 1ª demostración en LN
--- =====================
-
--- Por la suma con cero se tiene
---    0 + 0 = 0
--- Aplicándole la propiedad
---    ∀ a b ∈ R, a + b = 0 → -a = b
--- se obtiene
---    -0 = 0
-
--- 2ª demostración en LN
--- =====================
-
--- Puesto que
---    ∀ a b ∈ R, a + b = 0 → -a = b
--- basta demostrar que
---    0 + 0 = 0
--- que es cierta por la suma con cero.
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Ring.Defs
-import Mathlib.Tactic
-
-variable {R : Type _} [Ring R]
-
--- 1ª demostración (basada en la 1ª en LN)
-example : (-0 : R) = 0 :=
-by
-  have h1 : (0 : R) + 0 = 0 := add_zero 0
-  show (-0 : R) = 0
-  exact neg_eq_of_add_eq_zero_left h1
-
--- 2ª demostración (basada en la 2ª en LN)
-example : (-0 : R) = 0 :=
-by
-  apply neg_eq_of_add_eq_zero_left
-  rw [add_zero]
-
--- 3ª demostración
-example : (-0 : R) = 0 :=
-  neg_zero
-
--- 4ª demostración
-example : (-0 : R) = 0 :=
-by simp
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_cero.lean}{Lean 4 Web}.
-
-\section{Si R es un anillo y a ∈ R, entonces -(-a) = a}
-\label{sec:org416c33f}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si R es un anillo y a ∈ R, entonces
---     -(-a) = a
--- ----------------------------------------------------------------------
-
--- Demostración en lenguaje natural
--- ================================
-
--- Es consecuencia de las siguiente propiedades demostradas en
--- ejercicios anteriores:
---    ∀ a b ∈ R, a + b = 0 → -a = b
---    ∀ a ∈ R, -a + a = 0
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Ring.Defs
-import Mathlib.Tactic
-
-variable {R : Type _} [Ring R]
-variable {a : R}
-
--- 1ª demostración
-example : -(-a) = a :=
-by
-  have h1 : -a + a = 0 := add_left_neg a
-  show -(-a) = a
-  exact neg_eq_of_add_eq_zero_right h1
-
--- 2ª demostración
-example : -(-a) = a :=
-by
-  apply neg_eq_of_add_eq_zero_right
-  rw [add_left_neg]
-
--- 3ª demostración
-example : -(-a) = a :=
-neg_neg a
-
--- 4ª demostración
-example : -(-a) = a :=
-by simp
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_opuesto.lean}{Lean 4 Web}.
 
 \input Calculemus2_bibliografia
 
