@@ -4,7 +4,6 @@ Autor:  José A. Alonso
 ---
 
 [mathjax]
-
 Demostrar con Lean4 que si \(a\), \(b\), \(c\), \(d\) y \(e\) son números reales tales  \(a \leq b\), \(b < c\), \(c \leq d\) y \(d < e\), entonces \(a < e\).
 
 Para ello, completar la siguiente teoría de Lean4:
@@ -30,10 +29,10 @@ sorry
 
 Por la siguiente cadena de desigualdades
 \begin{align}
-   a &\leq b    &&\text{[por h1]} \\
-     &< c    &&\text{[por h2]} \\
-     &\leq d    &&\text{[por h3]} \\
-     &< e    &&\text{[por h4]}
+   a &\leq b    &&\text{[por la hipótesis 1 (\(a \leq b\))]} \\
+     &< c       &&\text{[por la hipótesis 2 (\(b < c\))]} \\
+     &\leq d    &&\text{[por la hipótesis 3 (\(c \leq d\))]} \\
+     &< e       &&\text{[por la hipótesis 4 (\(d < e\))]}
 \end{align}
 
 <b>2ª demostración en LN</b>
