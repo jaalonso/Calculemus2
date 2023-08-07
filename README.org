@@ -5,38 +5,45 @@ En este repositorio se encuentran los ejercicios propuestos en el blog
 Isabelle/HOL). Es una continuación del [[https://github.com/jaalonso/Calculemus/blob/main/README.org][repositorio anterior]] en el que se
 usaba Lean3 en lugar de Lean4.
 
-* Julio de 2023
-+ 10 [[./textos/El_producto_por_un_par_es_par.md][∀ m n ∈ ℕ, Even n → Even (m * n)]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean4]]).
-+ 11 [[./textos/Asociativa_conmutativa_de_los_reales.md][En ℝ, (ab)c = b(ac)]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean4]]).
-+ 12 [[./textos/(cb)a_eq_b(ac).md][En ℝ, (cb)a = b(ac)]] (En [[./src/(cb)a_eq_b(ac).lean][Lean4]]).
-+ 13 [[./textos/a(bc)_eq_b(ac).md][En ℝ, a(bc) = b(ac)]] (En [[./src/a(bc)_eq_b(ac).lean][Lean4]]).
-+ 14 [[./textos/a(be)_eq_c(df).md][En ℝ, si ab = cd y e = f, entonces a(be) = c(df)]] (En [[./src/a(be)_eq_c(df).lean][Lean4]]).
-+ 17 [[./textos/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.md][En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d]] (En [[./src/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.lean][Lean4]]).
-+ 18 [[./textos/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.md][En ℝ, si c = ba-d y d = ab, entonces c = 0]] (En [[./src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean][Lean4]]).
-+ 19 [[./textos/(a+b)(a+b)_eq_aa+2ab+bb.md][En ℝ, (a+b)(a+b) = aa+2ab+bb]] (En [[./src/(a+b)(a+b)_eq_aa+2ab+bb.lean][Lean4]]).
-+ 20 [[./textos/(a+b)(c+d)_eq_ac+ad+bc+bd.md][En ℝ, (a+b)(c+d) = ac+ad+bc+bd]] (En [[./src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean][Lean4]]).
-+ 21 [[./textos/(a+b)(a-b)_eq_aa-bb.md][En ℝ, (a+b)(a-b) = a^2-b^2]] (En [[./src/(a+b)(a-b)_eq_aa-bb.lean][Lean4]]).
-+ 24 [[./textos/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.md][En ℝ, si c = da+b y b = ad, entonces c = 2ad]] (En [[./src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean4]]).
-+ 25 [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).
-+ 26 [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
-+ 27 [[./textos/Suma_con_opuesto.md][Si R es un anillo y a ∈ R, entonces a + -a = 0]] (En [[./src/Suma_con_opuesto.lean][Lean4]]).
-+ 28 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean4]]).
-+ 31 [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean4]]).
+* Demostraciones de una propiedad de los números enteros
++ [[./textos/El_producto_por_un_par_es_par.md][∀ m n ∈ ℕ, Even n → Even (m * n)]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean4]]).
 
-* Agosto de 2023
-+ 01 [[./textos/Cancelativa_izquierda.md][Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c]] (En [[./src/Cancelativa_izquierda.lean][Lean4]]).
-+ 02 [[./textos/Cancelativa_derecha.md][Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c]] (En [[./src/Cancelativa_derecha.lean][Lean4]]).
-+ 03 [[./textos/Multiplicacion_por_cero.md][Si R es un anillo y a ∈ R, entonces a.0 = 0]] (En [[./src/Multiplicacion_por_cero.lean][Lean4]]).
-+ 04 [[./textos/Multiplicacion_por_cero_izquierda.md][Si R es un anillo y a ∈ R, entonces 0.a = 0]] (En [[./src/Multiplicacion_por_cero_izquierda.lean][Lean4]]).
-+ L07 [[./textos/Opuesto_ig_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b]] (En [[./src/Opuesto_ig_si_suma_ig_cero.lean][Lean4]]).
-+ M08 [[./textos/Ig_opuesto_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b]] (En [[./src/Ig_opuesto_si_suma_ig_cero.lean][Lean4]]).
-+ X09 [[./textos/Opuesto_del_cero.md][Si R es un anillo, entonces -0 = 0]] (En [[./src/Opuesto_del_cero.lean][Lean4]]).
-+ J10 [[./textos/Opuesto_del_opuesto.md][Si R es un anillo y a ∈ R, entonces -(-a) = a]] (En [[./src/Opuesto_del_opuesto.lean][Lean4]]).
-+ V11 [[./textos/Resta_igual_suma_opuesto.md][Si R es un anillo y a, b ∈ R, entonces a - b = a + -b]] (En [[./src/Resta_igual_suma_opuesto.lean][Lean4]]).
-+ L14 [[./textos/Resta_consigo_mismo.md][Si R es un anillo y a ∈ R, entonces a - a = 0]] (En [[./src/Resta_consigo_mismo.lean][Lean4]]).
-+ M15 [[./textos/Uno_mas_uno_es_dos.md][En los anillos, 1 + 1 = 2]] (En [[./src/Uno_mas_uno_es_dos.lean][Lean4]]).
-+ X16 [[./textos/Producto_por_dos.md][Si R es un anillo y a ∈ R, entonces 2a = a+a]] (En [[./src/Producto_por_dos.lean][Lean4]]).
-+ J17 [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
-+ V18 [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
+* Propiedades elementales de los números reales
++ [[./textos/Asociativa_conmutativa_de_los_reales.md][En ℝ, (ab)c = b(ac)]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean4]]).
++ [[./textos/(cb)a_eq_b(ac).md][En ℝ, (cb)a = b(ac)]] (En [[./src/(cb)a_eq_b(ac).lean][Lean4]]).
++ [[./textos/a(bc)_eq_b(ac).md][En ℝ, a(bc) = b(ac)]] (En [[./src/a(bc)_eq_b(ac).lean][Lean4]]).
++ [[./textos/a(be)_eq_c(df).md][En ℝ, si ab = cd y e = f, entonces a(be) = c(df)]] (En [[./src/a(be)_eq_c(df).lean][Lean4]]).
++ [[./textos/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.md][En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d]] (En [[./src/Si_bc_eq_ef_entonces_((ab)c)d_eq_((ae)f)d.lean][Lean4]]).
++ [[./textos/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.md][En ℝ, si c = ba-d y d = ab, entonces c = 0]] (En [[./src/Si_c_eq_ba-d_y_d_eq_ab_entonces_c_eq_0.lean][Lean4]]).
++ [[./textos/(a+b)(a+b)_eq_aa+2ab+bb.md][En ℝ, (a+b)(a+b) = aa+2ab+bb]] (En [[./src/(a+b)(a+b)_eq_aa+2ab+bb.lean][Lean4]]).
++ [[./textos/(a+b)(c+d)_eq_ac+ad+bc+bd.md][En ℝ, (a+b)(c+d) = ac+ad+bc+bd]] (En [[./src/(a+b)(c+d)_eq_ac+ad+bc+bd.lean][Lean4]]).
++ [[./textos/(a+b)(a-b)_eq_aa-bb.md][En ℝ, (a+b)(a-b) = a^2-b^2]] (En [[./src/(a+b)(a-b)_eq_aa-bb.lean][Lean4]]).
++ [[./textos/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.md][En ℝ, si c = da+b y b = ad, entonces c = 2ad]] (En [[./src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean4]]).
++ [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).
+
+* Propiedades elementales de los anillos
++ [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
++ [[./textos/Suma_con_opuesto.md][Si R es un anillo y a ∈ R, entonces a + -a = 0]] (En [[./src/Suma_con_opuesto.lean][Lean4]]).
++ [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean4]]).
++ [[./textos/Opuesto_se_cancela_con_la_suma_por_la_derecha.md][Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_derecha.lean][Lean4]]).
++ [[./textos/Cancelativa_izquierda.md][Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c]] (En [[./src/Cancelativa_izquierda.lean][Lean4]]).
++ [[./textos/Cancelativa_derecha.md][Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c]] (En [[./src/Cancelativa_derecha.lean][Lean4]]).
++ [[./textos/Multiplicacion_por_cero.md][Si R es un anillo y a ∈ R, entonces a.0 = 0]] (En [[./src/Multiplicacion_por_cero.lean][Lean4]]).
++ [[./textos/Multiplicacion_por_cero_izquierda.md][Si R es un anillo y a ∈ R, entonces 0.a = 0]] (En [[./src/Multiplicacion_por_cero_izquierda.lean][Lean4]]).
++ [[./textos/Opuesto_ig_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b]] (En [[./src/Opuesto_ig_si_suma_ig_cero.lean][Lean4]]).
++ [[./textos/Ig_opuesto_si_suma_ig_cero.md][Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b]] (En [[./src/Ig_opuesto_si_suma_ig_cero.lean][Lean4]]).
++ [[./textos/Opuesto_del_cero.md][Si R es un anillo, entonces -0 = 0]] (En [[./src/Opuesto_del_cero.lean][Lean4]]).
++ [[./textos/Opuesto_del_opuesto.md][Si R es un anillo y a ∈ R, entonces -(-a) = a]] (En [[./src/Opuesto_del_opuesto.lean][Lean4]]).
++ [[./textos/Resta_igual_suma_opuesto.md][Si R es un anillo y a, b ∈ R, entonces a - b = a + -b]] (En [[./src/Resta_igual_suma_opuesto.lean][Lean4]]).
++ [[./textos/Resta_consigo_mismo.md][Si R es un anillo y a ∈ R, entonces a - a = 0]] (En [[./src/Resta_consigo_mismo.lean][Lean4]]).
++ [[./textos/Uno_mas_uno_es_dos.md][En los anillos, 1 + 1 = 2]] (En [[./src/Uno_mas_uno_es_dos.lean][Lean4]]).
++ [[./textos/Producto_por_dos.md][Si R es un anillo y a ∈ R, entonces 2a = a+a]] (En [[./src/Producto_por_dos.lean][Lean4]]).
+
+* Propiedades elementales de los grupos
++ [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
++ [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
+
+* Sin ordenar
 + L21 [[./textos/CS_de_inverso.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
 + M22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
++ X23 [[./textos/Cadena_de_desigualdades.md][En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
