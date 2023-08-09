@@ -29,7 +29,7 @@ Por la siguiente cadena de desigualdades
    c + a &= 2 + a         &&\text{[por la hipótesis 3 (\(c = 2\))]} \\
          &\leq 2·a + a    &&\text{[por la hipótesis 2 (\(1 \leq a\))]} \\
          &= 3·a           \\
-         &\leq 9/2·b      &&\text{[por la hipótesis 1 (\(2·a \leq 3·b\))]
+         &\leq 9/2·b      &&\text{[por la hipótesis 1 (\(2·a \leq 3·b\))]} \\
          &\leq 5·b
 \end{align}
 
