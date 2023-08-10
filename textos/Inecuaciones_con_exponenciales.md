@@ -3,8 +3,7 @@ Título: En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(a\), \(b\) y \(d\) números reales tales que
-\(1 \leq a\) y \(b \leq d\), entonces \(2 + a + e^b \leq 3a + e^d\).
+Demostrar con Lean4 que si \(a\), \(b\) y \(d\) números reales tales que \(1 \leq a\) y \(b \leq d\), entonces \(2 + a + e^b \leq 3a + e^d\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -29,10 +28,11 @@ by sorry
 De la primera hipótesis (\(1 \leq a\)), multiplicando por \(2\), se obtiene
 \[2 \leq 2a\]
 y, sumando a ambos lados, se tiene
-\[2 + a \leq 3a \qquad (1)\]
-De la hipótesis 2 (\(b \leq d\)) y de la monotonía de la función exponencial
-se tiene
-\[e^b \leq e^d\]
+\[2 + a \leq 3a \tag{1}\]
+
+De la hipótesis 2 (\(b \leq d\)) y de la monotonía de la función exponencial se tiene
+\[e^b \leq e^d \tag{2} \]
+
 Finalmente, de (1) y (2) se tiene
 \[2 + a + e^b \leq 3a + e^d\]
 

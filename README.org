@@ -49,3 +49,4 @@ usaba Lean3 en lugar de Lean4.
 + X23 [[./textos/Cadena_de_desigualdades.md][En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
 + J24 [[./textos/Inecuaciones.md][En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
 + V25 [[./textos/Inecuaciones_con_exponenciales.md][En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
++ L28 [[./textos/Inecuaciones_con_exponenciales_2.md][En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
