@@ -51,3 +51,4 @@ usaba Lean3 en lugar de Lean4.
 + V25 [[./textos/Inecuaciones_con_exponenciales.md][En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
 + L28 [[./textos/Inecuaciones_con_exponenciales_2.md][En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
 + M29 [[./textos/Inecuaciones_con_exponenciales_3.md][En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]] (En [[./src/Inecuaciones_con_exponenciales_3.lean][Lean4]]).
++ X30 [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
