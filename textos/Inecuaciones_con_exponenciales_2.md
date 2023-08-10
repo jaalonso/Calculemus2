@@ -3,14 +3,21 @@ Título: En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f.
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que \(a\), \(b\), \(c\), \(d\) y \(f\) son números
-reales tales que \(a \leq b\) y \(c < d\), entonces
+Demostrar con Lean4 que \(a\), \(b\), \(c\), \(d\) y \(f\) son números reales tales que \(a \leq b\) y \(c < d\), entonces
 \[a + e^c + f \leq b + e^d + f\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
 <pre lang="lean">
-sorry
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+open Real
+variable (a b c d f : ℝ)
+
+example
+  (h1 : a ≤ b)
+  (h2 : c < d)
+  : a + exp c + f < b + exp d + f :=
+by sorry
 </pre>
 <!--more-->
 
@@ -20,11 +27,9 @@ sorry
 
 <b>1ª demostración en LN</b>
 
-Aplicando a la hipótesis 3 (\(c < d\)) la monotonía de la exponencial,
-se tiene
+Aplicando a la hipótesis 3 (\(c < d\)) la monotonía de la exponencial, se tiene
 \[e^c < e^d\]
-que, junto a la hipótesis 1 (\(a \leq b)
-y la monotonía de la suma da
+que, junto a la hipótesis 1 (\(a \leq b\)) y la monotonía de la suma da
 \[a + e^c < b + e^d\]
 y, de nuevo por la monotonía de la suma, se tiene
 \[a + e^c + f < b + e^d + f\]
@@ -33,24 +38,21 @@ y, de nuevo por la monotonía de la suma, se tiene
 
 Tenemos que demostrar que
 \[(a + e^c) + f < (b + e^d) + f\]
-que, por la monotonía de la suma, se reduce a las siguientes dos
-desigualdades:
-\begin{equation}
-   a + e^c < b + e^d \tag{1} \\
-   f \leq f          \tag{2}
-\end{equation}
+que, por la monotonía de la suma, se reduce a las siguientes dos desigualdades:
+\begin{align}
+   &a + e^c < b + e^d \tag{1} \\
+   &f \leq f          \tag{2}
+\end{align}
 
-La (1), de nuevo por la monotonía de la suma, se reduce a las
-siguientes dos:
-\begin{equation}
-   a \leq b     \tag{1.1} \\
-   e^c < e^d    \tag{1.1}
-\end{equation}
+La (1), de nuevo por la monotonía de la suma, se reduce a las siguientes dos:
+\begin{align}
+   &a \leq b     \tag{1.1} \\
+   &e^c < e^d    \tag{1.2}
+\end{align}
 
-La (1.1) se tiene por la hipótesis 1.
+<div>La (1.1) se tiene por la hipótesis 1.
 
-La (1.2) se tiene aplicando la monotonía de la exponencial a la
-hipótesis 2.
+<div>La (1.2) se tiene aplicando la monotonía de la exponencial a la hipótesis 2.
 
 La (2) se tiene por la propiedad reflexiva.
 
