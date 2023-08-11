@@ -1,5 +1,5 @@
 ---
-Título: En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a
+Título: En ℝ, si a ≤ b entonces c - e^b ≤ c - e^a
 Autor:  José A. Alonso
 ---
 
