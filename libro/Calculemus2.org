@@ -124,21 +124,25 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Multiplicacion_por_cero_izquierda.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion_por_cero_izquierda.lean][Lean 4 Web]].
 
-# ** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b
-# #+INCLUDE: "../src/Opuesto_ig_si_suma_ig_cero.lean" src lean :lines "7-"
-# Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_ig_si_suma_ig_cero.lean][Lean 4 Web]].
-#
-# ** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b
-# #+INCLUDE: "../src/Ig_opuesto_si_suma_ig_cero.lean" src lean :lines "7-"
-# Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig_opuesto_si_suma_ig_cero.lean][Lean 4 Web]].
-#
-# ** Si R es un anillo, entonces -0 = 0
-# #+INCLUDE: "../src/Opuesto_del_cero.lean" src lean :lines "7-"
-# Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_cero.lean][Lean 4 Web]].
-#
-# ** Si R es un anillo y a ∈ R, entonces -(-a) = a
-# #+INCLUDE: "../src/Opuesto_del_opuesto.lean" src lean :lines "7-"
-# Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_opuesto.lean][Lean 4 Web]].
+** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b
+#+INCLUDE: "../src/Opuesto_ig_si_suma_ig_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_ig_si_suma_ig_cero.lean][Lean 4 Web]].
+
+** Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b
+#+INCLUDE: "../src/Ig_opuesto_si_suma_ig_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig_opuesto_si_suma_ig_cero.lean][Lean 4 Web]].
+
+** Si R es un anillo, entonces -0 = 0
+#+INCLUDE: "../src/Opuesto_del_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_cero.lean][Lean 4 Web]].
+
+** Si R es un anillo y a ∈ R, entonces -(-a) = a
+#+INCLUDE: "../src/Opuesto_del_opuesto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto_del_opuesto.lean][Lean 4 Web]].
+
+** Si R es un anillo y a, b ∈ R, entonces a - b = a + -b
+#+INCLUDE: "../src/Resta_igual_suma_opuesto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta_igual_suma_opuesto.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
 
