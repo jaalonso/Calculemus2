@@ -54,3 +54,4 @@ usaba Lean3 en lugar de Lean4.
 + X30 [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
 + J31 [[./textos/Inecuaciones_con_exponenciales_4.md][En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]] (En [[./src/Inecuaciones_con_exponenciales_4.lean][Lean4]]).
 + V01 [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
++ L04 [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
