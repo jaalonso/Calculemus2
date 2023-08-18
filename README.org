@@ -56,3 +56,4 @@ usaba Lean3 en lugar de Lean4.
 + V01 [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
 + L04 [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
 + M05 [[./textos/Conmutatividad_del_minimo.md][En ℝ, min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean4]]).
++ J06 [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
