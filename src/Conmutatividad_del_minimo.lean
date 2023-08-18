@@ -23,7 +23,7 @@
 --    min(a, b) ≤ b
 --    min(a, b) ≤ a
 -- y, por tanto,
---    min(a, b) ≤ min(b, a)
+--    min(a, b) = min(b, a)
 
 -- Demostraciones con Lean4
 -- ========================

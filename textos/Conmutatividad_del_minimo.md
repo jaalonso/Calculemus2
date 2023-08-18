@@ -3,8 +3,7 @@ Título: En ℝ, min(a,b) = min(b,a)
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(a\) y \(b\) números reales, entonces
-\(\min(a, b) = \min(b, a)\).
+Demostrar con Lean4 que si \(a\) y \(b\) números reales, entonces \(\min(a, b) = \min(b, a)\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -34,7 +33,7 @@ Para demostrar (1), se observa que
    \min(a, b) &\leq a
 \end{align}
 y, por tanto,
-\[\min(a, b) \leq \min(b, a)\]
+\[\min(a, b) = \min(b, a)\]
 
 <b>Demostraciones con Lean4</b>
 
