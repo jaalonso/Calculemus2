@@ -27,12 +27,11 @@ basta demostrar estas dos desigualdades
 \begin{align}
    ab    &\leq \frac{a^2 + b^2}{2} \tag{1} \\
    -(ab) &\leq \frac{a^2 + b^2}{2} \tag{2}
-\emd{align}
+\end{align}
 
 Para demostrar (1) basta demostrar que
 \[2ab \leq a^2 + b^2\]
-que se prueba como sigue. En primer lugar, como los cuadrados son no
-negativos, se tiene
+que se prueba como sigue. En primer lugar, como los cuadrados son no negativos, se tiene
 \[(a - b)^2 \geq 0\]
 Desarrollando el cuandrado,
 \[a^2 - 2ab + b^2 \geq 0\]
@@ -46,7 +45,7 @@ negativos, se tiene
 \[(a + b)^2 \geq 0\]
 Desarrollando el cuandrado,
 \[a^2 + 2ab + b^2 \geq 0\]
-Restando \(2ab),
+Restando \(2ab\),
 \[a^2 + b^2 \geq -2ab\]
 
 <b>Demostraciones con Lean4</b>
