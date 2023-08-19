@@ -57,3 +57,4 @@ usaba Lean3 en lugar de Lean4.
 + L04 [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
 + M05 [[./textos/Conmutatividad_del_minimo.md][En ℝ, min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean4]]).
 + J06 [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
++ V07 [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
