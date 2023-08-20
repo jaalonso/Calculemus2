@@ -144,6 +144,28 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Resta_igual_suma_opuesto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta_igual_suma_opuesto.lean][Lean 4 Web]].
 
+** Si R es un anillo y a ∈ R, entonces a - a = 0
+#+INCLUDE: "../src/Resta_consigo_mismo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta_consigo_mismo.lean][Lean 4 Web]].
+
+** En los anillos, 1 + 1 = 2
+#+INCLUDE: "../src/Uno_mas_uno_es_dos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uno_mas_uno_es_dos.lean][Lean 4 Web]].
+
+** Si R es un anillo y a ∈ R, entonces 2a = a+a
+#+INCLUDE: "../src/Producto_por_dos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
+
+
+* Propiedades elementales de los grupos
+** Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1
+#+INCLUDE: "../src/Producto_por_inverso.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
+
+** Si G es un grupo y a ∈ G, entonces a·1 = a
+#+INCLUDE: "../src/Producto_por_uno.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_uno.lean][Lean 4 Web]].
+
 #+LATEX: \input Calculemus2_bibliografia
 
 #+LATEX: \end{document}

@@ -3,8 +3,7 @@ Título: En ℝ, min(min(a,b),c) = min(a,min(b,c))
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que \(a\), \(b\) y \(c\) números reales, entonces
-\(\min(\min(a, b), c) = \min(a, \min(b, c))\).
+Demostrar con Lean4 que \(a\), \(b\) y \(c\) números reales, entonces \(\min(\min(a, b), c) = \min(a, \min(b, c))\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,8 +21,7 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Por la propiedad antisimétrica, la igualdad es consecuencia de las
-siguientes desigualdades
+Por la propiedad antisimétrica, la igualdad es consecuencia de las siguientes desigualdades
 \begin{align}
    \min(\min(a, b), c) &\leq \min(a, \min(b, c)) \tag{1} \\
    \min(a, \min(b, c)) &\leq \min(\min(a, b), c) \tag{2}
