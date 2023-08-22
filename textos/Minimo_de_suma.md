@@ -4,7 +4,7 @@ Autor:  José A. Alonso
 ---
 
 Demostrar con Lean4 que si \(a\), \(b\) y \(c\) números reales, entonces
-\(\min(a,b)+c = \min(a+c,b+c)\).
+\[\min(a,b)+c = \min(a+c,b+c)\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -53,7 +53,7 @@ que se demuestra usando (1); en efecto,
 
 Por casos según \(a \leq b\).
 
-1º caso: Supongamos que \(a \leq b). Entonces,
+1º caso: Supongamos que \(a \leq b\). Entonces,
 \begin{align}
    \min(a, b) + c &= a + c              \\
                   &= \min(a + c, b + c)

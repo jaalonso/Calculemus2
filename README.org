@@ -59,3 +59,4 @@ usaba Lean3 en lugar de Lean4.
 + X06 [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
 + J07 [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
 + V08 [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
++ L11 [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
