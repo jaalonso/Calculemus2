@@ -70,26 +70,6 @@ by
   { rw [pow_two]
     apply dvd_mul_of_dvd_left h }
 
--- Su desarrollo es
---
--- ⊢ x ∣ y * (x * z) + x ^ 2 + w ^ 2
---    apply dvd_add
--- ⊢ x ∣ y * (x * z) + x ^ 2
--- |    apply dvd_add
--- | ⊢ x ∣ y * (x * z)
--- | |    apply dvd_mul_of_dvd_right
--- | | ⊢ x ∣ x * z
--- | |    apply dvd_mul_right
--- | ⊢ x ∣ x ^ 2
--- | |    rw [pow_two]
--- | | ⊢ x ∣ x * x
--- | |    apply dvd_mul_right
--- ⊢ x ∣ w ^ 2
--- |    rw [pow_two]
--- | ⊢ x ∣ w * w
--- |    apply dvd_mul_of_dvd_left h
--- no goals
-
 -- 3ª demostración
 example
   (h : x ∣ w)

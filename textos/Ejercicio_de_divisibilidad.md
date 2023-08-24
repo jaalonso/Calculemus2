@@ -33,11 +33,9 @@ Para demostrar (1), por la divisibilidad del producto se tiene
 y, de nuevo por la divisibilidad del producto,
 \[   x \mid y(xz)\]
 
-La propiedad (2) se tiene por la definición de cuadrado y la
-divisibilidad del producto.
+La propiedad (2) se tiene por la definición de cuadrado y la divisibilidad del producto.
 
-La propiedad (3) se tiene por la definición de cuadrado, la hipótesis
-y la divisibilidad del producto.
+La propiedad (3) se tiene por la definición de cuadrado, la hipótesis y la divisibilidad del producto.
 
 <b>Demostraciones con Lean4</b>
 
@@ -78,26 +76,6 @@ by
       apply dvd_mul_right }}
   { rw [pow_two]
     apply dvd_mul_of_dvd_left h }
-
--- Su desarrollo es
---
--- ⊢ x ∣ y * (x * z) + x ^ 2 + w ^ 2
---    apply dvd_add
--- ⊢ x ∣ y * (x * z) + x ^ 2
--- |    apply dvd_add
--- | ⊢ x ∣ y * (x * z)
--- | |    apply dvd_mul_of_dvd_right
--- | | ⊢ x ∣ x * z
--- | |    apply dvd_mul_right
--- | ⊢ x ∣ x ^ 2
--- | |    rw [pow_two]
--- | | ⊢ x ∣ x * x
--- | |    apply dvd_mul_right
--- ⊢ x ∣ w ^ 2
--- |    rw [pow_two]
--- | ⊢ x ∣ w * w
--- |    apply dvd_mul_of_dvd_left h
--- no goals
 
 -- 3ª demostración
 example
