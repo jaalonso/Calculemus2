@@ -61,3 +61,4 @@ usaba Lean3 en lugar de Lean4.
 + V08 [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 + L11 [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
 + M12 [[./textos/Divisibilidad_de_producto.md][Si x,y,z ∈ ℕ, entonces x ∣ yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
++ X13 [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
