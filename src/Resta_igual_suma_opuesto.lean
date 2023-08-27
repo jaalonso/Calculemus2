@@ -25,3 +25,8 @@ variable (a b : R)
 example : a - b = a + -b :=
 -- by exact?
 sub_eq_add_neg a b
+
+-- Lemas usados
+-- ============
+
+-- #check (sub_eq_add_neg a b : a - b = a + -b)

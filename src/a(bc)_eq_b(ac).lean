@@ -45,3 +45,9 @@ by
 example
   (a b c : ℝ) : a * (b * c) = b * (a * c) :=
 by ring
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))

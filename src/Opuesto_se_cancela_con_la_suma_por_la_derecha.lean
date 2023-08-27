@@ -54,3 +54,12 @@ example : (a + b) + -b = a :=
 -- 6ª demostración
 example : (a + b) + -b = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (c : R)
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_neg_cancel_right a b : (a + b) + -b = a)
+-- #check (add_right_neg a : a + -a = 0)
+-- #check (add_zero a :  a + 0 = a)

@@ -59,3 +59,9 @@ example
   : c = 0 :=
 by
   rw [h1, mul_comm, h2, sub_self]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (sub_self : ∀ (a : ℝ), a - a = 0)

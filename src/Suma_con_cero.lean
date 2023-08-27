@@ -51,3 +51,11 @@ example : a + 0 = a :=
 -- 5ª demostración
 example : a + 0 = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+variable (a b : R)
+
+-- #check (add_comm a b : a + b = b + a)
+-- #check (zero_add a :  0 + a = a)

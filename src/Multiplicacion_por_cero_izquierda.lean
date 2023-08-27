@@ -66,3 +66,11 @@ by simp
 -- 6ª demostración
 example : 0 * a = 0 :=
 zero_mul a
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_mul a b c :  (a + b) * c = a * c + b * c)
+-- #check (add_zero a :  a + 0 = a)
+-- #check (zero_mul a : 0 * a = 0)

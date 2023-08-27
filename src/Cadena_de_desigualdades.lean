@@ -126,3 +126,10 @@ example
   (h4 : d < e) :
   a < e :=
 by linarith
+
+-- Lemas usados
+-- ============
+
+-- #check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
+-- #check (lt_of_lt_of_le : a < b → b ≤ c → a < c)
+-- #check (lt_trans : a < b → b < c → a < c)

@@ -54,3 +54,8 @@ example
   : ((a * b) * c) * d = ((a * e) * f) * d :=
 by
   rw [mul_assoc a, h, ←mul_assoc a]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))

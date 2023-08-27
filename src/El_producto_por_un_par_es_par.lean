@@ -111,3 +111,8 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
 
 example : ∀ m n : Nat, Even n → Even (m * n) := by
   intros; simp [*, parity_simps]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_add : ∀ a b c : ℕ, a * (b + c) = a * b + a * c)

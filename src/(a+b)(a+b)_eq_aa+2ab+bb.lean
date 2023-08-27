@@ -90,3 +90,12 @@ by
 example :
   (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
 by linarith
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc : ∀ a b c : ℝ, (a + b) + c = a + (b + c))
+-- #check (add_mul : ∀ a b c : ℝ, (a + b) * c = a * c + b * c)
+-- #check (mul_add : ∀ a b c : ℝ, a * (b + c) = a * b + a * c)
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (two_mul : ∀ (a : ℝ), 2 * a = a + a)

@@ -31,3 +31,8 @@ by norm_num
 -- 2ª demostración
 example : 1 + 1 = (2 : R) :=
 one_add_one_eq_two
+
+-- Lemas usados
+-- ============
+
+-- #check (one_add_one_eq_two : 1 + 1 = 2)

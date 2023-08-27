@@ -1,7 +1,7 @@
 \input Calculemus2_preambulo
 
 \chapter{Introducción}
-\label{sec:org2b21391}
+\label{sec:org58c70a8}
 
 Este libro es una recopilación de los ejercicios de demostración con
 Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
@@ -32,10 +32,10 @@ demostraciones en Isabelle/HOL y Lean3.
 \end{itemize}
 
 \chapter{Demostraciones de una propiedad de los números enteros}
-\label{sec:orgb804a54}
+\label{sec:orgda8c937}
 
 \section{∀ m n ∈ ℕ, Even n → Even (m * n)}
-\label{sec:orgab40b80}
+\label{sec:orgbb9ec00}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los productos de los números naturales por números
@@ -144,14 +144,19 @@ example : ∀ m n : ℕ, Even n → Even (m * n) := by
 
 example : ∀ m n : Nat, Even n → Even (m * n) := by
   intros; simp [*, parity_simps]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_add : ∀ a b c : ℕ, a * (b + c) = a * b + a * c)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El\_producto\_por\_un\_par\_es\_par.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los números reales}
-\label{sec:org682d4a1}
+\label{sec:org4f673a0}
 
 \section{En ℝ, (ab)c = b(ac)}
-\label{sec:orgd9e35d1}
+\label{sec:org2d8e9d1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -188,11 +193,17 @@ by
 -- 3ª demostración
 example (a b c : ℝ) : (a * b) * c = b * (a * c) :=
 by ring
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociativa\_conmutativa\_de\_los\_reales.lean}{Lean 4 Web}.
 
 \section{En ℝ, (cb)a = b(ac)}
-\label{sec:org81b880f}
+\label{sec:org49f7d86}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -238,11 +249,17 @@ example
   (a b c : ℝ)
   : (c * b) * a = b * (a * c) :=
 by ring
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(cb)a\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, a(bc) = b(ac)}
-\label{sec:org4a35eae}
+\label{sec:orgb7c392f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -285,11 +302,17 @@ by
 example
   (a b c : ℝ) : a * (b * c) = b * (a * c) :=
 by ring
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(bc)\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, si ab = cd y e = f, entonces a(be) = c(df)}
-\label{sec:org70b25ae}
+\label{sec:org01d0ed0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -348,11 +371,16 @@ example
   : a * (b * e) = c * (d * f) :=
 by
   simp [*, ←mul_assoc]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(be)\_eq\_c(df).lean}{Lean 4 Web}.
 
 \section{En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d}
-\label{sec:org2be9ca5}
+\label{sec:org103ed7e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -404,11 +432,16 @@ example
   : ((a * b) * c) * d = ((a * e) * f) * d :=
 by
   rw [mul_assoc a, h, ←mul_assoc a]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_bc\_eq\_ef\_entonces\_((ab)c)d\_eq\_((ae)f)d.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = ba-d y d = ab, entonces c = 0}
-\label{sec:orgc855c69}
+\label{sec:orgf0f32e2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -465,11 +498,17 @@ example
   : c = 0 :=
 by
   rw [h1, mul_comm, h2, sub_self]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (sub_self : ∀ (a : ℝ), a - a = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_ba-d\_y\_d\_eq\_ab\_entonces\_c\_eq\_0.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a+b) = aa+2ab+bb}
-\label{sec:orgdca2055}
+\label{sec:org2e4a96a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -557,11 +596,20 @@ by
 example :
   (a + b) * (a + b) = a * a + 2 * (a * b) + b * b :=
 by linarith
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc : ∀ a b c : ℝ, (a + b) + c = a + (b + c))
+-- #check (add_mul : ∀ a b c : ℝ, (a + b) * c = a * c + b * c)
+-- #check (mul_add : ∀ a b c : ℝ, a * (b + c) = a * b + a * c)
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (two_mul : ∀ (a : ℝ), 2 * a = a + a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)\_eq\_aa+2ab+bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(c+d) = ac+ad+bc+bd}
-\label{sec:orgb831cc2}
+\label{sec:orgba27ff0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales, entonces
@@ -622,11 +670,18 @@ by
 -- 5ª demostración
 example : (a + b) * (c + d) = a * c + a * d + b * c + b * d :=
 by rw [add_mul, mul_add, mul_add, ←add_assoc]
+
+-- Lemas usados
+-- ============
+
+-- #check (add_mul : ∀ (a b c : ℝ), (a + b) * c = a * c + b * c)
+-- #check (mul_add : ∀ (a b c : ℝ), a * (b + c) = a * b + a * c)
+-- #check (add_assoc : ∀ (a b c : ℝ), (a + b) + c = a + (b + c))
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)\_eq\_ac+ad+bc+bd.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a-b) = a\^{}2-b\^{}2}
-\label{sec:orgbf44e84}
+\label{sec:org22e8cfe}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -731,11 +786,24 @@ by
   rw [mul_neg]
   rw [← pow_two]
   rw [← sub_eq_add_neg]
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc : ∀ (a b c : ℝ), (a + b) + c = a + (b + c))
+-- #check (add_zero : ∀ (a : ℝ), a + 0 = a)
+-- #check (add_mul : ∀ (a b c : ℝ), (a + b) * c = a * c + b * c)
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_neg : ∀ (a b : ℝ), a * -b = -(a * b))
+-- #check (mul_sub : ∀ (a b c : ℝ), a * (b - c) = a * b - a * c)
+-- #check (neg_add_self : ∀ (a : ℝ), -a + a = 0)
+-- #check (pow_two : ∀ (a : ℝ), a ^ 2 = a * a)
+-- #check (sub_eq_add_neg : ∀ (a b : ℝ), a - b = a + -b)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)\_eq\_aa-bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = da+b y b = ad, entonces c = 2ad}
-\label{sec:org90b6454}
+\label{sec:org0c8f712}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -827,11 +895,18 @@ example
   (h2 : b = a * d)
   : c = 2 * a * d :=
 by linarith
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (two_mul : ∀ (a : ℝ), 2 * a = a + a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_da+b\_y\_b\_eq\_ad\_entonces\_c\_eq\_2ad.lean}{Lean 4 Web}.
 
 \section{En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc}
-\label{sec:org88f695f}
+\label{sec:orge33bb0d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -872,14 +947,19 @@ example
 by
   nth_rewrite 2 [h]
   rw [add_mul]
+
+-- Lemas usados
+-- ============
+
+-- #check (add_mul : ∀ (a b c : ℝ), (a + b) * c = a * c + b * c)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b\_eq\_c\_entonces\_(a+b)(a+b)\_eq\_ac+bc.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los anillos}
-\label{sec:org044c474}
+\label{sec:org7b587c9}
 
 \section{Si R es un anillo y a ∈ R, entonces a + 0 = a}
-\label{sec:org51cb2f9}
+\label{sec:org9e6a9a4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -928,11 +1008,19 @@ example : a + 0 = a :=
 -- 5ª demostración
 example : a + 0 = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+variable (a b : R)
+
+-- #check (add_comm a b : a + b = b + a)
+-- #check (zero_add a :  0 + a = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a + -a = 0}
-\label{sec:org6a50d69}
+\label{sec:orgf0cc428}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -989,11 +1077,19 @@ example : a + -a = 0 :=
 
 example : a + -a = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (a b : R)
+-- #check (add_comm a b : a + b = b + a)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (add_neg_self a : a + -a = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b}
-\label{sec:org2f4f3b0}
+\label{sec:orgc27661d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1044,11 +1140,20 @@ example : -a + (a + b) = b :=
 -- 6ª demostración
 example : -a + (a + b) = b :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (c : R)
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel_left a b : -a + (a + b) = b)
+-- #check (zero_add a :  0 + a = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a}
-\label{sec:org4841504}
+\label{sec:orga3f6f90}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1100,11 +1205,20 @@ example : (a + b) + -b = a :=
 -- 6ª demostración
 example : (a + b) + -b = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (c : R)
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_neg_cancel_right a b : (a + b) + -b = a)
+-- #check (add_right_neg a : a + -a = 0)
+-- #check (add_zero a :  a + 0 = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c}
-\label{sec:org1985665}
+\label{sec:orgeaeaa1a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1214,11 +1328,20 @@ example
   (h : a + b = a + c)
   : b = c :=
 add_left_cancel h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_left_cancel : a + b = a + c → b = c)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel_left a b : -a + (a + b) = b)
+-- #check (zero_add a :  0 + a = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c}
-\label{sec:org955a078}
+\label{sec:org17b26a5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1312,11 +1435,20 @@ example
   (h : a + b = c + b)
   : a = c :=
 add_right_cancel h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_neg_cancel_right a b : (a + b) + -b = a)
+-- #check (add_right_cancel : a + b = c + b → a = c)
+-- #check (add_right_neg a : a + -a = 0)
+-- #check (add_zero a :  a + 0 = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a.0 = 0}
-\label{sec:orgc129ab4}
+\label{sec:org88f3b72}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1395,11 +1527,20 @@ example : a * 0 = 0 :=
 
 example : a * 0 = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_left_cancel : a + b = a + c → b = c)
+-- #check (add_zero a :  a + 0 = a)
+-- #check (mul_add a b c :  a * (b + c) = a * b + a * c)
+-- #check (mul_zero a : a * 0 = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 0.a = 0}
-\label{sec:org0c9ef82}
+\label{sec:org2e84ccd}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1463,11 +1604,19 @@ by simp
 -- 6ª demostración
 example : 0 * a = 0 :=
 zero_mul a
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_mul a b c :  (a + b) * c = a * c + b * c)
+-- #check (add_zero a :  a + 0 = a)
+-- #check (zero_mul a : 0 * a = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b}
-\label{sec:org4766174}
+\label{sec:org1723581}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si es un anillo y a, b ∈ R tales que
@@ -1541,11 +1690,18 @@ example
   (h : a + b = 0)
   : -a = b :=
 neg_eq_iff_add_eq_zero.mpr h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_zero a : a + 0 = a)
+-- #check (neg_add_cancel_left a b : -a + (a + b) = b)
+-- #check (neg_eq_iff_add_eq_zero : -a = b ↔ a + b = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_ig\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b}
-\label{sec:org4784100}
+\label{sec:orge70e4a2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R tales que
@@ -1616,11 +1772,18 @@ example
   (h : a + b = 0)
   : a = -b :=
 add_eq_zero_iff_eq_neg.mp h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_eq_zero_iff_eq_neg : a + b = 0 ↔ a = -b)
+-- #check (add_neg_cancel_right a b : (a + b) + -b = a)
+-- #check (zero_add a : 0 + a = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig\_opuesto\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo, entonces -0 = 0}
-\label{sec:org5490666}
+\label{sec:org435d953}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo, entonces
@@ -1677,11 +1840,19 @@ example : (-0 : R) = 0 :=
 -- 4ª demostración
 example : (-0 : R) = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (a b : R)
+-- #check (add_zero a : a + 0 = a)
+-- #check (neg_eq_of_add_eq_zero_left : a + b = 0 → -b = a)
+-- #check (neg_zero : -0 = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces -(-a) = a}
-\label{sec:org54153bc}
+\label{sec:org23b506e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1725,11 +1896,19 @@ neg_neg a
 -- 4ª demostración
 example : -(-a) = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (b : R)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_eq_of_add_eq_zero_right : a + b = 0 → -a = b)
+-- #check (neg_neg a : -(-a) = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces a - b = a + -b}
-\label{sec:orgd9a5a46}
+\label{sec:org48b596c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R, entonces
@@ -1752,11 +1931,16 @@ variable (a b : R)
 example : a - b = a + -b :=
 -- by exact?
 sub_eq_add_neg a b
+
+-- Lemas usados
+-- ============
+
+-- #check (sub_eq_add_neg a b : a - b = a + -b)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_igual\_suma\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a - a = 0}
-\label{sec:org03588aa}
+\label{sec:orge9b9232}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1790,11 +1974,18 @@ sub_self a
 -- 3ª demostración
 example : a - a = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- #check (add_right_neg a : a + -a = 0)
+-- #check (sub_eq_add_neg a b : a - b = a + -b)
+-- #check (sub_self a : a - a = 0)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_consigo\_mismo.lean}{Lean 4 Web}.
 
 \section{En los anillos, 1 + 1 = 2}
-\label{sec:org2317f42}
+\label{sec:org7e2966f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los anillos,
@@ -1823,11 +2014,16 @@ by norm_num
 -- 2ª demostración
 example : 1 + 1 = (2 : R) :=
 one_add_one_eq_two
+
+-- Lemas usados
+-- ============
+
+-- #check (one_add_one_eq_two : 1 + 1 = 2)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uno\_mas\_uno\_es\_dos.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 2a = a+a}
-\label{sec:orgb80298d}
+\label{sec:orgcd6f988}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1860,14 +2056,23 @@ calc
 -- 2ª demostración
 example : 2 * a = a + a :=
 by exact two_mul a
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_mul a b c : (a + b) * c = a * c + b * c)
+-- #check (one_add_one_eq_two : (1 : R) + 1 = 2)
+-- #check (one_mul a : 1 * a = a)
+-- #check (two_mul a : 2 * a = a + a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
 
-
 \chapter{Propiedades elementales de los grupos}
-\label{sec:orgb39566c}
+\label{sec:org9e7ffd7}
+
 \section{Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1}
-\label{sec:org39f2c0a}
+\label{sec:orgafb53b5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean4, se declara que G es un grupo mediante la expresión
@@ -1934,11 +2139,20 @@ by simp
 -- 4ª demostración
 example : a * a⁻¹ = 1 :=
 by exact mul_inv_self a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_self a : a * a⁻¹ = 1)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (one_mul a : 1 * a = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
 
 \section{Si G es un grupo y a ∈ G, entonces a·1 = a}
-\label{sec:org4b36e40}
+\label{sec:org0c5bb35}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si G es un grupo y a ∈ G, entonces
@@ -1985,9 +2199,514 @@ by simp
 -- 4ª demostración
 example : a * 1 = a :=
 by exact mul_one a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (one_mul a : 1 * a = a)
+-- #check (mul_one a : a * 1 = a)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_uno.lean}{Lean 4 Web}.
 
+\section{Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b}
+\label{sec:orgc879878}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si G es un grupo y a, b ∈ G, tales que
+--    a * b = 1
+-- entonces
+--    a⁻¹ = b
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Se tiene a partir de la siguiente cadena de igualdades
+--    a⁻¹ = a⁻¹ * 1           [por producto por uno]
+--        = a⁻¹ * (a * b)     [por hipótesis]
+--        = (a⁻¹ * a) * b     [por asociativa]
+--        = 1 * b             [por producto con inverso]
+--        = b                 [por producto por uno]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+-- 1º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ = a⁻¹ * 1       := by rw [mul_one]
+    _ = a⁻¹ * (a * b) := by rw [h]
+    _ = (a⁻¹ * a) * b := by rw [mul_assoc]
+    _ = 1 * b         := by rw [mul_left_inv]
+    _ = b             := by rw [one_mul]
+
+-- 2º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ = a⁻¹ * 1       := by simp
+    _ = a⁻¹ * (a * b) := by simp [h]
+    _ = (a⁻¹ * a) * b := by simp
+    _ = 1 * b         := by simp
+    _ = b             := by simp
+
+-- 3º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ =  a⁻¹ * (a * b) := by simp [h]
+    _ =  b             := by simp
+
+-- 4º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+by exact inv_eq_of_mul_eq_one_right h
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_one a : a * 1 = a)
+-- #check (one_mul a : 1 * a = a)
+-- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_inverso.lean}{Lean 4 Web}.
+
+\section{Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹}
+\label{sec:org7edf3b5}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si G es un grupo y a, b ∈ G, entonces
+--    (a * b)⁻¹ = b⁻¹ * a⁻¹
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Teniendo en cuenta la propiedad
+--    ∀ a b ∈ R, ab = 1 → a⁻¹ = b,
+-- basta demostrar que
+--    (a·b)·(b⁻¹·a⁻¹) = 1.
+-- La identidad anterior se demuestra mediante la siguiente cadena de
+-- igualdades
+--    (a·b)·(b⁻¹·a⁻¹) =  a·(b·(b⁻¹·a⁻¹))   [por la asociativa]
+--                    =  a·((b·b⁻¹)·a⁻¹)   [por la asociativa]
+--                    =  a·(1·a⁻¹)         [por producto con inverso]
+--                    =  a·a⁻¹             [por producto con uno]
+--                    =  1                 [por producto con inverso]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+lemma aux : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+calc
+  (a * b) * (b⁻¹ * a⁻¹)
+    = a * (b * (b⁻¹ * a⁻¹)) := by rw [mul_assoc]
+  _ = a * ((b * b⁻¹) * a⁻¹) := by rw [mul_assoc]
+  _ = a * (1 * a⁻¹)         := by rw [mul_right_inv]
+  _ = a * a⁻¹               := by rw [one_mul]
+  _ = 1                     := by rw [mul_right_inv]
+
+-- 1ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  show (a * b)⁻¹ = b⁻¹ * a⁻¹
+  exact inv_eq_of_mul_eq_one_right h1
+
+-- 3ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  show (a * b)⁻¹ = b⁻¹ * a⁻¹
+  simp [h1]
+
+-- 4ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  simp [h1]
+
+-- 5ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  apply inv_eq_of_mul_eq_one_right
+  rw [aux]
+
+-- 6ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by exact mul_inv_rev a b
+
+-- 7ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_rev a b : (a * b)⁻¹ = b⁻¹ * a⁻¹)
+-- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (one_mul a : 1 * a = a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso\_del\_producto.lean}{Lean 4 Web}.
+
+\chapter{Propiedades de orden en los números reales}
+\label{sec:org5fc16fe}
+
+\section{En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e}
+\label{sec:org535bcbe}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c, d y e son números reales tales que
+--    a ≤ b,
+--    b < c,
+--    c ≤ d y
+--    d < e,
+-- entonces
+--    a < e.
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- Por la siguiente cadena de desigualdades
+--    a ≤ b    [por h1]
+--      < c    [por h2]
+--      ≤ d    [por h3]
+--      < e    [por h4]
+
+-- 2ª demostración en LN
+-- =====================
+
+-- A partir de las hipótesis 1 (a ≤ b) y 2 (b < c) se tiene
+--    a < c
+-- que, junto la hipótesis 3 (c ≤ d) da
+--    a < d
+-- que, junto la hipótesis 4 (d < e) da
+--    a < e.
+
+-- 3ª demostración en LN
+-- =====================
+
+-- Para demostrar a < e, por la hipótesis 1 (a ≤ b) se reduce a probar
+--    b < e
+-- que, por la hipótesis 2 (b < c), se reduce a
+--    c < e
+-- que, por la hipótesis 3 (c ≤ d), se reduce a
+--    d < e
+-- que es cierto, por la hipótesis 4.
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+
+variable (a b c d e : ℝ)
+
+-- 1ª demostración
+-- ===============
+
+example
+  (h1 : a ≤ b)
+  (h2 : b < c)
+  (h3 : c ≤ d)
+  (h4 : d < e) :
+  a < e :=
+calc
+  a ≤ b := h1
+  _ < c := h2
+  _ ≤ d := h3
+  _ < e := h4
+
+-- 2ª demostración
+-- ===============
+
+example
+  (h1 : a ≤ b)
+  (h2 : b < c)
+  (h3 : c ≤ d)
+  (h4 : d < e) :
+  a < e :=
+by
+  have h5 : a < c := lt_of_le_of_lt h1 h2
+  have h6 : a < d := lt_of_lt_of_le h5 h3
+  show a < e
+  exact lt_trans h6 h4
+
+-- 3ª demostración
+-- ===============
+
+example
+  (h1 : a ≤ b)
+  (h2 : b < c)
+  (h3 : c ≤ d)
+  (h4 : d < e) :
+  a < e :=
+by
+  apply lt_of_le_of_lt h1
+  apply lt_trans h2
+  apply lt_of_le_of_lt h3
+  exact h4
+
+-- El desarrollo de la prueba es
+--
+--    a b c d e : ℝ,
+--    h1 : a ≤ b,
+--    h2 : b < c,
+--    h3 : c ≤ d,
+--    h4 : d < e
+--    ⊢ a < e
+-- apply lt_of_le_of_lt h1,
+--    ⊢ b < e
+-- apply lt_trans h2,
+--    ⊢ c < e
+-- apply lt_of_le_of_lt h3,
+--    ⊢ d < e
+-- exact h4,
+--    no goals
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h1 : a ≤ b)
+  (h2 : b < c)
+  (h3 : c ≤ d)
+  (h4 : d < e) :
+  a < e :=
+by linarith
+
+-- Lemas usados
+-- ============
+
+-- #check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
+-- #check (lt_of_lt_of_le : a < b → b ≤ c → a < c)
+-- #check (lt_trans : a < b → b < c → a < c)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cadena\_de\_desigualdades.lean}{Lean 4 Web}.
+
+\section{En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b}
+\label{sec:org55ca60e}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b y c son números reales tales que
+--    2 * a ≤ 3 * b
+--    1 ≤ a
+--    c = 2
+-- entonces
+--    c + a ≤ 5 * b
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de desigualdades
+--    c + a = 2 + a      [por la hipótesis 3 (c = 2)]
+--          ≤ 2·a + a    [por la hipótesis 2 (1 ≤ a)]
+--          = 3·a
+--          ≤ 9/2·b      [por la hipótesis 1 (2·a ≤ 3·b)]
+--          ≤ 5·b
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+
+variable (a b c : ℝ)
+
+-- 1ª demostración
+example
+  (h1 : 2 * a ≤ 3 * b)
+  (h2 : 1 ≤ a)
+  (h3 : c = 2)
+  : c + a ≤ 5 * b :=
+calc
+  c + a = 2 + a     := by rw [h3]
+      _ ≤ 2 * a + a := by linarith only [h2]
+      _ = 3 * a     := by linarith only []
+      _ ≤ 9/2 * b   := by linarith only [h1]
+      _ ≤ 5 * b     := by linarith
+
+-- 2ª demostración
+example
+  (h1 : 2 * a ≤ 3 * b)
+  (h2 : 1 ≤ a)
+  (h3 : c = 2)
+  : c + a ≤ 5 * b :=
+by linarith
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones.lean}{Lean 4 Web}.
+
+\section{En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ}
+\label{sec:orgb5dc387}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Sean a, b, y d números reales. Demostrar  que si
+--    1 ≤ a
+--    b ≤ d
+-- entonces
+--    2 + a + exp b ≤ 3 * a + exp d
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- De la primera hipótesis (1 ≤ a), multiplicando por 2, se obtiene
+--    2 ≤ 2a
+-- y, sumando a ambos lados, se tiene
+--    2 + a ≤ 3a             (1)
+-- De la hipótesis 2 (b ≤ d) y de la monotonía de la función exponencial
+-- se tiene
+--    e^b ≤ e^d              (2)
+-- Finalmente, de (1) y (2) se tiene
+--    2 + a + e^b ≤ 3a + e^d
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+
+open Real
+
+variable (a b d : ℝ)
+
+-- 1ª demostración
+example
+  (h1 : 1 ≤ a)
+  (h2 : b ≤ d)
+  : 2 + a + exp b ≤ 3 * a + exp d :=
+by
+  have h3 : 2 + a ≤ 3 * a := calc
+    2 + a = 2 * 1 + a := by linarith only []
+        _ ≤ 2 * a + a := by linarith only [h1]
+        _ ≤ 3 * a     := by linarith only []
+  have h4 : exp b ≤ exp d := by
+    linarith only [exp_le_exp.mpr h2]
+  show 2 + a + exp b ≤ 3 * a + exp d
+  exact add_le_add h3 h4
+
+-- 2ª demostración
+example
+  (h1 : 1 ≤ a)
+  (h2 : b ≤ d)
+  : 2 + a + exp b ≤ 3 * a + exp d :=
+calc
+  2 + a + exp b
+    ≤ 3 * a + exp b := by linarith only [h1]
+  _ ≤ 3 * a + exp d := by linarith only [exp_le_exp.mpr h2]
+
+-- 3ª demostración
+example
+  (h1 : 1 ≤ a)
+  (h2 : b ≤ d)
+  : 2 + a + exp b ≤ 3 * a + exp d :=
+by linarith [exp_le_exp.mpr h2]
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales.lean}{Lean 4 Web}.
+
 \input Calculemus2_bibliografia
+
+\chapter*{Lemas usados}
+\addcontentsline{toc}{chapter}{Lemas usados}
+\begin{verbatim}
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Algebra.Group.Defs
+import Mathlib.Data.Real.Basic
+
+-- Números reales
+-- ==============
+
+section reales
+variable (a b c : ℝ)
+#check (lt_of_lt_of_le : a < b → b ≤ c → a < c)
+#check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
+#check (lt_trans : a < b → b < c → a < c)
+#check (mul_comm a b : a * b = b * a)
+#check (mul_neg a b : a * -b = -(a * b))
+#check (mul_sub a b c : a * (b - c) = a * b - a * c)
+#check (neg_add_self a : -a + a = 0)
+#check (pow_two a : a ^ 2 = a * a)
+#check (two_mul a : 2 * a = a + a)
+end reales
+
+-- Anillos
+-- =======
+
+section anillos
+variable {R : Type _} [Ring R]
+variable (a b c : R)
+#check (add_assoc a b c : (a + b) + c = a + (b + c))
+#check (add_comm a b : a + b = b + a)
+#check (add_eq_zero_iff_eq_neg : a + b = 0 ↔ a = -b)
+#check (add_left_cancel : a + b = a + c → b = c)
+#check (add_left_neg a : -a + a = 0)
+#check (add_mul a b c : (a + b) * c = a * c + b * c)
+#check (add_neg_cancel_right a b : (a + b) + -b = a)
+#check (add_neg_self a : a + -a = 0)
+#check (add_right_cancel : a + b = c + b → a = c)
+#check (add_right_neg a : a + -a = 0)
+#check (add_zero a : a + 0 = a)
+#check (mul_add a b c : a * (b + c) = a * b + a * c)
+#check (mul_zero a : a * 0 = 0)
+#check (neg_add_cancel_left a b : -a + (a + b) = b)
+#check (neg_eq_iff_add_eq_zero : -a = b ↔ a + b = 0)
+#check (neg_eq_of_add_eq_zero_left : a + b = 0 → -b = a)
+#check (neg_eq_of_add_eq_zero_right : a + b = 0 → -a = b)
+#check (neg_neg a : -(-a) = a)
+#check (neg_zero : -0 = 0)
+#check (one_add_one_eq_two : (1 : R) + 1 = 2)
+#check (sub_eq_add_neg a b : a - b = a + -b)
+#check (sub_self a : a - a = 0)
+#check (two_mul a : 2 * a = a + a)
+#check (zero_add a : 0 + a = a)
+#check (zero_mul a : 0 * a = 0)
+end anillos
+
+-- Grupos
+-- ======
+
+section grupos
+variable {G : Type _} [Group G]
+variable (a b c : G)
+#check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
+#check (mul_assoc a b c : (a * b) * c = a * (b * c))
+#check (mul_inv_self a : a * a⁻¹ = 1)
+#check (mul_inv_rev a b : (a * b)⁻¹ = b⁻¹ * a⁻¹)
+#check (mul_left_inv a : a⁻¹  * a = 1)
+#check (mul_one a : a * 1 = a)
+#check (mul_right_inv a : a * a⁻¹ = 1)
+#check (one_mul a : 1 * a = a)
+end grupos
+\end{verbatim}
 
 \end{document}

@@ -81,3 +81,12 @@ example : a * 0 = 0 :=
 
 example : a * 0 = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_left_cancel : a + b = a + c → b = c)
+-- #check (add_zero a :  a + 0 = a)
+-- #check (mul_add a b c :  a * (b + c) = a * b + a * c)
+-- #check (mul_zero a : a * 0 = 0)

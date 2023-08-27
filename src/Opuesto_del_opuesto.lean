@@ -46,3 +46,11 @@ neg_neg a
 -- 4ª demostración
 example : -(-a) = a :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (b : R)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_eq_of_add_eq_zero_right : a + b = 0 → -a = b)
+-- #check (neg_neg a : -(-a) = a)

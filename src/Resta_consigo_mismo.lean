@@ -36,3 +36,10 @@ sub_self a
 -- 3ª demostración
 example : a - a = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- #check (add_right_neg a : a + -a = 0)
+-- #check (sub_eq_add_neg a b : a - b = a + -b)
+-- #check (sub_self a : a - a = 0)

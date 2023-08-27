@@ -35,3 +35,12 @@ calc
 -- 2ª demostración
 example : 2 * a = a + a :=
 by exact two_mul a
+
+-- Lemas usados
+-- ============
+
+-- variable (b c : R)
+-- #check (add_mul a b c : (a + b) * c = a * c + b * c)
+-- #check (one_add_one_eq_two : (1 : R) + 1 = 2)
+-- #check (one_mul a : 1 * a = a)
+-- #check (two_mul a : 2 * a = a + a)

@@ -61,3 +61,8 @@ example
   : a * (b * e) = c * (d * f) :=
 by
   simp [*, ←mul_assoc]
+
+-- Lemas usados
+-- ============
+
+-- #check (mul_assoc : ∀ (a b c : ℝ), (a * b) * c = a * (b * c))

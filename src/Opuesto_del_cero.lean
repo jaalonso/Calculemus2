@@ -59,3 +59,11 @@ example : (-0 : R) = 0 :=
 -- 4ª demostración
 example : (-0 : R) = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (a b : R)
+-- #check (add_zero a : a + 0 = a)
+-- #check (neg_eq_of_add_eq_zero_left : a + b = 0 → -b = a)
+-- #check (neg_zero : -0 = 0)

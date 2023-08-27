@@ -49,3 +49,13 @@ by simp
 -- 4ª demostración
 example : a * 1 = a :=
 by exact mul_one a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (one_mul a : 1 * a = a)
+-- #check (mul_one a : a * 1 = a)

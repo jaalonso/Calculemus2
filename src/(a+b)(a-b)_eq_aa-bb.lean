@@ -107,3 +107,16 @@ by
   rw [mul_neg]
   rw [← pow_two]
   rw [← sub_eq_add_neg]
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc : ∀ (a b c : ℝ), (a + b) + c = a + (b + c))
+-- #check (add_zero : ∀ (a : ℝ), a + 0 = a)
+-- #check (add_mul : ∀ (a b c : ℝ), (a + b) * c = a * c + b * c)
+-- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
+-- #check (mul_neg : ∀ (a b : ℝ), a * -b = -(a * b))
+-- #check (mul_sub : ∀ (a b c : ℝ), a * (b - c) = a * b - a * c)
+-- #check (neg_add_self : ∀ (a : ℝ), -a + a = 0)
+-- #check (pow_two : ∀ (a : ℝ), a ^ 2 = a * a)
+-- #check (sub_eq_add_neg : ∀ (a b : ℝ), a - b = a + -b)

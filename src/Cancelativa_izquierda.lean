@@ -112,3 +112,12 @@ example
   (h : a + b = a + c)
   : b = c :=
 add_left_cancel h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_left_cancel : a + b = a + c → b = c)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel_left a b : -a + (a + b) = b)
+-- #check (zero_add a :  0 + a = a)

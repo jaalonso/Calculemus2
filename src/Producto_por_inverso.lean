@@ -69,3 +69,12 @@ by simp
 -- 4ª demostración
 example : a * a⁻¹ = 1 :=
 by exact mul_inv_self a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_self a : a * a⁻¹ = 1)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (one_mul a : 1 * a = a)

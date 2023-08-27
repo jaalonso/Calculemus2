@@ -73,3 +73,10 @@ example
   (h : a + b = 0)
   : a = -b :=
 add_eq_zero_iff_eq_neg.mp h
+
+-- Lemas usados
+-- ============
+
+-- #check (add_eq_zero_iff_eq_neg : a + b = 0 ↔ a = -b)
+-- #check (add_neg_cancel_right a b : (a + b) + -b = a)
+-- #check (zero_add a : 0 + a = a)

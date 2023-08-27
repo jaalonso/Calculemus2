@@ -43,3 +43,8 @@ example
 by
   nth_rewrite 2 [h]
   rw [add_mul]
+
+-- Lemas usados
+-- ============
+
+-- #check (add_mul : ∀ (a b c : ℝ), (a + b) * c = a * c + b * c)

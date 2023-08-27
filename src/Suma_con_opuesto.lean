@@ -59,3 +59,11 @@ example : a + -a = 0 :=
 
 example : a + -a = 0 :=
 by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (a b : R)
+-- #check (add_comm a b : a + b = b + a)
+-- #check (add_left_neg a : -a + a = 0)
+-- #check (add_neg_self a : a + -a = 0)

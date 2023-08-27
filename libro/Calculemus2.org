@@ -156,8 +156,8 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Producto_por_dos.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
 
-
 * Propiedades elementales de los grupos
+
 ** Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1
 #+INCLUDE: "../src/Producto_por_inverso.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
@@ -166,6 +166,32 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Producto_por_uno.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_uno.lean][Lean 4 Web]].
 
+** Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b
+#+INCLUDE: "../src/CS_de_inverso.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_inverso.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
+#+INCLUDE: "../src/Inverso_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean][Lean 4 Web]].
+
+* Propiedades de orden en los números reales
+
+** En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e
+#+INCLUDE: "../src/Cadena_de_desigualdades.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cadena_de_desigualdades.lean][Lean 4 Web]].
+
+** En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b
+#+INCLUDE: "../src/Inecuaciones.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones.lean][Lean 4 Web]].
+
+** En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ
+#+INCLUDE: "../src/Inecuaciones_con_exponenciales.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales.lean][Lean 4 Web]].
+
 #+LATEX: \input Calculemus2_bibliografia
+
+#+LATEX: \chapter*{Lemas usados}
+#+LATEX: \addcontentsline{toc}{chapter}{Lemas usados}
+#+INCLUDE: "../src/Lemas_usados.lean" src lean :lines "7-"
 
 #+LATEX: \end{document}
