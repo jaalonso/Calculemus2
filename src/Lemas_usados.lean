@@ -6,22 +6,81 @@
 
 import Mathlib.Algebra.Ring.Defs
 import Mathlib.Algebra.Group.Defs
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
+
+-- Números naturales
+-- =================
+
+section naturales
+variable (x y z k m n : ℕ)
+#check (_root_.dvd_antisymm : m ∣ n → n ∣ m → m = n)
+#check (dvd_add : x ∣ y → x ∣ z → x ∣ y + z)
+#check (dvd_gcd : k ∣ m → k ∣ n → k ∣ gcd m n)
+#check (dvd_mul_left x y : x ∣ y * x)
+#check (dvd_mul_of_dvd_left : x ∣ y → ∀ (c : ℕ), x ∣ y * c)
+#check (dvd_mul_of_dvd_right : x ∣ y → ∀ (c : ℕ), x ∣ c * y)
+#check (dvd_mul_right x y : x ∣ x * y)
+#check (dvd_trans : x ∣ y → y ∣ z → x ∣ z)
+#check (gcd_comm m n : gcd m n = gcd n m)
+#check (gcd_dvd_left  m n: gcd m n ∣ m)
+#check (gcd_dvd_right m n : gcd m n ∣ n)
+end naturales
 
 -- Números reales
 -- ==============
 
 section reales
-variable (a b c : ℝ)
+open Real
+variable (a b c d : ℝ)
+#check (abs_add a b : |a + b| ≤ |a| + |b|)
+#check (abs_le' : |a| ≤ b ↔ a ≤ b ∧ -a ≤ b)
+#check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
+#check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+#check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+#check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+#check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+#check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+#check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
+#check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
+#check (add_pos : 0 < a → 0 < b → 0 < a + b)
+#check (add_sub_cancel a b : a + b - b = a)
+#check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+#check (exp_lt_exp : exp a < exp b ↔ a < b)
+#check (exp_pos a : 0 < exp a)
+#check (le_antisymm : a ≤ b → b ≤ a → a = b)
+#check (le_div_iff : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
+#check (le_max_left a b : a ≤ max a b)
+#check (le_max_right a b : b ≤ max a b)
+#check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+#check (le_refl a : a ≤ a)
+#check (log_le_log' : 0 < a → a ≤ b → log a ≤ log b)
 #check (lt_of_lt_of_le : a < b → b ≤ c → a < c)
 #check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
 #check (lt_trans : a < b → b < c → a < c)
+#check (max_comm a b : max a b = max b a)
+#check (max_le : a ≤ c → b ≤ c → max a b ≤ c)
+#check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
+#check (min_assoc a b c : min (min a b) c = min a (min b c))
+#check (min_comm a b : min a b = min b a)
+#check (min_eq_left : a ≤ b → min a b = a)
+#check (min_eq_right : b ≤ a → min a b = b)
+#check (min_le_left a b : min a b ≤ a)
+#check (min_le_right a b : min a b ≤ b)
 #check (mul_comm a b : a * b = b * a)
 #check (mul_neg a b : a * -b = -(a * b))
 #check (mul_sub a b c : a * (b - c) = a * b - a * c)
 #check (neg_add_self a : -a + a = 0)
 #check (pow_two a : a ^ 2 = a * a)
+#check (pow_two_nonneg a : 0 ≤ a ^ 2)
+#check (sq_nonneg a : 0 ≤ a ^ 2)
+#check (sub_add_cancel a b : a - b + b = a)
+#check (sub_le_sub_left : a ≤ b → ∀ (c : ℝ), c - b ≤ c - a)
+#check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)
+#check (sub_sq a b : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2)
 #check (two_mul a : 2 * a = a + a)
+#check (two_mul_le_add_sq a b : 2 * a * b ≤ a ^ 2 + b ^ 2)
+#check (zero_lt_one : 0 < 1)
 end reales
 
 -- Anillos

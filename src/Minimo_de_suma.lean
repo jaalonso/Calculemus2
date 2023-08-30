@@ -147,3 +147,16 @@ by
 -- 6ª demostración del ejercicio
 example : min a b + c = min (a + c) (b + c) :=
 (min_add_add_right a b c).symm
+
+-- Lemas usados
+-- ============
+
+-- #check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+-- #check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+-- #check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
+-- #check (min_eq_left : a ≤ b → min a b = a)
+-- #check (min_eq_right : b ≤ a → min a b = b)
+-- #check (min_le_left a b : min a b ≤ a)
+-- #check (min_le_right a b : min a b ≤ b)

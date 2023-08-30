@@ -80,3 +80,13 @@ le_antisymm (aux a b) (aux b a)
 
 example : min a b = min b a :=
 min_comm a b
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+-- #check (min_comm a b : min a b = min b a)
+-- #check (min_le_left a b : min a b ≤ a)
+-- #check (min_le_right a b : min a b ≤ b)

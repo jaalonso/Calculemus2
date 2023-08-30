@@ -48,8 +48,9 @@ by
   apply dvd_mul_of_dvd_left
   apply dvd_mul_left
 
+-- Lemas usados
+-- ============
 
--- Los lemas utilizados son:
-#check (dvd_mul_left x y : x ∣ y * x)
-#check (dvd_mul_right x y : x ∣ x * y)
-#check (dvd_trans : x ∣ y → y ∣ z → x ∣ z)
+-- #check (dvd_mul_left x y : x ∣ y * x)
+-- #check (dvd_mul_right x y : x ∣ x * y)
+-- #check (dvd_trans : x ∣ y → y ∣ z → x ∣ z)

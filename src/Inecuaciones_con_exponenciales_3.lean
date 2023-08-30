@@ -65,3 +65,10 @@ by
   apply exp_le_exp.mpr
   apply add_le_add_left
   exact h
+
+-- Lemas usados
+-- ============
+
+-- variable (b : ℝ)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)

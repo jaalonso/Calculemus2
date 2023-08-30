@@ -59,3 +59,13 @@ by
 example : 2*a*b ≤ a^2 + b^2 :=
 -- by apply?
 two_mul_le_add_sq a b
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+-- #check (add_zero a : a + 0 = a)
+-- #check (sq_nonneg a : 0 ≤ a ^ 2)
+-- #check (sub_sq a b : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2)
+-- #check (two_mul_le_add_sq a b : 2 * a * b ≤ a ^ 2 + b ^ 2)

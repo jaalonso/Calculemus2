@@ -57,3 +57,9 @@ example
   (h : a ≤ b)
   : c - exp b ≤ c - exp a :=
 by linarith [exp_le_exp.mpr h]
+
+-- Lemas usados
+-- ============
+
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+-- #check (sub_le_sub_left : a ≤ b → ∀ (c : ℝ), c - b ≤ c - a)

@@ -80,3 +80,13 @@ le_antisymm (aux a b) (aux b a)
 
 example : max a b = max b a :=
 max_comm a b
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- #check (le_max_left a b : a ≤ max a b)
+-- #check (le_max_right a b : b ≤ max a b)
+-- #check (max_comm a b : max a b = max b a)
+-- #check (max_le : a ≤ c → b ≤ c → max a b ≤ c)

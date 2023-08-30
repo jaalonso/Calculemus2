@@ -140,9 +140,17 @@ by
 example : min (min a b) c = min a (min b c) :=
 le_antisymm aux1 aux2
 
-
 -- 4ª demostración
 -- ===============
 
 example : min (min a b) c = min a (min b c) :=
 min_assoc a b c
+
+-- Lemas usados
+-- ============
+
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+-- #check (min_assoc a b c : min (min a b) c = min a (min b c))
+-- #check (min_le_left a b : min a b ≤ a)
+-- #check (min_le_right a b : min a b ≤ b)

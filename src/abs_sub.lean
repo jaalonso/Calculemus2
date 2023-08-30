@@ -68,3 +68,12 @@ by
 -- 4ª demostración
 example : |a| - |b| ≤ |a - b| :=
 abs_sub_abs_le_abs_sub a b
+
+-- Lemas usados
+-- ============
+
+-- #check (abs_add a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
+-- #check (add_sub_cancel a b : a + b - b = a)
+-- #check (sub_add_cancel a b : a - b + b = a)
+-- #check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)

@@ -91,3 +91,12 @@ by
   . apply add_lt_add_of_le_of_lt h1
     apply exp_lt_exp.mpr h2
   rfl
+
+-- Lemas usados
+-- ============
+
+-- #check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+-- #check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+-- #check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
+-- #check (exp_lt_exp : exp a < exp b ↔ a < b)
+-- #check (le_refl a : a ≤ a)

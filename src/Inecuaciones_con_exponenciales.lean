@@ -65,3 +65,10 @@ example
   (h2 : b ≤ d)
   : 2 + a + exp b ≤ 3 * a + exp d :=
 by linarith [exp_le_exp.mpr h2]
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)

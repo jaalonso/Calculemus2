@@ -99,3 +99,11 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
     apply aux1 }
   { rw [le_div_iff h]
     apply aux2 }
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (abs_le' : |a| ≤ b ↔ a ≤ b ∧ -a ≤ b)
+-- #check (le_div_iff : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
+-- #check (pow_two_nonneg a : 0 ≤ a ^ 2)

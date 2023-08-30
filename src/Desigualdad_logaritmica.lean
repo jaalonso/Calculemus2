@@ -66,3 +66,14 @@ by
     { exact exp_pos a }}
   { apply add_le_add_left
     exact exp_le_exp.mpr h }
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+-- #check (add_pos : 0 < a → 0 < b → 0 < a + b)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+-- #check (exp_pos a : 0 < exp a)
+-- #check (log_le_log' : 0 < a → a ≤ b → log a ≤ log b)
+-- #check (zero_lt_one : 0 < 1)
