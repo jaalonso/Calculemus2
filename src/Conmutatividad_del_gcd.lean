@@ -24,8 +24,8 @@
 --
 -- Para demostrar (1), por la definición del máximo común divisor, basta
 -- demostrar las siguientes relaciones
---    gcd m n ∣ n
---    gcd m n ∣ m
+--    gcd(m, n) ∣ n
+--    gcd(m, n) ∣ m
 -- y ambas se tienen por la definición del máximo común divisor.
 
 -- Demostraciones con Lean4

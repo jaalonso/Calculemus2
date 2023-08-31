@@ -8,6 +8,7 @@ import Mathlib.Algebra.Ring.Defs
 import Mathlib.Algebra.Group.Defs
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
+import Mathlib.Order.Lattice
 
 -- Números naturales
 -- =================
@@ -131,3 +132,16 @@ variable (a b c : G)
 #check (mul_right_inv a : a * a⁻¹ = 1)
 #check (one_mul a : 1 * a = a)
 end grupos
+
+-- Retículos
+-- =========
+
+section reticulos
+variable {α : Type _} [Lattice α]
+variable (x y z : α)
+#check (inf_comm : x ⊓ y = y ⊓ x)
+#check (inf_le_left : x ⊓ y ≤ x)
+#check (inf_le_right : x ⊓ y ≤ y)
+#check (le_antisymm : x ≤ y → y ≤ x → x = y)
+#check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
+end reticulos

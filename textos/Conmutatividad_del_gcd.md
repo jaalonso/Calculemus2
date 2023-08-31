@@ -25,19 +25,17 @@ by sorry
 [mathjax]
 Es consecuencia del siguiente lema auxiliar
 \[   (\forall x, y \in \mathbb{N})[\gcd(x,y) \mid \gcd(y,x)] \tag{1} \]
-En efecto, sustituyendo en (1) x por m e y por n, se tiene
+En efecto, sustituyendo en (1) \(x\) por \(m\) e \(y\) por \(n\), se tiene
 \[   \gcd(m, n) \mid \gcd(n, m) \tag{2}\]
 y, sustituyendo en (1) \(x\) por \(n\) e \(y\) por \(m\), se tiene
 \[   \gcd(n, m) \mid \gcd(m, n) \tag{3} \]
-Finalmente, aplicando la propiedad antisimétrica de la divisibilidad
-a (2) y (3), se tiene
+Finalmente, aplicando la propiedad antisimétrica de la divisibilidad a (2) y (3), se tiene
 \[   \gcd(m, n) = \gcd(n, m) \]
 
-Para demostrar (1), por la definición del máximo común divisor, basta
-demostrar las siguientes relaciones
+Para demostrar (1), por la definición del máximo común divisor, basta demostrar las siguientes relaciones
 \begin{align}
-   \gcd m n &\mid n \\
-   \gcd m n &\mid m
+   \gcd(m, n) &\mid n \\
+   \gcd(m, n) &\mid m
 \end{align}
 y ambas se tienen por la definición del máximo común divisor.
 
