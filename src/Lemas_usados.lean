@@ -144,4 +144,8 @@ variable (x y z : α)
 #check (inf_le_right : x ⊓ y ≤ y)
 #check (le_antisymm : x ≤ y → y ≤ x → x = y)
 #check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
+#check (le_sup_left : x ≤ x ⊔ y)
+#check (le_sup_right : y ≤ x ⊔ y)
+#check (sup_comm : x ⊔ y = y ⊔ x)
+#check (sup_le : x ≤ z → y ≤ z → x ⊔ y ≤ z)
 end reticulos

@@ -30,7 +30,7 @@ y sustituyendo en (1) \(a\) por \(y\) y \(b\) por \(x\), se tiene
 Finalmente, aplicando la propiedad antisimétrica de la divisibilidad a (2) y (3), se tiene
 \[   x ⊓ y = y ⊓ x \]
 
-Para demostrar (1), por la propiedad de antisimetría, basta demostrar las siguientes relaciones
+Para demostrar (1), por la definición del ínfimo, basta demostrar las siguientes relaciones
 \begin{align}
    y ⊓ x &≤ x \\
    y ⊓ x &≤ y
@@ -98,11 +98,11 @@ inf_comm
 -- Lemas usados
 -- ============
 
-#check (inf_comm : x ⊓ y = y ⊓ x)
-#check (inf_le_left : x ⊓ y ≤ x)
-#check (inf_le_right : x ⊓ y ≤ y)
-#check (le_antisymm : x ≤ y → y ≤ x → x = y)
-#check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
+-- #check (inf_comm : x ⊓ y = y ⊓ x)
+-- #check (inf_le_left : x ⊓ y ≤ x)
+-- #check (inf_le_right : x ⊓ y ≤ y)
+-- #check (le_antisymm : x ≤ y → y ≤ x → x = y)
+-- #check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
 </pre>
 
 <b>Demostraciones interactivas</b>

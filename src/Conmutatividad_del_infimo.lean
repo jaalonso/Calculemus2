@@ -22,7 +22,7 @@
 -- a (2) y (3), se tiene
 --    x ⊓ y = y ⊓ x
 --
--- Para demostrar (1), por la propiedad de antisimetría, basta demostrar
+-- Para demostrar (1), por la definición del ínfimo, basta demostrar
 -- las siguientes relaciones
 --    y ⊓ x ≤ x
 --    y ⊓ x ≤ y
