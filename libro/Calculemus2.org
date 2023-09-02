@@ -188,6 +188,29 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Inecuaciones_con_exponenciales.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales.lean][Lean 4 Web]].
 
+** En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f
+#+INCLUDE: "../src/Inecuaciones_con_exponenciales_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales_2.lean][Lean 4 Web]]
+
+** [[./textos/Inecuaciones_con_exponenciales_3.md][En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]]
+#+INCLUDE: "../src/Inecuaciones_con_exponenciales_3.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales_3.lean][Lean 4 Web]]
+
+
+** [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]]
+#+INCLUDE: "../src/Desigualdad_logaritmica.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
+
+
+** [[./textos/Inecuaciones_con_exponenciales_4.md][En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]]
+#+INCLUDE: "../src/Inecuaciones_con_exponenciales_4.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
+
+
+** [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]]
+#+INCLUDE: "../src/Doble_me_suma_cuadrados.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
+
 #+LATEX: \input Calculemus2_bibliografia
 
 #+LATEX: \chapter*{Lemas usados}

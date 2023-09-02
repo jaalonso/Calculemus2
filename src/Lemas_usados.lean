@@ -139,13 +139,17 @@ end grupos
 section reticulos
 variable {α : Type _} [Lattice α]
 variable (x y z : α)
+#check (inf_assoc : (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z))
 #check (inf_comm : x ⊓ y = y ⊓ x)
 #check (inf_le_left : x ⊓ y ≤ x)
+#check (inf_le_of_left_le : x ≤ z → x ⊓ y ≤ z)
+#check (inf_le_of_right_le : y ≤ z → x ⊓ y ≤ z)
 #check (inf_le_right : x ⊓ y ≤ y)
 #check (le_antisymm : x ≤ y → y ≤ x → x = y)
 #check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
 #check (le_sup_left : x ≤ x ⊔ y)
 #check (le_sup_right : y ≤ x ⊔ y)
+#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
 #check (sup_comm : x ⊔ y = y ⊔ x)
 #check (sup_le : x ≤ z → y ≤ z → x ⊔ y ≤ z)
 end reticulos

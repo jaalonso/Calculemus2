@@ -1,7 +1,7 @@
 \input Calculemus2_preambulo
 
 \chapter{Introducción}
-\label{sec:org58c70a8}
+\label{sec:org31b2ec8}
 
 Este libro es una recopilación de los ejercicios de demostración con
 Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
@@ -32,10 +32,10 @@ demostraciones en Isabelle/HOL y Lean3.
 \end{itemize}
 
 \chapter{Demostraciones de una propiedad de los números enteros}
-\label{sec:orgda8c937}
+\label{sec:org9de35ea}
 
 \section{∀ m n ∈ ℕ, Even n → Even (m * n)}
-\label{sec:orgbb9ec00}
+\label{sec:org9733ca9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los productos de los números naturales por números
@@ -153,10 +153,10 @@ example : ∀ m n : Nat, Even n → Even (m * n) := by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El\_producto\_por\_un\_par\_es\_par.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los números reales}
-\label{sec:org4f673a0}
+\label{sec:orgc1f560c}
 
 \section{En ℝ, (ab)c = b(ac)}
-\label{sec:org2d8e9d1}
+\label{sec:orga92b956}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -203,7 +203,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociativa\_conmutativa\_de\_los\_reales.lean}{Lean 4 Web}.
 
 \section{En ℝ, (cb)a = b(ac)}
-\label{sec:org49f7d86}
+\label{sec:orgf07a47f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -259,7 +259,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(cb)a\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, a(bc) = b(ac)}
-\label{sec:orgb7c392f}
+\label{sec:org3e8a587}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -312,7 +312,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(bc)\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, si ab = cd y e = f, entonces a(be) = c(df)}
-\label{sec:org01d0ed0}
+\label{sec:org5aac61f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -380,7 +380,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(be)\_eq\_c(df).lean}{Lean 4 Web}.
 
 \section{En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d}
-\label{sec:org103ed7e}
+\label{sec:orgfaa9190}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -441,7 +441,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_bc\_eq\_ef\_entonces\_((ab)c)d\_eq\_((ae)f)d.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = ba-d y d = ab, entonces c = 0}
-\label{sec:orgf0f32e2}
+\label{sec:orgec585f1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -508,7 +508,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_ba-d\_y\_d\_eq\_ab\_entonces\_c\_eq\_0.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a+b) = aa+2ab+bb}
-\label{sec:org2e4a96a}
+\label{sec:org51ecff8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -609,7 +609,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)\_eq\_aa+2ab+bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(c+d) = ac+ad+bc+bd}
-\label{sec:orgba27ff0}
+\label{sec:org1ec61e1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales, entonces
@@ -681,7 +681,7 @@ by rw [add_mul, mul_add, mul_add, ←add_assoc]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)\_eq\_ac+ad+bc+bd.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a-b) = a\^{}2-b\^{}2}
-\label{sec:org22e8cfe}
+\label{sec:orge613d3e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -803,7 +803,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)\_eq\_aa-bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = da+b y b = ad, entonces c = 2ad}
-\label{sec:org0c8f712}
+\label{sec:org50225d1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -906,7 +906,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_da+b\_y\_b\_eq\_ad\_entonces\_c\_eq\_2ad.lean}{Lean 4 Web}.
 
 \section{En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc}
-\label{sec:orge33bb0d}
+\label{sec:org3cdf159}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -956,10 +956,10 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b\_eq\_c\_entonces\_(a+b)(a+b)\_eq\_ac+bc.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los anillos}
-\label{sec:org7b587c9}
+\label{sec:orga7e114a}
 
 \section{Si R es un anillo y a ∈ R, entonces a + 0 = a}
-\label{sec:org9e6a9a4}
+\label{sec:orgced8c71}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1020,7 +1020,7 @@ variable (a b : R)
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a + -a = 0}
-\label{sec:orgf0cc428}
+\label{sec:orgdad051f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1089,7 +1089,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b}
-\label{sec:orgc27661d}
+\label{sec:org66c492d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1153,7 +1153,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a}
-\label{sec:orga3f6f90}
+\label{sec:org9f4d096}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1218,7 +1218,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c}
-\label{sec:orgeaeaa1a}
+\label{sec:org2b5e320}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1341,7 +1341,7 @@ add_left_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c}
-\label{sec:org17b26a5}
+\label{sec:org962eafe}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1448,7 +1448,7 @@ add_right_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a.0 = 0}
-\label{sec:org88f3b72}
+\label{sec:org80e4311}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1540,7 +1540,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 0.a = 0}
-\label{sec:org2e84ccd}
+\label{sec:orge5c795e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1616,7 +1616,7 @@ zero_mul a
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b}
-\label{sec:org1723581}
+\label{sec:org2bccce0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si es un anillo y a, b ∈ R tales que
@@ -1701,7 +1701,7 @@ neg_eq_iff_add_eq_zero.mpr h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_ig\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b}
-\label{sec:orge70e4a2}
+\label{sec:org14ba3c3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R tales que
@@ -1783,7 +1783,7 @@ add_eq_zero_iff_eq_neg.mp h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig\_opuesto\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo, entonces -0 = 0}
-\label{sec:org435d953}
+\label{sec:org7af93a3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo, entonces
@@ -1852,7 +1852,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces -(-a) = a}
-\label{sec:org23b506e}
+\label{sec:org15a08d4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1908,7 +1908,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces a - b = a + -b}
-\label{sec:org48b596c}
+\label{sec:org68697ad}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R, entonces
@@ -1940,7 +1940,7 @@ sub_eq_add_neg a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_igual\_suma\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a - a = 0}
-\label{sec:orge9b9232}
+\label{sec:orgb49afaa}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -1985,7 +1985,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_consigo\_mismo.lean}{Lean 4 Web}.
 
 \section{En los anillos, 1 + 1 = 2}
-\label{sec:org7e2966f}
+\label{sec:org6a9bfe4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los anillos,
@@ -2023,7 +2023,7 @@ one_add_one_eq_two
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uno\_mas\_uno\_es\_dos.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 2a = a+a}
-\label{sec:orgcd6f988}
+\label{sec:org7f655a7}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2069,10 +2069,10 @@ by exact two_mul a
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los grupos}
-\label{sec:org9e7ffd7}
+\label{sec:orge526575}
 
 \section{Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1}
-\label{sec:orgafb53b5}
+\label{sec:org322e1dc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean4, se declara que G es un grupo mediante la expresión
@@ -2152,7 +2152,7 @@ by exact mul_inv_self a
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
 
 \section{Si G es un grupo y a ∈ G, entonces a·1 = a}
-\label{sec:org0c5bb35}
+\label{sec:orgf0e77b2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si G es un grupo y a ∈ G, entonces
@@ -2213,7 +2213,7 @@ by exact mul_one a
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_uno.lean}{Lean 4 Web}.
 
 \section{Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b}
-\label{sec:orgc879878}
+\label{sec:orgf492486}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si G es un grupo y a, b ∈ G, tales que
@@ -2289,7 +2289,7 @@ by exact inv_eq_of_mul_eq_one_right h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_inverso.lean}{Lean 4 Web}.
 
 \section{Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹}
-\label{sec:org7edf3b5}
+\label{sec:orgb5d21d0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si G es un grupo y a, b ∈ G, entonces
@@ -2378,10 +2378,10 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso\_del\_producto.lean}{Lean 4 Web}.
 
 \chapter{Propiedades de orden en los números reales}
-\label{sec:org5fc16fe}
+\label{sec:orgd07d53b}
 
 \section{En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e}
-\label{sec:org535bcbe}
+\label{sec:org250c113}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d y e son números reales tales que
@@ -2516,7 +2516,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cadena\_de\_desigualdades.lean}{Lean 4 Web}.
 
 \section{En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b}
-\label{sec:org55ca60e}
+\label{sec:orgcb3d6cb}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -2568,7 +2568,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones.lean}{Lean 4 Web}.
 
 \section{En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ}
-\label{sec:orgb5dc387}
+\label{sec:orgaf918f9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a, b, y d números reales. Demostrar  que si
@@ -2631,8 +2631,409 @@ example
   (h2 : b ≤ d)
   : 2 + a + exp b ≤ 3 * a + exp d :=
 by linarith [exp_le_exp.mpr h2]
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales.lean}{Lean 4 Web}.
+
+\section{En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f}
+\label{sec:orga0c1bef}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, b, c, d y f son números reales tales que
+--    a ≤ b
+--    c < d
+-- entonces
+--    a + eᶜ + f ≤ b + eᵈ + f
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- Aplicando a la hipótesis 3 (c < d) la monotonía de la exponencial, se
+-- tiene
+--    e^c < e^d
+-- que, junto a la hipótesis 1 (a ≤ b) y la monotonía de la suma da
+--    a + e^c < b + e^d
+-- y, de nuevo por la monotonía de la suma, se tiene
+--    a + e^c + f < b + e^d + f
+
+-- 2ª demostración en LN
+-- =====================
+
+-- Tenemos que demostrar que
+--    (a + e^c) + f < (b + e^d) + f
+-- que, por la monotonía de la suma, se reduce a las siguientes dos
+-- desigualdades:
+--    a + e^c < b + e^d                                               (1)
+--    f ≤ f                                                           (2)
+--
+-- La (1), de nuevo por la monotonía de la suma, se reduce a las
+-- siguientes dos:
+--    a ≤ b                                                         (1.1)
+--    e^c < e^d                                                     (1.2)
+--
+-- La (1.1) se tiene por la hipótesis 1.
+--
+-- La (1.2) se tiene aplicando la monotonía de la exponencial a la
+-- hipótesis 2.
+--
+-- La (2) se tiene por la propiedad reflexiva.
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+open Real
+variable (a b c d f : ℝ)
+
+-- 1ª demostración
+example
+  (h1 : a ≤ b)
+  (h2 : c < d)
+  : a + exp c + f < b + exp d + f :=
+by
+  have h3 : exp c < exp d :=
+    exp_lt_exp.mpr h2
+  have h4 : a + exp c < b + exp d :=
+    add_lt_add_of_le_of_lt h1 h3
+  show a + exp c + f < b + exp d + f
+  exact add_lt_add_right h4 f
+
+-- 2ª demostración
+example
+  (h1 : a ≤ b)
+  (h2 : c < d)
+  : a + exp c + f < b + exp d + f :=
+by
+  apply add_lt_add_of_lt_of_le
+  { apply add_lt_add_of_le_of_lt
+    { exact h1 }
+    { apply exp_lt_exp.mpr
+      exact h2 } }
+  { apply le_refl }
+
+-- 3ª demostración
+example
+  (h1 : a ≤ b)
+  (h2 : c < d)
+  : a + exp c + f < b + exp d + f :=
+by
+  apply add_lt_add_of_lt_of_le
+  . apply add_lt_add_of_le_of_lt h1
+    apply exp_lt_exp.mpr h2
+  rfl
+
+-- Lemas usados
+-- ============
+
+-- #check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+-- #check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+-- #check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
+-- #check (exp_lt_exp : exp a < exp b ↔ a < b)
+-- #check (le_refl a : a ≤ a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales\_2.lean}{Lean 4 Web}
+
+\section{\href{./textos/Inecuaciones\_con\_exponenciales\_3.md}{En ℝ, si d ≤ f, entonces c + e\^{}(a + d) ≤ c + e\^{}(a + f)}}
+\label{sec:orge62ad81}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a, c, d y f son números reales tales que
+--    d ≤ f
+-- entonces
+--    c + exp (a + d) ≤ c + exp (a + f)
+-- ----------------------------------------------------------------------
+
+-- Demostraciones en lenguaje natural (LN)
+-- =======================================
+
+-- 1ª demostración en LN
+-- =====================
+
+-- De la hipótesis, por la monotonia de la suma, se tiene
+--    a + d ≤ a + f
+-- que, por la monotonía de la exponencial, da
+--    exp (a + d) ≤ exp (a + f)
+-- y, por la monotonía de la suma, se tiene
+--    c + exp (a + d) ≤ c + exp (a + f)
+
+-- 2ª demostración en LN
+-- =====================
+
+-- Tenemos que demostrar que
+--    c + exp (a + d) ≤ c + exp (a + f)
+-- Por la monotonía de la suma, se reduce a
+--    exp (a + d) ≤ exp (a + f)
+-- que, por la monotonía de la exponencial, se reduce a
+--    a + d ≤ a + f
+-- que, por la monotonía de la suma, se reduce a
+--    d ≤ f
+-- que es la hipótesis.
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+open Real
+variable (a c d f : ℝ)
+
+-- 1ª demostración
+example
+  (h : d ≤ f)
+  : c + exp (a + d) ≤ c + exp (a + f) :=
+by
+  have h1 : a + d ≤ a + f :=
+    add_le_add_left h a
+  have h2 : exp (a + d) ≤ exp (a + f) :=
+    exp_le_exp.mpr h1
+  show c + exp (a + d) ≤ c + exp (a + f)
+  exact add_le_add_left h2 c
+
+-- 2ª demostración
+example
+  (h : d ≤ f)
+  : c + exp (a + d) ≤ c + exp (a + f) :=
+by
+  apply add_le_add_left
+  apply exp_le_exp.mpr
+  apply add_le_add_left
+  exact h
+
+-- Lemas usados
+-- ============
+
+-- variable (b : ℝ)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales\_3.lean}{Lean 4 Web}
+
+
+\section{\href{./textos/Desigualdad\_logaritmica.md}{En ℝ, si a ≤ b, entonces log(1+e\^{}a) ≤ log(1+e\^{}b)}}
+\label{sec:org1d9a8e7}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si a y b son números reales tales que
+--    a ≤ b
+-- entonces
+--    log(1+e^a) ≤ log(1+e^b)
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la monotonía del logaritmo, basta demostrar que
+--    0 < 1 + e^a                 (1)
+--    1 + e^a ≤ 1 + e^b           (2)
+--
+-- La (1), por la suma de positivos, se reduce a
+--    0 < 1                       (1.1)
+--    0 < e^a                     (1.2)
+-- La (1.1) es una propiedad de los números naturales y la (1.2) de la
+-- función exponencial.
+--
+-- La (2), por la monotonía de la suma, se reduce a
+--    e^a ≤ e^b
+-- que, por la monotonía de la exponencial, se reduce a
+--    a ≤ b
+-- que es la hipótesis.
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+open Real
+variable (a b : ℝ)
+
+-- 1ª demostración
+example
+  (h : a ≤ b)
+  : log (1 + exp a) ≤ log (1 + exp b) :=
+by
+  have h1 : (0 : ℝ) < 1 :=
+    zero_lt_one
+  have h2 : 0 < exp a :=
+    exp_pos a
+  have h3 : 0 < 1 + exp a :=
+    add_pos h1 h2
+  have h4 : exp a ≤ exp b :=
+    exp_le_exp.mpr h
+  have h5 : 1 + exp a ≤ 1 + exp b :=
+    add_le_add_left h4 1
+  show log (1 + exp a) ≤ log (1 + exp b)
+  exact log_le_log' h3 h5
+
+-- 2ª demostraciṕn
+example
+  (h : a ≤ b)
+  : log (1 + exp a) ≤ log (1 + exp b) :=
+by
+  apply log_le_log'
+  { apply add_pos
+    { exact zero_lt_one }
+    { exact exp_pos a }}
+  { apply add_le_add_left
+    exact exp_le_exp.mpr h }
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+-- #check (add_pos : 0 < a → 0 < b → 0 < a + b)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+-- #check (exp_pos a : 0 < exp a)
+-- #check (log_le_log' : 0 < a → a ≤ b → log a ≤ log b)
+-- #check (zero_lt_one : 0 < 1)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
+
+
+\section{\href{./textos/Inecuaciones\_con\_exponenciales\_4.md}{En ℝ, si a ≤ b, entonces c - e\^{}b ≤ c - e\^{}a}}
+\label{sec:orgbc41866}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Sean a, b y c números reales. Demostrar que si
+--    a ≤ b
+-- entonces
+--    c - e^b ≤ c - e^a
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Aplicando la monotonía de la exponencial a la hipótesis, se tiene
+--    e^a ≤ e^b
+-- y, restando de c, se invierte la desigualdad
+--    c - e^b ≤ c - e^a
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+
+open Real
+
+variable (a b c : ℝ)
+
+-- 1ª demostración
+example
+  (h : a ≤ b)
+  : c - exp b ≤ c - exp a :=
+by
+   have h1 : exp a ≤ exp b :=
+     exp_le_exp.mpr h
+   show c - exp b ≤ c - exp a
+   exact sub_le_sub_left h1 c
+
+-- 2ª demostración
+example
+  (h : a ≤ b)
+  : c - exp b ≤ c - exp a :=
+by
+   apply sub_le_sub_left _ c
+   apply exp_le_exp.mpr h
+
+-- 3ª demostración
+example
+  (h : a ≤ b)
+  : c - exp b ≤ c - exp a :=
+sub_le_sub_left (exp_le_exp.mpr h) c
+
+-- 4ª demostración
+example
+  (h : a ≤ b)
+  : c - exp b ≤ c - exp a :=
+by linarith [exp_le_exp.mpr h]
+
+-- Lemas usados
+-- ============
+
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+-- #check (sub_le_sub_left : a ≤ b → ∀ (c : ℝ), c - b ≤ c - a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
+
+
+\section{\href{./textos/Doble\_me\_suma\_cuadrados.md}{En ℝ, 2ab ≤ a² + b²}}
+\label{sec:org0387de2}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Sean a y b números reales. Demostrar que
+--    2ab ≤ a² + b²
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Puesto que los cuadrados son positivos, se tiene
+--    (a - b)² ≥ 0
+-- Desarrollando el cuadrado, se obtiene
+--    a² - 2ab + b² ≥ 0
+-- Sumando 2ab a ambos lados, queda
+--    a² + b² ≥ 2ab
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Data.Real.Basic
+
+variable (a b : ℝ)
+
+-- 1ª demostración
+example : 2*a*b ≤ a^2 + b^2 :=
+by
+  have h1 : 0 ≤ (a - b)^2         := sq_nonneg (a - b)
+  have h2 : 0 ≤ a^2 - 2*a*b + b^2 := by linarith only [h1]
+  show 2*a*b ≤ a^2 + b^2
+  linarith
+
+-- 2ª demostración
+example : 2*a*b ≤ a^2 + b^2 :=
+by
+  have h : 0 ≤ a^2 - 2*a*b + b^2
+  { calc a^2 - 2*a*b + b^2
+         = (a - b)^2                 := (sub_sq a b).symm
+       _ ≥ 0                         := sq_nonneg (a - b) }
+  calc 2*a*b
+       = 2*a*b + 0                   := (add_zero (2*a*b)).symm
+     _ ≤ 2*a*b + (a^2 - 2*a*b + b^2) := add_le_add (le_refl _) h
+     _ = a^2 + b^2                   := by ring
+
+-- 3ª demostración
+example : 2*a*b ≤ a^2 + b^2 :=
+by
+  have h : 0 ≤ a^2 - 2*a*b + b^2
+  { calc a^2 - 2*a*b + b^2
+         = (a - b)^2       := (sub_sq a b).symm
+       _ ≥ 0               := sq_nonneg (a - b) }
+  linarith only [h]
+
+-- 4ª demostración
+example : 2*a*b ≤ a^2 + b^2 :=
+-- by apply?
+two_mul_le_add_sq a b
+
+-- Lemas usados
+-- ============
+
+-- variable (c : ℝ)
+-- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+-- #check (add_zero a : a + 0 = a)
+-- #check (sq_nonneg a : 0 ≤ a ^ 2)
+-- #check (sub_sq a b : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2)
+-- #check (two_mul_le_add_sq a b : 2 * a * b ≤ a ^ 2 + b ^ 2)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
 
 \input Calculemus2_bibliografia
 
@@ -2641,22 +3042,82 @@ Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.d
 \begin{verbatim}
 import Mathlib.Algebra.Ring.Defs
 import Mathlib.Algebra.Group.Defs
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
+import Mathlib.Order.Lattice
+
+-- Números naturales
+-- =================
+
+section naturales
+variable (x y z k m n : ℕ)
+#check (_root_.dvd_antisymm : m ∣ n → n ∣ m → m = n)
+#check (dvd_add : x ∣ y → x ∣ z → x ∣ y + z)
+#check (dvd_gcd : k ∣ m → k ∣ n → k ∣ gcd m n)
+#check (dvd_mul_left x y : x ∣ y * x)
+#check (dvd_mul_of_dvd_left : x ∣ y → ∀ (c : ℕ), x ∣ y * c)
+#check (dvd_mul_of_dvd_right : x ∣ y → ∀ (c : ℕ), x ∣ c * y)
+#check (dvd_mul_right x y : x ∣ x * y)
+#check (dvd_trans : x ∣ y → y ∣ z → x ∣ z)
+#check (gcd_comm m n : gcd m n = gcd n m)
+#check (gcd_dvd_left  m n: gcd m n ∣ m)
+#check (gcd_dvd_right m n : gcd m n ∣ n)
+end naturales
 
 -- Números reales
 -- ==============
 
 section reales
-variable (a b c : ℝ)
+open Real
+variable (a b c d : ℝ)
+#check (abs_add a b : |a + b| ≤ |a| + |b|)
+#check (abs_le' : |a| ≤ b ↔ a ≤ b ∧ -a ≤ b)
+#check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
+#check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+#check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+#check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+#check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+#check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+#check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
+#check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
+#check (add_pos : 0 < a → 0 < b → 0 < a + b)
+#check (add_sub_cancel a b : a + b - b = a)
+#check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+#check (exp_lt_exp : exp a < exp b ↔ a < b)
+#check (exp_pos a : 0 < exp a)
+#check (le_antisymm : a ≤ b → b ≤ a → a = b)
+#check (le_div_iff : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
+#check (le_max_left a b : a ≤ max a b)
+#check (le_max_right a b : b ≤ max a b)
+#check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+#check (le_refl a : a ≤ a)
+#check (log_le_log' : 0 < a → a ≤ b → log a ≤ log b)
 #check (lt_of_lt_of_le : a < b → b ≤ c → a < c)
 #check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
 #check (lt_trans : a < b → b < c → a < c)
+#check (max_comm a b : max a b = max b a)
+#check (max_le : a ≤ c → b ≤ c → max a b ≤ c)
+#check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
+#check (min_assoc a b c : min (min a b) c = min a (min b c))
+#check (min_comm a b : min a b = min b a)
+#check (min_eq_left : a ≤ b → min a b = a)
+#check (min_eq_right : b ≤ a → min a b = b)
+#check (min_le_left a b : min a b ≤ a)
+#check (min_le_right a b : min a b ≤ b)
 #check (mul_comm a b : a * b = b * a)
 #check (mul_neg a b : a * -b = -(a * b))
 #check (mul_sub a b c : a * (b - c) = a * b - a * c)
 #check (neg_add_self a : -a + a = 0)
 #check (pow_two a : a ^ 2 = a * a)
+#check (pow_two_nonneg a : 0 ≤ a ^ 2)
+#check (sq_nonneg a : 0 ≤ a ^ 2)
+#check (sub_add_cancel a b : a - b + b = a)
+#check (sub_le_sub_left : a ≤ b → ∀ (c : ℝ), c - b ≤ c - a)
+#check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)
+#check (sub_sq a b : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2)
 #check (two_mul a : 2 * a = a + a)
+#check (two_mul_le_add_sq a b : 2 * a * b ≤ a ^ 2 + b ^ 2)
+#check (zero_lt_one : 0 < 1)
 end reales
 
 -- Anillos
@@ -2707,6 +3168,27 @@ variable (a b c : G)
 #check (mul_right_inv a : a * a⁻¹ = 1)
 #check (one_mul a : 1 * a = a)
 end grupos
+
+-- Retículos
+-- =========
+
+section reticulos
+variable {α : Type _} [Lattice α]
+variable (x y z : α)
+#check (inf_assoc : (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z))
+#check (inf_comm : x ⊓ y = y ⊓ x)
+#check (inf_le_left : x ⊓ y ≤ x)
+#check (inf_le_of_left_le : x ≤ z → x ⊓ y ≤ z)
+#check (inf_le_of_right_le : y ≤ z → x ⊓ y ≤ z)
+#check (inf_le_right : x ⊓ y ≤ y)
+#check (le_antisymm : x ≤ y → y ≤ x → x = y)
+#check (le_inf : z ≤ x → z ≤ y → z ≤ x ⊓ y)
+#check (le_sup_left : x ≤ x ⊔ y)
+#check (le_sup_right : y ≤ x ⊔ y)
+#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+#check (sup_comm : x ⊔ y = y ⊔ x)
+#check (sup_le : x ≤ z → y ≤ z → x ⊔ y ≤ z)
+end reticulos
 \end{verbatim}
 
 \end{document}
