@@ -138,24 +138,6 @@ by
     . apply le_inf inf_le_left (inf_le_of_right_le inf_le_left)
     . apply inf_le_of_right_le inf_le_right
 
--- Su desarrollo es
---
--- ⊢ x ⊓ y ⊓ z = x ⊓ (y ⊓ z)
---    apply le_antisymm
--- ⊢ x ⊓ y ⊓ z ≤ x ⊓ (y ⊓ z)
--- |   { apply le_inf
--- | ⊢ x ⊓ y ⊓ z ≤ x
--- | |     { apply inf_le_left_of_le inf_le_left }
--- | ⊢ x ⊓ y ⊓ z ≤ y ⊓ z
--- | |     { apply le_inf (inf_le_left_of_le inf_le_right) inf_le_right}}
--- ⊢ x ⊓ (y ⊓ z) ≤ x ⊓ y ⊓ z
--- |   {apply le_inf
--- | ⊢ x ⊓ (y ⊓ z) ≤ x ⊓ y
--- | |     { apply le_inf inf_le_left (inf_le_right_of_le inf_le_left)}
--- | ⊢ x ⊓ (y ⊓ z) ≤ z
---      { apply inf_le_right_of_le inf_le_right }}
--- no goals
-
 -- 4ª demostración
 -- ===============
 

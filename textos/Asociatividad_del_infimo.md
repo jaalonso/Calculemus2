@@ -21,21 +21,21 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-En la demostración se usarán los siguientes lemas
-\begin{itemize}
- \item \veb|le_antisymm| : \(x ≤ y → y ≤ x → x = y\)
- \item \veb|le_inf| : \(z ≤ x → z ≤ y → z ≤ x ⊓ y\)
- \item \veb|inf_le_left| : \(x ⊓ y ≤ x\)
- \item \veb|inf_le_right| : \(x ⊓ y ≤ y\)
-\end{itemize}
+En la demostración se usarán los siguientes lemas:
+\begin{align}
+   &x ≤ y → y ≤ x → x = y     \tag{L1} \\
+   &z ≤ x → z ≤ y → z ≤ x ⊓ y \tag{L2} \\
+   &x ⊓ y ≤ x                 \tag{L3} \\
+   &x ⊓ y ≤ y                 \tag{L4}
+\end{align}
 
-Por \verb|le_antisym|, es suficiente demostrar las siguientes relaciones:
+Por L1, es suficiente demostrar las siguientes relaciones:
 \begin{align}
    (x ⊓ y) ⊓ z &≤ x ⊓ (y ⊓ z)   \tag{1} \\
    x ⊓ (y ⊓ z) &≤ (x ⊓ y) ⊓ z   \tag{2}
 \end{align}
 
-Para demostrar (1), por \verb|le_inf|, basta probar que
+Para demostrar (1), por L2, basta probar que
 \begin{align}
    (x ⊓ y) ⊓ z ≤ x      \tag{1a} \\
    (x ⊓ y) ⊓ z ≤ y ⊓ z  \tag{1b}
@@ -43,11 +43,11 @@ Para demostrar (1), por \verb|le_inf|, basta probar que
 
 La (1a) se demuestra por la siguiente cadena de desigualdades
 \begin{align}
-   (x ⊓ y) ⊓ z &≤ x ⊓ y   &&\text{[por \verb|inf_le_left|]} \\
-               &≤ x       &&\text{[por \verb|inf_le_left|]
+   (x ⊓ y) ⊓ z &≤ x ⊓ y   &&\text{[por L3]} \\
+               &≤ x       &&\text{[por L3]}
 \end{align}
 
-Para demostrar (1b), por \verb|le_inf|, basta probar que
+Para demostrar (1b), por L2, basta probar que
 \begin{align}
    (x ⊓ y) ⊓ z &≤ y \tag{1b1} \\
    (x ⊓ y) ⊓ z &≤ z \tag{1b2}
@@ -55,36 +55,36 @@ Para demostrar (1b), por \verb|le_inf|, basta probar que
 
 La (1b1) se demuestra por la siguiente cadena de desigualdades
 \begin{align}
-   (x ⊓ y) ⊓ z &≤ x ⊓ y   &&\text{[por \verb|inf_le_left|]} \\
-               &≤ y       &&\text{[por \verb|inf_le_right|]}
+   (x ⊓ y) ⊓ z &≤ x ⊓ y   &&\text{[por L3]} \\
+               &≤ y       &&\text{[por L4]}
 \end{align}
 
-La (1b2) se tiene por \verb|inf_le_right|.
+La (1b2) se tiene por L4.
 
-Para demostrar (2), por \verb|le_inf|, basta probar que
+Para demostrar (2), por L2, basta probar que
 \begin{align}
    x ⊓ (y ⊓ z) &≤ x ⊓ y \tag{2a} \\
    x ⊓ (y ⊓ z) &≤ z     \tag{2b}
 \end{align}
 
-Para demostrar (2a), por \verb|le_inf|, basta probar que
+Para demostrar (2a), por L2, basta probar que
 \begin{align}
    x ⊓ (y ⊓ z) &≤ x \tag{2a1} \\
    x ⊓ (y ⊓ z) &≤ y \tag{2a2}
 \end{align}
 
-La (2a1) se tiene por \verb|inf_le_left|.
+La (2a1) se tiene por L3.
 
 La (2a2) se demuestra por la siguiente cadena de desigualdades
 \begin{align}
-   x ⊓ (y ⊓ z) &≤ y ⊓ z   &&\text{[por \verb|inf_le_right|]} \\
-               &≤ y       &&\text{[por \verb|inf_le_left|]}
+   x ⊓ (y ⊓ z) &≤ y ⊓ z   &&\text{[por L4]} \\
+               &≤ y       &&\text{[por L3]}
 \end{align}
 
 La (2b) se demuestra por la siguiente cadena de desigualdades
 \begin{align}
-   x ⊓ (y ⊓ z) &≤ y ⊓ z   &&\text{[por \verb|inf_le_right|]} \\
-               &≤ z       &&\text{[por \verb|inf_le_right|]}
+   x ⊓ (y ⊓ z) &≤ y ⊓ z   &&\text{[por L4]} \\
+               &≤ z       &&\text{[por L4]}
 \end{align}
 
 <b>Demostraciones con Lean4</b>
@@ -166,24 +166,6 @@ by
   . apply le_inf
     . apply le_inf inf_le_left (inf_le_of_right_le inf_le_left)
     . apply inf_le_of_right_le inf_le_right
-
--- Su desarrollo es
---
--- ⊢ x ⊓ y ⊓ z = x ⊓ (y ⊓ z)
---    apply le_antisymm
--- ⊢ x ⊓ y ⊓ z ≤ x ⊓ (y ⊓ z)
--- |   { apply le_inf
--- | ⊢ x ⊓ y ⊓ z ≤ x
--- | |     { apply inf_le_left_of_le inf_le_left }
--- | ⊢ x ⊓ y ⊓ z ≤ y ⊓ z
--- | |     { apply le_inf (inf_le_left_of_le inf_le_right) inf_le_right}}
--- ⊢ x ⊓ (y ⊓ z) ≤ x ⊓ y ⊓ z
--- |   {apply le_inf
--- | ⊢ x ⊓ (y ⊓ z) ≤ x ⊓ y
--- | |     { apply le_inf inf_le_left (inf_le_right_of_le inf_le_left)}
--- | ⊢ x ⊓ (y ⊓ z) ≤ z
---      { apply inf_le_right_of_le inf_le_right }}
--- no goals
 
 -- 4ª demostración
 -- ===============
