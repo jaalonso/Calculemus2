@@ -67,3 +67,4 @@ usaba Lean3 en lugar de Lean4.
 + L18 [[./textos/Conmutatividad_del_supremo.md][En los retículos, x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean4]]).
 + M19 [[./textos/Asociatividad_del_infimo.md][En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean4]]).
 + X20 [[./textos/Asociatividad_del_supremo.md][En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean4]]).
++ J21 [[./textos/Leyes_de_absorcion_1.md][En los retículos, x ⊓ (x ⊔ y) = x]] (En [[./src/Leyes_de_absorcion_1.lean][Lean4]]).

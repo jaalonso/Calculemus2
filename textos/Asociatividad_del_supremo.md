@@ -24,69 +24,69 @@ by sorry
 [mathjax]
 En la demostración se usarán los siguientes lemas
 \begin{align}
-   &x ≤ y → y ≤ x → x = y     \tag{L1} \\
-   &x ≤ x ⊔ y                 \tag{L2} \\
-   &y ≤ x ⊔ y                 \tag{L3} \\
-   &x ≤ z → y ≤ z → x ⊔ y ≤ z \tag{L4} \\
+   &x ≤ y → y ≤ x → x = y     \tag{L1} \label{L1} \\
+   &x ≤ x ⊔ y                 \tag{L2} \label{L2} \\
+   &y ≤ x ⊔ y                 \tag{L3} \label{L3} \\
+   &x ≤ z → y ≤ z → x ⊔ y ≤ z \tag{L4} \label{L4} \\
 \end{align}
 
-Por L1, basta demostrar las siguientes relaciones:
+Por \ref{L1}, basta demostrar las siguientes relaciones:
 \begin{align}
-   (x ⊔ y) ⊔ z \tag{L} \\≤ x ⊔ (y ⊔ z)  \tag{1} \\
-   x ⊔ (y ⊔ z) \tag{L} \\≤ (x ⊔ y) ⊔ z  \tag{2}
+   (x ⊔ y) ⊔ z &≤ x ⊔ (y ⊔ z)  \tag{1} \label{1} \\
+   x ⊔ (y ⊔ z) &≤ (x ⊔ y) ⊔ z  \tag{2} \label{2}
 \end{align}
 
-Para demostrar (1), por L4, basta probar
+Para demostrar (\ref{1}), por \ref{L4}, basta probar
 \begin{align}
-   x ⊔ y &≤ x ⊔ (y ⊔ z) \tag{1a} \\
-       z &≤ x ⊔ (y ⊔ z) \tag{1b}                                              (1b)
+   x ⊔ y &≤ x ⊔ (y ⊔ z) \tag{1a} \label{1a} \\
+       z &≤ x ⊔ (y ⊔ z) \tag{1b} \label{1b}
 \end{align}
 
-Para demostrar (1a), por L4, basta probar
+Para demostrar (\ref{1a}), por \ref{L4}, basta probar
 \begin{align}
-   x &≤ x ⊔ (y ⊔ z) \tag{1a1} \\
-   y &≤ x ⊔ (y ⊔ z) \tag{1a2}
+   x &≤ x ⊔ (y ⊔ z) \tag{1a1} \label{1a1} \\
+   y &≤ x ⊔ (y ⊔ z) \tag{1a2} \label{1a2}
 \end{align}
 
-La (1a1) se tiene por L2.
+La (\ref{1a1}) se tiene por \ref{L2}.
 
-La (1a2) se tiene por la siguiente cadena de desigualdades:
+La (\ref{1a2}) se tiene por la siguiente cadena de desigualdades:
 \begin{align}
-   y &≤ y ⊔ z          &&\text{[por L2]} \\
-     &≤ x ⊔ (y ⊔ z)    &&\text{[por L3]}
+   y &≤ y ⊔ z          &&\text{[por \ref{L2}]} \\
+     &≤ x ⊔ (y ⊔ z)    &&\text{[por \ref{L3}]}
 \end{align}
 
-La (1b) se tiene por la siguiente cadena de desigualdades
+La (\ref{1b}) se tiene por la siguiente cadena de desigualdades
 \begin{align}
-   z &≤ y ⊔ z          &&\text{[por L3]} \\
-     &≤ x ⊔ (y ⊔ z)    &&\text{[por L3]}
+   z &≤ y ⊔ z          &&\text{[por \ref{L3}]} \\
+     &≤ x ⊔ (y ⊔ z)    &&\text{[por \ref{L3}]}
 \end{align}
 
-Para demostrar (2), por L4, basta probar
+Para demostrar (\ref{2}), por \ref{L4}, basta probar
 \begin{align}
-       x &≤ (x ⊔ y) ⊔ z  \tag{2a} \\
-   y ⊔ z &≤ (x ⊔ y) ⊔ z  \tag{2b}
+       x &≤ (x ⊔ y) ⊔ z  \tag{2a} \label{2a} \\
+   y ⊔ z &≤ (x ⊔ y) ⊔ z  \tag{2b} \label{2b}
 \end{align}
 
-La (2a) se demuestra por la siguiente cadena de desigualdades:
+La (\ref{2a}) se demuestra por la siguiente cadena de desigualdades:
 \begin{align}
-   x &≤ x ⊔ y          &&\text{[por L2]} \\
-     &≤ (x ⊔ y) ⊔ z    &&\text{[por L2]}
+   x &≤ x ⊔ y          &&\text{[por \ref{L2}]} \\
+     &≤ (x ⊔ y) ⊔ z    &&\text{[por \ref{L2}]}
 \end{align}
 
-Para demostrar (2b), por L4, basta probar
+Para demostrar (\ref{2b}), por \ref{L4}, basta probar
 \begin{align}
-   y &≤ (x ⊔ y) ⊔ z \tag{2b1} \\
-   z &≤ (x ⊔ y) ⊔ z \tag{2b2}
+   y &≤ (x ⊔ y) ⊔ z \tag{2b1} \label{2b1} \\
+   z &≤ (x ⊔ y) ⊔ z \tag{2b2} \label{2b2}
 \end{align}
 
-La (2b1) se demuestra por la siguiente cadena de desigualdades:
+La (\ref{2b1}) se demuestra por la siguiente cadena de desigualdades:
 \begin{align}
-   y &≤ x ⊔ y          &&\text{[por L3]} \\
-     &≤ (x ⊔ y) ⊔ z    &&\text{[por L2]}
+   y &≤ x ⊔ y          &&\text{[por \ref{L3}]} \\
+     &≤ (x ⊔ y) ⊔ z    &&\text{[por \ref{L2}]}
 \end{align}
 
-La (2b2) se tiene por L3.
+La (\ref{2b2}) se tiene por \ref{L3}.
 
 <b>Demostraciones con Lean4</b>
 
