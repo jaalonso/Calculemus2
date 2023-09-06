@@ -28,6 +28,7 @@ En la demostración se usarán los siguientes lemas
    &z ≤ x → z ≤ y → z ≤ x ⊓ y  \tag{L3} \\
    &x ≤ x                      \tag{L4} \\
    &x ≤ x ⊔ y                  \tag{L5} \\
+\end{align}
 
 Por L1, basta demostrar las siguientes relaciones:
 \begin{align}
