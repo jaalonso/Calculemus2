@@ -71,3 +71,4 @@ usaba Lean3 en lugar de Lean4.
 + V22 [[./textos/Leyes_de_absorcion_2.md][En los retículos, x ⊔ (x ⊓ y) = x]] (En [[./src/Leyes_de_absorcion_2.lean][Lean4]]).
 + L25 [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
 + M26 [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
++ X27 [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).

@@ -4,9 +4,9 @@ Autor:  José A. Alonso
 ---
 
 Demostrar con Lean4 que si \(R\) es un retículo tal que
-\[   (∀ x,\ y, z \in α) x ⊔ (y ⊓ z) = (x ⊔ y) ⊓ (x ⊔ z) \]
+\[   (∀ x,\ y,\ z \in α) [x ⊔ (y ⊓ z) = (x ⊔ y) ⊓ (x ⊔ z)] \]
 entonces
-   (a ⊓ b) ⊔ c = (a ⊔ c) ⊓ (b ⊔ c)
+\[   (a ⊓ b) ⊔ c = (a ⊔ c) ⊓ (b ⊔ c) \]
 para todos los elementos del retículo.
 
 Para ello, completar la siguiente teoría de Lean4:

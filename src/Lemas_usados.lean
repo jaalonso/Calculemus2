@@ -4,8 +4,9 @@
 -- Sevilla, 25-agosto-2023
 -- ---------------------------------------------------------------------
 
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Order.Ring.Defs        -- 1
 import Mathlib.Algebra.Ring.Defs
-import Mathlib.Algebra.Group.Defs
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Order.Lattice
@@ -110,7 +111,9 @@ variable (a b c : R)
 #check (neg_neg a : -(-a) = a)
 #check (neg_zero : -0 = 0)
 #check (one_add_one_eq_two : (1 : R) + 1 = 2)
+#check (sub_add_cancel a b : a - b + b = a)
 #check (sub_eq_add_neg a b : a - b = a + -b)
+#check (sub_mul a b c : (a - b) * c = a * c - b * c)
 #check (sub_self a : a - a = 0)
 #check (two_mul a : 2 * a = a + a)
 #check (zero_add a : 0 + a = a)
@@ -159,3 +162,16 @@ variable (x y z : α)
 #check (sup_inf_self : x ⊔ (x ⊓ y) = x)
 #check (sup_le : x ≤ z → y ≤ z → x ⊔ y ≤ z)
 end reticulos
+
+-- AnillosOrdenados
+-- ================
+
+section AnillosOrdenados
+variable {R : Type _} [StrictOrderedRing R]
+variable (a b c : R)
+#check (add_le_add_right : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
+#check (mul_le_mul_of_nonneg_right : a ≤ b → 0 ≤ c → a * c ≤ b * c)
+#check (mul_nonneg : 0 ≤ a → 0 ≤ b → 0 ≤ a * b)
+#check (sub_le_sub_right : a ≤ b → ∀ (c : R), a - c ≤ b - c)
+#check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)
+end AnillosOrdenados
