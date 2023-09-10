@@ -42,23 +42,25 @@ usaba Lean3 en lugar de Lean4.
 * Propiedades elementales de los grupos
 + [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
 + [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
++ [[./textos/CS_de_inverso.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
++ [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
+
+* Propiedades de orden en los números reales
++ [[./textos/Cadena_de_desigualdades.md][En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
++ [[./textos/Inecuaciones.md][En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
++ [[./textos/Inecuaciones_con_exponenciales.md][En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
++ [[./textos/Inecuaciones_con_exponenciales_2.md][En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
++ [[./textos/Inecuaciones_con_exponenciales_3.md][En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]] (En [[./src/Inecuaciones_con_exponenciales_3.lean][Lean4]]).
++ [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
++ [[./textos/Inecuaciones_con_exponenciales_4.md][En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]] (En [[./src/Inecuaciones_con_exponenciales_4.lean][Lean4]]).
++ [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
++ [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
++ [[./textos/Conmutatividad_del_minimo.md][En ℝ, min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean4]]).
++ [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
++ [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
++ [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 
 * Sin ordenar
-+ Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
-+ Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
-+ En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
-+ En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
-+ En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
-+ En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
-+ En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]] (En [[./src/Inecuaciones_con_exponenciales_3.lean][Lean4]]).
-+ En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
-+ En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]] (En [[./src/Inecuaciones_con_exponenciales_4.lean][Lean4]]).
-+ En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
-+ L04 [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
-+ M05 [[./textos/Conmutatividad_del_minimo.md][En ℝ, min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean4]]).
-+ X06 [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
-+ J07 [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
-+ V08 [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 + L11 [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
 + M12 [[./textos/Divisibilidad_de_producto.md][Si x,y,z ∈ ℕ, entonces x ∣ yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
 + X13 [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
@@ -72,3 +74,4 @@ usaba Lean3 en lugar de Lean4.
 + L25 [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
 + M26 [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
 + X27 [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
++ J28 [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
