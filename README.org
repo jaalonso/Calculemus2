@@ -44,16 +44,16 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
 
 * Sin ordenar
-+ L21 [[./textos/CS_de_inverso.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
-+ M22 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
-+ X23 [[./textos/Cadena_de_desigualdades.md][En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
-+ J24 [[./textos/Inecuaciones.md][En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
-+ V25 [[./textos/Inecuaciones_con_exponenciales.md][En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
-+ L28 [[./textos/Inecuaciones_con_exponenciales_2.md][En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
-+ M29 [[./textos/Inecuaciones_con_exponenciales_3.md][En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]] (En [[./src/Inecuaciones_con_exponenciales_3.lean][Lean4]]).
-+ X30 [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
-+ J31 [[./textos/Inecuaciones_con_exponenciales_4.md][En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]] (En [[./src/Inecuaciones_con_exponenciales_4.lean][Lean4]]).
-+ V01 [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
++ Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
++ Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
++ En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
++ En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
++ En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
++ En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f]] (En [[./src/Inecuaciones_con_exponenciales_2.lean][Lean4]]).
++ En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]] (En [[./src/Inecuaciones_con_exponenciales_3.lean][Lean4]]).
++ En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]] (En [[./src/Desigualdad_logaritmica.lean][Lean4]]).
++ En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]] (En [[./src/Inecuaciones_con_exponenciales_4.lean][Lean4]]).
++ En ℝ, 2ab ≤ a² + b²]] (En [[./src/Doble_me_suma_cuadrados.lean][Lean4]]).
 + L04 [[./textos/Ejercicio_desigualdades_absolutas.md][En ℝ, |ab| ≤ (a²+b²)/2]] (En [[./src/Ejercicio_desigualdades_absolutas.lean][Lean4]]).
 + M05 [[./textos/Conmutatividad_del_minimo.md][En ℝ, min(a,b) = min(b,a)]] (En [[./src/Conmutatividad_del_minimo.lean][Lean4]]).
 + X06 [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).

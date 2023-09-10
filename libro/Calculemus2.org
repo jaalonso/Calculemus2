@@ -206,10 +206,29 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Inecuaciones_con_exponenciales_4.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
 
-
 ** [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]]
 #+INCLUDE: "../src/Doble_me_suma_cuadrados.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
+
+** En ℝ, |ab| ≤ (a²+b²)/2]
+#+INCLUDE: "../src/Ejercicio_desigualdades_absolutas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_desigualdades_absolutas.lean][Lean 4 Web]]
+
+** En ℝ, min(a,b) = min(b,a)
+#+INCLUDE: "../src/Conmutatividad_del_minimo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_minimo.lean][Lean 4 Web]]
+
+** En ℝ, max(a,b) = max(b,a)
+#+INCLUDE: "../src/Conmutatividad_del_maximo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_maximo.lean][Lean 4 Web]]
+
+** En ℝ, min(min(a,b),c) = min(a,min(b,c))
+#+INCLUDE: "../src/Asociatividad_del_minimo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad_del_minimo.lean][Lean 4 Web]]
+
+** En ℝ, min(a,b)+c = min(a+c,b+c)
+#+INCLUDE: "../src/Minimo_de_suma.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Minimo_de_suma.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 
