@@ -10,6 +10,7 @@ import Mathlib.Algebra.Ring.Defs
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Order.Lattice
+import Mathlib.Topology.MetricSpace.Basic
 
 -- Números naturales
 -- =================
@@ -72,7 +73,9 @@ variable (a b c d : ℝ)
 #check (mul_comm a b : a * b = b * a)
 #check (mul_neg a b : a * -b = -(a * b))
 #check (mul_sub a b c : a * (b - c) = a * b - a * c)
+#check (mul_two a : a * 2 = a + a)
 #check (neg_add_self a : -a + a = 0)
+#check (nonneg_of_mul_nonneg_left : 0 ≤ a * b → 0 < b → 0 ≤ a)
 #check (pow_two a : a ^ 2 = a * a)
 #check (pow_two_nonneg a : 0 ≤ a ^ 2)
 #check (sq_nonneg a : 0 ≤ a ^ 2)
@@ -83,6 +86,7 @@ variable (a b c d : ℝ)
 #check (two_mul a : 2 * a = a + a)
 #check (two_mul_le_add_sq a b : 2 * a * b ≤ a ^ 2 + b ^ 2)
 #check (zero_lt_one : 0 < 1)
+#check (zero_lt_two : 0 < 2)
 end reales
 
 -- Anillos
@@ -175,3 +179,15 @@ variable (a b c : R)
 #check (sub_le_sub_right : a ≤ b → ∀ (c : R), a - c ≤ b - c)
 #check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)
 end AnillosOrdenados
+
+-- Espacios métricos
+-- =================
+
+section EspacioMetrico
+variable {X : Type _} [MetricSpace X]
+variable (x y z : X)
+#check (dist_comm x y : dist x y = dist y x)
+#check (dist_nonneg : 0 ≤ dist x y)
+#check (dist_self x : dist x x = 0)
+#check (dist_triangle x y z : dist x z ≤ dist x y + dist y z)
+end EspacioMetrico

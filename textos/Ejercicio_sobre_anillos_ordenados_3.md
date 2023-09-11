@@ -4,7 +4,7 @@ Autor:  José A. Alonso
 ---
 
 Demostrar con Lean4 que, en los anillos ordenados,
-\[ {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc \]
+\[ \{a ≤ b, 0 ≤ c\} ⊢ ac ≤ bc \]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -41,7 +41,7 @@ De (1), por L1, se tiene
 y con (2), por L2, se tiene
 \[   0 ≤ (b - a)c \]
 que, por L3, da
-\[   0 ≤ bc - ac
+\[   0 ≤ bc - ac \]
 y, aplicándole L1, se tiene
 \[   ac ≤ bc \]
 
