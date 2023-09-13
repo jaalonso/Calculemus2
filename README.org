@@ -77,3 +77,4 @@ usaba Lean3 en lugar de Lean4.
 + J28 [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
 + V29 [[./textos/Ejercicio_sobre_anillos_ordenados_3.md][En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc]] (En [[./src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean4]]).
 + L02 [[./textos/Ejercicio_en_espacios_metricos.md][En los espacios métricos, dist(x,y) ≥ 0]] (En [[./src/Ejercicio_en_espacios_metricos.lean][Lean4]]).
++ M03 [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
