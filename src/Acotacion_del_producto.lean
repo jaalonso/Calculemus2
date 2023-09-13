@@ -1,7 +1,7 @@
 -- Acotacion_del_producto.lean
 -- En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 13-septiembre-2023
+-- Sevilla, 3-octubre-2023
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
