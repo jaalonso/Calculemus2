@@ -3,7 +3,7 @@ Título: La suma de una cota superior de f y una cota superior de g es una cota 
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(f\) y \(g\) son funciones de \(ℝ\) en \(ℝ\), entonces La suma de una cota superior de \(f\) y una cota superior de \(g\) es una cota superior de \(f+g\).
+Demostrar con Lean4 que si \(f\) y \(g\) son funciones de \(ℝ\) en \(ℝ\), entonces la suma de una cota superior de \(f\) y una cota superior de \(g\) es una cota superior de \(f+g\).
 
 Para ello, completar la siguiente teoría de Lean4:
 

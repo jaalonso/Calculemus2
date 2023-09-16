@@ -83,3 +83,4 @@ usaba Lean3 en lugar de Lean4.
 + L02 [[./textos/Ejercicio_en_espacios_metricos.md][En los espacios métricos, dist(x,y) ≥ 0]] (En [[./src/Ejercicio_en_espacios_metricos.lean][Lean4]]).
 + M03 [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
 + X04 [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean4]]).
++ J05 [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
