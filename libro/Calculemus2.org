@@ -192,21 +192,19 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Inecuaciones_con_exponenciales_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales_2.lean][Lean 4 Web]]
 
-** [[./textos/Inecuaciones_con_exponenciales_3.md][En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)]]
+** En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)
 #+INCLUDE: "../src/Inecuaciones_con_exponenciales_3.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones_con_exponenciales_3.lean][Lean 4 Web]]
 
-
-** [[./textos/Desigualdad_logaritmica.md][En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)]]
+** En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)
 #+INCLUDE: "../src/Desigualdad_logaritmica.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
 
-
-** [[./textos/Inecuaciones_con_exponenciales_4.md][En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a]]
+** En ℝ, si a ≤ b, entonces c - e^b ≤ c - e^a
 #+INCLUDE: "../src/Inecuaciones_con_exponenciales_4.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
 
-** [[./textos/Doble_me_suma_cuadrados.md][En ℝ, 2ab ≤ a² + b²]]
+** En ℝ, 2ab ≤ a² + b²
 #+INCLUDE: "../src/Doble_me_suma_cuadrados.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_logaritmica.lean][Lean 4 Web]]
 
@@ -229,6 +227,30 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** En ℝ, min(a,b)+c = min(a+c,b+c)
 #+INCLUDE: "../src/Minimo_de_suma.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Minimo_de_suma.lean][Lean 4 Web]]
+
+** En ℝ, |a| - |b| ≤ |a - b|
+#+INCLUDE: "../src/abs_sub.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/abs_sub.lean][Lean 4 Web]]
+
+* Divisibilidad
+
+** Si x,y,z ∈ ℕ, entonces x ∣ yxz
+#+INCLUDE: "../src/Divisibilidad_de_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Divisibilidad_de_producto.lean][Lean 4 Web]]
+
+** Si x divide a w, también divide a y(xz)+x²+w²
+#+INCLUDE: "../src/Ejercicio_de_divisibilidad.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_de_divisibilidad.lean][Lean 4 Web]]
+
+** Conmutatividad del máximo común divisor
+#+INCLUDE: "../src/Conmutatividad_del_gcd.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_gcd.lean][Lean 4 Web]]
+
+* Retículos
+
+** En los retículos, x ⊓ y = y ⊓ x
+#+INCLUDE: "../src/Conmutatividad_del_infimo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_infimo.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

@@ -59,13 +59,17 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Conmutatividad_del_maximo.md][En ℝ, max(a,b) = max(b,a)]] (En [[./src/Conmutatividad_del_maximo.lean][Lean4]]).
 + [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
 + [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
++ [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
+
+* Divisibilidad
++ [[./textos/Divisibilidad_de_producto.md][Si x,y,z ∈ ℕ, entonces x ∣ yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
++ [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
++ [[./textos/Conmutatividad_del_gcd.md][Conmutatividad del máximo común divisor]] (En [[./src/Conmutatividad_del_gcd.lean][Lean4]]).
+
+* Retículos
++ [[./textos/Conmutatividad_del_infimo.md][En los retículos, x ⊓ y = y ⊓ x]] (En [[./src/Conmutatividad_del_infimo.lean][Lean4]]).
 
 * Sin ordenar
-+ L11 [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
-+ M12 [[./textos/Divisibilidad_de_producto.md][Si x,y,z ∈ ℕ, entonces x ∣ yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
-+ X13 [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
-+ J14 [[./textos/Conmutatividad_del_gcd.md][Conmutatividad del máximo común divisor]] (En [[./src/Conmutatividad_del_gcd.lean][Lean4]]).
-+ V15 [[./textos/Conmutatividad_del_infimo.md][En los retículos, x ⊓ y = y ⊓ x]] (En [[./src/Conmutatividad_del_infimo.lean][Lean4]]).
 + L18 [[./textos/Conmutatividad_del_supremo.md][En los retículos, x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean4]]).
 + M19 [[./textos/Asociatividad_del_infimo.md][En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean4]]).
 + X20 [[./textos/Asociatividad_del_supremo.md][En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean4]]).
