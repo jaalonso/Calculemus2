@@ -1,7 +1,7 @@
 -- Producto_de_funciones_no_negativas.lean
 -- El producto de funciones no negativas es no negativo
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 5-octubre-2023
+-- Sevilla, 6-octubre-2023
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -16,13 +16,13 @@
 --    mul_nonneg : 0 ≤ a → 0 ≤ b → 0 ≤ a * b
 --
 -- Hay que demostrar que
---    (∀ x ∈ ℝ) [0 ≤ f(x) + g(x)]                                  (1)
+--    (∀ x ∈ ℝ) [0 ≤ f(x) * g(x)]                                      (1)
 -- Para ello, sea x ∈ R. Puesto que f es no negatica, se tiene que
 --    0 ≤ f(x)                                                         (2)
 -- y, puesto que g es no negativa, se tiene que
 --    0 ≤ g(x)                                                         (3)
 -- De (2) y (3), por mul_nonneg, se tiene que
---    0 ≤ f(x) + g(x)
+--    0 ≤ f(x) * g(x)
 -- que es lo que había que demostrar.
 
 -- Demostraciones con Lean4

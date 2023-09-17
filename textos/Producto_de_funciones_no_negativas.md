@@ -29,16 +29,16 @@ sorry
 
 [mathjax]
 Se usará el siguiente lema
-\[ 0 ≤ a → 0 ≤ b → 0 ≤ a * b \tag{L1} \]
+\[ \{0 ≤ a, 0 ≤ b\} \vdash 0 ≤ ab \tag{L1} \]
 
 Hay que demostrar que
-\[ (∀ x ∈ ℝ) [0 ≤ f(x) + g(x)] \tag{1} \]
+\[ (∀ x ∈ ℝ) [0 ≤ f(x)g(x)] \tag{1} \]
 Para ello, sea \(x ∈ R\). Puesto que \(f\) es no negatica, se tiene que
 \[ 0 ≤ f(x) \tag{2} \]
 y, puesto que \(g\) es no negativa, se tiene que
 \[ 0 ≤ g(x) \tag{3} \]
 De (2) y (3), por L1, se tiene que
-\[ 0 ≤ f(x) + g(x) \]
+\[ 0 ≤ f(x)g(x) \]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>
