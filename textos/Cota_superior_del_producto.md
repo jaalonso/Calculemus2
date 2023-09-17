@@ -3,7 +3,7 @@ Título: Si a es una cota superior no negativa de f y b es es una cota superior 
 Autor:  José A. Alonso
 ---
 
-Sean \(f\) y \(g\) funciones de \(ℝ\) en \(ℝ\). Demostrar con Lean4 que si \(a\) es una cota superior no negativa de \(f) y \(b\) es es una cota superior de la función no negativa \(g), entonces \(ab\) es una cota superior de \(fg\).
+Sean \(f\) y \(g\) funciones de \(ℝ\) en \(ℝ\). Demostrar con Lean4 que si \(a\) es una cota superior no negativa de \(f\) y \(b\) es es una cota superior de la función no negativa \(g\), entonces \(ab\) es una cota superior de \(fg\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -68,8 +68,6 @@ variable (f g : ℝ → ℝ)
 variable (a b : ℝ)
 
 -- 1ª demostración
--- ===============
-
 example
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
@@ -88,8 +86,6 @@ by
   exact h1
 
 -- 2ª demostración
--- ===============
-
 example
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
@@ -105,34 +101,7 @@ by
   . apply nng
   . apply nna
 
--- Su desarrollo es
---
--- f g : ℝ → ℝ
--- a b : ℝ
--- hfa : CotaSuperior f a
--- hfb : CotaSuperior g b
--- nng : CotaInferior g 0
--- nna : 0 ≤ a
--- ⊢ CotaSuperior (λ (x : ℝ) f x * g x) (a * b)
---    -- intro x
--- x : ℝ
--- ⊢ (λ (x : ℝ) f x * g x) x ≤ a * b
---    -- change f x * g x ≤ a * b
--- ⊢ f x * g x ≤ a * b
---    -- apply mul_le_mul
--- | ⊢ f x ≤ a
--- |    -- apply hfa
--- | g x ≤ b
--- |    -- apply hfb
--- | 0 ≤ g x
--- |    -- apply nng
--- | 0 ≤ a
--- |    -- apply nna
--- no goals
-
 -- 3ª demostración
--- ===============
-
 example
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
@@ -146,37 +115,7 @@ by
   have h3:= nng x
   exact mul_le_mul h1 h2 h3 nna
 
--- Prueba
--- ======
-
-/-
-f g : ℝ → ℝ
-a b : ℝ
-hfa : CotaSuperior f a
-hfb : CotaSuperior g b
-nng : CotaInferior g 0
-nna : 0 ≤ a
-⊢ CotaSuperior (λ (x : ℝ) f x * g x) (a * b)
-⊢ ∀ (x : ℝ) f x * g x ≤ a * b
-  >> intro x
-x : ℝ
-⊢ f x * g x ≤ a * b
-  >> have h1:= hfa x
-h1 : f x ≤ a
-⊢ f x * g x ≤ a * b
-  >> have h2:= hfb x
-h2 : g x ≤ b
-⊢ f x * g x ≤ a * b
-  >> have h3:= nng x
-h3 : 0 ≤ g x
-⊢ f x * g x ≤ a * b
-  >> exact mul_le_mul h1 h2 h3 nna
-no goals
--/
-
 -- 4ª demostración
--- ===============
-
 example
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
@@ -190,37 +129,7 @@ by
   specialize nng x
   exact mul_le_mul hfa hgb nng nna
 
--- Prueba
--- ======
-
-/-
-f g : ℝ → ℝ
-a b : ℝ
-hfa : CotaSuperior f a
-hfb : CotaSuperior g b
-nng : CotaInferior g 0
-nna : 0 ≤ a
-⊢ CotaSuperior (λ (x : ℝ) f x * g x) (a * b)
-⊢ ∀ (x : ℝ) f x * g x ≤ a * b
-  >> intro x
-x : ℝ
-⊢ f x * g x ≤ a * b
-  >> specialize hfa x
-hfa : f x ≤ a
-⊢ f x * g x ≤ a * b
-  >> specialize hfb x
-hfb : g x ≤ b
-⊢ f x * g x ≤ a * b
-  >> specialize nng x
-nng : 0 ≤ g x
-⊢ f x * g x ≤ a * b
-  >> exact mul_le_mul hfa hfb nng nna
-no goals
--/
-
 -- 5ª demostración
--- ===============
-
 example
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
