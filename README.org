@@ -86,3 +86,4 @@ usaba Lean3 en lugar de Lean4.
 + J05 [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
 + V06 [[./textos/Producto_de_funciones_no_negativas.md][El producto de funciones no negativas es no negativo]] (En [[./src/Producto_de_funciones_no_negativas.lean][Lean4]]).
 + L09 [[./textos/Cota_superior_del_producto.md][Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg]] (En [[./src/Cota_superior_del_producto.lean][Lean4]]).
++ M10 [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
