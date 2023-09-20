@@ -182,6 +182,7 @@ section AnillosOrdenados
 variable {R : Type _} [StrictOrderedRing R]
 variable (a b c : R)
 #check (add_le_add_right : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
+#check (mul_le_mul_of_nonneg_left : b ≤ c → 0 ≤ a → a * b ≤ a * c)
 #check (mul_le_mul_of_nonneg_right : a ≤ b → 0 ≤ c → a * c ≤ b * c)
 #check (mul_nonneg : 0 ≤ a → 0 ≤ b → 0 ≤ a * b)
 #check (sub_le_sub_right : a ≤ b → ∀ (c : R), a - c ≤ b - c)

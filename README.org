@@ -87,3 +87,4 @@ usaba Lean3 en lugar de Lean4.
 + V06 [[./textos/Producto_de_funciones_no_negativas.md][El producto de funciones no negativas es no negativo]] (En [[./src/Producto_de_funciones_no_negativas.lean][Lean4]]).
 + L09 [[./textos/Cota_superior_del_producto.md][Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg]] (En [[./src/Cota_superior_del_producto.lean][Lean4]]).
 + M10 [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
++ X11 [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).

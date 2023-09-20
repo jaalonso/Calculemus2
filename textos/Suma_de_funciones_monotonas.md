@@ -24,10 +24,10 @@ by sorry
 
 [mathjax]
 Se usará el siguiente lema:
-\[ a ≤ b → c ≤ d → a + c ≤ b + d \tag{L1} \]
+\[ \{a ≤ b, c ≤ d\} ⊢ a + c ≤ b + d \tag{L1} \]
 
 Supongamos que \(f\) y \(g\) son monótonas y teneno que demostrar que \(f+g\) también lo es; que
-\[ ∀ a b, a ≤ b → (f + g)(a) ≤ (f + g)(b) \]
+\[ (∀ a,\ b \in ℝ) [a ≤ b → (f + g)(a) ≤ (f + g)(b)] \]
 Sean \(a, b ∈ ℝ\) tales que
 \[ a ≤ b \tag{1} \]
 Entonces, por ser \(f\) y \(g\) monótonas se tiene
