@@ -24,13 +24,13 @@ by sorry
 
 [mathjax]
 Sean \(f\) y \(g\) dos funciones monótonas de \(ℝ\) en \(ℝ\). Tenemos que demostrar que \(f ∘ g\) es monótona; es decir, que
-\[ (∀ a, b ∈ ℝ) [a ≤ b → (f ∘ g)(a)a ≤ (f ∘ g)(b)] \]
+\[ (∀ a, b ∈ ℝ) [a ≤ b → (f ∘ g)(a) ≤ (f ∘ g)(b)] \]
 Sean \(a, b ∈ ℝ\) tales que \(a ≤ b\). Por ser \(g\) monótona, se tiene
 \[ g(a) ≤ g(b) \]
 y, por ser f monótona, se tiene
 \[ f(g(a)) ≤ f(g(b)) \]
 Finalmente, por la definición de composición,
-\[ (f ∘ g)(a)a ≤ (f ∘ g)(b) \]
+\[ (f ∘ g)(a) ≤ (f ∘ g)(b) \]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>

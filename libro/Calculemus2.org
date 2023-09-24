@@ -252,6 +252,26 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Conmutatividad_del_infimo.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_infimo.lean][Lean 4 Web]]
 
+** En los retículos, x ⊔ y = y ⊔ x
+#+INCLUDE: "../src/Conmutatividad_del_supremo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_supremo.lean][Lean 4 Web]]
+
+** En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)
+#+INCLUDE: "../src/Asociatividad_del_infimo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad_del_infimo.lean][Lean 4 Web]]
+
+** En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)
+#+INCLUDE: "../src/Asociatividad_del_supremo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad_del_supremo.lean][Lean 4 Web]]
+
+** En los retículos, x ⊓ (x ⊔ y) = x
+#+INCLUDE: "../src/Leyes_de_absorcion_1.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Leyes_de_absorcion_1.lean][Lean 4 Web]]
+
+** En los retículos, x ⊔ (x ⊓ y) = x
+#+INCLUDE: "../src/Leyes_de_absorcion_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Leyes_de_absorcion_2.lean][Lean 4 Web]]
+
 #+LATEX: \input Calculemus2_bibliografia
 
 #+LATEX: \chapter*{Lemas usados}
