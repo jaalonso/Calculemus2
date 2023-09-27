@@ -62,19 +62,19 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
 
 * Divisibilidad
-+ [[./textos/Divisibilidad_de_producto.md][Si x,y,z ∈ ℕ, entonces x ∣ yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
++ [[./textos/Divisibilidad_de_producto.md][Si x, y, z ∈ ℕ, entonces x divide a yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
 + [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
 + [[./textos/Conmutatividad_del_gcd.md][Conmutatividad del máximo común divisor]] (En [[./src/Conmutatividad_del_gcd.lean][Lean4]]).
 
 * Retículos
 + [[./textos/Conmutatividad_del_infimo.md][En los retículos, x ⊓ y = y ⊓ x]] (En [[./src/Conmutatividad_del_infimo.lean][Lean4]]).
++ [[./textos/Conmutatividad_del_supremo.md][En los retículos, x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean4]]).
++ [[./textos/Asociatividad_del_infimo.md][En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean4]]).
++ [[./textos/Asociatividad_del_supremo.md][En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean4]]).
++ [[./textos/Leyes_de_absorcion_1.md][En los retículos, x ⊓ (x ⊔ y) = x]] (En [[./src/Leyes_de_absorcion_1.lean][Lean4]]).
++ [[./textos/Leyes_de_absorcion_2.md][En los retículos, x ⊔ (x ⊓ y) = x]] (En [[./src/Leyes_de_absorcion_2.lean][Lean4]]).
 
 * Sin ordenar
-+ L18 [[./textos/Conmutatividad_del_supremo.md][En los retículos, x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean4]]).
-+ M19 [[./textos/Asociatividad_del_infimo.md][En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean4]]).
-+ X20 [[./textos/Asociatividad_del_supremo.md][En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean4]]).
-+ J21 [[./textos/Leyes_de_absorcion_1.md][En los retículos, x ⊓ (x ⊔ y) = x]] (En [[./src/Leyes_de_absorcion_1.lean][Lean4]]).
-+ V22 [[./textos/Leyes_de_absorcion_2.md][En los retículos, x ⊔ (x ⊓ y) = x]] (En [[./src/Leyes_de_absorcion_2.lean][Lean4]]).
 + L25 [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
 + M26 [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
 + X27 [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
@@ -89,3 +89,4 @@ usaba Lean3 en lugar de Lean4.
 + M10 [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
 + X11 [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + J12 [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
++ V13 [[./textos/Suma_funciones_pares.md][La suma de dos funciones pares es par]] (En [[./src/Suma_funciones_pares.lean][Lean4]]).

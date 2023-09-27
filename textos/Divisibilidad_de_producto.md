@@ -1,9 +1,11 @@
 ---
-Título: Si x,y,z ∈ ℕ, entonces x divide a yxz
+Título: Si x, y, z ∈ ℕ, entonces x divide a yxz
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(x,y,z \in \mathbb{N}\), entonces \(x \mid yxz\).
+[mathjax]
+
+Demostrar con Lean4 que si $x, y, z ∈ ℕ$, entonces $x$ divide a $yxz$.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -18,10 +20,9 @@ by sorry
 
 <b>Demostración en lenguaje natural</b>
 
-[mathjax]
 Por la transitividad de la divisibilidad aplicada a las relaciones
 \begin{align}
-    x &\mid yx \\
+    x &\mid yx \\\\
    yx &\mid yxz
 \end{align}
 
