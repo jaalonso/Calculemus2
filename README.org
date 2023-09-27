@@ -90,3 +90,4 @@ usaba Lean3 en lugar de Lean4.
 + X11 [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + J12 [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
 + V13 [[./textos/Suma_funciones_pares.md][La suma de dos funciones pares es par]] (En [[./src/Suma_funciones_pares.lean][Lean4]]).
++ L16 [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).

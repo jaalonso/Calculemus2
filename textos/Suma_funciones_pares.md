@@ -27,15 +27,15 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Supongamos que \(f\) y \(g\) son funciones pares. Tenemos que demostrar que \(f+g\) es par; es decir, que
-\[ (∀ x ∈ ℝ) (f + g)(x) = (f + g)(-x) \]
-Sea \(x ∈ ℝ\). Entonces,
-\begin{align}
-   (f + g) x &= f x + g x       \\
-             &= f (-x) + g x    &&\text{[porque \(f\) es par]} \\
-             &= f (-x) + g (-x) &&\text{[porque \(g\) es par]} \\
-             &= (f + g) (-x)
-\end{align}
+Supongamos que \\(f\\) y \\(g\\) son funciones pares. Tenemos que demostrar que \\(f+g\\) es par; es decir, que
+\\[ (∀ x ∈ ℝ) [(f + g)(x) = (f + g)(-x)] \\]
+Sea \\(x ∈ ℝ\\). Entonces,
+\\begin{align}
+   (f + g) x &= f(x) + g(x)   \\\\
+             &= f(-x) + g(x)  &&\\text{[porque \\(f\\) es par]} \\\\
+             &= f(-x) + g(-x) &&\\text{[porque \\(g\\) es par]} \\\\
+             &= (f + g)(-x)
+\\end{align}
 
 <b>Demostraciones con Lean4</b>
 
