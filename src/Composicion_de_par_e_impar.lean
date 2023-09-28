@@ -60,3 +60,14 @@ by
      _ = f (-g (-x))  := by rw [h2]
      _ = f (g (-x))   := by rw [← h1]
      _ = (f ∘ g) (-x) := rfl
+
+-- 3ª demostración
+example
+  (h1 : esPar f)
+  (h2 : esImpar g)
+  : esPar (f ∘ g) :=
+by
+  intro x
+  calc (f ∘ g) x
+       = f (g x)      := rfl
+     _ = f (g (-x))   := by rw [h2, ← h1]

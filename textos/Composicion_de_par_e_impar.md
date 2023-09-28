@@ -31,15 +31,15 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Supongamos que \(f\) es una función par y \(g\) lo es impar. Tenemos que demostrar que \(f ∘ g\) es par; es decir, que
-\[ (∀ x ∈ ℝ) (f ∘ g)(x) = (f ∘ g)(-x) \]
-Sea \(x ∈ ℝ\). Entonces,
-\begin{align}
-   (f ∘ g)(x) &= f(g(x))      \\
-              &= f(-g(-x))    &&\text{[porque \(g\) es impar]} \\
-              &= f(g(-x))     &&\text{[porque \(f\) es par]} \\
+Supongamos que \\(f\\) es una función par y \\(g\\) lo es impar. Tenemos que demostrar que \\(f ∘ g\\) es par; es decir, que
+\\[ (∀ x ∈ ℝ) (f ∘ g)(x) = (f ∘ g)(-x) \\]
+Sea \\(x ∈ ℝ\\). Entonces,
+\\begin{align}
+   (f ∘ g)(x) &= f(g(x))      \\\\
+              &= f(-g(-x))    &&\\text{[porque \\(g\\) es impar]} \\\\
+              &= f(g(-x))     &&\\text{[porque \\(f\\) es par]} \\\\
               &= (f ∘ g)(-x)
-\end{align}
+\\end{align}
 
 <b>Demostraciones con Lean4</b>
 
@@ -81,6 +81,17 @@ by
      _ = f (-g (-x))  := by rw [h2]
      _ = f (g (-x))   := by rw [← h1]
      _ = (f ∘ g) (-x) := rfl
+
+-- 3ª demostración
+example
+  (h1 : esPar f)
+  (h2 : esImpar g)
+  : esPar (f ∘ g) :=
+by
+  intro x
+  calc (f ∘ g) x
+       = f (g x)      := rfl
+     _ = f (g (-x))   := by rw [h2, ← h1]
 </pre>
 
 <b>Demostraciones interactivas</b>
