@@ -272,6 +272,28 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Leyes_de_absorcion_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Leyes_de_absorcion_2.lean][Lean 4 Web]]
 
+** En los retículos, una distributiva del ínfimo implica la otra
+#+INCLUDE: "../src/Propiedad_distributiva_1.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_distributiva_1.lean][Lean 4 Web]]
+
+** En los retículos, una distributiva del supremos implica la otra
+#+INCLUDE: "../src/Propiedad_distributiva_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_distributiva_2.lean][Lean 4 Web]]
+
+* Anillos ordenados
+
+** En los anillos ordenados, a ≤ b → 0 ≤ b - a
+#+INCLUDE: "../src/Ejercicio_sobre_anillos_ordenados_1.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean 4 Web]]
+
+** En los anillos ordenados, 0 ≤ b - a → a ≤ b
+#+INCLUDE: "../src/Ejercicio_sobre_anillos_ordenados_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean 4 Web]]
+
+** En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc
+#+INCLUDE: "../src/Ejercicio_sobre_anillos_ordenados_3.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean 4 Web]]
+
 #+LATEX: \input Calculemus2_bibliografia
 
 #+LATEX: \chapter*{Lemas usados}
