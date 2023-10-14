@@ -23,14 +23,14 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Sean \(f\) y \(g\) dos funciones monótonas de \(ℝ\) en \(ℝ\). Tenemos que demostrar que \(f ∘ g\) es monótona; es decir, que
-\[ (∀ a, b ∈ ℝ) [a ≤ b → (f ∘ g)(a) ≤ (f ∘ g)(b)] \]
-Sean \(a, b ∈ ℝ\) tales que \(a ≤ b\). Por ser \(g\) monótona, se tiene
-\[ g(a) ≤ g(b) \]
+Sean \\(f\\) y \\(g\\) dos funciones monótonas de \\(ℝ\\) en \\(ℝ\\). Tenemos que demostrar que \\(f ∘ g\\) es monótona; es decir, que
+\\[ (∀ a, b ∈ ℝ) [a ≤ b → (f ∘ g)(a) ≤ (f ∘ g)(b)] \\]
+Sean \\(a, b ∈ ℝ\\) tales que \\(a ≤ b\\). Por ser \\(g\\) monótona, se tiene
+\\[ g(a) ≤ g(b) \\]
 y, por ser f monótona, se tiene
-\[ f(g(a)) ≤ f(g(b)) \]
+\\[ f(g(a)) ≤ f(g(b)) \\]
 Finalmente, por la definición de composición,
-\[ (f ∘ g)(a) ≤ (f ∘ g)(b) \]
+\\[ (f ∘ g)(a) ≤ (f ∘ g)(b) \\]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>
@@ -91,7 +91,7 @@ example (mf : Monotone f) (mg : Monotone g) :
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_monotonas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_monotonas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 

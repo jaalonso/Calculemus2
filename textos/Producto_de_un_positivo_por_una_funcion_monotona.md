@@ -3,7 +3,7 @@ Título: Si c es no negativo y f es monótona, entonces cf es monótona.
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si c es no negativo y f es monótona, entonces cf es monótona.
+Demostrar con Lean4 que si \\(c\\) es no negativo y \\(f\\) es monótona, entonces \\(cf\\) es monótona.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -25,14 +25,14 @@ by sorry
 
 [mathjax]
 Se usará el Lema
-\[ \{b ≤ c, 0 ≤ a\} ⊢ ab ≤ ac \tag{L1} \]
+\\[ \\{b ≤ c, 0 ≤ a\\} ⊢ ab ≤ ac \\tag{L1} \\]
 
 Tenemos que demostrar que
-\[ (∀ a, b ∈ ℝ) [a ≤ b → (cf)(a) ≤ (cf)(b)] \]
-Sean \(a, b ∈ ℝ\) tales que \(a ≤ b\). Puesto que \(f\) es monótona, se tiene
-\[ f(a) ≤ f(b) \]
-y, junto con la hipótesis de que \(c\) es no negativo, usando el lema L1, se tiene que
-\[ cf(a) ≤ cf(b) \]
+\\[ (∀ a, b ∈ ℝ) [a ≤ b → (cf)(a) ≤ (cf)(b)] \\]
+Sean \\(a, b ∈ ℝ\\) tales que \\(a ≤ b\\). Puesto que \\(f\\) es monótona, se tiene
+\\[ f(a) ≤ f(b) \\]
+y, junto con la hipótesis de que \\(c\\) es no negativo, usando el lema L1, se tiene que
+\\[ cf(a) ≤ cf(b) \\]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>
@@ -87,7 +87,7 @@ example (mf : Monotone f) (nnc : 0 ≤ c) :
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_un_positivo_por_una_funcion_monotona.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_un_positivo_por_una_funcion_monotona.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 

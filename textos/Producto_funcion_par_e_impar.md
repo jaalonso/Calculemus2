@@ -107,7 +107,7 @@ by
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_funcion_par_e_impar.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_funcion_par_e_impar.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 

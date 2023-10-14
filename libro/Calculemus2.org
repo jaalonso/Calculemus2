@@ -232,6 +232,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/abs_sub.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/abs_sub.lean][Lean 4 Web]]
 
+** En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε
+#+INCLUDE: "../src/Acotacion_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_del_producto.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -293,6 +297,46 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc
 #+INCLUDE: "../src/Ejercicio_sobre_anillos_ordenados_3.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean 4 Web]]
+
+* Espacios métricos
+
+** En los espacios métricos, dist(x,y) ≥ 0
+#+INCLUDE: "../src/Ejercicio_en_espacios_metricos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_en_espacios_metricos.lean][Lean 4 Web]]
+
+* Funciones reales
+
+** La suma de una cota superior de f y una cota superior de g es una cota superior de f+g
+#+INCLUDE: "../src/Suma_de_cotas_superiores.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_cotas_superiores.lean][Lean 4 Web]]
+
+** La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g
+#+INCLUDE: "../src/Suma_de_cotas_inferiores.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_cotas_inferiores.lean][Lean 4 Web]]
+
+** El producto de funciones no negativas es no negativo
+#+INCLUDE: "../src/Producto_de_funciones_no_negativas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_funciones_no_negativas.lean][Lean 4 Web]]
+
+** Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg
+#+INCLUDE: "../src/Cota_superior_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_superior_del_producto.lean][Lean 4 Web]]
+
+** Suma de funciones monótonas
+#+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean][Lean 4 Web]]
+
+** Si c es no negativo y f es monótona, entonces cf es monótona.
+#+INCLUDE: "../src/Producto_de_un_positivo_por_una_funcion_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean 4 Web]]
+
+** La composición de dos funciones monótonas es monótona
+#+INCLUDE: "../src/Composicion_de_funciones_monotonas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_monotonas.lean][Lean 4 Web]]
+
+** La suma de dos funciones pares es par
+#+INCLUDE: "../src/Suma_funciones_pares.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_funciones_pares.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

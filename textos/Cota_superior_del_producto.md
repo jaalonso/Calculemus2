@@ -3,7 +3,7 @@ Título: Si a es una cota superior no negativa de f y b es es una cota superior 
 Autor:  José A. Alonso
 ---
 
-Sean \(f\) y \(g\) funciones de \(ℝ\) en \(ℝ\). Demostrar con Lean4 que si \(a\) es una cota superior no negativa de \(f\) y \(b\) es es una cota superior de la función no negativa \(g\), entonces \(ab\) es una cota superior de \(fg\).
+Sean \\(f\\) y \\(g\\) funciones de \\(ℝ\\) en \\(ℝ\\). Demostrar con Lean4 que si \\(a\\) es una cota superior no negativa de \\(f\\) y \\(b\\) es es una cota superior de la función no negativa \\(g\\), entonces \\(ab\\) es una cota superior de \\(fg\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -35,20 +35,20 @@ by sorry
 
 [mathjax]
 Se usará el siguiente lema
-\[ \{a ≤ b, c ≤ d, 0 ≤ c, 0 ≤ b\} ⊢ ac ≤ bd \tag{L1} \]
+\\[ \\{a ≤ b, c ≤ d, 0 ≤ c, 0 ≤ b\\} ⊢ ac ≤ bd \\tag{L1} \\]
 
 Hay que demostrar que
-\[ (∀ x ∈ ℝ) [f(x)g(x) ≤ ab] \tag{1} \]
-Para ello, sea \(x ∈ R\). Puesto que \(a\) es una cota superior de \(f\), se tiene que
-\[ f(x) ≤ a \tag{2} \]
-puesto que \(b\) es una cota superior de \(g\), se tiene que
-\[ g(x) ≤ b \tag{3} \]
-puesto que \(g\) es no negativa, se tiene que
-\[ 0 ≤ g(x) \tag{4} \]
-y, puesto que \(a\) es no negativo, se tiene que
-\[ 0 ≤ a \tag{5} \]
+\\[ (∀ x ∈ ℝ) [f(x)g(x) ≤ ab] \\tag{1} \\]
+Para ello, sea \\(x ∈ R\\). Puesto que \\(a\\) es una cota superior de \\(f\\), se tiene que
+\\[ f(x) ≤ a \\tag{2} \\]
+puesto que \\(b\\) es una cota superior de \\(g\\), se tiene que
+\\[ g(x) ≤ b \\tag{3} \\]
+puesto que \\(g\\) es no negativa, se tiene que
+\\[ 0 ≤ g(x) \\tag{4} \\]
+y, puesto que \\(a\\) es no negativo, se tiene que
+\\[ 0 ≤ a \\tag{5} \\]
 De (2), (3), (4) y (5), por L1, se tiene que
-\[ f(x)g(x) ≤ ab \]
+\\[ f(x)g(x) ≤ ab \\]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>

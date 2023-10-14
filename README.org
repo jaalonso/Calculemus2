@@ -60,6 +60,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Asociatividad_del_minimo.md][En ℝ, min(min(a,b),c) = min(a,min(b,c))]] (En [[./src/Asociatividad_del_minimo.lean][Lean4]]).
 + [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 + [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
++ [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
 
 * Divisibilidad
 + [[./textos/Divisibilidad_de_producto.md][Si x, y, z ∈ ℕ, entonces x divide a yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
@@ -73,18 +74,25 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Asociatividad_del_supremo.md][En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)]] (En [[./src/Asociatividad_del_supremo.lean][Lean4]]).
 + [[./textos/Leyes_de_absorcion_1.md][En los retículos, x ⊓ (x ⊔ y) = x]] (En [[./src/Leyes_de_absorcion_1.lean][Lean4]]).
 + [[./textos/Leyes_de_absorcion_2.md][En los retículos, x ⊔ (x ⊓ y) = x]] (En [[./src/Leyes_de_absorcion_2.lean][Lean4]]).
++ [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
++ [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
+
+* Anillos ordenados
++ [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
++ [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
++ [[./textos/Ejercicio_sobre_anillos_ordenados_3.md][En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc]] (En [[./src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean4]]).
+
+* Espacios métricos
+
++ [[./textos/Ejercicio_en_espacios_metricos.md][En los espacios métricos, dist(x,y) ≥ 0]] (En [[./src/Ejercicio_en_espacios_metricos.lean][Lean4]]).
+
+* Funciones reales
+
++ [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean4]]).
++ [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
++ [[./textos/Producto_de_funciones_no_negativas.md][El producto de funciones no negativas es no negativo]] (En [[./src/Producto_de_funciones_no_negativas.lean][Lean4]]).
 
 * Sin ordenar
-+ L25 [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
-+ M26 [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
-+ X27 [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
-+ J28 [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
-+ V29 [[./textos/Ejercicio_sobre_anillos_ordenados_3.md][En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc]] (En [[./src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean4]]).
-+ L02 [[./textos/Ejercicio_en_espacios_metricos.md][En los espacios métricos, dist(x,y) ≥ 0]] (En [[./src/Ejercicio_en_espacios_metricos.lean][Lean4]]).
-+ M03 [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
-+ X04 [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean4]]).
-+ J05 [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
-+ V06 [[./textos/Producto_de_funciones_no_negativas.md][El producto de funciones no negativas es no negativo]] (En [[./src/Producto_de_funciones_no_negativas.lean][Lean4]]).
 + L09 [[./textos/Cota_superior_del_producto.md][Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg]] (En [[./src/Cota_superior_del_producto.lean][Lean4]]).
 + M10 [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
 + X11 [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).

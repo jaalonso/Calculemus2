@@ -3,7 +3,7 @@ Título: Si f es par y g es impar, entonces (f ∘ g) es par
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si f es par y g es impar, entonces (f ∘ g) es par.
+Demostrar con Lean4 que si \\(f\\) es par y \\(g\\) es impar, entonces \\(f ∘ g\\) es par.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -96,7 +96,7 @@ by
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_par_e_impar.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_par_e_impar.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 

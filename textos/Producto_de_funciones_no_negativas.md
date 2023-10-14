@@ -3,7 +3,7 @@ Título: El producto de funciones no negativas es no negativo
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(f\) y \(g\) son funciones no negativas de \(ℝ\) en \(ℝ\), entonces su producto es no negativo.
+Demostrar con Lean4 que si \\(f\\) y \\(g\\) son funciones no negativas de \\(ℝ\\) en \\(ℝ\\), entonces su producto es no negativo.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -29,16 +29,16 @@ sorry
 
 [mathjax]
 Se usará el siguiente lema
-\[ \{0 ≤ a, 0 ≤ b\} \vdash 0 ≤ ab \tag{L1} \]
+\\[ \\{0 ≤ a, 0 ≤ b\\} \\vdash 0 ≤ ab \\tag{L1} \\]
 
 Hay que demostrar que
-\[ (∀ x ∈ ℝ) [0 ≤ f(x)g(x)] \tag{1} \]
-Para ello, sea \(x ∈ R\). Puesto que \(f\) es no negatica, se tiene que
-\[ 0 ≤ f(x) \tag{2} \]
-y, puesto que \(g\) es no negativa, se tiene que
-\[ 0 ≤ g(x) \tag{3} \]
+\\[ (∀ x ∈ ℝ) [0 ≤ f(x)g(x)] \\tag{1} \\]
+Para ello, sea \\(x ∈ R\\). Puesto que \\(f\\) es no negatica, se tiene que
+\\[ 0 ≤ f(x) \\tag{2} \\]
+y, puesto que \\(g\\) es no negativa, se tiene que
+\\[ 0 ≤ g(x) \\tag{3} \\]
 De (2) y (3), por L1, se tiene que
-\[ 0 ≤ f(x)g(x) \]
+\\[ 0 ≤ f(x)g(x) \\]
 que es lo que había que demostrar.
 
 <b>Demostraciones con Lean4</b>
@@ -108,7 +108,7 @@ example
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_funciones_no_negativas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_funciones_no_negativas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 

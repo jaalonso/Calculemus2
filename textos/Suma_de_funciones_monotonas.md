@@ -24,23 +24,23 @@ by sorry
 
 [mathjax]
 Se usará el siguiente lema:
-\[ \{a ≤ b, c ≤ d\} ⊢ a + c ≤ b + d \tag{L1} \]
+\\[ \\{a ≤ b, c ≤ d\\} ⊢ a + c ≤ b + d \\tag{L1} \\]
 
-Supongamos que \(f\) y \(g\) son monótonas y teneno que demostrar que \(f+g\) también lo es; que
-\[ (∀ a,\ b \in ℝ) [a ≤ b → (f + g)(a) ≤ (f + g)(b)] \]
-Sean \(a, b ∈ ℝ\) tales que
-\[ a ≤ b \tag{1} \]
-Entonces, por ser \(f\) y \(g\) monótonas se tiene
-\begin{align}
-   f(a) &≤ f(b) \tag{2} \\
-   g(a) &≤ g(b) \tag{3}
-\end{align}
+Supongamos que \\(f\\) y \\(g\\) son monótonas y teneno que demostrar que \\(f+g\\) también lo es; que
+\\[ (∀ a,\\ b \\in ℝ) [a ≤ b → (f + g)(a) ≤ (f + g)(b)] \\]
+Sean \\(a, b ∈ ℝ\\) tales que
+\\[ a ≤ b \\tag{1} \\]
+Entonces, por ser \\(f\\) y \\(g\\) monótonas se tiene
+\\begin{align}
+   f(a) &≤ f(b) \\tag{2} \\\\
+   g(a) &≤ g(b) \\tag{3}
+\\end{align}
 Entonces,
-\begin{align}
-   (f + g)(a) &= f(a) + g(a)    \\
-              &≤ f(b) + g(b)    &&\text{[por L1, (2) y (3)]} \\
+\\begin{align}
+   (f + g)(a) &= f(a) + g(a)    \\\\
+              &≤ f(b) + g(b)    &&\\text{[por L1, (2) y (3)]} \\\\
               &= (f + g)(b)
-\end{align}
+\\end{align}
 
 <b>Demostraciones con Lean4</b>
 
@@ -125,7 +125,7 @@ example
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
