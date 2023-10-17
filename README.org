@@ -101,3 +101,4 @@ usaba Lean3 en lugar de Lean4.
 + L16 [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).
 + M17 [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
 + X18 [[./textos/Composicion_de_par_e_impar.md][Si f es par y g es impar, entonces (f ∘ g) es par]] (En [[./src/Composicion_de_par_e_impar.lean][Lean4]]).
++ J19 [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
