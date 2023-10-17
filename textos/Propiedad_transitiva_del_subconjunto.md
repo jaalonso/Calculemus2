@@ -3,7 +3,7 @@ Título: Si r ⊆ s y s ⊆ t, entonces r ⊆ t
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(r ⊆ s\) y \(s ⊆ t\), entonces \(r ⊆ t\).
+Demostrar con Lean4 que si \\(r ⊆ s\\) y \\(s ⊆ t\\), entonces \\(r ⊆ t\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -29,27 +29,27 @@ by sorry
 <b>1ª demostración en LN</b>
 
 Tenemos que demostrar que
-\[ (∀ x) [x ∈ r → x ∈ t] \]
-Sea \(x\) tal que
-\[ x ∈ r \]
-Puesto que \(r ⊆ s\), se tiene que
-\[ x ∈ s \]
-y, puesto que \(s ⊆ t), se tiene que
-\[ x ∈ t \]
+\\[ (∀ x) [x ∈ r → x ∈ t] \\]
+Sea \\(x\\) tal que
+\\[ x ∈ r \\]
+Puesto que \\(r ⊆ s\\), se tiene que
+\\[ x ∈ s \\]
+y, puesto que \\(s ⊆ t), se tiene que
+\\[ x ∈ t \\]
 que es lo que teníamos que demostrar.
 
 <b>2ª demostración en LN</b>
 
 Tenemos que demostrar que
-\[ (∀ x) [x ∈ r → x ∈ t] \]
-Sea \(x\) tal que
-\[ x ∈ r \]
+\\[ (∀ x) [x ∈ r → x ∈ t] \\]
+Sea \\(x\\) tal que
+\\[ x ∈ r \\]
 Tenemos que demostrar que
-\[ x ∈ t \]
-que, puesto que \(s ⊆ t\), se reduce a
-\[ x ∈ s \]
-que, puesto que \(r ⊆ s\), se redece a
-\[ x ∈ r \]
+\\[ x ∈ t \\]
+que, puesto que \\(s ⊆ t\\), se reduce a
+\\[ x ∈ s \\]
+que, puesto que \\(r ⊆ s\\), se redece a
+\\[ x ∈ r \\]
 que es lo que hemos supuesto.
 
 <b>Demostraciones con Lean4</b>
