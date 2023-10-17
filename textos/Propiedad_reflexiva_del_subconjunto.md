@@ -3,7 +3,7 @@ Título: Para cualquier conjunto s, s ⊆ s
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que para cualquier conjunto \(s\), \(s ⊆ s\).
+Demostrar con Lean4 que para cualquier conjunto \\(s\\), \\(s ⊆ s\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,11 +22,11 @@ by sorry
 
 [mathjax]
 Tenemos que demostrar que
-\[ (∀ x) [x ∈ s → × ∈ s] \]
-Sea \(x\) tal que
-\[ x ∈ s \tag{1} \]
+\\[ (∀ x) [x ∈ s → × ∈ s] \\]
+Sea \\(x\\) tal que
+\\[ x ∈ s \\tag{1} \\]
 Entonces, por (1), se tiene que
-\[ x ∈ s \]
+\\[ x ∈ s \\]
 que es lo que teníamos que demostrar.
 
 <b>Demostraciones con Lean4</b>

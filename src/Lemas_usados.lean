@@ -201,3 +201,13 @@ variable (x y z : X)
 #check (dist_self x : dist x x = 0)
 #check (dist_triangle x y z : dist x z ≤ dist x y + dist y z)
 end EspacioMetrico
+
+-- Conjuntos
+-- =========
+
+section Conjuntos
+open Set
+variable {α : Type _}
+variable (r s t : Set α)
+#check (Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t)
+end Conjuntos
