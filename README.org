@@ -105,3 +105,4 @@ usaba Lean3 en lugar de Lean4.
 + V20 [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
 + L23 [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
 + M24 [[./textos/Suma_constante_es_inyectiva.md][La función (x ↦ x + c) es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean4]]).
++ X25 [[./textos/Producto_constante_no_nula_es_inyectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva]] (En [[./src/Producto_constante_no_nula_es_inyectiva.lean][Lean4]]).

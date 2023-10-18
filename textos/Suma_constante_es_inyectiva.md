@@ -3,7 +3,7 @@ Título: La función (x ↦ x + c) es inyectiva
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que la función \(x ↦ x + c\) es inyectiva.
+Demostrar con Lean4 que la función \\(x ↦ x + c\\) es inyectiva.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,13 +22,13 @@ by sorry
 
 [mathjax]
 Se usará el lema
-\[ (∀ a, b, c) [a + b = c + b → a = c] \tag{L1} \]
+\\[ (∀ a, b, c) [a + b = c + b → a = c] \\tag{L1} \\]
 
 Hay que demostrar que
-\[ (∀ x₁ x₂) [f(x₁) = f(x₂) → x₁ = x₂] \]
-Sean \(x₁, x₂\) tales que \(f(x₁) = f(x₂)\). Entonces,
-\[ x₁ + c = x₂ + c \]
-y, por L1, \(x₁ = x₂\).
+\\[ (∀ x₁ x₂) [f(x₁) = f(x₂) → x₁ = x₂] \\]
+Sean \\(x₁, x₂\\) tales que \\(f(x₁) = f(x₂)\\). Entonces,
+\\[ x₁ + c = x₂ + c \\]
+y, por L1, \\(x₁ = x₂\\).
 
 <b>Demostraciones con Lean4</b>
 
