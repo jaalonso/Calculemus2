@@ -3,7 +3,7 @@ Título: Si a es una cota superior de s y a ≤ b, entonces b es una cota superi
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(a\) es una cota superior de \(s\) y \(a ≤ b\), entonces \(b\) es una cota superior de \(s\).
+Demostrar con Lean4 que si \\(a\\) es una cota superior de \\(s\\) y \\(a ≤ b\\), entonces \\(b\\) es una cota superior de \\(s\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,13 +30,13 @@ by sorry
 
 [mathjax]
 Tenemos que demostrar que
-\[ (∀ x) [x ∈ s → x ≤ b] \]
-Sea \(x\) tal que \(x ∈ s\). Entonces,
-\begin{align}
-   x &≤ a   &&\text{[porque \(a\) es una cota superior de \(s\)]} \\
+\\[ (∀ x) [x ∈ s → x ≤ b] \\]
+Sea \\(x\\) tal que \\(x ∈ s\\). Entonces,
+\\begin{align}
+   x &≤ a   &&\\text{[porque \\(a\\) es una cota superior de \\(s\\)]} \\\\
      &≤ b
-\end{align}
-Por tanto, \(x ≤ b\).
+\\end{align}
+Por tanto, \\(x ≤ b\\).
 
 <b>Demostraciones con Lean4</b>
 
