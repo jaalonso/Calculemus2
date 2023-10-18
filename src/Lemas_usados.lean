@@ -211,3 +211,12 @@ variable {α : Type _}
 variable (r s t : Set α)
 #check (Subset.trans : r ⊆ s → s ⊆ t → r ⊆ t)
 end Conjuntos
+
+-- Órdenes parciales
+-- =================
+
+section OrdenParcial
+variable {α : Type _} [PartialOrder α]
+variable (a b c : α)
+#check (le_trans : a ≤ b → b ≤ c → a ≤ c)
+end OrdenParcial

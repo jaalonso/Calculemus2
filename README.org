@@ -103,3 +103,4 @@ usaba Lean3 en lugar de Lean4.
 + X18 [[./textos/Composicion_de_par_e_impar.md][Si f es par y g es impar, entonces (f ∘ g) es par]] (En [[./src/Composicion_de_par_e_impar.lean][Lean4]]).
 + J19 [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
 + V20 [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
++ L23 [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
