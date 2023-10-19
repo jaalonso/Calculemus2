@@ -222,3 +222,13 @@ variable {α : Type _} [PartialOrder α]
 variable (a b c : α)
 #check (le_trans : a ≤ b → b ≤ c → a ≤ c)
 end OrdenParcial
+
+-- Funciones
+-- =========
+
+section Funciones
+open Function
+variable {α : Type _} {β : Type _} {γ : Type _}
+variable {f : α → β} {g : β → γ}
+#check (Injective.comp : Injective g → Injective f → Injective (g ∘ f))
+end Funciones

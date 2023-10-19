@@ -3,7 +3,7 @@ Título: Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(c ≠ 0\), entonces la función \(x ↦ cx\) es inyectiva.
+Demostrar con Lean4 que si \\(c ≠ 0\\), entonces la función \\(x ↦ cx\\) es inyectiva.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -23,14 +23,14 @@ by sorry
 
 [mathjax]
 Se usará el lema
-\[ (∀ a, b, c) [a ≠ 0 → (ab = ac ↔ b = c))] \tag{L1} \]
+\\[ (∀ a, b, c) [a ≠ 0 → (ab = ac ↔ b = c))] \\tag{L1} \\]
 
 Hay que demostrar que
-\[ (∀ x₁, x₂) [f(x₁) = f(x₂) → x₁ = x₂] \]
-Sean \(x₁, x₂\) tales que \(f(x₁) = f(x₂)\). Entonces,
-\[ cx₁ = cx₂ \]
-y, por L1 y puesto que \(c ≠ 0\), se tiene que
-\[ x₁ = x₂ \]
+\\[ (∀ x₁, x₂) [f(x₁) = f(x₂) → x₁ = x₂] \\]
+Sean \\(x₁, x₂\\) tales que \\(f(x₁) = f(x₂)\\). Entonces,
+\\[ cx₁ = cx₂ \\]
+y, por L1 y puesto que \\(c ≠ 0\\), se tiene que
+\\[ x₁ = x₂ \\]
 
 <b>Demostraciones con Lean4</b>
 
