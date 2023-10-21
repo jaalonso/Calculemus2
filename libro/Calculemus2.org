@@ -338,6 +338,28 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Suma_funciones_pares.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_funciones_pares.lean][Lean 4 Web]]
 
+** El producto de dos funciones impares es par
+#+INCLUDE: "../src/Producto_de_funciones_impares.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_funciones_impares.lean][Lean 4 Web]]
+
+** El producto de una función par por una impar es impar
+#+INCLUDE: "../src/Producto_funcion_par_e_impar.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_funcion_par_e_impar.lean][Lean 4 Web]]
+
+** Si f es par y g es impar, entonces (f ∘ g) es par
+#+INCLUDE: "../src/Composicion_de_par_e_impar.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_par_e_impar.lean][Lean 4 Web]]
+
+** Para cualquier conjunto s, s ⊆ s
+#+INCLUDE: "../src/Propiedad_reflexiva_del_subconjunto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_reflexiva_del_subconjunto.lean][Lean 4 Web]]
+
+* Teoría de conjuntos
+
+** Si r ⊆ s y s ⊆ t, entonces r ⊆ t
+#+INCLUDE: "../src/Propiedad_transitiva_del_subconjunto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_transitiva_del_subconjunto.lean][Lean 4 Web]]
+
 #+LATEX: \input Calculemus2_bibliografia
 
 #+LATEX: \chapter*{Lemas usados}
