@@ -35,6 +35,7 @@ Puesto que \\(f\\) está acotada superiormente, tiene una cota superior. Sea \\(
 
 <pre lang="lean">
 import src.Suma_de_cotas_superiores
+
 variable {f g : ℝ → ℝ}
 
 -- (acotadaSup f) afirma que f tiene cota superior.
@@ -100,13 +101,8 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaSup ha hb⟩
 -- Lemas usados
 -- ============
 
--- #variable (a b : ℝ)
 -- #check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))
 </pre>
-
-<b>Demostraciones interactivas</b>
-
-Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_acotadas_superiormente.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
