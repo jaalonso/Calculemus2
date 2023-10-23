@@ -27,16 +27,9 @@ by sorry
 
 [mathjax]
 
-Del ejercicio [La suma de una cota superior de f y una cota superior de g es una cota superior de f+g](https://bit.ly/3QauluK) usaremos la definición de cota superior
-\\[ CotaSuperior f a : ∀ x, f x ≤ a \\]
-y el lema
-\\[ sumaCotaSup: FnUb f a → FnUb g b → FnUb (f + g) (a + b) \\]
+Del ejercicio [La suma de una cota superior de f y una cota superior de g es una cota superior de f+g](https://bit.ly/3QauluK) usaremos la definición de cota superior (`CotaSuperior`) y el lema `sumaCotaSup`.
 
-Puesto que \\(f\\) está acotada superiormente, tiene una cota superior. Sea
-\\(a\\) una de dichas cotas. Análogamentte, puesto que \\(g\\) está acotada
-superiormente, tiene una cota superior. Sea \\(b\\) una de dichas
-cotas. Por el lema sumaCotaSup, \\(a+b\\) es una cota superior de \\(f+g). Por
-consiguiente, \\(f+g\\) está acotada superiormente.
+Puesto que \\(f\\) está acotada superiormente, tiene una cota superior. Sea \\(a\\) una de dichas cotas. Análogamentte, puesto que \\(g\\) está acotada superiormente, tiene una cota superior. Sea \\(b\\) una de dichas cotas. Por el lema sumaCotaSup, \\(a+b\\) es una cota superior de \\(f+g\\). Por consiguiente, \\(f+g\\) está acotada superiormente.
 
 <b>Demostraciones con Lean4</b>
 

@@ -15,9 +15,7 @@
 -- Del ejercicio "La suma de una cota superior de f y una cota superior
 -- de g es una cota superior de f+g" (que se encuentra en
 -- https://bit.ly/3QauluK ) usaremos la definición de cota superior
---    CotaSuperior f a : ∀ x, f x ≤ a
--- y el lema
---    sumaCotaSup: FnUb f a → FnUb g b → FnUb (f + g) (a + b)
+-- (CotaSuperior) y el lema sumaCotaSup.
 --
 -- Puesto que f está acotada superiormente, tiene una cota superior. Sea
 -- a una de dichas cotas. Análogamentte, puesto que g está acotada
@@ -28,8 +26,30 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import src.Suma_de_cotas_superiores
+-- Nota: Se puede descomentar la siguiente importación y comentar las
+-- expresiones que se han anotado como no necesarias si se importa.
+
+-- import src.Suma_de_cotas_superiores
+
+-- Nota: No se necesita si se importa src.Suma_de_cotas_superiores
+import Mathlib.Data.Real.Basic
+
 variable {f g : ℝ → ℝ}
+
+-- Nota: No se necesita si se importa src.Suma_de_cotas_superiores
+variable {a b : ℝ}
+
+-- Nota: No se necesita si se importa src.Suma_de_cotas_superiores
+-- (CotaSuperior f a) se verifica si a es una cota superior de f.
+def CotaSuperior (f : ℝ → ℝ) (a : ℝ) : Prop :=
+  ∀ x, f x ≤ a
+
+-- Nota: No se necesita si se importa src.Suma_de_cotas_superiores
+theorem sumaCotaSup
+  (hfa : CotaSuperior f a)
+  (hgb : CotaSuperior g b)
+  : CotaSuperior (f + g) (a + b) :=
+fun x ↦ add_le_add (hfa x) (hgb x)
 
 -- (acotadaSup f) afirma que f tiene cota superior.
 def acotadaSup (f : ℝ → ℝ) :=
@@ -94,5 +114,6 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaSup ha hb⟩
 -- Lemas usados
 -- ============
 
--- #variable (a b : ℝ)
+-- variable (c d : ℝ)
+-- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
 -- #check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))
