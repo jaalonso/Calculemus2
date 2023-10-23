@@ -11,6 +11,7 @@
 *.toc
 *.bbl
 /.vscode
+/build/
 /Licencia
 /lake-packages/*
 /libro/_minted-Calculemus2/

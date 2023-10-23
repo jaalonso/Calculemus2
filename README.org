@@ -96,15 +96,18 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
 + [[./textos/Suma_funciones_pares.md][La suma de dos funciones pares es par]] (En [[./src/Suma_funciones_pares.lean][Lean4]]).
++ [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).
++ [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
++ [[./textos/Composicion_de_par_e_impar.md][Si f es par y g es impar, entonces (f ∘ g) es par]] (En [[./src/Composicion_de_par_e_impar.lean][Lean4]]).
+
+* Teoría de conjuntos
++ [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
++ [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
 
 * Sin ordenar
-+ L16 [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).
-+ M17 [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
-+ X18 [[./textos/Composicion_de_par_e_impar.md][Si f es par y g es impar, entonces (f ∘ g) es par]] (En [[./src/Composicion_de_par_e_impar.lean][Lean4]]).
-+ J19 [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
-+ V20 [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
 + L23 [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
 + M24 [[./textos/Suma_constante_es_inyectiva.md][La función (x ↦ x + c) es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean4]]).
 + X25 [[./textos/Producto_constante_no_nula_es_inyectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva]] (En [[./src/Producto_constante_no_nula_es_inyectiva.lean][Lean4]]).
 + J26 [[./textos/Composicion_de_funciones_inyectivas.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
 + V27 [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
++ L30 [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean4]]).

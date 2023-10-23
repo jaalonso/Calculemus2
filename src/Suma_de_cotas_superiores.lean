@@ -36,8 +36,8 @@ import Mathlib.Data.Real.Basic
 def CotaSuperior (f : ℝ → ℝ) (a : ℝ) : Prop :=
   ∀ x, f x ≤ a
 
-variable (f g : ℝ → ℝ)
-variable (a b : ℝ)
+variable {f g : ℝ → ℝ}
+variable {a b : ℝ}
 
 -- 1ª demostración
 -- ===============
@@ -88,7 +88,7 @@ by
 -- 4ª demostración
 -- ===============
 
-example
+theorem sumaCotaSup
   (hfa : CotaSuperior f a)
   (hgb : CotaSuperior g b)
   : CotaSuperior (f + g) (a + b) :=
