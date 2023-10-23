@@ -111,3 +111,4 @@ usaba Lean3 en lugar de Lean4.
 + J26 [[./textos/Composicion_de_funciones_inyectivas.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
 + V27 [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
 + L30 [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean4]]).
++ M31 [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean4]]).

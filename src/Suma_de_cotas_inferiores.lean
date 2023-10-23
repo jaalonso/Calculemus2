@@ -36,8 +36,8 @@ import Mathlib.Data.Real.Basic
 def CotaInferior (f : ℝ → ℝ) (a : ℝ) : Prop :=
   ∀ x, a ≤ f x
 
-variable (f g : ℝ → ℝ)
-variable (a b : ℝ)
+variable {f g : ℝ → ℝ}
+variable {a b : ℝ}
 
 -- 1ª demostración
 example
@@ -80,7 +80,7 @@ by
   . apply hgb
 
 -- 4ª demostración
-example
+theorem sumaCotaInf
   (hfa : CotaInferior f a)
   (hgb : CotaInferior g b)
   : CotaInferior (f + g) (a + b) :=
