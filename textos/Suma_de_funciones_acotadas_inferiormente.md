@@ -28,11 +28,7 @@ by sorry
 [mathjax]
 Del ejercicio "La suma de una cota inferior de \\(f\\) y una cota inferior de \\(g\\) es una cota inferior de \\(f+g\\)" usaremos la definición de cota inferior (`CotaInferior`) y el lema `sumaCotaInf`.
 
-Puesto que \\(f\\) está acotada inferiormente, tiene una cota inferior. Sea
-\\(a\\) una de dichas cotas. Análogamentte, puesto que \\(g\\) está acotada
-inferiormente, tiene una cota inferior. Sea \\(b\\) una de dichas
-cotas. Por el lema `sumaCotaInf`, a+b es una cota inferior de \\(f+g\\). Por
-consiguiente, \\(f+g\\) está acotada inferiormente.
+Puesto que \\(f\\) está acotada inferiormente, tiene una cota inferior.  \\(a\\) una de dichas cotas. Análogamentte, puesto que \\(g\\) está acotada inferiormente, tiene una cota inferior. Sea \\(b\\) una de dichas cotas. Por el lema `sumaCotaInf`, a+b es una cota inferior de \\(f+g\\). Por consiguiente, \\(f+g\\) está acotada inferiormente.
 
 <b>Demostraciones con Lean4</b>
 
