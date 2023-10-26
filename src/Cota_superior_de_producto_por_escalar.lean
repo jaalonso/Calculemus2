@@ -34,6 +34,9 @@ def CotaSuperior (f : ℝ → ℝ) (a : ℝ) : Prop :=
 variable {f : ℝ → ℝ}
 variable {c : ℝ}
 
+-- Demostraciones con Lean4
+-- ========================
+
 -- 1ª demostración
 example
   (hfa : CotaSuperior f a)

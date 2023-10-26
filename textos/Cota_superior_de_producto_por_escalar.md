@@ -3,7 +3,7 @@ Título: Si a es una cota superior de f y c ≥ 0, entonces ca es una cota super
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(a\) es una cota superior de \(f\) y \(c ≥ 0\), entonces \(ca\) es una cota superior de \(cf\).
+Demostrar con Lean4 que si \\(a\\) es una cota superior de \\(f\\) y \\(c ≥ 0\\), entonces \\(ca\\) es una cota superior de \\(cf\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -29,14 +29,14 @@ by sorry
 
 [mathjax]
 Se usará el lema
-\[ \{b ≤ c, 0 ≤ a\} ⊢ ab ≤ ac \tag{L1} \]
+\\[ \\{b ≤ c, 0 ≤ a\\} ⊢ ab ≤ ac \\tag{L1} \\]
 
 Tenemos que demostrar que
-\[ (∀ y ∈ ℝ) cf(y) ≤ ca \]
-Sea \(y ∈ R\). Puesto que \(a\) es una cota de \(f\), se tiene que
-\[ f(y) ≤ a \]
-que, junto con \(c ≥ 0\), por el lema L1 nos da
-\[ cf(y) ≤ ca \]
+\\[ (∀ y ∈ ℝ) cf(y) ≤ ca \\]
+Sea \\(y ∈ R\\). Puesto que \\(a\\) es una cota de \\(f\\), se tiene que
+\\[ f(y) ≤ a \\]
+que, junto con \\(c ≥ 0\\), por el lema L1 nos da
+\\[ cf(y) ≤ ca \\]
 
 <b>Demostraciones con Lean4</b>
 
