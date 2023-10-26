@@ -29,9 +29,11 @@ by sorry
 
 [mathjax]
 Usaremos el siguiente lema:
-\\[ \\{a \\text{es cota superior de} f, c ≥ 0\\} ⊢ c·a \\text{es cota superior de} c·f \\tag{L1} \\]
+\\begin{align}
+"\\text{Si } a \\text{ es cota superior de } f \\text{ y } c ≥ 0\\text{, entonces } c·a \\text{ es cota superior de } c·f"
+\\end{align}
 
-Puesto que \\(f\\) está acotada superiormente, tiene una cota superior. Sea \\(a\\) una de dichas cotas. Entonces, por el lema L1, \\(c·a\\) es una cota superior de \\(c·f\\). Por consiguiente, \\(c·f\\) está acotada superiormente.
+Puesto que \\(f\\) está acotada superiormente, tiene una cota superior. Sea \\(a\\) una de dichas cotas. Entonces, por el lema, \\(c·a\\) es una cota superior de \\(c·f\\). Por consiguiente, \\(c·f\\) está acotada superiormente.
 
 <b>Demostraciones con Lean4</b>
 
@@ -106,10 +108,6 @@ fun ⟨a, ha⟩ ↦ ⟨c * a, CotaSuperior_mul ha hc⟩
 
 -- #check (CotaSuperior_mul : CotaSuperior f a → c ≥ 0 → CotaSuperior (fun x ↦ c * f x) (c * a))
 </pre>
-
-<b>Demostraciones interactivas</b>
-
-Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_escalar_acotado_superiormente.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
