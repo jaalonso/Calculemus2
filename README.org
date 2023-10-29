@@ -115,3 +115,4 @@ usaba Lean3 en lugar de Lean4.
 + X01 [[./textos/Cota_superior_de_producto_por_escalar.md][Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf]] (En [[./src/Cota_superior_de_producto_por_escalar.lean][Lean4]]).
 + J02 [[./textos/Producto_por_escalar_acotado_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está]] (En [[./src/Producto_por_escalar_acotado_superiormente.lean][Lean4]]).
 + V03 [[./textos/Producto_de_suma_de_cuadrados.md][Si x e y son sumas de dos cuadrados, entonces xy también lo es]] (En [[./src/Producto_de_suma_de_cuadrados.lean][Lean4]]).
++ L06 [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).

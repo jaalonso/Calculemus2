@@ -236,6 +236,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Acotacion_del_producto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_del_producto.lean][Lean 4 Web]]
 
+** Hay algún número real entre 2 y 3
+#+INCLUDE: "../src/Existencia_de_valor_intermedio.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existencia_de_valor_intermedio.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -359,6 +363,22 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si r ⊆ s y s ⊆ t, entonces r ⊆ t
 #+INCLUDE: "../src/Propiedad_transitiva_del_subconjunto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_transitiva_del_subconjunto.lean][Lean 4 Web]]
+
+** Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s
+#+INCLUDE: "../src/Cotas_superiores_de_conjuntos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cotas_superiores_de_conjuntos.lean][Lean 4 Web]]
+
+** La función (x ↦ x + c) es inyectiva
+#+INCLUDE: "../src/Suma_constante_es_inyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_inyectiva.lean][Lean 4 Web]]
+
+** Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva
+#+INCLUDE: "../src/Producto_constante_no_nula_es_inyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_constante_no_nula_es_inyectiva.lean][Lean 4 Web]]
+
+** La composición de funciones inyectivas es inyectiva
+#+INCLUDE: "../src/Composicion_de_funciones_inyectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_inyectivas.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

@@ -28,7 +28,7 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Puesto que \\(x\\) e \\(y\\) se pueden escribir como la suma de dos cuadrados, existen \\(a\\), \\(b\\) , \\(c\\) y \\(d\\ tales que
+Puesto que \\(x\\) e \\(y\\) se pueden escribir como la suma de dos cuadrados, existen \\(a\\), \\(b\\) , \\(c\\) y \\(d\\) tales que
 \\begin{align}
    x &= a² + b² \\\\
    y &= c² + d²
