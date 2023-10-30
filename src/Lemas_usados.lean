@@ -231,5 +231,7 @@ section Funciones
 open Function
 variable {α : Type _} {β : Type _} {γ : Type _}
 variable {f : α → β} {g : β → γ}
+variable (c : ℝ)
 #check (Injective.comp : Injective g → Injective f → Injective (g ∘ f))
+#check (add_right_surjective c : Surjective (fun x ↦ x + c))
 end Funciones
