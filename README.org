@@ -61,6 +61,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 + [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
 + [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
++ [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
 
 * Divisibilidad
 + [[./textos/Divisibilidad_de_producto.md][Si x, y, z ∈ ℕ, entonces x divide a yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
@@ -103,16 +104,16 @@ usaba Lean3 en lugar de Lean4.
 * Teoría de conjuntos
 + [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
 + [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
++ [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
++ [[./textos/Suma_constante_es_inyectiva.md][La función (x ↦ x + c) es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean4]]).
++ [[./textos/Producto_constante_no_nula_es_inyectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva]] (En [[./src/Producto_constante_no_nula_es_inyectiva.lean][Lean4]]).
++ [[./textos/Composicion_de_funciones_inyectivas.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
 
 * Sin ordenar
-+ L23 [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
-+ M24 [[./textos/Suma_constante_es_inyectiva.md][La función (x ↦ x + c) es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean4]]).
-+ X25 [[./textos/Producto_constante_no_nula_es_inyectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva]] (En [[./src/Producto_constante_no_nula_es_inyectiva.lean][Lean4]]).
-+ J26 [[./textos/Composicion_de_funciones_inyectivas.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
-+ V27 [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
 + L30 [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean4]]).
 + M31 [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean4]]).
 + X01 [[./textos/Cota_superior_de_producto_por_escalar.md][Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf]] (En [[./src/Cota_superior_de_producto_por_escalar.lean][Lean4]]).
 + J02 [[./textos/Producto_por_escalar_acotado_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está]] (En [[./src/Producto_por_escalar_acotado_superiormente.lean][Lean4]]).
 + V03 [[./textos/Producto_de_suma_de_cuadrados.md][Si x e y son sumas de dos cuadrados, entonces xy también lo es]] (En [[./src/Producto_de_suma_de_cuadrados.lean][Lean4]]).
 + L06 [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).
++ M07 [[./textos/Suma_divisible.md][Si a divide a b y a c, entonces divide a b+c]] (En [[./src/Suma_divisible.lean][Lean4]]).
