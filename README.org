@@ -118,3 +118,4 @@ usaba Lean3 en lugar de Lean4.
 + L06 [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).
 + M07 [[./textos/Suma_divisible.md][Si a divide a b y a c, entonces divide a b+c]] (En [[./src/Suma_divisible.lean][Lean4]]).
 + J08 [[./textos/Suma_constante_es_suprayectiva.md][La función (x ↦ x + c) es suprayectiva]] (En [[./src/Suma_constante_es_suprayectiva.lean][Lean4]]).
++ V09 [[./textos/Producto_por_no_nula_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva]] (En [[./src/Producto_por_no_nula_es_suprayectiva.lean][Lean4]]).
