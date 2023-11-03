@@ -3,7 +3,7 @@ Título: Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)²
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(f: ℝ → ℝ) es suprayectiva, entonces \(∃x ∈ ℝ\) tal que \(f(x)² = 9\).
+Demostrar con Lean4 que si \\(f: ℝ → ℝ\\) es suprayectiva, entonces \\(∃x ∈ ℝ\\) tal que \\(f(x)² = 9\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,7 +22,7 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Al ser \(f\) suprayectiva, existe un \(y\) tal que \(f(y) = 3\). Por tanto, \(f(y)² = 9\).
+Al ser \\(f\\) suprayectiva, existe un \\(y\\) tal que \\(f(y) = 3\\). Por tanto, \\(f(y)² = 9\\).
 
 <b>Demostraciones con Lean4</b>
 
