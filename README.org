@@ -20,6 +20,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/(a+b)(a-b)_eq_aa-bb.md][En ℝ, (a+b)(a-b) = a^2-b^2]] (En [[./src/(a+b)(a-b)_eq_aa-bb.lean][Lean4]]).
 + [[./textos/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.md][En ℝ, si c = da+b y b = ad, entonces c = 2ad]] (En [[./src/Si_c_eq_da+b_y_b_eq_ad_entonces_c_eq_2ad.lean][Lean4]]).
 + [[./textos/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.md][En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc]] (En [[./src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean4]]).
++ [[./textos/Producto_de_suma_de_cuadrados.md][Si x e y son sumas de dos cuadrados, entonces xy también lo es]] (En [[./src/Producto_de_suma_de_cuadrados.lean][Lean4]]).
 
 * Propiedades elementales de los anillos
 + [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
@@ -93,6 +94,10 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
 + [[./textos/Producto_de_funciones_no_negativas.md][El producto de funciones no negativas es no negativo]] (En [[./src/Producto_de_funciones_no_negativas.lean][Lean4]]).
 + [[./textos/Cota_superior_del_producto.md][Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg]] (En [[./src/Cota_superior_del_producto.lean][Lean4]]).
++ [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean4]]).
++ [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean4]]).
++ [[./textos/Cota_superior_de_producto_por_escalar.md][Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf]] (En [[./src/Cota_superior_de_producto_por_escalar.lean][Lean4]]).
++ [[./textos/Producto_por_escalar_acotado_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está]] (En [[./src/Producto_por_escalar_acotado_superiormente.lean][Lean4]]).
 + [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
 + [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
@@ -110,11 +115,6 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Composicion_de_funciones_inyectivas.md][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
 
 * Sin ordenar
-+ [[./textos/Suma_de_funciones_acotadas_superiormente.md][La suma de dos funciones acotadas superiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_superiormente.lean][Lean4]]).
-+ [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean4]]).
-+ [[./textos/Cota_superior_de_producto_por_escalar.md][Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf]] (En [[./src/Cota_superior_de_producto_por_escalar.lean][Lean4]]).
-+ [[./textos/Producto_por_escalar_acotado_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está]] (En [[./src/Producto_por_escalar_acotado_superiormente.lean][Lean4]]).
-+ [[./textos/Producto_de_suma_de_cuadrados.md][Si x e y son sumas de dos cuadrados, entonces xy también lo es]] (En [[./src/Producto_de_suma_de_cuadrados.lean][Lean4]]).
 + L06 [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).
 + M07 [[./textos/Suma_divisible.md][Si a divide a b y a c, entonces divide a b+c]] (En [[./src/Suma_divisible.lean][Lean4]]).
 + J08 [[./textos/Suma_constante_es_suprayectiva.md][La función (x ↦ x + c) es suprayectiva]] (En [[./src/Suma_constante_es_suprayectiva.lean][Lean4]]).
