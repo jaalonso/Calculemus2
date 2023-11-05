@@ -90,6 +90,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b_eq_c_entonces_(a+b)(a+b)_eq_ac+bc.lean][Lean 4 Web]].
 
+** Si x e y son sumas de dos cuadrados, entonces xy también lo es
+#+INCLUDE: "../src/Producto_de_suma_de_cuadrados.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_suma_de_cuadrados.lean][Lean 4 Web]]
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -325,6 +329,22 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg
 #+INCLUDE: "../src/Cota_superior_del_producto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_superior_del_producto.lean][Lean 4 Web]]
+
+** La suma de dos funciones acotadas superiormente también lo está
+#+INCLUDE: "../src/Suma_de_funciones_acotadas_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src//Suma_de_funciones_acotadas_superiormente.lean][Lean 4 Web]]
+
+** La suma de dos funciones acotadas inferiormente también lo está
+#+INCLUDE: "../src/Suma_de_funciones_acotadas_inferiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_acotadas_inferiormente.lean][Lean 4 Web]]
+
+** Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf
+#+INCLUDE: "../src/Cota_superior_de_producto_por_escalar.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_superior_de_producto_por_escalar.lean][Lean 4 Web]]
+
+** Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está
+#+INCLUDE: "../src/Producto_por_escalar_acotado_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_escalar_acotado_superiormente.lean][Lean 4 Web]]
 
 ** Suma de funciones monótonas
 #+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
