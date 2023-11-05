@@ -121,3 +121,4 @@ usaba Lean3 en lugar de Lean4.
 + V09 [[./textos/Producto_por_no_nula_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva]] (En [[./src/Producto_por_no_nula_es_suprayectiva.lean][Lean4]]).
 + L13 [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
 + M14 [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
++ X15 [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
