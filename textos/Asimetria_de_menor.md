@@ -3,7 +3,7 @@ Título: En ℝ, a < b → ¬(b < a)
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que en ℝ, a < b → ¬(b < a).
+Demostrar con Lean4 que en \\(ℝ\\), \\(a < b → ¬(b < a)\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,7 +22,7 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Por hipótesis \(a < b\) y tenemos que demostrar que \(¬(b < a)\). Supongamos que \(b < a\). Entonces, por la propiedad transiva \(a < a\) que es una contradicción con la propiedad irreflexiva.
+Por hipótesis \\(a < b\\) y tenemos que demostrar que \\(¬(b < a)\\). Supongamos que \\(b < a\\). Entonces, por la propiedad transiva \\(a < a\\) que es una contradicción con la propiedad irreflexiva.
 
 <b>Demostraciones con Lean4</b>
 

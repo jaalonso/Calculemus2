@@ -122,3 +122,4 @@ usaba Lean3 en lugar de Lean4.
 + L13 [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
 + M14 [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
 + X15 [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
++ J16 [[./textos/Funcion_no_acotada_superiormente.md][Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior]] (En [[./src/Funcion_no_acotada_superiormente.lean][Lean4]]).
