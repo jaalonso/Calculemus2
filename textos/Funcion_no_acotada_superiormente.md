@@ -1,9 +1,9 @@
 ---
-Título: Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior.
+    Título: Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior.
 Autor:  José A. Alonso
 ---
 
-Demostrar con Lean4 que si \(f\) es una función de \(ℝ\) en \(ℝ\) tal que para cada \(a\) existe un \(x\) tal que \(f(x) > a\), entonces \(f\) no tiene cota superior.
+Demostrar con Lean4 que si \\(f\\) es una función de \\(ℝ\\) en \\(ℝ\\) tal que para cada \\(a\\) existe un \\(x\\) tal que \\(f(x) > a\\), entonces \\(f\\) no tiene cota superior.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -28,7 +28,7 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 [mathjax]
-Supongamos que \(f\) tiene cota superior. Sea \(b\) una de dichas cotas superiores. Por la hipótesis, existe un \(x\) tal que \(f(x) > b\). Además, como \(b\) es una cota superior de \(f\), \(f(x) ≤ b\) que contradice la desigualdad anterior.
+Supongamos que \\(f\\) tiene cota superior. Sea \\(b\\) una de dichas cotas superiores. Por la hipótesis, existe un \\(x\\) tal que \\(f(x) > b\\). Además, como \\(b\\) es una cota superior de \\(f\\), \\(f(x) ≤ b\\) que contradice la desigualdad anterior.
 
 <b>Demostraciones con Lean4</b>
 
