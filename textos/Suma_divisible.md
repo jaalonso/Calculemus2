@@ -34,7 +34,7 @@ Por tanto,
          &= ad + ae    &&\\text{[por (2)]} \\\\
          &= a(d + e)   &&\\text{[por la distributiva]}
 \\end{align}
-Por consiguiente, \\(a) divide a \\(b + c\\).
+Por consiguiente, \\(a\\) divide a \\(b + c\\).
 
 <b>Demostraciones con Lean4</b>
 

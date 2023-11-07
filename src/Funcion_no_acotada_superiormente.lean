@@ -48,7 +48,7 @@ by
   linarith
 
 -- 2ª demostración
-example
+theorem sinCotaSup
   (h : ∀ a, ∃ x, f x > a)
   : ¬ acotadaSup f :=
 by
