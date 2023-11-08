@@ -30,10 +30,7 @@ Usaremos los lemas
    &a ≥ b → a ≮ b \\tag{L2}
 \\end{align}
 
-Por el lema L1, basta demostrar que \\(a ≱ b\\). Lo haremos por
-reducción al absurdo. Para ello, supongamos que \\(a ≥ b\\). Como \\(f\\) es
-monótona, se tiene \\(f(a) ≥ f(b)\\) y, aplicando el lema L2,
-\\(f(a) ≮ f(b)\\, que contradice a la hipótesis.
+Por el lema L1, basta demostrar que \\(a ≱ b\\). Lo haremos  reducción al absurdo. Para ello, supongamos que \\(a ≥ b\\). Como \\(f\\) es monótona, se tiene \\(f(a) ≥ f(b)\\) y, aplicando el lema L2, \\(f(a) ≮ f(b)\\), que contradice a la hipótesis.
 
 <b>Demostraciones con Lean4</b>
 
