@@ -125,3 +125,4 @@ usaba Lean3 en lugar de Lean4.
 + J16 [[./textos/Funcion_no_acotada_superiormente.md][Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior]] (En [[./src/Funcion_no_acotada_superiormente.lean][Lean4]]).
 + V17 [[./textos/Funcion_no_acotada_inferiormente.md][Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior]] (En [[./src/Funcion_no_acotada_inferiormente.lean][Lean4]]).
 + L20 [[./textos/La_identidad_no_esta_acotada_superiormente.md][La función identidad no está acotada superiormente]] (En [[./src/La_identidad_no_esta_acotada_superiormente.lean][Lean4]]).
++ M21 [[./textos/CN_de_monotona.md][Si f es monótona y f(a) < f(b), entonces a < b]] (En [[./src/CN_de_monotona.lean][Lean4]]).
