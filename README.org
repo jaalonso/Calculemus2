@@ -117,8 +117,9 @@ usaba Lean3 en lugar de Lean4.
 * Sin ordenar
 + L06 [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).
 + M07 [[./textos/Suma_divisible.md][Si a divide a b y a c, entonces divide a b+c]] (En [[./src/Suma_divisible.lean][Lean4]]).
-+ J08 [[./textos/Suma_constante_es_suprayectiva.md][La función (x ↦ x + c) es suprayectiva]] (En [[./src/Suma_constante_es_suprayectiva.lean][Lean4]]).
-+ V09 [[./textos/Producto_por_no_nula_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva]] (En [[./src/Producto_por_no_nula_es_suprayectiva.lean][Lean4]]).
++ X08 [[./textos/Suma_constante_es_suprayectiva.md][La función (x ↦ x + c) es suprayectiva]] (En [[./src/Suma_constante_es_suprayectiva.lean][Lean4]]).
++ J09 [[./textos/Producto_por_no_nula_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva]] (En [[./src/Producto_por_no_nula_es_suprayectiva.lean][Lean4]]).
++ V10 [[./textos/Producto_por_no_nula_y_suma_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva]] (En [[./src/Producto_por_no_nula_y_suma_es_suprayectiva.lean][Lean4]]).
 + L13 [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
 + M14 [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
 + X15 [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
