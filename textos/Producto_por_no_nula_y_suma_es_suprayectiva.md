@@ -25,9 +25,9 @@ by sorry
 
 Hay que demostrar que
 \\[ (∀x ∈ ℝ)(∃y ∈ ℝ)[cy+d = x] \\]
-Par \\(x ∈ ℝ\\), sea \\(y = \\frac{x-d}{c}\\). Entonces,
+Para \\(x ∈ ℝ\\), sea \\(y = \\frac{x-d}{c}\\). Entonces,
 \\begin{align}
-   cy &= c((x-d)/c)+d \\\\
+   cy &= c\\left(\\frac{x-d}{c}\\right)+d \\\\
       &= (x-d)+d      \\\\
       &= x
 \\end{align}

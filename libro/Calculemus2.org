@@ -254,6 +254,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Ejercicio_de_divisibilidad.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio_de_divisibilidad.lean][Lean 4 Web]]
 
+** Transitividad de la divisibilidad
+#+INCLUDE: "../src/Transitividad_de_la_divisibilidad.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Transitividad_de_la_divisibilidad.lean][Lean 4 Web]]
+
+** Si a divide a b y a c, entonces divide a b+c
+#+INCLUDE: "../src/Suma_divisible.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_divisible.lean][Lean 4 Web]]
+
 ** Conmutatividad del máximo común divisor
 #+INCLUDE: "../src/Conmutatividad_del_gcd.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_gcd.lean][Lean 4 Web]]
@@ -399,6 +407,18 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** La composición de funciones inyectivas es inyectiva
 #+INCLUDE: "../src/Composicion_de_funciones_inyectivas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_inyectivas.lean][Lean 4 Web]]
+
+** La función (x ↦ x + c) es suprayectiva
+#+INCLUDE: "../src/Suma_constante_es_suprayectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_suprayectiva.lean][Lean 4 Web]]
+
+** Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva
+#+INCLUDE: "../src/Producto_por_no_nula_es_suprayectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_no_nula_es_suprayectiva.lean][Lean 4 Web]]
+
+** Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva
+#+INCLUDE: "../src/Producto_por_no_nula_y_suma_es_suprayectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_no_nula_y_suma_es_suprayectiva.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 
