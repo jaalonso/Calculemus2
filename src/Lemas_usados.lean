@@ -228,6 +228,7 @@ section OrdenParcial
 variable {α : Type _} [PartialOrder α]
 variable (a b c : α)
 #check (le_trans : a ≤ b → b ≤ c → a ≤ c)
+#check (monotone_const : Monotone fun _ : ℝ ↦ c)
 end OrdenParcial
 
 -- Funciones
