@@ -129,3 +129,4 @@ usaba Lean3 en lugar de Lean4.
 + M21 [[./textos/CN_de_monotona.md][Si f es monótona y f(a) < f(b), entonces a < b]] (En [[./src/CN_de_monotona.lean][Lean4]]).
 + X22 [[./textos/CS_de_no_monotona.md][Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona]] (En [[./src/CS_de_no_monotona.lean][Lean4]]).
 + J23 [[~/alonso/estudio/Calculemus2/textos/Propiedad_de_monotona.md][No para toda f : ℝ → ℝ monótona, (∀a,b)[f(a) ≤ f(b) → a ≤ b]​]] (En [[~/alonso/estudio/Calculemus2/src/Propiedad_de_monotona.lean][Lean4]]).
++ V24 [[./textos/Condicion_para_no_positivo.md][Si (∀ε > 0)[x ≤ ε], entonces x ≤ 0]] (En [[./src/Condicion_para_no_positivo.lean][Lean4]]).

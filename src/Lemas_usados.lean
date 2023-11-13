@@ -55,11 +55,14 @@ variable (a b c d : ℝ)
 #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
 #check (exp_lt_exp : exp a < exp b ↔ a < b)
 #check (exp_pos a : 0 < exp a)
+#check (half_lt_self : 0 < a → a / 2 < a)
+#check (half_pos : 0 < a → 0 < a / 2)
 #check (le_antisymm : a ≤ b → b ≤ a → a = b)
 #check (le_div_iff : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
 #check (le_max_left a b : a ≤ max a b)
 #check (le_max_right a b : b ≤ max a b)
 #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+#check (le_of_not_gt : ¬a > b → a ≤ b)
 #check (le_refl a : a ≤ a)
 #check (log_le_log' : 0 < a → a ≤ b → log a ≤ log b)
 #check (lt_asymm : a < b → ¬b < a)
@@ -244,3 +247,11 @@ variable (c : ℝ)
 #check (add_right_surjective c : Surjective (fun x ↦ x + c))
 #check (mul_left_surjective₀ : c ≠ 0 → Surjective (fun x ↦ c * x))
 end Funciones
+
+-- Lógica
+-- ======
+
+section Logica
+variable (p q : Prop)
+#check (absurd : p → ¬p → q)
+end Logica

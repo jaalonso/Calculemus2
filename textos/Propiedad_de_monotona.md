@@ -22,7 +22,7 @@ by sorry
 
 Supongamos que
 \\[ (∀f)[f \\text{ es monótona } → (∀a, b)[f(a) ≤ f(b) → a ≤ b]] \\tag{1} \\]
-Sea \\(f : ℝ → ℝ la función constante igual a cero (es decir,
+Sea \\(f : ℝ → ℝ\\) la función constante igual a cero (es decir,
 \\[ (∀x ∈ ℝ)[f(x) = 0] \\]
 Entonces, \\(f\\) es monótona y \\(f(1) ≤ f(0)\\) (ya que \\(f(1) = 0 ≤ 0 = f(0)\\)). Luego, por (1), \\(1 ≤ 0\\) que es una contradicción.
 
