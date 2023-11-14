@@ -253,5 +253,11 @@ end Funciones
 
 section Logica
 variable (p q : Prop)
+variable {α : Type _}
+variable (P : α → Prop)
 #check (absurd : p → ¬p → q)
+#check (not_exists : (¬∃ x, P x) ↔ ∀ (x : α), ¬P x)
+#check (not_exists_of_forall_not : (∀ x, P x → q) → (∃ x, P x) → q)
+#check (not_forall : (¬∀ x, P x) ↔ ∃ x, ¬P x)
+#check (not_forall_of_exists_not : (∃ x, ¬P x) → ¬∀ x, P x)
 end Logica
