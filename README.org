@@ -133,3 +133,4 @@ usaba Lean3 en lugar de Lean4.
 + L27 [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
 + M28 [[./textos/No_existe_de_para_todo_no.md][Si (∀x)¬P(x), entonces ¬(∃x)P(x)]] (En [[./src/No_existe_de_para_todo_no.lean][Lean4]]).
 + X29 [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
++ J30 [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
