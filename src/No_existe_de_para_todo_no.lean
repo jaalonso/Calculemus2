@@ -11,7 +11,7 @@
 -- Demostración en lenguaje natural
 -- ================================
 
--- Supongamos que (∃x)P(x). Sea y tal que P(y). Puesto que (∀x)¬P)x), se
+-- Supongamos que (∃x)P(x). Sea y tal que P(y). Puesto que (∀x)¬P(x), se
 -- tiene que ¬P(y) que es una contradicción con P(y).
 
 -- Demostraciones con Lean4
