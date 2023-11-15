@@ -49,10 +49,6 @@ by
   -- ⊢ P y
   exact h1
 
--- Comentario: La táctica (existsi e) es la regla de introducción del
--- existencial; es decir, sustituye en el cuerpo del objetivo
--- existencial su variable por e
-
 -- 2ª demostración
 -- ===============
 
