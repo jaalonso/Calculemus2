@@ -240,6 +240,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Acotacion_del_producto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_del_producto.lean][Lean 4 Web]]
 
+** En ℝ, a < b → ¬(b < a)
+#+INCLUDE: "../src/Asimetria_de_menor.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asimetria_de_menor.lean][Lean 4 Web]]
+
 ** Hay algún número real entre 2 y 3
 #+INCLUDE: "../src/Existencia_de_valor_intermedio.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existencia_de_valor_intermedio.lean][Lean 4 Web]]
@@ -354,6 +358,16 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Producto_por_escalar_acotado_superiormente.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_escalar_acotado_superiormente.lean][Lean 4 Web]]
 
+** Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior
+#+INCLUDE: "../src/Funcion_no_acotada_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Funcion_no_acotada_superiormente.lean][Lean 4 Web]]
+
+** Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior
+#+INCLUDE: "../src/Funcion_no_acotada_inferiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Funcion_no_acotada_inferiormente.lean][Lean 4 Web]]
+
+
+
 ** Suma de funciones monótonas
 #+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean][Lean 4 Web]]
@@ -419,6 +433,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva
 #+INCLUDE: "../src/Producto_por_no_nula_y_suma_es_suprayectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_no_nula_y_suma_es_suprayectiva.lean][Lean 4 Web]]
+
+** Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9
+#+INCLUDE: "../src/Propiedad_de_suprayectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_de_suprayectivas.lean][Lean 4 Web]]
+
+** La composición de funciones suprayectivas es suprayectiva
+#+INCLUDE: "../src/Composicion_de_suprayectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_suprayectivas.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 
