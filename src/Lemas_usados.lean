@@ -260,4 +260,6 @@ variable (P : α → Prop)
 #check (not_exists_of_forall_not : (∀ x, P x → q) → (∃ x, P x) → q)
 #check (not_forall : (¬∀ x, P x) ↔ ∃ x, ¬P x)
 #check (not_forall_of_exists_not : (∃ x, ¬P x) → ¬∀ x, P x)
+#check (not_not_intro : p → ¬¬p)
+#check (of_not_not : ¬¬p → p)
 end Logica

@@ -62,6 +62,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Minimo_de_suma.md][En ℝ, min(a,b)+c = min(a+c,b+c)]] (En [[./src/Minimo_de_suma.lean][Lean4]]).
 + [[./textos/abs_sub.md][En ℝ, |a| - |b| ≤ |a - b|]] (En [[./src/abs_sub.lean][Lean4]]).
 + [[./textos/Acotacion_del_producto.md][En ℝ, {0 < ε, ε ≤ 1, |x| < ε, |y| < ε} ⊢ |xy| < ε]] (En [[./src/Acotacion_del_producto.lean][Lean4]]).
++ [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
 + [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
 
 * Divisibilidad
@@ -100,6 +101,8 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Suma_de_funciones_acotadas_inferiormente.md][La suma de dos funciones acotadas inferiormente también lo está]] (En [[./src/Suma_de_funciones_acotadas_inferiormente.lean][Lean4]]).
 + [[./textos/Cota_superior_de_producto_por_escalar.md][Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf]] (En [[./src/Cota_superior_de_producto_por_escalar.lean][Lean4]]).
 + [[./textos/Producto_por_escalar_acotado_superiormente.md][Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está]] (En [[./src/Producto_por_escalar_acotado_superiormente.lean][Lean4]]).
++ [[./textos/Funcion_no_acotada_superiormente.md][Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior]] (En [[./src/Funcion_no_acotada_superiormente.lean][Lean4]]).
++ [[./textos/Funcion_no_acotada_inferiormente.md][Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior]] (En [[./src/Funcion_no_acotada_inferiormente.lean][Lean4]]).
 + [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
 + [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
@@ -118,13 +121,10 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Suma_constante_es_suprayectiva.md][La función (x ↦ x + c) es suprayectiva]] (En [[./src/Suma_constante_es_suprayectiva.lean][Lean4]]).
 + [[./textos/Producto_por_no_nula_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva]] (En [[./src/Producto_por_no_nula_es_suprayectiva.lean][Lean4]]).
 + [[./textos/Producto_por_no_nula_y_suma_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva]] (En [[./src/Producto_por_no_nula_y_suma_es_suprayectiva.lean][Lean4]]).
++ [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
++ [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
 
 * Sin ordenar
-+ L13 [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
-+ M14 [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
-+ X15 [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
-+ J16 [[./textos/Funcion_no_acotada_superiormente.md][Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior]] (En [[./src/Funcion_no_acotada_superiormente.lean][Lean4]]).
-+ V17 [[./textos/Funcion_no_acotada_inferiormente.md][Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior]] (En [[./src/Funcion_no_acotada_inferiormente.lean][Lean4]]).
 + L20 [[./textos/La_identidad_no_esta_acotada_superiormente.md][La función identidad no está acotada superiormente]] (En [[./src/La_identidad_no_esta_acotada_superiormente.lean][Lean4]]).
 + M21 [[./textos/CN_de_monotona.md][Si f es monótona y f(a) < f(b), entonces a < b]] (En [[./src/CN_de_monotona.lean][Lean4]]).
 + X22 [[./textos/CS_de_no_monotona.md][Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona]] (En [[./src/CS_de_no_monotona.lean][Lean4]]).
@@ -134,3 +134,4 @@ usaba Lean3 en lugar de Lean4.
 + M28 [[./textos/No_existe_de_para_todo_no.md][Si (∀x)¬P(x), entonces ¬(∃x)P(x)]] (En [[./src/No_existe_de_para_todo_no.lean][Lean4]]).
 + X29 [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
 + J30 [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
++ V01 [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
