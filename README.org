@@ -135,3 +135,4 @@ usaba Lean3 en lugar de Lean4.
 + X29 [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
 + J30 [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
 + V01 [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
++ L04 [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
