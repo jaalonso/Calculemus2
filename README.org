@@ -136,3 +136,4 @@ usaba Lean3 en lugar de Lean4.
 + J30 [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
 + V01 [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
 + L04 [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
++ M05 [[./textos/CN_no_acotada_superiormente.md][Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]​]] (En [[./src/CN_no_acotada_superiormente.lean][Lean4]]).

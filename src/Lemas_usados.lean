@@ -256,6 +256,7 @@ variable (p q : Prop)
 variable {α : Type _}
 variable (P : α → Prop)
 #check (absurd : p → ¬p → q)
+#check (forall_not_of_not_exists : (¬∃ x, P x) → ∀ x, ¬P x)
 #check (not_exists : (¬∃ x, P x) ↔ ∀ (x : α), ¬P x)
 #check (not_exists_of_forall_not : (∀ x, P x → q) → (∃ x, P x) → q)
 #check (not_forall : (¬∀ x, P x) ↔ ∃ x, ¬P x)
