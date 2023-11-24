@@ -131,6 +131,34 @@ by
 -- ===============
 
 example
+  (h : ¬acotadaSup f)
+  : ∀ a, ∃ x, f x > a :=
+by
+  unfold acotadaSup at h
+  -- h : ¬∃ a, CotaSuperior f a
+  unfold CotaSuperior at h
+  -- h : ¬∃ a, ∀ (x : ℝ), f x ≤ a
+  push_neg at h
+  -- ∀ (a : ℝ), ∃ x, f x > a
+  exact h
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h : ¬acotadaSup f)
+  : ∀ a, ∃ x, f x > a :=
+by
+  simp only [acotadaSup, CotaSuperior] at h
+  -- h : ¬∃ a, ∀ (x : ℝ), f x ≤ a
+  push_neg at h
+  -- ∀ (a : ℝ), ∃ x, f x > a
+  exact h
+
+-- 5ª demostración
+-- ===============
+
+example
   (h : ¬acotadaSup f) :
   ∀ a, ∃ x, f x > a :=
 by
@@ -142,7 +170,7 @@ by
   -- ⊢ acotadaSup f
   exact h
 
--- 4ª demostración
+-- 6ª demostración
 -- ===============
 
 example
