@@ -1,4 +1,3 @@
-#+subtitle:
 #+TITLE: Calculemus (Vol. 2: Ejercicios de demostración con Lean4)
 #+AUTHOR: José A. Alonso
 #+DATE: <2023-07-10 Sun>
@@ -248,6 +247,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Existencia_de_valor_intermedio.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existencia_de_valor_intermedio.lean][Lean 4 Web]]
 
+** Si (∀ε > 0)[x ≤ ε], entonces x ≤ 0
+#+INCLUDE: "../src/Condicion_para_no_positivo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Condicion_para_no_positivo.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -366,7 +369,9 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Funcion_no_acotada_inferiormente.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Funcion_no_acotada_inferiormente.lean][Lean 4 Web]]
 
-
+** La función identidad no está acotada superiormente
+#+INCLUDE: "../src/La_identidad_no_esta_acotada_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_identidad_no_esta_acotada_superiormente.lean][Lean 4 Web]]
 
 ** Suma de funciones monótonas
 #+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
@@ -379,6 +384,18 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** La composición de dos funciones monótonas es monótona
 #+INCLUDE: "../src/Composicion_de_funciones_monotonas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_funciones_monotonas.lean][Lean 4 Web]]
+
+** Si f es monótona y f(a) < f(b), entonces a < b
+#+INCLUDE: "../src/CN_de_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN_de_monotona.lean][Lean 4 Web]]
+
+** Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona
+#+INCLUDE: "../src/CS_de_no_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_no_monotona.lean][Lean 4 Web]]
+
+** No para toda f : ℝ → ℝ monótona, (∀a, b)[f(a) ≤ f(b) → a ≤ b]
+#+INCLUDE: "../src/Propiedad_de_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_de_monotona.lean][Lean 4 Web]]
 
 ** La suma de dos funciones pares es par
 #+INCLUDE: "../src/Suma_funciones_pares.lean" src lean :lines "7-"
