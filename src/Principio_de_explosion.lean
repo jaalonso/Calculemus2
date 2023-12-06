@@ -11,7 +11,7 @@
 -- Demostración en lenguaje natural
 -- ================================
 
--- Basta demostrar una cotradicción, ya que de una contradicción se
+-- Basta demostrar una contradicción, ya que de una contradicción se
 -- sigue cualquier cosa.
 --
 -- La hipótesis es una contradicción con la propiedad irreflexiva de la
@@ -22,7 +22,7 @@
 
 import Mathlib.Tactic
 
-variable (a : ℕ)
+variable (a : ℝ)
 
 -- 1ª demostración
 -- ===============
@@ -35,8 +35,6 @@ by
   -- ⊢ False
   show False
   exact lt_irrefl 0 h
-
--- Comentario: La táctica exfalso sustituye el objetivo por false.
 
 -- 2ª demostración
 -- ===============
@@ -66,9 +64,6 @@ example
 by
   have : ¬ 0 < 0 :=  lt_irrefl 0
   contradiction
-
--- Comentario: La táctica contradiction busca dos hipótesis
--- contradictorias.
 
 -- 5ª demostración
 -- ===============

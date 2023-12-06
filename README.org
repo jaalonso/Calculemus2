@@ -140,3 +140,4 @@ usaba Lean3 en lugar de Lean4.
 + X06 [[./textos/CS_de_acotada_superiormente.md][Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente]] (En [[./src/CS_de_acotada_superiormente.lean][Lean4]]).
 + J07 [[./textos/CN_de_no_monotona.md][Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]​]] (En [[./src/CN_de_no_monotona.lean][Lean4]]).
 + V08 [[./textos/Principio_de_explosion.md][Si 0 < 0, entonces a > 37 para cualquier número a]] (En [[./src/Principio_de_explosion.lean][Lean4]]).
++ L11 [[./textos/Introduccion_de_la_conjuncion.md][{x ≤ y, y ≰ x} ⊢ x ≤ y ∧ x ≠ y]] (En [[./src/Introduccion_de_la_conjuncion.lean][Lean4]]).
