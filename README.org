@@ -142,3 +142,4 @@ usaba Lean3 en lugar de Lean4.
 + V08 [[./textos/Principio_de_explosion.md][Si 0 < 0, entonces a > 37 para cualquier número a]] (En [[./src/Principio_de_explosion.lean][Lean4]]).
 + L11 [[./textos/Introduccion_de_la_conjuncion.md][{x ≤ y, y ≰ x} ⊢ x ≤ y ∧ x ≠ y]] (En [[./src/Introduccion_de_la_conjuncion.lean][Lean4]]).
 + M12 [[~/alonso/estudio/Calculemus2/textos/Eliminacion_de_la_conjuncion.md][x ≤ y ∧ x ≠ y ⊢ y ≰ x]] (En [[~/alonso/estudio/Calculemus2/src/Eliminacion_de_la_conjuncion.lean][Lean4]]).
++ X13 [[./textos/Uso_de_conjuncion.md][Si (m ∣ n ∧ m ≠ n), entonces (m ∣ n ∧ ¬(n ∣ m))]] (En [[./src/Uso_de_conjuncion.lean][Lean4]]).
