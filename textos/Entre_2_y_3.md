@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que \((∃x ∈ ℝ)[2 < x < 3]\).
+Demostrar con Lean4 que \\((∃x ∈ ℝ)[2 < x < 3]\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -19,7 +19,7 @@ by sorry
 
 <b>Demostración en lenguaje natural</b>
 
-Podemos usar el número \(\dfrac{5}{2}\) y comprobar que \(2 < \dfrac{5}{2} < 3\).
+Podemos usar el número \\(\\dfrac{5}{2}\\) y comprobar que \\(2 < \\dfrac{5}{2} < 3\\).
 
 <b>Demostraciones con Lean4</b>
 
