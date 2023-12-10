@@ -251,6 +251,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Condicion_para_no_positivo.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Condicion_para_no_positivo.lean][Lean 4 Web]]
 
+** Si 0 < 0, entonces a > 37 para cualquier número a
+#+INCLUDE: "../src/Principio_de_explosion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Principio_de_explosion.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -373,6 +377,16 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/La_identidad_no_esta_acotada_superiormente.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_identidad_no_esta_acotada_superiormente.lean][Lean 4 Web]]
 
+** Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]
+#+INCLUDE: "../src/CN_no_acotada_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN_no_acotada_superiormente.lean][Lean 4 Web]]
+
+** Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente
+#+INCLUDE: "../src/CS_de_acotada_superiormente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_acotada_superiormente.lean][Lean 4 Web]]
+
+
+
 ** Suma de funciones monótonas
 #+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean][Lean 4 Web]]
@@ -396,6 +410,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** No para toda f : ℝ → ℝ monótona, (∀a, b)[f(a) ≤ f(b) → a ≤ b]
 #+INCLUDE: "../src/Propiedad_de_monotona.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_de_monotona.lean][Lean 4 Web]]
+
+** Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]
+#+INCLUDE: "../src/CN_de_no_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN_de_no_monotona.lean][Lean 4 Web]]
 
 ** La suma de dos funciones pares es par
 #+INCLUDE: "../src/Suma_funciones_pares.lean" src lean :lines "7-"
@@ -458,6 +476,32 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** La composición de funciones suprayectivas es suprayectiva
 #+INCLUDE: "../src/Composicion_de_suprayectivas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_suprayectivas.lean][Lean 4 Web]]
+
+* Lógica
+
+** Si ¬(∃x)P(x), entonces (∀x)¬P(x)
+#+INCLUDE: "../src/Para_todo_no_de_no_existe.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Para_todo_no_de_no_existe.lean][Lean 4 Web]]
+
+** Si (∀x)¬P(x), entonces ¬(∃x)P(x)
+#+INCLUDE: "../src/No_existe_de_para_todo_no.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/No_existe_de_para_todo_no.lean][Lean 4 Web]]
+
+** Si ¬(∀x)P(x), entonces (∃x)¬P(x)
+#+INCLUDE: "../src/Existe_no_de_no_para_todo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existe_no_de_no_para_todo.lean][Lean 4 Web]]
+
+** Si (∃x)¬P(x), entonces ¬(∀x)P(x)
+#+INCLUDE: "../src/No_para_todo_de_existe_no.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/No_para_todo_de_existe_no.lean][Lean 4 Web]]
+
+** ¬¬P → P
+#+INCLUDE: "../src/Eliminacion_doble_negacion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/][Lean 4 Web]]
+
+** P → ¬¬P
+#+INCLUDE: "../src/Introduccion_doble_negacion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion_doble_negacion.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

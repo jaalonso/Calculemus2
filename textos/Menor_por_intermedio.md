@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \((∃z ∈ ℝ)[x < z < y]\), entonces \(x < y\).
+Demostrar con Lean4 que si \\((∃z ∈ ℝ)[x < z < y]\\), entonces \\(x < y\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -20,13 +20,13 @@ by sorry
 
 <b>Demostración en lenguaje natural</b>
 
-Sea \(z\) tal que verifica las siguientes relaciones:
-\begin{align}
-   x < z \tag{1} \\
-   z < y \tag{2}
-\end{align}
+Sea \\(z\\) tal que verifica las siguientes relaciones:
+\\begin{align}
+   x < z \\tag{1} \\\\
+   z < y \\tag{2}
+\\end{align}
 Aplicando la propiedad transitiva a (1) y (2) se tiene que
-\[ x < y \]
+\\[ x < y \\]
 
 <b>Demostraciones con Lean4</b>
 
