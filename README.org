@@ -65,6 +65,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Asimetria_de_menor.md][En ℝ, a < b → ¬(b < a)]] (En [[./src/Asimetria_de_menor.lean][Lean4]]).
 + [[./textos/Existencia_de_valor_intermedio.md][Hay algún número real entre 2 y 3]] (En [[./src/Existencia_de_valor_intermedio.lean][Lean4]]).
 + [[./textos/Condicion_para_no_positivo.md][Si (∀ε > 0)[x ≤ ε], entonces x ≤ 0]] (En [[./src/Condicion_para_no_positivo.lean][Lean4]]).
++ [[./textos/Principio_de_explosion.md][Si 0 < 0, entonces a > 37 para cualquier número a]] (En [[./src/Principio_de_explosion.lean][Lean4]]).
 
 * Divisibilidad
 + [[./textos/Divisibilidad_de_producto.md][Si x, y, z ∈ ℕ, entonces x divide a yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
@@ -105,12 +106,15 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Funcion_no_acotada_superiormente.md][Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior]] (En [[./src/Funcion_no_acotada_superiormente.lean][Lean4]]).
 + [[./textos/Funcion_no_acotada_inferiormente.md][Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior]] (En [[./src/Funcion_no_acotada_inferiormente.lean][Lean4]]).
 + [[./textos/La_identidad_no_esta_acotada_superiormente.md][La función identidad no está acotada superiormente]] (En [[./src/La_identidad_no_esta_acotada_superiormente.lean][Lean4]]).
++ [[./textos/CN_no_acotada_superiormente.md][Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]​]] (En [[./src/CN_no_acotada_superiormente.lean][Lean4]]).
++ [[./textos/CS_de_acotada_superiormente.md][Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente]] (En [[./src/CS_de_acotada_superiormente.lean][Lean4]]).
 + [[./textos/Suma_de_funciones_monotonas.md][Suma de funciones monótonas]] (En [[./src/Suma_de_funciones_monotonas.lean][Lean4]]).
 + [[./textos/Producto_de_un_positivo_por_una_funcion_monotona.md][Si c es no negativo y f es monótona, entonces cf es monótona.]] (En [[./src/Producto_de_un_positivo_por_una_funcion_monotona.lean][Lean4]]).
 + [[./textos/Composicion_de_funciones_monotonas.md][La composición de dos funciones monótonas es monótona]] (En [[./src/Composicion_de_funciones_monotonas.lean][Lean4]]).
 + [[./textos/CN_de_monotona.md][Si f es monótona y f(a) < f(b), entonces a < b]] (En [[./src/CN_de_monotona.lean][Lean4]]).
 + [[./textos/CS_de_no_monotona.md][Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona]] (En [[./src/CS_de_no_monotona.lean][Lean4]]).
 + [[~/alonso/estudio/Calculemus2/textos/Propiedad_de_monotona.md][No para toda f : ℝ → ℝ monótona, (∀a,b)[f(a) ≤ f(b) → a ≤ b]​]] (En [[~/alonso/estudio/Calculemus2/src/Propiedad_de_monotona.lean][Lean4]]).
++ [[./textos/CN_de_no_monotona.md][Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]​]] (En [[./src/CN_de_no_monotona.lean][Lean4]]).
 + [[./textos/Suma_funciones_pares.md][La suma de dos funciones pares es par]] (En [[./src/Suma_funciones_pares.lean][Lean4]]).
 + [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).
 + [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
@@ -129,19 +133,18 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
 + [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
 
+* Lógica
++ [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
++ [[./textos/No_existe_de_para_todo_no.md][Si (∀x)¬P(x), entonces ¬(∃x)P(x)]] (En [[./src/No_existe_de_para_todo_no.lean][Lean4]]).
++ [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
++ [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
++ [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
++ [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
+
 * Sin ordenar
-+ L27 [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
-+ M28 [[./textos/No_existe_de_para_todo_no.md][Si (∀x)¬P(x), entonces ¬(∃x)P(x)]] (En [[./src/No_existe_de_para_todo_no.lean][Lean4]]).
-+ X29 [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
-+ J30 [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
-+ V01 [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
-+ L04 [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
-+ M05 [[./textos/CN_no_acotada_superiormente.md][Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]​]] (En [[./src/CN_no_acotada_superiormente.lean][Lean4]]).
-+ X06 [[./textos/CS_de_acotada_superiormente.md][Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente]] (En [[./src/CS_de_acotada_superiormente.lean][Lean4]]).
-+ J07 [[./textos/CN_de_no_monotona.md][Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]​]] (En [[./src/CN_de_no_monotona.lean][Lean4]]).
-+ V08 [[./textos/Principio_de_explosion.md][Si 0 < 0, entonces a > 37 para cualquier número a]] (En [[./src/Principio_de_explosion.lean][Lean4]]).
 + L11 [[./textos/Introduccion_de_la_conjuncion.md][{x ≤ y, y ≰ x} ⊢ x ≤ y ∧ x ≠ y]] (En [[./src/Introduccion_de_la_conjuncion.lean][Lean4]]).
 + M12 [[~/alonso/estudio/Calculemus2/textos/Eliminacion_de_la_conjuncion.md][x ≤ y ∧ x ≠ y ⊢ y ≰ x]] (En [[~/alonso/estudio/Calculemus2/src/Eliminacion_de_la_conjuncion.lean][Lean4]]).
 + X13 [[./textos/Uso_de_conjuncion.md][Si (m ∣ n ∧ m ≠ n), entonces (m ∣ n ∧ ¬(n ∣ m))]] (En [[./src/Uso_de_conjuncion.lean][Lean4]]).
 + J14 [[./textos/Entre_2_y_3.md][(∃x ∈ ℝ)[2 < x < 3]​]] (En [[./src/Entre_2_y_3.lean][Lean4]]).
 + V15 [[./textos/Menor_por_intermedio.md][Si (∃z ∈ ℝ)[x < z < y], entonces x < y]] (En [[./src/Menor_por_intermedio.lean][Lean4]]).
++ L18 [[./textos/Primos_intermedios.md][Existen números primos m y n tales que 4 < m < n < 10]] (En [[./src/Primos_intermedios.lean][Lean4]]).
