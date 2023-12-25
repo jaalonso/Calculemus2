@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que existen números primos \(m\) y \(n\) tales que \(4 < m < n < 10\).
+Demostrar con Lean4 que existen números primos \\(m\\) y \\(n\\) tales que \\(4 < m < n < 10\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -21,7 +21,7 @@ by sorry
 
 <b>Demostración en lenguaje natural</b>
 
-Basta considerar los números \(5\) y \(7\), ya que son primos y \(4 < 5 < 7 < 10\).
+Basta considerar los números \\(5\\) y \\(7\\), ya que son primos y \\(4 < 5 < 7 < 10\\).
 
 <b>Demostraciones con Lean4</b>
 
