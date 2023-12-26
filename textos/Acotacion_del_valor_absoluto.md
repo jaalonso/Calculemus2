@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \(|x + 3| < 5\), entonces \(-8 < x < 2\).
+Demostrar con Lean4 que si \\(|x + 3| < 5\\), entonces \\(-8 < x < 2\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,11 +22,11 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 Supongamos que
-\[ |x + 3| < 5 \]
+\\[ |x + 3| < 5 \\]
 entonces
-\[ -5 < x + 3 ∧ x + 3 < 5 \]
+\\[ -5 < x + 3 < 5 \\]
 por tanto
-\[ -8 < x ∧ x < 2 \]
+\\[ -8 < x < 2 \\]
 
 <b>Demostraciones con Lean4</b>
 

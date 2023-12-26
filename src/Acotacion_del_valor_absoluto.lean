@@ -17,9 +17,9 @@
 -- Supongamos que
 --    |x + 3| < 5
 -- entonces
---    -5 < x + 3 ∧ x + 3 < 5
+--    -5 < x + 3 < 5
 -- por tanto
---    -8 < x ∧ x < 2
+--    -8 < x < 2
 
 -- Demostraciones con Lean4
 -- ========================
