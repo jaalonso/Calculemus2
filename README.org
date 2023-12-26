@@ -151,3 +151,4 @@ usaba Lean3 en lugar de Lean4.
 + L25 [[./textos/Entre_desigualdades.md][En ℝ, x ≤ y ∧ x ≠ y → x ≤ y ∧ y ≰ x]] (En [[./src/Entre_desigualdades.lean][Lean4]]).
 + M26 [[./textos/CNS_de_distintos.md][En ℝ, si x ≤ y, entonces y ≰ x ↔ x ≠ y]] (En [[./src/CNS_de_distintos.lean][Lean4]]).
 + X27 [[./textos/Suma_nula_de_dos_cuadrados.md][En ℝ, x² + y² = 0 ↔ x = 0 ∧ y = 0]] (En [[./src/Suma_nula_de_dos_cuadrados.lean][Lean4]]).
++ J28 [[./textos/Acotacion_del_valor_absoluto.md][Si |x + 3| < 5, entonces -8 < x < 2]] (En [[./src/Acotacion_del_valor_absoluto.lean][Lean4]]).

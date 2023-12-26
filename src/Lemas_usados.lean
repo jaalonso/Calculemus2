@@ -39,6 +39,7 @@ open Real
 variable (a b c d : ℝ)
 #check (abs_add a b : |a + b| ≤ |a| + |b|)
 #check (abs_le' : |a| ≤ b ↔ a ≤ b ∧ -a ≤ b)
+#check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
 #check (abs_mul a b : |a * b| = |a| * |b|)
 #check (abs_nonneg a : 0 ≤ |a|)
 #check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)

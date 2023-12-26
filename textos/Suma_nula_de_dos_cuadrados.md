@@ -5,8 +5,8 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \(x, y ∈ ℝ\), entonces
-\[ x^2 + y^2 = 0 ↔ x = 0 ∧ y = 0 \]
+Demostrar con Lean4 que si \\(x, y ∈ ℝ\\), entonces
+\\[ x^2 + y^2 = 0 ↔ x = 0 ∧ y = 0 \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,47 +22,48 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 En la demostración usaremos el siguiente lema auxiliar
-\[ (∀ x, y ∈ ℝ)[x² + y² = 0 → x = 0] \]
+\\[ (∀ x, y ∈ ℝ)[x² + y² = 0 → x = 0] \\]
 
 Para la primera implicación, supongamos que
-\[ x² + y² = 0 \tag{1} \]
+\\[ x² + y² = 0 \\tag{1} \\]
 Entonces, por el lema auxiliar,
-\[ x = 0 \tag{2} \]
+\\[ x = 0 \\tag{2} \\]
 Además, aplicando la conmutativa a (1), se tiene
-\[ y² + x² = 0 \]
+\\[ y² + x² = 0 \\]
 y, por el lema auxiliar,
-\[ y = 0 \tag{3} \]
+\\[ y = 0 \\tag{3} \\]
 De (2) y (3) se tiene
-\[ x = 0 ∧ y = 0 \]
+\\[ x = 0 ∧ y = 0 \\]
 
 Para la segunda implicación, supongamos que
-\[ x = 0 ∧ y = 0 \]
+\\[ x = 0 ∧ y = 0 \\]
 Por tanto,
-\begin{align}
-   x² + y² &= 0² + 0² \\
+\\begin{align}
+   x² + y² &= 0² + 0² \\\\
            &= 0
-\end{align}
+\\end{align}
 
 En la demostración del lema auxiliar se usarán los siguientes lemas
-\begin{align}
-   &(∀ x ∈ ℝ)(∀ n ∈ ℕ)[x^n = 0 → x = 0]  \tag{L1} \\
-   &(∀ x, y ∈ ℝ)[x ≤ y → y ≤ x → x = y]  \tag{L2} \\
-   &(∀ x, y ∈ ℝ)[0 ≤ y → x ≤ x + y]      \tag{L3} \\
-   &(∀ x ∈ ℝ)[0 ≤ x²]                    \tag{L4}
+\\begin{align}
+   &(∀ x ∈ ℝ)(∀ n ∈ ℕ)[x^n = 0 → x = 0]  \\tag{L1} \\\\
+   &(∀ x, y ∈ ℝ)[x ≤ y → y ≤ x → x = y]  \\tag{L2} \\\\
+   &(∀ x, y ∈ ℝ)[0 ≤ y → x ≤ x + y]      \\tag{L3} \\\\
+   &(∀ x ∈ ℝ)[0 ≤ x²]                    \\tag{L4}
+\\end{align}
 
 Por el lema L1, para demostrar el lema auxiliar basta demostrar
-\[ x² = 0 \tag{1} \]
+\\[ x² = 0 \\tag{1} \\]
 y, por el lema L2, basta demostrar las siguientes desigualdades
-\begin{align}
-    &x² ≤ 0 \tag{2} \\
-    &0 ≤ x² \tag{3}
-\end{align}
+\\begin{align}
+    &x² ≤ 0 \\tag{2} \\\\
+    &0 ≤ x² \\tag{3}
+\\end{align}
 
 La prueba de la (2) es
-\begin{align}
-   x² &≤ x² + y²   &&\text{[por L3 y L4]} \\
-      &= 0         &&\text{[por la hipótesis]}
-\end{align}
+\\begin{align}
+   x² &≤ x² + y²   &&\\text{[por L3 y L4]} \\\\
+      &= 0         &&\\text{[por la hipótesis]}
+\\end{align}
 
 La (3) se tiene por el lema L4.
 
