@@ -23,17 +23,49 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 Se usará el siguiente lema
-\[ (∀ k, m, n ∈ ℕ)[k ∣ gcd m n ↔ k ∣ m ∧ k ∣ n] \]
+\\[ (∀ k, m, n ∈ ℕ)[k ∣ \gcd(m, n) ↔ k ∣ m ∧ k ∣ n] \\]
 
 Por el lema,
-\[ 3 ∣ gcd 6 15 \]
+\\[ 3 ∣ \gcd(6, 15) \\]
 se reduce a
-\[ 3 ∣ 6 ∧ 3 ∣ 15 \]
+\\[ 3 ∣ 6 ∧ 3 ∣ 15 \\]
 que se verifican fácilmente.
 
 <b>Demostraciones con Lean4</b>
 
 <pre lang="lean">
+import Mathlib.Data.Real.Basic
+import Mathlib.Data.Nat.GCD.Basic
+
+open Nat
+
+-- 1ª demostración
+-- ===============
+
+example : 3 ∣ gcd 6 15 :=
+by
+  rw [dvd_gcd_iff]
+  -- ⊢ 3 ∣ 6 ∧ 3 ∣ 15
+  constructor
+  . -- 3 ∣ 6
+    norm_num
+  . -- ⊢ 3 ∣ 15
+    norm_num
+
+-- 2ª demostración
+-- ===============
+
+example : 3 ∣ gcd 6 15 :=
+by
+  rw [dvd_gcd_iff]
+  -- ⊢ 3 ∣ 6 ∧ 3 ∣ 15
+  constructor <;> norm_num
+
+-- Lemas usados
+-- ============
+
+-- variable (k m n : ℕ)
+-- #check (dvd_gcd_iff : k ∣ gcd m n ↔ k ∣ m ∧ k ∣ n)
 </pre>
 
 <b>Demostraciones interactivas</b>
