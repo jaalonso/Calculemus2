@@ -93,6 +93,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Producto_de_suma_de_cuadrados.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_suma_de_cuadrados.lean][Lean 4 Web]]
 
+** En ℝ, x² + y² = 0 ↔ x = 0 ∧ y = 0
+#+INCLUDE: "../src/Suma_nula_de_dos_cuadrados.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_nula_de_dos_cuadrados.lean][Lean 4 Web]]
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -255,6 +259,34 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Principio_de_explosion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Principio_de_explosion.lean][Lean 4 Web]]
 
+** {x ≤ y, y ≰ x} ⊢ x ≤ y ∧ x ≠ y
+#+INCLUDE: "../src/Introduccion_de_la_conjuncion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion_de_la_conjuncion.lean][Lean 4 Web]]
+
+** x ≤ y ∧ x ≠ y ⊢ y ≰ x
+#+INCLUDE: "../src/Eliminacion_de_la_conjuncion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion_de_la_conjuncion.lean][Lean 4 Web]]
+
+** (∃x ∈ ℝ)[2 < x < 3]
+#+INCLUDE: "../src/Entre_2_y_3.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Entre_2_y_3.lean][Lean 4 Web]]
+
+** Si (∃z ∈ ℝ)[x < z < y], entonces x < y
+#+INCLUDE: "../src/Menor_por_intermedio.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Menor_por_intermedio.lean][Lean 4 Web]]
+
+** En ℝ, x ≤ y ∧ x ≠ y → x ≤ y ∧ y ≰ x
+#+INCLUDE: "../src/Entre_desigualdades.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Entre_desigualdades.lean][Lean 4 Web]]
+
+** En ℝ, si x ≤ y, entonces y ≰ x ↔ x ≠ y
+#+INCLUDE: "../src/CNS_de_distintos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CNS_de_distintos.lean][Lean 4 Web]]
+
+** Si |x + 3| < 5, entonces -8 < x < 2
+#+INCLUDE: "../src/Acotacion_del_valor_absoluto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_del_valor_absoluto.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -276,6 +308,18 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Conmutatividad del máximo común divisor
 #+INCLUDE: "../src/Conmutatividad_del_gcd.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_del_gcd.lean][Lean 4 Web]]
+
+** Si (m ∣ n ∧ m ≠ n), entonces (m ∣ n ∧ ¬(n ∣ m))
+#+INCLUDE: "../src/Uso_de_conjuncion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uso_de_conjuncion.lean][Lean 4 Web]]
+
+** Existen números primos m y n tales que 4 < m < n < 10
+#+INCLUDE: "../src/Primos_intermedios.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Primos_intermedios.lean][Lean 4 Web]]
+
+** 3 divide al máximo común divisor de 6 y 15
+#+INCLUDE: "../src/Divisor_del_mcd.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Divisor_del_mcd.lean][Lean 4 Web]]
 
 * Retículos
 

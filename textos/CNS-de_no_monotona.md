@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que \(f: ℝ → ℝ\) no es monótona syss \((∃x,y)[x ≤ y ∧ f(x) > f(y)]\)​.
+Demostrar con Lean4 que \\(f: ℝ → ℝ\\) no es monótona syss \\((∃x,y)[x ≤ y ∧ f(x) > f(y)]\\)​.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -22,10 +22,10 @@ sorry
 <b>Demostración en lenguaje natural</b>
 
 Por la siguiente cadena de equivalencias:
-\begin{align}
-   f \text{ es no monótona } & ↔ ¬(∀ x y)[x ≤ y → f(x) ≤ f(y)] \\
+\\begin{align}
+   f \\text{ es no monótona } & ↔ ¬(∀ x y)[x ≤ y → f(x) ≤ f(y)] \\\\
                              & ↔ (∃ x y)[x ≤ y ∧ f(x) > f(y)]
-\end{align}
+\\end{align}
 
 <b>Demostraciones con Lean4</b>
 

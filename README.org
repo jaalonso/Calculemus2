@@ -153,4 +153,5 @@ usaba Lean3 en lugar de Lean4.
 + X27 [[./textos/Suma_nula_de_dos_cuadrados.md][En ℝ, x² + y² = 0 ↔ x = 0 ∧ y = 0]] (En [[./src/Suma_nula_de_dos_cuadrados.lean][Lean4]]).
 + J28 [[./textos/Acotacion_del_valor_absoluto.md][Si |x + 3| < 5, entonces -8 < x < 2]] (En [[./src/Acotacion_del_valor_absoluto.lean][Lean4]]).
 + V29 [[./textos/Divisor_del_mcd.md][3 divide al máximo común divisor de 6 y 15]] (En [[./src/Divisor_del_mcd.lean][Lean4]]).
-+ L01 [[./textos/CNS-de_no_monotona.md][f: ℝ → ℝ  no es monótona syss (∃x,y)[x ≤ y ∧ f(x) > f(y)]​]] (En [[./src/CNS-de_no_monotona.lean][Lean4]]).
++ L01 [[./textos/CNS-de_no_monotona.md][f: ℝ → ℝ  no es monótona syss (∃x,y)[x ≤ y ∧ f(x) > f(y)]​]] (En [[./src/CNS_de_no_monotona.lean][Lean4]]).
++ M02 [[./textos/La_opuesta_es_no_monotona.md][La función x ↦ -x no es monótona creciente]] (En [[./src/La_opuesta_es_no_monotona.lean][Lean4]]).

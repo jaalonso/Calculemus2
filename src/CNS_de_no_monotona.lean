@@ -1,7 +1,7 @@
 -- CNS-de_no_monotona.lean
 -- f: ℝ → ℝ no es monótona syss (∃x,y)[x ≤ y ∧ f(x) > f(y)]​.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 29-diciembre-2023
+-- Sevilla, 1-enero-2023
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
