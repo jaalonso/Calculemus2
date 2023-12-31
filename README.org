@@ -156,3 +156,4 @@ usaba Lean3 en lugar de Lean4.
 + L01 [[./textos/CNS-de_no_monotona.md][f: ℝ → ℝ  no es monótona syss (∃x,y)(x ≤ y ∧ f(x) > f(y))​]] (En [[./src/CNS_de_no_monotona.lean][Lean4]]).
 + M02 [[./textos/La_opuesta_es_no_monotona.md][La función x ↦ -x no es monótona creciente]] (En [[./src/La_opuesta_es_no_monotona.lean][Lean4]]).
 + X03 [[./textos/Caracterizacion_de_menor_en_ordenes_parciales.md][En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b]] (En [[./src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean4]]).
++ J04 [[./textos/Preorden_es_irreflexivo.md][Las relaciones de preorden son irreflexivas]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).

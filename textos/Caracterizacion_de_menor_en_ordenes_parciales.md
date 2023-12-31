@@ -33,15 +33,9 @@ Por el lema L1, lo que tenemos que demostrar es
 \\[ a ≤ b ∧ b ≰ a ↔ a ≤ b ∧ a ≠ b \\]
 Lo haremos demostrando las dos implicaciones.
 
-(⇒) Supongamos que \\(a ≤ b\\) y \\(b ≰ a\\). Tenemos que demostrar que
-\\(a ≠ b\\). Lo haremos por reducción al absurdo. Para ello, supongamos que
-\\(a = b\\). Entonces, \\(b ≤ a\\) que es una
-contradicicción con \\(b ≰ a\\).
+(⇒) Supongamos que \\(a ≤ b\\) y \\(b ≰ a\\). Tenemos que demostrar que \\(a ≠ b\\). Lo haremos por reducción al absurdo. Para ello, supongamos que \\(a = b\\). Entonces, \\(b ≤ a\\) que es una contradicicción con \\(b ≰ a\\).
 
-(⇐) Supongamos que \\(a ≤ b\\) y \\(a ≠ b\\). Tenemos que demostrar que
-\\(b ≰ a\\). Lo haremos por reducción al absurdo. Para ello, supongamos que
-\\(b ≤ a\\). Entonces, junto con \\(a ≤ b\\), se tiene que \\(a = b\\) que es una
-contradicicción con \\(a ≠ b\\).
+(⇐) Supongamos que \\(a ≤ b\\) y \\(a ≠ b\\). Tenemos que demostrar que \\(b ≰ a\\). Lo haremos por reducción al absurdo. Para ello, supongamos que \\(b ≤ a\\). Entonces, junto con \\(a ≤ b\\), se tiene que \\(a = b\\) que es una contradicicción con \\(a ≠ b\\).
 
 <b>Demostraciones con Lean4</b>
 

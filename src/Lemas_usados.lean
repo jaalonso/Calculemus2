@@ -238,7 +238,9 @@ end Conjuntos
 section OrdenParcial
 variable {α : Type _} [PartialOrder α]
 variable (a b c : α)
+#check (irrefl a : ¬a < a)
 #check (le_trans : a ≤ b → b ≤ c → a ≤ c)
+#check (lt_trans : a < b → b < c → a < c)
 #check (monotone_const : Monotone fun _ : ℝ ↦ c)
 end OrdenParcial
 
