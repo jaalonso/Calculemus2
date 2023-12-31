@@ -157,3 +157,4 @@ usaba Lean3 en lugar de Lean4.
 + M02 [[./textos/La_opuesta_es_no_monotona.md][La función x ↦ -x no es monótona creciente]] (En [[./src/La_opuesta_es_no_monotona.lean][Lean4]]).
 + X03 [[./textos/Caracterizacion_de_menor_en_ordenes_parciales.md][En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b]] (En [[./src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean4]]).
 + J04 [[./textos/Preorden_es_irreflexivo.md][Las relaciones de preorden son irreflexivas]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).
++ V05 [[./textos/Preorden_transitiva.md][Si ≤ es un preorden, entonces < es transitiva]] (En [[./src/Preorden_transitiva.lean][Lean4]]).
