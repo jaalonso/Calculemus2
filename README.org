@@ -95,6 +95,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
 + [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
 
+* Relaciones de orden
++ [[./textos/Caracterizacion_de_menor_en_ordenes_parciales.md][En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b]] (En [[./src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean4]]).
++ [[./textos/Preorden_es_irreflexivo.md][Si ≤ es un preorden, entonces < es irreflexiva]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).
++ [[./textos/Preorden_transitiva.md][Si ≤ es un preorden, entonces < es transitiva]] (En [[./src/Preorden_transitiva.lean][Lean4]]).
+
 * Anillos ordenados
 + [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
 + [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
@@ -126,6 +131,8 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/CS_de_no_monotona.md][Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona]] (En [[./src/CS_de_no_monotona.lean][Lean4]]).
 + [[~/alonso/estudio/Calculemus2/textos/Propiedad_de_monotona.md][No para toda f : ℝ → ℝ monótona, (∀a,b)(f(a) ≤ f(b) → a ≤ b)​]] (En [[~/alonso/estudio/Calculemus2/src/Propiedad_de_monotona.lean][Lean4]]).
 + [[./textos/CN_de_no_monotona.md][Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]​]] (En [[./src/CN_de_no_monotona.lean][Lean4]]).
++ [[./textos/CNS-de_no_monotona.md][f: ℝ → ℝ no es monótona syss (∃x,y)(x ≤ y ∧ f(x) > f(y))​]] (En [[./src/CNS_de_no_monotona.lean][Lean4]]).
++ [[./textos/La_opuesta_es_no_monotona.md][La función x ↦ -x no es monótona creciente]] (En [[./src/La_opuesta_es_no_monotona.lean][Lean4]]).
 + [[./textos/Suma_funciones_pares.md][La suma de dos funciones pares es par]] (En [[./src/Suma_funciones_pares.lean][Lean4]]).
 + [[./textos/Producto_de_funciones_impares.md][El producto de dos funciones impares es par]] (En [[./src/Producto_de_funciones_impares.lean][Lean4]]).
 + [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
@@ -153,8 +160,3 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
 
 * Sin ordenar
-+ L01 [[./textos/CNS-de_no_monotona.md][f: ℝ → ℝ  no es monótona syss (∃x,y)(x ≤ y ∧ f(x) > f(y))​]] (En [[./src/CNS_de_no_monotona.lean][Lean4]]).
-+ M02 [[./textos/La_opuesta_es_no_monotona.md][La función x ↦ -x no es monótona creciente]] (En [[./src/La_opuesta_es_no_monotona.lean][Lean4]]).
-+ X03 [[./textos/Caracterizacion_de_menor_en_ordenes_parciales.md][En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b]] (En [[./src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean4]]).
-+ J04 [[./textos/Preorden_es_irreflexivo.md][Las relaciones de preorden son irreflexivas]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).
-+ V05 [[./textos/Preorden_transitiva.md][Si ≤ es un preorden, entonces < es transitiva]] (En [[./src/Preorden_transitiva.lean][Lean4]]).
