@@ -355,6 +355,21 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Propiedad_distributiva_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_distributiva_2.lean][Lean 4 Web]]
 
+* Relaciones de orden
+
+** En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b
+#+INCLUDE: "../src/Caracterizacion_de_menor_en_ordenes_parciales.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean 4 Web]]
+
+** Si ≤ es un preorden, entonces < es irreflexiva
+#+INCLUDE: "../src/Preorden_es_irreflexivo.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden_es_irreflexivo.lean][Lean 4 Web]]
+
+** Si ≤ es un preorden, entonces < es transitiva
+#+INCLUDE: "../src/Preorden_transitiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden_transitiva.lean][Lean 4 Web]]
+
+
 * Anillos ordenados
 
 ** En los anillos ordenados, a ≤ b → 0 ≤ b - a
@@ -458,6 +473,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]
 #+INCLUDE: "../src/CN_de_no_monotona.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN_de_no_monotona.lean][Lean 4 Web]]
+
+** f: ℝ → ℝ  no es monótona syss (∃x,y)(x ≤ y ∧ f(x) > f(y))
+#+INCLUDE: "../src/CNS_de_no_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CNS_de_no_monotona.lean][Lean 4 Web]]
+
+** La función x ↦ -x no es monótona creciente
+#+INCLUDE: "../src/La_opuesta_es_no_monotona.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_opuesta_es_no_monotona.lean][Lean 4 Web]]
 
 ** La suma de dos funciones pares es par
 #+INCLUDE: "../src/Suma_funciones_pares.lean" src lean :lines "7-"

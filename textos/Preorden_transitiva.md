@@ -142,10 +142,10 @@ example : a < b → b < c → a < c :=
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/???" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden_transitiva.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
 <ul>
-<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. ???.</li>
+<li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 38.</li>
 </ul>
