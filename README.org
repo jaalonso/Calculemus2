@@ -160,4 +160,5 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
 
 * Sin ordenar
-+ 08 [[./textos/Introduccion_de_la_disyuncion_1.md][En ℝ, y > x^2 ⊢ y > 0 ∨ y < -1]] (En [[./src/Introduccion_de_la_disyuncion_1.lean][Lean4]]).
++ 08 [[./textos/Introduccion_de_la_disyuncion_1.md][En ℝ, y > x² ⊢ y > 0 ∨ y < -1]] (En [[./src/Introduccion_de_la_disyuncion_1.lean][Lean4]]).
++ 09 [[./textos/Introduccion_de_la_disyuncion_2.md][En ℝ, -y > x² + 1 ⊢ y > 0 ∨ y < -1]] (En [[./src/Introduccion_de_la_disyuncion_2.lean][Lean4]]).
