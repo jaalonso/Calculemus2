@@ -25,10 +25,10 @@ by sorry
 
 Usaremos los siguientes lemas
 \\begin{align}
-   &(∀ b, c ∈ ℝ)[b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)]               \\tag{(L1)} \\\\
-   &(∀ a ∈ ℝ)[0 ≤ a²]                                              \\tag{(L2)} \\\\
-   &(∀ a  ∈ ℝ)[0 + a = a]                                          \\tag{(L3)} \\\\
-   &(∀ a, b ∈ ℝ)[a < -b ↔ b < -a]                                  \\tag{(L4)}
+   &(∀ b, c ∈ ℝ)[b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)]               \\tag{L1} \\\\
+   &(∀ a ∈ ℝ)[0 ≤ a²]                                              \\tag{L2} \\\\
+   &(∀ a  ∈ ℝ)[0 + a = a]                                          \\tag{L3} \\\\
+   &(∀ a, b ∈ ℝ)[a < -b ↔ b < -a]                                  \\tag{L4}
 \\end{align}
 
 Se tiene
