@@ -163,3 +163,4 @@ usaba Lean3 en lugar de Lean4.
 + 08 [[./textos/Introduccion_de_la_disyuncion_1.md][En ℝ, y > x² ⊢ y > 0 ∨ y < -1]] (En [[./src/Introduccion_de_la_disyuncion_1.lean][Lean4]]).
 + 09 [[./textos/Introduccion_de_la_disyuncion_2.md][En ℝ, -y > x² + 1 ⊢ y > 0 ∨ y < -1]] (En [[./src/Introduccion_de_la_disyuncion_2.lean][Lean4]]).
 + 10 [[./textos/Eliminacion_de_la_disyuncion.md][En ℝ, si x < |y|, entonces x < y ó x < -y]] (En [[./src/Eliminacion_de_la_disyuncion.lean][Lean4]]).
++ 11 [[./textos/Cota_inf_de_abs.md][En ℝ, x ≤ |x|]] (En [[./src/Cota_inf_de_abs.lean][Lean4]]).
