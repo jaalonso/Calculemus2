@@ -31,7 +31,7 @@ Se usarán los siguientes lemas
 Se demostrará por casos según \\(x ≥ 0\\):
 
 Primer caso: Supongamos que \\(x ≥ 0\\). Entonces,
-begin{align}
+\\begin{align}
    x &≤ x      \\\\
      &= |x|    &&\\text{[por L1]}
 \\end{align}
