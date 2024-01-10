@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que en \(ℝ\), \(-x ≤ |x|\).
+Demostrar con Lean4 que en \\(ℝ\\), \\(-x ≤ |x|\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -21,26 +21,26 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 Se usarán los siguientes lemas
-\begin{align}
-   &(∀ x ∈ ℝ)[0 ≤ x → -x ≤ x]                                      \tag{L1} \\
-   &(∀ x ∈ ℝ)[0 ≤ x → |x| = x]                                     \tag{L2} \\
-   &(∀ x ∈ ℝ)[x ≤ x]                                               \tag{L3} \\
-   &(∀ x ∈ ℝ)[x < 0 → |x| = -x]                                    \tag{L4}
-\end{align}
+\\begin{align}
+   &(∀ x ∈ ℝ)[0 ≤ x → -x ≤ x]                                      \\tag{L1} \\\\
+   &(∀ x ∈ ℝ)[0 ≤ x → |x| = x]                                     \\tag{L2} \\\\
+   &(∀ x ∈ ℝ)[x ≤ x]                                               \\tag{L3} \\\\
+   &(∀ x ∈ ℝ)[x < 0 → |x| = -x]                                    \\tag{L4}
+\\end{align}
 
-Se demostrará por casos según \(x ≥ 0\):
+Se demostrará por casos según \\(x ≥ 0\\):
 
-Primer caso: Supongamos que \(x ≥ 0\). Entonces,
-\begin{align}
-   -x &≤ x      &&\text{[por L1]} \\
-      &= |x|    &&\text{[por L2]}
-\end{align}
+Primer caso: Supongamos que \\(x ≥ 0\\). Entonces,
+\\begin{align}
+   -x &≤ x      &&\\text{[por L1]} \\\\
+      &= |x|    &&\\text{[por L2]}
+\\end{align}
 
-Segundo caso: Supongamos que \(x < 0\). Entonces,
-\begin{align}
-   -x &≤ -x     &&\text{[por L3]} \\
-      &= |x|    &&\text{[por L4]}
-\end{align}
+Segundo caso: Supongamos que \\(x < 0\\). Entonces,
+\\begin{align}
+   -x &≤ -x     &&\\text{[por L3]} \\\\
+      &= |x|    &&\\text{[por L4]}
+\\end{align}
 
 <b>Demostraciones con Lean4</b>
 

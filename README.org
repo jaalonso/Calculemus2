@@ -165,3 +165,4 @@ usaba Lean3 en lugar de Lean4.
 + 10 [[./textos/Eliminacion_de_la_disyuncion.md][En ℝ, si x < |y|, entonces x < y ó x < -y]] (En [[./src/Eliminacion_de_la_disyuncion.lean][Lean4]]).
 + 11 [[./textos/Cota_inf_de_abs.md][En ℝ, x ≤ |x|]] (En [[./src/Cota_inf_de_abs.lean][Lean4]]).
 + 12 [[./textos/Cota_inf2_de_abs.md][En ℝ, -x ≤ |x|]] (En [[./src/Cota_inf2_de_abs.lean][Lean4]]).
++ 15 [[./textos/Desigualdad_triangular_para_valor_absoluto.md][En ℝ, |x + y| ≤ |x| + |y|]] (En [[./src/Desigualdad_triangular_para_valor_absoluto.lean][Lean4]]).
