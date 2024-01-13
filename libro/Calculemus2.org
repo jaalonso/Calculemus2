@@ -287,6 +287,26 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Acotacion_del_valor_absoluto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_del_valor_absoluto.lean][Lean 4 Web]]
 
+** En ℝ, y > x² ⊢ y > 0 ∨ y < -1
+#+INCLUDE: "../src/Introduccion_de_la_disyuncion_1.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion_de_la_disyuncion_1.lean][Lean 4 Web]]
+
+** En ℝ, -y > x² + 1 ⊢ y > 0 ∨ y < -1
+#+INCLUDE: "../src/Introduccion_de_la_disyuncion_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion_de_la_disyuncion_2.lean][Lean 4 Web]]
+
+** En ℝ, si x < |y|, entonces x < y ó x < -y
+#+INCLUDE: "../src/Eliminacion_de_la_disyuncion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion_de_la_disyuncion.lean][Lean 4 Web]]
+
+** En ℝ, x ≤ |x|
+#+INCLUDE: "../src/Cota_inf_de_abs.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_inf_de_abs.lean][Lean 4 Web]]
+
+** En ℝ, -x ≤ |x|
+#+INCLUDE: "../src/Cota_inf2_de_abs.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_inf2_de_abs.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz

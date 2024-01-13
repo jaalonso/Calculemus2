@@ -22,9 +22,9 @@ by sorry
 <b>Demostración en lenguaje natural</b>
 
 Se usarán los siguientes lemas
-\\begin{array}
+\\begin{align}
     &(∀ x ∈ ℝ)[0 ≤ x → |x| = x)                          \\tag{L1} \\\\
-    &(∀ a, b, c, d ∈ ℝ)[a ≤ b ∧ c ≤ d → a + c ≤ b + d    \\tag{L2} \\\\
+    &(∀ a, b, c, d ∈ ℝ)[a ≤ b ∧ c ≤ d → a + c ≤ b + d]   \\tag{L2} \\\\
     &(∀ x ∈ ℝ)[x ≤ |x|]                                  \\tag{L3} \\\\
     &(∀ x ∈ ℝ)[x < 0 → |x| = -x]                         \\tag{L4} \\\\
     &(∀ x, y ∈ ℝ)[-(x + y) = -x + -y]                    \\tag{L5} \\\\
@@ -43,7 +43,7 @@ Segundo caso: Supongamos que \\(x + y < 0\\). Entonces,
 \\begin{align}
    |x + y| &= -(x + y)     &&\\text{[por L4]} \\\\
            &= -x + -y      &&\\text{[por L5]} \\\\
-           &≤ |x| + |y|    &&\\text{[por L2 y L6]
+           &≤ |x| + |y|    &&\\text{[por L2 y L6]}
 \\end{align}
 
 <b>Demostraciones con Lean4</b>
