@@ -1,7 +1,7 @@
 -- CS_de_divisibilidad_del_producto.lean
 -- Si m divide a n o a k, entonces m divide a nk.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 14-enero-2024
+-- Sevilla, 17-enero-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
