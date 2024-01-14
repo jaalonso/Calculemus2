@@ -167,3 +167,4 @@ usaba Lean3 en lugar de Lean4.
 * Sin ordenar
 + 15 [[./textos/Desigualdad_triangular_para_valor_absoluto.md][En ℝ, |x + y| ≤ |x| + |y|]] (En [[./src/Desigualdad_triangular_para_valor_absoluto.lean][Lean4]]).
 + 16 [[./textos/Eliminacion_de_la_disyuncion_con_rcases.md][En ℝ, si x ≠ 0 entonces x < 0 ó x > 0]] (En [[./src/Eliminacion_de_la_disyuncion_con_rcases.lean][Lean4]]).
++ 17 [[./textos/CS_de_divisibilidad_del_producto.md][Si m divide a n o a k, entonces m divide a nk]] (En [[./src/CS_de_divisibilidad_del_producto.lean][Lean4]]).
