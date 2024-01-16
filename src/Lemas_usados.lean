@@ -5,7 +5,7 @@
 -- ---------------------------------------------------------------------
 
 import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Order.Ring.Defs        -- 1
+import Mathlib.Algebra.Order.Ring.Defs
 import Mathlib.Algebra.Ring.Defs
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Data.Real.Basic
@@ -56,6 +56,8 @@ variable (a b c d x y : ℝ)
 #check (add_pos : 0 < a → 0 < b → 0 < a + b)
 #check (add_sub_cancel a b : a + b - b = a)
 #check (div_mul_cancel a : b ≠ 0 → (a / b) * b = a)
+#check (eq_neg_of_add_eq_zero_left : x + y = 0 → x = -y)
+#check (eq_zero_or_eq_zero_of_mul_eq_zero : x * y = 0 → x = 0 ∨ y = 0)
 #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
 #check (exp_lt_exp : exp a < exp b ↔ a < b)
 #check (exp_pos a : 0 < exp a)
@@ -119,8 +121,11 @@ variable (a b c d x y : ℝ)
 #check (pow_eq_zero : ∀ {n : ℕ}, a ^ n = 0 → a = 0)
 #check (pow_two a : a ^ 2 = a * a)
 #check (pow_two_nonneg a : 0 ≤ a ^ 2)
+#check (sq_eq_one_iff : x ^ 2 = 1 ↔ x = 1 ∨ x = -1)
+#check (sq_eq_sq_iff_eq_or_eq_neg : x ^ 2 = y ^ 2 ↔ x = y ∨ x = -y)
 #check (sq_nonneg a : 0 ≤ a ^ 2)
 #check (sub_add_cancel a b : a - b + b = a)
+#check (sub_eq_zero : x - y = 0 ↔ x = y)
 #check (sub_le_sub_left : a ≤ b → ∀ (c : ℝ), c - b ≤ c - a)
 #check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)
 #check (sub_sq a b : (a - b) ^ 2 = a ^ 2 - 2 * a * b + b ^ 2)
