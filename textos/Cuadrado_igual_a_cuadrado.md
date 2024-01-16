@@ -1,11 +1,12 @@
 ---
-Título: En ℝ, si x² = 1 entonces x = 1 ó x = -1.
+Título: En ℝ, x² = y² → x = y ∨ x = -y.
 Autor:  José A. Alonso
 ---
 
 [mathjax]
 
-Demostrar con Lean4 que en \(ℝ\), si \(x² = 1\) entonces \(x = 1\) ó \(x = -1\).
+Demostrar con Lean4 que en \(ℝ\),
+\[x² = y² → x = y ∨ x = -y\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -14,8 +15,8 @@ import Mathlib.Data.Real.Basic
 variable (x y : ℝ)
 
 example
-  (h : x^2 = 1)
-  : x = 1 ∨ x = -1 :=
+  (h : x^2 = y^2)
+  : x = y ∨ x = -y :=
 by sorry
 </pre>
 <!--more-->
@@ -32,24 +33,25 @@ Usaremos los siguientes lemas
 
 Se tiene que
 \begin{align}
-   (x - 1)(x + 1) &= x² - 1     \\
-                  &= 1 - 1      &&\text{[por la hipótesis]} \\
+   (x - y)(x + y) &= x² - y²    \\
+                  &= y² - y²    &&\text{[por la hipótesis]} \\
                   &= 0          &&\text{[por L1]}
 \end{align}
 y, por el lema L2, se tiene que
-\[ x - 1 = 0 ∨ x + 1 = 0 \]
+\[ x - y = 0 ∨ x + y = 0 \]
+
 Acabaremos la demostración por casos.
 
 Primer caso:
 \begin{align}
-  x - 1 = 0 &⟹ x = 1             &&\text{[por L3]} \\
-            &⟹ x = 1 ∨ x = -1
+  x - y = 0 &⟹ x = y             &&\text{[por L3]} \\
+            &⟹ x = y ∨ x = -y
 \end{align}
 
 Segundo caso:
 \begin{align}
-  x + 1 = 0 &⟹ x = -1            &&\text{[por L4]} \\
-            &⟹ x = 1 ∨ x = -1
+  x + y = 0 &⟹ x = -y            &&\text{[por L4]} \\
+            &⟹ x = y ∨ x = -y
 \end{align}
 
 <b>Demostraciones con Lean4</b>
@@ -62,73 +64,65 @@ variable (x y : ℝ)
 -- ===============
 
 example
-  (h : x^2 = 1)
-  : x = 1 ∨ x = -1 :=
+  (h : x^2 = y^2)
+  : x = y ∨ x = -y :=
 by
-  have h1 : (x - 1) * (x + 1) = 0 := by
-    calc (x - 1) * (x + 1) = x^2 - 1 := by ring
-                         _ = 1 - 1   := by rw [h]
-                         _ = 0       := sub_self 1
-  have h2 : x - 1 = 0 ∨ x + 1 = 0 := by
+  have h1 : (x - y) * (x + y) = 0 := by
+    calc (x - y) * (x + y) = x^2 - y^2 := by ring
+                         _ = y^2 - y^2 := by rw [h]
+                         _ = 0         := sub_self (y ^ 2)
+  have h2 : x - y = 0 ∨ x + y = 0 := by
     apply eq_zero_or_eq_zero_of_mul_eq_zero h1
   rcases h2 with h3 | h4
-  . -- h3 : x - 1 = 0
+  . -- h3 : x - y = 0
     left
-    -- ⊢ x = 1
+    -- ⊢ x = y
     exact sub_eq_zero.mp h3
-  . -- h4 : x + 1 = 0
+  . -- h4 : x + y = 0
     right
-    -- ⊢ x = -1
+    -- ⊢ x = -y
     exact eq_neg_of_add_eq_zero_left h4
 
 -- 2ª demostración
 -- ===============
 
 example
-  (h : x^2 = 1)
-  : x = 1 ∨ x = -1 :=
+  (h : x^2 = y^2)
+  : x = y ∨ x = -y :=
 by
-  have h1 : (x - 1) * (x + 1) = 0 := by nlinarith
-  have h2 : x - 1 = 0 ∨ x + 1 = 0 := by aesop
+  have h1 : (x - y) * (x + y) = 0 := by nlinarith
+  have h2 : x - y = 0 ∨ x + y = 0 := by aesop
   rcases h2 with h3 | h4
-  . -- h3 : x - 1 = 0
+  . -- h3 : x - y = 0
     left
-    -- ⊢ x = 1
+    -- ⊢ x = y
     linarith
-  . -- h4 : x + 1 = 0
+  . -- h4 : x + y = 0
     right
-    -- ⊢ x = -1
+    -- ⊢ x = -y
     linarith
 
--- 3ª demostración
+-- 2ª demostración
 -- ===============
 
 example
-  (h : x^2 = 1)
-  : x = 1 ∨ x = -1 :=
-sq_eq_one_iff.mp h
-
--- 3ª demostración
--- ===============
-
-example
-  (h : x^2 = 1)
-  : x = 1 ∨ x = -1 :=
-by aesop
+  (h : x^2 = y^2)
+  : x = y ∨ x = -y :=
+sq_eq_sq_iff_eq_or_eq_neg.mp h
 
 -- Lemas usados
 -- ============
 
 -- #check (eq_neg_of_add_eq_zero_left : x + y = 0 → x = -y)
 -- #check (eq_zero_or_eq_zero_of_mul_eq_zero : x * y = 0 → x = 0 ∨ y = 0)
--- #check (sq_eq_one_iff : x ^ 2 = 1 ↔ x = 1 ∨ x = -1)
+-- #check (sq_eq_sq_iff_eq_or_eq_neg : x ^ 2 = y ^ 2 ↔ x = y ∨ x = -y)
 -- #check (sub_eq_zero : x - y = 0 ↔ x = y)
 -- #check (sub_self x : x - x = 0)
 </pre>
 
 <b>Demostraciones interactivas</b>
 
-Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_uno.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
+Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_cuadrado.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
 <b>Referencias</b>
 
