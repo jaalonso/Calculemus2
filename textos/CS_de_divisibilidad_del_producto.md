@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \\(m\\) divide a \\(n\\) o a \\(k\\), entonces \\(m\\) divide a \\(nk\\).
+Demostrar con Lean4 que si \(m\) divide a \(n\) o a \(k\), entonces \(m\) divide a \(nk\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -24,23 +24,23 @@ by sorry
 
 Se demuestra por casos.
 
-Caso 1: Supongamos que \\(m ∣ n\\). Entonces, existe un \\(a ∈ ℕ\\) tal que
-\\[ n = ma \\]
+Caso 1: Supongamos que \(m ∣ n\). Entonces, existe un \(a ∈ ℕ\) tal que
+\[ n = ma \]
 Por tanto,
-\\begin{align}
-   nk &= (ma)k \\\\
+\begin{align}
+   nk &= (ma)k \\
       &= m(ak)
-\\end{align}
-que es divisible por \\(m\\).
+\end{align}
+que es divisible por \(m\).
 
-Caso 2: Supongamos que \\(m ∣ k). Entonces, existe un \\(b ∈ ℕ\\) tal que
-\\[ k = mb \\]
+Caso 2: Supongamos que \(m ∣ k). Entonces, existe un \(b ∈ ℕ\) tal que
+\[ k = mb \]
 Por tanto,
-\\begin{align}
-   nk &= n(mb) \\\\
+\begin{align}
+   nk &= n(mb) \\
       &= m(nb)
-\\end{align}
-que es divisible por \\(m\\).
+\end{align}
+que es divisible por \(m\).
 
 <b>Demostraciones con Lean4</b>
 
@@ -150,3 +150,38 @@ Se puede interactuar con las demostraciones anteriores en <a href="https://live.
 <ul>
 <li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 39.</li>
 </ul>
+
+<b>Demostraciones con Isabelle/HOL</b>
+
+<pre lang="isar">
+theory CS_de_divisibilidad_del_producto
+  imports Main
+begin
+
+(* 1ª demostración *)
+lemma
+  fixes n m k :: nat
+  assumes "m dvd n ∨ m dvd k"
+  shows "m dvd (n * k)"
+using assms
+proof
+    assume "m dvd n"
+    then obtain a where "n = m * a" by auto
+    then have "n * k = m * (a * k)" by simp
+    then show ?thesis by auto
+  next
+    assume "m dvd k"
+    then obtain b where "k = m * b" by auto
+    then have "n * k = m * (n * b)" by simp
+    then show ?thesis by auto
+qed
+
+(* 2ª demostración *)
+lemma
+  fixes n m k :: nat
+  assumes "m dvd n ∨ m dvd k"
+  shows "m dvd (n * k)"
+  using assms by auto
+
+end
+</pre>

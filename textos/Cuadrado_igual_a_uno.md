@@ -20,7 +20,7 @@ by sorry
 </pre>
 <!--more-->
 
-<b>Demostración en lenguaje natural</b>
+<h2>Demostración en lenguaje natural</h2>
 
 Usaremos los siguientes lemas
 \begin{align}
@@ -52,7 +52,7 @@ Segundo caso:
             &⟹ x = 1 ∨ x = -1
 \end{align}
 
-<b>Demostraciones con Lean4</b>
+<h2>Demostraciones con Lean4</h2>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -126,12 +126,83 @@ by aesop
 -- #check (sub_self x : x - x = 0)
 </pre>
 
-<b>Demostraciones interactivas</b>
+<h2>Demostraciones interactivas</h2>
 
 Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_uno.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
-<b>Referencias</b>
+<h2>Referencias</h2>
 
 <ul>
 <li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 39.</li>
 </ul>
+
+<h2>Demostraciones con Isabelle/HOL</h2>
+
+<pre lang="isar">
+theory Cuadrado_igual_a_uno
+  imports Main HOL.Real
+begin
+
+(* 1ª demostración *)
+lemma
+  fixes x :: real
+  assumes "x^2 = 1"
+  shows "x = 1 ∨ x = -1"
+proof -
+  have "(x - 1) * (x + 1) = x^2 - 1"
+    by algebra
+  also have "... = 0"
+    using assms by simp
+  finally have "(x - 1) * (x + 1) = 0" .
+  moreover
+  { assume "(x - 1) = 0"
+    then have "x = 1"
+      by simp }
+  moreover
+  { assume "(x + 1) = 0"
+    then have "x = -1"
+      by simp }
+  ultimately show "x = 1 ∨ x = -1"
+    by auto
+qed
+
+(* 2ª demostración *)
+lemma
+  fixes x :: real
+  assumes "x^2 = 1"
+  shows "x = 1 ∨ x = -1"
+proof -
+  have "(x - 1) * (x + 1) = x^2 - 1"
+    by algebra
+  also have "... = 0"
+    using assms by simp
+  finally have "(x - 1) * (x + 1) = 0" .
+  then show "x = 1 ∨ x = -1"
+    by auto
+qed
+
+(* 3ª demostración *)
+lemma
+  fixes x :: real
+  assumes "x^2 = 1"
+  shows "x = 1 ∨ x = -1"
+proof -
+  have "(x - 1) * (x + 1) = 0"
+  proof -
+    have "(x - 1) * (x + 1) = x^2 - 1" by algebra
+    also have "… = 0" by (simp add: assms)
+    finally show ?thesis .
+  qed
+  then show "x = 1 ∨ x = -1"
+    by auto
+qed
+
+(* 4ª demostración *)
+lemma
+  fixes x :: real
+  assumes "x^2 = 1"
+  shows "x = 1 ∨ x = -1"
+using assms power2_eq_1_iff by blast
+
+end
+</pre>

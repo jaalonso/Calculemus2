@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \\((∃ x, y ∈ ℝ)[z = x² + y² ∨ z = x² + y² + 1]\\), entonces \\(z ≥ 0\\).
+Demostrar con Lean4 que si \((∃ x, y ∈ ℝ)[z = x² + y² ∨ z = x² + y² + 1]\), entonces \(z ≥ 0\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -21,28 +21,28 @@ by sorry
 </pre>
 <!--more-->
 
-<b>Demostración en lenguaje natural</b>
+<h2>Demostración en lenguaje natural</h2>
 
 Usaremos los siguientes lemas
-\\begin{align}
-   &(∀ x ∈ ℝ)[x² ≥ 0]                                              \\tag{L1} \\\\
-   &(∀ x, y ∈ ℝ)[x ≥ 0 → y ≥ 0 → x + y ≥ 0]                        \\tag{L2} \\\\
-   &1 ≥ 0                                                          \\tag{L3}
-\\end{align}
+\begin{align}
+   &(∀ x ∈ ℝ)[x² ≥ 0]                                              \tag{L1} \\
+   &(∀ x, y ∈ ℝ)[x ≥ 0 → y ≥ 0 → x + y ≥ 0]                        \tag{L2} \\
+   &1 ≥ 0                                                          \tag{L3}
+\end{align}
 
-Sean \\(a\\) y \\(b\\) tales que
-\\[ z = a² + b² ∨ z = a² + b² + 1 \\]
+Sean \(a\) y \(b\) tales que
+\[ z = a² + b² ∨ z = a² + b² + 1 \]
 Entonces, por L1, se tiene que
-\\begin{align}
-   &a² ≥ 0                                                         \\tag{1} \\\\
-   &b² ≥ 0                                                         \\tag{2}
-\\end{align}
+\begin{align}
+   &a² ≥ 0                                                         \tag{1} \\
+   &b² ≥ 0                                                         \tag{2}
+\end{align}
 
-En el primer caso, \\(z = a² + b²\\) y se tiene que \\(z ≥ 0\\) por el lema L2 aplicado a (1) y (2).
+En el primer caso, \(z = a² + b²\) y se tiene que \(z ≥ 0\) por el lema L2 aplicado a (1) y (2).
 
-En el segundo caso, \\(z = a² + b² + 1\\) y se tiene que \\(z ≥ 0\\) por el lema L2 aplicado a (1), (2) y L3.
+En el segundo caso, \(z = a² + b² + 1\) y se tiene que \(z ≥ 0\) por el lema L2 aplicado a (1), (2) y L3.
 
-<b>Demostraciones con Lean4</b>
+<h2>Demostraciones con Lean4</h2>
 
 <pre lang="lean">
 import Mathlib.Data.Real.Basic
@@ -178,12 +178,54 @@ by rcases h with ⟨a, b, rfl | rfl⟩ <;> nlinarith
 -- #check (zero_le_one : 0 ≤ 1)
 </pre>
 
-<b>Demostraciones interactivas</b>
+<h2>Demostraciones interactivas</h2>
 
 Se puede interactuar con las demostraciones anteriores en <a href="https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_con_rcases.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
-<b>Referencias</b>
+<h2>Referencias</h2>
 
 <ul>
 <li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 39.</li>
 </ul>
+
+<h2>Demostraciones con Isabelle/HOL</h2>
+
+<pre lang="isar">
+theory Desigualdad_con_rcases
+  imports Main "HOL.Real"
+begin
+
+(* 1ª demostración *)
+lemma
+  assumes "∃x y :: real. (z = x^2 + y^2 ∨ z = x^2 + y^2 + 1)"
+  shows "z ≥ 0"
+proof -
+  obtain x y where hxy: "z = x^2 + y^2 ∨ z = x^2 + y^2 + 1"
+    using assms by auto
+  { assume "z = x^2 + y^2"
+    have "x^2 + y^2 ≥ 0" by simp
+    then have "z ≥ 0" using `z = x^2 + y^2` by simp }
+  { assume "z = x^2 + y^2 + 1"
+    have "x^2 + y^2 ≥ 0" by simp
+    then have "z ≥ 1" using `z = x^2 + y^2 + 1` by simp }
+  with hxy show "z ≥ 0" by auto
+qed
+
+(* 2ª demostración *)
+lemma
+  assumes "∃x y :: real. (z = x^2 + y^2 ∨ z = x^2 + y^2 + 1)"
+  shows "z ≥ 0"
+proof -
+  obtain x y where hxy: "z = x^2 + y^2 ∨ z = x^2 + y^2 + 1"
+    using assms by auto
+  with hxy show "z ≥ 0" by auto
+qed
+
+(* 3ª demostración *)
+lemma
+  assumes "∃x y :: real. (z = x^2 + y^2 ∨ z = x^2 + y^2 + 1)"
+  shows "z ≥ 0"
+  using assms by fastforce
+
+end
+</pre>
