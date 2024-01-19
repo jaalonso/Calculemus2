@@ -172,3 +172,4 @@ usaba Lean3 en lugar de Lean4.
 + V19 [[./textos/Cuadrado_igual_a_uno.md][En ℝ, x² = 1 → x = 1 ∨ x = -1]] (En [[./src/Cuadrado_igual_a_uno.lean][Lean4]]).
 + L22 [[./textos/Cuadrado_igual_a_cuadrado.md][En ℝ, x² = y² → x = y ∨ x = -y]] (En [[./src/Cuadrado_igual_a_cuadrado.lean][Lean4]]).
 + M23 [[./textos/Eliminacion_de_la_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_de_la_doble_negacion.lean][Lean4]]).
++ J24 [[./textos/Implicacion_mediante_disyuncion_y_negacion.md][(P → Q) ↔ ¬P ∨ Q]] (En [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean4]]).

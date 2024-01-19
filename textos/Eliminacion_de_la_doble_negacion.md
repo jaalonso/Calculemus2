@@ -21,6 +21,17 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
+Supongamos que
+\[ ¬¬P  \tag{1} \]
+
+Por el principio del tercio excluso, se tiene
+\[ P ∨ ¬P \]
+lo que da lugar a dos casos.
+
+En el primer caso, se supone \(P\) que es lo que hay que demostrar.
+
+En el primer caso, se supone \(¬P\) que es una contradicción con (1).
+
 <h2>2. Demostraciones con Lean4</h2>
 
 <pre lang="lean">
