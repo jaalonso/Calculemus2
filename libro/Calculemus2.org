@@ -97,6 +97,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Suma_nula_de_dos_cuadrados.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_nula_de_dos_cuadrados.lean][Lean 4 Web]]
 
+** En ℝ, x² = 1 → x = 1 ∨ x = -1
+#+INCLUDE: "../src/Cuadrado_igual_a_uno.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_uno.lean.lean][Lean 4 Web]]
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -307,6 +311,18 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Cota_inf2_de_abs.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota_inf2_de_abs.lean][Lean 4 Web]]
 
+** En ℝ, |x + y| ≤ |x| + |y|
+#+INCLUDE: "../src/Desigualdad_triangular_para_valor_absoluto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_triangular_para_valor_absoluto.lean.lean][Lean 4 Web]]
+
+** En ℝ, si x ≠ 0 entonces x < 0 ó x > 0
+#+INCLUDE: "../src/Eliminacion_de_la_disyuncion_con_rcases.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion_de_la_disyuncion_con_rcases.lean.lean][Lean 4 Web]]
+
+** Si (∃ x, y ∈ ℝ)[z = x² + y² ∨ z = x² + y² + 1], entonces z ≥ 0
+#+INCLUDE: "../src/Desigualdad_con_rcases.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_con_rcases.lean.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -340,6 +356,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** 3 divide al máximo común divisor de 6 y 15
 #+INCLUDE: "../src/Divisor_del_mcd.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Divisor_del_mcd.lean][Lean 4 Web]]
+
+** Si m divide a n o a k, entonces m divide a nk
+#+INCLUDE: "../src/CS_de_divisibilidad_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_divisibilidad_del_producto.lean.lean][Lean 4 Web]]
 
 * Retículos
 
@@ -388,7 +408,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si ≤ es un preorden, entonces < es transitiva
 #+INCLUDE: "../src/Preorden_transitiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden_transitiva.lean][Lean 4 Web]]
-
 
 * Anillos ordenados
 
