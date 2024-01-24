@@ -17,8 +17,10 @@ import Mathlib.Topology.MetricSpace.Basic
 
 section naturales
 variable (x y z k m n : ℕ)
+open Nat
 #check (_root_.dvd_antisymm : m ∣ n → n ∣ m → m = n)
 #check (dvd_add : x ∣ y → x ∣ z → x ∣ y + z)
+#check (dvd_factorial : 0 < k → k ≤ n → k ∣ n !)
 #check (dvd_gcd : k ∣ m → k ∣ n → k ∣ gcd m n)
 #check (dvd_mul_left x y : x ∣ y * x)
 #check (dvd_mul_of_dvd_left : x ∣ y → ∀ (c : ℕ), x ∣ y * c)
@@ -26,9 +28,18 @@ variable (x y z k m n : ℕ)
 #check (dvd_mul_right x y : x ∣ x * y)
 #check (dvd_trans : x ∣ y → y ∣ z → x ∣ z)
 #check (Dvd.intro k : m * k = n → m ∣ n)
+#check (factorial_pos n: n ! > 0)
 #check (gcd_comm m n : gcd m n = gcd n m)
 #check (gcd_dvd_left  m n: gcd m n ∣ m)
 #check (gcd_dvd_right m n : gcd m n ∣ n)
+#check (minFac_dvd n : minFac n ∣ n)
+#check (minFac_pos n : 0 < minFac n)
+#check (minFac_prime : n ≠ 1 → Nat.Prime (minFac n))
+#check (Nat.dvd_add_iff_right : k ∣ m → (k ∣ n ↔ k ∣ m + n))
+#check (Nat.dvd_one : n ∣ 1 ↔ n = 1)
+#check (Nat.lt_add_of_pos_left : 0 < k → n < k + n)
+#check (Nat.ne_of_gt : k < n → n ≠ k)
+#check (Nat.Prime.not_dvd_one : Nat.Prime n → ¬n ∣ 1)
 end naturales
 
 -- Números reales
@@ -73,6 +84,7 @@ variable (a b c d x y : ℝ)
 #check (le_neg_self_iff : x ≤ -x ↔ x ≤ 0)
 #check (le_of_eq : a = b → a ≤ b)
 #check (le_of_lt : x < y → x ≤ y)
+#check (le_of_not_ge : ¬x ≥ y → x ≤ y)
 #check (le_of_not_gt : ¬a > b → a ≤ b)
 #check (le_or_gt x y : x ≤ y ∨ x > y)
 #check (le_refl a : a ≤ a)
