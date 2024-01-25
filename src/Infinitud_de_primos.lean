@@ -38,7 +38,7 @@
 -- Su demostración es
 --    n ≥ p
 --    ==> p ∣ n!    [por L6 y L7]
---    ==> p | 1     [por L8 y L9]
+--    ==> p | 1     [por L8 y (p | n! + 1) por L9]
 --    ==> Falso     [por L10 y p es primo]
 
 -- Demostración con Lean4

@@ -23,7 +23,8 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Se usarán los siguientes lemas de los números naturales
+Se usarán los siguientes lemas de los números naturales, donde \(\text{Primo}(n)\) se verifica si \(n\) es primo y \(\text{minFac}(n)\) es el menor factor primo de \(n\).
+
 \begin{align}
    &n ≠ 1 → \text{Primo}(\text{minFac}(n)) \tag{L1} \\
    &n! > 0                                 \tag{L2} \\
@@ -36,7 +37,6 @@ Se usarán los siguientes lemas de los números naturales
    &\text{minFac}(n) ∣ n                   \tag{L9} \\
    &\text{Primo}(n) → ¬n ∣ 1               \tag{L10}
 \end{align}
-donde \(\text{Primo}(n)\) se verifica si \(n\) es primo y \(\text{minFac}(n)) es el menor factor primo de \(n\).
 
 Sea \(p\) el menor factor primo de \(n! + 1\). Tenemos que demostrar que \(n ≤ p\) y que \(p\) es primo.
 
@@ -44,17 +44,17 @@ Para demostrar que \(p\) es primo, por el lema L1, basta demostrar que
 \[ n! + 1 ≠ 1 \]
 Su demostración es
 \begin{align}
-   &n ! > 0           &&\text{[por L2]} \\
-   &==> n ! + 1 > 1   &&\text{[por L3]} \\
-   &==> n ! + 1 ≠ 1   &&\text{[por L4]}
+   &n ! > 0          &&\text{[por L2]} \\
+   &⟹ n ! + 1 > 1   &&\text{[por L3]} \\
+   &⟹ n ! + 1 ≠ 1   &&\text{[por L4]}
 \end{align}
 
 Para demostrar \(n ≤ p\), por el lema L5, basta demostrar que \(n ≱ p\). Su demostración es
-\being{align}
-   &n ≥ p
-   &==> p ∣ n!    &&\text{[por L6 y L7]} \\
-   &==> p | 1     &&\text{[por L8 y L9]} \\
-   &==> Falso     &&\text{[por L10 y \(p\) es primo]
+\begin{align}
+   &n ≥ p        \\
+   &⟹ p ∣ n!    &&\text{[por L6 y L7]} \\
+   &⟹ p | 1     &&\text{[por L8 y L9]} \\
+   &⟹ Falso     &&\text{[por L10 y \(p\) es primo]}
 \end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
