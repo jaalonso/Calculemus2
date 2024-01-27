@@ -101,6 +101,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Cuadrado_igual_a_uno.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_uno.lean.lean][Lean 4 Web]]
 
+** En ℝ, x² = y² → x = y ∨ x = -y
+#+INCLUDE: "../src/Cuadrado_igual_a_cuadrado.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_cuadrado.lean][Lean 4 Web]]
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -361,6 +365,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/CS_de_divisibilidad_del_producto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_divisibilidad_del_producto.lean.lean][Lean 4 Web]]
 
+** Existen infinitos números primos
+#+INCLUDE: "../src/Infinitud_de_primos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Infinitud_de_primos.lean][Lean 4 Web]]
+
+** Si n² es par, entonces n es par
+#+INCLUDE: "../src/Par_si_cuadrado_par.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Par_si_cuadrado_par.lean][Lean 4 Web]]
+
 * Retículos
 
 ** En los retículos, x ⊓ y = y ⊓ x
@@ -608,6 +620,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** P → ¬¬P
 #+INCLUDE: "../src/Introduccion_doble_negacion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion_doble_negacion.lean][Lean 4 Web]]
+
+** (P → Q) ↔ ¬P ∨ Q
+#+INCLUDE: "../src/Implicacion_mediante_disyuncion_y_negacion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

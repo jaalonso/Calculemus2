@@ -23,6 +23,11 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
+Se usará el siguiente lema: Si \(p\) es primo, entonces
+\[ (∀ a, b ∈ ℕ)[p ∣ ab ↔ p ∣ a ∨ p ∣ b] \]
+
+Si \(n²\) es par, entonces \(2\) divide a \(n.n\) y, por el lema, \(2\) divide a \(n\).
+
 <h2>2. Demostraciones con Lean4</h2>
 
 <pre lang="lean">
