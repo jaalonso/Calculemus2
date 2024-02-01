@@ -1,0 +1,34 @@
+#+title: ???
+#+subtitle: Publicado el ??? de febrero de 2024 por [[https://jaalonso.github.io][José A. Alonso]]
+#+SETUPFILE: ../plantillas/nivel_1.org
+
+* Enunciado
+
+Demostrar con Lean4 que ???
+
+Para ello, completar la siguiente teoría de Lean4:
+
+#+begin_src lean
+sorry
+#+end_src
+
+* Demostración en lenguaje natural
+
+* Demostraciones con Lean4
+
+#+begin_src lean
+???
+#+end_src
+
+Se puede interactuar con las demostraciones anteriores en
+[[https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/???][Lean 4 Web].
+
+* Demostraciones con Isabelle/HOL
+
+#+begin_src isar
+...
+#+end_src
+
+* Referencias
+
++ J. Avigad y P. Massot. [[https://bit.ly/3U4UjBk][Mathematics in Lean]], p. ???.

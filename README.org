@@ -175,3 +175,6 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L29 [[./textos/Irracionalidad_de_la_raiz_cuadrada_de_2.md][La raíz cuadrada de 2 es irracional]] (En [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean4]]).
++ M30 [[./textos/Demostracion_por_extensionalidad.org][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]] (En [[./src/Demostracion_por_extensionalidad.lean][Lean4]]).
++ X31 [[./textos/Demostracion_por_congruencia.org][En ℝ, |a| = |a - b + b|]] (En [[./src/Demostracion_por_congruencia.lean][Lean4]]).
++ J01 [[https://www.cs.us.es/~jalonso/Calculemus2024/Demostracion_por_conversion.html][En ℝ, si 1 < a, entonces a < aa]] (En [[./src/Demostracion_por_conversion.lean][Lean4]]).

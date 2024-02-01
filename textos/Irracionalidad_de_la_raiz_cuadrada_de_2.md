@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que la raíz cuadrada de 2 es irracional; es decir, que no existen \(m, n ∈ ℕ\) tales que \(m\) y \(n\) son coprimos (es decir, que no tienen factores comunes distintos de uno) y \(m² = 2n²\).
+Demostrar con Lean4 que la raíz cuadrada de 2 es irracional; es decir, que no existen \\(m, n ∈ ℕ\\) tales que \\(m\\) y \\(n\\) son coprimos (es decir, que no tienen factores comunes distintos de uno) y \\(m² = 2n²\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -24,23 +24,23 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Usaremos el lema del ejercicio anterior:
-\[ (∀ n ∈ ℕ)[2 ∣ n² → 2 | n] \]
+\\[ (∀ n ∈ ℕ)[2 ∣ n² → 2 | n] \\]
 
-Supongamos que existen existen \(m, n ∈ ℕ\) tales que \(m\) y \(n\) son coprimos y \(m² = 2n²\) y tenemos que demostrar una contradicción. Puesto que 2  divide a 1, para tener la contradicción basta demostrar que 2 divide a 1 y (ya que \(m\) y \(n\) son coprimos); para ello es suficiente demostrar que 2 divide al máximo común divisor de \(m\) y \(n\). En definitiva, basta demostrar que 2 divide a \(m\) y a \(n\).
+Supongamos que existen existen \\(m, n ∈ ℕ\\) tales que \\(m\\) y \\(n\\) son coprimos y \\(m² = 2n²\\) y tenemos que demostrar una contradicción. Puesto que 2  divide a 1, para tener la contradicción basta demostrar que 2 divide a 1 y (ya que \\(m\\) y \\(n\\) son coprimos); para ello es suficiente demostrar que 2 divide al máximo común divisor de \\(m\\) y \\(n\\). En definitiva, basta demostrar que 2 divide a \\(m\\) y a \\(n\\).
 
-La demostración de que 2 divide a \(m\) es
-\begin{align}
-   m² = 2n² &⟹ 2 | m²   \\
-            &⟹ 2 | m    &&\text{[por el lema]}
-\end{align}
+La demostración de que 2 divide a \\(m\\) es
+\\begin{align}
+   m² = 2n² &⟹ 2 | m²   \\\\
+            &⟹ 2 | m    &&\\text{[por el lema]}
+\\end{align}
 
-Para demostrar que 2 divide a \(n\), observamos que, puesto que 2 divide a \(m\), existe un \(k ∈ ℕ\) tal que \(m = 2k\). Sustituyendo en
-\[ m² = 2n² \]
+Para demostrar que 2 divide a \\(n\\), observamos que, puesto que 2 divide a \\(m\\), existe un \\(k ∈ ℕ\\) tal que \\(m = 2k\\). Sustituyendo en
+\\[ m² = 2n² \\]
 se tiene
-\[ (2k)² = 2n² \]
+\\[ (2k)² = 2n² \\]
 Simplificando, queda
-\[ 2k = n² \]
-Por tanto, 2 divide a \(n²\) y, por el lema, 2 divide a \(n\).
+\\[ 2k = n² \\]
+Por tanto, 2 divide a \\(n²\\) y, por el lema, 2 divide a \\(n\\).
 
 <h2>2. Demostraciones con Lean4</h2>
 
