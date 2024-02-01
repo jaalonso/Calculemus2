@@ -174,3 +174,4 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Implicacion_mediante_disyuncion_y_negacion.md][(P → Q) ↔ ¬P ∨ Q]] (En [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean4]]).
 
 * Sin ordenar
++ L29 [[./textos/Irracionalidad_de_la_raiz_cuadrada_de_2.md][La raíz cuadrada de 2 es irracional]] (En [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean4]]).
