@@ -5,15 +5,15 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-En Lean, una sucesión \(s₀, s₁, s₂, ...\) se puede representar mediante una función \((s : ℕ → ℝ)\) de forma que \(s(n)\) es \(sₙ\).
+En Lean, una sucesión \\(s₀, s₁, s₂, ...\\) se puede representar mediante una función \\((s : ℕ → ℝ)\\) de forma que \\(s(n)\\) es \\(sₙ\\).
 
-Se define que a es el límite de la sucesión \(s\), por
+Se define que a es el límite de la sucesión \\(s\\), por
 <pre lang="text">
 def limite (s : ℕ → ℝ) (a : ℝ) :=
   ∀ ε > 0, ∃ N, ∀ n ≥ N, |s n - a| < ε
 </pre>
 
-Demostrar que el límite de la sucesión constante \(sₙ = c\) es \(c\).
+Demostrar que el límite de la sucesión constante \\(sₙ = c\\) es \\(c\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,13 +30,13 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar que para cada \(ε ∈ ℝ\) tal que \(ε > 0\), existe un \(N ∈ ℕ\), tal que \((∀n ∈ ℕ)[n ≥ N → |s(n) - a| < ε]\). Basta tomar \(N\) como \(0\), ya que para todo \(n ≥ N\) se tiene
-\begin{align}
-   |s(n) - a| &= |a - a| \\
-              &= |0|     \\
-              &= 0       \\
-              &< ε       \\
-\end{align}
+Tenemos que demostrar que para cada \\(ε ∈ ℝ\\) tal que \\(ε > 0\\), existe un \\(N ∈ ℕ\\), tal que \\((∀n ∈ ℕ)[n ≥ N → |s(n) - a| < ε]\\). Basta tomar \\(N\\) como \\(0\\), ya que para todo \\(n ≥ N\\) se tiene
+\\begin{align}
+   |s(n) - a| &= |a - a| \\\\
+              &= |0|     \\\\
+              &= 0       \\\\
+              &< ε       \\\\
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 

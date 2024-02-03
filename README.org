@@ -174,7 +174,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][(P → Q) ↔ ¬P ∨ Q]].
 
 * Sin ordenar
-+ L29 [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][La raíz cuadrada de 2 es irracional]].
++ L29 [[./textos/Irracionalidad_de_la_raiz_cuadrada_de_2.md][La raíz cuadrada de 2 es irracional]] (En [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean]]).
++ M30 [[~/alonso/estudio/Calculemus2/textos/Demostracion_por_extensionalidad.md][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]] (En [[~/alonso/estudio/Calculemus2/src/Demostracion_por_extensionalidad.lean][Lean4]]).
++ Calculemus: [[~/alonso/estudio/Calculemus2/textos/Demostracion_por_congruencia.md][En ℝ, |a| = |a - b + b|]] (En [[~/alonso/estudio/Calculemus2/src/Demostracion_por_congruencia.lean][Lean4]]).
++ Calculemus: [[~/alonso/estudio/Calculemus2/textos/Demostracion_por_conversion.org][En ℝ, si 1 < a, entonces a < aa]] (En [[~/alonso/estudio/Calculemus2/src/Demostracion_por_conversion.lean][Lean4]]).
+
 + M30 [[./src/Demostracion_por_extensionalidad.lean][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]].
 + X31 [[./src/Demostracion_por_congruencia.lean][En ℝ, |a| = |a - b + b|]].
 + J01 [[./src/Demostracion_por_conversion.lean][En ℝ, si 1 < a, entonces a < aa]].
