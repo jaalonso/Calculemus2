@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que las funciones \(f(x,y) = (x + y)²\) y \(g(x,y) = x² + 2xy + y\)² son iguales.
+Demostrar con Lean4 que las funciones \\(f(x,y) = (x + y)²\\) y \\(g(x,y) = x² + 2xy + y\\)² son iguales.
 
 Para ello, completar la siguiente teoría de Lean4:
 
