@@ -178,3 +178,4 @@ usaba Lean3 en lugar de Lean4.
 + M30 [[./src/Demostracion_por_extensionalidad.lean][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]].
 + X31 [[./src/Demostracion_por_congruencia.lean][En ℝ, |a| = |a - b + b|]].
 + J01 [[./src/Demostracion_por_conversion.lean][En ℝ, si 1 < a, entonces a < aa]].
++ V02 [[./textos/Convergencia_de_la_sucesion_constante.md][La sucesión constante sₙ = c converge a c]] (en [[./src/Convergencia_de_la_sucesion_constante.lean][Lean4]] y en [[./thy/Limite_de_sucesiones_constantes.thy][Isabelle]]).
