@@ -171,14 +171,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/No_para_todo_de_existe_no.md][Si (∃x)¬P(x), entonces ¬(∀x)P(x)]] (En [[./src/No_para_todo_de_existe_no.lean][Lean4]]).
 + [[./textos/Eliminacion_doble_negacion.md][¬¬P → P]] (En [[./src/Eliminacion_doble_negacion.lean][Lean4]]).
 + [[./textos/Introduccion_doble_negacion.md][P → ¬¬P]] (En [[./src/Introduccion_doble_negacion.lean][Lean4]]).
-+ [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][(P → Q) ↔ ¬P ∨ Q]].
++ [[./textos/Implicacion_mediante_disyuncion_y_negacion.md][(P → Q) ↔ ¬P ∨ Q]] (En [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean4]]).
 
 * Sin ordenar
 + L29 [[./textos/Irracionalidad_de_la_raiz_cuadrada_de_2.md][La raíz cuadrada de 2 es irracional]] (En [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean]]).
-+ M30 [[~/alonso/estudio/Calculemus2/textos/Demostracion_por_extensionalidad.md][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]] (En [[~/alonso/estudio/Calculemus2/src/Demostracion_por_extensionalidad.lean][Lean4]]).
++ M30 [[./textos/Demostracion_por_extensionalidad.md][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]] (En [[./src/Demostracion_por_extensionalidad.lean][Lean4]]).
 + X31 [[./textos/Demostracion_por_congruencia.md][En ℝ, |a| = |a - b + b|]] (En [[./src/Demostracion_por_congruencia.lean][Lean4]]).
-+ Calculemus: [[~/alonso/estudio/Calculemus2/textos/Demostracion_por_conversion.org][En ℝ, si 1 < a, entonces a < aa]] (En [[~/alonso/estudio/Calculemus2/src/Demostracion_por_conversion.lean][Lean4]]).
-
-+ X31 [[./src/Demostracion_por_congruencia.lean][En ℝ, |a| = |a - b + b|]].
-+ J01 [[./src/Demostracion_por_conversion.lean][En ℝ, si 1 < a, entonces a < aa]].
++ J01 [[./textos/Demostracion_por_conversion.md][En ℝ, si 1 < a, entonces a < aa]] (En [[./src/Demostracion_por_conversion.lean][Lean4]]).
 + V02 [[./textos/Convergencia_de_la_sucesion_constante.md][La sucesión constante sₙ = c converge a c]] (en [[./src/Convergencia_de_la_sucesion_constante.lean][Lean4]] y en [[./thy/Limite_de_sucesiones_constantes.thy][Isabelle]]).

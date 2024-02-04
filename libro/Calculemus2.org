@@ -105,6 +105,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Cuadrado_igual_a_cuadrado.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado_igual_a_cuadrado.lean][Lean 4 Web]]
 
+** En ℝ, |a| = |a - b + b|
+#+INCLUDE: "../src/Demostracion_por_congruencia.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_congruencia.lean][Lean 4 Web]]
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -327,6 +331,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Desigualdad_con_rcases.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad_con_rcases.lean.lean][Lean 4 Web]]
 
+** En ℝ, si 1 < a, entonces a < aa
+#+INCLUDE: "../src/Demostracion_por_conversion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_conversion.lean][Lean 4 Web]]
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -372,6 +380,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si n² es par, entonces n es par
 #+INCLUDE: "../src/Par_si_cuadrado_par.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Par_si_cuadrado_par.lean][Lean 4 Web]]
+
+** La raíz cuadrada de 2 es irracional
+#+INCLUDE: "../src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean 4 Web]]
 
 * Retículos
 
@@ -495,8 +507,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/CS_de_acotada_superiormente.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_acotada_superiormente.lean][Lean 4 Web]]
 
-
-
 ** Suma de funciones monótonas
 #+INCLUDE: "../src/Suma_de_funciones_monotonas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_de_funciones_monotonas.lean][Lean 4 Web]]
@@ -552,6 +562,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Para cualquier conjunto s, s ⊆ s
 #+INCLUDE: "../src/Propiedad_reflexiva_del_subconjunto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_reflexiva_del_subconjunto.lean][Lean 4 Web]]
+
+** Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales
+#+INCLUDE: "../src/Demostracion_por_extensionalidad.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_extensionalidad.lean][Lean 4 Web]]
 
 * Teoría de conjuntos
 
@@ -624,6 +638,13 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** (P → Q) ↔ ¬P ∨ Q
 #+INCLUDE: "../src/Implicacion_mediante_disyuncion_y_negacion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean 4 Web]]
+
+
+* Límites de sucesiones
+
+** La sucesión constante sₙ = c converge a c
+#+INCLUDE: "../src/Convergencia_de_la_sucesion_constante.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia_de_la_sucesion_constante.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 

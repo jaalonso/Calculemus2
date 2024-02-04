@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que en \(ℝ\), \(|a| = |a - b + b|\)
+Demostrar con Lean4 que en \\(ℝ\\), \\(|a| = |a - b + b|\\)
 
 Para ello, completar la siguiente teoría de Lean4:
 
