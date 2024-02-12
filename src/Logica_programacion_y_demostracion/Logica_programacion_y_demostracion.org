@@ -375,23 +375,67 @@
 
 * Reglas de la lógica clásica
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.lean][Pruebas con Lean de la eliminación de la doble negación]]
+** Pruebas de la eliminación de la doble negación
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.lean][Pruebas con Lean de la eliminación de la doble negación]]
 #+INCLUDE: "./src/Pruebas_de_la_eliminacion_de_la_doble_negacion.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.lean][uPruebas con Lean de la regla de reducción al absurdo]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.hs][Pruebas con Haskell de la eliminación de la doble negación]]
+#+INCLUDE: "./src/Pruebas_de_la_eliminacion_de_la_doble_negacion.hs" src haskell
+
+** Pruebas con Lean de la regla de reducción al absurdo
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.lean][Pruebas con Lean de la regla de reducción al absurdo]]
 #+INCLUDE: "./src/Prueba_de_la_regla_de_reduccion_al_absurdo.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.lean][Pruebas con Lean del principio del tercio excluso]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.hs][Pruebas con Haskell de la regla de reducción al absurdo]]
+#+INCLUDE: "./src/Prueba_de_la_regla_de_reduccion_al_absurdo.hs" src haskell
+
+** Pruebas con Lean del principio del tercio excluso
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.lean][Pruebas con Lean del principio del tercio excluso]]
 #+INCLUDE: "./src/Pruebas_del_principio_del_tercio_excluso.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P→Q⊢¬P∨Q.lean][Pruebas con Lean de P → Q ⊢ ¬P ∨ Q]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.hs][Pruebas con Haskell del principio del tercio excluso]]
+#+INCLUDE: "./src/Pruebas_del_principio_del_tercio_excluso.hs" src haskell
+
+** Pruebas con Lean de P → Q ⊢ ¬P ∨ Q
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P→Q⊢¬P∨Q.lean][Pruebas con Lean de P → Q ⊢ ¬P ∨ Q]]
 #+INCLUDE: "./src/Pruebas_de_P→Q⊢¬P∨Q.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P→Q⊢¬P∨Q.hs][Pruebas con Haskell de P → Q ⊢ ¬P ∨ Q]]
+#+INCLUDE: "./src/Pruebas_de_P→Q⊢¬P∨Q.hs" src haskell
+
+** Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean][Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R]]
 #+INCLUDE: "./src/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_¬P→Q,¬Q⊢P.lean][Pruebas con Lean de ¬P → Q, ¬Q ⊢ P]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.hs][Pruebas con Haskell de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R]]
+#+INCLUDE: "./src/Pruebas_de_P,¬¬(Q∧R)⊢¬¬P∧R.hs" src haskell
+
+** Pruebas con Lean de ¬P → Q, ¬Q ⊢ P
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_¬P→Q,¬Q⊢P.lean][Pruebas con Lean de ¬P → Q, ¬Q ⊢ P]]
 #+INCLUDE: "./src/Pruebas_de_¬P→Q,¬Q⊢P.lean" src lean
 
-** [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))]]
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_¬P→Q,¬Q⊢P.hs][Pruebas con Haskell de ¬P → Q, ¬Q ⊢ P]]
+#+INCLUDE: "./src/Pruebas_de_¬P→Q,¬Q⊢P.hs" src haskell
+
+** Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))
+
++ [[https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean][Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))]]
 #+INCLUDE: "./src/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).lean" src lean
+
++ [[https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).hs][Pruebas con Haskell de (Q → R) → ((¬Q → ¬P) → (P → R))]]
+#+INCLUDE: "./src/Pruebas_de_(Q→R)→((¬Q→¬P)→(P→R)).hs" src haskell
+
+* Bibliografía
+
++ [[https://rachel.cafe/2022/12/15/haskell-and-logic.html][Haskell and logic]]. ~ Rachel Lambda Samuelsson.
++ [[https://www.ben-sherman.net/aux/curry-howard.pdf][Haskell and the Curry-Howard isomorphism (Part 1)]]. ~ Ben Sherman.
++ [[https://gist.github.com/Kazark/06acabbd25817ac9efc7fbe0493f23ff][Curry-Howard tutorial in literate Haskell]]. ~ Keith Pinson.
++ [[https://web.archive.org/web/20080819185521/http://www.thenewsh.com/~newsham/formal/curryhoward/][The Curry-Howard correspondence in Haskell]]. ~ Tim Newsham.
++ [[https://www.ccs.neu.edu/home/mates/pubs/mates_ugrad_thesis.pdf][A survey into the Curry-Howard isomorphism & type systems]]. ~ Phillip Mates.
++ [[https://antitypical.com/posts/2021-07-28-when-howard-met-curry/][When Howard met Curry]]. ~ Rob Rix.

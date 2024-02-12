@@ -7,24 +7,30 @@ example
   (h : P → Q)
   : ¬P ∨ Q :=
 by
-  by_cases h1 : P
-  . -- h1 : P
+  apply Or.elim (Classical.em P)
+  . -- P → ¬P ∨ Q
+    intro h1
+    -- h1 : P
+    -- ⊢ ¬P ∨ Q
     right
     -- ⊢ Q
     exact h h1
-  . -- h1 : ¬P
+  . -- ⊢ ¬P → ¬P ∨ Q
+    intro h2
+    -- h2 : ¬P
+    -- ⊢ ¬P ∨ Q
     left
     -- ⊢ ¬P
-    exact h1
+    exact h2
 
 -- 2ª demostración
 example
   (h : P → Q)
   : ¬P ∨ Q :=
-  Classical.by_cases (fun h1 ↦ Or.inr (h h1)) (fun h1 ↦ Or.inl h1)
+  Or.elim (Classical.em P) (fun h1 ↦ Or.inr (h h1)) (fun h2 ↦ Or.inl h2)
 
 -- 3ª demostración
 example
   (h : P → Q)
   : ¬P ∨ Q :=
-  Classical.by_cases (Or.inr ∘ h) Or.inl
+  Or.elim (Classical.em P) (Or.inr ∘ h) Or.inl

@@ -16,4 +16,4 @@ by
 example
   (h : ¬P → False)
   : P :=
-  byContradiction (fun h1 ↦ h h1)
+  byContradiction h
