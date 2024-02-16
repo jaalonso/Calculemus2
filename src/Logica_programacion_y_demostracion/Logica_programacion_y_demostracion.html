@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 2024-02-11 dom 13:44 -->
+<!-- 2024-02-12 lun 08:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lógica, programación y demostración</title>
@@ -237,74 +237,75 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga40f1b7">1. Introducción</a></li>
-<li><a href="#orga6f78fd">2. Regla de eliminación del condicional</a>
+<li><a href="#org26b009f">1. Introducción</a></li>
+<li><a href="#org7939044">2. Regla de eliminación del condicional</a>
 <ul>
-<li><a href="#orgec4f719">2.1. Pruebas de P → Q, P ⊢ Q</a></li>
-<li><a href="#org75def07">2.2. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#org483c35c">2.3. Pruebas de P, P → Q, P → (Q → R) ⊢ R</a></li>
+<li><a href="#org83ebc0c">2.1. Pruebas de P → Q, P ⊢ Q</a></li>
+<li><a href="#org9da4168">2.2. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#orge5343dc">2.3. Pruebas de P, P → Q, P → (Q → R) ⊢ R</a></li>
 </ul>
 </li>
-<li><a href="#org1621c98">3. Regla introducción del condicional</a>
+<li><a href="#orgf0f8dfa">3. Regla introducción del condicional</a>
 <ul>
-<li><a href="#orgd0cf14c">3.1. Pruebas de P → P</a></li>
-<li><a href="#org7106943">3.2. Pruebas de P → (Q → P)</a></li>
-<li><a href="#org9d8f03e">3.3. Pruebas de P → Q, Q → R ⊢ P → R</a></li>
-<li><a href="#orgf0f2080">3.4. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#org1bec1d1">3.1. Pruebas de P → P</a></li>
+<li><a href="#orgf422131">3.2. Pruebas de P → (Q → P)</a></li>
+<li><a href="#org06ab513">3.3. Pruebas de P → Q, Q → R ⊢ P → R</a></li>
+<li><a href="#org8a04b7c">3.4. Correspondencia entre Lógica y Haskell</a></li>
 </ul>
 </li>
-<li><a href="#orgbedf776">4. Reglas de la conjunción</a>
+<li><a href="#orgb8be043">4. Reglas de la conjunción</a>
 <ul>
-<li><a href="#org1a43287">4.1. Pruebas de P ∧ Q, R ⊢ Q ∧ R</a></li>
-<li><a href="#orged777a6">4.2. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#orgeefe700">4.3. Pruebas de P ∧ Q → Q ∧ P</a></li>
+<li><a href="#org7d686b4">4.1. Pruebas de P ∧ Q, R ⊢ Q ∧ R</a></li>
+<li><a href="#org47caf93">4.2. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#orga0c49f5">4.3. Pruebas de P ∧ Q → Q ∧ P</a></li>
 </ul>
 </li>
-<li><a href="#org089f460">5. Reglas de la negación</a>
+<li><a href="#org73731fe">5. Reglas de la negación</a>
 <ul>
-<li><a href="#org9d4a1db">5.1. Reglas de la negación en deducción natural</a></li>
-<li><a href="#org57f015f">5.2. Pruebas de ⊥ ⊢ P</a></li>
-<li><a href="#org5905318">5.3. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#org2bad5ba">5.4. Pruebas de la eliminación de la negación P, ¬P ⊢ ⊥</a></li>
-<li><a href="#orgb74574e">5.5. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#orgb2b7383">5.6. Pruebas de ¬(P ∧ ¬P)</a></li>
-<li><a href="#orgdf484cb">5.7. Pruebas de P → Q, P → ¬Q ⊢ ¬P</a></li>
-<li><a href="#org402238b">5.8. Pruebas del modus tollens: P → Q, ¬Q ⊢ ¬P</a></li>
-<li><a href="#org6d41354">5.9. Pruebas de P → (Q → R), P, ¬R ⊢ ¬Q</a></li>
-<li><a href="#org8af97c3">5.10. Regla de introducción de la doble negación: P ⊢ ¬¬P</a></li>
-<li><a href="#org9fc4b0a">5.11. Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q</a></li>
+<li><a href="#org224bfe8">5.1. Reglas de la negación en deducción natural</a></li>
+<li><a href="#org9ba6b81">5.2. Pruebas de ⊥ ⊢ P</a></li>
+<li><a href="#org88100c6">5.3. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#orge0871f1">5.4. Pruebas de la eliminación de la negación P, ¬P ⊢ ⊥</a></li>
+<li><a href="#org3e47f81">5.5. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#org3ab7b50">5.6. Pruebas de ¬(P ∧ ¬P)</a></li>
+<li><a href="#orgf60e45b">5.7. Pruebas de P → Q, P → ¬Q ⊢ ¬P</a></li>
+<li><a href="#orgddea857">5.8. Pruebas del modus tollens: P → Q, ¬Q ⊢ ¬P</a></li>
+<li><a href="#orga45c14a">5.9. Pruebas de P → (Q → R), P, ¬R ⊢ ¬Q</a></li>
+<li><a href="#orgcdb0664">5.10. Regla de introducción de la doble negación: P ⊢ ¬¬P</a></li>
+<li><a href="#org857fb3b">5.11. Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q</a></li>
 </ul>
 </li>
-<li><a href="#orgad978cf">6. Reglas de la disyunción</a>
+<li><a href="#org2227408">6. Reglas de la disyunción</a>
 <ul>
-<li><a href="#orgb0106d7">6.1. Pruebas de la introducción de la disyunción</a></li>
-<li><a href="#org1db1d57">6.2. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#org79a1a57">6.3. Pruebas de P ∧ Q ⊢ P ∨ R</a></li>
-<li><a href="#org27f8c26">6.4. Pruebas de P ∧ Q ⊢ R ∨ Q</a></li>
-<li><a href="#org91fc608">6.5. Regla de eliminación de la disyunción</a></li>
-<li><a href="#orge0ba4ff">6.6. Correspondencia entre Lógica y Haskell</a></li>
-<li><a href="#orgf661608">6.7. Pruebas de P ∨ Q ⊢ Q ∨ P</a></li>
-<li><a href="#orgc60b53b">6.8. Pruebas de Q → R ⊢ P ∨ Q → P ∨ R</a></li>
-<li><a href="#org3cde962">6.9. Pruebas de ¬P ∨ Q ⊢ P → Q</a></li>
+<li><a href="#orgda624a2">6.1. Pruebas de la introducción de la disyunción</a></li>
+<li><a href="#org3b51384">6.2. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#org9d1277a">6.3. Pruebas de P ∧ Q ⊢ P ∨ R</a></li>
+<li><a href="#orgc2e8e1b">6.4. Pruebas de P ∧ Q ⊢ R ∨ Q</a></li>
+<li><a href="#org919d8ec">6.5. Regla de eliminación de la disyunción</a></li>
+<li><a href="#org06e3dcd">6.6. Correspondencia entre Lógica y Haskell</a></li>
+<li><a href="#org36d28f4">6.7. Pruebas de P ∨ Q ⊢ Q ∨ P</a></li>
+<li><a href="#orga39e571">6.8. Pruebas de Q → R ⊢ P ∨ Q → P ∨ R</a></li>
+<li><a href="#orgc45a53a">6.9. Pruebas de ¬P ∨ Q ⊢ P → Q</a></li>
 </ul>
 </li>
-<li><a href="#org56ad1ce">7. Reglas de la lógica clásica</a>
+<li><a href="#orge9fb1a7">7. Reglas de la lógica clásica</a>
 <ul>
-<li><a href="#org8fcca2a">7.1. Pruebas con Lean de la eliminación de la doble negación</a></li>
-<li><a href="#orgaec16f7">7.2. uPruebas con Lean de la regla de reducción al absurdo</a></li>
-<li><a href="#orge618d40">7.3. Pruebas con Lean del principio del tercio excluso</a></li>
-<li><a href="#orgbea487c">7.4. Pruebas con Lean de P → Q ⊢ ¬P ∨ Q</a></li>
-<li><a href="#orgc01a242">7.5. Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</a></li>
-<li><a href="#org6d10ad7">7.6. Pruebas con Lean de ¬P → Q, ¬Q ⊢ P</a></li>
-<li><a href="#org531cf2f">7.7. Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))</a></li>
+<li><a href="#orgeaac8f7">7.1. Pruebas de la eliminación de la doble negación</a></li>
+<li><a href="#org77fd2bf">7.2. Pruebas de la regla de reducción al absurdo</a></li>
+<li><a href="#org53047d3">7.3. Pruebas del principio del tercio excluso</a></li>
+<li><a href="#org342c59e">7.4. Pruebas de P → Q ⊢ ¬P ∨ Q</a></li>
+<li><a href="#org00e4f6d">7.5. Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</a></li>
+<li><a href="#org6a6eb5b">7.6. Pruebas de ¬P → Q, ¬Q ⊢ P</a></li>
+<li><a href="#orgcc29dcf">7.7. Pruebas de (Q → R) → ((¬Q → ¬P) → (P → R))</a></li>
 </ul>
 </li>
+<li><a href="#org3e1b5e6">8. Bibliografía</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga40f1b7" class="outline-2">
-<h2 id="orga40f1b7"><span class="section-number-2">1.</span> Introducción</h2>
+<div id="outline-container-org26b009f" class="outline-2">
+<h2 id="org26b009f"><span class="section-number-2">1.</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Mostrar las relaciones entre
@@ -321,12 +322,12 @@
 </div>
 </div>
 
-<div id="outline-container-orga6f78fd" class="outline-2">
-<h2 id="orga6f78fd"><span class="section-number-2">2.</span> Regla de eliminación del condicional</h2>
+<div id="outline-container-org7939044" class="outline-2">
+<h2 id="org7939044"><span class="section-number-2">2.</span> Regla de eliminación del condicional</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgec4f719" class="outline-3">
-<h3 id="orgec4f719"><span class="section-number-3">2.1.</span> Pruebas de P → Q, P ⊢ Q</h3>
+<div id="outline-container-org83ebc0c" class="outline-3">
+<h3 id="org83ebc0c"><span class="section-number-3">2.1.</span> Pruebas de P → Q, P ⊢ Q</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Regla de eliminación del condicional en lógica: P → Q, P ⊢ Q</li>
@@ -382,10 +383,10 @@ h1 h2
 </div>
 </div>
 
-<div id="outline-container-org75def07" class="outline-3">
-<h3 id="org75def07"><span class="section-number-3">2.2.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org9da4168" class="outline-3">
+<h3 id="org9da4168"><span class="section-number-3">2.2.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-2-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -420,14 +421,14 @@ h1 h2
 </div>
 </div>
 
-<div id="outline-container-org483c35c" class="outline-3">
-<h3 id="org483c35c"><span class="section-number-3">2.3.</span> Pruebas de P, P → Q, P → (Q → R) ⊢ R</h3>
+<div id="outline-container-orge5343dc" class="outline-3">
+<h3 id="orge5343dc"><span class="section-number-3">2.3.</span> Pruebas de P, P → Q, P → (Q → R) ⊢ R</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Prueba por deducción natural</li>
 </ul>
 
-<div id="orgaadfbcd" class="figure">
+<div id="org540302d" class="figure">
 <p><img src="./fig/Prueba_de_P,P→Q,P→Q→R_⊢R.png" alt="Prueba_de_P,P→Q,P→Q→R_⊢R.png" />
 </p>
 </div>
@@ -476,18 +477,18 @@ h1 h2
 </div>
 </div>
 
-<div id="outline-container-org1621c98" class="outline-2">
-<h2 id="org1621c98"><span class="section-number-2">3.</span> Regla introducción del condicional</h2>
+<div id="outline-container-orgf0f8dfa" class="outline-2">
+<h2 id="orgf0f8dfa"><span class="section-number-2">3.</span> Regla introducción del condicional</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgd0cf14c" class="outline-3">
-<h3 id="orgd0cf14c"><span class="section-number-3">3.1.</span> Pruebas de P → P</h3>
+<div id="outline-container-org1bec1d1" class="outline-3">
+<h3 id="org1bec1d1"><span class="section-number-3">3.1.</span> Pruebas de P → P</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Prueba por deducción natural de P → P</li>
 </ul>
 
-<div id="orga1a9b6f" class="figure">
+<div id="org364ee23" class="figure">
 <p><img src="./fig/Prueba_de_P→P.png" alt="Prueba_de_P→P.png" />
 </p>
 </div>
@@ -531,14 +532,14 @@ id
 </div>
 </div>
 
-<div id="outline-container-org7106943" class="outline-3">
-<h3 id="org7106943"><span class="section-number-3">3.2.</span> Pruebas de P → (Q → P)</h3>
+<div id="outline-container-orgf422131" class="outline-3">
+<h3 id="orgf422131"><span class="section-number-3">3.2.</span> Pruebas de P → (Q → P)</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Prueba por deducción natural de P → (Q → P)</li>
 </ul>
 
-<div id="org9e48e80" class="figure">
+<div id="orgfc8b494" class="figure">
 <p><img src="./fig/Prueba_de_P→Q→P.png" alt="Prueba_de_P→Q→P.png" />
 </p>
 </div>
@@ -591,8 +592,8 @@ id
 </div>
 </div>
 
-<div id="outline-container-org9d8f03e" class="outline-3">
-<h3 id="org9d8f03e"><span class="section-number-3">3.3.</span> Pruebas de P → Q, Q → R ⊢ P → R</h3>
+<div id="outline-container-org06ab513" class="outline-3">
+<h3 id="org06ab513"><span class="section-number-3">3.3.</span> Pruebas de P → Q, Q → R ⊢ P → R</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_silogismo_hipotetico.lean">Pruebas con Lean de P → Q, Q → R ⊢ P → R</a></li>
@@ -646,10 +647,10 @@ h2 <span style="color: #008b8b;">&#8728;</span> h1
 </div>
 </div>
 
-<div id="outline-container-orgf0f2080" class="outline-3">
-<h3 id="orgf0f2080"><span class="section-number-3">3.4.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org8a04b7c" class="outline-3">
+<h3 id="org8a04b7c"><span class="section-number-3">3.4.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-3-4">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -690,18 +691,18 @@ h2 <span style="color: #008b8b;">&#8728;</span> h1
 </div>
 </div>
 
-<div id="outline-container-orgbedf776" class="outline-2">
-<h2 id="orgbedf776"><span class="section-number-2">4.</span> Reglas de la conjunción</h2>
+<div id="outline-container-orgb8be043" class="outline-2">
+<h2 id="orgb8be043"><span class="section-number-2">4.</span> Reglas de la conjunción</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org1a43287" class="outline-3">
-<h3 id="org1a43287"><span class="section-number-3">4.1.</span> Pruebas de P ∧ Q, R ⊢ Q ∧ R</h3>
+<div id="outline-container-org7d686b4" class="outline-3">
+<h3 id="org7d686b4"><span class="section-number-3">4.1.</span> Pruebas de P ∧ Q, R ⊢ Q ∧ R</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Prueba por deducción natural de P ∧ Q, R ⊢ Q ∧ R</li>
 </ul>
 
-<div id="org79ef7c6" class="figure">
+<div id="org4397c5a" class="figure">
 <p><img src="./fig/Prueba_de_P∧Q,R⊢Q∧R.png" alt="Prueba_de_P∧Q,R⊢Q∧R.png" />
 </p>
 </div>
@@ -756,10 +757,10 @@ h2 <span style="color: #008b8b;">&#8728;</span> h1
 </div>
 </div>
 
-<div id="outline-container-orged777a6" class="outline-3">
-<h3 id="orged777a6"><span class="section-number-3">4.2.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org47caf93" class="outline-3">
+<h3 id="org47caf93"><span class="section-number-3">4.2.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-4-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -819,8 +820,8 @@ h2 <span style="color: #008b8b;">&#8728;</span> h1
 </div>
 </div>
 
-<div id="outline-container-orgeefe700" class="outline-3">
-<h3 id="orgeefe700"><span class="section-number-3">4.3.</span> Pruebas de P ∧ Q → Q ∧ P</h3>
+<div id="outline-container-orga0c49f5" class="outline-3">
+<h3 id="orga0c49f5"><span class="section-number-3">4.3.</span> Pruebas de P ∧ Q → Q ∧ P</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%88%A7Q%E2%86%92Q%E2%88%A7P.lean">Pruebas con Lean de P ∧ Q → Q ∧ P</a></li>
@@ -873,23 +874,23 @@ h2 <span style="color: #008b8b;">&#8728;</span> h1
 </div>
 </div>
 
-<div id="outline-container-org089f460" class="outline-2">
-<h2 id="org089f460"><span class="section-number-2">5.</span> Reglas de la negación</h2>
+<div id="outline-container-org73731fe" class="outline-2">
+<h2 id="org73731fe"><span class="section-number-2">5.</span> Reglas de la negación</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org9d4a1db" class="outline-3">
-<h3 id="org9d4a1db"><span class="section-number-3">5.1.</span> Reglas de la negación en deducción natural</h3>
+<div id="outline-container-org224bfe8" class="outline-3">
+<h3 id="org224bfe8"><span class="section-number-3">5.1.</span> Reglas de la negación en deducción natural</h3>
 <div class="outline-text-3" id="text-5-1">
 
-<div id="org82fc98c" class="figure">
+<div id="org4873f36" class="figure">
 <p><img src="./fig/Reglas_de_negacion.png" alt="Reglas_de_negacion.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org57f015f" class="outline-3">
-<h3 id="org57f015f"><span class="section-number-3">5.2.</span> Pruebas de ⊥ ⊢ P</h3>
+<div id="outline-container-org9ba6b81" class="outline-3">
+<h3 id="org9ba6b81"><span class="section-number-3">5.2.</span> Pruebas de ⊥ ⊢ P</h3>
 <div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FReglas_de_la_negacion_1.lean">Pruebas con Lean de ⊥ ⊢ P</a></li>
@@ -932,10 +933,10 @@ False.elim h
 </div>
 </div>
 
-<div id="outline-container-org5905318" class="outline-3">
-<h3 id="org5905318"><span class="section-number-3">5.3.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org88100c6" class="outline-3">
+<h3 id="org88100c6"><span class="section-number-3">5.3.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-5-3">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -1005,8 +1006,8 @@ False.elim h
 </div>
 </div>
 
-<div id="outline-container-org2bad5ba" class="outline-3">
-<h3 id="org2bad5ba"><span class="section-number-3">5.4.</span> Pruebas de la eliminación de la negación P, ¬P ⊢ ⊥</h3>
+<div id="outline-container-orge0871f1" class="outline-3">
+<h3 id="orge0871f1"><span class="section-number-3">5.4.</span> Pruebas de la eliminación de la negación P, ¬P ⊢ ⊥</h3>
 <div class="outline-text-3" id="text-5-4">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FReglas_de_la_negacion_2.lean">Pruebas con Lean de P, ¬P ⊢ ⊥</a></li>
@@ -1052,10 +1053,10 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-orgb74574e" class="outline-3">
-<h3 id="orgb74574e"><span class="section-number-3">5.5.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org3e47f81" class="outline-3">
+<h3 id="org3e47f81"><span class="section-number-3">5.5.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-5-5">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -1135,8 +1136,8 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-orgb2b7383" class="outline-3">
-<h3 id="orgb2b7383"><span class="section-number-3">5.6.</span> Pruebas de ¬(P ∧ ¬P)</h3>
+<div id="outline-container-org3ab7b50" class="outline-3">
+<h3 id="org3ab7b50"><span class="section-number-3">5.6.</span> Pruebas de ¬(P ∧ ¬P)</h3>
 <div class="outline-text-3" id="text-5-6">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FReglas_de_la_negacion_3.lean">Pruebas con Lean de ¬(P ∧ ¬P)</a></li>
@@ -1195,14 +1196,14 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-orgdf484cb" class="outline-3">
-<h3 id="orgdf484cb"><span class="section-number-3">5.7.</span> Pruebas de P → Q, P → ¬Q ⊢ ¬P</h3>
+<div id="outline-container-orgf60e45b" class="outline-3">
+<h3 id="orgf60e45b"><span class="section-number-3">5.7.</span> Pruebas de P → Q, P → ¬Q ⊢ ¬P</h3>
 <div class="outline-text-3" id="text-5-7">
 <ul class="org-ul">
 <li>Pruebas con deducción natural de P → Q, P → ¬Q ⊢ ¬P</li>
 </ul>
 
-<div id="org2325ec6" class="figure">
+<div id="org865fc0a" class="figure">
 <p><img src="./fig/Prueba_de_P→Q,P→¬Q⊢¬P.png" alt="Prueba_de_P→Q,P→¬Q⊢¬P.png" />
 </p>
 </div>
@@ -1260,14 +1261,14 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-org402238b" class="outline-3">
-<h3 id="org402238b"><span class="section-number-3">5.8.</span> Pruebas del modus tollens: P → Q, ¬Q ⊢ ¬P</h3>
+<div id="outline-container-orgddea857" class="outline-3">
+<h3 id="orgddea857"><span class="section-number-3">5.8.</span> Pruebas del modus tollens: P → Q, ¬Q ⊢ ¬P</h3>
 <div class="outline-text-3" id="text-5-8">
 <ul class="org-ul">
 <li>Pruebas con deducción natural del modus tollens: P → Q, ¬Q ⊢ ¬P</li>
 </ul>
 
-<div id="org62d9e2e" class="figure">
+<div id="org9a7f6fe" class="figure">
 <p><img src="./fig/Prueba_del_modus_tollens.png" alt="Prueba_del_modus_tollens.png" />
 </p>
 </div>
@@ -1333,14 +1334,14 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-org6d41354" class="outline-3">
-<h3 id="org6d41354"><span class="section-number-3">5.9.</span> Pruebas de P → (Q → R), P, ¬R ⊢ ¬Q</h3>
+<div id="outline-container-orga45c14a" class="outline-3">
+<h3 id="orga45c14a"><span class="section-number-3">5.9.</span> Pruebas de P → (Q → R), P, ¬R ⊢ ¬Q</h3>
 <div class="outline-text-3" id="text-5-9">
 <ul class="org-ul">
 <li>Prueba con deducción natural de P → (Q → R), P, ¬R ⊢ ¬Q</li>
 </ul>
 
-<div id="org94d90a5" class="figure">
+<div id="orge63d524" class="figure">
 <p><img src="./fig/Prueba_de_P→(Q→R),P,¬R⊢¬Q.png" alt="Prueba_de_P→(Q→R),P,¬R⊢¬Q.png" />
 </p>
 </div>
@@ -1396,14 +1397,14 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-org8af97c3" class="outline-3">
-<h3 id="org8af97c3"><span class="section-number-3">5.10.</span> Regla de introducción de la doble negación: P ⊢ ¬¬P</h3>
+<div id="outline-container-orgcdb0664" class="outline-3">
+<h3 id="orgcdb0664"><span class="section-number-3">5.10.</span> Regla de introducción de la doble negación: P ⊢ ¬¬P</h3>
 <div class="outline-text-3" id="text-5-10">
 <ul class="org-ul">
 <li>Prueba con deducción natural de la introducción de la doble negación: P ⊢ ¬¬P</li>
 </ul>
 
-<div id="orgff2e8fb" class="figure">
+<div id="org231f257" class="figure">
 <p><img src="./fig/Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.png" alt="Prueba_de_la_regla_de_introduccion_de_la_doble_negacion.png" />
 </p>
 </div>
@@ -1451,14 +1452,14 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-org9fc4b0a" class="outline-3">
-<h3 id="org9fc4b0a"><span class="section-number-3">5.11.</span> Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q</h3>
+<div id="outline-container-org857fb3b" class="outline-3">
+<h3 id="org857fb3b"><span class="section-number-3">5.11.</span> Pruebas de ¬Q → ¬P ⊢ P → ¬¬Q</h3>
 <div class="outline-text-3" id="text-5-11">
 <ul class="org-ul">
 <li>Pruebas con deducción natural de ¬Q → ¬P ⊢ P → ¬¬Q</li>
 </ul>
 
-<div id="orga8d6194" class="figure">
+<div id="org7164bea" class="figure">
 <p><img src="./fig/Prueba_de_¬Q→¬P⊢P→¬¬Q.png" alt="Prueba_de_¬Q→¬P⊢P→¬¬Q.png" />
 </p>
 </div>
@@ -1510,18 +1511,18 @@ h2 h1
 </div>
 </div>
 
-<div id="outline-container-orgad978cf" class="outline-2">
-<h2 id="orgad978cf"><span class="section-number-2">6.</span> Reglas de la disyunción</h2>
+<div id="outline-container-org2227408" class="outline-2">
+<h2 id="org2227408"><span class="section-number-2">6.</span> Reglas de la disyunción</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgb0106d7" class="outline-3">
-<h3 id="orgb0106d7"><span class="section-number-3">6.1.</span> Pruebas de la introducción de la disyunción</h3>
+<div id="outline-container-orgda624a2" class="outline-3">
+<h3 id="orgda624a2"><span class="section-number-3">6.1.</span> Pruebas de la introducción de la disyunción</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li>Reglas de introducción de la disyunción</li>
 </ul>
 
-<div id="org164e278" class="figure">
+<div id="org4e57041" class="figure">
 <p><img src="./fig/Reglas_de_disyuncion.png" alt="Reglas_de_disyuncion.png" />
 </p>
 </div>
@@ -1566,10 +1567,10 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org1db1d57" class="outline-3">
-<h3 id="org1db1d57"><span class="section-number-3">6.2.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org3b51384" class="outline-3">
+<h3 id="org3b51384"><span class="section-number-3">6.2.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-6-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -1664,8 +1665,8 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org79a1a57" class="outline-3">
-<h3 id="org79a1a57"><span class="section-number-3">6.3.</span> Pruebas de P ∧ Q ⊢ P ∨ R</h3>
+<div id="outline-container-org9d1277a" class="outline-3">
+<h3 id="org9d1277a"><span class="section-number-3">6.3.</span> Pruebas de P ∧ Q ⊢ P ∨ R</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%88%A7Q%E2%8A%A2P%E2%88%A8R.lean">Pruebas con Lean de P ∧ Q ⊢ P ∨ R</a></li>
@@ -1724,8 +1725,8 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org27f8c26" class="outline-3">
-<h3 id="org27f8c26"><span class="section-number-3">6.4.</span> Pruebas de P ∧ Q ⊢ R ∨ Q</h3>
+<div id="outline-container-orgc2e8e1b" class="outline-3">
+<h3 id="orgc2e8e1b"><span class="section-number-3">6.4.</span> Pruebas de P ∧ Q ⊢ R ∨ Q</h3>
 <div class="outline-text-3" id="text-6-4">
 <ul class="org-ul">
 <li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%88%A7Q%E2%8A%A2R%E2%88%A8Q.lean">Pruebas con Lean de P ∧ Q ⊢ R ∨ Q</a></li>
@@ -1789,14 +1790,14 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org91fc608" class="outline-3">
-<h3 id="org91fc608"><span class="section-number-3">6.5.</span> Regla de eliminación de la disyunción</h3>
+<div id="outline-container-org919d8ec" class="outline-3">
+<h3 id="org919d8ec"><span class="section-number-3">6.5.</span> Regla de eliminación de la disyunción</h3>
 <div class="outline-text-3" id="text-6-5">
 <ul class="org-ul">
 <li>Regla de eliminación de la disyunción en deducción natural</li>
 </ul>
 
-<div id="orga404106" class="figure">
+<div id="org4300d9a" class="figure">
 <p><img src="./fig/Regla_de_eliminacion_de_la_disyuncion.png" alt="Regla_de_eliminacion_de_la_disyuncion.png" />
 </p>
 </div>
@@ -1853,10 +1854,10 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-orge0ba4ff" class="outline-3">
-<h3 id="orge0ba4ff"><span class="section-number-3">6.6.</span> Correspondencia entre Lógica y Haskell</h3>
+<div id="outline-container-org06e3dcd" class="outline-3">
+<h3 id="org06e3dcd"><span class="section-number-3">6.6.</span> Correspondencia entre Lógica y Haskell</h3>
 <div class="outline-text-3" id="text-6-6">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" align="center">
 
 
 <colgroup>
@@ -1961,14 +1962,14 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-orgf661608" class="outline-3">
-<h3 id="orgf661608"><span class="section-number-3">6.7.</span> Pruebas de P ∨ Q ⊢ Q ∨ P</h3>
+<div id="outline-container-org36d28f4" class="outline-3">
+<h3 id="org36d28f4"><span class="section-number-3">6.7.</span> Pruebas de P ∨ Q ⊢ Q ∨ P</h3>
 <div class="outline-text-3" id="text-6-7">
 <ul class="org-ul">
 <li>Prueba con deducción natural de P ∨ Q ⊢ Q ∨ P</li>
 </ul>
 
-<div id="org611c77d" class="figure">
+<div id="org60941d6" class="figure">
 <p><img src="./fig/Prueba_de_P∨Q⊢Q∨P.png" alt="Prueba_de_P∨Q⊢Q∨P.png" />
 </p>
 </div>
@@ -2031,14 +2032,14 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-orgc60b53b" class="outline-3">
-<h3 id="orgc60b53b"><span class="section-number-3">6.8.</span> Pruebas de Q → R ⊢ P ∨ Q → P ∨ R</h3>
+<div id="outline-container-orga39e571" class="outline-3">
+<h3 id="orga39e571"><span class="section-number-3">6.8.</span> Pruebas de Q → R ⊢ P ∨ Q → P ∨ R</h3>
 <div class="outline-text-3" id="text-6-8">
 <ul class="org-ul">
 <li>Pruebas con deducción natural de Q → R ⊢ P ∨ Q → P ∨ R</li>
 </ul>
 
-<div id="orgd286fb0" class="figure">
+<div id="org8e38c03" class="figure">
 <p><img src="./fig/Prueba_de_Q→R⊢P∨Q→P∨R.png" alt="Prueba_de_Q→R⊢P∨Q→P∨R.png" />
 </p>
 </div>
@@ -2121,14 +2122,14 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org3cde962" class="outline-3">
-<h3 id="org3cde962"><span class="section-number-3">6.9.</span> Pruebas de ¬P ∨ Q ⊢ P → Q</h3>
+<div id="outline-container-orgc45a53a" class="outline-3">
+<h3 id="orgc45a53a"><span class="section-number-3">6.9.</span> Pruebas de ¬P ∨ Q ⊢ P → Q</h3>
 <div class="outline-text-3" id="text-6-9">
 <ul class="org-ul">
 <li>Pruebas con deducción natural de ¬P ∨ Q ⊢ P → Q</li>
 </ul>
 
-<div id="org73471d7" class="figure">
+<div id="orgcd354bc" class="figure">
 <p><img src="./fig/Prueba_de_¬P∨Q⊢P→Q.png" alt="Prueba_de_¬P∨Q⊢P→Q.png" />
 </p>
 </div>
@@ -2187,13 +2188,16 @@ Or.inr h
 </div>
 </div>
 
-<div id="outline-container-org56ad1ce" class="outline-2">
-<h2 id="org56ad1ce"><span class="section-number-2">7.</span> Reglas de la lógica clásica</h2>
+<div id="outline-container-orge9fb1a7" class="outline-2">
+<h2 id="orge9fb1a7"><span class="section-number-2">7.</span> Reglas de la lógica clásica</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org8fcca2a" class="outline-3">
-<h3 id="org8fcca2a"><span class="section-number-3">7.1.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.lean">Pruebas con Lean de la eliminación de la doble negación</a></h3>
+<div id="outline-container-orgeaac8f7" class="outline-3">
+<h3 id="orgeaac8f7"><span class="section-number-3">7.1.</span> Pruebas de la eliminación de la doble negación</h3>
 <div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.lean">Pruebas con Lean de la eliminación de la doble negación</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2213,15 +2217,37 @@ Or.inr h
 <span style="color: #a020f0;">example</span>
   <span style="color: #707183;">(</span>h : <span style="color: #008b8b;">&#172;&#172;</span>P<span style="color: #707183;">)</span>
   : P <span style="color: #008b8b;">:=</span>
-  byContradiction <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 <span style="color: #008b8b;">=&gt;</span> h h1<span style="color: #707183;">)</span>
+  byContradiction h
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_la_eliminacion_de_la_doble_negacion.hs">Pruebas con Haskell de la eliminación de la doble negación</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">eliminacionDN</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">eliminacionDN</span> h <span style="color: #a0522d;">=</span> byContradiction h
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t eliminacionDN</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">eliminacionDN :: Neg (Neg p) -&gt; p</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgaec16f7" class="outline-3">
-<h3 id="orgaec16f7"><span class="section-number-3">7.2.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.lean">uPruebas con Lean de la regla de reducción al absurdo</a></h3>
+<div id="outline-container-org77fd2bf" class="outline-3">
+<h3 id="org77fd2bf"><span class="section-number-3">7.2.</span> Pruebas de la regla de reducción al absurdo</h3>
 <div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.lean">Pruebas con Lean de la regla de reducción al absurdo</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2241,15 +2267,37 @@ Or.inr h
 <span style="color: #a020f0;">example</span>
   <span style="color: #707183;">(</span>h : <span style="color: #008b8b;">&#172;</span>P <span style="color: #008b8b;">&#8594;</span> False<span style="color: #707183;">)</span>
   : P <span style="color: #008b8b;">:=</span>
-  byContradiction <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 &#8614; h h1<span style="color: #707183;">)</span>
+  byContradiction h
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPrueba_de_la_regla_de_reduccion_al_absurdo.hs">Pruebas con Haskell de la regla de reducción al absurdo</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">reduccionAbsurso</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">reduccionAbsurso</span> h <span style="color: #a0522d;">=</span> byContradiction h
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t eliminacionDN</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">eliminacionDN :: Neg (Neg p) -&gt; p</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge618d40" class="outline-3">
-<h3 id="orge618d40"><span class="section-number-3">7.3.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.lean">Pruebas con Lean del principio del tercio excluso</a></h3>
+<div id="outline-container-org53047d3" class="outline-3">
+<h3 id="org53047d3"><span class="section-number-3">7.3.</span> Pruebas del principio del tercio excluso</h3>
 <div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.lean">Pruebas con Lean del principio del tercio excluso</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>F : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2277,12 +2325,34 @@ Or.inr h
   byContradiction <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 &#8614; h1 <span style="color: #7388d6;">(</span>Or.inl <span style="color: #909183;">(</span>byContradiction <span style="color: #709870;">(</span><span style="color: #a020f0;">fun</span> h2 &#8614; h1 <span style="color: #907373;">(</span>Or.inr h2<span style="color: #907373;">)</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
 </pre>
 </div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_del_principio_del_tercio_excluso.hs">Pruebas con Haskell del principio del tercio excluso</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">tercioExcluso</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Either</span> p <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">tercioExcluso</span> <span style="color: #a0522d;">=</span>  byContradiction <span style="color: #707183;">(</span><span style="color: #a0522d;">\</span>h1<span style="color: #a0522d;">-&gt;</span> h1 <span style="color: #7388d6;">(</span><span style="color: #228b22;">Left</span> <span style="color: #909183;">(</span>byContradiction <span style="color: #709870;">(</span><span style="color: #a0522d;">\</span>h2 <span style="color: #a0522d;">-&gt;</span> h1 <span style="color: #907373;">(</span><span style="color: #228b22;">Right</span> h2<span style="color: #907373;">)</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t tercioExcluso</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">tercioExcluso :: Either p (Neg p)</span>
+</pre>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgbea487c" class="outline-3">
-<h3 id="orgbea487c"><span class="section-number-3">7.4.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%86%92Q%E2%8A%A2%C2%ACP%E2%88%A8Q.lean">Pruebas con Lean de P → Q ⊢ ¬P ∨ Q</a></h3>
+<div id="outline-container-org342c59e" class="outline-3">
+<h3 id="org342c59e"><span class="section-number-3">7.4.</span> Pruebas de P → Q ⊢ ¬P ∨ Q</h3>
 <div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%86%92Q%E2%8A%A2%C2%ACP%E2%88%A8Q.lean">Pruebas con Lean de P → Q ⊢ ¬P ∨ Q</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P Q : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2293,35 +2363,69 @@ Or.inr h
   <span style="color: #707183;">(</span>h : P <span style="color: #008b8b;">&#8594;</span> Q<span style="color: #707183;">)</span>
   : <span style="color: #008b8b;">&#172;</span>P <span style="color: #008b8b;">&#8744;</span> Q <span style="color: #008b8b;">:=</span>
 <span style="color: #a020f0;">by</span>
-  by_cases h1 : P
-  . <span style="color: #b22222;">-- </span><span style="color: #b22222;">h1 : P</span>
+  apply Or.elim <span style="color: #707183;">(</span>Classical.em P<span style="color: #707183;">)</span>
+  . <span style="color: #b22222;">-- </span><span style="color: #b22222;">P &#8594; &#172;P &#8744; Q</span>
+    intro h1
+    <span style="color: #b22222;">-- </span><span style="color: #b22222;">h1 : P</span>
+    <span style="color: #b22222;">-- </span><span style="color: #b22222;">&#8866; &#172;P &#8744; Q</span>
     right
     <span style="color: #b22222;">-- </span><span style="color: #b22222;">&#8866; Q</span>
     exact h h1
-  . <span style="color: #b22222;">-- </span><span style="color: #b22222;">h1 : &#172;P</span>
+  . <span style="color: #b22222;">-- </span><span style="color: #b22222;">&#8866; &#172;P &#8594; &#172;P &#8744; Q</span>
+    intro h2
+    <span style="color: #b22222;">-- </span><span style="color: #b22222;">h2 : &#172;P</span>
+    <span style="color: #b22222;">-- </span><span style="color: #b22222;">&#8866; &#172;P &#8744; Q</span>
     left
     <span style="color: #b22222;">-- </span><span style="color: #b22222;">&#8866; &#172;P</span>
-    exact h1
+    exact h2
 
 <span style="color: #b22222;">-- </span><span style="color: #b22222;">2&#170; demostraci&#243;n</span>
 <span style="color: #a020f0;">example</span>
   <span style="color: #707183;">(</span>h : P <span style="color: #008b8b;">&#8594;</span> Q<span style="color: #707183;">)</span>
   : <span style="color: #008b8b;">&#172;</span>P <span style="color: #008b8b;">&#8744;</span> Q <span style="color: #008b8b;">:=</span>
-  Classical.by_cases <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 &#8614; Or.inr <span style="color: #7388d6;">(</span>h h1<span style="color: #7388d6;">)</span><span style="color: #707183;">)</span> <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 &#8614; Or.inl h1<span style="color: #707183;">)</span>
+  Or.elim <span style="color: #707183;">(</span>Classical.em P<span style="color: #707183;">)</span> <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h1 &#8614; Or.inr <span style="color: #7388d6;">(</span>h h1<span style="color: #7388d6;">)</span><span style="color: #707183;">)</span> <span style="color: #707183;">(</span><span style="color: #a020f0;">fun</span> h2 &#8614; Or.inl h2<span style="color: #707183;">)</span>
 
 <span style="color: #b22222;">-- </span><span style="color: #b22222;">3&#170; demostraci&#243;n</span>
 <span style="color: #a020f0;">example</span>
   <span style="color: #707183;">(</span>h : P <span style="color: #008b8b;">&#8594;</span> Q<span style="color: #707183;">)</span>
   : <span style="color: #008b8b;">&#172;</span>P <span style="color: #008b8b;">&#8744;</span> Q <span style="color: #008b8b;">:=</span>
-  Classical.by_cases <span style="color: #707183;">(</span>Or.inr <span style="color: #008b8b;">&#8728;</span> h<span style="color: #707183;">)</span> Or.inl
+  Or.elim <span style="color: #707183;">(</span>Classical.em P<span style="color: #707183;">)</span> <span style="color: #707183;">(</span>Or.inr <span style="color: #008b8b;">&#8728;</span> h<span style="color: #707183;">)</span> Or.inl
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P%E2%86%92Q%E2%8A%A2%C2%ACP%E2%88%A8Q.hs">Pruebas con Haskell de P → Q ⊢ ¬P ∨ Q</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">orElim</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Either</span> p q <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span>p <span style="color: #a0522d;">-&gt;</span> r<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span>q <span style="color: #a0522d;">-&gt;</span> r<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> r
+<span style="color: #0000ff;">orElim</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Left</span>  h<span style="color: #707183;">)</span> h2 <span style="color: #a020f0;">_</span>  <span style="color: #a0522d;">=</span> h2 h
+<span style="color: #0000ff;">orElim</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Right</span> h<span style="color: #707183;">)</span> <span style="color: #a020f0;">_</span>  h3 <span style="color: #a0522d;">=</span> h3 h
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">tercioExcluso</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Either</span> p <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">tercioExcluso</span> <span style="color: #a0522d;">=</span>  byContradiction <span style="color: #707183;">(</span><span style="color: #a0522d;">\</span>h1<span style="color: #a0522d;">-&gt;</span> h1 <span style="color: #7388d6;">(</span><span style="color: #228b22;">Left</span> <span style="color: #909183;">(</span>byContradiction <span style="color: #709870;">(</span><span style="color: #a0522d;">\</span>h2 <span style="color: #a0522d;">-&gt;</span> h1 <span style="color: #907373;">(</span><span style="color: #228b22;">Right</span> h2<span style="color: #907373;">)</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
+
+<span style="color: #0000ff;">ejemplo</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span>p <span style="color: #a0522d;">-&gt;</span> q<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Either</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span> q
+<span style="color: #0000ff;">ejemplo</span> h <span style="color: #a0522d;">=</span> <span style="color: #a020f0;">case</span> tercioExcluso <span style="color: #a020f0;">of</span>
+  <span style="color: #228b22;">Left</span> p  <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Right</span> <span style="color: #707183;">(</span>h p<span style="color: #707183;">)</span>
+  <span style="color: #228b22;">Right</span> q <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Left</span> q
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc01a242" class="outline-3">
-<h3 id="orgc01a242"><span class="section-number-3">7.5.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,%C2%AC%C2%AC(Q%E2%88%A7R)%E2%8A%A2%C2%AC%C2%ACP%E2%88%A7R.lean">Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</a></h3>
+<div id="outline-container-org00e4f6d" class="outline-3">
+<h3 id="org00e4f6d"><span class="section-number-3">7.5.</span> Pruebas de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</h3>
 <div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,%C2%AC%C2%AC(Q%E2%88%A7R)%E2%8A%A2%C2%AC%C2%ACP%E2%88%A7R.lean">Pruebas con Lean de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P Q R : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2347,12 +2451,40 @@ Or.inr h
   <span style="color: #707183;">&#10216;</span>not_not_intro h1, <span style="color: #7388d6;">(</span>not_not.mp h2<span style="color: #7388d6;">)</span>.right<span style="color: #707183;">&#10217;</span>
 </pre>
 </div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_P,%C2%AC%C2%AC(Q%E2%88%A7R)%E2%8A%A2%C2%AC%C2%ACP%E2%88%A7R.hs">Pruebas con Haskell de P, ¬¬(Q ∧ R) ⊢ ¬¬P ∧ R</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">not_not_I</span> <span style="color: #a0522d;">::</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">not_not_I</span> h1 h2 <span style="color: #a0522d;">=</span> h2 h1
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">eliminacionDN</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">eliminacionDN</span> h <span style="color: #a0522d;">=</span> byContradiction h
+
+<span style="color: #0000ff;">ejemplo</span> <span style="color: #a0522d;">::</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> <span style="color: #7388d6;">(</span>q, r<span style="color: #7388d6;">)</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> <span style="color: #7388d6;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #7388d6;">)</span>, r<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">ejemplo</span> h1 h2 <span style="color: #a0522d;">=</span> <span style="color: #707183;">(</span>not_not_I h1, snd <span style="color: #7388d6;">(</span>eliminacionDN h2<span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t ejemplo</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">ejemplo :: p -&gt; Neg (Neg (q, r)) -&gt; (Neg (Neg p), r)</span>
+</pre>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org6d10ad7" class="outline-3">
-<h3 id="org6d10ad7"><span class="section-number-3">7.6.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_%C2%ACP%E2%86%92Q,%C2%ACQ%E2%8A%A2P.lean">Pruebas con Lean de ¬P → Q, ¬Q ⊢ P</a></h3>
+<div id="outline-container-org6a6eb5b" class="outline-3">
+<h3 id="org6a6eb5b"><span class="section-number-3">7.6.</span> Pruebas de ¬P → Q, ¬Q ⊢ P</h3>
 <div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_%C2%ACP%E2%86%92Q,%C2%ACQ%E2%8A%A2P.lean">Pruebas con Lean de ¬P → Q, ¬Q ⊢ P</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P Q : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2386,12 +2518,34 @@ Or.inr h
   by_contra <span style="color: #707183;">(</span>h2 <span style="color: #008b8b;">&#8728;</span> h1<span style="color: #707183;">)</span>
 </pre>
 </div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_%C2%ACP%E2%86%92Q,%C2%ACQ%E2%8A%A2P.hs">Pruebas con Haskell de ¬P → Q, ¬Q ⊢ P</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">ejemplo</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> q<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> q <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">ejemplo</span> h1 h2 <span style="color: #a0522d;">=</span> byContradiction <span style="color: #707183;">(</span>h2 <span style="color: #a0522d;">.</span> h1<span style="color: #707183;">)</span>
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t ejemplo</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">ejemplo :: (Neg p -&gt; q) -&gt; Neg q -&gt; p</span>
+</pre>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org531cf2f" class="outline-3">
-<h3 id="org531cf2f"><span class="section-number-3">7.7.</span> <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q%E2%86%92R)%E2%86%92((%C2%ACQ%E2%86%92%C2%ACP)%E2%86%92(P%E2%86%92R)).lean">Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))</a></h3>
+<div id="outline-container-orgcc29dcf" class="outline-3">
+<h3 id="orgcc29dcf"><span class="section-number-3">7.7.</span> Pruebas de (Q → R) → ((¬Q → ¬P) → (P → R))</h3>
 <div class="outline-text-3" id="text-7-7">
+<ul class="org-ul">
+<li><a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q%E2%86%92R)%E2%86%92((%C2%ACQ%E2%86%92%C2%ACP)%E2%86%92(P%E2%86%92R)).lean">Pruebas con Lean de (Q → R) → ((¬Q → ¬P) → (P → R))</a></li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-lean"><span style="color: #a020f0;">import</span> Mathlib.Tactic
 <span style="color: #a020f0;">variable</span> <span style="color: #707183;">(</span>P Q R : <span style="color: #228b22;">Prop</span><span style="color: #707183;">)</span>
@@ -2419,13 +2573,55 @@ Or.inr h
   <span style="color: #a020f0;">fun</span> h1 h2 h3 &#8614; h1 <span style="color: #707183;">(</span>not_not.mp <span style="color: #7388d6;">(</span>mt h2 <span style="color: #909183;">(</span>not_not_intro h3<span style="color: #909183;">)</span><span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
 </pre>
 </div>
+
+<ul class="org-ul">
+<li><a href="https://live.hs-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fjaalonso%2FLogicaProgramacionDemostracion%2Fmain%2Fsrc%2FPruebas_de_(Q%E2%86%92R)%E2%86%92((%C2%ACQ%E2%86%92%C2%ACP)%E2%86%92(P%E2%86%92R)).hs">Pruebas con Haskell de (Q → R) → ((¬Q → ¬P) → (P → R))</a></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-haskell"><span style="color: #a020f0;">import</span> <span style="color: #228b22;">Data.Void</span>
+
+<span style="color: #a020f0;">type</span> <span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">=</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span>
+
+<span style="color: #0000ff;">mt</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span>p <span style="color: #a0522d;">-&gt;</span> q<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> q <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">mt</span> h1 h2 <span style="color: #a0522d;">=</span> h2 <span style="color: #a0522d;">.</span> h1
+
+<span style="color: #0000ff;">not_not_I</span> <span style="color: #a0522d;">::</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">not_not_I</span> h1 h2 <span style="color: #a0522d;">=</span> h2 h1
+
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Void</span><span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">byContradiction</span> <span style="color: #a0522d;">=</span> undefined
+
+<span style="color: #0000ff;">eliminacionDN</span> <span style="color: #a0522d;">::</span> <span style="color: #228b22;">Neg</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> p
+<span style="color: #0000ff;">eliminacionDN</span> h <span style="color: #a0522d;">=</span> byContradiction h
+
+<span style="color: #0000ff;">ejemplo</span> <span style="color: #a0522d;">::</span> <span style="color: #707183;">(</span>q <span style="color: #a0522d;">-&gt;</span> r<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span><span style="color: #228b22;">Neg</span> q <span style="color: #a0522d;">-&gt;</span> <span style="color: #228b22;">Neg</span> p<span style="color: #707183;">)</span> <span style="color: #a0522d;">-&gt;</span> <span style="color: #707183;">(</span>p <span style="color: #a0522d;">-&gt;</span> r<span style="color: #707183;">)</span>
+<span style="color: #0000ff;">ejemplo</span> h1 h2 h3 <span style="color: #a0522d;">=</span> h1 <span style="color: #707183;">(</span>eliminacionDN <span style="color: #7388d6;">(</span>mt h2 <span style="color: #909183;">(</span>not_not_I h3<span style="color: #909183;">)</span><span style="color: #7388d6;">)</span><span style="color: #707183;">)</span>
+
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">&#955;&gt; :t ejemplo</span>
+<span style="color: #b22222;">-- </span><span style="color: #b22222;">ejemplo :: (q -&gt; r) -&gt; (Neg q -&gt; Neg p) -&gt; p -&gt; r</span>
+</pre>
 </div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e1b5e6" class="outline-2">
+<h2 id="org3e1b5e6"><span class="section-number-2">8.</span> Bibliografía</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https://rachel.cafe/2022/12/15/haskell-and-logic.html">Haskell and logic</a>. ~ Rachel Lambda Samuelsson.</li>
+<li><a href="https://www.ben-sherman.net/aux/curry-howard.pdf">Haskell and the Curry-Howard isomorphism (Part 1)</a>. ~ Ben Sherman.</li>
+<li><a href="https://gist.github.com/Kazark/06acabbd25817ac9efc7fbe0493f23ff">Curry-Howard tutorial in literate Haskell</a>. ~ Keith Pinson.</li>
+<li><a href="https://web.archive.org/web/20080819185521/http://www.thenewsh.com/~newsham/formal/curryhoward/">The Curry-Howard correspondence in Haskell</a>. ~ Tim Newsham.</li>
+<li><a href="https://www.ccs.neu.edu/home/mates/pubs/mates_ugrad_thesis.pdf">A survey into the Curry-Howard isomorphism &amp; type systems</a>. ~ Phillip Mates.</li>
+<li><a href="https://antitypical.com/posts/2021-07-28-when-howard-met-curry/">When Howard met Curry</a>. ~ Rob Rix.</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Autor: José A. Alonso</p>
-<p class="date">Created: 2024-02-11 dom 13:44</p>
+<p class="date">Created: 2024-02-12 lun 08:29</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
