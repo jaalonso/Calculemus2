@@ -577,6 +577,22 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Cotas_superiores_de_conjuntos.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cotas_superiores_de_conjuntos.lean][Lean 4 Web]]
 
+** Si s ⊆ t, entonces s ∩ u ⊆ t ∩ u
+#+INCLUDE: "../src/Propiedad_de_monotonia_de_la_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean 4 Web]]
+
+** s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)
+#+INCLUDE: "../src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean][Lean 4 Web]]
+
+** (s \ t) \ u ⊆ s \ (t ∪ u)
+#+INCLUDE: "../src/Diferencia_de_diferencia_de_conjuntos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia_de_diferencia_de_conjuntos.lean][Lean 4 Web]]
+
+** (s ∩ t) ∪ (s ∩ u) ⊆ s ∩ (t ∪ u)
+#+INCLUDE: "../src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean][Lean 4 Web]]
+
 ** La función (x ↦ x + c) es inyectiva
 #+INCLUDE: "../src/Suma_constante_es_inyectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_inyectiva.lean][Lean 4 Web]]
@@ -639,12 +655,39 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Implicacion_mediante_disyuncion_y_negacion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean 4 Web]]
 
-
 * Límites de sucesiones
 
 ** La sucesión constante sₙ = c converge a c
 #+INCLUDE: "../src/Convergencia_de_la_sucesion_constante.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia_de_la_sucesion_constante.lean][Lean 4 Web]]
+
+** Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c
+#+INCLUDE: "../src/Convergencia_de_la_suma.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia_de_la_suma.lean][Lean 4 Web]]
+
+** Unicidad del límite de las sucesiones convergentes
+#+INCLUDE: "../src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean][Lean 4 Web]]
+
+** Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de uₙ+c es a+c
+#+INCLUDE: "../src/Limite_cuando_se_suma_una_constante.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_cuando_se_suma_una_constante.lean][Lean 4 Web]]
+
+** Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca
+#+INCLUDE: "../src/Limite_multiplicado_por_una_constante.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_multiplicado_por_una_constante.lean][Lean 4 Web]]
+
+** El límite de u es a syss el de u-a es 0
+#+INCLUDE: "../src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean][Lean 4 Web]]
+
+** Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0
+#+INCLUDE: "../src/Producto_de_sucesiones_convergentes_a_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_sucesiones_convergentes_a_cero.lean][Lean 4 Web]]
+
+** Teorema del emparedado
+#+INCLUDE: "../src/Teorema_del_emparedado.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_del_emparedado.lean][Lean 4 Web]]
 
 #+LATEX: \input Calculemus2_bibliografia
 
