@@ -6,7 +6,7 @@ Autor:  José A. Alonso
 [mathjax]
 
 Demostrar con Lean4 que
-\\[ s \ (t ∪ u) ⊆ (s \ t) \ u \\]
+\\[ s \setminus (t ∪ u) ⊆ (s \setminus t) \setminus u \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -23,16 +23,16 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \\(x ∈ s \ (t ∪ u)\\). Entonces,
+Sea \\(x ∈ s \setminus (t ∪ u)\\). Entonces,
 \\begin{align}
    &x ∈ s      \\tag{1} \\\\
    &x ∉ t ∪ u  \\tag{2} \\\\
 \\end{align}
-Tenemos que demostrar que \\(x ∈ (s \ t) \ u\\); es decir, que se verifican las relaciones
+Tenemos que demostrar que \\(x ∈ (s \setminus t) \setminus u\\); es decir, que se verifican las relaciones
 \\begin{align}
-   &x ∈ s \ t \\tag{3} \\\\
+   &x ∈ s \setminus t \\tag{3} \\\\
    &x ∉ u     \\tag{4}
-\\end{alig}
+\\end{align}
 Para demostrar (3) tenemos que demostrar las relaciones
 \\begin{align}
    &x ∈ s \\tag{5} \\\\
