@@ -195,3 +195,4 @@ usaba Lean3 en lugar de Lean4.
 + L26 [[./textos/Diferencia_de_diferencia_de_conjuntos_2.md][s \ (t ∪ u) ⊆ (s \ t) \ u]] (En [[./src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
 + M27 [[./textos/Conmutatividad_de_la_interseccion.md][s ∩ t = t ∩ s]] (En [[./src/Conmutatividad_de_la_interseccion.lean][Lean]] y en [[./thy/Conmutatividad_de_la_interseccion.thy][Isabelle]]).
 + X28 [[./textos/Interseccion_con_su_union.md][s ∩ (s ∪ t) = s]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
++ J29 [[./textos/Union_con_su_interseccion.md][s ∪ (s ∩ t) = s]] (En [[./src/Union_con_su_interseccion.lean][Lean]] y en [[./thy/Union_con_su_interseccion.thy][Isabelle]]).
