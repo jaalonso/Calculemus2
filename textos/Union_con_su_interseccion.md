@@ -27,7 +27,7 @@ Tenemos que demostrar que
 \\[ (∀ x)[x ∈ s ∪ (s ∩ t) ↔ x ∈ s] \\]
 y lo haremos demostrando las dos implicaciones.
 
-(⟹) Sea \\(x ∈ s ∪ (s ∩ t)\\). Entonces, \\(c ∈ s\\) ó \\(x ∈ s ∩ t\\). En ambos casos, \\(x ∈ s\\).
+(⟹) Sea \\(x ∈ s ∪ (s ∩ t)\\). Entonces, \\(x ∈ s\\) ó \\(x ∈ s ∩ t\\). En ambos casos, \\(x ∈ s\\).
 
 (⟸) Sea \\(x ∈ s\\). Entonces, \\(x ∈ s ∩ t\\) y, por tanto, \\(x ∈ s ∪ (s ∩ t)\\).
 
