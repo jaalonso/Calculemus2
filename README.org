@@ -162,6 +162,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.md][s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.thy][Isabelle]]).
 + [[./textos/Diferencia_de_diferencia_de_conjuntos.md][(s \ t) \ u ⊆ s \ (t ∪ u)]] (En [[./src/Diferencia_de_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
 + [[./textos/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.md][(s ∩ t) ∪ (s ∩ u) ⊆ s ∩ (t ∪ u)]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.thy][Isabelle]]).
++ [[./textos/Diferencia_de_diferencia_de_conjuntos_2.md][s \ (t ∪ u) ⊆ (s \ t) \ u]] (En [[./src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
++ [[./textos/Conmutatividad_de_la_interseccion.md][s ∩ t = t ∩ s]] (En [[./src/Conmutatividad_de_la_interseccion.lean][Lean]] y en [[./thy/Conmutatividad_de_la_interseccion.thy][Isabelle]]).
++ [[./textos/Interseccion_con_su_union.md][s ∩ (s ∪ t) = s]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
++ [[./textos/Union_con_su_interseccion.md][s ∪ (s ∩ t) = s]] (En [[./src/Union_con_su_interseccion.lean][Lean]] y en [[./thy/Union_con_su_interseccion.thy][Isabelle]]).
++ [[./textos/Union_con_su_diferencia.md][(s \ t) ∪ t = s ∪ t]] (En [[./src/Union_con_su_diferencia.lean][Lean]] y en [[./thy/Union_con_su_diferencia.thy][Isabelle]]).
 + [[./textos/Cotas_superiores_de_conjuntos.md][Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s]] (En [[./src/Cotas_superiores_de_conjuntos.lean][Lean4]]).
 + [[./textos/Suma_constante_es_inyectiva.md][La función (x ↦ x + c) es inyectiva]] (En [[./src/Suma_constante_es_inyectiva.lean][Lean4]]).
 + [[./textos/Producto_constante_no_nula_es_inyectiva.md][Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva]] (En [[./src/Producto_constante_no_nula_es_inyectiva.lean][Lean4]]).
@@ -192,9 +197,4 @@ usaba Lean3 en lugar de Lean4.
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 
 * Sin ordenar
-+ L26 [[./textos/Diferencia_de_diferencia_de_conjuntos_2.md][s \ (t ∪ u) ⊆ (s \ t) \ u]] (En [[./src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean]] y en [[./thy/Diferencia_de_diferencia_de_conjuntos.thy][Isabelle]]).
-+ M27 [[./textos/Conmutatividad_de_la_interseccion.md][s ∩ t = t ∩ s]] (En [[./src/Conmutatividad_de_la_interseccion.lean][Lean]] y en [[./thy/Conmutatividad_de_la_interseccion.thy][Isabelle]]).
-+ X28 [[./textos/Interseccion_con_su_union.md][s ∩ (s ∪ t) = s]] (En [[./src/Interseccion_con_su_union.lean][Lean]] y en [[./thy/Interseccion_con_su_union.thy][Isabelle]]).
-+ J29 [[./textos/Union_con_su_interseccion.md][s ∪ (s ∩ t) = s]] (En [[./src/Union_con_su_interseccion.lean][Lean]] y en [[./thy/Union_con_su_interseccion.thy][Isabelle]]).
-+ V01 [[./textos/Union_con_su_diferencia.md][(s \ t) ∪ t = s ∪ t]] (En [[./src/Union_con_su_diferencia.lean][Lean]] y en [[./thy/Union_con_su_diferencia.thy][Isabelle]]).
 + L04 [[./textos/Diferencia_de_union_e_interseccion.md][(s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)]] (En [[./src/Diferencia_de_union_e_interseccion.lean][Lean]] y en [[./thy/Diferencia_de_union_e_interseccion.thy][Isabelle]]).

@@ -1,13 +1,36 @@
 -- Diferencia_de_union_e_interseccion.lean
 -- (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t).
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 4-marzo-2024
+-- Sevilla, 5-marzo-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
 -- Demostrar que
 --    (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)
 -- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Tenemos que demostrar que, para todo x,
+--    x ∈ (s \ t) ∪ (t \ s) ↔ x ∈ (s ∪ t) \ (s ∩ t)
+-- Se demuestra mediante la siguiente cadena de equivalencias:
+--    x ∈ (s \ t) ∪ (t \ s)
+--    ↔ x ∈ (s \ t) ∨ x ∈ (t \ s)
+--    ↔ (x ∈ s ∧ x ∉ t) ∨ x ∈ (t \ s)
+--    ↔ (x ∈ s ∨ x ∈ (t \ s)) ∧ (x ∉ t ∨ x ∈ (t \ s))
+--    ↔ (x ∈ s ∨ (x ∈ t ∧ x ∉ s)) ∧ (x ∉ t ∨ (x ∈ t ∧ x ∉ s))
+--    ↔ ((x ∈ s ∨ x ∈ t) ∧ (x ∈ s ∨ x ∉ s)) ∧ ((x ∉ t ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s))
+--    ↔ ((x ∈ s ∨ x ∈ t) ∧ True) ∧ (True ∧ (x ∉ t ∨ x ∉ s))
+--    ↔ (x ∈ s ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s)
+--    ↔ (x ∈ s ∪ t) ∧ (x ∉ t ∨ x ∉ s)
+--    ↔ (x ∈ s ∪ t) ∧ (x ∉ s ∨ x ∉ t)
+--    ↔ (x ∈ s ∪ t) ∧ ¬(x ∈ s ∧ x ∈ t)
+--    ↔ (x ∈ s ∪ t) ∧ ¬(x ∈ s ∩ t)
+--    ↔ x ∈ (s ∪ t) \ (s ∩ t)
+
+-- Demostraciones con Lean4
+-- ========================
 
 import Mathlib.Data.Set.Basic
 open Set
@@ -52,7 +75,7 @@ by
    _ ↔ x ∈ (s ∪ t) \ (s ∩ t)     :=
          by simp only [mem_diff]
 
--- 1ª demostración
+-- 2ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -125,7 +148,7 @@ by
       . -- ⊢ x ∈ t
         exact xt
 
--- 2ª demostración
+-- 3ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -153,7 +176,7 @@ by
       -- ⊢ x ∈ (s \ t) ∪ (t \ s)
       aesop
 
--- 3ª demostración
+-- 4ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -167,7 +190,7 @@ by
   . -- ⊢ x ∈ (s ∪ t) \ (s ∩ t) → x ∈ (s \ t) ∪ (t \ s)
     rintro ⟨xs | xt, nxst⟩ <;> aesop
 
--- 4ª demostración
+-- 5ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -177,7 +200,7 @@ by
   . aesop
   . aesop
 
--- 5ª demostración
+-- 6ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -185,7 +208,7 @@ by
   ext
   constructor <;> aesop
 
--- 6ª demostración
+-- 7ª demostración
 -- ===============
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
@@ -200,8 +223,21 @@ by
   --   (x ∈ (s ∪ t) \ (s ∩ t) → x ∈ (s \ t) ∪ (t \ s))
   aesop
 
--- 7ª demostración
--- ===============
+-- Lemas usados
+-- ============
 
-example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
-by aesop (add norm ext_iff, norm iff_def)
+-- variable (x : α)
+-- variable (a b c : Prop)
+-- #check (mem_union x s t : x ∈ s ∪ t ↔ x ∈ s ∨ x ∈ t)
+-- #check (mem_diff x : x ∈ s \ t ↔ x ∈ s ∧ ¬x ∈ t)
+-- #check (and_or_right : (a ∧ b) ∨ c ↔ (a ∨ c) ∧ (b ∨ c))
+-- #check (or_and_left : a ∨ (b ∧ c) ↔ (a ∨ b) ∧ (a ∨ c))
+-- #check (em a : a ∨ ¬ a)
+-- #check (em' a : ¬ a ∨ a)
+-- #check (and_true_iff a : a ∧ True ↔ a)
+-- #check (true_and_iff a : True ∧ a ↔ a)
+-- #check (or_comm : a ∨ b ↔ b ∨ a)
+-- #check (not_and_or : ¬(a ∧ b) ↔ ¬a ∨ ¬b)
+-- #check (mem_inter_iff x s t : x ∈ s ∩ t ↔ x ∈ s ∧ x ∈ t)
+-- #check (ext_iff : s = t ↔ ∀ (x : α), x ∈ s ↔ x ∈ t)
+-- #check (iff_def : (a ↔ b) ↔ (a → b) ∧ (b → a))
