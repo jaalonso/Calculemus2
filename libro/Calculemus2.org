@@ -593,6 +593,27 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean][Lean 4 Web]]
 
+
+** s \ (t ∪ u) ⊆ (s \ t) \ u
+#+INCLUDE: "../src/Diferencia_de_diferencia_de_conjuntos_2.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean 4 Web]]
+
+** s ∩ t = t ∩ s
+#+INCLUDE: "../src/Conmutatividad_de_la_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad_de_la_interseccion.lean][Lean 4 Web]]
+
+** s ∩ (s ∪ t) = s
+#+INCLUDE: "../src/Interseccion_con_su_union.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_con_su_union.lean][Lean 4 Web]]
+
+** s ∪ (s ∩ t) = s
+#+INCLUDE: "../src/Union_con_su_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_su_interseccion.lean][Lean 4 Web]]
+
+** (s \ t) ∪ t = s ∪ t
+#+INCLUDE: "../src/Union_con_su_diferencia.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_su_diferencia.lean][Lean 4 Web]]
+
 ** La función (x ↦ x + c) es inyectiva
 #+INCLUDE: "../src/Suma_constante_es_inyectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_inyectiva.lean][Lean 4 Web]]
