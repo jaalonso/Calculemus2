@@ -34,7 +34,6 @@ Se demuestra mediante la siguiente cadena de equivalencias:
    ↔ &(x ∈ s ∨ x ∈ (t \\ s)) ∧ (x ∉ t ∨ x ∈ (t \\setminus s)) \\\\
    ↔ &(x ∈ s ∨ (x ∈ t ∧ x ∉ s)) ∧ (x ∉ t ∨ (x ∈ t ∧ x ∉ s)) \\\\
    ↔ &((x ∈ s ∨ x ∈ t) ∧ (x ∈ s ∨ x ∉ s)) ∧ ((x ∉ t ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s)) \\\\
-   ↔ &((x ∈ s ∨ x ∈ t) ∧ True) ∧ (True ∧ (x ∉ t ∨ x ∉ s)) \\\\
    ↔ &(x ∈ s ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s) \\\\
    ↔ &(x ∈ s ∪ t) ∧ (x ∉ t ∨ x ∉ s) \\\\
    ↔ &(x ∈ s ∪ t) ∧ (x ∉ s ∨ x ∉ t) \\\\
