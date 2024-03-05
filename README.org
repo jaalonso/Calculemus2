@@ -199,3 +199,4 @@ usaba Lean3 en lugar de Lean4.
 * Sin ordenar
 + L04 [[./textos/Diferencia_de_union_e_interseccion.md][(s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)]] (En [[./src/Diferencia_de_union_e_interseccion.lean][Lean]] y en [[./thy/Diferencia_de_union_e_interseccion.thy][Isabelle]]).
 + M05 [[./textos/Union_de_pares_e_impares.md][pares ∪ impares = naturales]] (En [[./src/Union_de_pares_e_impares.lean][Lean]] y en [[./thy/Union_de_pares_e_impares.thy][Isabelle]]).
++ X06 [[./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md][Los primos mayores que 2 son impares]] (En [[./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/Interseccion_de_los_primos_y_los_mayores_que_dos.thy][Isabelle]]).

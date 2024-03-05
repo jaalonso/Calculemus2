@@ -36,11 +36,11 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Tenemos que demostrar que
-\[ {n | Even n} ∪ {n | ¬Even n} = {n | True} \]
+\\[ \\{n | \\text{Even}(n)\\} ∪ \\{n | ¬\\text{Even}(n)\\} = \\{n | \\text{True}\\} \\]
 es decir,
-\[ n ∈ {n | Even n} ∪ {n | ¬Even n} ↔ n ∈ {n | True} \]
+\\[ n ∈ \\{n | \\text{Even}(n)\\} ∪ \\{n | ¬\\text{Even}(n)\\} ↔ n ∈ \\{n | \\text{True}\\} \\]
 que se reduce a
-\[ ⊢ Even n ∨ ¬Even n \]
+\\[ ⊢ \\text{Even}(n) ∨ ¬\\text{Even}(n) \\]
 que es una tautología.
 
 <h2>2. Demostraciones con Lean4</h2>
@@ -108,7 +108,6 @@ proof -
 qed
 
 (* 2ª demostración *)
-
 lemma "pares ∪ impares = naturales"
   unfolding naturales_def pares_def impares_def
   by auto
