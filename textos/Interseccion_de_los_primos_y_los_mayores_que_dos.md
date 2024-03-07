@@ -5,7 +5,17 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que Los primos mayores que 2 son impares.
+Los números primos, los mayores que 2 y los impares se definen en Lean4 por
+<pre lang="lean">
+   def Primos      : Set ℕ := {n | Nat.Prime n}
+   def MayoresQue2 : Set ℕ := {n | n > 2}
+   def Impares     : Set ℕ := {n | ¬Even n}
+</pre>
+
+Demostrar con Lean4 que
+<pre lang="lean">
+   Primos ∩ MayoresQue2 ⊆ Impares
+</pre>
 
 Para ello, completar la siguiente teoría de Lean4:
 

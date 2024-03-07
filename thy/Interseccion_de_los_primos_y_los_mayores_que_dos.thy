@@ -2,8 +2,7 @@
    Los primos mayores que 2 son impares.
    José A. Alonso Jiménez <https://jaalonso.github.io>
    Sevilla, 6-marzo-2024
-   ---------------------------------------------------------------------
-*)
+   ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
   Los números primos, los mayores que 2 y los impares se definen por

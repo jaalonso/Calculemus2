@@ -6,9 +6,9 @@
 
 -- ---------------------------------------------------------------------
 -- Los números primos, los mayores que 2 y los impares se definen por
---    def Primos      : set ℕ := {n | prime n}
---    def MayoresQue2 : set ℕ := {n | n > 2}
---    def Impares     : set ℕ := {n | ¬ even n}
+--    def Primos      : Set ℕ := {n | Nat.Prime n}
+--    def MayoresQue2 : Set ℕ := {n | n > 2}
+--    def Impares     : Set ℕ := {n | ¬Even n}
 --
 -- Demostrar que
 --    Primos ∩ MayoresQue2 ⊆ Impares
