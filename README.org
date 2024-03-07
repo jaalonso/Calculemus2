@@ -201,6 +201,4 @@ usaba Lean3 en lugar de Lean4.
 + M05 [[./textos/Union_de_pares_e_impares.md][pares ∪ impares = naturales]] (En [[./src/Union_de_pares_e_impares.lean][Lean]] y en [[./thy/Union_de_pares_e_impares.thy][Isabelle]]).
 + X06 [[./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md][Los primos mayores que 2 son impares]] (En [[./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/Interseccion_de_los_primos_y_los_mayores_que_dos.thy][Isabelle]]).
 + J07 [[./textos/Distributiva_de_la_interseccion_respecto_de_la_union_general.md][s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)]] (En [[./src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean]] y en [[./thy/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy][Isabelle]]).
-
-* Sin publicar
 + V08 [[./textos/Interseccion_de_intersecciones.md][(⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)]] (En [[./src/Interseccion_de_intersecciones.lean][Lean]] y en [[./thy/Interseccion_de_intersecciones.thy][Isabelle]]).

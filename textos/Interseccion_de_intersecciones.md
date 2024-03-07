@@ -6,7 +6,7 @@ Autor:  José A. Alonso
 [mathjax]
 
 Demostrar con Lean4 que
-\[ ⋂_i (A_i ∩ B_i) = (⋂_i A_i) ∩ (⋂_i B_i) \]
+\\[ ⋂_i (A_i ∩ B_i) = (⋂_i A_i) ∩ (⋂_i B_i) \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -26,16 +26,16 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar que para \(x\) se verifica
-\[ x ∈ ⋂_i (A_i ∩ B_i) ↔ x ∈ (⋂_i A_i) ∩ (⋂_i B_i) \]
+Tenemos que demostrar que para \\(x\\) se verifica
+\\[ x ∈ ⋂_i (A_i ∩ B_i) ↔ x ∈ (⋂_i A_i) ∩ (⋂_i B_i) \\]
 Lo demostramos mediante la siguiente cadena de equivalencias
-\begin{align}
-   x ∈ ⋂_i (A_i ∩ B_i) ↔ (∀ i)[x ∈ A_i ∩ B_i] \\
-                       ↔ (∀ i)[x ∈ A_i ∧ x ∈ B_i] \\
-                       ↔ (∀ i)[x ∈ A_i] ∧ (∀ i)[x ∈ B_i] \\
-                       ↔ x ∈ (⋂_i A_i) ∧ x ∈ (⋂_i B_i) \\
-                       ↔ x ∈ (⋂_i A_i) ∩ (⋂_i B_i)
-\end{align}
+\\begin{align}
+   x ∈ ⋂_i (A_i ∩ B_i) &↔ (∀ i)[x ∈ A_i ∩ B_i] \\\\
+                       &↔ (∀ i)[x ∈ A_i ∧ x ∈ B_i] \\\\
+                       &↔ (∀ i)[x ∈ A_i] ∧ (∀ i)[x ∈ B_i] \\\\
+                       &↔ x ∈ (⋂_i A_i) ∧ x ∈ (⋂_i B_i) \\\\
+                       &↔ x ∈ (⋂_i A_i) ∩ (⋂_i B_i)
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
