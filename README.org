@@ -203,3 +203,4 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L11 [[./textos/Union_con_interseccion_general.md][s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)]] (En [[./src/Union_con_interseccion_general.lean][Lean]] y en [[./thy/Union_con_interseccion_general.thy][Isabelle]]).
++ M12 [[./textos/Imagen_inversa_de_la_interseccion.md][f⁻¹[u ∩ v] = f⁻¹[u] ∩ f⁻¹[v]​]] (En [[./src/Imagen_inversa_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_interseccion.thy][Isabelle]]).
