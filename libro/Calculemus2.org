@@ -614,6 +614,27 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Union_con_su_diferencia.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_su_diferencia.lean][Lean 4 Web]]
 
+
+** (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)
+#+INCLUDE: "../src/Diferencia_de_union_e_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia_de_union_e_interseccion.lean][Lean 4 Web]]
+
+** Pares ∪ Impares = Naturales
+#+INCLUDE: "../src/Union_de_pares_e_impares.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_de_pares_e_impares.lean][Lean 4 Web]]
+
+** Los primos mayores que 2 son impares
+#+INCLUDE: "../src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean 4 Web]]
+
+** s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)
+#+INCLUDE: "../src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean 4 Web]]
+
+** (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)
+#+INCLUDE: "../src/Interseccion_de_intersecciones.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_de_intersecciones.lean][Lean 4 Web]]
+
 ** La función (x ↦ x + c) es inyectiva
 #+INCLUDE: "../src/Suma_constante_es_inyectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_inyectiva.lean][Lean 4 Web]]

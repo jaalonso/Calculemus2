@@ -5,8 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Los conjuntos de los números naturales, de los pares y de los impares
-se definen en Lean4 por
+Los conjuntos de los números naturales, de los pares y de los impares se definen en Lean4 por
 <pre lang="haskell">
    def Naturales : Set ℕ := {n | True}
    def Pares     : Set ℕ := {n | Even n}

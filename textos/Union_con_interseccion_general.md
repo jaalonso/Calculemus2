@@ -6,7 +6,7 @@ Autor:  José A. Alonso
 [mathjax]
 
 Demostrar con Lean4 que
-\[ s ∪ (⋂_i A_i) = ⋂_i (A_i ∪ s) \]
+\\[ s ∪ (⋂_i A_i) = ⋂_i (A_i ∪ s) \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -25,17 +25,17 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar que para todo \(x\),
-\[ x ∈ s ∪ ⋂_i A_i ↔ x ∈ ⋂_i (A i ∪ s) \]
+Tenemos que demostrar que para todo \\(x\\),
+\\[ x ∈ s ∪ ⋂_i A_i ↔ x ∈ ⋂_i (A i ∪ s) \\]
 Lo haremos mediante la siguiente cadena de equivalencias
-\begin{align}
-   x ∈ s ∪ ⋂_i A_i &↔ x ∈ s ∨ x ∈ ⋂_i A_i \\
-                   &↔ x ∈ s ∨ (∀ i)[x ∈ A_i] \\
-                   &↔ (∀ i)[x ∈ s ∨ x ∈ A_i] \\
-                   &↔ (∀ i)[x ∈ A_i ∨ x ∈ s] \\
-                   &↔ (∀ i)[x ∈ A_i ∪ s]     \\
+\\begin{align}
+   x ∈ s ∪ ⋂_i A_i &↔ x ∈ s ∨ x ∈ ⋂_i A_i \\\\
+                   &↔ x ∈ s ∨ (∀ i)[x ∈ A_i] \\\\
+                   &↔ (∀ i)[x ∈ s ∨ x ∈ A_i] \\\\
+                   &↔ (∀ i)[x ∈ A_i ∨ x ∈ s] \\\\
+                   &↔ (∀ i)[x ∈ A_i ∪ s]     \\\\
                    &↔ x ∈ ⋂_i (A_i ∪ s)
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
