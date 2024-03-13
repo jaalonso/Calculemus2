@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-En Lean, la imagen inversa de un conjunto =s= (de elementos de tipo =β=) por la función =f= (de tipo =α → β=) es el conjunto =f ⁻¹' s= de elementos =x= (de tipo =α=) tales que =f x ∈ s=.
+En Lean, la imagen inversa de un conjunto `s` (de elementos de tipo `β`) por la función `f` (de tipo `α → β`) es el conjunto `f ⁻¹' s` de elementos `x` (de tipo `α`) tales que `f x ∈ s`.
 
 Demostrar con Lean4 que
 <pre lang="lean">
@@ -28,15 +28,15 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar que, para todo \(x\),
-\[ x ∈ f⁻¹[u ∩ v] ↔ x ∈ f⁻¹[u] ∩ f⁻¹[v] \]
+Tenemos que demostrar que, para todo \\(x\\),
+\\[ x ∈ f⁻¹[u ∩ v] ↔ x ∈ f⁻¹[u] ∩ f⁻¹[v] \\]
 Lo haremos mediante la siguiente cadena de equivalencias
-\begin{align}
-   x ∈ f⁻¹[u ∩ v] &↔ f x ∈ u ∩ v \\
-                  &↔ f x ∈ u ∧ f x ∈ v \\
-                  &↔ x ∈ f⁻¹[u] ∧ x ∈ f⁻¹[v] \\
-                  &↔ x ∈ f⁻¹[u] ∩ f⁻¹[v] \\
-\end{align}
+\\begin{align}
+   x ∈ f⁻¹[u ∩ v] &↔ f x ∈ u ∩ v \\\\
+                  &↔ f x ∈ u ∧ f x ∈ v \\\\
+                  &↔ x ∈ f⁻¹[u] ∧ x ∈ f⁻¹[v] \\\\
+                  &↔ x ∈ f⁻¹[u] ∩ f⁻¹[v] \\\\
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
