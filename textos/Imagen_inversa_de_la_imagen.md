@@ -5,10 +5,8 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar que si \(s\) es un subconjunto del dominio de la función \(f\),
-entonces \(s\) está contenido en la imagen inversa de la imagen de \(s\) por
-\(f\); es decir,
-\[ s ⊆ f⁻¹[f[s]] \]
+Demostrar que si \\(s\\) es un subconjunto del dominio de la función \\(f\\), entonces \\(s\\) está contenido en la imagen inversa de la imagen de \\(s\\) por \\(f\\); es decir,
+\\[ s ⊆ f⁻¹[f[s]] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -27,10 +25,10 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Se demuestra mediante la siguiente cadena de implicaciones
-\begin{align}
-   x ∈ s &⟹ f(x) ∈ f[s] \\
+\\begin{align}
+   x ∈ s &⟹ f(x) ∈ f[s] \\\\
          &⟹ x ∈ f⁻¹[f[s]]
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
