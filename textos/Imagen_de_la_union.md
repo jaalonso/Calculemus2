@@ -5,8 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-En Lean4, la imagen de un conjunto s por una función f se representa
-por `f '' s`; es decir,
+En Lean4, la imagen de un conjunto s por una función f se representa por `f '' s`; es decir,
 <pre lang="lean">
    f '' s = {y | ∃ x, x ∈ s ∧ f x = y}
 </pre>
@@ -32,17 +31,17 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar, para todo \(y\), que
-\[ y ∈ f[s ∪ t] ↔ y ∈ f[s] ∪ f[t] \]
+Tenemos que demostrar, para todo \\(y\\), que
+\\[ y ∈ f[s ∪ t] ↔ y ∈ f[s] ∪ f[t] \\]
 Lo haremos mediante la siguiente cadena de equivalencias
-\begin{align}
-   y ∈ f[s ∪ t] &↔ (∃x)(x ∈ s ∪ t ∧ f x = y) \\
-                &↔ (∃x)((x ∈ s ∨ x ∈ t) ∧ f x = y) \\
-                &↔ (∃x)((x ∈ s ∧ f x = y) ∨ (x ∈ t ∧ f x = y)) \\
-                &↔ (∃x)(x ∈ s ∧ f x = y) ∨ (∃x)(x ∈ t ∧ f x = y) \\
-                &↔ y ∈ f[s] ∨ y ∈ f[t] \\
+\\begin{align}
+   y ∈ f[s ∪ t] &↔ (∃x)(x ∈ s ∪ t ∧ f x = y) \\\\
+                &↔ (∃x)((x ∈ s ∨ x ∈ t) ∧ f x = y) \\\\
+                &↔ (∃x)((x ∈ s ∧ f x = y) ∨ (x ∈ t ∧ f x = y)) \\\\
+                &↔ (∃x)(x ∈ s ∧ f x = y) ∨ (∃x)(x ∈ t ∧ f x = y) \\\\
+                &↔ y ∈ f[s] ∨ y ∈ f[t] \\\\
                 &↔ y ∈ f[s] ∪ f[t]
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
