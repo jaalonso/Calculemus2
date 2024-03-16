@@ -206,3 +206,4 @@ usaba Lean3 en lugar de Lean4.
 + M12 [[./textos/Imagen_inversa_de_la_interseccion.md][f⁻¹[u ∩ v] = f⁻¹[u] ∩ f⁻¹[v]​]] (En [[./src/Imagen_inversa_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_interseccion.thy][Isabelle]]).
 + X13 [[./textos/Imagen_de_la_union.md][f[s ∪ t] = f[s] ∪ f[t]​]] (En [[./src/Imagen_de_la_union.lean][Lean]] y en [[./thy/Imagen_de_la_union.thy][Isabelle]]).
 + J14 [[./textos/Imagen_inversa_de_la_imagen.md][s ⊆ f⁻¹[f[s]​]​]] (En [[./src/Imagen_inversa_de_la_imagen.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen.thy][Isabelle]]).
++ V15 [[./textos/Subconjunto_de_la_imagen_inversa.md][f[s] ⊆ u ↔ s ⊆ f⁻¹[u]​]] (En [[./src/Subconjunto_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Subconjunto_de_la_imagen_inversa.thy][Isabelle]]).
