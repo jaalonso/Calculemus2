@@ -635,6 +635,26 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Interseccion_de_intersecciones.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_de_intersecciones.lean][Lean 4 Web]]
 
+** s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)
+#+INCLUDE: "../src/Union_con_interseccion_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_interseccion_general.lean][Lean 4 Web]].
+
+** f⁻¹[u ∩ v] = f⁻¹[u] ∩ f⁻¹[v]
+#+INCLUDE: "../src/Imagen_inversa_de_la_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_interseccion.lean][Lean 4 Web]].
+
+** f[s ∪ t] = f[s] ∪ f[t]
+#+INCLUDE: "../src/Imagen_de_la_union.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_union.lean][Lean 4 Web]].
+
+** s ⊆ f⁻¹[f[s]​]
+#+INCLUDE: "../src/Imagen_inversa_de_la_imagen.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_imagen.lean][Lean 4 Web]].
+
+** f[s] ⊆ u ↔ s ⊆ f⁻¹[u]
+#+INCLUDE: "../src/Subconjunto_de_la_imagen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Subconjunto_de_la_imagen_inversa.lean][Lean 4 Web]].
+
 ** La función (x ↦ x + c) es inyectiva
 #+INCLUDE: "../src/Suma_constante_es_inyectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma_constante_es_inyectiva.lean][Lean 4 Web]]

@@ -6,7 +6,7 @@ Autor:  José A. Alonso
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[s] ⊆ u ↔ s ⊆ f⁻¹[u] \]
+\\[ f[s] ⊆ u ↔ s ⊆ f⁻¹[u] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -28,30 +28,30 @@ by sorry
 Los demostraremos probando las dos implicaciones.
 
 (⟹) Supongamos que
-\[ f[s] ⊆ u \tag{1} \]
+\\[ f[s] ⊆ u \\tag{1} \\]
 y tenemos que demostrar que
-\[ s ⊆ f⁻¹[u] \]
+\\[ s ⊆ f⁻¹[u] \\]
 Se prueba mediante las siguientes implicaciones
-\begin{align}
-   x ∈ s &⟹ f(x) ∈ f[s] \\
-         &⟹ f(x) ∈ u    &&\text{[por (1)]} \\
+\\begin{align}
+   x ∈ s &⟹ f(x) ∈ f[s] \\\\
+         &⟹ f(x) ∈ u    &&\\text{[por (1)]} \\\\
          &⟹ x ∈ f⁻¹[u]
-\end{align}
+\\end{align}
 
 (⟸) Supongamos que
-\[ s ⊆ f⁻¹[u] \tag{2} \]
+\\[ s ⊆ f⁻¹[u] \\tag{2} \\]
 y tenemos que demostrar que
-\[ f[s] ⊆ u \]
-Para ello, sea \(y ∈ f[s]\). Entonces, existe un
-\[ x ∈ s \tag{3} \]
+\\[ f[s] ⊆ u \\]
+Para ello, sea \\(y ∈ f[s]\\). Entonces, existe un
+\\[ x ∈ s \\tag{3} \\]
 tal que
-\[ y = f(x) \tag{4} \]
+\\[ y = f(x) \\tag{4} \\]
 Entonces,
-\begin{align}
-       &x ∈ f⁻¹[u] &&\text{[por (2) y (3)]} \\
-   ⟹ &f(x) ∈ u   \\
-   ⟹ &y ∈ u      &&\text{[por (4)]}
-\end{align}
+\\begin{align}
+       &x ∈ f⁻¹[u] &&\\text{[por (2) y (3)]} \\\\
+   ⟹ &f(x) ∈ u   \\\\
+   ⟹ &y ∈ u      &&\\text{[por (4)]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
