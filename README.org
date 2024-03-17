@@ -207,3 +207,4 @@ usaba Lean3 en lugar de Lean4.
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 
 * Sin ordenar
++ L18 [[./textos/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s]] (En [[./src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy][Isabelle]]).
