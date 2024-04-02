@@ -208,3 +208,5 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L18 [[./textos/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s]] (En [[./src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy][Isabelle]]).
++ M19 [[./textos/Imagen_de_la_imagen_inversa.md][f[f⁻¹[u]​] ⊆ u]] (En [[./src/Imagen_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Imagen_de_la_imagen_inversa.thy][Isabelle]]).
++ M02 [[./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md][Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​]] (En [[./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean]] y en [[./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy][Isabelle]]).
