@@ -29,8 +29,8 @@ by sorry
 Sea \\(y ∈ u\\). Por ser \\(f\\) suprayectiva, exite un \\(x\\) tal que
 \\[ f(x) = y \\tag{1} \\]
 Por tanto, \\(x ∈ f⁻¹[u]\\) y
-\\[ f(x) ∈ f[f⁻¹[u]] \\tag{2} \\]                                               (
-Finalment, por (1) y (2),
+\\[ f(x) ∈ f[f⁻¹[u]] \\tag{2} \\]
+Finalmente, por (1) y (2),
 \\[ y ∈ f[f⁻¹[u]] \\]
 
 <h2>2. Demostraciones con Lean4</h2>

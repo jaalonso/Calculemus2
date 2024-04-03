@@ -16,7 +16,7 @@
 --    f(x) = y                                                       (1)
 -- Por tanto, x ∈ f⁻¹[u] y
 --    f(x) ∈ f[f⁻¹[u]]                                               (2)
--- Finalment, por (1) y (2),
+-- Finalmente, por (1) y (2),
 --    y ∈ f[f⁻¹[u]]
 
 -- Demostraciones con Lean4
