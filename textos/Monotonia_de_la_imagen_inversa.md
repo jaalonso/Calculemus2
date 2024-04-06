@@ -5,7 +5,7 @@ Autor:  José A. Alonso
 
 [mathjax]
 
-Demostrar con Lean4 que si \(u ⊆ v\), entonces \(f⁻¹[u] ⊆ f⁻¹[v]\).
+Demostrar con Lean4 que si \\(u ⊆ v\\), entonces \\(f⁻¹[u] ⊆ f⁻¹[v]\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -27,11 +27,11 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Por la siguiente cadena de implicaciones:
-\begin{align}
-   x ∈ f⁻¹[u] &⟹ f(x) ∈ u \\
-              &⟹ f(x) ∈ v      &&\text{[porque \(u ⊆ v\)]} \\
+\\begin{align}
+   x ∈ f⁻¹[u] &⟹ f(x) ∈ u \\\\
+              &⟹ f(x) ∈ v      &&\\text{[porque \\(u ⊆ v\\)]} \\\\
               &⟹ x ∈ f⁻¹[v]
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
