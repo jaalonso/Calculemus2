@@ -1,5 +1,5 @@
 ---
-Título: (⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)
+Título: ⋂ᵢ (Aᵢ ∩ Bᵢ) = (⋂ᵢ Aᵢ) ∩ (⋂ᵢ Bᵢ)
 Autor:  José A. Alonso
 ---
 

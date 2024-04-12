@@ -1,5 +1,5 @@
 ---
-Título: s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)
+Título: s ∩ (⋃ᵢ Aᵢ) = ⋃ᵢ (Aᵢ ∩ s)
 Autor:  José A. Alonso
 ---
 

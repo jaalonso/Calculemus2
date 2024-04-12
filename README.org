@@ -212,4 +212,5 @@ usaba Lean3 en lugar de Lean4.
 + M02 [[./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md][Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​]] (En [[./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean]] y en [[./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy][Isabelle]]).
 + X03 [[./textos/Monotonia_de_la_imagen_de_conjuntos.md][Si s ⊆ t, entonces f[s] ⊆ f[t]​]] (En [[./src/Monotonia_de_la_imagen_de_conjuntos.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_de_conjuntos.thy][Isabelle]]).
 + J04 [[./textos/Monotonia_de_la_imagen_inversa.md][Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]​]] (En [[./src/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
-+ V05 [[./textos/Imagen_inversa_de_la_union.md][Imagen inversa de la unión]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
++ L08 [[./textos/Imagen_inversa_de_la_union.md][Imagen inversa de la unión]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
++ V12 [[./textos/Imagen_de_la_interseccion.md][f[s ∩ t] ⊆ f[s] ∩ f[t]​]] (En [[./src/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion.thy][Isabelle]]).
