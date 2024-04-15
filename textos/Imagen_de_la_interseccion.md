@@ -6,7 +6,7 @@ Autor:  José A. Alonso
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[s ∩ t] ⊆ f[s] ∩ f[t]​ \]
+\\[ f[s ∩ t] ⊆ f[s] ∩ f[t]​ \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -28,23 +28,23 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Sea tal que
-\[ y ∈ f[s ∩ t] \]
-Por tanto, existe un \(x\) tal que
-\begin{align}
-  x ∈ s ∩ t  \tag{1} \\
-  f(x) = y   \tag{2}
-\end{align}
+\\[ y ∈ f[s ∩ t] \\]
+Por tanto, existe un \\(x\\) tal que
+\\begin{align}
+  x ∈ s ∩ t  \\tag{1} \\\\
+  f(x) = y   \\tag{2}
+\\end{align}
 Por (1), se tiene que
-\begin{align}
-  x ∈ s      \tag{3} \\
-  x ∈ t      \tag{4}
-\end{align}
+\\begin{align}
+  x ∈ s      \\tag{3} \\\\
+  x ∈ t      \\tag{4}
+\\end{align}
 Por (2) y (3), se tiene
-\[ y ∈ f[s] \tag{5} \]
+\\[ y ∈ f[s] \\tag{5} \\]
 Por (2) y (4), se tiene
-\[ y ∈ f[t] \tag{6} \]
+\\[ y ∈ f[t] \\tag{6} \\]
 Por (5) y (6), se tiene
-\[ y ∈ f[s] ∩ f[t] \]
+\\[ y ∈ f[s] ∩ f[t] \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
