@@ -215,3 +215,4 @@ usaba Lean3 en lugar de Lean4.
 + L08 [[./textos/Imagen_inversa_de_la_union.md][f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]​]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
 + V12 [[./textos/Imagen_de_la_interseccion.md][f[s ∩ t] ⊆ f[s] ∩ f[t]​]] (En [[./src/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion.thy][Isabelle]]).
 + L15 [[./textos/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]​]] (En [[./src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.thy][Isabelle]]).
++ M16 [[./textos/Imagen_de_la_diferencia_de_conjuntos.md][f[s] \ f[t] ⊆ f[s \ t]​]] (En [[./src/Imagen_de_la_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Imagen_de_la_diferencia_de_conjuntos.thy][Isabelle]]).
