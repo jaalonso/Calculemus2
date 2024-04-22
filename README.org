@@ -218,4 +218,5 @@ usaba Lean3 en lugar de Lean4.
 + M16 [[./textos/Imagen_de_la_diferencia_de_conjuntos.md][f[s] \ f[t] ⊆ f[s \ t]​]] (En [[./src/Imagen_de_la_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Imagen_de_la_diferencia_de_conjuntos.thy][Isabelle]]).
 + X17 [[./textos/Interseccion_con_la_imagen.md][f[s] ∩ v = f[s ∩ f⁻¹[v]​]​]] (En [[./src/Interseccion_con_la_imagen.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen.thy][Isabelle]]).
 
-+ L23 [[./textos/Union_con_la_imagen.md][Unión con la imagen]] (En [[./src/Union_con_la_imagen.lean][Lean]] y en [[./thy/Union_con_la_imagen.thy][Isabelle]]).
++ L22 [[./textos/Union_con_la_imagen.md][Unión con la imagen]] (En [[./src/Union_con_la_imagen.lean][Lean]] y en [[./thy/Union_con_la_imagen.thy][Isabelle]]).
++ M23 [[./textos/Interseccion_con_la_imagen_inversa.md][Intersección con la imagen inversa]] (En [[./src/Interseccion_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen_inversa.thy][Isabelle]]).

@@ -8,7 +8,7 @@ has_math: true
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[s ∪ f⁻¹[v]] ⊆ f[s] ∪ v \]
+\\[ f[s ∪ f⁻¹[v]] ⊆ f[s] ∪ v \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,27 +30,27 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(y ∈ f[s ∪ f⁻¹[v]]\). Entonces, existe un x tal que
-\begin{align}
-   x ∈ s ∪ f⁻¹[v] \tag{1} \\
-   f(x) = y       \tag{2}
-\end{align}
-De (1), se tiene que \(x ∈ s\) ó \(x ∈ f⁻¹[v]\). Vamos a demostrar en ambos casos que
-[ y ∈ f[s] ∪ v \]
+Sea \\(y ∈ f[s ∪ f⁻¹[v]]\\). Entonces, existe un x tal que
+\\begin{align}
+   &x ∈ s ∪ f⁻¹[v] \\tag{1} \\\\
+   &f(x) = y       \\tag{2}
+\\end{align}
+De (1), se tiene que \\(x ∈ s\\) ó \\(x ∈ f⁻¹[v]\\). Vamos a demostrar en ambos casos que
+\\[ y ∈ f[s] ∪ v \\]
 
-**Caso 1**: Supongamos que \(x ∈ s\). Entonces,
-\[ f(x) ∈ f[s] \]
+**Caso 1**: Supongamos que \\(x ∈ s\\). Entonces,
+\\[ f(x) ∈ f[s] \\]
 y, por (2), se tiene que
-\[ y ∈ f[s] \]
+\\[ y ∈ f[s] \\]
 Por tanto,
-\[ y ∈ f[s] ∪ v \]
+\\[ y ∈ f[s] ∪ v \\]
 
-**Caso 2**: Supongamos que \(x ∈ f⁻¹[v]\). Entonces,
-\[ f(x) ∈ v \]
+**Caso 2**: Supongamos que \\(x ∈ f⁻¹[v]\\). Entonces,
+\\[ f(x) ∈ v \\]
 y, por (2), se tiene que
-\[ y ∈ v \]
+\\[ y ∈ v \\]
 Por tanto,
-\[ y ∈ f[s] ∪ v \]
+\\[ y ∈ f[s] ∪ v \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
