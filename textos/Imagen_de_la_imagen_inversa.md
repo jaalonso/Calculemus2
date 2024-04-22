@@ -1,12 +1,12 @@
 ---
-Título: f[f⁻¹[u]] ⊆ u.
+Título: f[f⁻¹[u]] ⊆ u
 Autor:  José A. Alonso
 ---
 
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[f⁻¹[u]] ⊆ u \]
+\\[ f[f⁻¹[u]] ⊆ u \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -25,15 +25,15 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(y ∈ f[f⁻¹[u]]\). Entonces existe un \(x\) tal que
-\begin{align}
-   &x ∈ f⁻¹[u] \tag{1} \\
-   &f(x) = y   \tag{2}
-\end{align}
+Sea \\(y ∈ f[f⁻¹[u]]\\). Entonces existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ f⁻¹[u] \\tag{1} \\\\
+   &f(x) = y   \\tag{2}
+\\end{align}
 Por (1),
-\[ f(x) ∈ u \]
+\\[ f(x) ∈ u \\]
 y, por (2),
-\[ y ∈ u \]
+\\[ y ∈ u \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
