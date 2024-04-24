@@ -8,7 +8,7 @@ has_math: true
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[s] ∩ v = f[s ∩ f⁻¹[v]] \]
+\\[ f[s] ∩ v = f[s ∩ f⁻¹[v]] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,51 +30,51 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemmos que demostrar que, para todo \(y\),
-\[ y ∈ f[s] ∩ v ↔ y ∈ f[s ∩ f⁻¹[v]] \]
+Tenemmos que demostrar que, para todo \\(y\\),
+\\[ y ∈ f[s] ∩ v ↔ y ∈ f[s ∩ f⁻¹[v]] \\]
 Lo haremos demostrando las dos implicaciones.
 
-(⟹) Supongamos que \(y ∈ f[s] ∩ v\). Entonces,
-\begin{align}
-   &y ∈ f[s] \tag{1} \\
-   &y ∈ v    \tag{2}
-\end{align}
-Por (1), existe un \(x\) tal que
-\begin{align}
-   &x ∈ s    \tag{3} \\
-   &f(x) = y \tag{4}
-\end{align}
+(⟹) Supongamos que \\(y ∈ f[s] ∩ v\\). Entonces,
+\\begin{align}
+   &y ∈ f[s] \\tag{1} \\\\
+   &y ∈ v    \\tag{2}
+\\end{align}
+Por (1), existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ s    \\tag{3} \\\\
+   &f(x) = y \\tag{4}
+\\end{align}
 De (2) y (4), se tiene que
-\[ f(x) ∈ v \]
+\\[ f(x) ∈ v \\]
 y, por tanto,
-\[ x ∈ f⁻¹[v] \tag{5} \]
+\\[ x ∈ f⁻¹[v] \\tag{5} \\]
 De (3) y (5), se tiene que
-\[ x ∈ s ∩ f⁻¹[v] \]
+\\[ x ∈ s ∩ f⁻¹[v] \\]
 Por tanto,
-\[ f(x) ∈ f[s ∩ f⁻¹[v]] \]
+\\[ f(x) ∈ f[s ∩ f⁻¹[v]] \\]
 y, por (4),
-\[ y ∈ f[s ∩ f⁻¹[v]] \]
+\\[ y ∈ f[s ∩ f⁻¹[v]] \\]
 
-(⟸) Supongamos que \(y ∈ f[s ∩ f⁻¹[v]]\). Entonces, existe un \(x\) tal que
-\begin{align}
-   &x ∈ s ∩ f⁻¹[v] \tag{6} \\
-   &f(x) = y       \tag{7}
-\end{align}
+(⟸) Supongamos que \\(y ∈ f[s ∩ f⁻¹[v]]\\). Entonces, existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ s ∩ f⁻¹[v] \\tag{6} \\\\
+   &f(x) = y       \\tag{7}
+\\end{align}
 Por (6), se tiene que
-\begin{align}
-   &x ∈ s       \tag{8} \\
-   &x ∈ f⁻¹[v]  \tag{9}
-\end{align}
+\\begin{align}
+   &x ∈ s       \\tag{8} \\\\
+   &x ∈ f⁻¹[v]  \\tag{9}
+\\end{align}
 Por (8), se tiene que
-\[ f(x) ∈ f[s] \]
+\\[ f(x) ∈ f[s] \\]
 y, por (7),
-\[ y ∈ f[s] \tag{10} \]
+\\[ y ∈ f[s] \\tag{10} \\]
 Por (9),
-\[ f(x) ∈ v \]
+\\[ f(x) ∈ v \\]
 y, por (7),
-\[ y ∈ v \tag{11} \]
+\\[ y ∈ v \\tag{11} \\]
 Por (10) y (11),
-\[ y ∈ f[s] ∩ v \]
+\\[ y ∈ f[s] ∩ v \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
