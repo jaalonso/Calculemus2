@@ -10,7 +10,7 @@ previewimage: "/favicon.png"
 [mathjax]
 
 Demostrar con Lean4 que
-\[ s ∪ f⁻¹[v] ⊆ f⁻¹[f[s] ∪ v] \]
+\\[ s ∪ f⁻¹[v] ⊆ f⁻¹[f[s] ∪ v] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -25,27 +25,27 @@ variable (s : Set α)
 variable (v : Set β)
 
 example : s ∪ f ⁻¹' v ⊆ f ⁻¹' (f '' s ∪ v) :=
-by orry
+by sorry
 </pre>
 <!--more-->
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(x ∈ s ∪ f⁻¹[v]\). Entonces, se pueden dar dos casos.
+Sea \\(x ∈ s ∪ f⁻¹[v]\\). Entonces, se pueden dar dos casos.
 
-Caso 1: Supongamos que \(x ∈ s\). Entonces, se tiene
-\begin{align}
-   &f(x) ∈ f[s]       \\
-   &f(x) ∈ f[s] ∪ v   \\
+Caso 1: Supongamos que \\(x ∈ s\\). Entonces, se tiene
+\\begin{align}
+   &f(x) ∈ f[s]       \\\\
+   &f(x) ∈ f[s] ∪ v   \\\\
    &x ∈ f⁻¹[f[s] ∪ v]
-\end{align}
+\\end{align}
 
 Caso 2: Supongamos que x ∈ f⁻¹[v]. Entonces, se tiene
-\begin{align}
-   &f(x) ∈ v           \\
-   &f(x) ∈ f[s] ∪ v    \\
+\\begin{align}
+   &f(x) ∈ v           \\\\
+   &f(x) ∈ f[s] ∪ v    \\\\
    &x ∈ f⁻¹[f[s] ∪ v]
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
