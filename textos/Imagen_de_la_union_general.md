@@ -9,7 +9,7 @@ has_math: true
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[⋃ᵢAᵢ] = ⋃ᵢf[Aᵢ] \]
+\\[ f[⋃ᵢAᵢ] = ⋃ᵢf[Aᵢ] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,43 +30,43 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Tenemos que demostrar que, para todo \(y\),
-\[ y ∈ f[⋃ᵢAᵢ] ↔ y ∈ ⋃ᵢf[Aᵢ] \]
+Tenemos que demostrar que, para todo \\(y\\),
+\\[ y ∈ f[⋃ᵢAᵢ] ↔ y ∈ ⋃ᵢf[Aᵢ] \\]
 Lo haremos demostrando las dos implicaciones.
 
-(⟹) Supongamos que \(y ∈ f[⋃ᵢAᵢ]\). Entonces, existe un \(x\) tal que
-\begin{align}
-   &x ∈ ⋃ᵢAᵢ \tag{1} \\
-   &f(x) = y \tag{2}
-\end{align}
+(⟹) Supongamos que \\(y ∈ f[⋃ᵢAᵢ]\\). Entonces, existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ ⋃ᵢAᵢ \\tag{1} \\\\
+   &f(x) = y \\tag{2}
+\\end{align}
 Por (1), existe un i tal que
-\begin{align}
-   &i ∈ ℕ  \tag{3} \\
-   &x ∈ Aᵢ \tag{4}
-\end{align}
+\\begin{align}
+   &i ∈ ℕ  \\tag{3} \\\\
+   &x ∈ Aᵢ \\tag{4}
+\\end{align}
 Por (4),
-\[ f(x) ∈ f[Aᵢ] \]
+\\[ f(x) ∈ f[Aᵢ] \\]
 Por (3),
-\[ f(x) ∈ ⋃ᵢf[Aᵢ] \]
+\\[ f(x) ∈ ⋃ᵢf[Aᵢ] \\]
 y, por (2),
-\[ y ∈ ⋃ᵢf[Aᵢ] \]
+\\[ y ∈ ⋃ᵢf[Aᵢ] \\]
 
-(⟸) Supongamos que \(y ∈ ⋃ᵢf[Aᵢ]\). Entonces, existe un \(i\) tal que
-\begin{align}
-   &i ∈ ℕ     \tag{5} \\
-   &y ∈ f[Aᵢ] \tag{6}
-\end{align}
-Por (6), existe un \(x\) tal que
-\begin{align}
-   &x ∈ Aᵢ   \tag{7} \\
-   &f(x) = y \tag{8}
-\end{align}
+(⟸) Supongamos que \\(y ∈ ⋃ᵢf[Aᵢ]\\). Entonces, existe un \\(i\\) tal que
+\\begin{align}
+   &i ∈ ℕ     \\tag{5} \\\\
+   &y ∈ f[Aᵢ] \\tag{6}
+\\end{align}
+Por (6), existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ Aᵢ   \\tag{7} \\\\
+   &f(x) = y \\tag{8}
+\\end{align}
 Por (5) y (7),
-\[ x ∈ ⋃ᵢAᵢ \]
+\\[ x ∈ ⋃ᵢAᵢ \\]
 Luego,
-\[ f(x) ∈ f[⋃ᵢAᵢ] \]
+\\[ f(x) ∈ f[⋃ᵢAᵢ] \\]
 y, por (8),
-\[ y ∈ f[⋃ᵢAᵢ] \]
+\\[ y ∈ f[⋃ᵢAᵢ] \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
