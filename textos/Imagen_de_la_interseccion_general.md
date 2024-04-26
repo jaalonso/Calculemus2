@@ -9,7 +9,7 @@ has_math: true
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f[⋂_{i ∈ I} Aᵢ] ⊆ ⋂_{i ∈ I} f[Aᵢ]
+\\[ f\\left[\\bigcap_{i ∈ I} A_i\\right] ⊆ \\bigcap_{i ∈ I} f[A_i] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,23 +30,23 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(y\) tal que
-\[ y ∈ f[⋂_{i ∈ I} Aᵢ] \tag{1}  \]
+Sea \\(y\\) tal que
+\\[ y ∈ f\\left[\\bigcap_{i ∈ I} Aᵢ\\right] \\tag{1}  \\]
 Tenemos que demostrar que
-\[ y ∈ ⋂_{i ∈ I} f[Aᵢ] \]
-Para ello, sea \(i ∈ I\), tenemos que demostrar que \(y ∈ f[Aᵢ]\).
+\\[ y ∈ \\bigcap_{i ∈ I} f[Aᵢ] \\]
+Para ello, sea \\(i ∈ I\\), tenemos que demostrar que \\(y ∈ f[Aᵢ]\\).
 
-Por (1), existe un \(x\) tal que
-\begin{align}
-   &x ∈ ⋂_{i ∈ I} Aᵢ \tag{2} \\
-   &f(x) = y  \tag{3}
-\end{align}
+Por (1), existe un \\(x\\) tal que
+\\begin{align}
+   &x ∈ \\bigcap_{i ∈ I} Aᵢ \\tag{2} \\\\
+   &f(x) = y  \\tag{3}
+\\end{align}
 Por (2),
-\[ x ∈ Aᵢ \]
+\\[ x ∈ Aᵢ \\]
 y, por tanto,
-\[ f(x) ∈ f[Aᵢ] \]
+\\[ f(x) ∈ f[Aᵢ] \\]
 que, junto con (3), da que
-\[ y ∈ f[Aᵢ] \]
+\\[ y ∈ f[Aᵢ] \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 

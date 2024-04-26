@@ -593,7 +593,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union_2.lean][Lean 4 Web]]
 
-
 ** s \ (t ∪ u) ⊆ (s \ t) \ u
 #+INCLUDE: "../src/Diferencia_de_diferencia_de_conjuntos_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia_de_diferencia_de_conjuntos_2.lean][Lean 4 Web]]
@@ -613,7 +612,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** (s \ t) ∪ t = s ∪ t
 #+INCLUDE: "../src/Union_con_su_diferencia.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_su_diferencia.lean][Lean 4 Web]]
-
 
 ** (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)
 #+INCLUDE: "../src/Diferencia_de_union_e_interseccion.lean" src lean :lines "7-"
@@ -686,6 +684,66 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** La composición de funciones suprayectivas es suprayectiva
 #+INCLUDE: "../src/Composicion_de_suprayectivas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion_de_suprayectivas.lean][Lean 4 Web]]
+
+** Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s
+#+INCLUDE: "../src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean 4 Web]].
+
+** f[f⁻¹[u]​] ⊆ u
+#+INCLUDE: "../src/Imagen_de_la_imagen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_imagen_inversa.lean][Lean 4 Web]].
+
+** Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]
+#+INCLUDE: "../src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean 4 Web]].
+
+** Si s ⊆ t, entonces f[s] ⊆ f[t]
+#+INCLUDE: "../src/Monotonia_de_la_imagen_de_conjuntos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Monotonia_de_la_imagen_de_conjuntos.lean][Lean 4 Web]].
+
+** Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]
+#+INCLUDE: "../src/Monotonia_de_la_imagen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Monotonia_de_la_imagen_inversa.lean][Lean 4 Web]].
+
+** f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]
+#+INCLUDE: "../src/Imagen_inversa_de_la_union.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_union.lean][Lean 4 Web]].
+
+** f[s ∩ t] ⊆ f[s] ∩ f[t]
+#+INCLUDE: "../src/Imagen_de_la_interseccion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_interseccion.lean][Lean 4 Web]].
+
+** Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]
+#+INCLUDE: "../src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean 4 Web]].
+
+** f[s] \ f[t] ⊆ f[s \ t]
+#+INCLUDE: "../src/Imagen_de_la_diferencia_de_conjuntos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_diferencia_de_conjuntos.lean][Lean 4 Web]].
+
+** f[s] ∩ v = f[s ∩ f⁻¹[v]​]
+#+INCLUDE: "../src/Interseccion_con_la_imagen.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_con_la_imagen.lean][Lean 4 Web]].
+
+** Unión con la imagen
+#+INCLUDE: "../src/Union_con_la_imagen.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_la_imagen.lean][Lean 4 Web]].
+
+** Intersección con la imagen inversa
+#+INCLUDE: "../src/Interseccion_con_la_imagen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion_con_la_imagen_inversa.lean][Lean 4 Web]].
+
+** Unión con la imagen inversa
+#+INCLUDE: "../src/Union_con_la_imagen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union_con_la_imagen_inversa.lean][Lean 4 Web]].
+
+** Imagen de la unión general
+#+INCLUDE: "../src/Imagen_de_la_union_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_union_general.lean][Lean 4 Web]].
+
+** Imagen de la intersección general
+#+INCLUDE: "../src/Imagen_de_la_interseccion_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_interseccion_general.lean][Lean 4 Web]].
 
 * Lógica
 
