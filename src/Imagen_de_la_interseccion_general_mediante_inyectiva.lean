@@ -46,12 +46,6 @@ variable (A : I → Set α)
 -- ===============
 
 example
-  (injf : Injective f)
-  (x z : α)
-  (h : f z = f x)
-  : z = x := injf h
-
-example
   (i : I)
   (injf : Injective f)
   : (⋂ i, f '' A i) ⊆ f '' (⋂ i, A i) :=
