@@ -186,6 +186,21 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Producto_por_no_nula_y_suma_es_suprayectiva.md][Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva]] (En [[./src/Producto_por_no_nula_y_suma_es_suprayectiva.lean][Lean4]]).
 + [[./textos/Propiedad_de_suprayectivas.md][Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9]] (En [[./src/Propiedad_de_suprayectivas.lean][Lean4]]).
 + [[./textos/Composicion_de_suprayectivas.md][La composición de funciones suprayectivas es suprayectiva]] (En [[./src/Composicion_de_suprayectivas.lean][Lean4]]).
++ [[./textos/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s]] (En [[./src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_imagen_inversa.md][f[f⁻¹[u]​] ⊆ u]] (En [[./src/Imagen_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Imagen_de_la_imagen_inversa.thy][Isabelle]]).
++ [[./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md][Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​]] (En [[./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean]] y en [[./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy][Isabelle]]).
++ [[./textos/Monotonia_de_la_imagen_de_conjuntos.md][Si s ⊆ t, entonces f[s] ⊆ f[t]​]] (En [[./src/Monotonia_de_la_imagen_de_conjuntos.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_de_conjuntos.thy][Isabelle]]).
++ [[./textos/Monotonia_de_la_imagen_inversa.md][Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]​]] (En [[./src/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
++ [[./textos/Imagen_inversa_de_la_union.md][f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]​]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_interseccion.md][f[s ∩ t] ⊆ f[s] ∩ f[t]​]] (En [[./src/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]​]] (En [[./src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_diferencia_de_conjuntos.md][f[s] \ f[t] ⊆ f[s \ t]​]] (En [[./src/Imagen_de_la_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Imagen_de_la_diferencia_de_conjuntos.thy][Isabelle]]).
++ [[./textos/Interseccion_con_la_imagen.md][f[s] ∩ v = f[s ∩ f⁻¹[v]​]​]] (En [[./src/Interseccion_con_la_imagen.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen.thy][Isabelle]]).
++ [[./textos/Union_con_la_imagen.md][Unión con la imagen]] (En [[./src/Union_con_la_imagen.lean][Lean]] y en [[./thy/Union_con_la_imagen.thy][Isabelle]]).
++ [[./textos/Interseccion_con_la_imagen_inversa.md][Intersección con la imagen inversa]] (En [[./src/Interseccion_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen_inversa.thy][Isabelle]]).
++ [[./textos/Union_con_la_imagen_inversa.md][Unión con la imagen inversa]] (En [[./src/Union_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Union_con_la_imagen_inversa.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_union_general.md][Imagen de la unión general]] (En [[./src/Imagen_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_de_la_union_general.thy][Isabelle]]).
++ [[./textos/Imagen_de_la_interseccion_general.md][Imagen de la intersección general]] (En [[./src/Imagen_de_la_interseccion_general.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general.thy][Isabelle]]).
 
 * Lógica
 + [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
@@ -207,18 +222,4 @@ usaba Lean3 en lugar de Lean4.
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 
 * Sin ordenar
-+ L18 [[./textos/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s]] (En [[./src/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy][Isabelle]]).
-+ M19 [[./textos/Imagen_de_la_imagen_inversa.md][f[f⁻¹[u]​] ⊆ u]] (En [[./src/Imagen_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Imagen_de_la_imagen_inversa.thy][Isabelle]]).
-+ M02 [[./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md][Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​]] (En [[./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean][Lean]] y en [[./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy][Isabelle]]).
-+ X03 [[./textos/Monotonia_de_la_imagen_de_conjuntos.md][Si s ⊆ t, entonces f[s] ⊆ f[t]​]] (En [[./src/Monotonia_de_la_imagen_de_conjuntos.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_de_conjuntos.thy][Isabelle]]).
-+ J04 [[./textos/Monotonia_de_la_imagen_inversa.md][Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]​]] (En [[./src/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
-+ L08 [[./textos/Imagen_inversa_de_la_union.md][f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]​]] (En [[./src/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union.thy][Isabelle]]).
-+ V12 [[./textos/Imagen_de_la_interseccion.md][f[s ∩ t] ⊆ f[s] ∩ f[t]​]] (En [[./src/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion.thy][Isabelle]]).
-+ L15 [[./textos/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.md][Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]​]] (En [[./src/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.thy][Isabelle]]).
-+ M16 [[./textos/Imagen_de_la_diferencia_de_conjuntos.md][f[s] \ f[t] ⊆ f[s \ t]​]] (En [[./src/Imagen_de_la_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/Imagen_de_la_diferencia_de_conjuntos.thy][Isabelle]]).
-+ X17 [[./textos/Interseccion_con_la_imagen.md][f[s] ∩ v = f[s ∩ f⁻¹[v]​]​]] (En [[./src/Interseccion_con_la_imagen.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen.thy][Isabelle]]).
-+ L22 [[./textos/Union_con_la_imagen.md][Unión con la imagen]] (En [[./src/Union_con_la_imagen.lean][Lean]] y en [[./thy/Union_con_la_imagen.thy][Isabelle]]).
-+ M23 [[./textos/Interseccion_con_la_imagen_inversa.md][Intersección con la imagen inversa]] (En [[./src/Interseccion_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Interseccion_con_la_imagen_inversa.thy][Isabelle]]).
-+ X24 [[./textos/Union_con_la_imagen_inversa.md][Unión con la imagen inversa]] (En [[./src/Union_con_la_imagen_inversa.lean][Lean]] y en [[./thy/Union_con_la_imagen_inversa.thy][Isabelle]]).
-+ J25 [[./textos/Imagen_de_la_union_general.md][Imagen de la unión general]] (En [[./src/Imagen_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_de_la_union_general.thy][Isabelle]]).
-+ V26 [[./textos/Imagen_de_la_interseccion_general.md][Imagen de la intersección general]] (En [[./src/Imagen_de_la_interseccion_general.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general.thy][Isabelle]]).
++ L30 [[./textos/Imagen_de_la_interseccion_general_mediante_inyectiva.md][Imagen de la intersección general mediante inyectiva]] (En [[./src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general_mediante_inyectiva.thy][Isabelle]]).
