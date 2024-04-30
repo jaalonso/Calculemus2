@@ -23,12 +23,15 @@
 -- Luego, existe un z tal que
 --    z ∈ Aⱼ                                                         (3)
 --    f(z) = y
--- Pot (2),
+-- Por (2),
 --    f(x) = f(z)
 -- y, por ser f inyectiva,
 --    x = z
 -- y, Por (3),
 --    x ∈ Aⱼ
+--
+-- Puesto que x ∈ ⋂ᵢAᵢ se tiene que f(x) ∈ f[⋂ᵢAᵢ] y, por (2),
+-- y ∈ f[⋂ᵢAᵢ].
 
 -- Demostraciones con Lean4
 -- ========================
