@@ -222,4 +222,5 @@ usaba Lean3 en lugar de Lean4.
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 
 * Sin ordenar
-+ L30 [[./textos/Imagen_de_la_interseccion_general_mediante_inyectiva.md][Imagen de la intersección general mediante inyectiva]] (En [[./src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general_mediante_inyectiva.thy][Isabelle]]).
++ L29 [[./textos/Imagen_de_la_interseccion_general_mediante_inyectiva.md][Imagen de la intersección general mediante aplicaciones inyectivas]] (En [[./src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general_mediante_inyectiva.thy][Isabelle]]).
++ M30 [[./textos/Imagen_inversa_de_la_union_general.md][Imagen inversa de la unión general]] (En [[./src/Imagen_inversa_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union_general.thy][Isabelle]]).
