@@ -33,7 +33,7 @@ Tenemos que demostrar que, para todo \\(x\\),
 \\[ x ∈ f⁻¹\\left[⋃ᵢ Bᵢ\\right] ↔ x ∈ ⋃ᵢ f⁻¹[Bᵢ] \\]
 y lo haremos demostrando las dos implicaciones.
 
-(⟹) Supongamos que \\(x ∈ f⁻¹\\left[⋃ᵢ Bᵢ\\right]\). Entonces, por la definición de la imagen inversa,
+(⟹) Supongamos que \\(x ∈ f⁻¹\\left[⋃ᵢ Bᵢ\\right]\\). Entonces, por la definición de la imagen inversa,
 \\[ f(x) ∈ ⋃ᵢ Bᵢ \\]
 y, por la definición de la unión, existe un \\(i\\) tal que
 \\[ f(x) ∈ Bᵢ \\]

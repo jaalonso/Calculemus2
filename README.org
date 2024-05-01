@@ -224,3 +224,4 @@ usaba Lean3 en lugar de Lean4.
 * Sin ordenar
 + L29 [[./textos/Imagen_de_la_interseccion_general_mediante_inyectiva.md][Imagen de la intersección general mediante aplicaciones inyectivas]] (En [[./src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean][Lean]] y en [[./thy/Imagen_de_la_interseccion_general_mediante_inyectiva.thy][Isabelle]]).
 + M30 [[./textos/Imagen_inversa_de_la_union_general.md][Imagen inversa de la unión general]] (En [[./src/Imagen_inversa_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union_general.thy][Isabelle]]).
++ L01 [[./textos/Imagen_inversa_de_la_interseccion_general.md][Imagen inversa de la intersección general]] (En [[./src/Imagen_inversa_de_la_interseccion_general.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_interseccion_general.thy][Isabelle]]).
