@@ -8,7 +8,7 @@ has_math: true
 [mathjax]
 
 Demostrar con Lean4 que
-\[ f⁻¹\left[\bigcap_{i \in I} B_i\right] = \bigcap_{i \in I} f⁻¹[B_i] \]
+\\[ f⁻¹\\left[\\bigcap_{i \\in I} B_i\\right] = \\bigcap_{i \\in I} f⁻¹[B_i] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -30,13 +30,13 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Se demuestra mediante la siguiente cadena de equivalencias
-\begin{align}
-   x ∈ f⁻¹\left[\bigcap_{i \in I} B_i\right] \\
-   &↔ f x ∈ \bigcap_{i \in I} B_i            \\
-   &↔ (∀ i) f(x) ∈ B_i                       \\
-   &↔ (∀ i) x ∈ f⁻¹[B_i]                     \\
-   &↔ x ∈ \bigcap_{i \in I} f⁻¹[B_i]
-\end{align}
+\\begin{align}
+   x ∈ f⁻¹\\left[\\bigcap_{i \\in I} B_i\\right]
+   &↔ f(x) ∈ \\bigcap_{i \\in I} B_i            \\\\
+   &↔ (∀ i) f(x) ∈ B_i                       \\\\
+   &↔ (∀ i) x ∈ f⁻¹[B_i]                     \\\\
+   &↔ x ∈ \\bigcap_{i \\in I} f⁻¹[B_i]
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
@@ -139,4 +139,91 @@ Se puede interactuar con las demostraciones anteriores en [Lean 4 Web](https://l
 <h2>3. Demostraciones con Isabelle/HOL</h2>
 
 <pre lang="isar">
+theory Imagen_inversa_de_la_interseccion_general
+imports Main
+begin
+
+(* 1ª demostración *)
+
+lemma "f -` (⋂ i ∈ I. B i) = (⋂ i ∈ I. f -` B i)"
+proof (rule equalityI)
+  show "f -` (⋂ i ∈ I. B i) ⊆ (⋂ i ∈ I. f -` B i)"
+  proof (rule subsetI)
+    fix x
+    assume "x ∈ f -` (⋂ i ∈ I. B i)"
+    show "x ∈ (⋂ i ∈ I. f -` B i)"
+    proof (rule INT_I)
+      fix i
+      assume "i ∈ I"
+      have "f x ∈ (⋂ i ∈ I. B i)"
+        using ‹x ∈ f -` (⋂ i ∈ I. B i)› by (rule vimageD)
+      then have "f x ∈ B i"
+        using ‹i ∈ I› by (rule INT_D)
+      then show "x ∈ f -` B i"
+        by (rule vimageI2)
+    qed
+  qed
+next
+  show "(⋂ i ∈ I. f -` B i) ⊆ f -` (⋂ i ∈ I. B i)"
+  proof (rule subsetI)
+    fix x
+    assume "x ∈ (⋂ i ∈ I. f -` B i)"
+    have "f x ∈ (⋂ i ∈ I. B i)"
+    proof (rule INT_I)
+      fix i
+      assume "i ∈ I"
+      with ‹x ∈ (⋂ i ∈ I. f -` B i)› have "x ∈ f -` B i"
+        by (rule INT_D)
+      then show "f x ∈ B i"
+        by (rule vimageD)
+    qed
+    then show "x ∈ f -` (⋂ i ∈ I. B i)"
+      by (rule vimageI2)
+  qed
+qed
+
+(* 2ª demostración *)
+
+lemma "f -` (⋂ i ∈ I. B i) = (⋂ i ∈ I. f -` B i)"
+proof
+  show "f -` (⋂ i ∈ I. B i) ⊆ (⋂ i ∈ I. f -` B i)"
+  proof (rule subsetI)
+    fix x
+    assume hx : "x ∈ f -` (⋂ i ∈ I. B i)"
+    show "x ∈ (⋂ i ∈ I. f -` B i)"
+    proof
+      fix i
+      assume "i ∈ I"
+      have "f x ∈ (⋂ i ∈ I. B i)" using hx by simp
+      then have "f x ∈ B i" using ‹i ∈ I› by simp
+      then show "x ∈ f -` B i" by simp
+    qed
+  qed
+next
+  show "(⋂ i ∈ I. f -` B i) ⊆ f -` (⋂ i ∈ I. B i)"
+  proof
+    fix x
+    assume "x ∈ (⋂ i ∈ I. f -` B i)"
+    have "f x ∈ (⋂ i ∈ I. B i)"
+    proof
+      fix i
+      assume "i ∈ I"
+      with ‹x ∈ (⋂ i ∈ I. f -` B i)› have "x ∈ f -` B i" by simp
+      then show "f x ∈ B i" by simp
+    qed
+    then show "x ∈ f -` (⋂ i ∈ I. B i)" by simp
+  qed
+qed
+
+(* 3 demostración *)
+
+lemma "f -` (⋂ i ∈ I. B i) = (⋂ i ∈ I. f -` B i)"
+  by (simp only: vimage_INT)
+
+(* 4ª demostración *)
+
+lemma "f -` (⋂ i ∈ I. B i) = (⋂ i ∈ I. f -` B i)"
+  by auto
+
+end
 </pre>
