@@ -109,6 +109,12 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Demostracion_por_congruencia.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_congruencia.lean][Lean 4 Web]]
 
+* Propiedades elementales de los monoides
+
+** En los monoides, los inversos a la izquierda y a la derecha son iguales
+#+INCLUDE "../src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean][Lean 4 Web]].
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -745,6 +751,22 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Imagen_de_la_interseccion_general.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_interseccion_general.lean][Lean 4 Web]].
 
+** Imagen de la intersección general mediante aplicaciones inyectivas
+#+INCLUDE: "../src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_de_la_interseccion_general_mediante_inyectiva.lean][Lean 4 Web]].
+
+** Imagen inversa de la unión general
+#+INCLUDE: "../src/Imagen_inversa_de_la_union_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_union_general.lean][Lean 4 Web]].
+
+** Imagen inversa de la intersección general
+#+INCLUDE: "../src/Imagen_inversa_de_la_interseccion_general.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen_inversa_de_la_interseccion_general.lean][Lean 4 Web]].
+
+** Teorema de Cantor
+#+INCLUDE: "../src/Teorema_de_Cantor.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_de_Cantor.lean][Lean 4 Web]].
+
 * Lógica
 
 ** Si ¬(∃x)P(x), entonces (∀x)¬P(x)
@@ -808,6 +830,7 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Teorema del emparedado
 #+INCLUDE: "../src/Teorema_del_emparedado.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_del_emparedado.lean][Lean 4 Web]]
+
 
 #+LATEX: \input Calculemus2_bibliografia
 

@@ -39,11 +39,11 @@ by sorry
 
 Por la siguiente cadena de igualdades
 \\begin{align}
-   b &= b * 1          &&\\text{[por mul\\_one]} \\\\
+   b &= b * 1          &&\\text{[por mul_one]} \\\\
      &= b * (a * c)    &&\\text{[por hipótesis]} \\\\
-     &= (b * a) * c    &&\\text{[por mul\\_assoc]} \\\\
+     &= (b * a) * c    &&\\text{[por mul_assoc]} \\\\
      &= 1 * c          &&\\text{[por hipótesis]} \\\\
-     &= c              &&\\text{[por one\\_mul]} \\\\
+     &= c              &&\\text{[por one_mul]} \\\\
 \\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
@@ -140,38 +140,38 @@ begin
 (* 1ª demostración *)
 
 lemma
-  assumes "b ❙* a = ❙1"
-          "a ❙* c = ❙1"
+  assumes "b * a = 1"
+          "a * c = 1"
   shows   "b = c"
 proof -
-  have      "b  = b ❙* ❙1"       by (simp only: right_neutral)
-  also have "… = b ❙* (a ❙* c)" by (simp only: ‹a ❙* c = ❙1›)
-  also have "… = (b ❙* a) ❙* c" by (simp only: assoc)
-  also have "… = ❙1 ❙* c"       by (simp only: ‹b ❙* a = ❙1›)
+  have      "b  = b * 1"      by (simp only: right_neutral)
+  also have "… = b * (a * c)" by (simp only: ‹a * c = 1›)
+  also have "… = (b * a) * c" by (simp only: assoc)
+  also have "… = 1 * c"       by (simp only: ‹b * a = 1›)
   also have "… = c"           by (simp only: left_neutral)
-  finally show "b = c"         by this
+  finally show "b = c"        by this
 qed
 
 (* 2ª demostración *)
 
 lemma
-  assumes "b ❙* a = ❙1"
-          "a ❙* c = ❙1"
+  assumes "b * a = 1"
+          "a * c = 1"
   shows   "b = c"
 proof -
-  have      "b  = b ❙* ❙1"       by simp
-  also have "… = b ❙* (a ❙* c)" using ‹a ❙* c = ❙1› by simp
-  also have "… = (b ❙* a) ❙* c" by (simp add: assoc)
-  also have "… = ❙1 ❙* c"       using ‹b ❙* a = ❙1› by simp
+  have      "b  = b * 1"      by simp
+  also have "… = b * (a * c)" using ‹a * c = 1› by simp
+  also have "… = (b * a) * c" by (simp add: assoc)
+  also have "… = 1 * c"       using ‹b * a = 1› by simp
   also have "… = c"           by simp
-  finally show "b = c"         by this
+  finally show "b = c"        by this
 qed
 
 (* 3ª demostración *)
 
 lemma
-  assumes "b ❙* a = ❙1"
-          "a ❙* c = ❙1"
+  assumes "b * a = 1"
+          "a * c = 1"
   shows   "b = c"
   using assms
   by (metis assoc left_neutral right_neutral)
