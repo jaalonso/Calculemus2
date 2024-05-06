@@ -7,8 +7,7 @@ has_math: true
 
 [mathjax]
 
-Sea \(M\) un monoide y \(a, b ∈ M) tales que \(ab = 1\). Demostrar con Lean4 que \(a = 1\)
-si y sólo si \(b = 1\).
+Sea \\(M\\) un monoide y \\(a, b ∈ M\\) tales que \\(ab = 1\\). Demostrar con Lean4 que \\(a = 1\\) si y sólo si \\(b = 1\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -29,19 +28,19 @@ by sorry
 
 Demostraremos las dos implicaciones.
 
-(⟹) Supongamos que \(a = 1\). Entonces,
-\begin{align}
-   b &= 1·b    &&\text{[por neutro por la izquierda]} \\
-     &= a·b    &&\text{[por supuesto]} \\
-     &= 1      &&\text{[por hipótesis]}
-\end{align}
+(⟹) Supongamos que \\(a = 1\\). Entonces,
+\\begin{align}
+   b &= 1·b    &&\\text{[por neutro por la izquierda]} \\\\
+     &= a·b    &&\\text{[por supuesto]} \\\\
+     &= 1      &&\\text{[por hipótesis]}
+\\end{align}
 
-(⟸) Supongamos que b = 1. Entonces,
-\begin{align}
-   a &= a·1    &&\text{[por neutro por la derecha]} \\
-     &= a·b    &&\text{[por supuesto]} \\
-     &= 1      &&\text{[por hipótesis]}
-\end{align}
+(⟸) Supongamos que \\(b = 1\\). Entonces,
+\\begin{align}
+   a &= a·1    &&\\text{[por neutro por la derecha]} \\\\
+     &= a·b    &&\\text{[por supuesto]} \\\\
+     &= 1      &&\\text{[por hipótesis]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
