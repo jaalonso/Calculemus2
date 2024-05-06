@@ -1,5 +1,5 @@
 ---
-title: Producto_de_potencias_de_la_misma_base_en_monoides
+title: Producto de potencias de la misma base en monoides
 date: 2024-05-06 06:00:00 UTC+02:00
 category: Monoides
 has_math: true
@@ -14,8 +14,8 @@ En los [monoides](https://en.wikipedia.org/wiki/Monoid) se define la potencia co
    pow_succ : x^(succ n) = x * x^n
 </pre>
 
-Demostrar con Lean4 que si \(M\) es un monoide, \(x ∈ M\) y \(m, n ∈ ℕ\), entonces
-\[ x^{m + n} = x^m  x^n \]
+Demostrar con Lean4 que si \\(M\\) es un monoide, \\(x ∈ M\\) y \\(m, n ∈ ℕ\\), entonces
+\\[ x^{m + n} = x^m  x^n \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -36,25 +36,25 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Por inducción en \(m\).
+Por inducción en \\(m\\).
 
-**Caso base**:
-\begin{align}
-   x^(0 + n) &= x^n        \\
-             &= 1 · x^n    \\
-             &= x^0 · x^n  &&\text{[por pow_zero]}
-\end{align}
+**Base**:
+\\begin{align}
+   x^{0 + n} &= x^n        \\\\
+             &= 1 · x^n    \\\\
+             &= x^0 · x^n  &&\\text{[por pow_zero]}
+\\end{align}
 
-Paso: Supongamos que
-\[ x^{m + n} = x^m x^n \tag{HI} \]
+**Paso**: Supongamos que
+\\[ x^{m + n} = x^m x^n \\tag{HI} \\]
 Entonces
-\begin{align}
-   x^{(m+1) + n} &= x^{(m + n) + 1}  \\
-                 &= x · x^(m + n)    &&\text{[por pow_succ]} \\
-                 &= x · (x^m · x^n)  &&\text{[por HI]} \\
-                 &= (x · x^m) · x^n  \\
-                 &= x^{m+1} · x^n    &&\text{[por pow_succ]}
-\end{align}
+\\begin{align}
+   x^{(m+1) + n} &= x^{(m + n) + 1}  \\\\
+                 &= x · x^{m + n}    &&\\text{[por pow_succ]} \\\\
+                 &= x · (x^m · x^n)  &&\\text{[por HI]} \\\\
+                 &= (x · x^m) · x^n  \\\\
+                 &= x^{m+1} · x^n    &&\\text{[por pow_succ]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
