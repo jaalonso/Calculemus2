@@ -254,7 +254,7 @@ Se puede interactuar con las demostraciones anteriores en <a href="https://live.
 <h2>3. Demostraciones con Isabelle/HOL</h2>
 
 <pre lang="isar">
-theory Limite_de_sucesiones_constantes
+theory Convergencia_de_la_suma
 imports Main HOL.Real
 begin
 
@@ -263,53 +263,66 @@ definition limite :: "(nat ⇒ real) ⇒ real ⇒ bool"
 
 (* 1ª demostración *)
 
-lemma "limite (λ n. c) c"
+lemma
+  assumes "limite u a"
+          "limite v b"
+  shows   "limite (λ n. u n + v n) (a + b)"
 proof (unfold limite_def)
-  show "∀ε>0. ∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+  show "∀ε>0. ∃k. ∀n≥k. ¦(u n + v n) - (a + b)¦ < ε"
   proof (intro allI impI)
     fix ε :: real
     assume "0 < ε"
-    have "∀n≥0::nat. ¦c - c¦ < ε"
+    then have "0 < ε/2"
+      by simp
+    then have "∃k. ∀n≥k. ¦u n - a¦ < ε/2"
+      using assms(1) limite_def by blast
+    then obtain Nu where hNu : "∀n≥Nu. ¦u n - a¦ < ε/2"
+      by (rule exE)
+    then have "∃k. ∀n≥k. ¦v n - b¦ < ε/2"
+      using ‹0 < ε/2› assms(2) limite_def by blast
+    then obtain Nv where hNv : "∀n≥Nv. ¦v n - b¦ < ε/2"
+      by (rule exE)
+    have "∀n≥max Nu Nv. ¦(u n + v n) - (a + b)¦ < ε"
     proof (intro allI impI)
       fix n :: nat
-      assume "0 ≤ n"
-      have "c - c = 0"
-        by (simp only: diff_self)
-      then have "¦c - c¦ = 0"
-        by (simp only: abs_eq_0_iff)
-      also have "… < ε"
-        by (simp only: ‹0 < ε›)
-      finally show "¦c - c¦ < ε"
-        by this
+      assume "n ≥ max Nu Nv"
+      have "¦(u n + v n) - (a + b)¦ = ¦(u n - a) + (v n - b)¦"
+        by simp
+      also have "… ≤ ¦u n - a¦ + ¦v n - b¦"
+        by simp
+      also have "… < ε/2 + ε/2"
+        using hNu hNv ‹max Nu Nv ≤ n› by fastforce
+      finally show "¦(u n + v n) - (a + b)¦ < ε"
+        by simp
     qed
-    then show "∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+    then show "∃k. ∀n≥k. ¦u n + v n - (a + b)¦ < ε "
       by (rule exI)
   qed
 qed
 
 (* 2ª demostración *)
 
-lemma "limite (λ n. c) c"
+lemma
+  assumes "limite u a"
+          "limite v b"
+  shows   "limite (λ n. u n + v n) (a + b)"
 proof (unfold limite_def)
-  show "∀ε>0. ∃k::nat. ∀n≥k. ¦c - c¦ < ε"
+  show "∀ε>0. ∃k. ∀n≥k. ¦(u n + v n) - (a + b)¦ < ε"
   proof (intro allI impI)
     fix ε :: real
     assume "0 < ε"
-    have "∀n≥0::nat. ¦c - c¦ < ε"          by (simp add: ‹0 < ε›)
-    then show "∃k::nat. ∀n≥k. ¦c - c¦ < ε" by (rule exI)
+    then have "0 < ε/2" by simp
+    obtain Nu where hNu : "∀n≥Nu. ¦u n - a¦ < ε/2"
+      using ‹0 < ε/2› assms(1) limite_def by blast
+    obtain Nv where hNv : "∀n≥Nv. ¦v n - b¦ < ε/2"
+      using ‹0 < ε/2› assms(2) limite_def by blast
+    have "∀n≥max Nu Nv. ¦(u n + v n) - (a + b)¦ < ε"
+      using hNu hNv
+      by (smt (verit, ccfv_threshold) field_sum_of_halves max.boundedE)
+    then show "∃k. ∀n≥k. ¦u n + v n - (a + b)¦ < ε "
+      by blast
   qed
 qed
-
-(* 3ª demostración *)
-
-lemma "limite (λ n. c) c"
-  unfolding limite_def
-  by simp
-
-(* 4ª demostración *)
-
-lemma "limite (λ n. c) c"
-  by (simp add: limite_def)
 
 end
 </pre>

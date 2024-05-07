@@ -231,3 +231,4 @@ usaba Lean3 en lugar de Lean4.
 * Sin ordenar
 + L06 [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto de potencias de la misma base en monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
 + M07 [[./textos/Equivalencia_de_inversos_iguales_al_neutro.md][Equivalencia de inversos iguales al neutro]] (En [[./src/Equivalencia_de_inversos_iguales_al_neutro.lean][Lean]] y en [[./thy/Equivalencia_de_inversos_iguales_al_neutro.thy][Isabelle]]).
++ X08 [[./textos/Unicidad_de_inversos_en_monoides.md][Unicidad de inversos en monoides]] (En [[./src/Unicidad_de_inversos_en_monoides.lean][Lean]] y en [[./thy/Unicidad_de_inversos_en_monoides.thy][Isabelle]]).
