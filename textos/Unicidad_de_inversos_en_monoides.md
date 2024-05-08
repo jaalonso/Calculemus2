@@ -7,7 +7,7 @@ has_math: true
 
 [mathjax]
 
-Demostrar con Lean4 que si \(M\) es un monoide conmutativo y \(x, y, z ∈ M\) tales que \(x·y = 1\) y \(x·z = 1\), entonces \(y = z\).
+Demostrar con Lean4 que si \\(M\\) es un monoide conmutativo y \\(x, y, z ∈ M\\) tales que \\(x·y = 1\\) y \\(x·z = 1\\), entonces \\(y = z\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -28,14 +28,14 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Por la siguiente cadena de igualdades
-\begin{align}
-   y &= 1·y          &&\text{[por neutro a la izquierda]} \\
-     &= (x·z)·y      &&\text{[por hipótesis]} \\
-     &= (z·x)·y      &&\text{[por la conmutativa]} \\
-     &= z·(x·y)      &&\text{[por la asociativa]} \\
-     &= z·1          &&\text{[por hipótesis]} \\
-     &= z            &&\text{[por neutro a la derecha]}
-\end{align}
+\\begin{align}
+   y &= 1·y          &&\\text{[por neutro a la izquierda]} \\\\
+     &= (x·z)·y      &&\\text{[por hipótesis]} \\\\
+     &= (z·x)·y      &&\\text{[por la conmutativa]} \\\\
+     &= z·(x·y)      &&\\text{[por la asociativa]} \\\\
+     &= z·1          &&\\text{[por hipótesis]} \\\\
+     &= z            &&\\text{[por neutro a la derecha]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 

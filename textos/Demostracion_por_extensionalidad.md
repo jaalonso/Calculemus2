@@ -17,6 +17,8 @@ by sorry
 </pre>
 <!--more-->
 
+<h2>1. Demostraciones con Lean4</h2>
+
 <pre lang="lean">
 import  Mathlib.Data.Real.Basic
 
