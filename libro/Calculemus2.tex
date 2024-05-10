@@ -1,7 +1,7 @@
 \input Calculemus2_preambulo
 
 \chapter{Introducción}
-\label{sec:org6d4d042}
+\label{sec:org488d129}
 
 Este libro es una recopilación de los ejercicios de demostración con
 Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
@@ -32,10 +32,10 @@ demostraciones en Isabelle/HOL y Lean3.
 \end{itemize}
 
 \chapter{Demostraciones de una propiedad de los números enteros}
-\label{sec:org9f10204}
+\label{sec:org4e0cbea}
 
 \section{∀ m n ∈ ℕ, Even n → Even (m * n)}
-\label{sec:org3f1d1bc}
+\label{sec:org6e29055}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los productos de los números naturales por números
@@ -153,10 +153,10 @@ example : ∀ m n : Nat, Even n → Even (m * n) := by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El\_producto\_por\_un\_par\_es\_par.lean}{Lean 4 Web}.
 
 \chapter{Propiedades elementales de los números reales}
-\label{sec:org22a5131}
+\label{sec:org9f4a502}
 
 \section{En ℝ, (ab)c = b(ac)}
-\label{sec:org1cabd96}
+\label{sec:orga963a01}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -203,7 +203,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociativa\_conmutativa\_de\_los\_reales.lean}{Lean 4 Web}.
 
 \section{En ℝ, (cb)a = b(ac)}
-\label{sec:org576e378}
+\label{sec:orga4b8f13}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -259,7 +259,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(cb)a\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, a(bc) = b(ac)}
-\label{sec:org4a90e30}
+\label{sec:org2652aef}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que los números reales tienen la siguiente propiedad
@@ -312,7 +312,7 @@ by ring
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(bc)\_eq\_b(ac).lean}{Lean 4 Web}.
 
 \section{En ℝ, si ab = cd y e = f, entonces a(be) = c(df)}
-\label{sec:org58366a1}
+\label{sec:orgc84e00b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -380,7 +380,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/a(be)\_eq\_c(df).lean}{Lean 4 Web}.
 
 \section{En ℝ, si bc = ef, entonces ((ab)c)d = ((ae)f)d}
-\label{sec:org72707f2}
+\label{sec:orga2cf302}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d, e y f son números reales tales que
@@ -441,7 +441,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_bc\_eq\_ef\_entonces\_((ab)c)d\_eq\_((ae)f)d.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = ba-d y d = ab, entonces c = 0}
-\label{sec:org88b9324}
+\label{sec:org9ac3fd1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -508,7 +508,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_ba-d\_y\_d\_eq\_ab\_entonces\_c\_eq\_0.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a+b) = aa+2ab+bb}
-\label{sec:orgcdeb7e4}
+\label{sec:org99d2611}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -609,7 +609,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a+b)\_eq\_aa+2ab+bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(c+d) = ac+ad+bc+bd}
-\label{sec:org4b25185}
+\label{sec:orgc5d3906}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales, entonces
@@ -681,7 +681,7 @@ by rw [add_mul, mul_add, mul_add, ←add_assoc]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(c+d)\_eq\_ac+ad+bc+bd.lean}{Lean 4 Web}.
 
 \section{En ℝ, (a+b)(a-b) = a\^{}2-b\^{}2}
-\label{sec:org0aaebf1}
+\label{sec:orgac7d6fc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales, entonces
@@ -803,7 +803,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/(a+b)(a-b)\_eq\_aa-bb.lean}{Lean 4 Web}.
 
 \section{En ℝ, si c = da+b y b = ad, entonces c = 2ad}
-\label{sec:orga1b9585}
+\label{sec:org0d8f484}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c y d son números reales tales que
@@ -906,7 +906,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si\_c\_eq\_da+b\_y\_b\_eq\_ad\_entonces\_c\_eq\_2ad.lean}{Lean 4 Web}.
 
 \section{En ℝ, si a+b = c, entonces (a+b)(a+b) = ac+bc}
-\label{sec:orge4b1914}
+\label{sec:orgf2b8517}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -956,7 +956,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Sia+b\_eq\_c\_entonces\_(a+b)(a+b)\_eq\_ac+bc.lean}{Lean 4 Web}.
 
 \section{Si x e y son sumas de dos cuadrados, entonces xy también lo es}
-\label{sec:org9543165}
+\label{sec:org2ca363e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si x e y son sumas de dos cuadrados, entonces xy
@@ -1078,7 +1078,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_suma\_de\_cuadrados.lean}{Lean 4 Web}
 
 \section{En ℝ, x² + y² = 0 ↔ x = 0 ∧ y = 0}
-\label{sec:org7e7dd87}
+\label{sec:org28b08d2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si x, y ∈ ℝ, entonces
@@ -1263,7 +1263,7 @@ example : x ^ 2 + y ^ 2 = 0 ↔ x = 0 ∧ y = 0 := by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_nula\_de\_dos\_cuadrados.lean}{Lean 4 Web}
 
 \section{En ℝ, x² = 1 → x = 1 ∨ x = -1}
-\label{sec:orge7a9331}
+\label{sec:org006bfdc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -1373,7 +1373,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado\_igual\_a\_uno.lean.lean}{Lean 4 Web}
 
 \section{En ℝ, x² = y² → x = y ∨ x = -y}
-\label{sec:org65c38aa}
+\label{sec:orgd50491d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -1473,7 +1473,7 @@ sq_eq_sq_iff_eq_or_eq_neg.mp h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cuadrado\_igual\_a\_cuadrado.lean}{Lean 4 Web}
 
 \section{En ℝ, |a| = |a - b + b|}
-\label{sec:orgd823284}
+\label{sec:org3bd4d64}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -1517,18 +1517,839 @@ by ring_nf
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion\_por\_congruencia.lean}{Lean 4 Web}
 
 \chapter{Propiedades elementales de los monoides}
-\label{sec:org509f936}
+\label{sec:org42f0e80}
 
 \section{En los monoides, los inversos a la izquierda y a la derecha son iguales}
-\label{sec:org062e908}
+\label{sec:org424f33d}
 \#+INCLUDE "../src/En\_los\_monoides\_los\_inversos\_a\_la\_izquierda\_y\_a\_la\_derecha\_son\_iguales.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/En\_los\_monoides\_los\_inversos\_a\_la\_izquierda\_y\_a\_la\_derecha\_son\_iguales.lean}{Lean 4 Web}.
 
+\section{Producto de potencias de la misma base en monoides}
+\label{sec:orged6ce7c}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- En los [monoides](https://en.wikipedia.org/wiki/Monoid) se define la
+-- potencia con exponentes naturales. En Lean la potencia x^n se
+-- se caracteriza por los siguientes lemas:
+--    pow_zero : x^0 = 1
+--    pow_succ : x^(succ n) = x * x^n
+--
+-- Demostrar que
+--    x^(m + n) = x^m * x^n
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por inducción en m.
+--
+-- Caso base:
+--    x^(0 + n) = x^n
+--              = 1 * x^n
+--              = x^0 * x^n            [por pow_zero]
+--
+-- Paso: Supongamos que
+--    x^(m + n) = x^m * x^n                                         (HI)
+-- Entonces
+--    x^((m+1) + n) = x^((m + n) + 1)
+--                  = x * x^(m + n)    [por pow_succ]
+--                  = x * (x^m * x^n)  [por HI]
+--                  = (x * x^m) * x^n
+--                  = x^(m+1) * x^n    [por pow_succ]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+import Mathlib.Algebra.GroupPower.Basic
+open Nat
+
+variable {M : Type} [Monoid M]
+variable (x : M)
+variable (m n : ℕ)
+
+-- 1ª demostración
+-- ===============
+
+example :
+  x^(m + n) = x^m * x^n :=
+by
+  induction' m with m HI
+  . calc x^(0 + n)
+       = x^n               := congrArg (x ^ .) (Nat.zero_add n)
+     _ = 1 * x^n           := (Monoid.one_mul (x^n)).symm
+     _ = x^0 * x^n         := congrArg (. * (x^n)) (pow_zero x).symm
+  . calc x^(succ m + n)
+       = x^succ (m + n)    := congrArg (x ^.) (succ_add m n)
+     _ = x * x^(m + n)     := pow_succ x (m + n)
+     _ = x * (x^m * x^n)   := congrArg (x * .) HI
+     _ = (x * x^m) * x^n   := (mul_assoc x (x^m) (x^n)).symm
+     _ = x^succ m * x^n    := congrArg (. * x^n) (pow_succ x m).symm
+
+-- 2ª demostración
+-- ===============
+
+example :
+  x^(m + n) = x^m * x^n :=
+by
+  induction' m with m HI
+  . calc x^(0 + n)
+       = x^n             := by simp only [Nat.zero_add]
+     _ = 1 * x^n         := by simp only [Monoid.one_mul]
+     _ = x^0 * x^n       := by simp only [_root_.pow_zero]
+  . calc x^(succ m + n)
+       = x^succ (m + n)  := by simp only [succ_add]
+     _ = x * x^(m + n)   := by simp only [_root_.pow_succ]
+     _ = x * (x^m * x^n) := by simp only [HI]
+     _ = (x * x^m) * x^n := (mul_assoc x (x^m) (x^n)).symm
+     _ = x^succ m * x^n  := by simp only [_root_.pow_succ]
+
+-- 3ª demostración
+-- ===============
+
+example :
+  x^(m + n) = x^m * x^n :=
+by
+  induction' m with m HI
+  . calc x^(0 + n)
+       = x^n             := by simp [Nat.zero_add]
+     _ = 1 * x^n         := by simp
+     _ = x^0 * x^n       := by simp
+  . calc x^(succ m + n)
+       = x^succ (m + n)  := by simp [succ_add]
+     _ = x * x^(m + n)   := by simp [_root_.pow_succ]
+     _ = x * (x^m * x^n) := by simp [HI]
+     _ = (x * x^m) * x^n := (mul_assoc x (x^m) (x^n)).symm
+     _ = x^succ m * x^n  := by simp [_root_.pow_succ]
+
+-- 4ª demostración
+-- ===============
+
+example :
+  x^(m + n) = x^m * x^n :=
+pow_add x m n
+
+-- Lemas usados
+-- ============
+
+-- variable (y z : M)
+-- #check (Monoid.one_mul x : 1 * x = x)
+-- #check (Nat.zero_add n : 0 + n = n)
+-- #check (mul_assoc x y z : (x * y) * z = x * (y * z))
+-- #check (pow_add x m n : x^(m + n) = x^m * x^n)
+-- #check (pow_succ x n : x ^ succ n = x * x ^ n)
+-- #check (pow_zero x : x ^ 0 = 1)
+-- #check (succ_add n m : succ n + m = succ (n + m))
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_potencias\_de\_la\_misma\_base\_en\_monoides.lean}{Lean 4 Web}.
+
+\section{Equivalencia de inversos iguales al neutro}
+\label{sec:org1d1d557}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Sea M un monoide y a, b ∈ M tales que a * b = 1. Demostrar que a = 1
+-- si y sólo si b = 1.
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Demostraremos las dos implicaciones.
+--
+-- (⟹) Supongamos que a = 1. Entonces,
+--    b = 1·b    [por neutro por la izquierda]
+--      = a·b    [por supuesto]
+--      = 1      [por hipótesis]
+--
+-- (⟸) Supongamos que b = 1. Entonces,
+--    a = a·1    [por neutro por la derecha]
+--      = a·b    [por supuesto]
+--      = 1      [por hipótesis]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Basic
+
+variable {M : Type} [Monoid M]
+variable {a b : M}
+
+-- 1ª demostración
+-- ===============
+
+example
+  (h : a * b = 1)
+  : a = 1 ↔ b = 1 :=
+by
+  constructor
+  . -- ⊢ a = 1 → b = 1
+    intro a1
+    -- a1 : a = 1
+    -- ⊢ b = 1
+    calc b = 1 * b := (one_mul b).symm
+         _ = a * b := congrArg (. * b) a1.symm
+         _ = 1     := h
+  . -- ⊢ b = 1 → a = 1
+    intro b1
+    -- b1 : b = 1
+    -- ⊢ a = 1
+    calc a = a * 1 := (mul_one a).symm
+         _ = a * b := congrArg (a * .) b1.symm
+         _ = 1     := h
+
+-- 2ª demostración
+-- ===============
+
+example
+  (h : a * b = 1)
+  : a = 1 ↔ b = 1 :=
+by
+  constructor
+  . -- ⊢ a = 1 → b = 1
+    intro a1
+    -- a1 : a = 1
+    -- ⊢ b = 1
+    rw [a1] at h
+    -- h : 1 * b = 1
+    rw [one_mul] at h
+    -- h : b = 1
+    exact h
+  . -- ⊢ b = 1 → a = 1
+    intro b1
+    -- b1 : b = 1
+    -- ⊢ a = 1
+    rw [b1] at h
+    -- h : a * 1 = 1
+    rw [mul_one] at h
+    -- h : a = 1
+    exact h
+
+-- 3ª demostración
+-- ===============
+
+example
+  (h : a * b = 1)
+  : a = 1 ↔ b = 1 :=
+by
+  constructor
+  . -- ⊢ a = 1 → b = 1
+    rintro rfl
+    -- h : 1 * b = 1
+    simpa using h
+  . -- ⊢ b = 1 → a = 1
+    rintro rfl
+    -- h : a * 1 = 1
+    simpa using h
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h : a * b = 1)
+  : a = 1 ↔ b = 1 :=
+by constructor <;> (rintro rfl; simpa using h)
+
+-- 5ª demostración
+-- ===============
+
+example
+  (h : a * b = 1)
+  : a = 1 ↔ b = 1 :=
+eq_one_iff_eq_one_of_mul_eq_one h
+
+-- Lemas usados
+-- ============
+
+-- #check (eq_one_iff_eq_one_of_mul_eq_one : a * b = 1 → (a = 1 ↔ b = 1))
+-- #check (mul_one a : a * 1 = a)
+-- #check (one_mul a : 1 * a = a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Equivalencia\_de\_inversos\_iguales\_al\_neutro.lean}{Lean 4 Web}.
+
+\section{Unicidad de inversos en monoides}
+\label{sec:org7e9749d}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que en los monoides conmutativos, si un elemento tiene un
+-- inverso por la derecha, dicho inverso es único.
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    y = 1·y          [por neutro a la izquierda]
+--      = (x·z)·y      [por hipótesis]
+--      = (z·x)·y      [por la conmutativa]
+--      = z·(x·y)      [por la asociativa]
+--      = z·1          [por hipótesis]
+--      = z            [por neutro a la derecha]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Basic
+
+variable {M : Type} [CommMonoid M]
+variable {x y z : M}
+
+-- 1ª demostración
+-- ===============
+
+example
+  (hy : x * y = 1)
+  (hz : x * z = 1)
+  : y = z :=
+calc y = 1 * y       := (one_mul y).symm
+     _ = (x * z) * y := congrArg (. * y) hz.symm
+     _ = (z * x) * y := congrArg (. * y) (mul_comm x z)
+     _ = z * (x * y) := mul_assoc z x y
+     _ = z * 1       := congrArg (z * .) hy
+     _ = z           := mul_one z
+
+-- 2ª demostración
+-- ===============
+
+example
+  (hy : x * y = 1)
+  (hz : x * z = 1)
+  : y = z :=
+calc y = 1 * y     := by simp only [one_mul]
+   _ = (x * z) * y := by simp only [hz]
+   _ = (z * x) * y := by simp only [mul_comm]
+   _ = z * (x * y) := by simp only [mul_assoc]
+   _ = z * 1       := by simp only [hy]
+   _ = z           := by simp only [mul_one]
+
+-- 3ª demostración
+-- ===============
+
+example
+  (hy : x * y = 1)
+  (hz : x * z = 1)
+  : y = z :=
+calc y = 1 * y     := by simp
+   _ = (x * z) * y := by simp [hz]
+   _ = (z * x) * y := by simp [mul_comm]
+   _ = z * (x * y) := by simp [mul_assoc]
+   _ = z * 1       := by simp [hy]
+   _ = z           := by simp
+
+-- 4ª demostración
+-- ===============
+
+example
+  (hy : x * y = 1)
+  (hz : x * z = 1)
+  : y = z :=
+by
+  apply left_inv_eq_right_inv _ hz
+  -- ⊢ y * x = 1
+  rw [mul_comm]
+  -- ⊢ x * y = 1
+  exact hy
+
+-- 5ª demostración
+-- ===============
+
+example
+  (hy : x * y = 1)
+  (hz : x * z = 1)
+  : y = z :=
+inv_unique hy hz
+
+-- Lemas usados
+-- ============
+
+-- #check (inv_unique : x * y = 1 → x * z = 1 → y = z)
+-- #check (left_inv_eq_right_inv : y * x = 1 → x * z = 1 → y = z)
+-- #check (mul_assoc x y z : (x * y) * z = x * (y * z))
+-- #check (mul_comm x y : x * y = y * x)
+-- #check (mul_one x : x * 1 = x)
+-- #check (one_mul x : 1 * x = x)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad\_de\_inversos\_en\_monoides.lean}{Lean 4 Web}.
+
+\section{Caracterización de producto igual al primer factor}
+\label{sec:orga712421}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Un monoide cancelativo por la izquierda es un monoide M que cumple la
+-- propiedad cancelativa por la izquierda; es decir, para todo a, b ∈ M
+--    a * b = a * c ↔ b = c.
+--
+-- En Lean4 la clase de los monoides cancelativos por la izquierda es
+-- LeftCancelMonoid y la propiedad cancelativa por la izquierda es
+--    mul_left_cancel : a * b = a * c → b = c
+--
+-- Demostrar que si M es un monoide cancelativo por la izquierda y
+-- a, b ∈ M, entonces
+--    a * b = a ↔ b = 1
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Demostraremos las dos implicaciones.
+--
+-- (⟹) Supongamos que
+--    a·b = a                                                        (1)
+-- Por la propiedad del neutro por la derecha tenemos
+--    a·1 = a                                                        (2)
+-- Por tanto,
+--    a·b = a·1
+-- y, por la propiedad cancelativa,
+--    b = 1
+--
+-- (⟸) Supongamos que b = 1. Entonces,
+--    a·b = a·1
+--        = a      [por el neutro por la derecha]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Basic
+
+variable {M : Type} [LeftCancelMonoid M]
+variable {a b : M}
+
+-- 1ª demostración
+-- ===============
+
+example : a * b = a ↔ b = 1 :=
+by
+  constructor
+  . -- ⊢ a * b = a → b = 1
+    intro h
+    -- h : a * b = a
+    -- ⊢ b = 1
+    have h1 : a * b = a * 1 := by
+      calc a * b = a     := by exact h
+               _ = a * 1 := (mul_one a).symm
+    exact mul_left_cancel h1
+  . -- ⊢ b = 1 → a * b = a
+    intro h
+    -- h : b = 1
+    -- ⊢ a * b = a
+    rw [h]
+    -- ⊢ a * 1 = a
+    exact mul_one a
+
+-- 2ª demostración
+-- ===============
+
+example : a * b = a ↔ b = 1 :=
+calc a * b = a
+     ↔ a * b = a * 1 := by rw [mul_one]
+   _ ↔ b = 1         := mul_left_cancel_iff
+
+-- 3ª demostración
+-- ===============
+
+example : a * b = a ↔ b = 1 :=
+mul_right_eq_self
+
+-- 4ª demostración
+-- ===============
+
+example : a * b = a ↔ b = 1 :=
+by aesop
+
+-- Lemas usados
+-- ============
+
+-- variable (c : M)
+-- #check (mul_left_cancel : a * b = a * c → b = c)
+-- #check (mul_one a : a * 1 = a)
+-- #check (mul_right_eq_self : a * b = a ↔ b = 1)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Caracterizacion\_de\_producto\_igual\_al\_primer\_factor.lean}{Lean 4 Web}.
+
+\chapter{Propiedades elementales de los grupos}
+\label{sec:org863dd3b}
+
+\section{Unicidad del elemento neutro en los grupos}
+\label{sec:orge31c5eb}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que un grupo sólo posee un elemento neutro.
+-- ---------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Sea e ∈ G tal que
+--    (∀ x)[x·e = x]                                                 (1)
+-- Entonces,
+--    e = 1.e    [porque 1 es neutro]
+--      = 1      [por (1)]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Basic
+
+variable {G : Type} [Group G]
+
+-- 1ª demostración
+-- ===============
+
+example
+  (e : G)
+  (h : ∀ x, x * e = x)
+  : e = 1 :=
+calc e = 1 * e := (one_mul e).symm
+     _ = 1     := h 1
+
+-- 2ª demostración
+-- ===============
+
+example
+  (e : G)
+  (h : ∀ x, x * e = x)
+  : e = 1 :=
+by
+  have h1 : e = e * e := (h e).symm
+  exact self_eq_mul_left.mp h1
+
+-- 3ª demostración
+-- ===============
+
+example
+  (e : G)
+  (h : ∀ x, x * e = x)
+  : e = 1 :=
+self_eq_mul_left.mp (h e).symm
+
+-- 4ª demostración
+-- ===============
+
+example
+  (e : G)
+  (h : ∀ x, x * e = x)
+  : e = 1 :=
+by aesop
+
+-- Lemas usados
+-- ============
+
+-- variable (a b : G)
+-- #check (one_mul a : 1 * a = a)
+-- #check (self_eq_mul_left : b = a * b ↔ a = 1)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad\_del\_elemento\_neutro\_en\_los\_grupos.lean}{Lean 4 Web}.
+
+\section{Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1}
+\label{sec:orgcd83b08}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- En Lean4, se declara que G es un grupo mediante la expresión
+--    variable {G : Type _} [Group G]
+--
+-- Como consecuencia, se tiene los siguientes axiomas
+--    mul_assoc :    ∀ a b c : G, a * b * c = a * (b * c)
+--    one_mul :      ∀ a : G, 1 * a = a
+--    mul_left_inv : ∀ a : G, a⁻¹ * a = 1
+--
+-- Demostrar que si G es un grupo y a ∈ G, entonces
+--    a * a⁻¹ = 1
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Por la siguiente cadena de igualdades
+--    a·a⁻¹ = 1·(a·a⁻¹)                 [por producto con uno]
+--          = (1·a)·a⁻¹                 [por asociativa]
+--          = (((a⁻¹)⁻¹·a⁻¹) ·a)·a⁻¹    [por producto con inverso]
+--          = ((a⁻¹)⁻¹·(a⁻¹ ·a))·a⁻¹    [por asociativa]
+--          = ((a⁻¹)⁻¹·1)·a⁻¹           [por producto con inverso]
+--          = (a⁻¹)⁻¹·(1·a⁻¹)           [por asociativa]
+--          = (a⁻¹)⁻¹·a⁻¹               [por producto con uno]
+--          = 1                         [por producto con inverso]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+-- 1ª demostración
+example : a * a⁻¹ = 1 :=
+calc
+  a * a⁻¹ = 1 * (a * a⁻¹)                := by rw [one_mul]
+        _ = (1 * a) * a⁻¹                := by rw [mul_assoc]
+        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by rw [mul_left_inv]
+        _ = ((a⁻¹)⁻¹ * (a⁻¹  * a)) * a⁻¹ := by rw [← mul_assoc]
+        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by rw [mul_left_inv]
+        _ = (a⁻¹)⁻¹ * (1 * a⁻¹)          := by rw [mul_assoc]
+        _ = (a⁻¹)⁻¹ * a⁻¹                := by rw [one_mul]
+        _ = 1                            := by rw [mul_left_inv]
+
+-- 2ª demostración
+example : a * a⁻¹ = 1 :=
+calc
+  a * a⁻¹ = 1 * (a * a⁻¹)                := by simp
+        _ = (1 * a) * a⁻¹                := by simp
+        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by simp
+        _ = ((a⁻¹)⁻¹ * (a⁻¹  * a)) * a⁻¹ := by simp
+        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by simp
+        _ = (a⁻¹)⁻¹ * (1 * a⁻¹)          := by simp
+        _ = (a⁻¹)⁻¹ * a⁻¹                := by simp
+        _ = 1                            := by simp
+
+-- 3ª demostración
+example : a * a⁻¹ = 1 :=
+by simp
+
+-- 4ª demostración
+example : a * a⁻¹ = 1 :=
+by exact mul_inv_self a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_self a : a * a⁻¹ = 1)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (one_mul a : 1 * a = a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
+
+\section{Si G es un grupo y a ∈ G, entonces a·1 = a}
+\label{sec:org3a7efd7}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si G es un grupo y a ∈ G, entonces
+--    a * 1 = a
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Se tiene por la siguiente cadena de igualdades
+--    a·1 = a·(a⁻¹·a)    [por producto con inverso]
+--        = (a·a⁻¹)·a    [por asociativa]
+--        = 1·a          [por producto con inverso]
+--        = a            [por producto con uno]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+-- 1ª demostración
+example : a * 1 = a :=
+calc
+  a * 1 = a * (a⁻¹ * a) := by rw [mul_left_inv]
+      _ = (a * a⁻¹) * a := by rw [mul_assoc]
+      _ = 1 * a         := by rw [mul_right_inv]
+      _ = a             := by rw [one_mul]
+
+-- 2ª demostración
+example : a * 1 = a :=
+calc
+  a * 1 = a * (a⁻¹ * a) := by simp
+      _ = (a * a⁻¹) * a := by simp
+      _ = 1 * a         := by simp
+      _ = a             := by simp
+
+-- 3ª demostración
+example : a * 1 = a :=
+by simp
+
+-- 4ª demostración
+example : a * 1 = a :=
+by exact mul_one a
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (one_mul a : 1 * a = a)
+-- #check (mul_one a : a * 1 = a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_uno.lean}{Lean 4 Web}.
+
+\section{Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b}
+\label{sec:org411af73}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si G es un grupo y a, b ∈ G, tales que
+--    a * b = 1
+-- entonces
+--    a⁻¹ = b
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Se tiene a partir de la siguiente cadena de igualdades
+--    a⁻¹ = a⁻¹ * 1           [por producto por uno]
+--        = a⁻¹ * (a * b)     [por hipótesis]
+--        = (a⁻¹ * a) * b     [por asociativa]
+--        = 1 * b             [por producto con inverso]
+--        = b                 [por producto por uno]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+-- 1º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ = a⁻¹ * 1       := by rw [mul_one]
+    _ = a⁻¹ * (a * b) := by rw [h]
+    _ = (a⁻¹ * a) * b := by rw [mul_assoc]
+    _ = 1 * b         := by rw [mul_left_inv]
+    _ = b             := by rw [one_mul]
+
+-- 2º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ = a⁻¹ * 1       := by simp
+    _ = a⁻¹ * (a * b) := by simp [h]
+    _ = (a⁻¹ * a) * b := by simp
+    _ = 1 * b         := by simp
+    _ = b             := by simp
+
+-- 3º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+calc
+  a⁻¹ =  a⁻¹ * (a * b) := by simp [h]
+    _ =  b             := by simp
+
+-- 4º demostración
+example
+  (h : a * b = 1)
+  : a⁻¹ = b :=
+by exact inv_eq_of_mul_eq_one_right h
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_one a : a * 1 = a)
+-- #check (one_mul a : 1 * a = a)
+-- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_inverso.lean}{Lean 4 Web}.
+
+\section{Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹}
+\label{sec:org0fb40ec}
+\begin{verbatim}
+-- ---------------------------------------------------------------------
+-- Demostrar que si G es un grupo y a, b ∈ G, entonces
+--    (a * b)⁻¹ = b⁻¹ * a⁻¹
+-- ----------------------------------------------------------------------
+
+-- Demostración en lenguaje natural
+-- ================================
+
+-- Teniendo en cuenta la propiedad
+--    ∀ a b ∈ R, ab = 1 → a⁻¹ = b,
+-- basta demostrar que
+--    (a·b)·(b⁻¹·a⁻¹) = 1.
+-- La identidad anterior se demuestra mediante la siguiente cadena de
+-- igualdades
+--    (a·b)·(b⁻¹·a⁻¹) =  a·(b·(b⁻¹·a⁻¹))   [por la asociativa]
+--                    =  a·((b·b⁻¹)·a⁻¹)   [por la asociativa]
+--                    =  a·(1·a⁻¹)         [por producto con inverso]
+--                    =  a·a⁻¹             [por producto con uno]
+--                    =  1                 [por producto con inverso]
+
+-- Demostraciones con Lean4
+-- ========================
+
+import Mathlib.Algebra.Group.Defs
+
+variable {G : Type _} [Group G]
+variable (a b : G)
+
+lemma aux : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+calc
+  (a * b) * (b⁻¹ * a⁻¹)
+    = a * (b * (b⁻¹ * a⁻¹)) := by rw [mul_assoc]
+  _ = a * ((b * b⁻¹) * a⁻¹) := by rw [mul_assoc]
+  _ = a * (1 * a⁻¹)         := by rw [mul_right_inv]
+  _ = a * a⁻¹               := by rw [one_mul]
+  _ = 1                     := by rw [mul_right_inv]
+
+-- 1ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  show (a * b)⁻¹ = b⁻¹ * a⁻¹
+  exact inv_eq_of_mul_eq_one_right h1
+
+-- 3ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  show (a * b)⁻¹ = b⁻¹ * a⁻¹
+  simp [h1]
+
+-- 4ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
+    aux a b
+  simp [h1]
+
+-- 5ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by
+  apply inv_eq_of_mul_eq_one_right
+  rw [aux]
+
+-- 6ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by exact mul_inv_rev a b
+
+-- 7ª demostración
+example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
+by simp
+
+-- Lemas usados
+-- ============
+
+-- variable (c : G)
+-- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
+-- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_rev a b : (a * b)⁻¹ = b⁻¹ * a⁻¹)
+-- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (one_mul a : 1 * a = a)
+\end{verbatim}
+Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso\_del\_producto.lean}{Lean 4 Web}.
+
 \chapter{Propiedades elementales de los anillos}
-\label{sec:orga9e2e3e}
+\label{sec:orgfe80267}
 
 \section{Si R es un anillo y a ∈ R, entonces a + 0 = a}
-\label{sec:org0fdbaf0}
+\label{sec:org44f06dd}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1589,7 +2410,7 @@ variable (a b : R)
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a + -a = 0}
-\label{sec:org77575c5}
+\label{sec:orgc1fc25b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1658,7 +2479,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_con\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b}
-\label{sec:orgaaadf89}
+\label{sec:org76a0b0b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1722,7 +2543,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a}
-\label{sec:orgd388493}
+\label{sec:org154857a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar en Lean4 que si R es un anillo, entonces
@@ -1787,7 +2608,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_se\_cancela\_con\_la\_suma\_por\_la\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c}
-\label{sec:org2c67f87}
+\label{sec:org1b4e3df}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -1910,7 +2731,7 @@ add_left_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c}
-\label{sec:org3a72bf3}
+\label{sec:org9a44914}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b, c ∈ R tales que
@@ -2017,7 +2838,7 @@ add_right_cancel h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cancelativa\_derecha.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a.0 = 0}
-\label{sec:orgc8c06da}
+\label{sec:org924e62b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2109,7 +2930,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 0.a = 0}
-\label{sec:orgcb7cc7e}
+\label{sec:org790c1d7}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2185,7 +3006,7 @@ zero_mul a
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Multiplicacion\_por\_cero\_izquierda.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b}
-\label{sec:orgba81a3b}
+\label{sec:org77f83b9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si es un anillo y a, b ∈ R tales que
@@ -2270,7 +3091,7 @@ neg_eq_iff_add_eq_zero.mpr h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_ig\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b}
-\label{sec:orge9b6b87}
+\label{sec:org3fa0fdc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R tales que
@@ -2352,7 +3173,7 @@ add_eq_zero_iff_eq_neg.mp h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ig\_opuesto\_si\_suma\_ig\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo, entonces -0 = 0}
-\label{sec:org1c93a1c}
+\label{sec:org83d735d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo, entonces
@@ -2421,7 +3242,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_cero.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces -(-a) = a}
-\label{sec:org7253843}
+\label{sec:org4fa0ba3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2477,7 +3298,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Opuesto\_del\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a, b ∈ R, entonces a - b = a + -b}
-\label{sec:orgd3ea7ab}
+\label{sec:orgc5ceb2c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a, b ∈ R, entonces
@@ -2509,7 +3330,7 @@ sub_eq_add_neg a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_igual\_suma\_opuesto.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces a - a = 0}
-\label{sec:org4faeb9b}
+\label{sec:orgb3bc27e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2554,7 +3375,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Resta\_consigo\_mismo.lean}{Lean 4 Web}.
 
 \section{En los anillos, 1 + 1 = 2}
-\label{sec:orgeefc333}
+\label{sec:org4b085a9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los anillos,
@@ -2592,7 +3413,7 @@ one_add_one_eq_two
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uno\_mas\_uno\_es\_dos.lean}{Lean 4 Web}.
 
 \section{Si R es un anillo y a ∈ R, entonces 2a = a+a}
-\label{sec:org4bac730}
+\label{sec:orge36ee80}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si R es un anillo y a ∈ R, entonces
@@ -2637,320 +3458,11 @@ by exact two_mul a
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
 
-\chapter{Propiedades elementales de los grupos}
-\label{sec:org0d12117}
-
-\section{Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1}
-\label{sec:orgba998fe}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- En Lean4, se declara que G es un grupo mediante la expresión
---    variable {G : Type _} [Group G]
---
--- Como consecuencia, se tiene los siguientes axiomas
---    mul_assoc :    ∀ a b c : G, a * b * c = a * (b * c)
---    one_mul :      ∀ a : G, 1 * a = a
---    mul_left_inv : ∀ a : G, a⁻¹ * a = 1
---
--- Demostrar que si G es un grupo y a ∈ G, entonces
---    a * a⁻¹ = 1
--- ----------------------------------------------------------------------
-
--- Demostración en lenguaje natural
--- ================================
-
--- Por la siguiente cadena de igualdades
---    a·a⁻¹ = 1·(a·a⁻¹)                 [por producto con uno]
---          = (1·a)·a⁻¹                 [por asociativa]
---          = (((a⁻¹)⁻¹·a⁻¹) ·a)·a⁻¹    [por producto con inverso]
---          = ((a⁻¹)⁻¹·(a⁻¹ ·a))·a⁻¹    [por asociativa]
---          = ((a⁻¹)⁻¹·1)·a⁻¹           [por producto con inverso]
---          = (a⁻¹)⁻¹·(1·a⁻¹)           [por asociativa]
---          = (a⁻¹)⁻¹·a⁻¹               [por producto con uno]
---          = 1                         [por producto con inverso]
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Group.Defs
-
-variable {G : Type _} [Group G]
-variable (a b : G)
-
--- 1ª demostración
-example : a * a⁻¹ = 1 :=
-calc
-  a * a⁻¹ = 1 * (a * a⁻¹)                := by rw [one_mul]
-        _ = (1 * a) * a⁻¹                := by rw [mul_assoc]
-        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by rw [mul_left_inv]
-        _ = ((a⁻¹)⁻¹ * (a⁻¹  * a)) * a⁻¹ := by rw [← mul_assoc]
-        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by rw [mul_left_inv]
-        _ = (a⁻¹)⁻¹ * (1 * a⁻¹)          := by rw [mul_assoc]
-        _ = (a⁻¹)⁻¹ * a⁻¹                := by rw [one_mul]
-        _ = 1                            := by rw [mul_left_inv]
-
--- 2ª demostración
-example : a * a⁻¹ = 1 :=
-calc
-  a * a⁻¹ = 1 * (a * a⁻¹)                := by simp
-        _ = (1 * a) * a⁻¹                := by simp
-        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by simp
-        _ = ((a⁻¹)⁻¹ * (a⁻¹  * a)) * a⁻¹ := by simp
-        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by simp
-        _ = (a⁻¹)⁻¹ * (1 * a⁻¹)          := by simp
-        _ = (a⁻¹)⁻¹ * a⁻¹                := by simp
-        _ = 1                            := by simp
-
--- 3ª demostración
-example : a * a⁻¹ = 1 :=
-by simp
-
--- 4ª demostración
-example : a * a⁻¹ = 1 :=
-by exact mul_inv_self a
-
--- Lemas usados
--- ============
-
--- variable (c : G)
--- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_inv_self a : a * a⁻¹ = 1)
--- #check (mul_left_inv a : a⁻¹  * a = 1)
--- #check (one_mul a : 1 * a = a)
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_dos.lean}{Lean 4 Web}.
-
-\section{Si G es un grupo y a ∈ G, entonces a·1 = a}
-\label{sec:org51a6e88}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si G es un grupo y a ∈ G, entonces
---    a * 1 = a
--- ----------------------------------------------------------------------
-
--- Demostración en lenguaje natural
--- ================================
-
--- Se tiene por la siguiente cadena de igualdades
---    a·1 = a·(a⁻¹·a)    [por producto con inverso]
---        = (a·a⁻¹)·a    [por asociativa]
---        = 1·a          [por producto con inverso]
---        = a            [por producto con uno]
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Group.Defs
-
-variable {G : Type _} [Group G]
-variable (a b : G)
-
--- 1ª demostración
-example : a * 1 = a :=
-calc
-  a * 1 = a * (a⁻¹ * a) := by rw [mul_left_inv]
-      _ = (a * a⁻¹) * a := by rw [mul_assoc]
-      _ = 1 * a         := by rw [mul_right_inv]
-      _ = a             := by rw [one_mul]
-
--- 2ª demostración
-example : a * 1 = a :=
-calc
-  a * 1 = a * (a⁻¹ * a) := by simp
-      _ = (a * a⁻¹) * a := by simp
-      _ = 1 * a         := by simp
-      _ = a             := by simp
-
--- 3ª demostración
-example : a * 1 = a :=
-by simp
-
--- 4ª demostración
-example : a * 1 = a :=
-by exact mul_one a
-
--- Lemas usados
--- ============
-
--- variable (c : G)
--- #check (mul_left_inv a : a⁻¹  * a = 1)
--- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_right_inv a : a * a⁻¹ = 1)
--- #check (one_mul a : 1 * a = a)
--- #check (mul_one a : a * 1 = a)
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_uno.lean}{Lean 4 Web}.
-
-\section{Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b}
-\label{sec:org344cbfd}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si G es un grupo y a, b ∈ G, tales que
---    a * b = 1
--- entonces
---    a⁻¹ = b
--- ----------------------------------------------------------------------
-
--- Demostración en lenguaje natural
--- ================================
-
--- Se tiene a partir de la siguiente cadena de igualdades
---    a⁻¹ = a⁻¹ * 1           [por producto por uno]
---        = a⁻¹ * (a * b)     [por hipótesis]
---        = (a⁻¹ * a) * b     [por asociativa]
---        = 1 * b             [por producto con inverso]
---        = b                 [por producto por uno]
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Group.Defs
-
-variable {G : Type _} [Group G]
-variable (a b : G)
-
--- 1º demostración
-example
-  (h : a * b = 1)
-  : a⁻¹ = b :=
-calc
-  a⁻¹ = a⁻¹ * 1       := by rw [mul_one]
-    _ = a⁻¹ * (a * b) := by rw [h]
-    _ = (a⁻¹ * a) * b := by rw [mul_assoc]
-    _ = 1 * b         := by rw [mul_left_inv]
-    _ = b             := by rw [one_mul]
-
--- 2º demostración
-example
-  (h : a * b = 1)
-  : a⁻¹ = b :=
-calc
-  a⁻¹ = a⁻¹ * 1       := by simp
-    _ = a⁻¹ * (a * b) := by simp [h]
-    _ = (a⁻¹ * a) * b := by simp
-    _ = 1 * b         := by simp
-    _ = b             := by simp
-
--- 3º demostración
-example
-  (h : a * b = 1)
-  : a⁻¹ = b :=
-calc
-  a⁻¹ =  a⁻¹ * (a * b) := by simp [h]
-    _ =  b             := by simp
-
--- 4º demostración
-example
-  (h : a * b = 1)
-  : a⁻¹ = b :=
-by exact inv_eq_of_mul_eq_one_right h
-
--- Lemas usados
--- ============
-
--- variable (c : G)
--- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_left_inv a : a⁻¹  * a = 1)
--- #check (mul_one a : a * 1 = a)
--- #check (one_mul a : 1 * a = a)
--- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_inverso.lean}{Lean 4 Web}.
-
-\section{Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹}
-\label{sec:orgaa79cc2}
-\begin{verbatim}
--- ---------------------------------------------------------------------
--- Demostrar que si G es un grupo y a, b ∈ G, entonces
---    (a * b)⁻¹ = b⁻¹ * a⁻¹
--- ----------------------------------------------------------------------
-
--- Demostración en lenguaje natural
--- ================================
-
--- Teniendo en cuenta la propiedad
---    ∀ a b ∈ R, ab = 1 → a⁻¹ = b,
--- basta demostrar que
---    (a·b)·(b⁻¹·a⁻¹) = 1.
--- La identidad anterior se demuestra mediante la siguiente cadena de
--- igualdades
---    (a·b)·(b⁻¹·a⁻¹) =  a·(b·(b⁻¹·a⁻¹))   [por la asociativa]
---                    =  a·((b·b⁻¹)·a⁻¹)   [por la asociativa]
---                    =  a·(1·a⁻¹)         [por producto con inverso]
---                    =  a·a⁻¹             [por producto con uno]
---                    =  1                 [por producto con inverso]
-
--- Demostraciones con Lean4
--- ========================
-
-import Mathlib.Algebra.Group.Defs
-
-variable {G : Type _} [Group G]
-variable (a b : G)
-
-lemma aux : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
-calc
-  (a * b) * (b⁻¹ * a⁻¹)
-    = a * (b * (b⁻¹ * a⁻¹)) := by rw [mul_assoc]
-  _ = a * ((b * b⁻¹) * a⁻¹) := by rw [mul_assoc]
-  _ = a * (1 * a⁻¹)         := by rw [mul_right_inv]
-  _ = a * a⁻¹               := by rw [one_mul]
-  _ = 1                     := by rw [mul_right_inv]
-
--- 1ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by
-  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
-    aux a b
-  show (a * b)⁻¹ = b⁻¹ * a⁻¹
-  exact inv_eq_of_mul_eq_one_right h1
-
--- 3ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by
-  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
-    aux a b
-  show (a * b)⁻¹ = b⁻¹ * a⁻¹
-  simp [h1]
-
--- 4ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by
-  have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
-    aux a b
-  simp [h1]
-
--- 5ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by
-  apply inv_eq_of_mul_eq_one_right
-  rw [aux]
-
--- 6ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by exact mul_inv_rev a b
-
--- 7ª demostración
-example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
-by simp
-
--- Lemas usados
--- ============
-
--- variable (c : G)
--- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
--- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_inv_rev a b : (a * b)⁻¹ = b⁻¹ * a⁻¹)
--- #check (mul_right_inv a : a * a⁻¹ = 1)
--- #check (one_mul a : 1 * a = a)
-\end{verbatim}
-Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso\_del\_producto.lean}{Lean 4 Web}.
-
 \chapter{Propiedades de orden en los números reales}
-\label{sec:orgb6983d2}
+\label{sec:org26ffc59}
 
 \section{En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e}
-\label{sec:orgdfc6a1e}
+\label{sec:orgc26f218}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d y e son números reales tales que
@@ -3085,7 +3597,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cadena\_de\_desigualdades.lean}{Lean 4 Web}.
 
 \section{En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b}
-\label{sec:org5aa43b8}
+\label{sec:orgc0813e5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b y c son números reales tales que
@@ -3137,7 +3649,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones.lean}{Lean 4 Web}.
 
 \section{En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ}
-\label{sec:orgd991eaa}
+\label{sec:org98ef3c4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a, b, y d números reales. Demostrar  que si
@@ -3211,7 +3723,7 @@ by linarith [exp_le_exp.mpr h2]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales.lean}{Lean 4 Web}.
 
 \section{En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f}
-\label{sec:orgf4330ef}
+\label{sec:org143c37f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b, c, d y f son números reales tales que
@@ -3313,7 +3825,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales\_2.lean}{Lean 4 Web}
 
 \section{En ℝ, si d ≤ f, entonces c + e\^{}(a + d) ≤ c + e\^{}(a + f)}
-\label{sec:orgb17328a}
+\label{sec:org0814c8d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, c, d y f son números reales tales que
@@ -3387,7 +3899,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inecuaciones\_con\_exponenciales\_3.lean}{Lean 4 Web}
 
 \section{En ℝ, si a ≤ b, entonces log(1+e\^{}a) ≤ log(1+e\^{}b)}
-\label{sec:org4dd6426}
+\label{sec:org012e93d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a y b son números reales tales que
@@ -3466,7 +3978,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
 
 \section{En ℝ, si a ≤ b, entonces c - e\^{}b ≤ c - e\^{}a}
-\label{sec:org9c17457}
+\label{sec:orgccae01b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a, b y c números reales. Demostrar que si
@@ -3531,7 +4043,7 @@ by linarith [exp_le_exp.mpr h]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
 
 \section{En ℝ, 2ab ≤ a² + b²}
-\label{sec:orgbb401dd}
+\label{sec:org8b995e5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a y b números reales. Demostrar que
@@ -3602,7 +4114,7 @@ two_mul_le_add_sq a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_logaritmica.lean}{Lean 4 Web}
 
 \section{En ℝ, |ab| ≤ (a²+b²)/2]}
-\label{sec:org0020d3e}
+\label{sec:orgc68f992}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a y b números reales. Demostrar que
@@ -3711,7 +4223,7 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_desigualdades\_absolutas.lean}{Lean 4 Web}
 
 \section{En ℝ, min(a,b) = min(b,a)}
-\label{sec:orgeef6c62}
+\label{sec:org7892e01}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a y b números reales. Demostrar que
@@ -3803,7 +4315,7 @@ min_comm a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_del\_minimo.lean}{Lean 4 Web}
 
 \section{En ℝ, max(a,b) = max(b,a)}
-\label{sec:orgcbb5890}
+\label{sec:orgd9d5b6b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a y b números reales. Demostrar que
@@ -3895,7 +4407,7 @@ max_comm a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_del\_maximo.lean}{Lean 4 Web}
 
 \section{En ℝ, min(min(a,b),c) = min(a,min(b,c))}
-\label{sec:orgc66fbba}
+\label{sec:org86f6ea6}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a, b y c números reales. Demostrar que
@@ -4051,7 +4563,7 @@ min_assoc a b c
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad\_del\_minimo.lean}{Lean 4 Web}
 
 \section{En ℝ, min(a,b)+c = min(a+c,b+c)}
-\label{sec:orga805d5b}
+\label{sec:org3a74486}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a, b y c números reales. Demostrar que
@@ -4213,7 +4725,7 @@ example : min a b + c = min (a + c) (b + c) :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Minimo\_de\_suma.lean}{Lean 4 Web}
 
 \section{En ℝ, |a| - |b| ≤ |a - b|}
-\label{sec:org2e36b7f}
+\label{sec:org7d2a445}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean a y b números reales. Demostrar que
@@ -4292,7 +4804,7 @@ abs_sub_abs_le_abs_sub a b
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/abs\_sub.lean}{Lean 4 Web}
 
 \section{En ℝ, \{0 < ε, ε ≤ 1, |x| < ε, |y| < ε\} ⊢ |xy| < ε}
-\label{sec:org90b4995}
+\label{sec:org58dfd60}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que para todos los números reales x, y, ε si
@@ -4450,7 +4962,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion\_del\_producto.lean}{Lean 4 Web}
 
 \section{En ℝ, a < b → ¬(b < a)}
-\label{sec:orge937dba}
+\label{sec:org4def0b8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que para todo par de numero reales a y b, si a < b entonces
@@ -4515,7 +5027,7 @@ lt_asymm h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asimetria\_de\_menor.lean}{Lean 4 Web}
 
 \section{Hay algún número real entre 2 y 3}
-\label{sec:org96424d6}
+\label{sec:org0bf52d3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que hay algún número real entre 2 y 3.
@@ -4560,7 +5072,7 @@ example : ∃ x : ℝ, 2 < x ∧ x < 3 :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existencia\_de\_valor\_intermedio.lean}{Lean 4 Web}
 
 \section{Si (∀ε > 0)[x ≤ ε], entonces x ≤ 0}
-\label{sec:org845b019}
+\label{sec:org33f041f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sea x un número real tal que para todo número positivo ε, x ≤ ε
@@ -4642,7 +5154,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Condicion\_para\_no\_positivo.lean}{Lean 4 Web}
 
 \section{Si 0 < 0, entonces a > 37 para cualquier número a}
-\label{sec:org6e7022a}
+\label{sec:org47ec35a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si 0 < 0, entonces a > 37 para cualquier número a.
@@ -4723,7 +5235,7 @@ by linarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Principio\_de\_explosion.lean}{Lean 4 Web}
 
 \section{\{x ≤ y, y ≰ x\} ⊢ x ≤ y ∧ x ≠ y}
-\label{sec:org8767c42}
+\label{sec:orgdaafce8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean x e y dos números tales que
@@ -4864,7 +5376,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion\_de\_la\_conjuncion.lean}{Lean 4 Web}
 
 \section{x ≤ y ∧ x ≠ y ⊢ y ≰ x}
-\label{sec:orgf93b2e0}
+\label{sec:orga64845b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los reales, si
@@ -4988,7 +5500,7 @@ fun ⟨h1, h2⟩ h' ↦ h2 (le_antisymm h1 h')
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion\_de\_la\_conjuncion.lean}{Lean 4 Web}
 
 \section{(∃x ∈ ℝ)[2 < x < 3]}
-\label{sec:org470ba42}
+\label{sec:orgee42cb0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que (∃x ∈ ℝ)[2 < x < 3]
@@ -5044,7 +5556,7 @@ example : ∃ x : ℝ, 2 < x ∧ x < 3 :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Entre\_2\_y\_3.lean}{Lean 4 Web}
 
 \section{Si (∃z ∈ ℝ)[x < z < y], entonces x < y}
-\label{sec:org4a77a15}
+\label{sec:orgb63aaff}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si (∃z ∈ ℝ)[x < z < y], entonces x < y.
@@ -5097,7 +5609,7 @@ fun ⟨_, h1, h2⟩ ↦ lt_trans h1 h2
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Menor\_por\_intermedio.lean}{Lean 4 Web}
 
 \section{En ℝ, x ≤ y ∧ x ≠ y → x ≤ y ∧ y ≰ x}
-\label{sec:org2cf6748}
+\label{sec:orge8a83e9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que, en ℝ, x ≤ y ∧ x ≠ y → x ≤ y ∧ y ≰ x
@@ -5209,7 +5721,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Entre\_desigualdades.lean}{Lean 4 Web}
 
 \section{En ℝ, si x ≤ y, entonces y ≰ x ↔ x ≠ y}
-\label{sec:orgd8e491f}
+\label{sec:org2c6fecf}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean x, y números reales tales que x ≤ y. Entonces, y ≰ x ↔ x ≠ y.
@@ -5387,7 +5899,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CNS\_de\_distintos.lean}{Lean 4 Web}
 
 \section{Si |x + 3| < 5, entonces -8 < x < 2}
-\label{sec:orgefdac16}
+\label{sec:org350898d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -5459,7 +5971,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion\_del\_valor\_absoluto.lean}{Lean 4 Web}
 
 \section{En ℝ, y > x² ⊢ y > 0 ∨ y < -1}
-\label{sec:org151ce1f}
+\label{sec:org988d41b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -5537,7 +6049,7 @@ by { left ; linarith [pow_two_nonneg x] }
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion\_de\_la\_disyuncion\_1.lean}{Lean 4 Web}
 
 \section{En ℝ, -y > x² + 1 ⊢ y > 0 ∨ y < -1}
-\label{sec:orgd99dcae}
+\label{sec:org75d5d24}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -5641,7 +6153,7 @@ by { right ; linarith [pow_two_nonneg x] }
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion\_de\_la\_disyuncion\_2.lean}{Lean 4 Web}
 
 \section{En ℝ, si x < |y|, entonces x < y ó x < -y}
-\label{sec:org1cbcc90}
+\label{sec:org12e5532}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que para todo par de números reales x e y, si x < |y|,
@@ -5700,7 +6212,7 @@ lt_abs.mp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion\_de\_la\_disyuncion.lean}{Lean 4 Web}
 
 \section{En ℝ, x ≤ |x|}
-\label{sec:org90dc81e}
+\label{sec:org5894a80}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en ℝ,
@@ -5798,7 +6310,7 @@ example : x ≤ |x| :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota\_inf\_de\_abs.lean}{Lean 4 Web}
 
 \section{En ℝ, -x ≤ |x|}
-\label{sec:orgc0efeaa}
+\label{sec:org44c9f81}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -5891,7 +6403,7 @@ example : -x ≤ |x| :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota\_inf2\_de\_abs.lean}{Lean 4 Web}
 
 \section{En ℝ, |x + y| ≤ |x| + |y|}
-\label{sec:org140da7e}
+\label{sec:org0312492}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -5993,7 +6505,7 @@ example : |x + y| ≤ |x| + |y| :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_triangular\_para\_valor\_absoluto.lean.lean}{Lean 4 Web}
 
 \section{En ℝ, si x ≠ 0 entonces x < 0 ó x > 0}
-\label{sec:org4a8d1e2}
+\label{sec:org444df2c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Ejercicio. Sea x un número real. Demostrar que si
@@ -6068,7 +6580,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Eliminacion\_de\_la\_disyuncion\_con\_rcases.lean.lean}{Lean 4 Web}
 
 \section{Si (∃ x, y ∈ ℝ)[z = x² + y² ∨ z = x² + y² + 1], entonces z ≥ 0}
-\label{sec:org0a2d69b}
+\label{sec:org66750ce}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -6235,7 +6747,7 @@ by rcases h with ⟨a, b, rfl | rfl⟩ <;> nlinarith
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Desigualdad\_con\_rcases.lean.lean}{Lean 4 Web}
 
 \section{En ℝ, si 1 < a, entonces a < aa}
-\label{sec:orgefba8ec}
+\label{sec:org461eabe}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar, para todo a ∈ ℝ, si
@@ -6309,10 +6821,10 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion\_por\_conversion.lean}{Lean 4 Web}
 
 \chapter{Divisibilidad}
-\label{sec:org6e51ccc}
+\label{sec:org928ccf3}
 
 \section{Si x,y,z ∈ ℕ, entonces x ∣ yxz}
-\label{sec:org3eac270}
+\label{sec:orgd178198}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si x, y, z ∈ ℕ, entonces
@@ -6368,7 +6880,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Divisibilidad\_de\_producto.lean}{Lean 4 Web}
 
 \section{Si x divide a w, también divide a y(xz)+x²+w²}
-\label{sec:org96af94e}
+\label{sec:orgb5214a1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -6462,7 +6974,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_de\_divisibilidad.lean}{Lean 4 Web}
 
 \section{Transitividad de la divisibilidad}
-\label{sec:org2ae6dd5}
+\label{sec:org08110c7}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la relación de divisibilidad es transitiva.
@@ -6565,7 +7077,7 @@ by exact dvd_trans divab divbc
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Transitividad\_de\_la\_divisibilidad.lean}{Lean 4 Web}
 
 \section{Si a divide a b y a c, entonces divide a b+c}
-\label{sec:orgbabc716}
+\label{sec:org94343e4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a es un divisor de b y de c, tambien lo es de b + c.
@@ -6678,7 +7190,7 @@ dvd_add h1 h2
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_divisible.lean}{Lean 4 Web}
 
 \section{Conmutatividad del máximo común divisor}
-\label{sec:orgdd968c7}
+\label{sec:org0e82b60}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si m y n son números naturales, entonces
@@ -6762,7 +7274,7 @@ gcd_comm m n
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_del\_gcd.lean}{Lean 4 Web}
 
 \section{Si (m ∣ n ∧ m ≠ n), entonces (m ∣ n ∧ ¬(n ∣ m))}
-\label{sec:org348d30f}
+\label{sec:org8ea14ff}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sean m y n números naturales. Demostrar que si
@@ -6868,7 +7380,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Uso\_de\_conjuncion.lean}{Lean 4 Web}
 
 \section{Existen números primos m y n tales que 4 < m < n < 10}
-\label{sec:org7f1b27a}
+\label{sec:org42afc62}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que existen números primos m y n tales que
@@ -6896,7 +7408,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Primos\_intermedios.lean}{Lean 4 Web}
 
 \section{3 divide al máximo común divisor de 6 y 15}
-\label{sec:org42d1b65}
+\label{sec:org0a06d17}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que 3 divide al máximo común divisor de 6 y 15.
@@ -6953,7 +7465,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Divisor\_del\_mcd.lean}{Lean 4 Web}
 
 \section{Si m divide a n o a k, entonces m divide a nk}
-\label{sec:org3c0712e}
+\label{sec:orgfa36e09}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si m divide a n o a k, entonces m divide a nk.
@@ -7079,7 +7591,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_divisibilidad\_del\_producto.lean.lean}{Lean 4 Web}
 
 \section{Existen infinitos números primos}
-\label{sec:org12ba2f1}
+\label{sec:orgda08688}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que hay infinitos números primos.
@@ -7183,7 +7695,7 @@ exists_infinite_primes n
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Infinitud\_de\_primos.lean}{Lean 4 Web}
 
 \section{Si n² es par, entonces n es par}
-\label{sec:org32cfcf0}
+\label{sec:org7bf986a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si n² es par, entonces n es par.
@@ -7260,7 +7772,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Par\_si\_cuadrado\_par.lean}{Lean 4 Web}
 
 \section{La raíz cuadrada de 2 es irracional}
-\label{sec:orgf4e84e6}
+\label{sec:orgbdbc1dc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la raíz cuadrada de 2 es irracional; es decir, que no
@@ -7367,10 +7879,10 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Irracionalidad\_de\_la\_raiz\_cuadrada\_de\_2.lean}{Lean 4 Web}
 
 \chapter{Retículos}
-\label{sec:org964bbaf}
+\label{sec:org1f559c1}
 
 \section{En los retículos, x ⊓ y = y ⊓ x}
-\label{sec:org4b26f37}
+\label{sec:org8f6fbbc}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -7466,7 +7978,7 @@ inf_comm
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_del\_infimo.lean}{Lean 4 Web}
 
 \section{En los retículos, x ⊔ y = y ⊔ x}
-\label{sec:orgb8cdbfc}
+\label{sec:orgd20eb15}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -7563,7 +8075,7 @@ sup_comm
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_del\_supremo.lean}{Lean 4 Web}
 
 \section{En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)}
-\label{sec:orgff32480}
+\label{sec:org0bb7cef}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -7733,7 +8245,7 @@ inf_assoc
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad\_del\_infimo.lean}{Lean 4 Web}
 
 \section{En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)}
-\label{sec:org6ea7158}
+\label{sec:org85af27f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -7966,7 +8478,7 @@ sup_assoc
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Asociatividad\_del\_supremo.lean}{Lean 4 Web}
 
 \section{En los retículos, x ⊓ (x ⊔ y) = x}
-\label{sec:org933108f}
+\label{sec:orgf7e3dba}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -8076,7 +8588,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Leyes\_de\_absorcion\_1.lean}{Lean 4 Web}
 
 \section{En los retículos, x ⊔ (x ⊓ y) = x}
-\label{sec:org4cf034c}
+\label{sec:org7e6e086}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los retículos se verifica que
@@ -8174,7 +8686,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Leyes\_de\_absorcion\_2.lean}{Lean 4 Web}
 
 \section{En los retículos, una distributiva del ínfimo implica la otra}
-\label{sec:orgc678b10}
+\label{sec:org7a0e745}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si α es un retículo tal que
@@ -8224,7 +8736,7 @@ by simp [h, inf_comm]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_distributiva\_1.lean}{Lean 4 Web}
 
 \section{En los retículos, una distributiva del supremos implica la otra}
-\label{sec:orgce6c5c8}
+\label{sec:org35d4f0d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si α es un retículo tal que
@@ -8273,10 +8785,10 @@ by simp [h, sup_comm]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_distributiva\_2.lean}{Lean 4 Web}
 
 \chapter{Relaciones de orden}
-\label{sec:org7844476}
+\label{sec:orgbc6ba3a}
 
 \section{En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b}
-\label{sec:orgedfa09c}
+\label{sec:org89ccd76}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en un orden parcial
@@ -8484,7 +8996,7 @@ example : a < b ↔ a ≤ b ∧ a ≠ b :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Caracterizacion\_de\_menor\_en\_ordenes\_parciales.lean}{Lean 4 Web}
 
 \section{Si ≤ es un preorden, entonces < es irreflexiva}
-\label{sec:orgcbfc45b}
+\label{sec:orge6ee863}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si ≤ es un preorden, entonces < es irreflexiva.
@@ -8537,7 +9049,7 @@ example : ¬a < a :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden\_es\_irreflexivo.lean}{Lean 4 Web}
 
 \section{Si ≤ es un preorden, entonces < es transitiva}
-\label{sec:org5638356}
+\label{sec:org9d721b5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si ≤ es un preorden, entonces < es transitiva.
@@ -8663,10 +9175,10 @@ example : a < b → b < c → a < c :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden\_transitiva.lean}{Lean 4 Web}
 
 \chapter{Anillos ordenados}
-\label{sec:org8ae3312}
+\label{sec:orgff0fd0c}
 
 \section{En los anillos ordenados, a ≤ b → 0 ≤ b - a}
-\label{sec:org4057eee}
+\label{sec:org531ca42}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los anillos ordenados se verifica que
@@ -8719,7 +9231,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_sobre\_anillos\_ordenados\_1.lean}{Lean 4 Web}
 
 \section{En los anillos ordenados, 0 ≤ b - a → a ≤ b}
-\label{sec:orgeb83932}
+\label{sec:org55fe477}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que en los anillos ordenados
@@ -8782,7 +9294,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_sobre\_anillos\_ordenados\_2.lean}{Lean 4 Web}
 
 \section{En los anillos ordenados, \{a ≤ b, 0 ≤ c\} ⊢ ac ≤ bc}
-\label{sec:org5406972}
+\label{sec:org2cc393c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que, en los anillos ordenados, si
@@ -8899,10 +9411,10 @@ mul_le_mul_of_nonneg_right h1 h2
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_sobre\_anillos\_ordenados\_3.lean}{Lean 4 Web}
 
 \chapter{Espacios métricos}
-\label{sec:orga2de322}
+\label{sec:orgda3bca7}
 
 \section{En los espacios métricos, dist(x,y) ≥ 0}
-\label{sec:org83b51d5}
+\label{sec:org9406a62}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Ejercicio. Demostrar que en los espacios métricos
@@ -8992,10 +9504,10 @@ dist_nonneg
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Ejercicio\_en\_espacios\_metricos.lean}{Lean 4 Web}
 
 \chapter{Funciones reales}
-\label{sec:orgf5fc6c3}
+\label{sec:org2c23f4c}
 
 \section{La suma de una cota superior de f y una cota superior de g es una cota superior de f+g}
-\label{sec:orgc03fa0f}
+\label{sec:orgdd708a8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de una cota superior de f y una cota superior
@@ -9095,7 +9607,7 @@ theorem sumaCotaSup
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_de\_cotas\_superiores.lean}{Lean 4 Web}
 
 \section{La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g}
-\label{sec:org039008a}
+\label{sec:org90d1c3f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de una cota inferior de f y una  cota inferior
@@ -9187,7 +9699,7 @@ theorem sumaCotaInf
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_de\_cotas\_inferiores.lean}{Lean 4 Web}
 
 \section{El producto de funciones no negativas es no negativo}
-\label{sec:org16162fa}
+\label{sec:orgfb00a05}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que el producto de dos funciones no negativas es no
@@ -9277,7 +9789,7 @@ example
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_funciones\_no\_negativas.lean}{Lean 4 Web}
 
 \section{Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg}
-\label{sec:orgaa33c98}
+\label{sec:org0d79ea2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 
@@ -9403,7 +9915,7 @@ example
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota\_superior\_del\_producto.lean}{Lean 4 Web}
 
 \section{La suma de dos funciones acotadas superiormente también lo está}
-\label{sec:org71b2d5f}
+\label{sec:org3617468}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de dos funciones acotadas superiormente también
@@ -9499,7 +10011,7 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaSup ha hb⟩
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src//Suma\_de\_funciones\_acotadas\_superiormente.lean}{Lean 4 Web}
 
 \section{La suma de dos funciones acotadas inferiormente también lo está}
-\label{sec:org3d7347f}
+\label{sec:org67b35a1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de dos funciones acotadas inferiormente también
@@ -9601,7 +10113,7 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaInf ha hb⟩
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_de\_funciones\_acotadas\_inferiormente.lean}{Lean 4 Web}
 
 \section{Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf}
-\label{sec:org6b09391}
+\label{sec:orgb34074c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a es una cota superior de f y c ≥ 0,
@@ -9687,7 +10199,7 @@ fun y ↦ mul_le_mul_of_nonneg_left (hfa y) h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cota\_superior\_de\_producto\_por\_escalar.lean}{Lean 4 Web}
 
 \section{Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está}
-\label{sec:org157968b}
+\label{sec:org7316994}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si c ≥ 0 y f está acotada superiormente, entonces c * f
@@ -9780,7 +10292,7 @@ fun ⟨a, ha⟩ ↦ ⟨c * a, CotaSuperior_mul ha hc⟩
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_escalar\_acotado\_superiormente.lean}{Lean 4 Web}
 
 \section{Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior}
-\label{sec:orgc1d1f56}
+\label{sec:org8ebdade}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es una función de ℝ en ℝ tal que para cada a,
@@ -9841,7 +10353,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Funcion\_no\_acotada\_superiormente.lean}{Lean 4 Web}
 
 \section{Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior}
-\label{sec:org0c2e5d2}
+\label{sec:orgaaad6c2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es una función de ℝ en ℝ tal que para cada a,
@@ -9902,7 +10414,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Funcion\_no\_acotada\_inferiormente.lean}{Lean 4 Web}
 
 \section{La función identidad no está acotada superiormente}
-\label{sec:orgf6004d5}
+\label{sec:org6b70648}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la función identidad no está acotada superiormente.
@@ -9954,7 +10466,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La\_identidad\_no\_esta\_acotada\_superiormente.lean}{Lean 4 Web}
 
 \section{Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]}
-\label{sec:org2667514}
+\label{sec:orgd9304c8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Sea f una función de ℝ en ℝ. Demostrar que si f no está acotada
@@ -10131,7 +10643,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN\_no\_acotada\_superiormente.lean}{Lean 4 Web}
 
 \section{Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente}
-\label{sec:org1d1a601}
+\label{sec:org76482e2}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada
@@ -10201,7 +10713,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_acotada\_superiormente.lean}{Lean 4 Web}
 
 \section{Suma de funciones monótonas}
-\label{sec:orgd736ddd}
+\label{sec:orge96e57c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de dos funciones monótonas es monótona.
@@ -10309,7 +10821,7 @@ example
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_de\_funciones\_monotonas.lean}{Lean 4 Web}
 
 \section{Si c es no negativo y f es monótona, entonces cf es monótona.}
-\label{sec:org46bc1cd}
+\label{sec:org453e81f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si c es no negativo y f es monótona, entonces cf es
@@ -10383,7 +10895,7 @@ example (mf : Monotone f) (nnc : 0 ≤ c) :
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_un\_positivo\_por\_una\_funcion\_monotona.lean}{Lean 4 Web}
 
 \section{La composición de dos funciones monótonas es monótona}
-\label{sec:orgb7b36b2}
+\label{sec:orgd2e96da}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la composición de dos funciones monótonas es monótona.
@@ -10461,7 +10973,7 @@ example (mf : Monotone f) (mg : Monotone g) :
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion\_de\_funciones\_monotonas.lean}{Lean 4 Web}
 
 \section{Si f es monótona y f(a) < f(b), entonces a < b}
-\label{sec:orgb69c60d}
+\label{sec:org3126f4f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es monótona y f(a) < f(b), entonces a < b
@@ -10564,7 +11076,7 @@ lt_of_not_ge (fun h3 ↦ (not_lt_of_ge (h1 h3)) h2)
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN\_de\_monotona.lean}{Lean 4 Web}
 
 \section{Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona}
-\label{sec:orgb8bff69}
+\label{sec:org231aa5f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a, b ∈ ℝ tales que (a ≤ b) y (f b < f a), entonces f
@@ -10647,7 +11159,7 @@ fun h3 ↦ (not_lt_of_ge (h3 h1)) h2
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS\_de\_no\_monotona.lean}{Lean 4 Web}
 
 \section{No para toda f : ℝ → ℝ monótona, (∀a, b)[f(a) ≤ f(b) → a ≤ b]}
-\label{sec:orgb5509f8}
+\label{sec:org05580fa}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que no para toda f : ℝ → ℝ monótona,
@@ -10695,7 +11207,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_de\_monotona.lean}{Lean 4 Web}
 
 \section{Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]}
-\label{sec:org6b6cba5}
+\label{sec:org96fd8d9}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f no es monótona, entonces existen x, y tales que
@@ -10778,7 +11290,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CN\_de\_no\_monotona.lean}{Lean 4 Web}
 
 \section{f: ℝ → ℝ  no es monótona syss (∃x,y)(x ≤ y ∧ f(x) > f(y))}
-\label{sec:orgef5276e}
+\label{sec:org7ff1e82}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que f : ℝ → ℝ no es monótona syss existen x e y tales
@@ -10844,7 +11356,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CNS\_de\_no\_monotona.lean}{Lean 4 Web}
 
 \section{La función x ↦ -x no es monótona creciente}
-\label{sec:orgab081e2}
+\label{sec:orgcb6d5ff}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la función opuesta no es monótona.
@@ -10877,7 +11389,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La\_opuesta\_es\_no\_monotona.lean}{Lean 4 Web}
 
 \section{La suma de dos funciones pares es par}
-\label{sec:org1283b1a}
+\label{sec:org5b9a037}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la suma de dos funciones pares es par.
@@ -10955,7 +11467,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_funciones\_pares.lean}{Lean 4 Web}
 
 \section{El producto de dos funciones impares es par}
-\label{sec:org888de7c}
+\label{sec:orgbd3ba22}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que el producto de dos funciones impares es par.
@@ -11053,7 +11565,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_funciones\_impares.lean}{Lean 4 Web}
 
 \section{El producto de una función par por una impar es impar}
-\label{sec:org5412544}
+\label{sec:orga87a651}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que el producto de una función par por una impar es impar.
@@ -11137,7 +11649,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_funcion\_par\_e\_impar.lean}{Lean 4 Web}
 
 \section{Si f es par y g es impar, entonces (f ∘ g) es par}
-\label{sec:org3d633e8}
+\label{sec:org4e3d5c3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es par y g es impar, entonces f ∘ g es par.
@@ -11210,7 +11722,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion\_de\_par\_e\_impar.lean}{Lean 4 Web}
 
 \section{Para cualquier conjunto s, s ⊆ s}
-\label{sec:org53e379d}
+\label{sec:org2560e50}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que para cualquier conjunto s, s ⊆ s.
@@ -11261,7 +11773,7 @@ by rfl
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_reflexiva\_del\_subconjunto.lean}{Lean 4 Web}
 
 \section{Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales}
-\label{sec:org43b49bf}
+\label{sec:orgcedf81f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -11292,10 +11804,10 @@ by { ext ; ring }
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion\_por\_extensionalidad.lean}{Lean 4 Web}
 
 \chapter{Teoría de conjuntos}
-\label{sec:orgf7b9fe7}
+\label{sec:org4f97c7e}
 
 \section{Si r ⊆ s y s ⊆ t, entonces r ⊆ t}
-\label{sec:orgfc46f02}
+\label{sec:org9739ada}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si r ⊆ s y s ⊆ t, entonces r ⊆ t.
@@ -11399,7 +11911,7 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_transitiva\_del\_subconjunto.lean}{Lean 4 Web}
 
 \section{Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s}
-\label{sec:org9232288}
+\label{sec:org8948303}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si a es una cota superior de s y a ≤ b, entonces b es
@@ -11456,7 +11968,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Cotas\_superiores\_de\_conjuntos.lean}{Lean 4 Web}
 
 \section{Si s ⊆ t, entonces s ∩ u ⊆ t ∩ u}
-\label{sec:org61ed192}
+\label{sec:org7f2a9b4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si
@@ -11598,7 +12110,7 @@ example
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_de\_monotonia\_de\_la\_interseccion.lean}{Lean 4 Web}
 
 \section{s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)}
-\label{sec:org4e156d8}
+\label{sec:orgb81b1cb}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -11717,7 +12229,7 @@ by rw [inter_union_distrib_left]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_semidistributiva\_de\_la\_interseccion\_sobre\_la\_union.lean}{Lean 4 Web}
 
 \section{(s $\backslash$ t) $\backslash$ u ⊆ s $\backslash$ (t ∪ u)}
-\label{sec:orgb05239d}
+\label{sec:orgcd2d859}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -11876,7 +12388,7 @@ by rw [diff_diff]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia\_de\_diferencia\_de\_conjuntos.lean}{Lean 4 Web}
 
 \section{(s ∩ t) ∪ (s ∩ u) ⊆ s ∩ (t ∪ u)}
-\label{sec:orgd89eb09}
+\label{sec:orgc944d4c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -11975,7 +12487,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_semidistributiva\_de\_la\_interseccion\_sobre\_la\_union\_2.lean}{Lean 4 Web}
 
 \section{s $\backslash$ (t ∪ u) ⊆ (s $\backslash$ t) $\backslash$ u}
-\label{sec:orga39674d}
+\label{sec:org50abd81}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12107,7 +12619,7 @@ by rw [diff_diff]
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia\_de\_diferencia\_de\_conjuntos\_2.lean}{Lean 4 Web}
 
 \section{s ∩ t = t ∩ s}
-\label{sec:org720a4fd}
+\label{sec:orgfdac979}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12257,7 +12769,7 @@ inter_comm s t
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Conmutatividad\_de\_la\_interseccion.lean}{Lean 4 Web}
 
 \section{s ∩ (s ∪ t) = s}
-\label{sec:orgc7ed688}
+\label{sec:org464c82c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12425,7 +12937,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion\_con\_su\_union.lean}{Lean 4 Web}
 
 \section{s ∪ (s ∩ t) = s}
-\label{sec:orgb8e0f92}
+\label{sec:org9ab6236}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12529,7 +13041,7 @@ sup_inf_self
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_con\_su\_interseccion.lean}{Lean 4 Web}
 
 \section{(s $\backslash$ t) ∪ t = s ∪ t}
-\label{sec:org42e92c7}
+\label{sec:org14822ed}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12703,7 +13215,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_con\_su\_diferencia.lean}{Lean 4 Web}
 
 \section{(s $\backslash$ t) ∪ (t $\backslash$ s) = (s ∪ t) $\backslash$ (s ∩ t)}
-\label{sec:org5c7e0a1}
+\label{sec:orgc0fa0f5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -12946,7 +13458,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Diferencia\_de\_union\_e\_interseccion.lean}{Lean 4 Web}
 
 \section{Pares ∪ Impares = Naturales}
-\label{sec:org4914345}
+\label{sec:org420d581}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Los conjuntos de los números naturales, de los pares y de los impares
@@ -13007,7 +13519,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_de\_pares\_e\_impares.lean}{Lean 4 Web}
 
 \section{Los primos mayores que 2 son impares}
-\label{sec:org00614ef}
+\label{sec:org16084b4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Los números primos, los mayores que 2 y los impares se definen por
@@ -13136,7 +13648,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion\_de\_los\_primos\_y\_los\_mayores\_que\_dos.lean}{Lean 4 Web}
 
 \section{s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)}
-\label{sec:orgec394f0}
+\label{sec:orgb7a1b36}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -13300,7 +13812,7 @@ by ext; aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Distributiva\_de\_la\_interseccion\_respecto\_de\_la\_union\_general.lean}{Lean 4 Web}
 
 \section{(⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)}
-\label{sec:org7134301}
+\label{sec:orgbae81bd}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -13430,7 +13942,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion\_de\_intersecciones.lean}{Lean 4 Web}
 
 \section{s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)}
-\label{sec:org742ecf3}
+\label{sec:org02b4432}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -13592,7 +14104,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_con\_interseccion\_general.lean}{Lean 4 Web}.
 
 \section{f⁻¹[u ∩ v] = f⁻¹[u] ∩ f⁻¹[v]}
-\label{sec:org09cb963}
+\label{sec:org4b3df0d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, la imagen inversa de un conjunto s (de elementos de tipo β)
@@ -13749,7 +14261,7 @@ rfl
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_interseccion.lean}{Lean 4 Web}.
 
 \section{f[s ∪ t] = f[s] ∪ f[t]}
-\label{sec:org3fd0cee}
+\label{sec:org3dd118e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, la imagen de un conjunto s por una función f se representa
@@ -14071,7 +14583,7 @@ image_union f s t
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_union.lean}{Lean 4 Web}.
 
 \section{s ⊆ f⁻¹[f[s]​]}
-\label{sec:orgfd775a4}
+\label{sec:org0df68e5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si s es un subconjunto del dominio de la función f,
@@ -14186,7 +14698,7 @@ subset_preimage_image f s
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_imagen.lean}{Lean 4 Web}.
 
 \section{f[s] ⊆ u ↔ s ⊆ f⁻¹[u]}
-\label{sec:org86e72c5}
+\label{sec:orge9a111b}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -14389,7 +14901,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Subconjunto\_de\_la\_imagen\_inversa.lean}{Lean 4 Web}.
 
 \section{La función (x ↦ x + c) es inyectiva}
-\label{sec:org2221391}
+\label{sec:org1472ec1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que, para todo c la función
@@ -14443,7 +14955,7 @@ example : Injective ((. + c)) :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_constante\_es\_inyectiva.lean}{Lean 4 Web}
 
 \section{Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva}
-\label{sec:orgb30edf8}
+\label{sec:org5cd0d08}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Ejercicio 3. Demostrar que para todo c distinto de cero la función
@@ -14495,7 +15007,7 @@ fun _ _ h1 ↦ mul_left_cancel₀ h h1
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_constante\_no\_nula\_es\_inyectiva.lean}{Lean 4 Web}
 
 \section{La composición de funciones inyectivas es inyectiva}
-\label{sec:org5eca792}
+\label{sec:org4024dc7}
 \begin{verbatim}
 -- Demostraciones en lenguaje natural (LN)
 -- =======================================
@@ -14616,7 +15128,7 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion\_de\_funciones\_inyectivas.lean}{Lean 4 Web}
 
 \section{La función (x ↦ x + c) es suprayectiva}
-\label{sec:org42df0ca}
+\label{sec:orgb025ff8}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que para todo número real c, la función
@@ -14698,7 +15210,7 @@ add_right_surjective c
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suma\_constante\_es\_suprayectiva.lean}{Lean 4 Web}
 
 \section{Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva}
-\label{sec:orgc08e811}
+\label{sec:orgd900977}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si c es un número real no nulo, entonces la función
@@ -14774,7 +15286,7 @@ mul_left_surjective₀ h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_no\_nula\_es\_suprayectiva.lean}{Lean 4 Web}
 
 \section{Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva}
-\label{sec:orga9d509a}
+\label{sec:org60cee93}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si c es un número real no nulo, entonces la función
@@ -14866,7 +15378,7 @@ fun x ↦ ⟨(x - d) / c, by simp [mul_div_cancel', h]⟩
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_por\_no\_nula\_y\_suma\_es\_suprayectiva.lean}{Lean 4 Web}
 
 \section{Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9}
-\label{sec:orge1008ff}
+\label{sec:org5cf04ee}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es una función suprayectiva de ℝ en ℝ,
@@ -14903,7 +15415,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad\_de\_suprayectivas.lean}{Lean 4 Web}
 
 \section{La composición de funciones suprayectivas es suprayectiva}
-\label{sec:orge2f4313}
+\label{sec:org1e98b0c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que la composición de funciones suprayectivas es
@@ -15021,7 +15533,7 @@ Surjective.comp hg hf
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Composicion\_de\_suprayectivas.lean}{Lean 4 Web}
 
 \section{Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s}
-\label{sec:org499750b}
+\label{sec:org8d704fa}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es inyectiva, entonces
@@ -15152,7 +15664,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_imagen\_de\_aplicaciones\_inyectivas.lean}{Lean 4 Web}.
 
 \section{f[f⁻¹[u]​] ⊆ u}
-\label{sec:orge75c448}
+\label{sec:orgb007e7a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -15271,7 +15783,7 @@ image_preimage_subset f u
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_imagen\_inversa.lean}{Lean 4 Web}.
 
 \section{Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]}
-\label{sec:orgcd2a1c1}
+\label{sec:orgbc6aa71}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es suprayectiva, entonces
@@ -15373,7 +15885,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_imagen\_inversa\_de\_aplicaciones\_suprayectivas.lean}{Lean 4 Web}.
 
 \section{Si s ⊆ t, entonces f[s] ⊆ f[t]}
-\label{sec:orgee312be}
+\label{sec:org0e4ac63}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si s ⊆ t, entonces
@@ -15469,7 +15981,7 @@ image_subset f h
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Monotonia\_de\_la\_imagen\_de\_conjuntos.lean}{Lean 4 Web}.
 
 \section{Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]}
-\label{sec:org443d775}
+\label{sec:org181423e}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si u ⊆ v, entonces
@@ -15599,7 +16111,7 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Monotonia\_de\_la\_imagen\_inversa.lean}{Lean 4 Web}.
 
 \section{f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]}
-\label{sec:org4616a4c}
+\label{sec:org74c21f5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -15818,7 +16330,7 @@ by simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_union.lean}{Lean 4 Web}.
 
 \section{f[s ∩ t] ⊆ f[s] ∩ f[t]}
-\label{sec:orgbe45434}
+\label{sec:orgc200ad5}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -15932,7 +16444,7 @@ by intro ; aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_interseccion.lean}{Lean 4 Web}.
 
 \section{Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]}
-\label{sec:org148e047}
+\label{sec:org11bda47}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es inyectiva, entonces
@@ -16086,7 +16598,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_interseccion\_de\_aplicaciones\_inyectivas.lean}{Lean 4 Web}.
 
 \section{f[s] $\backslash$ f[t] ⊆ f[s $\backslash$ t]}
-\label{sec:org073414d}
+\label{sec:org6454c74}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -16226,7 +16738,7 @@ subset_image_diff f s t
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_diferencia\_de\_conjuntos.lean}{Lean 4 Web}.
 
 \section{f[s] ∩ v = f[s ∩ f⁻¹[v]​]}
-\label{sec:orgb1d249e}
+\label{sec:orgd71836c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -16489,7 +17001,7 @@ example : (f '' s) ∩ t = f '' (s ∩ f ⁻¹' t) :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion\_con\_la\_imagen.lean}{Lean 4 Web}.
 
 \section{Unión con la imagen}
-\label{sec:org1f4f5e8}
+\label{sec:org85f8932}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -16623,7 +17135,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_con\_la\_imagen.lean}{Lean 4 Web}.
 
 \section{Intersección con la imagen inversa}
-\label{sec:orgd3b13a5}
+\label{sec:orged67e20}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -16893,7 +17405,7 @@ example : (f '' s) ∩ v = f '' (s ∩ f ⁻¹' v) :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Interseccion\_con\_la\_imagen\_inversa.lean}{Lean 4 Web}.
 
 \section{Unión con la imagen inversa}
-\label{sec:orgeb9f076}
+\label{sec:orgf96c656}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -17069,7 +17581,7 @@ union_preimage_subset s v f
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Union\_con\_la\_imagen\_inversa.lean}{Lean 4 Web}.
 
 \section{Imagen de la unión general}
-\label{sec:org0e67c60}
+\label{sec:org10c3412}
 \begin{verbatim}
 -- ----------------------------------------------------------------------
 -- Demostrar que
@@ -17270,7 +17782,7 @@ image_iUnion
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_union\_general.lean}{Lean 4 Web}.
 
 \section{Imagen de la intersección general}
-\label{sec:orgaff2b64}
+\label{sec:org9aa016a}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -17414,7 +17926,7 @@ image_iInter_subset A f
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_interseccion\_general.lean}{Lean 4 Web}.
 
 \section{Imagen de la intersección general mediante aplicaciones inyectivas}
-\label{sec:org47ed278}
+\label{sec:orgdcde7f3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si f es inyectiva, entonces
@@ -17580,7 +18092,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_de\_la\_interseccion\_general\_mediante\_inyectiva.lean}{Lean 4 Web}.
 
 \section{Imagen inversa de la unión general}
-\label{sec:orgc6e8fc3}
+\label{sec:org06f4ff4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -17697,7 +18209,7 @@ by  simp
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_union\_general.lean}{Lean 4 Web}.
 
 \section{Imagen inversa de la intersección general}
-\label{sec:org4546c7e}
+\label{sec:orgcb9ba64}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -17811,7 +18323,7 @@ by { ext ; simp }
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Imagen\_inversa\_de\_la\_interseccion\_general.lean}{Lean 4 Web}.
 
 \section{Teorema de Cantor}
-\label{sec:org9c1fa30}
+\label{sec:org476b26d}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar el teorema de Cantor:
@@ -17943,10 +18455,10 @@ cantor_surjective
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema\_de\_Cantor.lean}{Lean 4 Web}.
 
 \chapter{Lógica}
-\label{sec:org5ee6e48}
+\label{sec:orga0037f9}
 
 \section{Si ¬(∃x)P(x), entonces (∀x)¬P(x)}
-\label{sec:org672fa0e}
+\label{sec:orgbb1786f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si ¬(∃x)P(x), entonces (∀x)¬P(x).
@@ -18070,7 +18582,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Para\_todo\_no\_de\_no\_existe.lean}{Lean 4 Web}
 
 \section{Si (∀x)¬P(x), entonces ¬(∃x)P(x)}
-\label{sec:orgdd574e0}
+\label{sec:org1e514e4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si (∀x)¬P(x), entonces ¬(∃x)P(x).
@@ -18159,7 +18671,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/No\_existe\_de\_para\_todo\_no.lean}{Lean 4 Web}
 
 \section{Si ¬(∀x)P(x), entonces (∃x)¬P(x)}
-\label{sec:org94618b6}
+\label{sec:org3e37a15}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si ¬(∀x)P(x), entonces (∃x)¬P(x).
@@ -18227,7 +18739,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Existe\_no\_de\_no\_para\_todo.lean}{Lean 4 Web}
 
 \section{Si (∃x)¬P(x), entonces ¬(∀x)P(x)}
-\label{sec:org296c171}
+\label{sec:org2e2e3b0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si (∃x)¬P(x), entonces ¬(∀x)P(x).
@@ -18326,7 +18838,7 @@ by aesop
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/No\_para\_todo\_de\_existe\_no.lean}{Lean 4 Web}
 
 \section{¬¬P → P}
-\label{sec:orgccd87d2}
+\label{sec:orgb730dbd}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que ¬¬P → P.
@@ -18389,7 +18901,7 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/}{Lean 4 Web}
 
 \section{P → ¬¬P}
-\label{sec:org97c047f}
+\label{sec:orgc119bf7}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que P → ¬¬P.
@@ -18451,7 +18963,7 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Introduccion\_doble\_negacion.lean}{Lean 4 Web}
 
 \section{(P → Q) ↔ ¬P ∨ Q}
-\label{sec:org9bdefb6}
+\label{sec:org48fd4d0}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que
@@ -18570,10 +19082,10 @@ by tauto
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Implicacion\_mediante\_disyuncion\_y\_negacion.lean}{Lean 4 Web}
 
 \chapter{Límites de sucesiones}
-\label{sec:orgdfd74c7}
+\label{sec:orgd19f867}
 
 \section{La sucesión constante sₙ = c converge a c}
-\label{sec:org16a5740}
+\label{sec:org0c90cd4}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que, para todo a ∈ ℝ, la sucesión constante
@@ -18676,7 +19188,7 @@ example : limite (fun _ : ℕ ↦ c) c :=
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia\_de\_la\_sucesion\_constante.lean}{Lean 4 Web}
 
 \section{Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c}
-\label{sec:org58a0730}
+\label{sec:org2448103}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- Demostrar que si la sucesión u converge a a y la v a b, entonces u+v
@@ -18905,7 +19417,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia\_de\_la\_suma.lean}{Lean 4 Web}
 
 \section{Unicidad del límite de las sucesiones convergentes}
-\label{sec:org1319c77}
+\label{sec:org7ca94b1}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19011,7 +19523,7 @@ end
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad\_del\_limite\_de\_las\_sucesiones\_convergentes.lean}{Lean 4 Web}
 
 \section{Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de uₙ+c es a+c}
-\label{sec:org4debe79}
+\label{sec:org5aedde3}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19125,7 +19637,7 @@ example
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite\_cuando\_se\_suma\_una\_constante.lean}{Lean 4 Web}
 
 \section{Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca}
-\label{sec:org9222140}
+\label{sec:orgb4e07e6}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19299,7 +19811,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite\_multiplicado\_por\_una\_constante.lean}{Lean 4 Web}
 
 \section{El límite de u es a syss el de u-a es 0}
-\label{sec:org47aeea2}
+\label{sec:orgd05d303}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19427,7 +19939,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/El\_limite\_de\_u\_es\_a\_syss\_el\_de\_u-a\_es\_0.lean}{Lean 4 Web}
 
 \section{Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0}
-\label{sec:orgc91094b}
+\label{sec:org829fc7f}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19608,7 +20120,7 @@ by
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto\_de\_sucesiones\_convergentes\_a\_cero.lean}{Lean 4 Web}
 
 \section{Teorema del emparedado}
-\label{sec:org269427c}
+\label{sec:org68a8a8c}
 \begin{verbatim}
 -- ---------------------------------------------------------------------
 -- En Lean, una sucesión u₀, u₁, u₂, ... se puede representar mediante
@@ -19799,7 +20311,6 @@ by
   constructor <;> linarith
 \end{verbatim}
 Se puede interactuar con las pruebas anteriores en \href{https://lean.math.hhu.de/\#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema\_del\_emparedado.lean}{Lean 4 Web}
-
 
 \input Calculemus2_bibliografia
 

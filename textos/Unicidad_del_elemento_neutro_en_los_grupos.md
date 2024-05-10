@@ -26,13 +26,13 @@ sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(e ∈ G\) tal que
-\[ (∀ x)[x·e = x] \tag{1} \]
+Sea \\(e ∈ G\\) tal que
+\\[ (∀ x)[x·e = x] \\tag{1} \\]
 Entonces,
-\begin{align}
-   e &= 1.e    &&\text{[porque 1 es neutro]} \\
-     &= 1      &&\text{[por (1)]}
-\end{align}
+\\begin{align}
+   e &= 1.e    &&\\text{[porque 1 es neutro]} \\\\
+     &= 1      &&\\text{[por (1)]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 

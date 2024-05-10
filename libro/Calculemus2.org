@@ -115,6 +115,44 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE "../src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean][Lean 4 Web]].
 
+** Producto de potencias de la misma base en monoides
+#+INCLUDE: "../src/Producto_de_potencias_de_la_misma_base_en_monoides.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean 4 Web]].
+
+** Equivalencia de inversos iguales al neutro
+#+INCLUDE: "../src/Equivalencia_de_inversos_iguales_al_neutro.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Equivalencia_de_inversos_iguales_al_neutro.lean][Lean 4 Web]].
+
+** Unicidad de inversos en monoides
+#+INCLUDE: "../src/Unicidad_de_inversos_en_monoides.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad_de_inversos_en_monoides.lean][Lean 4 Web]].
+
+** Caracterización de producto igual al primer factor
+#+INCLUDE: "../src/Caracterizacion_de_producto_igual_al_primer_factor.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Caracterizacion_de_producto_igual_al_primer_factor.lean][Lean 4 Web]].
+
+* Propiedades elementales de los grupos
+
+** Unicidad del elemento neutro en los grupos
+#+INCLUDE: "../src/Unicidad_del_elemento_neutro_en_los_grupos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean 4 Web]].
+
+** Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1
+#+INCLUDE: "../src/Producto_por_inverso.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
+
+** Si G es un grupo y a ∈ G, entonces a·1 = a
+#+INCLUDE: "../src/Producto_por_uno.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_uno.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b
+#+INCLUDE: "../src/CS_de_inverso.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_inverso.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
+#+INCLUDE: "../src/Inverso_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean][Lean 4 Web]].
+
 * Propiedades elementales de los anillos
 
 ** Si R es un anillo y a ∈ R, entonces a + 0 = a
@@ -180,24 +218,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si R es un anillo y a ∈ R, entonces 2a = a+a
 #+INCLUDE: "../src/Producto_por_dos.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
-
-* Propiedades elementales de los grupos
-
-** Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1
-#+INCLUDE: "../src/Producto_por_inverso.lean" src lean :lines "7-"
-Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_dos.lean][Lean 4 Web]].
-
-** Si G es un grupo y a ∈ G, entonces a·1 = a
-#+INCLUDE: "../src/Producto_por_uno.lean" src lean :lines "7-"
-Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_por_uno.lean][Lean 4 Web]].
-
-** Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b
-#+INCLUDE: "../src/CS_de_inverso.lean" src lean :lines "7-"
-Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/CS_de_inverso.lean][Lean 4 Web]].
-
-** Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
-#+INCLUDE: "../src/Inverso_del_producto.lean" src lean :lines "7-"
-Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean][Lean 4 Web]].
 
 * Propiedades de orden en los números reales
 
@@ -830,7 +850,6 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Teorema del emparedado
 #+INCLUDE: "../src/Teorema_del_emparedado.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_del_emparedado.lean][Lean 4 Web]]
-
 
 #+LATEX: \input Calculemus2_bibliografia
 
