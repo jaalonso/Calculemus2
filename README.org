@@ -37,8 +37,6 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
 + [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
 + [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
-+ [[./textos/CS_de_inverso.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/CS_de_inverso.lean][Lean4]]).
-+ [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean4]]).
 
 * Propiedades elementales de los anillos
 + [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
@@ -234,5 +232,6 @@ usaba Lean3 en lugar de Lean4.
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
 
 * Sin ordenar
-+ L13 [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Unicidad de los inversos en los grupos]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
-+ M14 [[./textos/Inverso_del_producto.md][Inverso del producto]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
++ L13 [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
++ M14 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
++ X15 [[./textos/Inverso_de_inverso_en_grupos.md][Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).

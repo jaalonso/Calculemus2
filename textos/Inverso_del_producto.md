@@ -26,7 +26,7 @@ sorry
 
 [mathjax]
 Teniendo en cuenta la propiedad
-   \\[(∀ a, b ∈ R)[ab = 1 → a⁻¹ = b] \\]
+   \\[(∀ a, b ∈ G)[ab = 1 → a⁻¹ = b] \\]
 basta demostrar que
    \\[(a·b)·(b⁻¹·a⁻¹) = 1.\\]
 que se demuestra mediante la siguiente cadena de igualdades
@@ -108,59 +108,58 @@ begin
 
 (* 1ª demostración *)
 
-lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+lemma "inverse (a * b) = inverse b * inverse a"
 proof (rule inverse_unique)
-  have "(a ❙* b) ❙* (inverse b ❙* inverse a) =
-        ((a ❙* b) ❙* inverse b) ❙* inverse a"
+  have "(a * b) * (inverse b * inverse a) =
+        ((a * b) * inverse b) * inverse a"
     by (simp only: assoc)
-  also have "… = (a ❙* (b ❙* inverse b)) ❙* inverse a"
+  also have "… = (a * (b * inverse b)) * inverse a"
     by (simp only: assoc)
-  also have "… = (a ❙* ❙1) ❙* inverse a"
+  also have "… = (a * 1) * inverse a"
     by (simp only: right_inverse)
-  also have "… = a ❙* inverse a"
+  also have "… = a * inverse a"
     by (simp only: right_neutral)
-  also have "… = ❙1"
+  also have "… = 1"
     by (simp only: right_inverse)
-  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1"
+  finally show "a * b * (inverse b * inverse a) = 1"
     by this
 qed
 
 (* 2ª demostración *)
 
-lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+lemma "inverse (a * b) = inverse b * inverse a"
 proof (rule inverse_unique)
-  have "(a ❙* b) ❙* (inverse b ❙* inverse a) =
-        ((a ❙* b) ❙* inverse b) ❙* inverse a"
+  have "(a * b) * (inverse b * inverse a) =
+        ((a * b) * inverse b) * inverse a"
     by (simp only: assoc)
-  also have "… = (a ❙* (b ❙* inverse b)) ❙* inverse a"
+  also have "… = (a * (b * inverse b)) * inverse a"
     by (simp only: assoc)
-  also have "… = (a ❙* ❙1) ❙* inverse a"
+  also have "… = (a * 1) * inverse a"
     by simp
-  also have "… = a ❙* inverse a"
+  also have "… = a * inverse a"
     by simp
-  also have "… = ❙1"
+  also have "… = 1"
     by simp
-  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1"
+  finally show "a * b * (inverse b * inverse a) = 1"
     .
 qed
 
 (* 3ª demostración *)
 
-lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+lemma "inverse (a * b) = inverse b * inverse a"
 proof (rule inverse_unique)
-  have "a ❙* b ❙* (inverse b ❙* inverse a) =
-        a ❙* (b ❙* inverse b) ❙* inverse a"
+  have "a * b * (inverse b * inverse a) =
+        a * (b * inverse b) * inverse a"
     by (simp only: assoc)
-  also have "… = ❙1"
+  also have "… = 1"
     by simp
-  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1" .
+  finally show "a * b * (inverse b * inverse a) = 1" .
 qed
 
 (* 4ª demostración *)
 
-lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+lemma "inverse (a * b) = inverse b * inverse a"
   by (simp only: inverse_distrib_swap)
-
 
 end
 

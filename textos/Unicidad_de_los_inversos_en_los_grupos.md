@@ -1,5 +1,5 @@
 ---
-title: Unicidad de los inversos en los grupos
+title: Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b
 date: 2024-05-13 06:00:00 UTC+02:00
 category: Grupos
 has_math: true
