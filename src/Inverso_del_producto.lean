@@ -1,7 +1,7 @@
 -- Inverso_del_producto.lean
 -- Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 22-agosto-2023
+-- Sevilla, 14-mayo-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -13,11 +13,10 @@
 -- ================================
 
 -- Teniendo en cuenta la propiedad
---    ∀ a b ∈ R, ab = 1 → a⁻¹ = b,
+--    (∀ a, b ∈ R)[ab = 1 → a⁻¹ = b]
 -- basta demostrar que
 --    (a·b)·(b⁻¹·a⁻¹) = 1.
--- La identidad anterior se demuestra mediante la siguiente cadena de
--- igualdades
+-- que se demuestra mediante la siguiente cadena de igualdades
 --    (a·b)·(b⁻¹·a⁻¹) =  a·(b·(b⁻¹·a⁻¹))   [por la asociativa]
 --                    =  a·((b·b⁻¹)·a⁻¹)   [por la asociativa]
 --                    =  a·(1·a⁻¹)         [por producto con inverso]
@@ -42,6 +41,8 @@ calc
   _ = 1                     := by rw [mul_right_inv]
 
 -- 1ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by
   have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
@@ -49,7 +50,9 @@ by
   show (a * b)⁻¹ = b⁻¹ * a⁻¹
   exact inv_eq_of_mul_eq_one_right h1
 
--- 3ª demostración
+-- 2ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by
   have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
@@ -57,24 +60,32 @@ by
   show (a * b)⁻¹ = b⁻¹ * a⁻¹
   simp [h1]
 
--- 4ª demostración
+-- 3ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by
   have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
     aux a b
   simp [h1]
 
--- 5ª demostración
+-- 4ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by
   apply inv_eq_of_mul_eq_one_right
   rw [aux]
 
--- 6ª demostración
+-- 5ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by exact mul_inv_rev a b
 
--- 7ª demostración
+-- 6ª demostración
+-- ===============
+
 example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by simp
 

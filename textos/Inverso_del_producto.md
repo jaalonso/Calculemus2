@@ -1,9 +1,13 @@
 ---
-Título: Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
-Autor:  José A. Alonso
+title: Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
+date: 2024-05-14 06:00:00 UTC+02:00
+category: Grupos
+has_math: true
 ---
 
-Demostrar con Lean4 que si \(G\) es un grupo y \(a, b \in G\), entonces \((ab)^{-1} = b^{-1}a^{-1}\).
+[mathjax]
+
+Demostrar con Lean4 que si \\(G\\) es un grupo y \\(a, b \\in G\\), entonces \\((ab)^{-1} = b^{-1}a^{-1}\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -18,25 +22,24 @@ sorry
 </pre>
 <!--more-->
 
-<b>Demostración en lenguaje natural</b>
+<h2>Demostración en lenguaje natural</h2>
 
 [mathjax]
 Teniendo en cuenta la propiedad
-   \[∀ a b ∈ R, ab = 1 → a⁻¹ = b,\]
+   \\[(∀ a, b ∈ R)[ab = 1 → a⁻¹ = b] \\]
 basta demostrar que
-   \[(a·b)·(b⁻¹·a⁻¹) = 1.\]
-La identidad anterior se demuestra mediante la siguiente cadena de
-igualdades
-\begin{align}
-   (a·b)·(b⁻¹·a⁻¹) &= a·(b·(b⁻¹·a⁻¹))   &&\text{[por la asociativa]} \\
-                   &= a·((b·b⁻¹)·a⁻¹)   &&\text{[por la asociativa]} \\
-                   &= a·(1·a⁻¹)         &&\text{[por producto con inverso]} \\
-                   &= a·a⁻¹             &&\text{[por producto con uno]} \\
-                   &= 1                 &&\text{[por producto con
+   \\[(a·b)·(b⁻¹·a⁻¹) = 1.\\]
+que se demuestra mediante la siguiente cadena de igualdades
+\\begin{align}
+   (a·b)·(b⁻¹·a⁻¹) &= a·(b·(b⁻¹·a⁻¹))   &&\\text{[por la asociativa]} \\\\
+                   &= a·((b·b⁻¹)·a⁻¹)   &&\\text{[por la asociativa]} \\\\
+                   &= a·(1·a⁻¹)         &&\\text{[por producto con inverso]} \\\\
+                   &= a·a⁻¹             &&\\text{[por producto con uno]} \\\\
+                   &= 1                 &&\\text{[por producto con
                    inverso]}
-\end{align}
+\\end{align}
 
-<b>Demostraciones con Lean4</b>
+<h2>Demostraciones con Lean4</h2>
 
 <pre lang="lean">
 import Mathlib.Algebra.Group.Defs
@@ -91,11 +94,80 @@ example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by simp
 </pre>
 
-<b>Demostraciones interactivas</b>
-
 Se puede interactuar con las demostraciones anteriores en <a href="https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean" rel="noopener noreferrer" target="_blank">Lean 4 Web</a>.
 
-<b>Referencias</b>
+<h2>3. Demostraciones con Isabelle/HOL</h2>
+
+<pre lang="isar">
+theory Inverso_del_producto
+imports Main
+begin
+
+context group
+begin
+
+(* 1ª demostración *)
+
+lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+proof (rule inverse_unique)
+  have "(a ❙* b) ❙* (inverse b ❙* inverse a) =
+        ((a ❙* b) ❙* inverse b) ❙* inverse a"
+    by (simp only: assoc)
+  also have "… = (a ❙* (b ❙* inverse b)) ❙* inverse a"
+    by (simp only: assoc)
+  also have "… = (a ❙* ❙1) ❙* inverse a"
+    by (simp only: right_inverse)
+  also have "… = a ❙* inverse a"
+    by (simp only: right_neutral)
+  also have "… = ❙1"
+    by (simp only: right_inverse)
+  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1"
+    by this
+qed
+
+(* 2ª demostración *)
+
+lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+proof (rule inverse_unique)
+  have "(a ❙* b) ❙* (inverse b ❙* inverse a) =
+        ((a ❙* b) ❙* inverse b) ❙* inverse a"
+    by (simp only: assoc)
+  also have "… = (a ❙* (b ❙* inverse b)) ❙* inverse a"
+    by (simp only: assoc)
+  also have "… = (a ❙* ❙1) ❙* inverse a"
+    by simp
+  also have "… = a ❙* inverse a"
+    by simp
+  also have "… = ❙1"
+    by simp
+  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1"
+    .
+qed
+
+(* 3ª demostración *)
+
+lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+proof (rule inverse_unique)
+  have "a ❙* b ❙* (inverse b ❙* inverse a) =
+        a ❙* (b ❙* inverse b) ❙* inverse a"
+    by (simp only: assoc)
+  also have "… = ❙1"
+    by simp
+  finally show "a ❙* b ❙* (inverse b ❙* inverse a) = ❙1" .
+qed
+
+(* 4ª demostración *)
+
+lemma "inverse (a ❙* b) = inverse b ❙* inverse a"
+  by (simp only: inverse_distrib_swap)
+
+
+end
+
+end
+</pre>
+
+<h2>Referencias</h2>
 
 <ul>
 <li> J. Avigad y P. Massot. <a href="https://bit.ly/3U4UjBk">Mathematics in Lean</a>, p. 12.</li>

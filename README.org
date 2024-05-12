@@ -235,3 +235,4 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L13 [[./textos/Unicidad_de_los_inversos_en_los_grupos.md][Unicidad de los inversos en los grupos]] (En [[./src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_de_los_inversos_en_los_grupos.thy][Isabelle]]).
++ M14 [[./textos/Inverso_del_producto.md][Inverso del producto]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
