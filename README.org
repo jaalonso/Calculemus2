@@ -236,3 +236,4 @@ usaba Lean3 en lugar de Lean4.
 + M14 [[./textos/Inverso_del_producto.md][Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹]] (En [[./src/Inverso_del_producto.lean][Lean]] y en [[./thy/Inverso_del_producto.thy][Isabelle]]).
 + X15 [[./textos/Inverso_de_inverso_en_grupos.md][Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
 + J16 [[./textos/Propiedad_cancelativa_en_grupos.md][Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
++ V17 [[./textos/Potencias_de_potencias_en_monoides.md][Si M es un monoide, a ∈ M y m, n ∈ ℕ, entonces a^(m·n) = (a^m)^n]] (En [[./src/Potencias_de_potencias_en_monoides.lean][Lean]] y en [[./thy/Potencias_de_potencias_en_monoides.thy][Isabelle]]).

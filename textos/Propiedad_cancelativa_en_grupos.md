@@ -7,7 +7,7 @@ has_math: true
 
 [mathjax]
 
-Demostrar con Lean4 que si \(G\) es un grupo y \(a, b, c ∈ G\) tales que \(a·b = a·c\), entonces \(b = c\).
+Demostrar con Lean4 que si \\(G\\) es un grupo y \\(a, b, c ∈ G\\) tales que \\(a·b = a·c\\), entonces \\(b = c\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -27,15 +27,15 @@ sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Por la siguiente cadena de igualdades
-\begin{align}
-   b &= 1·b          &&\text{[porque \(1\) es neutro]} \\
-     &= (a⁻¹·a)·b    &&\text{[porque \(a⁻¹\) es el inverso de \(a\)]} \\
-     &= a⁻¹·(a·b)    &&\text{[por la asociativa]} \\
-     &= a⁻¹·(a·c)    &&\text{[por la hipótesis]} \\
-     &= (a⁻¹·a)·c    &&\text{[por la asociativa]} \\
-     &= 1·c          &&\text{[porque \(a⁻¹\) es el inverso de \(a\)]} \\
-     &= c            &&\text{[porque 1 es neutro]}
-\end{align}
+\\begin{align}
+   b &= 1·b          &&\\text{[porque \\(1\\) es neutro]} \\\\
+     &= (a⁻¹·a)·b    &&\\text{[porque \\(a⁻¹\\) es el inverso de \\(a\\)]} \\\\
+     &= a⁻¹·(a·b)    &&\\text{[por la asociativa]} \\\\
+     &= a⁻¹·(a·c)    &&\\text{[por la hipótesis]} \\\\
+     &= (a⁻¹·a)·c    &&\\text{[por la asociativa]} \\\\
+     &= 1·c          &&\\text{[porque \\(a⁻¹\\) es el inverso de \\(a\\)]} \\\\
+     &= c            &&\\text{[porque 1 es neutro]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
