@@ -7,8 +7,8 @@ has_math: true
 
 [mathjax]
 
-Demostrar con Lean4 que si \(M\) es un monoide, \(a ∈ M\) y \(m, n ∈ ℕ\), entonces
-\[ a^{m·n} = (a^m)^n \]
+Demostrar con Lean4 que si \\(M\\) es un monoide, \\(a ∈ M\\) y \\(m, n ∈ ℕ\\), entonces
+\\[ a^{m·n} = (a^m)^n \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -27,24 +27,24 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Por inducción en \(n\).
+Por inducción en \\(n\\).
 
-**Caso base**: Supongamos que \(n = 0\). Entonces,
-\begin{align}
-   a^{m·0} &= a^0
-           &= 1         &&\text{[por pow_zero]} \\
-           &= (a^m)^0   &&\text{[por pow_zero]}
-\end{align}
+**Caso base**: Supongamos que \\(n = 0\\). Entonces,
+\\begin{align}
+   a^{m·0} &= a^0       \\\\
+           &= 1         &&\\text{[por pow_zero]} \\\\
+           &= (a^m)^0   &&\\text{[por pow_zero]}
+\\end{align}
 
-Paso de indución: Supogamos que se verifica para \(n\); es decir,
-\[ a^{m·n} = (a^m)^n \]
+Paso de indución: Supogamos que se verifica para \\(n\\); es decir,
+\\[ a^{m·n} = (a^m)^n \\tag{HI} \\]
 Entonces,
-\begin{align}
-   a^{m·(n+1)} &= a^{m·n + m}    \\
-               &= a^{m·n}·a^m    \\
-               &= (a^m)^n·a^m    &&\text{[por HI]} \\
-               &= (a^m)^{n+1}    &&\text{[por pow_succ']}
-\end{align}
+\\begin{align}
+   a^{m·(n+1)} &= a^{m·n + m}    \\\\
+               &= a^{m·n}·a^m    \\\\
+               &= (a^m)^n·a^m    &&\\text{[por HI]} \\\\
+               &= (a^m)^{n+1}    &&\\text{[por pow_succ']}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
@@ -207,16 +207,16 @@ qed
 lemma  "a^(m * n) = (a^m)^n"
 proof (induct n)
   have "a ^ (m * 0) = a ^ 0"               by simp
-  also have "… = 1"                       by simp
-  also have "… = (a ^ m) ^ 0"             by simp
+  also have "… = 1"                        by simp
+  also have "… = (a ^ m) ^ 0"              by simp
   finally show "a ^ (m * 0) = (a ^ m) ^ 0" .
 next
   fix n
   assume HI : "a ^ (m * n) = (a ^ m) ^ n"
   have "a ^ (m * Suc n) = a ^ (m + m * n)" by simp
-  also have "… = a ^ m * a ^ (m * n)"     by (simp add: power_add)
-  also have "… = a ^ m * (a ^ m) ^ n"     using HI by simp
-  also have "… = (a ^ m) ^ Suc n"         by simp
+  also have "… = a ^ m * a ^ (m * n)"      by (simp add: power_add)
+  also have "… = a ^ m * (a ^ m) ^ n"      using HI by simp
+  also have "… = (a ^ m) ^ Suc n"          by simp
   finally show "a ^ (m * Suc n) =
                 (a ^ m) ^ Suc n"           .
 qed
