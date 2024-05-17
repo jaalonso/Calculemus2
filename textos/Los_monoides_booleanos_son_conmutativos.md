@@ -12,7 +12,7 @@ Un monoide es un conjunto junto con una operación binaria que es asociativa y t
 Un monoide \\(M\\) es booleano si
 \\[ (∀ x ∈ M)[x·x = 1] \\]
 y es conmutativo si
-\\[ (∀ x, y ∈ M)[x·y = y·x]
+\\[ (∀ x, y ∈ M)[x·y = y·x] \\]
 
 En Lean4, está definida la clase de los monoides (como `Monoid`) y sus propiedades características son
 <pre lang="lean">
@@ -42,14 +42,14 @@ by sorry
 Sean \\(a, b ∈ M\\). Se verifica la siguiente cadena de igualdades
 \\begin{align}
    a·b &= (a·b)·1               &&\\text{[por mul_one]} \\\\
-       &= (a·b)·(a·a)           &&\\text{[por hipótesis, a·a = 1]} \\\\
+       &= (a·b)·(a·a)           &&\\text{[por hipótesis, \\(a·a = 1\\)]} \\\\
        &= ((a·b)·a)·a           &&\\text{[por mul_assoc]} \\\\
        &= (a·(b·a))·a           &&\\text{[por mul_assoc]} \\\\
        &= (1·(a·(b·a)))·a       &&\\text{[por one_mul]} \\\\
-       &= ((b·b)·(a·(b·a)))·a   &&\\text{[por hipótesis, b·b = 1]} \\\\
+       &= ((b·b)·(a·(b·a)))·a   &&\\text{[por hipótesis, \\(b·b = 1\\)]} \\\\
        &= (b·(b·(a·(b·a))))·a   &&\\text{[por mul_assoc]} \\\\
        &= (b·((b·a)·(b·a)))·a   &&\\text{[por mul_assoc]} \\\\
-       &= (b·1)·a               &&\\text{[por hipótesis, (b·a)·(b·a) = 1]} \\\\
+       &= (b·1)·a               &&\\text{[por hipótesis, \\((b·a)·(b·a) = 1\\)]} \\\\
        &= b·a                   &&\\text{[por mul_one]}
 \\end{align}
 
@@ -170,74 +170,74 @@ begin
 (* 1ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* x = ❙1"
-  shows   "∀ x y. x ❙* y = y ❙* x"
+  assumes "∀ x. x * x = 1"
+  shows   "∀ x y. x * y = y * x"
 proof (rule allI)+
   fix a b
-  have "a ❙* b = (a ❙* b) ❙* ❙1"
+  have "a * b = (a * b) * 1"
     by (simp only: right_neutral)
-  also have "… = (a ❙* b) ❙* (a ❙* a)"
+  also have "… = (a * b) * (a * a)"
     by (simp only: assms)
-  also have "… = ((a ❙* b) ❙* a) ❙* a"
+  also have "… = ((a * b) * a) * a"
     by (simp only: assoc)
-  also have "… = (a ❙* (b ❙* a)) ❙* a"
+  also have "… = (a * (b * a)) * a"
     by (simp only: assoc)
-  also have "… = (❙1 ❙* (a ❙* (b ❙* a))) ❙* a"
+  also have "… = (1 * (a * (b * a))) * a"
     by (simp only: left_neutral)
-  also have "… = ((b ❙* b) ❙* (a ❙* (b ❙* a))) ❙* a"
+  also have "… = ((b * b) * (a * (b * a))) * a"
     by (simp only: assms)
-  also have "… = (b ❙* (b ❙* (a ❙* (b ❙* a)))) ❙* a"
+  also have "… = (b * (b * (a * (b * a)))) * a"
     by (simp only: assoc)
-  also have "… = (b ❙* ((b ❙* a) ❙* (b ❙* a))) ❙* a"
+  also have "… = (b * ((b * a) * (b * a))) * a"
     by (simp only: assoc)
-  also have "… = (b ❙* ❙1) ❙* a"
+  also have "… = (b * 1) * a"
     by (simp only: assms)
-  also have "… = b ❙* a"
+  also have "… = b * a"
     by (simp only: right_neutral)
-  finally show "a ❙* b = b ❙* a"
+  finally show "a * b = b * a"
     by this
 qed
 
 (* 2ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* x = ❙1"
-  shows   "∀ x y. x ❙* y = y ❙* x"
+  assumes "∀ x. x * x = 1"
+  shows   "∀ x y. x * y = y * x"
 proof (rule allI)+
   fix a b
-  have "a ❙* b = (a ❙* b) ❙* ❙1"                     by simp
-  also have "… = (a ❙* b) ❙* (a ❙* a)"             by (simp add: assms)
-  also have "… = ((a ❙* b) ❙* a) ❙* a"             by (simp add: assoc)
-  also have "… = (a ❙* (b ❙* a)) ❙* a"             by (simp add: assoc)
-  also have "… = (❙1 ❙* (a ❙* (b ❙* a))) ❙* a"       by simp
-  also have "… = ((b ❙* b) ❙* (a ❙* (b ❙* a))) ❙* a" by (simp add: assms)
-  also have "… = (b ❙* (b ❙* (a ❙* (b ❙* a)))) ❙* a" by (simp add: assoc)
-  also have "… = (b ❙* ((b ❙* a) ❙* (b ❙* a))) ❙* a" by (simp add: assoc)
-  also have "… = (b ❙* ❙1) ❙* a"                   by (simp add: assms)
-  also have "… = b ❙* a"                         by simp
-  finally show "a ❙* b = b ❙* a"                   by this
+  have "a * b = (a * b) * 1"                    by simp
+  also have "… = (a * b) * (a * a)"             by (simp add: assms)
+  also have "… = ((a * b) * a) * a"             by (simp add: assoc)
+  also have "… = (a * (b * a)) * a"             by (simp add: assoc)
+  also have "… = (1 * (a * (b * a))) * a"       by simp
+  also have "… = ((b * b) * (a * (b * a))) * a" by (simp add: assms)
+  also have "… = (b * (b * (a * (b * a)))) * a" by (simp add: assoc)
+  also have "… = (b * ((b * a) * (b * a))) * a" by (simp add: assoc)
+  also have "… = (b * 1) * a"                   by (simp add: assms)
+  also have "… = b * a"                         by simp
+  finally show "a * b = b * a"                  by this
 qed
 
 (* 3ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* x = ❙1"
-  shows   "∀ x y. x ❙* y = y ❙* x"
+  assumes "∀ x. x * x = 1"
+  shows   "∀ x y. x * y = y * x"
 proof (rule allI)+
   fix a b
-  have "a ❙* b = (a ❙* b) ❙* (a ❙* a)"               by (simp add: assms)
-  also have "… = (a ❙* (b ❙* a)) ❙* a"             by (simp add: assoc)
-  also have "… = ((b ❙* b) ❙* (a ❙* (b ❙* a))) ❙* a" by (simp add: assms)
-  also have "… = (b ❙* ((b ❙* a) ❙* (b ❙* a))) ❙* a" by (simp add: assoc)
-  also have "… = (b ❙* ❙1) ❙* a"                   by (simp add: assms)
-  finally show "a ❙* b = b ❙* a"                   by simp
+  have "a * b = (a * b) * (a * a)"              by (simp add: assms)
+  also have "… = (a * (b * a)) * a"             by (simp add: assoc)
+  also have "… = ((b * b) * (a * (b * a))) * a" by (simp add: assms)
+  also have "… = (b * ((b * a) * (b * a))) * a" by (simp add: assoc)
+  also have "… = (b * 1) * a"                   by (simp add: assms)
+  finally show "a * b = b * a"                  by simp
 qed
 
 (* 4ª demostración *)
 
 lemma
-  assumes "∀ x. x ❙* x = ❙1"
-  shows   "∀ x y. x ❙* y = y ❙* x"
+  assumes "∀ x. x * x = 1"
+  shows   "∀ x y. x * y = y * x"
   by (metis assms assoc right_neutral)
 
 end
