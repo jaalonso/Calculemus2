@@ -131,6 +131,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Caracterizacion_de_producto_igual_al_primer_factor.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Caracterizacion_de_producto_igual_al_primer_factor.lean][Lean 4 Web]].
 
+** Si M es un monoide, a ∈ M y m, n ∈ ℕ, entonces $a^{m·n} = (a^m)^n$
+#+INCLUDE: "../src/Potencias_de_potencias_en_monoides.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Potencias_de_potencias_en_monoides.lean][Lean 4 Web]].
+
 * Propiedades elementales de los grupos
 
 ** Unicidad del elemento neutro en los grupos
@@ -152,6 +156,22 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
 #+INCLUDE: "../src/Inverso_del_producto.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b ∈ G tales que ab = 1 entonces a⁻¹ = b
+#+INCLUDE: "../src/Unicidad_de_los_inversos_en_los_grupos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Unicidad_de_los_inversos_en_los_grupos.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹
+#+INCLUDE: "../src/Inverso_del_producto.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_producto.lean][Lean 4 Web]].
+
+** Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a
+#+INCLUDE: "../src/Inverso_del_inverso_en_grupos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inverso_del_inverso_en_grupos.lean][Lean 4 Web]].
+
+** Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c
+#+INCLUDE: "../src/Propiedad_cancelativa_en_grupos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_cancelativa_en_grupos.lean][Lean 4 Web]].
 
 * Propiedades elementales de los anillos
 
@@ -850,6 +870,7 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Teorema del emparedado
 #+INCLUDE: "../src/Teorema_del_emparedado.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_del_emparedado.lean][Lean 4 Web]]
+
 
 #+LATEX: \input Calculemus2_bibliografia
 
