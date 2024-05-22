@@ -7,9 +7,9 @@ has_math: true
 
 [mathjax]
 
-Demostrar con Lean4 que si \(f\) una función de \(ℝ\) en \(ℝ\) tal que
-\[ (∀ x, y)[f(x) ≤ f(y) → x ≤ y] \]
-entonces \(f\) es inyectiva.
+Demostrar con Lean4 que si \\(f\\) una función de \\(ℝ\\) en \\(ℝ\\) tal que
+\\[ (∀ x, y)[f(x) ≤ f(y) → x ≤ y] \\]
+entonces \\(f\\) es inyectiva.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -28,22 +28,22 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sean \(x, y ∈ ℝ\) tales que
-\[ f(x) = f(y) \tag{1} \]
-Tenemos que demostrar que \(x = y\).
+Sean \\(x, y ∈ ℝ\\) tales que
+\\[ f(x) = f(y) \\tag{1} \\]
+Tenemos que demostrar que \\(x = y\\).
 
 De (1), tenemos que
-\[ f(x) ≤ f(y) \]
+\\[ f(x) ≤ f(y) \\]
 y, por la hipótesis,
-\[ x ≤ y \tag{2} \]
+\\[ x ≤ y \\tag{2} \\]
 
 También de (1), tenemos que
-\[ f(y) ≤ f(x) \]
+\\[ f(y) ≤ f(x) \\]
 y, por la hipótesis,
-\[ y ≤ x \tag{3} \]
+\\[ y ≤ x \\tag{3} \\]
 
 De (2) y (3), tenemos que
-\[ x = y \]
+\\[ x = y \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
