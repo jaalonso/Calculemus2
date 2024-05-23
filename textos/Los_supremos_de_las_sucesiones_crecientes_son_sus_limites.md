@@ -7,7 +7,7 @@ has_math: true
 
 [mathjax]
 
-Sea \(u\) una sucesión creciente. Demostrar con Lean4 que si \(S\) es un supremo de \(u\), entonces el límite de \(u\) es \(S\).
+Sea \\(u\\) una sucesión creciente. Demostrar con Lean4 que si \\(S\\) es un supremo de \\(u\\), entonces el límite de \\(u\\) es \\(S\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -35,29 +35,29 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(ε ∈ ℝ\) tal que \(ε > 0\). Tenemos que demostrar que
-\[ (∃ m ∈ ℕ)(∀ n ∈ ℕ)[n ≥ m → |uₙ - S| ≤ ε] \tag{1} \]
+Sea \\(ε ∈ ℝ\\) tal que \\(ε > 0\\). Tenemos que demostrar que
+\\[ (∃ m ∈ ℕ)(∀ n ∈ ℕ)[n ≥ m → |u_n - S| ≤ ε] \\tag{1} \\]
 
-Por ser \(S\) un supremo de u, existe un k ∈ ℕ tal que
-\[ uₖ ≥ S - ε \tag{2} \]
-Vamos a demostrar que \(k\) verifica la condición de (1); es decir, que si \(n ∈ ℕ\) tal que \(n ≥ k\), entonces
-\[ |uₙ - S| ≤ ε \]
+Por ser \\(S\\) un supremo de u, existe un k ∈ ℕ tal que
+\\[ u_k ≥ S - ε \\tag{2} \\]
+Vamos a demostrar que \\(k\\) verifica la condición de (1); es decir, que si \\(n ∈ ℕ\\) tal que \\(n ≥ k\\), entonces
+\\[ |u_n - S| ≤ ε \\]
 o, equivalentemente,
-\[ -ε ≤ uₙ - S ≤ ε \]
+\\[ -ε ≤ u_n - S ≤ ε \\]
 
 La primera desigualdad se tiene por la siguente cadena:
-\begin{align}
-   -ε &= (S - ε) - S    \\
-      &≤ uₖ - S         &&\text{[por (2)]} \\
-      &≤ uₙ - S         &&\text{[porque \(u\) es creciente y \(n ≥ k\)]}
-\end{align}
+\\begin{align}
+   -ε &= (S - ε) - S    \\\\
+      &≤ u_k - S         &&\\text{[por (2)]} \\\\
+      &≤ u_n - S         &&\\text{[porque \\(u\\) es creciente y \\(n ≥ k\\)]}
+\\end{align}
 
 La segunda desigualdad se tiene por la siguente cadena:
-\begin{align}
-   uₙ - S &≤ S - S      &&\text{[porque \(S\) es un supremo de \(u\)]}
-          &= 0          \\
+\\begin{align}
+   u_n - S &≤ S - S      &&\\text{[porque \\(S\\) es un supremo de \\(u\\)]} \\\\
+          &= 0          \\\\
           &≤ ε
-\end{align}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
