@@ -135,6 +135,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Potencias_de_potencias_en_monoides.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Potencias_de_potencias_en_monoides.lean][Lean 4 Web]].
 
+** Los monoides booleanos son conmutativos
+#+INCLUDE: "../src/Los_monoides_booleanos_son_conmutativos.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Los_monoides_booleanos_son_conmutativos.lean][Lean 4 Web]].
+
 * Propiedades elementales de los grupos
 
 ** Unicidad del elemento neutro en los grupos
@@ -613,6 +617,18 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Demostracion_por_extensionalidad.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_extensionalidad.lean][Lean 4 Web]]
 
+** La composición de una función creciente y una decreciente es decreciente
+#+INCLUDE: "../src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean 4 Web]].
+
+** Si una función es creciente e involutiva, entonces es la identidad
+#+INCLUDE: "../src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean 4 Web]].
+
+** Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva
+#+INCLUDE: "../src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean 4 Web]].
+
 * Teoría de conjuntos
 
 ** Si r ⊆ s y s ⊆ t, entonces r ⊆ t
@@ -871,6 +887,9 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Teorema_del_emparedado.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_del_emparedado.lean][Lean 4 Web]]
 
+** Los supremos de las sucesiones crecientes son sus límites
+#+INCLUDE: "../src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
 

@@ -26,26 +26,26 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sea \(n ∈ ℤ\). Tenemos que demostrar que \(n^2\) es par si y solo si n es par. Lo haremos probando las dos implicaciones.
+Sea \\(n ∈ ℤ\\). Tenemos que demostrar que \\(n^2\\) es par si y solo si n es par. Lo haremos probando las dos implicaciones.
 
-(⟹) Lo demostraremos por contraposición. Para ello, supongamos que \(n\) no es par. Entonces, existe un \(k ∈ Z\) tal que
-\[ n = 2k+1 \tag{1} \]
+(⟹) Lo demostraremos por contraposición. Para ello, supongamos que \\(n\\) no es par. Entonces, existe un \\(k ∈ Z\\) tal que
+\\[ n = 2k+1 \\tag{1} \\]
 Luego,
-\begin{align}
-   n^2 &= (2k+1)^2          &&\text{[por (1)]} \\
-       &= 4k^2+4k+1         \\
+\\begin{align}
+   n^2 &= (2k+1)^2          &&\\text{[por (1)]} \\\\
+       &= 4k^2+4k+1         \\\\
        &= 2(2k(k+1))+1
-\end{align}
-Por tanto, \(n^2\) es impar.
+\\end{align}
+Por tanto, \\(n^2\\) es impar.
 
-(⟸) Supongamos que \(n\) es par. Entonces, existe un \(k ∈ ℤ\) tal que
-\[ n = 2k \tag{2} \]
+(⟸) Supongamos que \\(n\\) es par. Entonces, existe un \\(k ∈ ℤ\\) tal que
+\\[ n = 2k \\tag{2} \\]
 Luego,
-\begin{align}
-   n^2 &= (2k)^2          &&\text{[por (2)]} \\
+\\begin{align}
+   n^2 &= (2k)^2          &&\\text{[por (2)]} \\\\
        &= 2(2k^2)
-\end{align}
-Por tanto, \(n^2\) es par.
+\\end{align}
+Por tanto, \\(n^2\\) es par.
 
 <h2>2. Demostraciones con Lean4</h2>
 
