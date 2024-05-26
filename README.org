@@ -33,6 +33,7 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Unicidad_de_inversos_en_monoides.md][Unicidad de inversos en monoides]] (En [[./src/Unicidad_de_inversos_en_monoides.lean][Lean]] y en [[./thy/Unicidad_de_inversos_en_monoides.thy][Isabelle]]).
 + [[./textos/Caracterizacion_de_producto_igual_al_primer_factor.md][Caracterización de producto igual al primer factor]] (En [[./src/Caracterizacion_de_producto_igual_al_primer_factor.lean][Lean]] y en [[./thy/Caracterizacion_de_producto_igual_al_primer_factor.thy][Isabelle]]).
 + [[./textos/Potencias_de_potencias_en_monoides.md][Si M es un monoide, a ∈ M y m, n ∈ ℕ, entonces a^(m·n) = (a^m)^n]] (En [[./src/Potencias_de_potencias_en_monoides.lean][Lean]] y en [[./thy/Potencias_de_potencias_en_monoides.thy][Isabelle]]).
++ [[./textos/Los_monoides_booleanos_son_conmutativos.md][Los monoides booleanos son conmutativos]] (En [[./src/Los_monoides_booleanos_son_conmutativos.lean][Lean]] y en [[./thy/Los_monoides_booleanos_son_conmutativos.thy][Isabelle]]).
 
 * Propiedades elementales de los grupos
 + [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
@@ -165,6 +166,9 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Producto_funcion_par_e_impar.md][El producto de una función par por una impar es impar]] (En [[./src/Producto_funcion_par_e_impar.lean][Lean4]]).
 + [[./textos/Composicion_de_par_e_impar.md][Si f es par y g es impar, entonces (f ∘ g) es par]] (En [[./src/Composicion_de_par_e_impar.lean][Lean4]]).
 + [[./textos/Demostracion_por_extensionalidad.md][Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales]] (En [[./src/Demostracion_por_extensionalidad.lean][Lean4]]).
++ [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
++ [[./textos/Una_funcion_creciente_e_involutiva_es_la_identidad.md][Si una función es creciente e involutiva, entonces es la identidad]] (En [[./src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean]] y en [[./thy/Una_funcion_creciente_e_involutiva_es_la_identidad.thy][Isabelle]]).
++ [[./textos/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.md][Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva]] (En [[./src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean]] y en [[./thy/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.thy][Isabelle]]).
 
 * Teoría de conjuntos
 + [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
@@ -235,11 +239,8 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/El_limite_de_u_es_a_syss_el_de_u-a_es_0.md][El límite de u es a syss el de u-a es 0]] (En [[./src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean][Lean]] y en [[./thy/El_limite_de_u_es_a_syss_el_de_u-a_es_0.thy][Isabelle]]).
 + [[./textos/Producto_de_sucesiones_convergentes_a_cero.md][Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0]] (En [[./src/Producto_de_sucesiones_convergentes_a_cero.lean][Lean]] y en [[./thy/Producto_de_sucesiones_convergentes_a_cero.thy][Isabelle]]).
 + [[~/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado.lean][Lean]] y en [[./thy/Teorema_del_emparedado.thy][Isabelle]]).
++ [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
 
 * Sin ordenar
-+ L20 [[./textos/Los_monoides_booleanos_son_conmutativos.md][Los monoides booleanos son conmutativos]] (En [[./src/Los_monoides_booleanos_son_conmutativos.lean][Lean]] y en [[./thy/Los_monoides_booleanos_son_conmutativos.thy][Isabelle]]).
-+ M21 [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
-+ X22 [[./textos/Una_funcion_creciente_e_involutiva_es_la_identidad.md][Si una función es creciente e involutiva, entonces es la identidad]] (En [[./src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean]] y en [[./thy/Una_funcion_creciente_e_involutiva_es_la_identidad.thy][Isabelle]]).
-+ J23 [[./textos/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.md][Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva]] (En [[./src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean]] y en [[./thy/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.thy][Isabelle]]).
-+ V24 [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
 + L27 [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par si y solo si lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
++ M28 [[./textos/Acotacion_de_convergentes.md][Las sucesiones convergentes están acotadas]] (En [[./src/Acotacion_de_convergentes.lean][Lean]] y en [[./thy/Acotacion_de_convergentes.thy][Isabelle]]).
