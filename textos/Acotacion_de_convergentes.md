@@ -7,8 +7,8 @@ has_math: true
 
 [mathjax]
 
-Demostrar con Lean4 que si \(u_n\) es una sucesión convergente, entonces está acotada; es decir,
-\[ (∃ k ∈ ℕ)(∃ b ∈ ℝ)(∀ n ∈ ℕ)[n ≥ k → |u n| ≤ b] \]
+Demostrar con Lean4 que si \\(u_n\\) es una sucesión convergente, entonces está acotada; es decir,
+\\[ (∃ k ∈ ℕ)(∃ b ∈ ℝ)(∀ n ∈ ℕ)[n ≥ k → |u_n| ≤ b] \\]
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -35,20 +35,20 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Puesto que la sucesión \(u_n\) es convergente, existe un \(a ∈ ℝ\) tal que
-\[ lim(u_n) = a \]
-Luego, existe un \(k ∈ ℕ\) tal que
-\[ (∀ n ∈ ℕ)[n ≥ k → |u_n - a | < 1] \tag{1} \]
+Puesto que la sucesión \\(u_n\\) es convergente, existe un \\(a ∈ ℝ\\) tal que
+\\[ \\lim(u_n) = a \\]
+Luego, existe un \\(k ∈ ℕ\\) tal que
+\\[ (∀ n ∈ ℕ)[n ≥ k → |u_n - a | < 1] \\tag{1} \\]
 Veamos que
-\[ (∀ n ∈ ℕ)[n ≥ k → |u_n| ≤ 1 + |a]] \]
-Para ello, sea \(n ∈ ℕ\) tal que
-\[ n ≥ k \tag{2} \]
+\\[ (∀ n ∈ ℕ)[n ≥ k → |u_n| ≤ 1 + |a]] \\]
+Para ello, sea \\(n ∈ ℕ\\) tal que
+\\[ n ≥ k \\tag{2} \\]
 Entonces,
-\begin{align}
-   |u_n| &= |u_n - a + a|    \\
-         &≤ |u_n - a| + |a|  \\
-         &≤ 1 + |a|          &&\text{[por (1) y (2)]}
-\end{align}
+\\begin{align}
+   |u_n| &= |u_n - a + a|    \\\\
+         &≤ |u_n - a| + |a|  \\\\
+         &≤ 1 + |a|          &&\\text{[por (1) y (2)]}
+\\end{align}
 
 <h2>2. Demostraciones con Lean4</h2>
 
