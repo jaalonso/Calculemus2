@@ -245,3 +245,4 @@ usaba Lean3 en lugar de Lean4.
 + L27 [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par si y solo si lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
 + M28 [[./textos/Acotacion_de_convergentes.md][Las sucesiones convergentes están acotadas]] (En [[./src/Acotacion_de_convergentes.lean][Lean]] y en [[./thy/Acotacion_de_convergentes.thy][Isabelle]]).
 + X29 [[./textos/La_paradoja_del_barbero.md][La paradoja del barbero]] (En [[./src/La_paradoja_del_barbero.lean][Lean]] y en [[./thy/La_paradoja_del_barbero.thy][Isabelle]]).
++ J30 [[./textos/Propiedad_de_la_densidad_de_los_reales.md][Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y]] (En [[./src/Propiedad_de_la_densidad_de_los_reales.lean][Lean]] y en [[./thy/Propiedad_de_la_densidad_de_los_reales.thy][Isabelle]]).

@@ -26,15 +26,15 @@ by sorry
 <h2>1. Demostración en lenguaje natural</h2>
 
 Tenemos que demostrar que
-\[ ¬((∃ x)(∀ y)[afeita(x,y) ↔ ¬afeita(y,y)]) \]
+\\[ ¬((∃ x)(∀ y)[\\text{afeita}(x,y) ↔ ¬\\text{afeita}(y,y)]) \\]
 Para ello, supongamos que
-\[ (∃ x)(∀ y)[afeita(x,y) ↔ ¬afeita(y,y)] \tag{1} \]
+\\[ (∃ x)(∀ y)[\\text{afeita}(x,y) ↔ ¬\\text{afeita}(y,y)] \\tag{1} \\]
 y tenemos que llegar a una contradicción.
 
-Sea \(b\) un elemento que verifica (1); es decir,
-\[ (∀ y)[afeita(b,y) ↔ ¬afeita(y,y)] \]
+Sea \\(b\\) un elemento que verifica (1); es decir,
+\\[ (∀ y)[\\text{afeita}(b,y) ↔ ¬\\text{afeita}(y,y)] \\]
 Entonces,
-\[ afeita(b,b) ↔ ¬afeita(b,b) \]
+\\[ \\text{afeita}(b,b) ↔ ¬\\text{afeita}(b,b) \\]
 que es una contradicción.
 
 <h2>2. Demostraciones con Lean4</h2>
