@@ -385,6 +385,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Demostracion_por_conversion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Demostracion_por_conversion.lean][Lean 4 Web]]
 
+** Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y
+#+INCLUDE: "../src/Propiedad_de_la_densidad_de_los_reales.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Propiedad_de_la_densidad_de_los_reales.lean][Lean 4 Web]].
+
 * Divisibilidad
 
 ** Si x,y,z ∈ ℕ, entonces x ∣ yxz
@@ -434,6 +438,10 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** La raíz cuadrada de 2 es irracional
 #+INCLUDE: "../src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean 4 Web]]
+
+** Un número es par si y solo si lo es su cuadrado
+#+INCLUDE: "../src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean 4 Web]].
 
 * Retículos
 
@@ -853,11 +861,15 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Implicacion_mediante_disyuncion_y_negacion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean 4 Web]]
 
+** La paradoja del barbero
+#+INCLUDE: "../src/La_paradoja_del_barbero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_paradoja_del_barbero.lean][Lean 4 Web]].
+
 * Límites de sucesiones
 
 ** La sucesión constante sₙ = c converge a c
 #+INCLUDE: "../src/Convergencia_de_la_sucesion_constante.lean" src lean :lines "7-"
-Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia_de_la_sucesion_constante.lean][Lean 4 Web]]
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Convergencia_de_la_sucesion_constante.lean][Lean 4 Web]].
 
 ** Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c
 #+INCLUDE: "../src/Convergencia_de_la_suma.lean" src lean :lines "7-"
@@ -890,6 +902,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Los supremos de las sucesiones crecientes son sus límites
 #+INCLUDE: "../src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean 4 Web]].
+
+** Las sucesiones convergentes están acotadas
+#+INCLUDE: "../src/Acotacion_de_convergentes.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Acotacion_de_convergentes.lean][Lean 4 Web]].
+
+** Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ
+#+INCLUDE: "../src/Limite_de_sucesion_menor_que_otra_sucesion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
 

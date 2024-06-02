@@ -13,7 +13,7 @@ Se define que \\(a\\) límite de la sucesión \\(u\\) como sigue
 <pre lang="isar">
    def limite (u : ℕ → ℝ) (c : ℝ) :=
      ∀ ε > 0, ∃ k, ∀ n ≥ k, |u n - c| < ε
-</p>
+</pre>
 
 Demostrar que si \\((∀ n)[u_n ≤ v_n]\\), \\(a\\) es límite de \\(u_n\\) y \\(c\\) es límite de \\(v_n\\), entonces \\(a ≤ c\\).
 
@@ -64,8 +64,8 @@ Por tanto,
          &≤ |(a - u_k) + (v_k - c)|    \\\\
          &≤ |a - u_k| + |v_k - c|      \\\\
          &= |u_k - a| + |v_k - c|      \\\\
-         &< ε + ε                    \\text{[por (5) y (6)]} \\\\
-         &= a - c                    \\text{[por (2)]
+         &< ε + ε                      &&\\text{[por (5) y (6)]} \\\\
+         &= a - c                      &&\\text{[por (2)]}
 \\end{align}
 Luego,
 \\[ a - c < a - c \\]
