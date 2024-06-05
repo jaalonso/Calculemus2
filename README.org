@@ -248,3 +248,4 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L03 [[./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md][Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0]] (En [[./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean]] y en [[./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy][Isabelle]]).
++ M04 [[./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md][La congruencia módulo 2 es una relación de equivalencia]] (En [[./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy][Isabelle]]).
