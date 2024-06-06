@@ -250,7 +250,8 @@ usaba Lean3 en lugar de Lean4.
 + L03 [[./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md][Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0]] (En [[./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean]] y en [[./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy][Isabelle]]).
 + M04 [[./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md][La congruencia módulo 2 es una relación de equivalencia]] (En [[./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 + X05 [[./textos/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.md][Las funciones con inversa por la izquierda son inyectivas]] (En [[./src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy][Isabelle]]).
-+ J06 [[~/alonso/estudio/Calculemus2/textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
++ J06 [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
++ V07 [[./textos/Inyectiva_si_lo_es_la_composicion.md][Si g ∘ f es inyectiva, entonces f es inyectiva]] (En [[./src/Inyectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Inyectiva_si_lo_es_la_composicion.thy][Isabelle]]).
 
 * Sin terminar
 +  [[./textos/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.md][Las funciones inyectivas tienen inversa por la izquierda]] (En [[./src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean]])
