@@ -71,7 +71,30 @@ by
      _ = |(u n - a)|            := abs_neg (u n - a)
      _ < ε                      := hk n hn
 
+-- 2ª demostración
+-- ===============
+
+example
+  (h : limite u a)
+  : limite (fun n ↦ -u n) (-a) :=
+by
+  unfold limite at *
+  -- h : ∀ (ε : ℝ), ε > 0 → ∃ N, ∀ (n : ℕ), n ≥ N → |u n - a| < ε
+  -- ⊢ ∀ (ε : ℝ), ε > 0 → ∃ N, ∀ (n : ℕ), n ≥ N → |(fun n => -u n) n - -a| < ε
+  have h1 : ∀ n, |u n - a| = |(-u n - -a)| := by
+    intro n
+    -- n : ℕ
+    -- ⊢ |u n - a| = |-u n - -a|
+    rw [abs_sub_comm]
+    -- ⊢ |a - u n| = |-u n - -a|
+    congr 1
+    -- ⊢ a - u n = -u n - -a
+    ring
+  simpa [h1] using h
+
 -- Lemas usados
 -- ============
 
+-- variable (b : ℝ)
 -- #check (abs_neg a : |(-a)| = |a|)
+-- #check (abs_sub_comm a b : |a - b| = |b - a|)
