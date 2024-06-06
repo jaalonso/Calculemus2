@@ -1,7 +1,7 @@
 -- Limite_de_la_opuesta.lean
 -- Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla,  6-junio-2024
+-- Sevilla, 6-junio-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
