@@ -491,6 +491,12 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Preorden_transitiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Preorden_transitiva.lean][Lean 4 Web]]
 
+* Relaciones de equivalencia
+
+** La congruencia módulo 2 es una relación de equivalencia
+#+INCLUDE: "../src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean 4 Web]].
+
 * Anillos ordenados
 
 ** En los anillos ordenados, a ≤ b → 0 ≤ b - a
@@ -636,6 +642,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva
 #+INCLUDE: "../src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean 4 Web]].
+
+** Las funciones con inversa por la izquierda son inyectivas
+#+INCLUDE: "../src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][Lean 4 Web]].
+
+** Si g ∘ f es inyectiva, entonces f es inyectiva
+#+INCLUDE: "../src/Inyectiva_si_lo_es_la_composicion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Inyectiva_si_lo_es_la_composicion.lean][Lean 4 Web]].
 
 * Teoría de conjuntos
 
@@ -910,6 +924,14 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 ** Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ
 #+INCLUDE: "../src/Limite_de_sucesion_menor_que_otra_sucesion.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean 4 Web]].
+
+** Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0
+#+INCLUDE: "../src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean 4 Web]].
+
+** Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a
+#+INCLUDE: "../src/Limite_de_la_opuesta.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_de_la_opuesta.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
 
