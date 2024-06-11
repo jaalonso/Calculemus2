@@ -130,6 +130,9 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Preorden_es_irreflexivo.md][Si ≤ es un preorden, entonces < es irreflexiva]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).
 + [[./textos/Preorden_transitiva.md][Si ≤ es un preorden, entonces < es transitiva]] (En [[./src/Preorden_transitiva.lean][Lean4]]).
 
+* Relaciones de equivalencia
++ [[./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md][La congruencia módulo 2 es una relación de equivalencia]] (En [[./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy][Isabelle]]).
+
 * Anillos ordenados
 + [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
 + [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
@@ -171,6 +174,8 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.md][La composición de una función creciente y una decreciente es decreciente]] (En [[./src/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.lean][Lean]] y en [[./thy/La_composicion_de_una_funcion_creciente_y_una_decreciente_es_decreciente.thy][Isabelle]]).
 + [[./textos/Una_funcion_creciente_e_involutiva_es_la_identidad.md][Si una función es creciente e involutiva, entonces es la identidad]] (En [[./src/Una_funcion_creciente_e_involutiva_es_la_identidad.lean][Lean]] y en [[./thy/Una_funcion_creciente_e_involutiva_es_la_identidad.thy][Isabelle]]).
 + [[./textos/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.md][Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva]] (En [[./src/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.lean][Lean]] y en [[./thy/Si_f(x)_leq_f(y)_to_x_leq_y,_entonces_f_es_inyectiva.thy][Isabelle]]).
++ [[./textos/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.md][Las funciones con inversa por la izquierda son inyectivas]] (En [[./src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy][Isabelle]]).
++ [[./textos/Inyectiva_si_lo_es_la_composicion.md][Si g ∘ f es inyectiva, entonces f es inyectiva]] (En [[./src/Inyectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Inyectiva_si_lo_es_la_composicion.thy][Isabelle]]).
 
 * Teoría de conjuntos
 + [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
@@ -245,14 +250,9 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.md][Los supremos de las sucesiones crecientes son sus límites]] (En [[./src/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.lean][Lean]] y en [[./thy/Los_supremos_de_las_sucesiones_crecientes_son_sus_limites.thy][Isabelle]]).
 + [[./textos/Acotacion_de_convergentes.md][Las sucesiones convergentes están acotadas]] (En [[./src/Acotacion_de_convergentes.lean][Lean]] y en [[./thy/Acotacion_de_convergentes.thy][Isabelle]]).
 + [[./textos/Limite_de_sucesion_menor_que_otra_sucesion.md][Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ]] (En [[./src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean]] y en [[./thy/Limite_de_sucesion_menor_que_otra_sucesion.thy][Isabelle]]).
++ [[./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md][Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0]] (En [[./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean]] y en [[./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy][Isabelle]]).
++ [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
 
 * Sin ordenar
-+ L03 [[./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md][Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0]] (En [[./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean]] y en [[./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy][Isabelle]]).
-+ M04 [[./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md][La congruencia módulo 2 es una relación de equivalencia]] (En [[./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ X05 [[./textos/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.md][Las funciones con inversa por la izquierda son inyectivas]] (En [[./src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy][Isabelle]]).
-+ J06 [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
-+ V07 [[./textos/Inyectiva_si_lo_es_la_composicion.md][Si g ∘ f es inyectiva, entonces f es inyectiva]] (En [[./src/Inyectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Inyectiva_si_lo_es_la_composicion.thy][Isabelle]]).
 + L10 [[./textos/Suprayectiva_si_lo_es_la_composicion.md][Si g ∘ f es suprayectiva, entonces g es suprayectiva]] (En [[./src/Suprayectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Suprayectiva_si_lo_es_la_composicion.thy][Isabelle]]).
-
-* Sin terminar
-+  [[./textos/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.md][Las funciones inyectivas tienen inversa por la izquierda]] (En [[./src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean]])
++ M11 [[./textos/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.md][Las funciones inyectivas tienen inversa por la izquierda]] (En [[./src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean]] y en [[./thy/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.thy][Isabelle]]).
