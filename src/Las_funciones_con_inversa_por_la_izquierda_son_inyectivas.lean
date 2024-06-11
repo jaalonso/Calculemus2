@@ -1,7 +1,7 @@
 -- Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean
 -- Las funciones con inversa por la izquierda son inyectivas.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 5-junio-2024
+-- Sevilla, 12-junio-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -122,5 +122,6 @@ HasLeftInverse.injective hf
 -- variable (b : Prop)
 -- variable (g : β → α)
 -- #check (Exists.elim : (∃ x, p x) → (∀ x, p x → b) → b)
+-- #check (HasLeftInverse.injective : HasLeftInverse f → Injective f)
 -- #check (LeftInverse.injective : LeftInverse g f → Injective f)
 -- #check (congr_arg f : x = y → f x = f y)

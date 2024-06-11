@@ -1,7 +1,7 @@
 (* Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy
 -- Las funciones con inversa por la izquierda son inyectivas.
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 5-junio-2024
+-- Sevilla, 12-junio-2024
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
