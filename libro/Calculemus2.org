@@ -845,6 +845,26 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Teorema_de_Cantor.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Teorema_de_Cantor.lean][Lean 4 Web]].
 
+** Si g ∘ f es suprayectiva, entonces g es suprayectiva
+#+INCLUDE: "../src/Suprayectiva_si_lo_es_la_composicion.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Suprayectiva_si_lo_es_la_composicion.lean][Lean 4 Web]].
+
+** Las funciones inyectivas tienen inversa por la izquierda
+#+INCLUDE: "../src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean 4 Web]].
+
+** Las funciones con inversa por la derecha son suprayectivas
+#+INCLUDE: "../src/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][Lean 4 Web]].
+
+** Las funciones suprayectivas tienen inversa por la derecha
+#+INCLUDE: "../src/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.lean][Lean 4 Web]].
+
+** Las funciones con inversa son biyectivas
+#+INCLUDE: "../src/Las_funciones_con_inversa_son_biyectivas.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_con_inversa_son_biyectivas.lean][Lean 4 Web]].
+
 * Lógica
 
 ** Si ¬(∃x)P(x), entonces (∀x)¬P(x)
