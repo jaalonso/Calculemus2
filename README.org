@@ -260,3 +260,4 @@ usaba Lean3 en lugar de Lean4.
 
 * Sin ordenar
 + L17 [[./textos/Las_funciones_biyectivas_tienen_inversa.md][Las funciones biyectivas tienen inversa]] (En [[./src/Las_funciones_biyectivas_tienen_inversa.lean][Lean]] y en [[./thy/Las_funciones_biyectivas_tienen_inversa.thy][Isabelle]]).
++ M18 [[./textos/La_equipotencia_es_una_relacion_reflexiva.md][La equipotencia es una relación reflexiva]] (En [[./src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_reflexiva.thy][Isabelle]]).
