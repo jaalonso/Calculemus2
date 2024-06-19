@@ -227,6 +227,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Imagen_inversa_de_la_union_general.md][Imagen inversa de la unión general]] (En [[./src/Imagen_inversa_de_la_union_general.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_union_general.thy][Isabelle]]).
 + [[./textos/Imagen_inversa_de_la_interseccion_general.md][Imagen inversa de la intersección general]] (En [[./src/Imagen_inversa_de_la_interseccion_general.lean][Lean]] y en [[./thy/Imagen_inversa_de_la_interseccion_general.thy][Isabelle]]).
 + [[./textos/Teorema_de_Cantor.md][Teorema de Cantor]] (En [[./src/Teorema_de_Cantor.lean][Lean]] y en [[./thy/Teorema_de_Cantor.thy][Isabelle]]).
++ [[./textos/Suprayectiva_si_lo_es_la_composicion.md][Si g ∘ f es suprayectiva, entonces g es suprayectiva]] (En [[./src/Suprayectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Suprayectiva_si_lo_es_la_composicion.thy][Isabelle]]).
++ [[./textos/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.md][Las funciones inyectivas tienen inversa por la izquierda]] (En [[./src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean]] y en [[./thy/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.thy][Isabelle]]).
++ [[./textos/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.md][Las funciones con inversa por la derecha son suprayectivas]] (En [[./src/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.thy][Isabelle]]).
++ [[./textos/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.md][Las funciones suprayectivas tienen inversa por la derecha]] (En [[./src/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.lean][Lean]] y en [[./thy/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.thy][Isabelle]]).
++ [[./textos/Las_funciones_con_inversa_son_biyectivas.md][Las funciones con inversa son biyectivas]] (En [[./src/Las_funciones_con_inversa_son_biyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_son_biyectivas.thy][Isabelle]]).
 
 * Lógica
 + [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
@@ -254,8 +259,4 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
 
 * Sin ordenar
-+ L10 [[./textos/Suprayectiva_si_lo_es_la_composicion.md][Si g ∘ f es suprayectiva, entonces g es suprayectiva]] (En [[./src/Suprayectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Suprayectiva_si_lo_es_la_composicion.thy][Isabelle]]).
-+ M11 [[./textos/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.md][Las funciones inyectivas tienen inversa por la izquierda]] (En [[./src/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.lean][Lean]] y en [[./thy/Las_funciones_inyectivas_tienen_inversa_por_la_izquierda.thy][Isabelle]]).
-+ X12 [[./textos/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.md][Las funciones con inversa por la derecha son suprayectivas]] (En [[./src/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.thy][Isabelle]]).
-+ J13 [[./textos/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.md][Las funciones suprayectivas tienen inversa por la derecha]] (En [[./src/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.lean][Lean]] y en [[./thy/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.thy][Isabelle]]).
-+ V14 [[./textos/Las_funciones_con_inversa_son_biyectivas.md][Las funciones con inversa son biyectivas]] (En [[./src/Las_funciones_con_inversa_son_biyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_son_biyectivas.thy][Isabelle]]).
++ L17 [[./textos/Las_funciones_biyectivas_tienen_inversa.md][Las funciones biyectivas tienen inversa]] (En [[./src/Las_funciones_biyectivas_tienen_inversa.lean][Lean]] y en [[./thy/Las_funciones_biyectivas_tienen_inversa.thy][Isabelle]]).
