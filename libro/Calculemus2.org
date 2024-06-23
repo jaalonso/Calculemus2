@@ -865,6 +865,26 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 #+INCLUDE: "../src/Las_funciones_con_inversa_son_biyectivas.lean" src lean :lines "7-"
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_con_inversa_son_biyectivas.lean][Lean 4 Web]].
 
+** Las funciones biyectivas tienen inversa
+#+INCLUDE: "../src/Las_funciones_biyectivas_tienen_inversa.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Las_funciones_biyectivas_tienen_inversa.lean][Lean 4 Web]].
+
+** La equipotencia es una relación reflexiva
+#+INCLUDE: "../src/La_equipotencia_es_una_relacion_reflexiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean 4 Web]].
+
+** La inversa de una función es biyectiva
+#+INCLUDE: "../src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean 4 Web]].
+
+** La equipotencia es una relación simétrica
+#+INCLUDE: "../src/La_equipotencia_es_una_relacion_simetrica.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_equipotencia_es_una_relacion_simetrica.lean][Lean 4 Web]].
+
+** La composición de funciones biyectivas es biyectiva
+#+INCLUDE: "../src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean" src lean :lines "7-"
+Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][Lean 4 Web]].
+
 * Lógica
 
 ** Si ¬(∃x)P(x), entonces (∀x)¬P(x)
