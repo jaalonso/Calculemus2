@@ -232,6 +232,11 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.md][Las funciones con inversa por la derecha son suprayectivas]] (En [[./src/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_derecha_son_suprayectivas.thy][Isabelle]]).
 + [[./textos/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.md][Las funciones suprayectivas tienen inversa por la derecha]] (En [[./src/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.lean][Lean]] y en [[./thy/Las_funciones_suprayectivas_tienen_inversa_por_la_derecha.thy][Isabelle]]).
 + [[./textos/Las_funciones_con_inversa_son_biyectivas.md][Las funciones con inversa son biyectivas]] (En [[./src/Las_funciones_con_inversa_son_biyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_son_biyectivas.thy][Isabelle]]).
++ [[./textos/Las_funciones_biyectivas_tienen_inversa.md][Las funciones biyectivas tienen inversa]] (En [[./src/Las_funciones_biyectivas_tienen_inversa.lean][Lean]] y en [[./thy/Las_funciones_biyectivas_tienen_inversa.thy][Isabelle]]).
++ [[./textos/La_equipotencia_es_una_relacion_reflexiva.md][La equipotencia es una relación reflexiva]] (En [[./src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_reflexiva.thy][Isabelle]]).
++ [[./textos/La_inversa_de_una_funcion_biyectiva_es_biyectiva.md][La inversa de una función es biyectiva]] (En [[./src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean]] y en [[./thy/La_inversa_de_una_funcion_biyectiva_es_biyectiva.thy][Isabelle]]).
++ [[./textos/La_equipotencia_es_una_relacion_simetrica.md][La equipotencia es una relación simétrica]] (En [[./src/La_equipotencia_es_una_relacion_simetrica.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_simetrica.thy][Isabelle]]).
++ [[./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md][La composición de funciones biyectivas es biyectiva]] (En [[./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy][Isabelle]]).
 
 * Lógica
 + [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
@@ -259,8 +264,4 @@ usaba Lean3 en lugar de Lean4.
 + [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
 
 * Sin ordenar
-+ L17 [[./textos/Las_funciones_biyectivas_tienen_inversa.md][Las funciones biyectivas tienen inversa]] (En [[./src/Las_funciones_biyectivas_tienen_inversa.lean][Lean]] y en [[./thy/Las_funciones_biyectivas_tienen_inversa.thy][Isabelle]]).
-+ M18 [[./textos/La_equipotencia_es_una_relacion_reflexiva.md][La equipotencia es una relación reflexiva]] (En [[./src/La_equipotencia_es_una_relacion_reflexiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_reflexiva.thy][Isabelle]]).
-+ X19 [[./textos/La_inversa_de_una_funcion_biyectiva_es_biyectiva.md][La inversa de una función es biyectiva]] (En [[./src/La_inversa_de_una_funcion_biyectiva_es_biyectiva.lean][Lean]] y en [[./thy/La_inversa_de_una_funcion_biyectiva_es_biyectiva.thy][Isabelle]]).
-+ J20 [[./textos/La_equipotencia_es_una_relacion_simetrica.md][La equipotencia es una relación simétrica]] (En [[./src/La_equipotencia_es_una_relacion_simetrica.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_simetrica.thy][Isabelle]]).
-+ V21 [[./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md][La composición de funciones biyectivas es biyectiva]] (En [[./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy][Isabelle]]).
++ L24 [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
