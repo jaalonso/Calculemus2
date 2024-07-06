@@ -7,13 +7,13 @@ has_math: true
 
 [mathjax]
 
-Cada familia de conjuntos \(P\) define una relación de forma que dos elementos están relacionados si algún conjunto de \(P\) contiene a ambos elementos. Se puede definir en Lean4 por
+Cada familia de conjuntos \\(P\\) define una relación de forma que dos elementos están relacionados si algún conjunto de \\(P\\) contiene a ambos elementos. Se puede definir en Lean4 por
 <pre lang="lean">
    def relacion (P : set (set X)) (x y : X) :=
      ∃ A ∈ P, x ∈ A ∧ y ∈ A
 </pre>
 
-Demostrar con Lean4 que si \(P\) es una familia de subconjuntos de \(X\), entonces la relación definida por \(P\) es simétrica.
+Demostrar con Lean4 que si \\(P\\) es una familia de subconjuntos de \\(X\\), entonces la relación definida por \\(P\\) es simétrica.
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -33,11 +33,11 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-Sean \(x, y ∈ X\) tales que \(x\) está relacionado con \(y\) mediante la relación definida por \(P\). Entonces, existe \(A\) tal que
-\[ A ∈ P ∧ x ∈ A ∧ y ∈ A \]
+Sean \\(x, y ∈ X\\) tales que \\(x\\) está relacionado con \\(y\\) mediante la relación definida por \\(P\\). Entonces, existe \\(A\\) tal que
+\\[ A ∈ P ∧ x ∈ A ∧ y ∈ A \\]
 Por tanto,
-\[ A ∈ P ∧ y ∈ A ∧ x ∈ A \]
-es decir, \(y\) está relacionado con \(x\) mediante la relación definida por \(P\).
+\\[ A ∈ P ∧ y ∈ A ∧ x ∈ A \\]
+es decir, \\(y\\) está relacionado con \\(x\\) mediante la relación definida por \\(P\\).
 
 <h2>2. Demostraciones con Lean4</h2>
 
