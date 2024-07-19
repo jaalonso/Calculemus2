@@ -144,7 +144,27 @@ by
   calc |(u ∘ φ ) n  - a| = |u (φ n) - a| := by exact rfl
                        _ < ε             := hN (φ n) h1
 
+
 -- 1ª demostración
+-- ===============
+
+example
+  (hu : convergente u)
+  (ha : punto_acumulacion u a)
+  : limite u a :=
+by
+  rcases ha with ⟨φ, hφ₁, hφ₂⟩
+  -- φ : ℕ → ℕ
+  -- hφ₁ : extraccion φ
+  -- hφ₂ : limite (u ∘ φ) a
+  cases' hu with b hb
+  -- b : ℝ
+  -- hb : limite u b
+  have hφ₃ : limite (u ∘ φ) b := limite_subsucesion hb hφ₁
+  have h : a = b := unicidad_limite hφ₂ hφ₃
+  rwa [h]
+
+-- 2ª demostración
 -- ===============
 
 example
@@ -168,7 +188,7 @@ by
   have hφ₃ : limite (u ∘ φ) b := limite_subsucesion hb hφ₁
   exact unicidad_limite hφ₂ hφ₃
 
--- 2ª demostración
+-- 3ª demostración
 -- ===============
 
 example
@@ -189,7 +209,7 @@ by
   -- ⊢ limite (u ∘ φ) b
   exact limite_subsucesion hb hφ₁
 
--- 3ª demostración
+-- 4ª demostración
 -- ===============
 
 example
