@@ -7,11 +7,11 @@ has_math: true
 
 [mathjax]
 
-En Lean4, una sucesión \(u_0, u_1, u_2, u_3 ...\) se puede representar mediante una función \(u : ℕ → ℝ) de forma que \(u(n)\) es el término \(u_n\).
+En Lean4, una sucesión \\(u_0, u_1, u_2, u_3 ...\\) se puede representar mediante una función \\(u : ℕ → ℝ) de forma que \\(u(n)\\) es el término \\(u_n\\).
 
-Para extraer una subsucesión se aplica una función de extracción que conserva el orden; por ejemplo, la subsucesión \(u_0, u_2, u_4, u_6, ...\) se ha obtenido con la función de extracción \(φ\) tal que \(φ(n) = 2n\).
+Para extraer una subsucesión se aplica una función de extracción que conserva el orden; por ejemplo, la subsucesión \\(u_0, u_2, u_4, u_6, ...\\) se ha obtenido con la función de extracción \\(φ\\) tal que \\(φ(n) = 2n\\).
 
-En Lean4, se puede definir que \(φ\) es una función de extracción por
+En Lean4, se puede definir que \\(φ\\) es una función de extracción por
 <pre lang="lean">
    def extraccion (φ : ℕ → ℕ) :=
      ∀ n m, n < m → φ n < φ m
@@ -32,7 +32,7 @@ que la sucesión u es de Cauchy por
      ∀ ε > 0, ∃ N, ∀ p ≥ N, ∀ q ≥ N, |u p - u q| < ε
 </pre>
 
-Demostrar con Lean4 que si \(u\) es una sucesión de Cauchy y \(a\) es un punto de acumulación de \(u\), entonces \(a\) es el límite de \(u\).
+Demostrar con Lean4 que si \\(u\\) es una sucesión de Cauchy y \\(a\\) es un punto de acumulación de \\(u\\), entonces \\(a\\) es el límite de \\(u\\).
 
 Para ello, completar la siguiente teoría de Lean4:
 
@@ -53,32 +53,32 @@ by sorry
 
 <h2>1. Demostración en lenguaje natural</h2>
 
-En la demostración usaremos el siguiente lema demostrado en un ejercicio anterior: Si \(a\) es un punto de acumulación de \(u\), entonces
-\[ (∀ ε > 0)(∀ N)(∃ n ≥ N) |u n - a| < ε \]
+En la demostración usaremos el siguiente lema demostrado en un ejercicio anterior: Si \\(a\\) es un punto de acumulación de \\(u\\), entonces
+\\[ (∀ ε > 0)(∀ N)(∃ n ≥ N) |u n - a| < ε \\]
 
-Sea \(ε > 0\). Por ser u una sucesión de Cauchy, existe un \(N ∈ ℕ\) tal que
-\[ (∀ p ≥ N)(∀ q ≥ N)|u(p) - u(q)| < ε/2 \tag{1} \]
+Sea \\(ε > 0\\). Por ser u una sucesión de Cauchy, existe un \\(N ∈ ℕ\\) tal que
+\\[ (∀ p ≥ N)(∀ q ≥ N)|u(p) - u(q)| < ε/2 \\tag{1} \\]
 Vamos a demostrar que
-\[ (∀ n ≥ N)|u(n) - a| < ε \]
-y, por tanto \(a\) es limite de \(u\).
+\\[ (∀ n ≥ N)|u(n) - a| < ε \\]
+y, por tanto \\(a\\) es limite de \\(u\\).
 
-Para ello, sea \(n ∈ ℕ\) tal que
-\[ n ≥ N \tag{2} \]
-Por el lema, existe un \(N' ∈ ℕ\) tal que
-\begin{align}
-   &N' ≥ N              \tag{3} \\
-   &|u(N') - a| < ε/2   \tag{4}
-\end{align}
+Para ello, sea \\(n ∈ ℕ\\) tal que
+\\[ n ≥ N \\tag{2} \\]
+Por el lema, existe un \\(N' ∈ ℕ\\) tal que
+\\begin{align}
+   &N' ≥ N              \\tag{3} \\\\
+   &|u(N') - a| < ε/2   \\tag{4}
+\\end{align}
 Por tanto,
-\begin{align}
-   |u(n) - a| &= |(u(n) - u(N')) + (u(N') - a)|  \\
-              &≤ |u(n) - u(N')| + |u(N') - a|    \\
-              &< ε/2 + |u(N') - a|               &&\text{[por (1), (2) y (3)]} \\
-              &< ε/2 + ε/2                       &&\text{[por (4)]} \\
+\\begin{align}
+   |u(n) - a| &= |(u(n) - u(N')) + (u(N') - a)|  \\\\
+              &≤ |u(n) - u(N')| + |u(N') - a|    \\\\
+              &< ε/2 + |u(N') - a|               &&\\text{[por (1), (2) y (3)]} \\\\
+              &< ε/2 + ε/2                       &&\\text{[por (4)]} \\\\
               &= ε
-\end{align}
+\\end{align}
 De donde se tiene que
-\[ |u(n) - a| < ε \]
+\\[ |u(n) - a| < ε \\]
 
 <h2>2. Demostraciones con Lean4</h2>
 
