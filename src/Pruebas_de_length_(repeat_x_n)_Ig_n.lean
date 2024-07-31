@@ -116,7 +116,8 @@ by simp
 
 lemma length_replicate_1 n (x : α) :
   length (replicate n x) = n :=
-by induction n with
+by
+  induction n with
   | zero => calc
     length (replicate 0 x)
       = length ([] : List α)         := by simp only [replicate_zero]
