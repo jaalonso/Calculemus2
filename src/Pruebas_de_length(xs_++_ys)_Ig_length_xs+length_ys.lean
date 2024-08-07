@@ -64,15 +64,23 @@ example :
 by
   induction' xs with a as HI
   . calc length ([] ++ ys)
-         = length ys                    := congr_arg length (nil_append ys)
-       _ = 0 + length ys                := (zero_add (length ys)).symm
-       _ = length [] + length ys        := congrArg (. + length ys) length_nil.symm
+         = length ys
+           := congr_arg length (nil_append ys)
+       _ = 0 + length ys
+           := (zero_add (length ys)).symm
+       _ = length [] + length ys
+           := congrArg (. + length ys) length_nil.symm
   . calc length ((a :: as) ++ ys)
-         = length (a :: (as ++ ys))     := congr_arg length (cons_append a as ys)
-       _ = length (as ++ ys) + 1        := length_cons a (as ++ ys)
-       _ = (length as + length ys) + 1  := congrArg (. + 1) HI
-       _ = (length as + 1) + length ys  := (Nat.succ_add (length as) (length ys)).symm
-       _ = length (a :: as) + length ys := congrArg (. + length ys) (length_cons a as).symm
+         = length (a :: (as ++ ys))
+           := congr_arg length (cons_append a as ys)
+       _ = length (as ++ ys) + 1
+           := length_cons a (as ++ ys)
+       _ = (length as + length ys) + 1
+           := congrArg (. + 1) HI
+       _ = (length as + 1) + length ys
+           := (Nat.succ_add (length as) (length ys)).symm
+       _ = length (a :: as) + length ys
+           := congrArg (. + length ys) (length_cons a as).symm
 
 -- 2ª demostración
 -- ===============
@@ -82,15 +90,23 @@ example :
 by
   induction' xs with a as HI
   . calc length ([] ++ ys)
-         = length ys                    := by rw [nil_append]
-       _ = 0 + length ys                := (zero_add (length ys)).symm
-       _ = length [] + length ys        := by rw [length_nil]
+         = length ys
+           := by rw [nil_append]
+       _ = 0 + length ys
+           := (zero_add (length ys)).symm
+       _ = length [] + length ys
+           := by rw [length_nil]
   . calc length ((a :: as) ++ ys)
-         = length (a :: (as ++ ys))     := by rw [cons_append]
-       _ = length (as ++ ys) + 1        := by rw [length_cons]
-       _ = (length as + length ys) + 1  := by rw [HI]
-       _ = (length as + 1) + length ys  := (Nat.succ_add (length as) (length ys)).symm
-       _ = length (a :: as) + length ys := congrArg (. + length ys) (length_cons a as).symm
+         = length (a :: (as ++ ys))
+           := by rw [cons_append]
+       _ = length (as ++ ys) + 1
+           := by rw [length_cons]
+       _ = (length as + length ys) + 1
+           := by rw [HI]
+       _ = (length as + 1) + length ys
+           := (Nat.succ_add (length as) (length ys)).symm
+       _ = length (a :: as) + length ys
+           := congrArg (. + length ys) (length_cons a as).symm
 
 -- 3ª demostración
 -- ===============
@@ -131,16 +147,24 @@ by
   induction xs with
   | nil => calc
     length ([] ++ ys)
-        = length ys                    := by rw [nil_append]
-      _ = 0 + length ys                := by rw [zero_add]
-      _ = length [] + length ys        := by rw [length_nil]
+        = length ys
+          := by rw [nil_append]
+      _ = 0 + length ys
+          := by rw [zero_add]
+      _ = length [] + length ys
+          := by rw [length_nil]
   | cons a as HI => calc
     length ((a :: as) ++ ys)
-        = length (a :: (as ++ ys))     := by rw [cons_append]
-      _ = length (as ++ ys) + 1        := by rw [length_cons]
-      _ = (length as + length ys) + 1  := by rw [HI]
-      _ = (length as + 1) + length ys  := (Nat.succ_add (length as) (length ys)).symm
-      _ = length (a :: as) + length ys := by rw [length_cons]
+        = length (a :: (as ++ ys))
+          := by rw [cons_append]
+      _ = length (as ++ ys) + 1
+          := by rw [length_cons]
+      _ = (length as + length ys) + 1
+          := by rw [HI]
+      _ = (length as + 1) + length ys
+          := (Nat.succ_add (length as) (length ys)).symm
+      _ = length (a :: as) + length ys
+          := by rw [length_cons]
 
 -- 7ª demostración
 -- ===============
