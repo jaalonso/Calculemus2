@@ -159,7 +159,6 @@ by
       _ = (a :: (as ++ ys)) ++ zs := by rw [cons_append]
       _ = ((a :: as) ++ ys) ++ zs := congrArg (. ++ zs) (cons_append a as ys)
 
-
 -- 8ª demostración
 -- ===============
 

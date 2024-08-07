@@ -288,3 +288,6 @@ usaba Lean3 en lugar de Lean4.
 + S27 [[./textos/Limite_de_sucesiones_no_decrecientes.md][Si u es una sucesión no decreciente y su límite es a, entonces u(n) ≤ a para todo n]] (En [[./src/Limite_de_sucesiones_no_decrecientes.lean][Lean]] y en [[./thy/Limite_de_sucesiones_no_decrecientes.thy][Isabelle]]).
 + L29 [[./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md][Pruebas de length (replicate n x) = n]] (En [[./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean][Lean]] y en [[./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy][Isabelle]]).
 + X31 [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
+
+* Agosto
++ X07 [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) =_length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
