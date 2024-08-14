@@ -291,3 +291,5 @@ usaba Lean3 en lugar de Lean4.
 
 * Agosto
 + X07 [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) = length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
++ M13 [[./textos/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.md][Proofs of take n xs ++ drop n xs = xs]] (En [[./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean][Lean]] y en [[./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy][Isabelle]]).
++ [[./textos/Pruebas_de_equivalencia_de_definiciones_de_inversa.md][Pruebas de equivalencia de definiciones de inversa]] (En [[./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean][Lean]] y en [[./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy][Isabelle]]).
