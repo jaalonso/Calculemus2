@@ -1,70 +1,97 @@
--- Pruebas_de_equivalencia_de_definiciones_de_inversa.lean
--- Pruebas de equivalencia de definiciones de inversa.
--- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 19-agosto-2024
--- ---------------------------------------------------------------------
+---
+title: Pruebas de equivalencia de definiciones de inversa
+date: 2024-08-19 06:00:00 UTC+02:00
+category: Listas
+has_math: true
+---
 
--- ---------------------------------------------------------------------
--- En Lean4, está definida la función
---    reverse : List α → List α
--- tal que (reverse xs) es la lista obtenida invirtiendo el orden de los
--- elementos de xs. Por ejemplo,
---    reverse  [3,2,5,1] = [1,5,2,3]
--- Su definición es
---    def reverseAux : List α → List α → List α
---      | [],    ys => ys
---      | x::xs, ys => reverseAux xs (x::ys)
---
---    def reverse (xs : List α) : List α :=
---      reverseAux xs []
---
--- Los siguientes lemas caracterizan su comportamiento
---    reverseAux_nil : reverseAux [] ys = ys
---    reverseAux_cons : reverseAux (x::xs) ys = reverseAux xs (x::ys)
---
--- Una definición alternativa es
---    def reverse2 : List α → List α
---      | []        => []
---      | (x :: xs) => reverse2 xs ++ [x]
---
--- Demostrar que las dos definiciones son equivalentes; es decir,
---    reverse xs = reverse2 xs
--- ---------------------------------------------------------------------
+[mathjax]
 
--- Demostración en lenguaje natural
--- ================================
+En Lean4, está definida la función
 
--- Es consecuencia del siguiente lema auxiliar
---    (∀ xs, ys)[reverseAux xs ys = (reverse2 xs) ++ ys]
--- En efecto,
---    reverse xs = reverseAux xs []
---               = reverse2 xs ++ []    [por el lema auxiliar]
---               = reverse2 xs
---
--- El lema auxiliar se demuestra por inducción en xs.
---
--- Caso base: Supongamos que xs = []. Entonces,
---    reverseAux xs ys = reverseAux [] ys
---                     = ys
---                     = [] ++ ys
---                     = reverse2 [] ++ ys
---                     = reverse2 xs ++ ys
---
--- Paso de inducción: Supongamos que xs = a::as y la hipótesis de
--- inducción (HI):
---    (∀ ys)[reverseAux as ys = reverse2 as ++ ys]
--- Entonces,
---    reverseAux xs ys = reverseAux (a :: as) ys
---                     = reverseAux as (a :: ys)
---                     = reverse2 as ++ (a :: ys)   [por HI]
---                     = reverse2 as ++ ([a] ++ ys)
---                     = (reverse2 as ++ [a]) ++ ys
---                     = reverse2 (a :: as) ++ ys
---                     = reverse2 xs ++ ys
+    reverse : List α → List α
 
--- Demostraciones con Lean4
--- ========================
+tal que (reverse xs) es la lista obtenida invirtiendo el orden de los elementos de xs. Por ejemplo,
 
+    reverse  [3,2,5,1] = [1,5,2,3]
+
+Su definición es
+
+    def reverseAux : List α → List α → List α
+      | [],    ys => ys
+      | x::xs, ys => reverseAux xs (x::ys)
+
+    def reverse (xs : List α) : List α :=
+      reverseAux xs []
+
+Los siguientes lemas caracterizan su comportamiento
+
+    reverseAux_nil : reverseAux [] ys = ys
+    reverseAux_cons : reverseAux (x::xs) ys = reverseAux xs (x::ys)
+
+Una definición alternativa es
+
+    def reverse2 : List α → List α
+      | []        => []
+      | (x :: xs) => reverse2 xs ++ [x]
+
+Demostrar que las dos definiciones son equivalentes; es decir,
+
+    reverse xs = reverse2 xs
+
+Para ello, completar la siguiente teoría de Lean4:
+
+<pre lang="lean">
+import Mathlib.Data.List.Basic
+open List
+
+variable {α : Type}
+variable (xs : List α)
+
+example : reverse xs = reverse2 xs :=
+by sorry
+</pre>
+<!--more-->
+
+<h2>1. Demostración en lenguaje natural</h2>
+
+Es consecuencia del siguiente lema auxiliar
+
+    (∀ xs, ys)[reverseAux xs ys = (reverse2 xs) ++ ys]
+
+En efecto,
+
+    reverse xs = reverseAux xs []
+               = reverse2 xs ++ []    [por el lema auxiliar]
+               = reverse2 xs
+
+El lema auxiliar se demuestra por inducción en xs.
+
+Caso base: Supongamos que xs = []. Entonces,
+
+    reverseAux xs ys = reverseAux [] ys
+                     = ys
+                     = [] ++ ys
+                     = reverse2 [] ++ ys
+                     = reverse2 xs ++ ys
+
+Paso de inducción: Supongamos que xs = a::as y la hipótesis de inducción (HI):
+
+    (∀ ys)[reverseAux as ys = reverse2 as ++ ys]
+
+Entonces,
+
+    reverseAux xs ys = reverseAux (a :: as) ys
+                     = reverseAux as (a :: ys)
+                     = reverse2 as ++ (a :: ys)   [por HI]
+                     = reverse2 as ++ ([a] ++ ys)
+                     = (reverse2 as ++ [a]) ++ ys
+                     = reverse2 (a :: as) ++ ys
+                     = reverse2 xs ++ ys
+
+<h2>2. Demostraciones con Lean4</h2>
+
+<pre lang="lean">
 import Mathlib.Data.List.Basic
 open List
 
@@ -314,3 +341,161 @@ by simp [reverse]
 -- #check (nil_append xs : [] ++ xs = xs)
 -- #check (reverse xs = reverseAux xs [])
 -- #check (singleton_append : [x] ++ ys = x :: ys)
+</pre>
+
+Se puede interactuar con las demostraciones anteriores en [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean).
+
+<h2>3. Demostraciones con Isabelle/HOL</h2>
+
+<pre lang="isar">
+theory Pruebas_de_equivalencia_de_definiciones_de_inversa
+imports Main
+begin
+
+(* Definición alternativa *)
+(* ====================== *)
+
+fun inversa_aux :: "'a list ⇒ 'a list ⇒ 'a list" where
+  "inversa_aux [] ys     = ys"
+| "inversa_aux (x#xs) ys = inversa_aux xs (x#ys)"
+
+fun inversa :: "'a list ⇒ 'a list" where
+  "inversa xs = inversa_aux xs []"
+
+(* Lema auxiliar: inversa_aux xs ys = (rev xs) @ ys *)
+(* ================================================ *)
+
+(* 1ª demostración del lema auxiliar *)
+lemma
+  "inversa_aux xs ys = (rev xs) @ ys"
+proof (induct xs arbitrary: ys)
+  fix ys :: "'a list"
+  have "inversa_aux [] ys = ys"
+    by (simp only: inversa_aux.simps(1))
+  also have "… = [] @ ys"
+    by (simp only: append.simps(1))
+  also have "… = rev [] @ ys"
+    by (simp only: rev.simps(1))
+  finally show "inversa_aux [] ys = rev [] @ ys"
+    by this
+next
+  fix a ::'a and xs :: "'a list"
+  assume HI: "⋀ys. inversa_aux xs ys = rev xs@ys"
+  show "⋀ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
+  proof -
+    fix ys
+    have "inversa_aux (a#xs) ys = inversa_aux xs (a#ys)"
+      by (simp only: inversa_aux.simps(2))
+    also have "… = rev xs@(a#ys)"
+      by (simp only: HI)
+    also have "… = rev xs @ ([a] @ ys)"
+      by (simp only: append.simps)
+    also have "… = (rev xs @ [a]) @ ys"
+      by (simp only: append_assoc)
+    also have "… = rev (a # xs) @ ys"
+      by (simp only: rev.simps(2))
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys"
+      by this
+  qed
+qed
+
+(* 2ª demostración del lema auxiliar *)
+lemma
+  "inversa_aux xs ys = (rev xs) @ ys"
+proof (induct xs arbitrary: ys)
+  fix ys :: "'a list"
+  have "inversa_aux [] ys = ys" by simp
+  also have "… = [] @ ys" by simp
+  also have "… = rev [] @ ys" by simp
+  finally show "inversa_aux [] ys = rev [] @ ys" .
+next
+  fix a ::'a and xs :: "'a list"
+  assume HI: "⋀ys. inversa_aux xs ys = rev xs@ys"
+  show "⋀ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
+  proof -
+    fix ys
+    have "inversa_aux (a#xs) ys = inversa_aux xs (a#ys)" by simp
+    also have "… = rev xs@(a#ys)" using HI by simp
+    also have "… = rev xs @ ([a] @ ys)" by simp
+    also have "… = (rev xs @ [a]) @ ys" by simp
+    also have "… = rev (a # xs) @ ys" by simp
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" .
+  qed
+qed
+
+(* 3ª demostración del lema auxiliar *)
+lemma
+  "inversa_aux xs ys = (rev xs) @ ys"
+proof (induct xs arbitrary: ys)
+  fix ys :: "'a list"
+  show "inversa_aux [] ys = rev [] @ ys" by simp
+next
+  fix a ::'a and xs :: "'a list"
+  assume HI: "⋀ys. inversa_aux xs ys = rev xs@ys"
+  show "⋀ys. inversa_aux (a#xs) ys = rev (a#xs)@ys"
+  proof -
+    fix ys
+    have "inversa_aux (a#xs) ys = rev xs@(a#ys)" using HI by simp
+    also have "… = rev (a # xs) @ ys" by simp
+    finally show "inversa_aux (a#xs) ys = rev (a#xs)@ys" .
+  qed
+qed
+
+(* 4ª demostración del lema auxiliar *)
+lemma
+  "inversa_aux xs ys = (rev xs) @ ys"
+proof (induct xs arbitrary: ys)
+  show "⋀ys. inversa_aux [] ys = rev [] @ ys" by simp
+next
+  fix a ::'a and xs :: "'a list"
+  assume "⋀ys. inversa_aux xs ys = rev xs@ys"
+  then show "⋀ys. inversa_aux (a#xs) ys = rev (a#xs)@ys" by simp
+qed
+
+(* 5ª demostración del lema auxiliar *)
+lemma
+  "inversa_aux xs ys = (rev xs) @ ys"
+proof (induct xs arbitrary: ys)
+  case Nil
+  then show ?case by simp
+next
+  case (Cons a xs)
+  then show ?case by simp
+qed
+
+(* 6ª demostración del lema auxiliar *)
+lemma inversa_equiv:
+  "inversa_aux xs ys = (rev xs) @ ys"
+by (induct xs arbitrary: ys) simp_all
+
+(* Demostraciones del lema principal *)
+(* ================================= *)
+
+(* 1ª demostración *)
+lemma "inversa xs = rev xs"
+proof -
+  have "inversa xs = inversa_aux xs []"
+    by (rule inversa.simps)
+  also have "… = (rev xs) @ []"
+    by (rule inversa_equiv)
+  also have "… = rev xs"
+    by (rule append.right_neutral)
+  finally show "inversa xs = rev xs"
+    by this
+qed
+
+(* 2ª demostración *)
+lemma "inversa xs = rev xs"
+proof -
+  have "inversa xs = inversa_aux xs []"  by simp
+  also have "… = (rev xs) @ []" by (rule inversa_equiv)
+  also have "… = rev xs" by simp
+  finally show "inversa xs = rev xs" .
+qed
+
+(* 3ª demostración *)
+lemma "inversa xs = rev xs"
+by (simp add: inversa_equiv)
+
+end
+</pre>
