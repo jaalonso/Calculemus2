@@ -72,15 +72,6 @@ variable {α : Type}
 variable (x : α)
 variable (xs ys : List α)
 
--- Reglas de simplifición de reverseAux
--- ====================================
-
-@[simp]
-lemma reverseAux_nil : reverseAux [] ys = ys := rfl
-
-@[simp]
-lemma reverseAux_cons : reverseAux (x::xs) ys = reverseAux xs (x::ys) := rfl
-
 -- Definición y reglas de simplificación de reverse2
 -- =================================================
 
@@ -111,7 +102,7 @@ by
   . -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     calc reverseAux [] ys
-         = ys                         := reverseAux_nil ys
+         = ys                         := reverseAux_nil
        _ = [] ++ ys                   := (nil_append ys).symm
        _ = reverse2 [] ++ ys          := congrArg (. ++ ys) reverse2_nil.symm
   . -- a : α
@@ -120,7 +111,7 @@ by
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
-         = reverseAux as (a :: ys)    := reverseAux_cons a as ys
+         = reverseAux as (a :: ys)    := reverseAux_cons
        _ = reverse2 as ++ (a :: ys)   := (HI (a :: ys))
        _ = reverse2 as ++ ([a] ++ ys) := congrArg (reverse2 as ++ .) singleton_append
        _ = (reverse2 as ++ [a]) ++ ys := (append_assoc (reverse2 as) [a] ys).symm
@@ -313,4 +304,6 @@ by simp [reverse]
 -- #check (append_nil xs : xs ++ [] = xs)
 -- #check (nil_append xs : [] ++ xs = xs)
 -- #check (reverse xs = reverseAux xs [])
+-- #check (reverseAux_cons : reverseAux (x::xs) ys = reverseAux xs (x::ys))
+-- #check (reverseAux_nil : reverseAux [] ys = ys)
 -- #check (singleton_append : [x] ++ ys = x :: ys)
