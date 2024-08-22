@@ -56,7 +56,7 @@ example
   (nna : 0 ≤ a)
   : CotaSuperior (f * g) (a * b) :=
 by
-  have h1 : ∀ x, f x * g x ≤ a * b
+  have h1 : ∀ x, f x * g x ≤ a * b := by
   { intro x
     have h2 : f x ≤ a := hfa x
     have h3 : g x ≤ b := hgb x

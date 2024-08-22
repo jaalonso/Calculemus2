@@ -11,7 +11,7 @@
 -- Como consecuencia, se tiene los siguientes axiomas
 --    mul_assoc :    ∀ a b c : G, a * b * c = a * (b * c)
 --    one_mul :      ∀ a : G, 1 * a = a
---    mul_left_inv : ∀ a : G, a⁻¹ * a = 1
+--    inv_mul_cancel : ∀ a : G, a⁻¹ * a = 1
 --
 -- Demostrar que si G es un grupo y a ∈ G, entonces
 --    a * a⁻¹ = 1
@@ -43,12 +43,12 @@ example : a * a⁻¹ = 1 :=
 calc
   a * a⁻¹ = 1 * (a * a⁻¹)                := by rw [one_mul]
         _ = (1 * a) * a⁻¹                := by rw [mul_assoc]
-        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by rw [mul_left_inv]
+        _ = (((a⁻¹)⁻¹ * a⁻¹)  * a) * a⁻¹ := by rw [inv_mul_cancel]
         _ = ((a⁻¹)⁻¹ * (a⁻¹  * a)) * a⁻¹ := by rw [← mul_assoc]
-        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by rw [mul_left_inv]
+        _ = ((a⁻¹)⁻¹ * 1) * a⁻¹          := by rw [inv_mul_cancel]
         _ = (a⁻¹)⁻¹ * (1 * a⁻¹)          := by rw [mul_assoc]
         _ = (a⁻¹)⁻¹ * a⁻¹                := by rw [one_mul]
-        _ = 1                            := by rw [mul_left_inv]
+        _ = 1                            := by rw [inv_mul_cancel]
 
 -- 2ª demostración
 example : a * a⁻¹ = 1 :=
@@ -68,13 +68,13 @@ by simp
 
 -- 4ª demostración
 example : a * a⁻¹ = 1 :=
-by exact mul_inv_self a
+by exact mul_inv_cancel a
 
 -- Lemas usados
 -- ============
 
 -- variable (c : G)
+-- #check (inv_mul_cancel a : a⁻¹  * a = 1)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_inv_self a : a * a⁻¹ = 1)
--- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (mul_inv_cancel a : a * a⁻¹ = 1)
 -- #check (one_mul a : 1 * a = a)

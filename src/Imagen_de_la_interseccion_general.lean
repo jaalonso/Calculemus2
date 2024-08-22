@@ -124,8 +124,6 @@ by
   -- i : I
   -- ⊢ ∃ x, x ∈ A i ∧ f x = y
   use x, xIA i
-  -- ⊢ f x = y
-  exact fxy
 
 -- 4ª demostración
 -- ===============

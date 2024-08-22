@@ -46,6 +46,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable (u v w : ℕ → ℝ)
 variable (a : ℝ)

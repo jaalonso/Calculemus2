@@ -72,14 +72,6 @@ by
   -- hxA : x ∈ A
   -- hyA : y ∈ A
   use A
-  -- ⊢ A ∈ P ∧ y ∈ A ∧ x ∈ A
-  repeat' constructor
-  . -- ⊢ A ∈ P
-    exact hAP
-  . -- ⊢ y ∈ A
-    exact hyA
-  . -- ⊢ x ∈ A
-    exact hxA
 
 -- 3ª demostración
 -- ===============
@@ -96,8 +88,6 @@ by
   -- hxA : x ∈ A
   -- hyA : y ∈ A
   use A
-  -- ⊢ A ∈ P ∧ y ∈ A ∧ x ∈ A
-  (repeat' constructor) <;> assumption
 
 -- 4ª demostración
 -- ===============

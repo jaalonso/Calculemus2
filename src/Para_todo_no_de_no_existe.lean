@@ -53,8 +53,6 @@ by
   apply h
   -- ⊢ ∃ x, P x
   use y
-  -- ⊢ P y
-  exact h1
 
 -- 3ª demostración
 -- ===============

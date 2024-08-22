@@ -42,7 +42,7 @@ example
   (nng : CotaInferior g 0)
   : CotaInferior (f * g) 0 :=
 by
-  have h1 : ∀x, 0 ≤ f x * g x
+  have h1 : ∀x, 0 ≤ f x * g x := by
   { intro x
     have h2: 0 ≤ f x := nnf x
     have h3: 0 ≤ g x := nng x
@@ -57,7 +57,7 @@ example
   (nng : CotaInferior g 0)
   : CotaInferior (f * g) 0 :=
 by
-  have h1 : ∀x, 0 ≤ f x * g x
+  have h1 : ∀x, 0 ≤ f x * g x := by
   { intro x
     show 0 ≤ f x * g x
     exact mul_nonneg (nnf x) (nng x) }

@@ -68,7 +68,6 @@ by
       exact absurd h4 h3a
     . -- h : Q
       exact h3b
-  done
 
 -- 2ª demostración
 -- ===============
@@ -100,7 +99,6 @@ by
       contradiction
     . -- h : Q
       assumption
-  done
 
 -- 3ª demostración
 -- ===============

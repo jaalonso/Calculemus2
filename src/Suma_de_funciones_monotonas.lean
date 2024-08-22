@@ -40,7 +40,7 @@ example
   (mg : Monotone g)
   : Monotone (f + g) :=
 by
-  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b
+  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b := by
   { intros a b hab
     have h2 : f a ≤ f b := mf hab
     have h3 : g a ≤ g b := mg hab
@@ -57,7 +57,7 @@ example
   (mg : Monotone g)
   : Monotone (f + g) :=
 by
-  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b
+  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b := by
   { intros a b hab
     calc (f + g) a
          = f a + g a := rfl
@@ -72,7 +72,7 @@ example
   (mg : Monotone g)
   : Monotone (f + g) :=
 by
-  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b
+  have h1 : ∀ a b, a ≤ b → (f + g) a ≤ (f + g) b := by
   { intros a b hab
     show (f + g) a ≤ (f + g) b
     exact add_le_add (mf hab) (mg hab) }

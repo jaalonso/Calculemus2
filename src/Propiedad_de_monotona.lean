@@ -24,6 +24,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 -- 1ª demostración
 -- ===============
@@ -37,7 +38,7 @@ by
   let f := fun _ : ℝ ↦ (0 : ℝ)
   have h2 : Monotone f := monotone_const
   have h3 : f 1 ≤ f 0 := le_refl 0
-  have h4 : 1 ≤ 0 := h1 h2 h3
+  have h4 : (1 : ℝ) ≤ 0 := h1 h2 h3
   linarith
 
 -- Lemas usados

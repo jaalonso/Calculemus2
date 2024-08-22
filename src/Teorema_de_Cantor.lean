@@ -57,9 +57,9 @@ by
   cases' hf S with j hj
   -- j : α
   -- hj : f j = S
-  by_cases j ∈ S
+  by_cases h: j ∈ S
   . -- h : j ∈ S
-    dsimp at h
+    simp at h
     -- h : ¬j ∈ f j
     apply h
     -- ⊢ j ∈ f j
@@ -86,7 +86,7 @@ by
   cases' hf S with j hj
   -- j : α
   -- hj : f j = S
-  by_cases j ∈ S
+  by_cases h: j ∈ S
   . -- h : j ∈ S
     apply h
     -- ⊢ j ∈ f j

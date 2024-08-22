@@ -21,6 +21,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 def CotaInferior (f : ℝ → ℝ) (a : ℝ) : Prop :=
   ∀ x, a ≤ f x

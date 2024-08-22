@@ -32,6 +32,8 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 variable {x : ℝ}
 
 -- 1ª demostración
@@ -79,7 +81,7 @@ by
 -- ===============
 
 example : -x ≤ |x| :=
-  neg_le_abs_self x
+  neg_le_abs x
 
 -- Lemas usados
 -- ============
@@ -89,5 +91,5 @@ example : -x ≤ |x| :=
 -- #check (abs_of_nonneg : 0 ≤ x → |x| = x)
 -- #check (le_or_gt x y : x ≤ y ∨ x > y)
 -- #check (le_refl x : x ≤ x)
--- #check (neg_le_abs_self x : -x ≤ |x|)
+-- #check (neg_le_abs x : -x ≤ |x|)
 -- #check (neg_le_self : 0 ≤ x → -x ≤ x)

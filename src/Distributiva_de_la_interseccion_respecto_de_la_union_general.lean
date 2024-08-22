@@ -107,7 +107,6 @@ by
       -- ⊢ ∃ i, x ∈ A i
       use i
       -- ⊢ x ∈ A i
-      exact xAi
 
 -- 3ª demostración
 -- ===============

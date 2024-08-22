@@ -24,7 +24,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
-import Mathlib.Data.Nat.GCD.Basic
+import Mathlib.Tactic
 
 open Nat
 

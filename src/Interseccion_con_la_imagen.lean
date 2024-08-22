@@ -205,8 +205,6 @@ by
     constructor
     . -- ⊢ y ∈ f '' s
       use x, xs
-      -- ⊢ f x = y
-      exact fxy
     . -- ⊢ y ∈ t
       rw [←fxy]
       -- ⊢ f x ∈ t

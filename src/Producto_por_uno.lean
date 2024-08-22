@@ -29,9 +29,9 @@ variable (a b : G)
 -- 1ª demostración
 example : a * 1 = a :=
 calc
-  a * 1 = a * (a⁻¹ * a) := by rw [mul_left_inv]
+  a * 1 = a * (a⁻¹ * a) := by rw [inv_mul_cancel]
       _ = (a * a⁻¹) * a := by rw [mul_assoc]
-      _ = 1 * a         := by rw [mul_right_inv]
+      _ = 1 * a         := by rw [mul_inv_cancel]
       _ = a             := by rw [one_mul]
 
 -- 2ª demostración
@@ -54,8 +54,8 @@ by exact mul_one a
 -- ============
 
 -- variable (c : G)
--- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (inv_mul_cancel a : a⁻¹  * a = 1)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_right_inv a : a * a⁻¹ = 1)
+-- #check (mul_inv_cancel a : a * a⁻¹ = 1)
 -- #check (one_mul a : 1 * a = a)
 -- #check (mul_one a : a * 1 = a)

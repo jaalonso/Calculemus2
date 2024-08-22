@@ -97,7 +97,7 @@ example :
   ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
 by
   intros x y ε he1 he2 hx hy
-  by_cases (|x| = 0)
+  by_cases h : (|x| = 0)
   . -- h : |x| = 0
     show |x * y| < ε
     calc
@@ -124,7 +124,7 @@ example :
   ∀ {x y ε : ℝ}, 0 < ε → ε ≤ 1 → |x| < ε → |y| < ε → |x * y| < ε :=
 by
   intros x y ε he1 he2 hx hy
-  by_cases (|x| = 0)
+  by_cases h : (|x| = 0)
   . -- h : |x| = 0
     show |x * y| < ε
     calc |x * y| = |x| * |y| := by simp only [abs_mul]

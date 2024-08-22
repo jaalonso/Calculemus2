@@ -10,6 +10,7 @@
 -- ----------------------------------------------------------------------
 
 import  Mathlib.Data.Real.Basic
+import  Mathlib.Tactic
 
 -- 1ª demostración
 -- ===============

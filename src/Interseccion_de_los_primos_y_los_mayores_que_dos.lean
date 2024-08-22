@@ -17,8 +17,7 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Nat.Parity
-import Mathlib.Data.Nat.Prime
+import Mathlib.Algebra.Ring.Parity
 import Mathlib.Tactic
 
 open Nat

@@ -49,7 +49,7 @@ by
   intro x (xs : x ∈ s)
   calc x ≤ a := h1 xs
        _ ≤ b := h2
--
+
 -- Lemas usados
 -- ============
 

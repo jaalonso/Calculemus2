@@ -47,7 +47,7 @@ by
   -- hb : ∀ (y : Hombre), afeita b y ↔ ¬afeita y y
   specialize hb b
   -- hb : afeita b b ↔ ¬afeita b b
-  by_cases (afeita b b)
+  by_cases h : afeita b b
   . -- h : afeita b b
     apply absurd h
     -- ⊢ ¬afeita b b
@@ -71,7 +71,7 @@ by
   -- hb : ∀ (y : Hombre), afeita b y ↔ ¬afeita y y
   specialize hb b
   -- hb : afeita b b ↔ ¬afeita b b
-  by_cases (afeita b b)
+  by_cases h : afeita b b
   . -- h : afeita b b
     exact (hb.mp h) h
   . -- h : ¬afeita b b

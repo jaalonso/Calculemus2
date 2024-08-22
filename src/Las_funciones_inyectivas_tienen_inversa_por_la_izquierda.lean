@@ -67,7 +67,7 @@ by
   intro a
   -- ⊢ g (f a) = a
   have h1 : ∃ x : α, f x = f a := Exists.intro a rfl
-  dsimp at *
+  simp only [g] at *
   -- ⊢ (if h : ∃ x, f x = f a then Exists.choose h else Classical.arbitrary α) = a
   simp [h1]
   -- ⊢ Exists.choose (_ : ∃ x, f x = f a) = a
@@ -90,7 +90,7 @@ by
   -- a : α
   -- ⊢ g (f a) = a
   have h1 : ∃ x : α, f x = f a := Exists.intro a rfl
-  dsimp at *
+  simp only [g] at *
   -- ⊢ (if h : ∃ x, f x = f a then Exists.choose h else Classical.arbitrary α) = a
   simp [h1]
   -- ⊢ Exists.choose (_ : ∃ x, f x = f a) = a

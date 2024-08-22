@@ -148,8 +148,6 @@ by
     rw [mem_iUnion]
     -- ⊢ ∃ i, x ∈ A i
     use i
-    -- ⊢ x ∈ A i
-    exact xAi
 
 -- 3ª demostración
 -- ===============
@@ -170,8 +168,6 @@ by
     -- xAi : x ∈ A i
     -- ⊢ ∃ i x, x ∈ A i ∧ f x = y
     use i, x, xAi
-    -- ⊢ f x = y
-    exact fxy
   . -- ⊢ (∃ i x, x ∈ A i ∧ f x = y) → ∃ x, (∃ i, x ∈ A i) ∧ f x = y
     rintro ⟨i, x, xAi, fxy⟩
     -- i : ℕ

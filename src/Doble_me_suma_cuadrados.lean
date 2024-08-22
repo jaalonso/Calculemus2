@@ -23,6 +23,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable (a b : ℝ)
 
@@ -30,7 +31,7 @@ variable (a b : ℝ)
 example : 2*a*b ≤ a^2 + b^2 :=
 by
   have h1 : 0 ≤ (a - b)^2         := sq_nonneg (a - b)
-  have h2 : 0 ≤ a^2 - 2*a*b + b^2 := by linarith only [h1]
+  have _h2 : 0 ≤ a^2 - 2*a*b + b^2 := by linarith only [h1]
   show 2*a*b ≤ a^2 + b^2
   linarith
 

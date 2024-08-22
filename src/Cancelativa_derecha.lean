@@ -51,11 +51,11 @@ example
   : a = c :=
 calc
   a = a + 0        := by rw [add_zero]
-  _ = a + (b + -b) := by rw [add_right_neg]
+  _ = a + (b + -b) := by rw [add_neg_cancel]
   _ = (a + b) + -b := by rw [add_assoc]
   _ = (c + b) + -b := by rw [h]
   _ = c + (b + -b) := by rw [← add_assoc]
-  _ = c + 0        := by rw [← add_right_neg]
+  _ = c + 0        := by rw [← add_neg_cancel]
   _ = c            := by rw [add_zero]
 
 -- 2ª demostración con Lean4
@@ -101,7 +101,7 @@ add_right_cancel h
 -- ============
 
 -- #check (add_assoc a b c : (a + b) + c = a + (b + c))
+-- #check (add_neg_cancel a : a + -a = 0)
 -- #check (add_neg_cancel_right a b : (a + b) + -b = a)
 -- #check (add_right_cancel : a + b = c + b → a = c)
--- #check (add_right_neg a : a + -a = 0)
 -- #check (add_zero a :  a + 0 = a)

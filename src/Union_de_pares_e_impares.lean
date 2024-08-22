@@ -29,10 +29,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Nat.Parity
-open Set
+import Mathlib.Algebra.Ring.Parity
 
-def Naturales : Set ℕ := {n | True}
+def Naturales : Set ℕ := {_n | True}
 def Pares     : Set ℕ := {n | Even n}
 def Impares   : Set ℕ := {n | ¬Even n}
 

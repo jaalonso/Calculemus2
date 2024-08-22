@@ -17,6 +17,7 @@
 -- =======================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 -- 1ª demostración
 example : ∃ x : ℝ, 2 < x ∧ x < 3 :=

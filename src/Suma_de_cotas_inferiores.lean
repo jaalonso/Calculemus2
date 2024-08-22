@@ -45,7 +45,7 @@ example
   (hgb : CotaInferior g b)
   : CotaInferior (f + g) (a + b) :=
 by
-  have h1 : ∀ x, a + b ≤ f x + g x
+  have h1 : ∀ x, a + b ≤ f x + g x := by
   { intro x
     have h1a : a ≤ f x := hfa x
     have h1b : b ≤ g x := hgb x
@@ -60,7 +60,7 @@ example
   (hgb : CotaInferior g b)
   : CotaInferior (f + g) (a + b) :=
 by
-  have h1 : ∀ x, a + b ≤ f x + g x
+  have h1 : ∀ x, a + b ≤ f x + g x := by
   { intro x
     show a + b ≤ f x + g x
     exact add_le_add (hfa x) (hgb x) }

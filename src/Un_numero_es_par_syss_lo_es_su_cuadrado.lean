@@ -33,7 +33,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Int.Parity
+-- import Mathlib.Data.Int.Parity
+import Mathlib.Algebra.Group.Even
 import Mathlib.Tactic
 open Int
 
@@ -155,7 +156,7 @@ example :
 calc Even (n^2)
      ↔ Even (n * n)      := iff_of_eq (congrArg Even (sq n))
    _ ↔ (Even n ∨ Even n) := even_mul
-   _ ↔ Even n            := or_self_iff (Even n)
+   _ ↔ Even n            := by rw [or_self_iff]
 
 -- 5ª demostración
 -- ===============

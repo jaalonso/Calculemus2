@@ -18,7 +18,7 @@
 -- Demostración con Lean4
 -- ======================
 
-import Mathlib.Data.Nat.Prime
+import Mathlib.Data.Nat.Prime.Defs
 import Mathlib.Tactic
 
 example :

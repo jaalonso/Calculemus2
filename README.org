@@ -5,6 +5,8 @@ En este repositorio se encuentran los ejercicios propuestos en el blog
 Isabelle/HOL). Es una continuación del [[https://github.com/jaalonso/Calculemus/blob/main/README.org][repositorio anterior]] en el que se
 usaba Lean3 en lugar de Lean4.
 
+Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
+
 * Demostraciones de una propiedad de los números enteros
 + [[./textos/El_producto_por_un_par_es_par.md][∀ m n ∈ ℕ, Even n → Even (m * n)]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean4]]).
 
@@ -289,7 +291,7 @@ usaba Lean3 en lugar de Lean4.
 + L29 [[./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md][Pruebas de length (replicate n x) = n]] (En [[./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean][Lean]] y en [[./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy][Isabelle]]).
 + X31 [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
 
-* Agosto
+* Agosto 2024
 + X07 [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) = length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
 + X14 [[./textos/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.md][Proofs of take n xs ++ drop n xs = xs]] (En [[./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean][Lean]] y en [[./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy][Isabelle]]).
 + L19 [[./textos/Pruebas_de_equivalencia_de_definiciones_de_inversa.md][Pruebas de equivalencia de definiciones de inversa]] (En [[./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean][Lean]] y en [[./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy][Isabelle]]).

@@ -23,6 +23,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable {c : ℝ}
 

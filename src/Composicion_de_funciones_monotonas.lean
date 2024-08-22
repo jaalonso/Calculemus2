@@ -35,7 +35,7 @@ example
   (mg : Monotone g)
   : Monotone (f ∘ g) :=
 by
-  have h1 : ∀ a b, a ≤ b → (f ∘ g) a ≤ (f ∘ g) b
+  have h1 : ∀ a b, a ≤ b → (f ∘ g) a ≤ (f ∘ g) b := by
   { intros a b hab
     have h1 : g a ≤ g b := mg hab
     show (f ∘ g) a ≤ (f ∘ g) b
@@ -49,7 +49,7 @@ example
   (mg : Monotone g)
   : Monotone (f ∘ g) :=
 by
-  have h1 : ∀ a b, a ≤ b → (f ∘ g) a ≤ (f ∘ g) b
+  have h1 : ∀ a b, a ≤ b → (f ∘ g) a ≤ (f ∘ g) b := by
   { intros a b hab
     show (f ∘ g) a ≤ (f ∘ g) b
     exact mf (mg hab) }

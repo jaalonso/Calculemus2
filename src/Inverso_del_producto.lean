@@ -36,9 +36,9 @@ calc
   (a * b) * (b⁻¹ * a⁻¹)
     = a * (b * (b⁻¹ * a⁻¹)) := by rw [mul_assoc]
   _ = a * ((b * b⁻¹) * a⁻¹) := by rw [mul_assoc]
-  _ = a * (1 * a⁻¹)         := by rw [mul_right_inv]
+  _ = a * (1 * a⁻¹)         := by rw [mul_inv_cancel]
   _ = a * a⁻¹               := by rw [one_mul]
-  _ = 1                     := by rw [mul_right_inv]
+  _ = 1                     := by rw [mul_inv_cancel]
 
 -- 1ª demostración
 -- ===============
@@ -95,6 +95,6 @@ by simp
 -- variable (c : G)
 -- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
+-- #check (mul_inv_cancel a : a * a⁻¹ = 1)
 -- #check (mul_inv_rev a b : (a * b)⁻¹ = b⁻¹ * a⁻¹)
--- #check (mul_right_inv a : a * a⁻¹ = 1)
 -- #check (one_mul a : 1 * a = a)

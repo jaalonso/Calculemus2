@@ -39,7 +39,7 @@ variable (x y : α)
 
 example : x ⊔ (x ⊓ y) = x :=
 by
-  have h1 : x ⊔ (x ⊓ y) ≤ x
+  have h1 : x ⊔ (x ⊓ y) ≤ x := by
   { have h1a : x ≤ x := le_rfl
     have h1b : x ⊓ y ≤ x := inf_le_left
     show x ⊔ (x ⊓ y) ≤ x

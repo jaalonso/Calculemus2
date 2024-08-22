@@ -28,19 +28,19 @@ variable (a b : R)
 -- 1ª demostración
 example : -a + (a + b) = b :=
 calc -a + (a + b) = (-a + a) + b := by rw [← add_assoc]
-                _ = 0 + b        := by rw [add_left_neg]
+                _ = 0 + b        := by rw [neg_add_cancel]
                 _ = b            := by rw [zero_add]
 
 -- 2ª demostración
 example : -a + (a + b) = b :=
 by
   rw [←add_assoc]
-  rw [add_left_neg]
+  rw [neg_add_cancel]
   rw [zero_add]
 
 -- 3ª demostración
 example : -a + (a + b) = b :=
-by rw [←add_assoc, add_left_neg, zero_add]
+by rw [←add_assoc, neg_add_cancel, zero_add]
 
 -- 4ª demostración
 example : -a + (a + b) = b :=
@@ -59,6 +59,6 @@ by simp
 
 -- variable (c : R)
 -- #check (add_assoc a b c : (a + b) + c = a + (b + c))
--- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel a : -a + a = 0)
 -- #check (neg_add_cancel_left a b : -a + (a + b) = b)
 -- #check (zero_add a :  0 + a = a)

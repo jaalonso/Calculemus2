@@ -33,6 +33,8 @@
 -- ========================
 
 import Mathlib.Data.Set.Basic
+import Mathlib.Tactic
+
 open Set
 
 variable {α : Type}
@@ -213,7 +215,7 @@ by
 
 example : (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t) :=
 by
-  rw [ext_iff]
+  rw [Set.ext_iff]
   -- ⊢ ∀ (x : α), x ∈ (s \ t) ∪ (t \ s) ↔ x ∈ (s ∪ t) \ (s ∩ t)
   intro
   -- x : α

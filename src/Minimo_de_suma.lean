@@ -50,6 +50,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable {a b c : ℝ}
 

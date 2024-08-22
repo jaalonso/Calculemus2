@@ -8,11 +8,11 @@
 -- Para extraer una subsucesión se aplica una función de extracción que
 -- conserva el orden; por ejemplo, la subsucesión
 --    uₒ, u₂, u₄, u₆, ...
--- se ha obtenido con la función de extracción φ tal que φ(n) = 2*n.
+-- se ha obtenido con la función de extracción f tal que f(n) = 2*n.
 --
--- En Lean4, se puede definir que φ es una función de extracción por
---    def extraccion (φ : ℕ → ℕ) :=
---      ∀ n m, n < m → φ n < φ m
+-- En Lean4, se puede definir que f es una función de extracción por
+--    def extraccion (f : ℕ → ℕ) :=
+--      ∀ n m, n < m → f n < f m
 -- que a es un límite de u por
 --    def limite (u : ℕ → ℝ) (a : ℝ) :=
 --      ∀ ε > 0, ∃ N, ∀ k ≥ N, |u k - a| < ε
@@ -21,7 +21,7 @@
 --      ∃ a, limite u a
 -- que a es un punto de acumulación de u por
 --    def punto_acumulacion (u : ℕ → ℝ) (a : ℝ) :=
---      ∃ φ, extraccion φ ∧ limite (u ∘ φ) a
+--      ∃ f, extraccion f ∧ limite (u ∘ f) a
 --
 -- Demostrar que si u es una sucesión convergente y a es un punto de
 -- acumulación de u, entonces a es un límite de u.
@@ -37,13 +37,13 @@
 --   mismo límite que la sucesión.
 --
 -- Puesto que a es un punto de acumulación de u, existe una función de
--- extracción φ tal que
---    a es límite de (u ∘ φ)                                         (1)
+-- extracción f tal que
+--    a es límite de (u ∘ f)                                         (1)
 --
 -- Por otro lado, por ser u convergente, existe un b tal que
 --    b es límite de u                                               (2)
 -- Por el Lema 2,
---    b es límite de (u ∘ φ)                                         (3)
+--    b es límite de (u ∘ f)                                         (3)
 --
 -- Por el Lema 1, (1) y (3)
 --   a = b                                                           (4)
@@ -54,13 +54,15 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 open Nat
 
 variable {u : ℕ → ℝ}
 variable {a : ℝ}
 
-def extraccion (φ : ℕ → ℕ) :=
-  ∀ n m, n < m → φ n < φ m
+def extraccion (f : ℕ → ℕ) :=
+  ∀ n m, n < m → f n < f m
 
 def limite (u : ℕ → ℝ) (a : ℝ) :=
   ∀ ε > 0, ∃ N, ∀ k ≥ N, |u k - a| < ε
@@ -69,7 +71,7 @@ def convergente (u : ℕ → ℝ) :=
   ∃ a, limite u a
 
 def punto_acumulacion (u : ℕ → ℝ) (a : ℝ) :=
-  ∃ φ, extraccion φ ∧ limite (u ∘ φ) a
+  ∃ f, extraccion f ∧ limite (u ∘ f) a
 
 -- Usaremos los siguientes lemas demostrados en ejercicios anteriores.
 
@@ -109,22 +111,22 @@ le_antisymm (unicidad_limite_aux hb ha)
             (unicidad_limite_aux ha hb)
 
 lemma limite_subsucesion_aux
-  (h : extraccion φ)
-  : ∀ n, n ≤ φ n :=
+  (h : extraccion f)
+  : ∀ n, n ≤ f n :=
 by
   intro n
   induction' n with m HI
-  . exact Nat.zero_le (φ 0)
+  . exact Nat.zero_le (f 0)
   . apply Nat.succ_le_of_lt
-    calc m ≤ φ m        := HI
-         _ < φ (succ m) := h m (m+1) (lt_add_one m)
+    calc m ≤ f m        := HI
+         _ < f (succ m) := h m (m+1) (lt_add_one m)
 
 lemma limite_subsucesion
-  {φ : ℕ → ℕ}
+  {f : ℕ → ℕ}
   {a : ℝ}
   (h : limite u a)
-  (hφ : extraccion φ)
-  : limite (u ∘ φ) a :=
+  (hf : extraccion f)
+  : limite (u ∘ f) a :=
 by
   intros ε hε
   -- ε : ℝ
@@ -138,11 +140,11 @@ by
   intros n hn
   -- n : ℕ
   -- hn : n ≥ N
-  have h1 : φ n ≥ N := calc
-    φ n ≥ n := by exact limite_subsucesion_aux hφ n
+  have h1 : f n ≥ N := calc
+    f n ≥ n := by exact limite_subsucesion_aux hf n
       _ ≥ N := hn
-  calc |(u ∘ φ ) n  - a| = |u (φ n) - a| := by exact rfl
-                       _ < ε             := hN (φ n) h1
+  calc |(u ∘ f ) n  - a| = |u (f n) - a| := by exact rfl
+                       _ < ε             := hN (f n) h1
 
 
 -- 1ª demostración
@@ -153,15 +155,15 @@ example
   (ha : punto_acumulacion u a)
   : limite u a :=
 by
-  rcases ha with ⟨φ, hφ₁, hφ₂⟩
-  -- φ : ℕ → ℕ
-  -- hφ₁ : extraccion φ
-  -- hφ₂ : limite (u ∘ φ) a
+  rcases ha with ⟨f, hf₁, hf₂⟩
+  -- f : ℕ → ℕ
+  -- hf₁ : extraccion f
+  -- hf₂ : limite (u ∘ f) a
   cases' hu with b hb
   -- b : ℝ
   -- hb : limite u b
-  have hφ₃ : limite (u ∘ φ) b := limite_subsucesion hb hφ₁
-  have h : a = b := unicidad_limite hφ₂ hφ₃
+  have hf₃ : limite (u ∘ f) b := limite_subsucesion hb hf₁
+  have h : a = b := unicidad_limite hf₂ hf₃
   rwa [h]
 
 -- 2ª demostración
@@ -180,13 +182,13 @@ by
   convert hb
   -- ⊢ a = b
   unfold punto_acumulacion at ha
-  -- ha : ∃ φ, extraccion φ ∧ limite (u ∘ φ) a
-  rcases ha with ⟨φ, hφ₁, hφ₂⟩
-  -- φ : ℕ → ℕ
-  -- hφ₁ : extraccion φ
-  -- hφ₂ : limite (u ∘ φ) a
-  have hφ₃ : limite (u ∘ φ) b := limite_subsucesion hb hφ₁
-  exact unicidad_limite hφ₂ hφ₃
+  -- ha : ∃ f, extraccion f ∧ limite (u ∘ f) a
+  rcases ha with ⟨f, hf₁, hf₂⟩
+  -- f : ℕ → ℕ
+  -- hf₁ : extraccion f
+  -- hf₂ : limite (u ∘ f) a
+  have hf₃ : limite (u ∘ f) b := limite_subsucesion hb hf₁
+  exact unicidad_limite hf₂ hf₃
 
 -- 3ª demostración
 -- ===============
@@ -201,13 +203,13 @@ by
   -- hb : limite u b
   convert hb
   -- ⊢ a = b
-  rcases ha with ⟨φ, hφ₁, hφ₂⟩
-  -- φ : ℕ → ℕ
-  -- hφ₁ : extraccion φ
-  -- hφ₂ : limite (u ∘ φ) a
-  apply unicidad_limite hφ₂ _
-  -- ⊢ limite (u ∘ φ) b
-  exact limite_subsucesion hb hφ₁
+  rcases ha with ⟨f, hf₁, hf₂⟩
+  -- f : ℕ → ℕ
+  -- hf₁ : extraccion f
+  -- hf₂ : limite (u ∘ f) a
+  apply unicidad_limite hf₂ _
+  -- ⊢ limite (u ∘ f) b
+  exact limite_subsucesion hb hf₁
 
 -- 4ª demostración
 -- ===============
@@ -222,11 +224,11 @@ by
   -- hb : limite u b
   convert hb
   -- ⊢ a = b
-  rcases ha with ⟨φ, hφ₁, hφ₂⟩
-  -- φ : ℕ → ℕ
-  -- hφ₁ : extraccion φ
-  -- hφ₂ : limite (u ∘ φ) a
-  exact unicidad_limite hφ₂ (limite_subsucesion hb hφ₁)
+  rcases ha with ⟨f, hf₁, hf₂⟩
+  -- f : ℕ → ℕ
+  -- hf₁ : extraccion f
+  -- hf₂ : limite (u ∘ f) a
+  exact unicidad_limite hf₂ (limite_subsucesion hb hf₁)
 
 -- Lemas usados
 -- ============

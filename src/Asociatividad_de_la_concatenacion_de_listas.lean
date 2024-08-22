@@ -114,9 +114,9 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
+  induction' xs with a as
   . simp
-  . exact (cons_inj a).mpr HI
+  . exact (append_assoc (a :: as) ys zs).symm
 
 -- 6ª demostración
 -- ===============

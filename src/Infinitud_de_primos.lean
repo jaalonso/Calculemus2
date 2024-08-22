@@ -45,7 +45,7 @@
 -- ======================
 
 import Mathlib.Tactic
-import Mathlib.Data.Nat.Prime
+import Mathlib.Data.Nat.Prime.Defs
 open Nat
 
 -- 1ª demostración
@@ -77,7 +77,6 @@ by
     exact (Nat.Prime.not_dvd_one h1) h7
   . -- ⊢ Nat.Prime p
     exact h1
-  done
 
 -- 2ª demostración
 -- ===============

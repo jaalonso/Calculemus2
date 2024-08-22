@@ -36,11 +36,11 @@ example
   (h: a * b = a  * c)
   : b = c :=
 calc b = 1 * b         := (one_mul b).symm
-     _ = (a⁻¹ * a) * b := congrArg (. * b) (inv_mul_self a).symm
+     _ = (a⁻¹ * a) * b := congrArg (. * b) (inv_mul_cancel a).symm
      _ = a⁻¹ * (a * b) := mul_assoc a⁻¹ a b
      _ = a⁻¹ * (a * c) := congrArg (a⁻¹ * .) h
      _ = (a⁻¹ * a) * c := (mul_assoc a⁻¹ a c).symm
-     _ = 1 * c         := congrArg (. * c) (inv_mul_self a)
+     _ = 1 * c         := congrArg (. * c) (inv_mul_cancel a)
      _ = c             := one_mul c
 
 -- 2ª demostración
@@ -50,11 +50,11 @@ example
   (h: a * b = a  * c)
   : b = c :=
 calc b = 1 * b         := by rw [one_mul]
-     _ = (a⁻¹ * a) * b := by rw [inv_mul_self]
+     _ = (a⁻¹ * a) * b := by rw [inv_mul_cancel]
      _ = a⁻¹ * (a * b) := by rw [mul_assoc]
      _ = a⁻¹ * (a * c) := by rw [h]
      _ = (a⁻¹ * a) * c := by rw [mul_assoc]
-     _ = 1 * c         := by rw [inv_mul_self]
+     _ = 1 * c         := by rw [inv_mul_cancel]
      _ = c             := by rw [one_mul]
 
 -- 3ª demostración
@@ -100,7 +100,7 @@ by aesop
 -- Lemas usados
 -- ============
 
--- #check (inv_mul_self a : a⁻¹ * a = 1)
+-- #check (inv_mul_cancel a : a⁻¹ * a = 1)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
 -- #check (mul_left_cancel : a * b = a * c → b = c)
 -- #check (one_mul a : 1 * a = a)

@@ -73,7 +73,7 @@ by
   set P := {a : Set X | ∃ s : X, a = clase R s}
   constructor
   . -- ⊢ (∀ x, ∃ B, B ∈ P) ∧ x ∈ B ∧ (∀ C, C ∈ P → x ∈ C → B = C)
-    simp
+    simp [P]
     -- ⊢ (∀ x, ∃ B, (∃ s, B = clase R s)) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
     intro x
     -- x : X
@@ -99,7 +99,7 @@ by
         . -- ⊢ clase R a ≤ clase R x
           exact aux h (h.2 ha)
   . -- ⊢ ¬∅ ∈ P
-    simp
+    simp [P]
     -- ⊢ ∀ (x : X), ¬∅ = clase R x
     intros x hx
     -- x : X
@@ -120,7 +120,7 @@ by
   set P := {a : Set X | ∃ s : X, a = clase R s}
   constructor
   . -- ⊢ (∀ x, ∃ B, B ∈ P) ∧ x ∈ B ∧ (∀ C, C ∈ P → x ∈ C → B = C)
-    simp
+    simp [P]
     -- ⊢ (∀ x, ∃ B, (∃ s, B = clase R s)) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
     intro x
     -- x : X
@@ -137,7 +137,7 @@ by
       -- ⊢ clase R a = clase R a
       exact le_antisymm (aux h ha) (aux h (h.2 ha))
   . -- ⊢ ¬∅ ∈ P
-    simp
+    simp [P]
     -- ⊢ ∀ (x : X), ¬∅ = clase R x
     intros x hx
     -- x : X

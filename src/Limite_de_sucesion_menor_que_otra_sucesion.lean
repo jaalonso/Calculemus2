@@ -54,6 +54,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable (u v : ℕ → ℝ)
 variable (a c : ℝ)
@@ -109,7 +110,7 @@ by
   by_contra h
   -- h : ¬a ≤ c
   -- ⊢ False
-  have hca : c < a := not_le.mp h
+  have _hca : c < a := not_le.mp h
   set ε := (a - c) /2 with hε
   obtain ⟨ku, hku : ∀ n, n ≥ ku → |u n - a| < ε⟩ := hu ε (by linarith)
   obtain ⟨kv, hkv : ∀ n, n ≥ kv → |v n - c| < ε⟩ := hv ε (by linarith)
@@ -142,7 +143,7 @@ by
   by_contra h
   -- h : ¬a ≤ c
   -- ⊢ False
-  have hca : c < a := not_le.mp h
+  have _hca : c < a := not_le.mp h
   set ε := (a - c) /2 with hε
   obtain ⟨ku, hku : ∀ n, n ≥ ku → |u n - a| < ε⟩ := hu ε (by linarith)
   obtain ⟨kv, hkv : ∀ n, n ≥ kv → |v n - c| < ε⟩ := hv ε (by linarith)
@@ -158,7 +159,7 @@ by
        _ ≤ |a - u k| + |v k - c|   := by simp [abs_add]
        _ = |u k - a| + |v k - c|   := by simp [abs_sub_comm]
        _ < ε + ε                   := add_lt_add ha hc
-       _ = a - c                   := by simp
+       _ = a - c                   := by simp [hε]
   have hac2 : ¬ a - c < a -c := lt_irrefl (a - c)
   show False
   exact hac2 hac1

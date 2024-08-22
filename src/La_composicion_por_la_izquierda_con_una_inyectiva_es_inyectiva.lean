@@ -92,13 +92,13 @@ example
   (hg : Injective g)
   (hgf : g ∘ f₁ = g ∘ f₂)
   : f₁ = f₂ :=
-calc f₁ = id ∘ f₁         := (left_id f₁).symm
+calc f₁ = id ∘ f₁         := (id_comp f₁).symm
  _ = (invFun g ∘ g) ∘ f₁  := congrArg (. ∘ f₁) (invFun_comp hg).symm
  _ = invFun g ∘ (g ∘ f₁)  := comp.assoc (invFun g) g f₁
  _ = invFun g ∘ (g ∘ f₂)  := congrArg (invFun g ∘ .) hgf
  _ = (invFun g ∘ g) ∘ f₂  := comp.assoc (invFun g) g f₂
  _ = id ∘ f₂              := congrArg (. ∘ f₂) (invFun_comp hg)
- _ = f₂                   := left_id f₂
+ _ = f₂                   := id_comp f₂
 
 -- 6ª demostración
 -- ===============
@@ -130,4 +130,4 @@ calc f₁ = id ∘ f₁        := by aesop
 -- #check (congr_fun : f₁ = f₂ → ∀ x, f₁ x = f₂ x)
 -- #check (funext : (∀ x, f₁ x = f₂ x) → f₁ = f₂)
 -- #check (invFun_comp : Injective f' → invFun f' ∘ f' = id)
--- #check (left_id f₁ : id ∘ f₁ = f₁)
+-- #check (id_comp f₁ : id ∘ f₁ = f₁)

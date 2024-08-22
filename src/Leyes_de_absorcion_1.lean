@@ -46,11 +46,11 @@ variable (x y : α)
 example : x ⊓ (x ⊔ y) = x :=
 by
   have h1 : x ⊓ (x ⊔ y) ≤ x := inf_le_left
-  have h2 : x ≤ x ⊓ (x ⊔ y)
+  have h2 : x ≤ x ⊓ (x ⊔ y) := by
   { have h2a : x ≤ x := le_rfl
     have h2b : x ≤ x ⊔ y := le_sup_left
     show x ≤ x ⊓ (x ⊔ y)
-    exact le_inf h2a h2b }
+    exact le_inf h2a h2b  }
   show x ⊓ (x ⊔ y) = x
   exact le_antisymm h1 h2
 

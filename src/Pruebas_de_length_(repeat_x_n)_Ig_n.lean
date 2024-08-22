@@ -79,10 +79,9 @@ by
 
 example : length (replicate n x) = n :=
 by
-  induction' n with n HI
+  induction' n
   . rfl
-  . dsimp
-    rw [HI]
+  . simp
 
 -- 4ª demostración
 -- ===============

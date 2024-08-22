@@ -11,17 +11,17 @@
 -- Para extraer una subsucesión se aplica una función de extracción que
 -- conserva el orden; por ejemplo, la subsucesión
 --    uₒ, u₂, u₄, u₆, ...
--- se ha obtenido con la función de extracción φ tal que φ(n) = 2*n.
+-- se ha obtenido con la función de extracción f tal que f(n) = 2*n.
 --
--- En Lean4, se puede definir que φ es una función de extracción por
---    def extraccion (φ : ℕ → ℕ) :=
---      ∀ n m, n < m → φ n < φ m
+-- En Lean4, se puede definir que f es una función de extracción por
+--    def extraccion (f : ℕ → ℕ) :=
+--      ∀ n m, n < m → f n < f m
 -- que a es un límite de u por
 --    def limite (u : ℕ → ℝ) (a : ℝ) :=
 --      ∀ ε > 0, ∃ N, ∀ k ≥ N, |u k - a| < ε
 -- que a es un punto de acumulación de u por
 --    def punto_acumulacion (u : ℕ → ℝ) (a : ℝ) :=
---      ∃ φ, extraccion φ ∧ limite (u ∘ φ) a
+--      ∃ f, extraccion f ∧ limite (u ∘ f) a
 -- que la sucesión u es de Cauchy por
 --    def suc_cauchy (u : ℕ → ℝ) :=
 --      ∀ ε > 0, ∃ N, ∀ p ≥ N, ∀ q ≥ N, |u p - u q| < ε
@@ -61,38 +61,40 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 open Nat
 
 variable {u : ℕ → ℝ}
 variable {a : ℝ}
-variable {φ : ℕ → ℕ}
+variable {f : ℕ → ℕ}
 
-def extraccion (φ : ℕ → ℕ) :=
-  ∀ n m, n < m → φ n < φ m
+def extraccion (f : ℕ → ℕ) :=
+  ∀ n m, n < m → f n < f m
 
 def limite (u : ℕ → ℝ) (l : ℝ) : Prop :=
   ∀ ε > 0, ∃ N, ∀ n ≥ N, |u n - l| < ε
 
 def punto_acumulacion (u : ℕ → ℝ) (a : ℝ) :=
-  ∃ φ, extraccion φ ∧ limite (u ∘ φ) a
+  ∃ f, extraccion f ∧ limite (u ∘ f) a
 
 def suc_cauchy (u : ℕ → ℝ) :=
   ∀ ε > 0, ∃ N, ∀ p ≥ N, ∀ q ≥ N, |u p - u q| < ε
 
 lemma aux1
-  (h : extraccion φ)
-  : ∀ n, n ≤ φ n :=
+  (h : extraccion f)
+  : ∀ n, n ≤ f n :=
 by
   intro n
   induction' n with m HI
-  . exact Nat.zero_le (φ 0)
+  . exact Nat.zero_le (f 0)
   . apply Nat.succ_le_of_lt
-    calc m ≤ φ m        := HI
-         _ < φ (succ m) := h m (m+1) (lt_add_one m)
+    calc m ≤ f m        := HI
+         _ < f (succ m) := h m (m+1) (lt_add_one m)
 
 lemma aux2
-  (h : extraccion φ)
-  : ∀ N N', ∃ n ≥ N', φ n ≥ N :=
+  (h : extraccion f)
+  : ∀ N N', ∃ n ≥ N', f n ≥ N :=
 fun N N' ↦ ⟨max N N', ⟨le_max_right N N',
                        le_trans (le_max_left N N')
                                 (aux1 h (max N N'))⟩⟩
@@ -102,10 +104,10 @@ lemma cerca_acumulacion
   : ∀ ε > 0, ∀ N, ∃ n ≥ N, |u n - a| < ε :=
 by
   intros ε hε N
-  rcases h with ⟨φ, hφ1, hφ2⟩
-  cases' hφ2 ε hε with N' hN'
-  rcases aux2 hφ1 N N' with ⟨m, hm, hm'⟩
-  exact ⟨φ m, hm', hN' _ hm⟩
+  rcases h with ⟨f, hf1, hf2⟩
+  cases' hf2 ε hε with N' hN'
+  rcases aux2 hf1 N N' with ⟨m, hm, hm'⟩
+  exact ⟨f m, hm', hN' _ hm⟩
 
 -- 1ª demostración
 -- ===============

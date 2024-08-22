@@ -50,6 +50,8 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 variable {s t : ℕ → ℝ} {a b c : ℝ}
 
 def limite (s : ℕ → ℝ) (a : ℝ) :=

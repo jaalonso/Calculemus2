@@ -34,6 +34,8 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 variable {x : ℝ}
 
 -- 1ª demostración

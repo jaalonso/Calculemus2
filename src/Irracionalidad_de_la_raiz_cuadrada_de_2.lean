@@ -40,8 +40,8 @@
 -- ========================
 
 import Mathlib.Tactic
-import Mathlib.Data.Nat.Prime
-import Std.Data.Nat.Gcd
+import Mathlib.Data.Nat.Prime.Defs
+
 open Nat
 variable {m n : ℕ}
 
@@ -51,10 +51,10 @@ lemma par_si_cuadrado_par
 by
   rw [pow_two] at h
   -- h : 2 ∣ n * n
-  have h2 : 2 ∣ n ∨ 2 ∣ n := (Prime.dvd_mul prime_two).mp h
+  have h2 : 2 ∣ n ∨ 2 ∣ n := (Nat.Prime.dvd_mul prime_two).mp h
   tauto
 
-example : ¬∃ m n, coprime m n ∧ m ^ 2 = 2 * n ^ 2 :=
+example : ¬∃ m n, Coprime m n ∧ m ^ 2 = 2 * n ^ 2 :=
 by
   rintro ⟨m, n, ⟨h1, h2⟩⟩
   -- m n : ℕ

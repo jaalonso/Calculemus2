@@ -43,7 +43,7 @@ by
   -- ⊢ c * ((x - d) / c) + d = x
   show c * ((x - d) / c) + d = x
   calc c * ((x - d) / c) + d
-         = (x - d) + d := congrArg (. + d) (mul_div_cancel' (x - d) h)
+         = (x - d) + d := congrArg (. + d) (mul_div_cancel₀ (x - d) h)
        _ = x           := sub_add_cancel x d
 
 -- 2ª demostración
@@ -60,7 +60,7 @@ by
   -- ⊢ (fun x => c * x + d) ((x - d) / c) = x
   dsimp
   -- ⊢ c * ((x - d) / c) + d = x
-  simp [mul_div_cancel', h]
+  simp [mul_div_cancel₀, h]
 
 -- 3ª demostración
 -- ===============
@@ -74,7 +74,7 @@ by
   -- ⊢ ∃ a, (fun x => c * x + d) a = x
   use ((x - d) / c)
   -- ⊢ (fun x => c * x + d) ((x - d) / c) = x
-  simp [mul_div_cancel', h]
+  simp [mul_div_cancel₀, h]
 
 -- 4ª demostración
 -- ===============
@@ -82,11 +82,11 @@ by
 example
   (h : c ≠ 0)
   : Surjective (fun x ↦ c * x + d) :=
-fun x ↦ ⟨(x - d) / c, by simp [mul_div_cancel', h]⟩
+fun x ↦ ⟨(x - d) / c, by simp [mul_div_cancel₀, h]⟩
 
 -- Lemas usados
 -- ============
 
 -- variable (a b : ℝ)
--- #check (mul_div_cancel' a : b ≠ 0 → b * (a / b) = a)
+-- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
 -- #check (sub_add_cancel a b : a - b + b = a)

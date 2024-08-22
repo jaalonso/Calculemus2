@@ -26,7 +26,7 @@ variable (a : R)
 
 example : a + -a = 0 :=
 calc a + -a = -a + a := by rw [add_comm]
-          _ = 0      := by rw [add_left_neg]
+          _ = 0      := by rw [neg_add_cancel]
 
 -- 2ª demostración
 -- ===============
@@ -34,25 +34,25 @@ calc a + -a = -a + a := by rw [add_comm]
 example : a + -a = 0 :=
 by
   rw [add_comm]
-  rw [add_left_neg]
+  rw [neg_add_cancel]
 
 -- 3ª demostración
 -- ===============
 
 example : a + -a = 0 :=
-by rw [add_comm, add_left_neg]
+by rw [add_comm, neg_add_cancel]
 
 -- 4ª demostración
 -- ===============
 
 example : a + -a = 0 :=
-by exact add_neg_self a
+by exact add_neg_cancel a
 
 -- 5ª demostración
 -- ===============
 
 example : a + -a = 0 :=
-  add_neg_self a
+  add_neg_cancel a
 
 -- 6ª demostración
 -- ===============
@@ -65,5 +65,5 @@ by simp
 
 -- variable (a b : R)
 -- #check (add_comm a b : a + b = b + a)
--- #check (add_left_neg a : -a + a = 0)
--- #check (add_neg_self a : a + -a = 0)
+-- #check (add_neg_cancel a : a + -a = 0)
+-- #check (neg_add_cancel a : -a + a = 0)

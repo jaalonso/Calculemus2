@@ -52,11 +52,10 @@ by
   rcases h2 with ⟨a, ha : ¬∀ y, a ≤ y → f a ≤ f y⟩
   have h3 : ∃ y, ¬(a ≤ y → f a ≤ f y) := not_forall.mp ha
   rcases h3 with ⟨b, hb : ¬(a ≤ b → f a ≤ f b)⟩
-  have h4 : a ≤ b ∧ ¬(f a ≤ f b) := not_imp.mp hb
+  have h4 : a ≤ b ∧ ¬(f a ≤ f b) := Classical.not_imp.mp hb
   have h5 : a ≤ b ∧ f b < f a := ⟨h4.1, lt_of_not_le h4.2⟩
   use a, b
   -- ⊢ a ≤ b ∧ f b < f a
-  exact h5
 
 -- 2ª demostración
 -- ===============

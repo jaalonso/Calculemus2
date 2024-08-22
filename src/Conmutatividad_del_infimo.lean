@@ -83,13 +83,13 @@ by apply le_antisymm; simp ; simp
 
 -- 5ª demostración
 example : x ⊓ y = y ⊓ x :=
--- by apply?
-inf_comm
+-- by exact?
+inf_comm x y
 
 -- Lemas usados
 -- ============
 
--- #check (inf_comm : x ⊓ y = y ⊓ x)
+-- #check (inf_comm x y : x ⊓ y = y ⊓ x)
 -- #check (inf_le_left : x ⊓ y ≤ x)
 -- #check (inf_le_right : x ⊓ y ≤ y)
 -- #check (le_antisymm : x ≤ y → y ≤ x → x = y)

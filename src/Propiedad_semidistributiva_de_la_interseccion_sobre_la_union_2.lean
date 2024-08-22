@@ -24,6 +24,8 @@
 -- ========================
 
 import Mathlib.Data.Set.Basic
+import Mathlib.Tactic
+
 open Set
 
 variable {α : Type}
@@ -85,7 +87,7 @@ by
 -- ===============
 
 example : (s ∩ t) ∪ (s ∩ u) ⊆ s ∩ (t ∪ u):=
-by rw [inter_distrib_left s t u]
+by rw [inter_union_distrib_left s t u]
 
 -- 4ª demostración
 -- ===============

@@ -33,9 +33,9 @@ variable {a : G}
 example : (a⁻¹)⁻¹ = a :=
 calc (a⁻¹)⁻¹
      = (a⁻¹)⁻¹ * 1         := (mul_one (a⁻¹)⁻¹).symm
-   _ = (a⁻¹)⁻¹ * (a⁻¹ * a) := congrArg ((a⁻¹)⁻¹ * .) (inv_mul_self a).symm
+   _ = (a⁻¹)⁻¹ * (a⁻¹ * a) := congrArg ((a⁻¹)⁻¹ * .) (inv_mul_cancel a).symm
    _ = ((a⁻¹)⁻¹ * a⁻¹) * a := (mul_assoc _ _ _).symm
-   _ = 1 * a               := congrArg (. * a) (inv_mul_self a⁻¹)
+   _ = 1 * a               := congrArg (. * a) (inv_mul_cancel a⁻¹)
    _ = a                   := one_mul a
 
 -- 2ª demostración
@@ -44,9 +44,9 @@ calc (a⁻¹)⁻¹
 example : (a⁻¹)⁻¹ = a :=
 calc (a⁻¹)⁻¹
      = (a⁻¹)⁻¹ * 1         := by simp only [mul_one]
-   _ = (a⁻¹)⁻¹ * (a⁻¹ * a) := by simp only [inv_mul_self]
+   _ = (a⁻¹)⁻¹ * (a⁻¹ * a) := by simp only [inv_mul_cancel]
    _ = ((a⁻¹)⁻¹ * a⁻¹) * a := by simp only [mul_assoc]
-   _ = 1 * a               := by simp only [inv_mul_self]
+   _ = 1 * a               := by simp only [inv_mul_cancel]
    _ = a                   := by simp only [one_mul]
 
 -- 3ª demostración
@@ -67,13 +67,13 @@ example : (a⁻¹)⁻¹ = a :=
 by
   apply mul_eq_one_iff_inv_eq.mp
   -- ⊢ a⁻¹ * a = 1
-  exact mul_left_inv a
+  exact inv_mul_cancel a
 
 -- 5ª demostración
 -- ===============
 
 example : (a⁻¹)⁻¹ = a :=
-mul_eq_one_iff_inv_eq.mp (mul_left_inv a)
+mul_eq_one_iff_inv_eq.mp (inv_mul_cancel a)
 
 -- 6ª demostración
 -- ===============
@@ -92,9 +92,8 @@ by simp
 
 -- variable (b c : G)
 -- #check (inv_inv a : (a⁻¹)⁻¹ = a)
--- #check (inv_mul_self a : a⁻¹ * a = 1)
+-- #check (inv_mul_cancel a : a⁻¹  * a = 1)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
 -- #check (mul_eq_one_iff_inv_eq : a * b = 1 ↔ a⁻¹ = b)
--- #check (mul_left_inv a : a⁻¹  * a = 1)
 -- #check (mul_one a : a * 1 = a)
 -- #check (one_mul a : 1 * a = a)

@@ -35,6 +35,8 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 variable {x y : ℝ}
 
 -- 1ª demostración
@@ -51,7 +53,7 @@ by
     show |x + y| ≤ |x| + |y|
     calc |x + y| = -(x + y)  := by exact abs_of_neg h2
                _ = -x + -y   := by exact neg_add x y
-               _ ≤ |x| + |y| := add_le_add (neg_le_abs_self x) (neg_le_abs_self y)
+               _ ≤ |x| + |y| := add_le_add (neg_le_abs x) (neg_le_abs y)
 
 -- 2ª demostración
 -- ===============
@@ -66,7 +68,7 @@ example : |x + y| ≤ |x| + |y| := by
     rw [abs_of_neg h2]
     -- ⊢ -(x + y) ≤ |x| + |y|
     calc -(x + y) = -x + -y    := by exact neg_add x y
-                _ ≤ |x| + |y|  := add_le_add (neg_le_abs_self x) (neg_le_abs_self y)
+                _ ≤ |x| + |y|  := add_le_add (neg_le_abs x) (neg_le_abs y)
 
 -- 2ª demostración
 -- ===============
@@ -80,7 +82,7 @@ example : |x + y| ≤ |x| + |y| := by
   . -- h2 : 0 > x + y
     rw [abs_of_neg h2]
     -- ⊢ -(x + y) ≤ |x| + |y|
-    linarith [neg_le_abs_self x, neg_le_abs_self y]
+    linarith [neg_le_abs x, neg_le_abs y]
 
 -- 3ª demostración
 -- ===============
@@ -99,4 +101,4 @@ example : |x + y| ≤ |x| + |y| :=
 -- #check (le_abs_self a : a ≤ |a|)
 -- #check (le_or_gt x y : x ≤ y ∨ x > y)
 -- #check (neg_add x y : -(x + y) = -x + -y)
--- #check (neg_le_abs_self x : -x ≤ |x|)
+-- #check (neg_le_abs x : -x ≤ |x|)

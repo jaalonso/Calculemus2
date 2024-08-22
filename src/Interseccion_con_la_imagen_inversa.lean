@@ -212,8 +212,6 @@ by
     constructor
     . -- ⊢ y ∈ f '' s
       use x, xs
-      -- ⊢ f x = y
-      exact fxy
     . -- ⊢ y ∈ v
       rw [←fxy]
       -- ⊢ f x ∈ v

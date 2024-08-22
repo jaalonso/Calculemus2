@@ -38,7 +38,7 @@ example
   (nnc : 0 ≤ c)
   : Monotone (fun x ↦ c * f x) :=
 by
-  have h1 : ∀ a b, a ≤ b → (fun x ↦ c * f x) a ≤ (fun x ↦ c * f x) b
+  have h1 : ∀ a b, a ≤ b → (fun x ↦ c * f x) a ≤ (fun x ↦ c * f x) b := by
   { intros a b hab
     have h2 : f a ≤ f b := mf hab
     show (fun x ↦ c * f x) a ≤ (fun x ↦ c * f x) b

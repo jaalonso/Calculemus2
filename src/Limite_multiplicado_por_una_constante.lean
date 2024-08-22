@@ -91,7 +91,7 @@ by
          = |c * (u n - a)| := congr_arg abs (mul_sub c (u n) a).symm
        _ = |c| * |u n - a| := abs_mul c  (u n - a)
        _ < |c| * (ε / |c|) := (mul_lt_mul_left hc').mpr hN
-       _ = ε               := mul_div_cancel' ε (ne_of_gt hc')
+       _ = ε               := mul_div_cancel₀ ε (ne_of_gt hc')
 
 -- 2ª demostración
 -- ===============
@@ -169,6 +169,6 @@ by
 -- #check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
 -- #check (div_pos : 0 < a → 0 < b → 0 < a / b)
 -- #check (lt_div_iff' : 0 < c → (a < b / c ↔ c * a < b))
--- #check (mul_div_cancel' a : b ≠ 0 → b * (a / b) = a)
+-- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
 -- #check (mul_lt_mul_left : 0 < a → (a * b < a * c ↔ b < c))
 -- #check (mul_sub a b c : a * (b - c) = a * b - a * c)

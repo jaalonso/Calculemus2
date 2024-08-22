@@ -81,14 +81,6 @@ by
   -- hAP : A ∈ P
   -- hxA : x ∈ A
   use A
-  -- ⊢ A ∈ P ∧ x ∈ A ∧ x ∈ A
-  repeat' constructor
-  . -- ⊢ A ∈ P
-    exact hAP
-  . -- ⊢ x ∈ A
-    exact hxA
-  . -- ⊢ x ∈ A
-    exact hxA
 
 -- 3ª demostración
 -- ===============
@@ -105,14 +97,6 @@ by
   -- hAP : A ∈ P
   -- hxA : x ∈ A
   use A
-  -- ⊢ A ∈ P ∧ x ∈ A ∧ x ∈ A
-  repeat' constructor
-  . -- ⊢ A ∈ P
-    assumption
-  . -- ⊢ x ∈ A
-    assumption
-  . -- ⊢ x ∈ A
-    assumption
 
 -- 4ª demostración
 -- ===============
@@ -129,11 +113,3 @@ by
   -- hAP : A ∈ P
   -- hxA : x ∈ A
   use A
-  -- ⊢ A ∈ P ∧ x ∈ A ∧ x ∈ A
-  repeat' constructor
-  . -- ⊢ A ∈ P
-    assumption
-  . -- ⊢ x ∈ A
-    assumption
-  . -- ⊢ x ∈ A
-    assumption

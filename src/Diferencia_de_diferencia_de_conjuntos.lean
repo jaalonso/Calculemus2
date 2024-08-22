@@ -26,6 +26,8 @@
 -- ========================
 
 import Mathlib.Data.Set.Basic
+import Mathlib.Tactic
+
 open Set
 
 variable {α : Type}

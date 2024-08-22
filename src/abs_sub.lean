@@ -45,7 +45,7 @@ calc |a| - |b|
    _ ≤ (|a - b| + |b|) - |b| :=
            sub_le_sub_right (abs_add (a - b) b) (|b|)
    _ = |a - b| :=
-          add_sub_cancel (|a - b|) (|b|)
+          add_sub_cancel_right (|a - b|) (|b|)
 
 -- 2ª demostración (basada en la 1ª en LN)
 example : |a| - |b| ≤ |a - b| :=
@@ -56,7 +56,7 @@ calc |a| - |b|
           apply sub_le_sub_right
           apply abs_add
    _ = |a - b| := by
-          rw [add_sub_cancel]
+          rw [add_sub_cancel_right]
 
 -- 3ª demostración (basada en la 2ª en LN)
 example : |a| - |b| ≤ |a - b| :=
@@ -74,6 +74,6 @@ abs_sub_abs_le_abs_sub a b
 
 -- #check (abs_add a b : |a + b| ≤ |a| + |b|)
 -- #check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
--- #check (add_sub_cancel a b : a + b - b = a)
+-- #check (add_sub_cancel_right a b : a + b - b = a)
 -- #check (sub_add_cancel a b : a - b + b = a)
 -- #check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)

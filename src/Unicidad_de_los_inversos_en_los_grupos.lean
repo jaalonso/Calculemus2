@@ -37,7 +37,7 @@ example
 calc a⁻¹ = a⁻¹ * 1  := (mul_one a⁻¹).symm
   _ = a⁻¹ * (a * b) := congrArg (a⁻¹ * .) h.symm
   _ = (a⁻¹ * a) * b := (mul_assoc a⁻¹ a b).symm
-  _ = 1 * b         := congrArg (. * b) (inv_mul_self a)
+  _ = 1 * b         := congrArg (. * b) (inv_mul_cancel a)
   _ = b             := one_mul b
 
 -- 2ª demostración
@@ -49,7 +49,7 @@ example
 calc a⁻¹ = a⁻¹ * 1       := by simp only [mul_one]
        _ = a⁻¹ * (a * b) := by simp only [h]
        _ = (a⁻¹ * a) * b := by simp only [mul_assoc]
-       _ = 1 * b         := by simp only [inv_mul_self]
+       _ = 1 * b         := by simp only [inv_mul_cancel]
        _ = b             := by simp only [one_mul]
 
 -- 3ª demostración
@@ -86,7 +86,7 @@ eq_inv_iff_mul_eq_one.mpr h
 
 -- variable (c : G)
 -- #check (eq_inv_iff_mul_eq_one : a = b⁻¹ ↔ a * b = 1)
--- #check (inv_mul_self a : a⁻¹ * a = 1)
+-- #check (inv_mul_cancel a : a⁻¹ * a = 1)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
 -- #check (mul_one a : a * 1 = a)
 -- #check (one_mul a : 1 * a = a)

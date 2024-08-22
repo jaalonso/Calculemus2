@@ -22,6 +22,8 @@
 -- ======================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
+
 import src.CNS_de_no_monotona
 
 example : ¬Monotone fun x : ℝ ↦ -x :=

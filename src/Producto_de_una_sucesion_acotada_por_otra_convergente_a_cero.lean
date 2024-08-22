@@ -117,7 +117,7 @@ by
        _ = |u n| * |v n|  := abs_mul (u n) (v n)
        _ ≤ B * |v n|      := mul_le_mul_of_nonneg_right (hB n) (abs_nonneg _)
        _ < B * (ε/B)      := mul_lt_mul_of_pos_left (hk n hn) hBpos
-       _ = ε              := mul_div_cancel' ε hB0
+       _ = ε              := mul_div_cancel₀ ε hB0
 
 -- 2ª demostración
 -- ===============
@@ -177,7 +177,7 @@ by
          = |u n| * |v n|  := by simp [Pi.mul_apply, abs_mul]
        _ ≤ B * |v n|      := mul_le_mul_of_nonneg_right (hB n) (abs_nonneg _)
        _ < B * (ε/B)      := by aesop
-       _ = ε              := mul_div_cancel' ε hB0
+       _ = ε              := mul_div_cancel₀ ε hB0
 
 -- Lemas usados
 -- ============
@@ -190,7 +190,7 @@ by
 -- #check (abs_mul a b : |a * b| = |a| * |b|)
 -- #check (abs_nonneg a : 0 ≤ |a|)
 -- #check (div_pos : 0 < a → 0 < b → 0 < a / b)
--- #check (mul_div_cancel' a : b ≠ 0 → b * (a / b) = a)
+-- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
 -- #check (mul_le_mul_of_nonneg_right : a ≤ b → 0 ≤ c → a * c ≤ b * c)
 -- #check (mul_lt_mul_of_pos_left : b < c → 0 < a → a * b < a * c)
 -- #check (sub_zero a : a - 0 = a)

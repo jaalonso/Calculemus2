@@ -79,12 +79,6 @@ by
     left
     -- ⊢ y ∈ f '' s
     use x
-    -- ⊢ x ∈ s ∧ f x = y
-    constructor
-    . -- ⊢ x ∈ s
-      exact xs
-    . -- ⊢ f x = y
-      exact fxy
   . -- ⊢ y ∈ f '' s ∪ v
     right
     -- ⊢ y ∈ v
@@ -105,8 +99,6 @@ by
     left
     -- ⊢ y ∈ f '' s
     use x, xs
-    -- ⊢ f x = y
-    exact fxy
   . -- xv : x ∈ f ⁻¹' v
     -- ⊢ y ∈ f '' s ∪ v
     right

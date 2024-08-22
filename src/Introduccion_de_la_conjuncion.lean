@@ -24,6 +24,7 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+import Mathlib.Tactic
 
 variable {x y : ℝ}
 

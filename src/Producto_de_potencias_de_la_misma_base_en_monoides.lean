@@ -38,7 +38,10 @@
 -- ========================
 
 import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.GroupPower.Basic
+-- import Mathlib.Algebra.GroupPower.Basic
+-- import Init.Data.Nat.Lemmas
+import Mathlib.Tactic
+
 open Nat
 
 variable {M : Type} [Monoid M]
@@ -58,10 +61,10 @@ by
      _ = x^0 * x^n         := congrArg (. * (x^n)) (pow_zero x).symm
   . calc x^(succ m + n)
        = x^succ (m + n)    := congrArg (x ^.) (succ_add m n)
-     _ = x * x^(m + n)     := pow_succ x (m + n)
+     _ = x * x^(m + n)     := pow_succ' x (m + n)
      _ = x * (x^m * x^n)   := congrArg (x * .) HI
      _ = (x * x^m) * x^n   := (mul_assoc x (x^m) (x^n)).symm
-     _ = x^succ m * x^n    := congrArg (. * x^n) (pow_succ x m).symm
+     _ = x^succ m * x^n    := congrArg (. * x^n) (pow_succ' x m).symm
 
 -- 2ª demostración
 -- ===============
@@ -76,10 +79,10 @@ by
      _ = x^0 * x^n       := by simp only [_root_.pow_zero]
   . calc x^(succ m + n)
        = x^succ (m + n)  := by simp only [succ_add]
-     _ = x * x^(m + n)   := by simp only [_root_.pow_succ]
+     _ = x * x^(m + n)   := by simp only [_root_.pow_succ']
      _ = x * (x^m * x^n) := by simp only [HI]
      _ = (x * x^m) * x^n := (mul_assoc x (x^m) (x^n)).symm
-     _ = x^succ m * x^n  := by simp only [_root_.pow_succ]
+     _ = x^succ m * x^n  := by simp only [_root_.pow_succ']
 
 -- 3ª demostración
 -- ===============
@@ -94,10 +97,10 @@ by
      _ = x^0 * x^n       := by simp
   . calc x^(succ m + n)
        = x^succ (m + n)  := by simp [succ_add]
-     _ = x * x^(m + n)   := by simp [_root_.pow_succ]
+     _ = x * x^(m + n)   := by simp [_root_.pow_succ']
      _ = x * (x^m * x^n) := by simp [HI]
      _ = (x * x^m) * x^n := (mul_assoc x (x^m) (x^n)).symm
-     _ = x^succ m * x^n  := by simp [_root_.pow_succ]
+     _ = x^succ m * x^n  := by simp [_root_.pow_succ']
 
 -- 4ª demostración
 -- ===============
@@ -114,6 +117,6 @@ pow_add x m n
 -- #check (Nat.zero_add n : 0 + n = n)
 -- #check (mul_assoc x y z : (x * y) * z = x * (y * z))
 -- #check (pow_add x m n : x^(m + n) = x^m * x^n)
--- #check (pow_succ x n : x ^ succ n = x * x ^ n)
+-- #check (pow_succ' x n : x ^ succ n = x * x ^ n)
 -- #check (pow_zero x : x ^ 0 = 1)
 -- #check (succ_add n m : succ n + m = succ (n + m))

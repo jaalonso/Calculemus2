@@ -59,11 +59,11 @@ example
   : b = c :=
 calc
   b = 0 + b        := by rw [zero_add]
-  _ = (-a + a) + b := by rw [add_left_neg]
+  _ = (-a + a) + b := by rw [neg_add_cancel]
   _ = -a + (a + b) := by rw [add_assoc]
   _ = -a + (a + c) := by rw [h]
   _ = (-a + a) + c := by rw [←add_assoc]
-  _ = 0 + c        := by rw [add_left_neg]
+  _ = 0 + c        := by rw [neg_add_cancel]
   _ = c            := by rw [zero_add]
 
 -- 2ª demostración
@@ -75,10 +75,10 @@ by
     congrArg (HAdd.hAdd (-a)) h
   clear h
   rw [← add_assoc] at h1
-  rw [add_left_neg] at h1
+  rw [neg_add_cancel] at h1
   rw [zero_add] at h1
   rw [← add_assoc] at h1
-  rw [add_left_neg] at h1
+  rw [neg_add_cancel] at h1
   rw [zero_add] at h1
   exact h1
 
@@ -118,6 +118,6 @@ add_left_cancel h
 
 -- #check (add_assoc a b c : (a + b) + c = a + (b + c))
 -- #check (add_left_cancel : a + b = a + c → b = c)
--- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel a : -a + a = 0)
 -- #check (neg_add_cancel_left a b : -a + (a + b) = b)
 -- #check (zero_add a :  0 + a = a)

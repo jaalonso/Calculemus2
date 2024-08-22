@@ -29,7 +29,7 @@ variable {a : R}
 -- 1ª demostración
 example : -(-a) = a :=
 by
-  have h1 : -a + a = 0 := add_left_neg a
+  have h1 : -a + a = 0 := neg_add_cancel a
   show -(-a) = a
   exact neg_eq_of_add_eq_zero_right h1
 
@@ -37,7 +37,7 @@ by
 example : -(-a) = a :=
 by
   apply neg_eq_of_add_eq_zero_right
-  rw [add_left_neg]
+  rw [neg_add_cancel]
 
 -- 3ª demostración
 example : -(-a) = a :=
@@ -51,6 +51,6 @@ by simp
 -- ============
 
 -- variable (b : R)
--- #check (add_left_neg a : -a + a = 0)
+-- #check (neg_add_cancel a : -a + a = 0)
 -- #check (neg_eq_of_add_eq_zero_right : a + b = 0 → -a = b)
 -- #check (neg_neg a : -(-a) = a)

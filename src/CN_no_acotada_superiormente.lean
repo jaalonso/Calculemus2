@@ -109,7 +109,6 @@ by
   -- ⊢ ∃ x, f x > a
   use x
   -- ⊢ f x > a
-  exact h2
 
 -- 3ª demostración
 -- ===============
