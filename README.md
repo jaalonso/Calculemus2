@@ -1,25 +1,25 @@
 
 # &Iacute;ndice
 
-1.  [Demostraciones de una propiedad de los números enteros](#orgdace72b)
-2.  [Propiedades elementales de los números reales](#orgb4d81ba)
-3.  [Propiedades elementales de los monoides](#org0da8507)
-4.  [Propiedades elementales de los grupos](#org661db4e)
-5.  [Propiedades elementales de los anillos](#org18e9915)
-6.  [Propiedades de orden en los números reales](#org001dfe0)
-7.  [Divisibilidad](#orgaafeec9)
-8.  [Retículos](#orgf65db2e)
-9.  [Relaciones de orden](#orgb645854)
-10. [Relaciones de equivalencia](#org237272e)
-11. [Anillos ordenados](#org0852ff8)
-12. [Espacios métricos](#orgc12147f)
-13. [Funciones reales](#org5fe4868)
-14. [Teoría de conjuntos](#orgad8e43e)
-15. [Lógica](#org5bed699)
-16. [Límites de sucesiones](#org36c6119)
-17. [Sin ordenar](#org18ed2a8)
-18. [Julio 2024](#orgf413338)
-19. [Agosto 2024](#orgf400738)
+1.  [Demostraciones de una propiedad de los números enteros](#org093e1c1)
+2.  [Propiedades elementales de los números reales](#orgc13b2bc)
+3.  [Propiedades elementales de los monoides](#org148c28c)
+4.  [Propiedades elementales de los grupos](#orgb4c4863)
+5.  [Propiedades elementales de los anillos](#org8e4a36c)
+6.  [Propiedades de orden en los números reales](#org01b64e0)
+7.  [Divisibilidad](#org434f7a8)
+8.  [Retículos](#orgf94efe4)
+9.  [Relaciones de orden](#org84877ff)
+10. [Relaciones de equivalencia](#orgdfab5d2)
+11. [Anillos ordenados](#orgc56b632)
+12. [Espacios métricos](#orgd74f606)
+13. [Funciones reales](#org91f7617)
+14. [Teoría de conjuntos](#org31a75a9)
+15. [Lógica](#org333bcff)
+16. [Límites de sucesiones](#orge182a3e)
+17. [Sin ordenar](#org886f0cc)
+18. [Julio 2024](#org2a29453)
+19. [Agosto 2024](#org0fc4899)
 
 En este repositorio se encuentran los ejercicios propuestos en el blog
 [Calculemus](https://www.glc.us.es/~jalonso/calculemus) para demostrarlos con asistentes de pruebas (como Lean4 e
@@ -29,14 +29,14 @@ usaba Lean3 en lugar de Lean4.
 Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 
 
-<a id="orgdace72b"></a>
+<a id="org093e1c1"></a>
 
 # Demostraciones de una propiedad de los números enteros
 
 -   [∀ m n ∈ ℕ, Even n → Even (m \* n)](./textos/El_producto_por_un_par_es_par.md) (En [Lean4](./src/El_producto_por_un_par_es_par.lean)).
 
 
-<a id="orgb4d81ba"></a>
+<a id="orgc13b2bc"></a>
 
 # Propiedades elementales de los números reales
 
@@ -58,7 +58,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [En ℝ, |a| = |a - b + b|](./textos/Demostracion_por_congruencia.md) (En [Lean4](./src/Demostracion_por_congruencia.lean)).
 
 
-<a id="org0da8507"></a>
+<a id="org148c28c"></a>
 
 # Propiedades elementales de los monoides
 
@@ -71,7 +71,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Los monoides booleanos son conmutativos](./textos/Los_monoides_booleanos_son_conmutativos.md) (En [Lean](./src/Los_monoides_booleanos_son_conmutativos.lean) y en [Isabelle](./thy/Los_monoides_booleanos_son_conmutativos.thy)).
 
 
-<a id="org661db4e"></a>
+<a id="orgb4c4863"></a>
 
 # Propiedades elementales de los grupos
 
@@ -84,7 +84,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c](./textos/Propiedad_cancelativa_en_grupos.md) (En [Lean](./src/Propiedad_cancelativa_en_grupos.lean) y en [Isabelle](./thy/Propiedad_cancelativa_en_grupos.thy)).
 
 
-<a id="org18e9915"></a>
+<a id="org8e4a36c"></a>
 
 # Propiedades elementales de los anillos
 
@@ -106,7 +106,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si R es un anillo y a ∈ R, entonces 2a = a+a](./textos/Producto_por_dos.md) (En [Lean4](./src/Producto_por_dos.lean)).
 
 
-<a id="org001dfe0"></a>
+<a id="org01b64e0"></a>
 
 # Propiedades de orden en los números reales
 
@@ -148,7 +148,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y](./textos/Propiedad_de_la_densidad_de_los_reales.md) (En [Lean](./src/Propiedad_de_la_densidad_de_los_reales.lean) y en [Isabelle](./thy/Propiedad_de_la_densidad_de_los_reales.thy)).
 
 
-<a id="orgaafeec9"></a>
+<a id="org434f7a8"></a>
 
 # Divisibilidad
 
@@ -167,7 +167,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Un número es par si y solo si lo es su cuadrado](./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md) (En [Lean](./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean) y en [Isabelle](./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy)).
 
 
-<a id="orgf65db2e"></a>
+<a id="orgf94efe4"></a>
 
 # Retículos
 
@@ -181,7 +181,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [En los retículos, una distributiva del supremos implica la otra](./textos/Propiedad_distributiva_2.md) (En [Lean4](./src/Propiedad_distributiva_2.lean)).
 
 
-<a id="orgb645854"></a>
+<a id="org84877ff"></a>
 
 # Relaciones de orden
 
@@ -190,14 +190,14 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si ≤ es un preorden, entonces < es transitiva](./textos/Preorden_transitiva.md) (En [Lean4](./src/Preorden_transitiva.lean)).
 
 
-<a id="org237272e"></a>
+<a id="orgdfab5d2"></a>
 
 # Relaciones de equivalencia
 
 -   [La congruencia módulo 2 es una relación de equivalencia](./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy)).
 
 
-<a id="org0852ff8"></a>
+<a id="orgc56b632"></a>
 
 # Anillos ordenados
 
@@ -206,14 +206,14 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc](./textos/Ejercicio_sobre_anillos_ordenados_3.md) (En [Lean4](./src/Ejercicio_sobre_anillos_ordenados_3.lean)).
 
 
-<a id="orgc12147f"></a>
+<a id="orgd74f606"></a>
 
 # Espacios métricos
 
 -   [En los espacios métricos, dist(x,y) ≥ 0](./textos/Ejercicio_en_espacios_metricos.md) (En [Lean4](./src/Ejercicio_en_espacios_metricos.lean)).
 
 
-<a id="org5fe4868"></a>
+<a id="org91f7617"></a>
 
 # Funciones reales
 
@@ -251,7 +251,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si g ∘ f es inyectiva, entonces f es inyectiva](./textos/Inyectiva_si_lo_es_la_composicion.md) (En [Lean4](./src/Inyectiva_si_lo_es_la_composicion.lean) y en [Isabelle](./thy/Inyectiva_si_lo_es_la_composicion.thy)).
 
 
-<a id="orgad8e43e"></a>
+<a id="org31a75a9"></a>
 
 # Teoría de conjuntos
 
@@ -316,7 +316,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [La composición de funciones biyectivas es biyectiva](./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md) (En [Lean](./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean) y en [Isabelle](./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy)).
 
 
-<a id="org5bed699"></a>
+<a id="org333bcff"></a>
 
 # Lógica
 
@@ -330,7 +330,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [La paradoja del barbero](./textos/La_paradoja_del_barbero.md) (En [Lean](./src/La_paradoja_del_barbero.lean) y en [Isabelle](./thy/La_paradoja_del_barbero.thy)).
 
 
-<a id="org36c6119"></a>
+<a id="orge182a3e"></a>
 
 # Límites de sucesiones
 
@@ -338,7 +338,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c](./textos/Convergencia_de_la_suma.md) (En [Lean4](./src/Convergencia_de_la_suma.lean) y en [Isabelle](./thy/Limite_de_la_suma_de_sucesiones_convergentes.thy)).
 -   [Unicidad del límite de las sucesiones convergentes](./textos/Unicidad_del_limite_de_las_sucesiones_convergentes.md) (En [Lean4](./src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean) y en [Isabelle](./thy/Unicidad_del_limite_de_las_sucesiones_convergentes.thy)).
 -   [Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de uₙ+c es a+c](./textos/Limite_cuando_se_suma_una_constante.md) (En [Lean](./src/Limite_cuando_se_suma_una_constante.lean) y en [Isabelle](./thy/Limite_cuando_se_suma_una_constante.thy)).
--   [Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Limite_multiplicado_por_una_constante.md) (En [Lean](./src/Limite_multiplicado_por_una_constante.lean) y en [Isabelle](./thy/Limite_multiplicado_por_una_constante.thy)).
+-   [Si el límite de la sucesión u(n) es a y c ∈ ℝ, entonces el límite de cu(n) es ca](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Limite_multiplicado_por_una_constante.md) (En [Lean](./src/Limite_multiplicado_por_una_constante.lean) y en [Isabelle](./thy/Limite_multiplicado_por_una_constante.thy)).
 -   [El límite de u es a syss el de u-a es 0](./textos/El_limite_de_u_es_a_syss_el_de_u-a_es_0.md) (En [Lean](./src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean) y en [Isabelle](./thy/El_limite_de_u_es_a_syss_el_de_u-a_es_0.thy)).
 -   [Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0](./textos/Producto_de_sucesiones_convergentes_a_cero.md) (En [Lean](./src/Producto_de_sucesiones_convergentes_a_cero.lean) y en [Isabelle](./thy/Producto_de_sucesiones_convergentes_a_cero.thy)).
 -   [Teorema del emparedado](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md) (En [Lean](./src/Teorema_del_emparedado.lean) y en [Isabelle](./thy/Teorema_del_emparedado.thy)).
@@ -349,7 +349,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a](./textos/Limite_de_la_opuesta.md) (En [Lean](./src/Limite_de_la_opuesta.lean) y en [Isabelle](./thy/Limite_de_la_opuesta.thy)).
 
 
-<a id="org18ed2a8"></a>
+<a id="org886f0cc"></a>
 
 # Sin ordenar
 
@@ -360,7 +360,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   V28 [Las sucesiones convergentes son sucesiones de Cauchy](./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md) (En [Lean](./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean) y en [Isabelle](./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy)).
 
 
-<a id="orgf413338"></a>
+<a id="org2a29453"></a>
 
 # Julio 2024
 
@@ -383,7 +383,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   X31 [Asociatividad de la concatenación de listas](./textos/Asociatividad_de_la_concatenacion_de_listas.md) (En [Lean](./src/Asociatividad_de_la_concatenacion_de_listas.lean) y en [Isabelle](./thy/Asociatividad_de_la_concatenacion_de_listas.thy)).
 
 
-<a id="orgf400738"></a>
+<a id="org0fc4899"></a>
 
 # Agosto 2024
 
