@@ -37,28 +37,24 @@ by
   -- n : ℕ
   -- ⊢ n ∈ {n | Nat.Prime n} ∩ {n | n > 2} → n ∈ {n | ¬Even n}
   simp
-  -- ⊢ Nat.Prime n → 2 < n → ¬Even n
+  -- ⊢ Nat.Prime n → 2 < n → Odd n
   intro hn
   -- hn : Nat.Prime n
-  -- ⊢ 2 < n → ¬Even n
+  -- ⊢ 2 < n → Odd n
   rcases Prime.eq_two_or_odd hn with (h | h)
   . -- h : n = 2
     rw [h]
     -- ⊢ 2 < 2 → ¬Even 2
     intro h1
     -- h1 : 2 < 2
-    -- ⊢ ¬Even 2
+    -- ⊢ Odd 2
     exfalso
     exact absurd h1 (lt_irrefl 2)
   . -- h : n % 2 = 1
-    rw [even_iff]
-    -- ⊢ 2 < n → ¬n % 2 = 0
-    rw [h]
-    -- ⊢ 2 < n → ¬1 = 0
     intro
     -- a : 2 < n
-    -- ⊢ ¬1 = 0
-    exact one_ne_zero
+    -- ⊢ Odd n
+    exact odd_iff.mpr h
 
 -- 2ª demostración
 -- ===============
@@ -84,11 +80,7 @@ by
     -- ⊢ False
     exact absurd h2 (lt_irrefl 2)
   . -- h4 : n % 2 = 1
-    rw [even_iff]
-    -- ⊢ ¬n % 2 = 0
-    rw [h4]
-    -- ⊢ ¬1 = 0
-    exact one_ne_zero
+    exact odd_iff.mpr h4
 
 -- 3ª demostración
 -- ===============
@@ -112,9 +104,7 @@ by
     -- h2 : 2 < 2
     linarith
   . -- h4 : n % 2 = 1
-    rw [even_iff]
-    -- ⊢ ¬n % 2 = 0
-    linarith
+    exact odd_iff.mpr h4
 
 -- Lemas usados
 -- ============

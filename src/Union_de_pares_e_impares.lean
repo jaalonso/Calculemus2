@@ -44,8 +44,8 @@ by
   -- ⊢ {n | Even n} ∪ {n | ¬Even n} = {n | True}
   ext n
   -- ⊢ n ∈ {n | Even n} ∪ {n | ¬Even n} ↔ n ∈ {n | True}
-  simp
-  -- ⊢ Even n ∨ ¬Even n
+  simp only [Set.mem_setOf_eq, iff_true]
+  -- ⊢ n ∈ {n | Even n} ∪ {n | ¬Even n}
   exact em (Even n)
 
 -- 2ª demostración

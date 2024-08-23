@@ -53,7 +53,7 @@ by
     intro h
     -- h : ¬Even n
     -- ⊢ ¬Even (n ^ 2)
-    rw [←odd_iff_not_even] at *
+    rw [not_even_iff_odd] at *
     -- h : Odd n
     -- ⊢ Odd (n ^ 2)
     cases' h with k hk
@@ -88,9 +88,9 @@ by
   . -- ⊢ Even (n ^ 2) → Even n
     contrapose
     -- ⊢ ¬Even n → ¬Even (n ^ 2)
-    rw [←odd_iff_not_even]
+    rw [not_even_iff_odd]
     -- ⊢ Odd n → ¬Even (n ^ 2)
-    rw [←odd_iff_not_even]
+    rw [not_even_iff_odd]
     -- ⊢ Odd n → Odd (n ^ 2)
     unfold Odd
     -- ⊢ (∃ k, n = 2 * k + 1) → ∃ k, n ^ 2 = 2 * k + 1
@@ -130,9 +130,9 @@ by
   . -- ⊢ Even (n ^ 2) → Even n
     contrapose
     -- ⊢ ¬Even n → ¬Even (n ^ 2)
-    rw [←odd_iff_not_even]
+    rw [not_even_iff_odd]
     -- ⊢ Odd n → ¬Even (n ^ 2)
-    rw [←odd_iff_not_even]
+    rw [not_even_iff_odd]
     -- ⊢ Odd n → Odd (n ^ 2)
     rintro ⟨k, rfl⟩
     -- k : ℤ
@@ -166,7 +166,7 @@ example :
 calc Even (n^2)
      ↔ Even (n * n)      := by ring_nf
    _ ↔ (Even n ∨ Even n) := even_mul
-   _ ↔ Even n            := by simp
+   _ ↔ Even n            := by simp only [or_self]
 
 -- Lemas usados
 -- ============
@@ -175,5 +175,5 @@ calc Even (n^2)
 -- variable (m : ℤ)
 -- #check (even_mul : Even (m * n) ↔ Even m ∨ Even n)
 -- #check (iff_of_eq : a = b → (a ↔ b))
--- #check (odd_iff_not_even : Odd n ↔ ¬Even n)
+-- #check (not_even_iff_odd : Odd n ↔ ¬Even n)
 -- #check (or_self_iff a : a ∨ a ↔ a)
