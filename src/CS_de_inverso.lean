@@ -37,7 +37,7 @@ calc
   a⁻¹ = a⁻¹ * 1       := by rw [mul_one]
     _ = a⁻¹ * (a * b) := by rw [h]
     _ = (a⁻¹ * a) * b := by rw [mul_assoc]
-    _ = 1 * b         := by rw [mul_left_inv]
+    _ = 1 * b         := by rw [inv_mul_cancel]
     _ = b             := by rw [one_mul]
 
 -- 2º demostración
@@ -70,7 +70,7 @@ by exact inv_eq_of_mul_eq_one_right h
 
 -- variable (c : G)
 -- #check (mul_assoc a b c : (a * b) * c = a * (b * c))
--- #check (mul_left_inv a : a⁻¹  * a = 1)
+-- #check (inv_mul_cancel a : a⁻¹  * a = 1)
 -- #check (mul_one a : a * 1 = a)
 -- #check (one_mul a : 1 * a = a)
 -- #check (inv_eq_of_mul_eq_one_right : a * b = 1 → a⁻¹ = b)

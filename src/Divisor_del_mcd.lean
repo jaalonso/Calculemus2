@@ -31,7 +31,7 @@ open Nat
 -- 1ª demostración
 -- ===============
 
-example : 3 ∣ gcd 6 15 :=
+example : 3 ∣ Nat.gcd 6 15 :=
 by
   rw [dvd_gcd_iff]
   -- ⊢ 3 ∣ 6 ∧ 3 ∣ 15
@@ -44,7 +44,7 @@ by
 -- 2ª demostración
 -- ===============
 
-example : 3 ∣ gcd 6 15 :=
+example : 3 ∣ Nat.gcd 6 15 :=
 by
   rw [dvd_gcd_iff]
   -- ⊢ 3 ∣ 6 ∧ 3 ∣ 15

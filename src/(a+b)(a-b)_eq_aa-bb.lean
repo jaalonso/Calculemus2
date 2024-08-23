@@ -54,7 +54,7 @@ calc
   _ = a^2 + ((-(a * b) + b * a) + -b^2) := by rw [← add_assoc
                                               (-(a * b)) (b * a) (-b^2)]
   _ = a^2 + ((-(a * b) + a * b) + -b^2) := by rw [mul_comm]
-  _ = a^2 + (0 + -b^2)                  := by rw [neg_add_self (a * b)]
+  _ = a^2 + (0 + -b^2)                  := by rw [neg_add_cancel (a * b)]
   _ = (a^2 + 0) + -b^2                  := by rw [← add_assoc]
   _ = a^2 + -b^2                        := by rw [add_zero]
   _ = a^2 - b^2                         := by linarith
@@ -101,7 +101,7 @@ by
   rw [mul_neg]
   rw [add_assoc (a * a)]
   rw [mul_comm b a]
-  rw [neg_add_self]
+  rw [neg_add_cancel]
   rw [add_zero]
   rw [← pow_two]
   rw [mul_neg]
@@ -117,6 +117,6 @@ by
 -- #check (mul_comm : ∀ (a b : ℝ), a * b = b * a)
 -- #check (mul_neg : ∀ (a b : ℝ), a * -b = -(a * b))
 -- #check (mul_sub : ∀ (a b c : ℝ), a * (b - c) = a * b - a * c)
--- #check (neg_add_self : ∀ (a : ℝ), -a + a = 0)
+-- #check (neg_add_cancel : ∀ (a : ℝ), -a + a = 0)
 -- #check (pow_two : ∀ (a : ℝ), a ^ 2 = a * a)
 -- #check (sub_eq_add_neg : ∀ (a b : ℝ), a - b = a + -b)

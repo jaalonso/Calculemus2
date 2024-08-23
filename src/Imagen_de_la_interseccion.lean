@@ -89,12 +89,8 @@ by
   constructor
   . -- ⊢ y ∈ f '' s
     use x
-    -- ⊢ x ∈ s ∧ f x = y
-    exact ⟨xs, fxy⟩
   . -- ⊢ y ∈ f '' t
     use x
-    -- ⊢ x ∈ t ∧ f x = y
-    exact ⟨xt, fxy⟩
 
 -- 3ª demostración
 -- ===============

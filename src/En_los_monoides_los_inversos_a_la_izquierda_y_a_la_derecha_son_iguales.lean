@@ -33,6 +33,7 @@
 -- ========================
 
 import Mathlib.Algebra.Group.Defs
+import Mathlib.Tactic
 
 variable {M : Type} [Monoid M]
 variable {a b c : M}
