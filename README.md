@@ -1,44 +1,77 @@
 
 # &Iacute;ndice
 
-1.  [Demostraciones de una propiedad de los números enteros](#org093e1c1)
-2.  [Propiedades elementales de los números reales](#orgc13b2bc)
-3.  [Propiedades elementales de los monoides](#org148c28c)
-4.  [Propiedades elementales de los grupos](#orgb4c4863)
-5.  [Propiedades elementales de los anillos](#org8e4a36c)
-6.  [Propiedades de orden en los números reales](#org01b64e0)
-7.  [Divisibilidad](#org434f7a8)
-8.  [Retículos](#orgf94efe4)
-9.  [Relaciones de orden](#org84877ff)
-10. [Relaciones de equivalencia](#orgdfab5d2)
-11. [Anillos ordenados](#orgc56b632)
-12. [Espacios métricos](#orgd74f606)
-13. [Funciones reales](#org91f7617)
-14. [Teoría de conjuntos](#org31a75a9)
-15. [Lógica](#org333bcff)
-16. [Límites de sucesiones](#orge182a3e)
-17. [Sin ordenar](#org886f0cc)
-18. [Julio 2024](#org2a29453)
-19. [Agosto 2024](#org0fc4899)
+1.  [Latest exercises](#orgff102f4)
+2.  [Old exercises](#org122b374)
+    1.  [Demostraciones de una propiedad de los números enteros](#org6de540f)
+    2.  [Propiedades elementales de los números reales](#org8cbfe78)
+    3.  [Propiedades elementales de los monoides](#org47c62cf)
+    4.  [Propiedades elementales de los grupos](#org7eb13c8)
+    5.  [Propiedades elementales de los anillos](#orgd04b970)
+    6.  [Propiedades de orden en los números reales](#org855c190)
+    7.  [Divisibilidad](#orgfeb5625)
+    8.  [Retículos](#org3cf001a)
+    9.  [Relaciones de orden](#org640e07e)
+    10. [Relaciones de equivalencia](#orgd1bd061)
+    11. [Anillos ordenados](#org6c648c7)
+    12. [Espacios métricos](#orga423d6f)
+    13. [Funciones reales](#org6b5e865)
+    14. [Teoría de conjuntos](#org741e13c)
+    15. [Lógica](#org65d0c67)
+    16. [Límites de sucesiones](#org828e6a6)
 
-En este repositorio se encuentran los ejercicios propuestos en el blog
-[Calculemus](https://www.glc.us.es/~jalonso/calculemus) para demostrarlos con asistentes de pruebas (como Lean4 e
-Isabelle/HOL). Es una continuación del [repositorio anterior](https://github.com/jaalonso/Calculemus/blob/main/README.org) en el que se
-usaba Lean3 en lugar de Lean4.
+This repository contains the solutions in Lean4 and Isabelle/HOL for the
+exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) blog.
 
-Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
+The solutions have been verified with [version 4.11.0-rc2 of Lean](https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc2).
 
 
-<a id="org093e1c1"></a>
+<a id="orgff102f4"></a>
 
-# Demostraciones de una propiedad de los números enteros
+# Latest exercises
+
+-   [Equivalence of reverse definitions](https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/) (In [Lean](./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean) and [Isabelle](./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy)).
+-   [Proofs of take n xs ++ drop n xs = xs](https://jaalonso.github.io/calculemus/posts/2024/08/14-proofs_of_take_n_xs_%2B%2B_drop_n_xs_eq_xs/) (In [Lean](./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean) and [Isabelle](./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy)).
+-   [Pruebas de length(xs ++ ys) = length(xs) + length(ys)](./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md) (En [Lean](./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean) y en [Isabelle](./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy)).
+-   [Asociatividad de la concatenación de listas](./textos/Asociatividad_de_la_concatenacion_de_listas.md) (En [Lean](./src/Asociatividad_de_la_concatenacion_de_listas.lean) y en [Isabelle](./thy/Asociatividad_de_la_concatenacion_de_listas.thy)).
+-   [Pruebas de length (replicate n x) = n](./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md) (En [Lean](./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean) y en [Isabelle](./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy)).
+-   [Si u es una sucesión no decreciente y su límite es a, entonces u(n) ≤ a para todo n](./textos/Limite_de_sucesiones_no_decrecientes.md) (En [Lean](./src/Limite_de_sucesiones_no_decrecientes.lean) y en [Isabelle](./thy/Limite_de_sucesiones_no_decrecientes.thy)).
+-   [Las sucesiones divergentes positivas no tienen límites finitos](./textos/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.md) (En [Lean](./src/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.lean) y en [Isabelle](./thy/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.thy)).
+-   [Si a es un punto de acumulación de la sucesión de Cauchy u, entonces a es el límite de u](./textos/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.md) (En [Lean](./src/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.lean) y en [Isabelle](./thy/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.thy)).
+-   [El punto de acumulación de las sucesiones convergente es su límite](./textos/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.md) (En [Lean](./src/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.lean) y en [Isabelle](./thy/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.thy)).
+-   [Las subsucesiones tienen el mismo límite que la sucesión](./textos/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.md) (En [Lean](./src/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.lean) y en [Isabelle](./thy/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.thy)).
+-   [Si a es un punto de acumulación de u, entonces (∀ε>0)(∀n∈ℕ)(∃k≥n)[u(k)−a| < ε]​](./textos/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.md) (En [Lean](./src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean) y en [Isabelle](./thy/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.thy)).
+-   [Las funciones de extracción no están acotadas](./textos/Las_funciones_de_extraccion_no_estan_acotadas.md) (En [Lean](./src/Las_funciones_de_extraccion_no_estan_acotadas.lean) y en [Isabelle](./thy/Las_funciones_de_extraccion_no_estan_acotadas.thy)).
+-   [Relación entre los índices de las subsucesiones y de la sucesión](./textos/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.md) (En [Lean](./src/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.lean) y en [Isabelle](./thy/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.thy)).
+-   [Las particiones definen relaciones de equivalencia](./textos/Las_particiones_definen_relaciones_de_equivalencia.md) (En [Lean](./src/Las_particiones_definen_relaciones_de_equivalencia.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_de_equivalencia.thy)).
+-   [Las particiones definen relaciones transitivas](./textos/Las_particiones_definen_relaciones_transitivas.md) (En [Lean](./src/Las_particiones_definen_relaciones_transitivas.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_transitivas.thy)).
+-   [Las familias de conjuntos definen relaciones simétricas](./textos/Las_familias_de_conjuntos_definen_relaciones_simetricas.md) (En [Lean](./src/Las_familias_de_conjuntos_definen_relaciones_simetricas.lean) y en [Isabelle](./thy/Las_familias_de_conjuntos_definen_relaciones_simetricas.thy)).
+-   [Las particiones definen relaciones reflexivas](./textos/Las_particiones_definen_relaciones_reflexivas.md) (En [Lean](./src/Las_particiones_definen_relaciones_reflexivas.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_reflexivas.thy)).
+-   [El conjunto de las clases de equivalencia es una partición](./textos/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.md) (En [Lean](./src/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.lean) y en [Isabelle](./thy/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.thy)).
+-   [Las clases de equivalencia de elementos no relacionados son disjuntas](./textos/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.md) (En [Lean](./src/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.lean) y en [Isabelle](./thy/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.thy)).
+-   [Las clases de equivalencia de elementos relacionados son iguales](./textos/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.md) (En [Lean](./src/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.lean) y en [Isabelle](./thy/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.thy)).
+-   [Las sucesiones convergentes son sucesiones de Cauchy](./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md) (En [Lean](./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean) y en [Isabelle](./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy)).
+-   [La composición por la izquierda con una inyectiva es una operación inyectiva](./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md) (En [Lean](./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean) y en [Isabelle](./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy)).
+-   [La igualdad de valores es una relación de equivalencia](./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy)).
+-   [La equipotencia es una relación de equivalencia](./textos/La_equipotencia_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_equipotencia_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy)).
+-   [La equipotencia es una relación transitiva](./textos/La_equipotencia_es_una_relacion_transitiva.md) (En [Lean](./src/La_equipotencia_es_una_relacion_transitiva.lean) y en [Isabelle](./thy/La_equipotencia_es_una_relacion_transitiva.thy)).
+
+
+<a id="org122b374"></a>
+
+# Old exercises
+
+
+<a id="org6de540f"></a>
+
+## Demostraciones de una propiedad de los números enteros
 
 -   [∀ m n ∈ ℕ, Even n → Even (m \* n)](./textos/El_producto_por_un_par_es_par.md) (En [Lean4](./src/El_producto_por_un_par_es_par.lean)).
 
 
-<a id="orgc13b2bc"></a>
+<a id="org8cbfe78"></a>
 
-# Propiedades elementales de los números reales
+## Propiedades elementales de los números reales
 
 -   [En ℝ, (ab)c = b(ac)](./textos/Asociativa_conmutativa_de_los_reales.md) (En [Lean4](./src/Asociativa_conmutativa_de_los_reales.lean)).
 -   [En ℝ, (cb)a = b(ac)](./textos/(cb)a_eq_b(ac).md) (En [Lean4](./src/(cb)a_eq_b(ac).lean)).
@@ -58,9 +91,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [En ℝ, |a| = |a - b + b|](./textos/Demostracion_por_congruencia.md) (En [Lean4](./src/Demostracion_por_congruencia.lean)).
 
 
-<a id="org148c28c"></a>
+<a id="org47c62cf"></a>
 
-# Propiedades elementales de los monoides
+## Propiedades elementales de los monoides
 
 -   [En los monoides, los inversos a la izquierda y a la derecha son iguales](./textos/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.md) (En [Lean](./src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean) y en [Isabelle](./thy/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.thy)).
 -   [Producto de potencias de la misma base en monoides](./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md) (En [Lean](./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean) y en [Isabelle](./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy)).
@@ -71,9 +104,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Los monoides booleanos son conmutativos](./textos/Los_monoides_booleanos_son_conmutativos.md) (En [Lean](./src/Los_monoides_booleanos_son_conmutativos.lean) y en [Isabelle](./thy/Los_monoides_booleanos_son_conmutativos.thy)).
 
 
-<a id="orgb4c4863"></a>
+<a id="org7eb13c8"></a>
 
-# Propiedades elementales de los grupos
+## Propiedades elementales de los grupos
 
 -   [Unicidad del elemento neutro en los grupos](./textos/Unicidad_del_elemento_neutro_en_los_grupos.md) (En [Lean](./src/Unicidad_del_elemento_neutro_en_los_grupos.lean) y en [Isabelle](./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy)).
 -   [Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1](./textos/Producto_por_inverso.md) (En [Lean4](./src/Producto_por_inverso.lean)).
@@ -84,9 +117,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c](./textos/Propiedad_cancelativa_en_grupos.md) (En [Lean](./src/Propiedad_cancelativa_en_grupos.lean) y en [Isabelle](./thy/Propiedad_cancelativa_en_grupos.thy)).
 
 
-<a id="org8e4a36c"></a>
+<a id="orgd04b970"></a>
 
-# Propiedades elementales de los anillos
+## Propiedades elementales de los anillos
 
 -   [Si R es un anillo y a ∈ R, entonces a + 0 = a](./textos/Suma_con_cero.md) (En [Lean4](./src/Suma_con_cero.lean)).
 -   [Si R es un anillo y a ∈ R, entonces a + -a = 0](./textos/Suma_con_opuesto.md) (En [Lean4](./src/Suma_con_opuesto.lean)).
@@ -106,9 +139,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si R es un anillo y a ∈ R, entonces 2a = a+a](./textos/Producto_por_dos.md) (En [Lean4](./src/Producto_por_dos.lean)).
 
 
-<a id="org01b64e0"></a>
+<a id="org855c190"></a>
 
-# Propiedades de orden en los números reales
+## Propiedades de orden en los números reales
 
 -   [En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e](./textos/Cadena_de_desigualdades.md) (En [Lean4](./src/Cadena_de_desigualdades.lean)).
 -   [En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b](./textos/Inecuaciones.md) (En [Lean4](./src/Inecuaciones.lean)).
@@ -148,9 +181,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y](./textos/Propiedad_de_la_densidad_de_los_reales.md) (En [Lean](./src/Propiedad_de_la_densidad_de_los_reales.lean) y en [Isabelle](./thy/Propiedad_de_la_densidad_de_los_reales.thy)).
 
 
-<a id="org434f7a8"></a>
+<a id="orgfeb5625"></a>
 
-# Divisibilidad
+## Divisibilidad
 
 -   [Si x, y, z ∈ ℕ, entonces x divide a yxz](./textos/Divisibilidad_de_producto.md) (En [Lean4](./src/Divisibilidad_de_producto.lean)).
 -   [Si x divide a w, también divide a y(xz)+x²+w²](./textos/Ejercicio_de_divisibilidad.md) (En [Lean4](./src/Ejercicio_de_divisibilidad.lean)).
@@ -167,9 +200,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Un número es par si y solo si lo es su cuadrado](./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md) (En [Lean](./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean) y en [Isabelle](./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy)).
 
 
-<a id="orgf94efe4"></a>
+<a id="org3cf001a"></a>
 
-# Retículos
+## Retículos
 
 -   [En los retículos, x ⊓ y = y ⊓ x](./textos/Conmutatividad_del_infimo.md) (En [Lean4](./src/Conmutatividad_del_infimo.lean)).
 -   [En los retículos, x ⊔ y = y ⊔ x](./textos/Conmutatividad_del_supremo.md) (En [Lean4](./src/Conmutatividad_del_supremo.lean)).
@@ -181,41 +214,41 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [En los retículos, una distributiva del supremos implica la otra](./textos/Propiedad_distributiva_2.md) (En [Lean4](./src/Propiedad_distributiva_2.lean)).
 
 
-<a id="org84877ff"></a>
+<a id="org640e07e"></a>
 
-# Relaciones de orden
+## Relaciones de orden
 
 -   [En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b](./textos/Caracterizacion_de_menor_en_ordenes_parciales.md) (En [Lean4](./src/Caracterizacion_de_menor_en_ordenes_parciales.lean)).
 -   [Si ≤ es un preorden, entonces < es irreflexiva](./textos/Preorden_es_irreflexivo.md) (En [Lean4](./src/Preorden_es_irreflexivo.lean)).
 -   [Si ≤ es un preorden, entonces < es transitiva](./textos/Preorden_transitiva.md) (En [Lean4](./src/Preorden_transitiva.lean)).
 
 
-<a id="orgdfab5d2"></a>
+<a id="orgd1bd061"></a>
 
-# Relaciones de equivalencia
+## Relaciones de equivalencia
 
 -   [La congruencia módulo 2 es una relación de equivalencia](./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy)).
 
 
-<a id="orgc56b632"></a>
+<a id="org6c648c7"></a>
 
-# Anillos ordenados
+## Anillos ordenados
 
 -   [En los anillos ordenados, a ≤ b → 0 ≤ b - a](./textos/Ejercicio_sobre_anillos_ordenados.md) (En [Lean4](./src/Ejercicio_sobre_anillos_ordenados_1.lean)).
 -   [En los anillos ordenados, 0 ≤ b - a → a ≤ b](./textos/Ejercicio_sobre_anillos_ordenados_2.md) (En [Lean4](./src/Ejercicio_sobre_anillos_ordenados_2.lean)).
 -   [En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc](./textos/Ejercicio_sobre_anillos_ordenados_3.md) (En [Lean4](./src/Ejercicio_sobre_anillos_ordenados_3.lean)).
 
 
-<a id="orgd74f606"></a>
+<a id="orga423d6f"></a>
 
-# Espacios métricos
+## Espacios métricos
 
 -   [En los espacios métricos, dist(x,y) ≥ 0](./textos/Ejercicio_en_espacios_metricos.md) (En [Lean4](./src/Ejercicio_en_espacios_metricos.lean)).
 
 
-<a id="org91f7617"></a>
+<a id="org6b5e865"></a>
 
-# Funciones reales
+## Funciones reales
 
 -   [La suma de una cota superior de f y una cota superior de g es una cota superior de f+g](./textos/Suma_de_cotas_superiores.md) (En [Lean4](./src/Suma_de_cotas_superiores.lean)).
 -   [La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g](./textos/Suma_de_cotas_inferiores.md) (En [Lean4](./src/Suma_de_cotas_inferiores.lean)).
@@ -251,9 +284,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si g ∘ f es inyectiva, entonces f es inyectiva](./textos/Inyectiva_si_lo_es_la_composicion.md) (En [Lean4](./src/Inyectiva_si_lo_es_la_composicion.lean) y en [Isabelle](./thy/Inyectiva_si_lo_es_la_composicion.thy)).
 
 
-<a id="org31a75a9"></a>
+<a id="org741e13c"></a>
 
-# Teoría de conjuntos
+## Teoría de conjuntos
 
 -   [Para cualquier conjunto s, s ⊆ s](./textos/Propiedad_reflexiva_del_subconjunto.md) (En [Lean4](./src/Propiedad_reflexiva_del_subconjunto.lean)).
 -   [Si r ⊆ s y s ⊆ t, entonces r ⊆ t](./textos/Propiedad_transitiva_del_subconjunto.md) (En [Lean4](./src/Propiedad_transitiva_del_subconjunto.lean)).
@@ -316,9 +349,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [La composición de funciones biyectivas es biyectiva](./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md) (En [Lean](./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean) y en [Isabelle](./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy)).
 
 
-<a id="org333bcff"></a>
+<a id="org65d0c67"></a>
 
-# Lógica
+## Lógica
 
 -   [Si ¬(∃x)P(x), entonces (∀x)¬P(x)](./textos/Para_todo_no_de_no_existe.md) (En [Lean4](./src/Para_todo_no_de_no_existe.lean)).
 -   [Si (∀x)¬P(x), entonces ¬(∃x)P(x)](./textos/No_existe_de_para_todo_no.md) (En [Lean4](./src/No_existe_de_para_todo_no.lean)).
@@ -330,9 +363,9 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [La paradoja del barbero](./textos/La_paradoja_del_barbero.md) (En [Lean](./src/La_paradoja_del_barbero.lean) y en [Isabelle](./thy/La_paradoja_del_barbero.thy)).
 
 
-<a id="orge182a3e"></a>
+<a id="org828e6a6"></a>
 
-# Límites de sucesiones
+## Límites de sucesiones
 
 -   [La sucesión constante sₙ = c converge a c](./textos/Convergencia_de_la_sucesion_constante.md) (en [Lean4](./src/Convergencia_de_la_sucesion_constante.lean) y en [Isabelle](./thy/Limite_de_sucesiones_constantes.thy)).
 -   [Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c](./textos/Convergencia_de_la_suma.md) (En [Lean4](./src/Convergencia_de_la_suma.lean) y en [Isabelle](./thy/Limite_de_la_suma_de_sucesiones_convergentes.thy)).
@@ -347,47 +380,4 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 -   [Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ](./textos/Limite_de_sucesion_menor_que_otra_sucesion.md) (En [Lean](./src/Limite_de_sucesion_menor_que_otra_sucesion.lean) y en [Isabelle](./thy/Limite_de_sucesion_menor_que_otra_sucesion.thy)).
 -   [Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0](./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md) (En [Lean](./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean) y en [Isabelle](./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy)).
 -   [Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a](./textos/Limite_de_la_opuesta.md) (En [Lean](./src/Limite_de_la_opuesta.lean) y en [Isabelle](./thy/Limite_de_la_opuesta.thy)).
-
-
-<a id="org886f0cc"></a>
-
-# Sin ordenar
-
--   L24 [La equipotencia es una relación transitiva](./textos/La_equipotencia_es_una_relacion_transitiva.md) (En [Lean](./src/La_equipotencia_es_una_relacion_transitiva.lean) y en [Isabelle](./thy/La_equipotencia_es_una_relacion_transitiva.thy)).
--   M25 [La equipotencia es una relación de equivalencia](./textos/La_equipotencia_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_equipotencia_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy)).
--   X26 [La igualdad de valores es una relación de equivalencia](./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy)).
--   J27 [La composición por la izquierda con una inyectiva es una operación inyectiva](./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md) (En [Lean](./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean) y en [Isabelle](./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy)).
--   V28 [Las sucesiones convergentes son sucesiones de Cauchy](./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md) (En [Lean](./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean) y en [Isabelle](./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy)).
-
-
-<a id="org2a29453"></a>
-
-# Julio 2024
-
--   L01 [Las clases de equivalencia de elementos relacionados son iguales](./textos/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.md) (En [Lean](./src/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.lean) y en [Isabelle](./thy/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.thy)).
--   M02 [Las clases de equivalencia de elementos no relacionados son disjuntas](./textos/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.md) (En [Lean](./src/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.lean) y en [Isabelle](./thy/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.thy)).
--   X03 [El conjunto de las clases de equivalencia es una partición](./textos/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.md) (En [Lean](./src/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.lean) y en [Isabelle](./thy/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.thy)).
--   J04 [Las particiones definen relaciones reflexivas](./textos/Las_particiones_definen_relaciones_reflexivas.md) (En [Lean](./src/Las_particiones_definen_relaciones_reflexivas.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_reflexivas.thy)).
--   V05 [Las familias de conjuntos definen relaciones simétricas](./textos/Las_familias_de_conjuntos_definen_relaciones_simetricas.md) (En [Lean](./src/Las_familias_de_conjuntos_definen_relaciones_simetricas.lean) y en [Isabelle](./thy/Las_familias_de_conjuntos_definen_relaciones_simetricas.thy)).
--   L08 [Las particiones definen relaciones transitivas](./textos/Las_particiones_definen_relaciones_transitivas.md) (En [Lean](./src/Las_particiones_definen_relaciones_transitivas.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_transitivas.thy)).
--   M09 [Las particiones definen relaciones de equivalencia](./textos/Las_particiones_definen_relaciones_de_equivalencia.md) (En [Lean](./src/Las_particiones_definen_relaciones_de_equivalencia.lean) y en [Isabelle](./thy/Las_particiones_definen_relaciones_de_equivalencia.thy)).
--   X10 [Relación entre los índices de las subsucesiones y de la sucesión](./textos/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.md) (En [Lean](./src/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.lean) y en [Isabelle](./thy/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.thy)).
--   J11 [Las funciones de extracción no están acotadas](./textos/Las_funciones_de_extraccion_no_estan_acotadas.md) (En [Lean](./src/Las_funciones_de_extraccion_no_estan_acotadas.lean) y en [Isabelle](./thy/Las_funciones_de_extraccion_no_estan_acotadas.thy)).
--   V12 [Si a es un punto de acumulación de u, entonces (∀ε>0)(∀n∈ℕ)(∃k≥n)[u(k)−a| < ε]​](./textos/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.md) (En [Lean](./src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean) y en [Isabelle](./thy/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.thy)).
--   L15 [Las subsucesiones tienen el mismo límite que la sucesión](./textos/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.md) (En [Lean](./src/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.lean) y en [Isabelle](./thy/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.thy)).
--   M16 [El punto de acumulación de las sucesiones convergente es su límite](./textos/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.md) (En [Lean](./src/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.lean) y en [Isabelle](./thy/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.thy)).
--   J25 [Si a es un punto de acumulación de la sucesión de Cauchy u, entonces a es el límite de u](./textos/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.md) (En [Lean](./src/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.lean) y en [Isabelle](./thy/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.thy)).
--   V26 [Las sucesiones divergentes positivas no tienen límites finitos](./textos/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.md) (En [Lean](./src/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.lean) y en [Isabelle](./thy/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.thy)).
--   S27 [Si u es una sucesión no decreciente y su límite es a, entonces u(n) ≤ a para todo n](./textos/Limite_de_sucesiones_no_decrecientes.md) (En [Lean](./src/Limite_de_sucesiones_no_decrecientes.lean) y en [Isabelle](./thy/Limite_de_sucesiones_no_decrecientes.thy)).
--   L29 [Pruebas de length (replicate n x) = n](./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md) (En [Lean](./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean) y en [Isabelle](./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy)).
--   X31 [Asociatividad de la concatenación de listas](./textos/Asociatividad_de_la_concatenacion_de_listas.md) (En [Lean](./src/Asociatividad_de_la_concatenacion_de_listas.lean) y en [Isabelle](./thy/Asociatividad_de_la_concatenacion_de_listas.thy)).
-
-
-<a id="org0fc4899"></a>
-
-# Agosto 2024
-
--   X07 [Pruebas de length(xs ++ ys) = length(xs) + length(ys)](./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md) (En [Lean](./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean) y en [Isabelle](./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy)).
--   X14 [Proofs of take n xs ++ drop n xs = xs](./textos/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.md) (En [Lean](./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean) y en [Isabelle](./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy)).
--   L19 [Pruebas de equivalencia de definiciones de inversa](./textos/Pruebas_de_equivalencia_de_definiciones_de_inversa.md) (En [Lean](./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean) y en [Isabelle](./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy)).
 

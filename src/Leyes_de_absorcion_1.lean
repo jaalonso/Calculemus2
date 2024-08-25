@@ -37,6 +37,7 @@
 -- ========================
 
 import Mathlib.Order.Lattice
+
 variable {α : Type _} [Lattice α]
 variable (x y : α)
 

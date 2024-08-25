@@ -33,9 +33,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
--- import Mathlib.Data.Int.Parity
 import Mathlib.Algebra.Group.Even
 import Mathlib.Tactic
+
 open Int
 
 variable (n : ℤ)

@@ -1,16 +1,43 @@
-#+TITLE: Calculemus (Ejercicios de demostración asistida por ordenador)
+#+TITLE: Calculemus (Proof exercises in Lean4 and Isabelle/HOL)
 
-En este repositorio se encuentran los ejercicios propuestos en el blog
-[[https://www.glc.us.es/~jalonso/calculemus][Calculemus]] para demostrarlos con asistentes de pruebas (como Lean4 e
-Isabelle/HOL). Es una continuación del [[https://github.com/jaalonso/Calculemus/blob/main/README.org][repositorio anterior]] en el que se
-usaba Lean3 en lugar de Lean4.
+This repository contains the solutions in Lean4 and Isabelle/HOL for the
+exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] blog.
 
-Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
+The solutions have been verified with [[https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc2][version 4.11.0-rc2 of Lean]].
 
-* Demostraciones de una propiedad de los números enteros
+* Latest exercises
++ [[https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/][Equivalence of reverse definitions]] (In [[./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean][Lean]] and [[./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy][Isabelle]]).
++ [[https://jaalonso.github.io/calculemus/posts/2024/08/14-proofs_of_take_n_xs_%2B%2B_drop_n_xs_eq_xs/][Proofs of take n xs ++ drop n xs = xs]] (In [[./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean][Lean]] and [[./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy][Isabelle]]).
++ [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) = length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
++ [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
++ [[./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md][Pruebas de length (replicate n x) = n]] (En [[./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean][Lean]] y en [[./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy][Isabelle]]).
++ [[./textos/Limite_de_sucesiones_no_decrecientes.md][Si u es una sucesión no decreciente y su límite es a, entonces u(n) ≤ a para todo n]] (En [[./src/Limite_de_sucesiones_no_decrecientes.lean][Lean]] y en [[./thy/Limite_de_sucesiones_no_decrecientes.thy][Isabelle]]).
++ [[./textos/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.md][Las sucesiones divergentes positivas no tienen límites finitos]] (En [[./src/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.lean][Lean]] y en [[./thy/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.thy][Isabelle]]).
++ [[./textos/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.md][Si a es un punto de acumulación de la sucesión de Cauchy u, entonces a es el límite de u]] (En [[./src/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.lean][Lean]] y en [[./thy/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.thy][Isabelle]]).
++ [[./textos/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.md][El punto de acumulación de las sucesiones convergente es su límite]] (En [[./src/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.lean][Lean]] y en [[./thy/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.thy][Isabelle]]).
++ [[./textos/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.md][Las subsucesiones tienen el mismo límite que la sucesión]] (En [[./src/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.lean][Lean]] y en [[./thy/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.thy][Isabelle]]).
++ [[./textos/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.md][Si a es un punto de acumulación de u, entonces (∀ε>0)(∀n∈ℕ)(∃k≥n)[u(k)−a| < ε]​]] (En [[./src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean][Lean]] y en [[./thy/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.thy][Isabelle]]).
++ [[./textos/Las_funciones_de_extraccion_no_estan_acotadas.md][Las funciones de extracción no están acotadas]] (En [[./src/Las_funciones_de_extraccion_no_estan_acotadas.lean][Lean]] y en [[./thy/Las_funciones_de_extraccion_no_estan_acotadas.thy][Isabelle]]).
++ [[./textos/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.md][Relación entre los índices de las subsucesiones y de la sucesión]] (En [[./src/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.lean][Lean]] y en [[./thy/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.thy][Isabelle]]).
++ [[./textos/Las_particiones_definen_relaciones_de_equivalencia.md][Las particiones definen relaciones de equivalencia]] (En [[./src/Las_particiones_definen_relaciones_de_equivalencia.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_de_equivalencia.thy][Isabelle]]).
++ [[./textos/Las_particiones_definen_relaciones_transitivas.md][Las particiones definen relaciones transitivas]] (En [[./src/Las_particiones_definen_relaciones_transitivas.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_transitivas.thy][Isabelle]]).
++ [[./textos/Las_familias_de_conjuntos_definen_relaciones_simetricas.md][Las familias de conjuntos definen relaciones simétricas]] (En [[./src/Las_familias_de_conjuntos_definen_relaciones_simetricas.lean][Lean]] y en [[./thy/Las_familias_de_conjuntos_definen_relaciones_simetricas.thy][Isabelle]]).
++ [[./textos/Las_particiones_definen_relaciones_reflexivas.md][Las particiones definen relaciones reflexivas]] (En [[./src/Las_particiones_definen_relaciones_reflexivas.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_reflexivas.thy][Isabelle]]).
++ [[./textos/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.md][El conjunto de las clases de equivalencia es una partición]] (En [[./src/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.lean][Lean]] y en [[./thy/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.thy][Isabelle]]).
++ [[./textos/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.md][Las clases de equivalencia de elementos no relacionados son disjuntas]] (En [[./src/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.lean][Lean]] y en [[./thy/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.thy][Isabelle]]).
++ [[./textos/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.md][Las clases de equivalencia de elementos relacionados son iguales]] (En [[./src/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.lean][Lean]] y en [[./thy/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.thy][Isabelle]]).
++ [[./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md][Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean][Lean]] y en [[./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy][Isabelle]]).
++ [[./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md][La composición por la izquierda con una inyectiva es una operación inyectiva]] (En [[./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy][Isabelle]]).
++ [[./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md][La igualdad de valores es una relación de equivalencia]] (En [[./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy][Isabelle]]).
++ [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
++ [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
+
+* Old exercises
+
+** Demostraciones de una propiedad de los números enteros
 + [[./textos/El_producto_por_un_par_es_par.md][∀ m n ∈ ℕ, Even n → Even (m * n)]] (En [[./src/El_producto_por_un_par_es_par.lean][Lean4]]).
 
-* Propiedades elementales de los números reales
+** Propiedades elementales de los números reales
 + [[./textos/Asociativa_conmutativa_de_los_reales.md][En ℝ, (ab)c = b(ac)]] (En [[./src/Asociativa_conmutativa_de_los_reales.lean][Lean4]]).
 + [[./textos/(cb)a_eq_b(ac).md][En ℝ, (cb)a = b(ac)]] (En [[./src/(cb)a_eq_b(ac).lean][Lean4]]).
 + [[./textos/a(bc)_eq_b(ac).md][En ℝ, a(bc) = b(ac)]] (En [[./src/a(bc)_eq_b(ac).lean][Lean4]]).
@@ -28,7 +55,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Cuadrado_igual_a_cuadrado.md][En ℝ, x² = y² → x = y ∨ x = -y]] (En [[./src/Cuadrado_igual_a_cuadrado.lean][Lean4]]).
 + [[./textos/Demostracion_por_congruencia.md][En ℝ, |a| = |a - b + b|]] (En [[./src/Demostracion_por_congruencia.lean][Lean4]]).
 
-* Propiedades elementales de los monoides
+** Propiedades elementales de los monoides
 + [[./textos/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.md][En los monoides, los inversos a la izquierda y a la derecha son iguales]] (En [[./src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean][Lean]] y en [[./thy/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.thy][Isabelle]]).
 + [[./textos/Producto_de_potencias_de_la_misma_base_en_monoides.md][Producto de potencias de la misma base en monoides]] (En [[./src/Producto_de_potencias_de_la_misma_base_en_monoides.lean][Lean]] y en [[./thy/Producto_de_potencias_de_la_misma_base_en_monoides.thy][Isabelle]]).
 + [[./textos/Equivalencia_de_inversos_iguales_al_neutro.md][Equivalencia de inversos iguales al neutro]] (En [[./src/Equivalencia_de_inversos_iguales_al_neutro.lean][Lean]] y en [[./thy/Equivalencia_de_inversos_iguales_al_neutro.thy][Isabelle]]).
@@ -37,7 +64,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Potencias_de_potencias_en_monoides.md][Si M es un monoide, a ∈ M y m, n ∈ ℕ, entonces a^(m·n) = (a^m)^n]] (En [[./src/Potencias_de_potencias_en_monoides.lean][Lean]] y en [[./thy/Potencias_de_potencias_en_monoides.thy][Isabelle]]).
 + [[./textos/Los_monoides_booleanos_son_conmutativos.md][Los monoides booleanos son conmutativos]] (En [[./src/Los_monoides_booleanos_son_conmutativos.lean][Lean]] y en [[./thy/Los_monoides_booleanos_son_conmutativos.thy][Isabelle]]).
 
-* Propiedades elementales de los grupos
+** Propiedades elementales de los grupos
 + [[./textos/Unicidad_del_elemento_neutro_en_los_grupos.md][Unicidad del elemento neutro en los grupos]] (En [[./src/Unicidad_del_elemento_neutro_en_los_grupos.lean][Lean]] y en [[./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy][Isabelle]]).
 + [[./textos/Producto_por_inverso.md][Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1]] (En [[./src/Producto_por_inverso.lean][Lean4]]).
 + [[./textos/Producto_por_uno.md][Si G es un grupo y a ∈ G, entonces a·1 = a]] (En [[./src/Producto_por_uno.lean][Lean4]]).
@@ -46,7 +73,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Inverso_de_inverso_en_grupos.md][Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a]] (En [[./src/Inverso_del_inverso_en_grupos.lean][Lean]] y en [[./thy/Inverso_del_inverso_en_grupos.thy][Isabelle]]).
 + [[./textos/Propiedad_cancelativa_en_grupos.md][Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c]] (En [[./src/Propiedad_cancelativa_en_grupos.lean][Lean]] y en [[./thy/Propiedad_cancelativa_en_grupos.thy][Isabelle]]).
 
-* Propiedades elementales de los anillos
+** Propiedades elementales de los anillos
 + [[./textos/Suma_con_cero.md][Si R es un anillo y a ∈ R, entonces a + 0 = a]] (En [[./src/Suma_con_cero.lean][Lean4]]).
 + [[./textos/Suma_con_opuesto.md][Si R es un anillo y a ∈ R, entonces a + -a = 0]] (En [[./src/Suma_con_opuesto.lean][Lean4]]).
 + [[./textos/Opuesto_se_cancela_con_la_suma_por_la_izquierda.md][Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b]] (En [[./src/Opuesto_se_cancela_con_la_suma_por_la_izquierda.lean][Lean4]]).
@@ -64,7 +91,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Uno_mas_uno_es_dos.md][En los anillos, 1 + 1 = 2]] (En [[./src/Uno_mas_uno_es_dos.lean][Lean4]]).
 + [[./textos/Producto_por_dos.md][Si R es un anillo y a ∈ R, entonces 2a = a+a]] (En [[./src/Producto_por_dos.lean][Lean4]]).
 
-* Propiedades de orden en los números reales
+** Propiedades de orden en los números reales
 + [[./textos/Cadena_de_desigualdades.md][En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e]] (En [[./src/Cadena_de_desigualdades.lean][Lean4]]).
 + [[./textos/Inecuaciones.md][En ℝ, si 2a ≤ 3b, 1 ≤ a y d = 2, entonces d + a ≤ 5b]] (En [[./src/Inecuaciones.lean][Lean4]]).
 + [[./textos/Inecuaciones_con_exponenciales.md][En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ]] (En [[./src/Inecuaciones_con_exponenciales.lean][Lean4]]).
@@ -102,7 +129,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Demostracion_por_conversion.md][En ℝ, si 1 < a, entonces a < aa]] (En [[./src/Demostracion_por_conversion.lean][Lean4]]).
 + [[./textos/Propiedad_de_la_densidad_de_los_reales.md][Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y]] (En [[./src/Propiedad_de_la_densidad_de_los_reales.lean][Lean]] y en [[./thy/Propiedad_de_la_densidad_de_los_reales.thy][Isabelle]]).
 
-* Divisibilidad
+** Divisibilidad
 + [[./textos/Divisibilidad_de_producto.md][Si x, y, z ∈ ℕ, entonces x divide a yxz]] (En [[./src/Divisibilidad_de_producto.lean][Lean4]]).
 + [[./textos/Ejercicio_de_divisibilidad.md][Si x divide a w, también divide a y(xz)+x²+w²]] (En [[./src/Ejercicio_de_divisibilidad.lean][Lean4]]).
 + [[./textos/Transitividad_de_la_divisibilidad.md][Transitividad de la divisibilidad]] (En [[./src/Transitividad_de_la_divisibilidad.lean][Lean4]]).
@@ -117,7 +144,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Irracionalidad_de_la_raiz_cuadrada_de_2.md][La raíz cuadrada de 2 es irracional]] (En [[./src/Irracionalidad_de_la_raiz_cuadrada_de_2.lean][Lean]]).
 + [[./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md][Un número es par si y solo si lo es su cuadrado]] (En [[./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean][Lean]] y en [[./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy][Isabelle]]).
 
-* Retículos
+** Retículos
 + [[./textos/Conmutatividad_del_infimo.md][En los retículos, x ⊓ y = y ⊓ x]] (En [[./src/Conmutatividad_del_infimo.lean][Lean4]]).
 + [[./textos/Conmutatividad_del_supremo.md][En los retículos, x ⊔ y = y ⊔ x]] (En [[./src/Conmutatividad_del_supremo.lean][Lean4]]).
 + [[./textos/Asociatividad_del_infimo.md][En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)]] (En [[./src/Asociatividad_del_infimo.lean][Lean4]]).
@@ -127,24 +154,24 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/propiedad_distributiva_1.md][En los retículos, una distributiva del ínfimo implica la otra]] (En [[./src/Propiedad_distributiva_1.lean][Lean4]]).
 + [[./textos/Propiedad_distributiva_2.md][En los retículos, una distributiva del supremos implica la otra]] (En [[./src/Propiedad_distributiva_2.lean][Lean4]]).
 
-* Relaciones de orden
+** Relaciones de orden
 + [[./textos/Caracterizacion_de_menor_en_ordenes_parciales.md][En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b]] (En [[./src/Caracterizacion_de_menor_en_ordenes_parciales.lean][Lean4]]).
 + [[./textos/Preorden_es_irreflexivo.md][Si ≤ es un preorden, entonces < es irreflexiva]] (En [[./src/Preorden_es_irreflexivo.lean][Lean4]]).
 + [[./textos/Preorden_transitiva.md][Si ≤ es un preorden, entonces < es transitiva]] (En [[./src/Preorden_transitiva.lean][Lean4]]).
 
-* Relaciones de equivalencia
+** Relaciones de equivalencia
 + [[./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md][La congruencia módulo 2 es una relación de equivalencia]] (En [[./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy][Isabelle]]).
 
-* Anillos ordenados
+** Anillos ordenados
 + [[./textos/Ejercicio_sobre_anillos_ordenados.md][En los anillos ordenados, a ≤ b → 0 ≤ b - a]] (En [[./src/Ejercicio_sobre_anillos_ordenados_1.lean][Lean4]]).
 + [[./textos/Ejercicio_sobre_anillos_ordenados_2.md][En los anillos ordenados, 0 ≤ b - a → a ≤ b]] (En [[./src/Ejercicio_sobre_anillos_ordenados_2.lean][Lean4]]).
 + [[./textos/Ejercicio_sobre_anillos_ordenados_3.md][En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc]] (En [[./src/Ejercicio_sobre_anillos_ordenados_3.lean][Lean4]]).
 
-* Espacios métricos
+** Espacios métricos
 
 + [[./textos/Ejercicio_en_espacios_metricos.md][En los espacios métricos, dist(x,y) ≥ 0]] (En [[./src/Ejercicio_en_espacios_metricos.lean][Lean4]]).
 
-* Funciones reales
+** Funciones reales
 
 + [[./textos/Suma_de_cotas_superiores.md][La suma de una cota superior de f y una cota superior de g es una cota superior de f+g]] (En [[./src/Suma_de_cotas_superiores.lean][Lean4]]).
 + [[./textos/Suma_de_cotas_inferiores.md][La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g]] (En [[./src/Suma_de_cotas_inferiores.lean][Lean4]]).
@@ -179,7 +206,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.md][Las funciones con inversa por la izquierda son inyectivas]] (En [[./src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean][Lean]] y en [[./thy/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy][Isabelle]]).
 + [[./textos/Inyectiva_si_lo_es_la_composicion.md][Si g ∘ f es inyectiva, entonces f es inyectiva]] (En [[./src/Inyectiva_si_lo_es_la_composicion.lean][Lean4]] y en [[./thy/Inyectiva_si_lo_es_la_composicion.thy][Isabelle]]).
 
-* Teoría de conjuntos
+** Teoría de conjuntos
 + [[./textos/Propiedad_reflexiva_del_subconjunto.md][Para cualquier conjunto s, s ⊆ s]] (En [[./src/Propiedad_reflexiva_del_subconjunto.lean][Lean4]]).
 + [[./textos/Propiedad_transitiva_del_subconjunto.md][Si r ⊆ s y s ⊆ t, entonces r ⊆ t]] (En [[./src/Propiedad_transitiva_del_subconjunto.lean][Lean4]]).
 + [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Si s ⊆ t, entonces s ∩ u ⊆ t ∩ u]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
@@ -240,7 +267,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/La_equipotencia_es_una_relacion_simetrica.md][La equipotencia es una relación simétrica]] (En [[./src/La_equipotencia_es_una_relacion_simetrica.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_simetrica.thy][Isabelle]]).
 + [[./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md][La composición de funciones biyectivas es biyectiva]] (En [[./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean][Lean]] y en [[./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy][Isabelle]]).
 
-* Lógica
+** Lógica
 + [[./textos/Para_todo_no_de_no_existe.md][Si ¬(∃x)P(x), entonces (∀x)¬P(x)]] (En [[./src/Para_todo_no_de_no_existe.lean][Lean4]]).
 + [[./textos/No_existe_de_para_todo_no.md][Si (∀x)¬P(x), entonces ¬(∃x)P(x)]] (En [[./src/No_existe_de_para_todo_no.lean][Lean4]]).
 + [[./textos/Existe_no_de_no_para_todo.md][Si ¬(∀x)P(x), entonces (∃x)¬P(x)]] (En [[./src/Existe_no_de_no_para_todo.lean][Lean4]]).
@@ -250,7 +277,7 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Implicacion_mediante_disyuncion_y_negacion.md][(P → Q) ↔ ¬P ∨ Q]] (En [[./src/Implicacion_mediante_disyuncion_y_negacion.lean][Lean4]]).
 + [[./textos/La_paradoja_del_barbero.md][La paradoja del barbero]] (En [[./src/La_paradoja_del_barbero.lean][Lean]] y en [[./thy/La_paradoja_del_barbero.thy][Isabelle]]).
 
-* Límites de sucesiones
+** Límites de sucesiones
 + [[./textos/Convergencia_de_la_sucesion_constante.md][La sucesión constante sₙ = c converge a c]] (en [[./src/Convergencia_de_la_sucesion_constante.lean][Lean4]] y en [[./thy/Limite_de_sucesiones_constantes.thy][Isabelle]]).
 + [[./textos/Convergencia_de_la_suma.md][Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c]] (En [[./src/Convergencia_de_la_suma.lean][Lean4]] y en [[./thy/Limite_de_la_suma_de_sucesiones_convergentes.thy][Isabelle]]).
 + [[./textos/Unicidad_del_limite_de_las_sucesiones_convergentes.md][Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean][Lean4]] y en [[./thy/Unicidad_del_limite_de_las_sucesiones_convergentes.thy][Isabelle]]).
@@ -264,34 +291,3 @@ Las demostraciones con Lean se ha actualizado a la versión 4.11.0-rc2.
 + [[./textos/Limite_de_sucesion_menor_que_otra_sucesion.md][Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ]] (En [[./src/Limite_de_sucesion_menor_que_otra_sucesion.lean][Lean]] y en [[./thy/Limite_de_sucesion_menor_que_otra_sucesion.thy][Isabelle]]).
 + [[./textos/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.md][Si uₙ está acotada y lim vₙ = 0, entonces lim (uₙ·vₙ) = 0]] (En [[./src/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.lean][Lean]] y en [[./thy/Producto_de_una_sucesion_acotada_por_otra_convergente_a_cero.thy][Isabelle]]).
 + [[./textos/Limite_de_la_opuesta.md][Si el límite de la sucesión uₙ es a, entonces el límite de -uₙ es -a]] (En [[./src/Limite_de_la_opuesta.lean][Lean]] y en [[./thy/Limite_de_la_opuesta.thy][Isabelle]]).
-
-* Sin ordenar
-+ L24 [[./textos/La_equipotencia_es_una_relacion_transitiva.md][La equipotencia es una relación transitiva]] (En [[./src/La_equipotencia_es_una_relacion_transitiva.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_transitiva.thy][Isabelle]]).
-+ M25 [[./textos/La_equipotencia_es_una_relacion_de_equivalencia.md][La equipotencia es una relación de equivalencia]] (En [[./src/La_equipotencia_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_equipotencia_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ X26 [[./textos/La_igualdad_de_valores_es_una_relacion_de_equivalencia.md][La igualdad de valores es una relación de equivalencia]] (En [[./src/La_igualdad_de_valores_es_una_relacion_de_equivalencia.lean][Lean]] y en [[./thy/La_igualdad_de_valores_es_una_relacion_de_equivalencia.thy][Isabelle]]).
-+ J27 [[./textos/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.md][La composición por la izquierda con una inyectiva es una operación inyectiva]] (En [[./src/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.lean][Lean]] y en [[./thy/La_composicion_por_la_izquierda_con_una_inyectiva_es_inyectiva.thy][Isabelle]]).
-+ V28 [[./textos/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.md][Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.lean][Lean]] y en [[./thy/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy.thy][Isabelle]]).
-
-* Julio 2024
-+ L01 [[./textos/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.md][Las clases de equivalencia de elementos relacionados son iguales]] (En [[./src/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.lean][Lean]] y en [[./thy/Las_clases_de_equivalencia_de_elementos_relacionados_son_iguales.thy][Isabelle]]).
-+ M02 [[./textos/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.md][Las clases de equivalencia de elementos no relacionados son disjuntas]] (En [[./src/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.lean][Lean]] y en [[./thy/Las_clases_de_equivalencia_de_elementos_no_relacionados_son_disjuntas.thy][Isabelle]]).
-+ X03 [[./textos/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.md][El conjunto de las clases de equivalencia es una partición]] (En [[./src/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.lean][Lean]] y en [[./thy/El_conjunto_de_las_clases_de_equivalencia_es_una_particion.thy][Isabelle]]).
-+ J04 [[./textos/Las_particiones_definen_relaciones_reflexivas.md][Las particiones definen relaciones reflexivas]] (En [[./src/Las_particiones_definen_relaciones_reflexivas.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_reflexivas.thy][Isabelle]]).
-+ V05 [[./textos/Las_familias_de_conjuntos_definen_relaciones_simetricas.md][Las familias de conjuntos definen relaciones simétricas]] (En [[./src/Las_familias_de_conjuntos_definen_relaciones_simetricas.lean][Lean]] y en [[./thy/Las_familias_de_conjuntos_definen_relaciones_simetricas.thy][Isabelle]]).
-+ L08 [[./textos/Las_particiones_definen_relaciones_transitivas.md][Las particiones definen relaciones transitivas]] (En [[./src/Las_particiones_definen_relaciones_transitivas.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_transitivas.thy][Isabelle]]).
-+ M09 [[./textos/Las_particiones_definen_relaciones_de_equivalencia.md][Las particiones definen relaciones de equivalencia]] (En [[./src/Las_particiones_definen_relaciones_de_equivalencia.lean][Lean]] y en [[./thy/Las_particiones_definen_relaciones_de_equivalencia.thy][Isabelle]]).
-+ X10 [[./textos/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.md][Relación entre los índices de las subsucesiones y de la sucesión]] (En [[./src/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.lean][Lean]] y en [[./thy/Relacion_entre_los_indices_de_las_subsucesiones_y_de_la_sucesion.thy][Isabelle]]).
-+ J11 [[./textos/Las_funciones_de_extraccion_no_estan_acotadas.md][Las funciones de extracción no están acotadas]] (En [[./src/Las_funciones_de_extraccion_no_estan_acotadas.lean][Lean]] y en [[./thy/Las_funciones_de_extraccion_no_estan_acotadas.thy][Isabelle]]).
-+ V12 [[./textos/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.md][Si a es un punto de acumulación de u, entonces (∀ε>0)(∀n∈ℕ)(∃k≥n)[u(k)−a| < ε]​]] (En [[./src/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.lean][Lean]] y en [[./thy/Si_a_es_un_punto_de_acumulacion_de_u,_entonces_a_tiene_puntos_cercanos.thy][Isabelle]]).
-+ L15 [[./textos/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.md][Las subsucesiones tienen el mismo límite que la sucesión]] (En [[./src/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.lean][Lean]] y en [[./thy/Las_subsucesiones_tienen_el_mismo_limite_que_la_sucesion.thy][Isabelle]]).
-+ M16 [[./textos/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.md][El punto de acumulación de las sucesiones convergente es su límite]] (En [[./src/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.lean][Lean]] y en [[./thy/El_punto_de_acumulacion_de_las_sucesiones_convergente_es_su_limite.thy][Isabelle]]).
-+ J25 [[./textos/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.md][Si a es un punto de acumulación de la sucesión de Cauchy u, entonces a es el límite de u]] (En [[./src/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.lean][Lean]] y en [[./thy/Si_a_es_un_punto_de_acumulacion_de_la_sucesion_de_Cauchy_u,_entonces_a_es_el_limite_de_u.thy][Isabelle]]).
-+ V26 [[./textos/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.md][Las sucesiones divergentes positivas no tienen límites finitos]] (En [[./src/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.lean][Lean]] y en [[./thy/Las_sucesiones_divergentes_positivas_no_tienen_limites_finitos.thy][Isabelle]]).
-+ S27 [[./textos/Limite_de_sucesiones_no_decrecientes.md][Si u es una sucesión no decreciente y su límite es a, entonces u(n) ≤ a para todo n]] (En [[./src/Limite_de_sucesiones_no_decrecientes.lean][Lean]] y en [[./thy/Limite_de_sucesiones_no_decrecientes.thy][Isabelle]]).
-+ L29 [[./textos/Pruebas_de_length_(repeat_x_n)_Ig_n.md][Pruebas de length (replicate n x) = n]] (En [[./src/Pruebas_de_length_(repeat_x_n)_Ig_n.lean][Lean]] y en [[./thy/Pruebas_de_length_(repeat_x_n)_Ig_n.thy][Isabelle]]).
-+ X31 [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
-
-* Agosto 2024
-+ X07 [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) = length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
-+ X14 [[./textos/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.md][Proofs of take n xs ++ drop n xs = xs]] (En [[./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean][Lean]] y en [[./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy][Isabelle]]).
-+ L19 [[./textos/Pruebas_de_equivalencia_de_definiciones_de_inversa.md][Pruebas de equivalencia de definiciones de inversa]] (En [[./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean][Lean]] y en [[./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy][Isabelle]]).

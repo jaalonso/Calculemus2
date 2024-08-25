@@ -17,13 +17,13 @@
 --                 = 0 + b        [por inverso por la izquierda]
 --                 = b            [por cero por la izquierda]
 
+-- Demostraciones con Lean4
+-- ========================
+
 import Mathlib.Algebra.Ring.Defs
 
 variable {R : Type _} [Ring R]
 variable (a b : R)
-
--- Demostraciones con Lean4
--- ========================
 
 -- 1ª demostración
 example : -a + (a + b) = b :=

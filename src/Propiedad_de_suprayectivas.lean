@@ -15,7 +15,7 @@
 -- Al ser f suprayectiva, existe un y tal que f(y) = 3. Por tanto,
 -- f(y)² = 9.
 
--- Demostración con Lean9
+-- Demostración con Lean4
 -- ======================
 
 import Mathlib.Data.Real.Basic

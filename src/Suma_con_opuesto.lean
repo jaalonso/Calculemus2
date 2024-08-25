@@ -16,6 +16,9 @@
 --    a + -a = -a + a    [por la conmutativa de la suma]
 --           = 0         [por el axioma de inverso por la izquierda]
 
+-- Demostración con Lean4
+-- ======================
+
 import Mathlib.Algebra.Ring.Defs
 
 variable {R : Type _} [Ring R]

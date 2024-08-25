@@ -1,7 +1,7 @@
 -- Unicidad_del_limite_de_las_sucesiones_convergentes.lean
 -- Unicidad del límite de las sucesiones convergentes
 -- José A. Alonso Jiménez
--- Sevilla, 12 de julio de 2021
+-- Sevilla, 6 de febrero de 2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------

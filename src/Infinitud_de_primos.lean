@@ -46,6 +46,7 @@
 
 import Mathlib.Tactic
 import Mathlib.Data.Nat.Prime.Defs
+
 open Nat
 
 -- 1ª demostración

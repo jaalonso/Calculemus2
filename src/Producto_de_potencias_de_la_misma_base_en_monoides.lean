@@ -38,8 +38,6 @@
 -- ========================
 
 import Mathlib.Algebra.Group.Defs
--- import Mathlib.Algebra.GroupPower.Basic
--- import Init.Data.Nat.Lemmas
 import Mathlib.Tactic
 
 open Nat

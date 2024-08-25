@@ -20,7 +20,9 @@
 -- ========================
 
 import Mathlib.Tactic
+
 open Nat
+
 variable (n : ℕ)
 
 -- 1ª demostración

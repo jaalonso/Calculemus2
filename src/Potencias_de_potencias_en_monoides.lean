@@ -38,6 +38,7 @@
 
 import Mathlib.Algebra.Group.Defs
 import Mathlib.Tactic
+
 open Nat
 
 variable {M : Type} [Monoid M]

@@ -23,7 +23,9 @@
 -- ========================
 
 import Mathlib.Data.Real.Basic
+
 variable {c : ℝ}
+
 open Function
 
 -- 1ª demostración

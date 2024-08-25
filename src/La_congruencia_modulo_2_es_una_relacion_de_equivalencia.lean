@@ -38,7 +38,6 @@
 -- Demostraciones con Lean4
 -- ========================
 
--- import Mathlib.Data.Int.Basic
 import Mathlib.Tactic
 
 def R (m n : ℤ) := 2 ∣ (m - n)
