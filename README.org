@@ -7,7 +7,7 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 The solutions have been verified with [[https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc2][version 4.11.0-rc2 of Lean]].
 
 * Latest exercises
-+ [[https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/][Equivalence of reverse definitions]] (In [[./src/Pruebas_de_equivalencia_de_definiciones_de_inversa.lean][Lean]] and [[./thy/Pruebas_de_equivalencia_de_definiciones_de_inversa.thy][Isabelle]]).
++ [[https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/][Equivalence of reverse definitions]] (In [[./src/Equivalence of reverse definitions.lean][Lean]] and [[./thy/Equivalence of reverse definitions.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/08/14-proofs_of_take_n_xs_%2B%2B_drop_n_xs_eq_xs/][Proofs of take n xs ++ drop n xs = xs]] (In [[./src/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean][Lean]] and [[./thy/Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.thy][Isabelle]]).
 + [[./textos/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.md][Pruebas de length(xs ++ ys) = length(xs) + length(ys)]] (En [[./src/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean][Lean]] y en [[./thy/Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.thy][Isabelle]]).
 + [[./textos/Asociatividad_de_la_concatenacion_de_listas.md][Asociatividad de la concatenación de listas]] (En [[./src/Asociatividad_de_la_concatenacion_de_listas.lean][Lean]] y en [[./thy/Asociatividad_de_la_concatenacion_de_listas.thy][Isabelle]]).
