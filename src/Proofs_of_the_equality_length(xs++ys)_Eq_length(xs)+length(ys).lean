@@ -1,54 +1,56 @@
--- Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys.lean
--- Pruebas de length(xs ++ ys) = length(xs) + length(ys)
--- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 7-agosto-2024
+-- Proofs_of_the_equality_length(xs++ys)_Eq_length(xs)+length(ys).lean
+-- Proofs of the equality length(xs ++ ys) = length(xs) + length(ys).
+-- José A. Alonso <https://jaalonso.github.io>
+-- Seville, August 7, 2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
--- En Lean están definidas las funciones
+-- In Lean, the functions
 --    length : list α → nat
 --    (++)   : list α → list α → list α
--- tales que
--- + (length xs) es la longitud de xs. Por ejemplo,
+-- are defined such that
+-- + (length xs) is the length of xs. For example,
 --      length [2,3,5,3] = 4
--- + (xs ++ ys) es la lista obtenida concatenando xs e ys. Por ejemplo.
+-- + (xs ++ ys) is the list obtained by concatenating xs and ys. For
+--   example.
 --      [1,2] ++ [2,3,5,3] = [1,2,2,3,5,3]
--- Dichas funciones están caracterizadas por los siguientes lemas:
+--
+-- These functions are characterized by the following lemmas:
 --    length_nil  : length [] = 0
 --    length_cons : length (x :: xs) = length xs + 1
 --    nil_append  : [] ++ ys = ys
 --    cons_append : (x :: xs) ++ y = x :: (xs ++ ys)
 --
--- Demostrar que
+-- To prove that
 --    length (xs ++ ys) = length xs + length ys
 -- ---------------------------------------------------------------------
 
--- Demostración en lenguaje natural
--- ================================
+-- Proof in natural language
+-- =========================
 
--- Por inducción en xs.
+-- By induction on xs.
 --
--- Caso base: Supongamos que xs = []. Entonces,
+-- Base case: Suppose that xs = []. Then,
 --    length (xs ++ ys) = length ([] ++ ys)
 --                      = length ys
 --                      = 0 + length ys
 --                      = length [] + length ys
 --                      = length xs + length ys
 --
--- Paso de inducción: Supongamos que xs = a :: as y que se verifica la
--- hipótesis de inducción
---    length (as ++ ys) = length as + length ys                     (HI)
--- Entonces,
+-- Induction step: Suppose that xs = a :: as and that the induction
+-- hypothesis (IH) holds
+--    length (as ++ ys) = length as + length ys                     (IH)
+-- Then,
 --    length (xs ++ ys) = length ((a :: as) ++ ys)
 --                      = length (a :: (as ++ ys))
 --                      = length (as ++ ys) + 1
---                      = (length as + length ys) + 1      [por HI]
+--                      = (length as + length ys) + 1      [por IH]
 --                      = (length as + 1) + length ys
 --                      = length (a :: as) + length ys
 --                      = length xs + length ys
 
--- Demostraciones con Lean4
--- ========================
+-- Proofs with Lean4
+-- =================
 
 import Mathlib.Tactic
 
@@ -57,13 +59,13 @@ open List
 variable {α : Type}
 variable (xs ys : List α)
 
--- 1ª demostración
--- ===============
+-- Proof 1
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with a as IH
   . calc length ([] ++ ys)
          = length ys
            := congr_arg length (nil_append ys)
@@ -77,19 +79,19 @@ by
        _ = length (as ++ ys) + 1
            := length_cons a (as ++ ys)
        _ = (length as + length ys) + 1
-           := congrArg (. + 1) HI
+           := congrArg (. + 1) IH
        _ = (length as + 1) + length ys
            := (Nat.succ_add (length as) (length ys)).symm
        _ = length (a :: as) + length ys
            := congrArg (. + length ys) (length_cons a as).symm
 
--- 2ª demostración
--- ===============
+-- Proof 2
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with a as IH
   . calc length ([] ++ ys)
          = length ys
            := by rw [nil_append]
@@ -103,46 +105,46 @@ by
        _ = length (as ++ ys) + 1
            := by rw [length_cons]
        _ = (length as + length ys) + 1
-           := by rw [HI]
+           := by rw [IH]
        _ = (length as + 1) + length ys
            := (Nat.succ_add (length as) (length ys)).symm
        _ = length (a :: as) + length ys
            := congrArg (. + length ys) (length_cons a as).symm
 
--- 3ª demostración
--- ===============
+-- Proof 3
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with _ as HI
+  induction' xs with _ as IH
   . simp only [nil_append, zero_add, length_nil]
-  . simp only [cons_append, length_cons, HI, Nat.succ_add]
+  . simp only [cons_append, length_cons, IH, Nat.succ_add]
 
--- 4ª demostración
--- ===============
-
-example :
-  length (xs ++ ys) = length xs + length ys :=
-by
-  induction' xs with _ as HI
-  . simp
-  . simp [HI, Nat.succ_add]
-
--- 5ª demostración
--- ===============
+-- Proof 4
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with _ as IH
   . simp
-  . simp [HI] ; linarith
+  . simp [IH, Nat.succ_add]
 
--- 6ª demostración
--- ===============
+-- Proof 5
+-- =======
 
-lemma longitud_conc_1 (xs ys : List α):
+example :
+  length (xs ++ ys) = length xs + length ys :=
+by
+  induction' xs with a as IH
+  . simp
+  . simp [IH] ; linarith
+
+-- Proof 6
+-- =======
+
+lemma length_conc_1 (xs ys : List α):
   length (xs ++ ys) = length xs + length ys :=
 by
   induction xs with
@@ -154,36 +156,36 @@ by
           := by rw [zero_add]
       _ = length [] + length ys
           := by rw [length_nil]
-  | cons a as HI => calc
+  | cons a as IH => calc
     length ((a :: as) ++ ys)
         = length (a :: (as ++ ys))
           := by rw [cons_append]
       _ = length (as ++ ys) + 1
           := by rw [length_cons]
       _ = (length as + length ys) + 1
-          := by rw [HI]
+          := by rw [IH]
       _ = (length as + 1) + length ys
           := (Nat.succ_add (length as) (length ys)).symm
       _ = length (a :: as) + length ys
           := by rw [length_cons]
 
--- 7ª demostración
--- ===============
+-- Proof 7
+-- =======
 
-lemma longitud_conc_2 (xs ys : List α):
+lemma length_conc_2 (xs ys : List α):
   length (xs ++ ys) = length xs + length ys :=
 by
   induction xs with
   | nil          => simp
-  | cons _ as HI => simp [HI, Nat.succ_add]
+  | cons _ as IH => simp [IH, Nat.succ_add]
 
--- 9ª demostración
--- ===============
+-- Proof 8
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with a as IH
   . -- ⊢ length ([] ++ ys) = length [] + length ys
     rw [nil_append]
     -- ⊢ length ys = length [] + length ys
@@ -192,25 +194,25 @@ by
     rw [zero_add]
   . -- a : α
     -- as : List α
-    -- HI : length (as ++ ys) = length as + length ys
+    -- IH : length (as ++ ys) = length as + length ys
     -- ⊢ length (a :: as ++ ys) = length (a :: as) + length ys
     rw [cons_append]
     -- ⊢ length (a :: (as ++ ys)) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length (as ++ ys)) = length (a :: as) + length ys
-    rw [HI]
+    rw [IH]
     -- ⊢ Nat.succ (length as + length ys) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length as + length ys) = Nat.succ (length as) + length ys
     rw [Nat.succ_add]
 
--- 10ª demostración
--- ================
+-- Proof 9
+-- =======
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with a as IH
   . -- ⊢ length ([] ++ ys) = length [] + length ys
     rw [nil_append]
     -- ⊢ length ys = length [] + length ys
@@ -219,25 +221,25 @@ by
     rw [zero_add]
   . -- a : α
     -- as : List α
-    -- HI : length (as ++ ys) = length as + length ys
+    -- IH : length (as ++ ys) = length as + length ys
     -- ⊢ length (a :: as ++ ys) = length (a :: as) + length ys
     rw [cons_append]
     -- ⊢ length (a :: (as ++ ys)) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length (as ++ ys)) = length (a :: as) + length ys
-    rw [HI]
+    rw [IH]
     -- ⊢ Nat.succ (length as + length ys) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length as + length ys) = length (a :: as) + length ys
     rw [Nat.succ_add]
 
--- 11ª demostración
--- ===============
+-- Proof 10
+-- ========
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by
-  induction' xs with a as HI
+  induction' xs with a as IH
   . -- ⊢ length ([] ++ ys) = length [] + length ys
     rw [nil_append]
     -- ⊢ length ys = length [] + length ys
@@ -246,34 +248,34 @@ by
     rw [zero_add]
   . -- a : α
     -- as : List α
-    -- HI : length (as ++ ys) = length as + length ys
+    -- IH : length (as ++ ys) = length as + length ys
     -- ⊢ length (a :: as ++ ys) = length (a :: as) + length ys
     rw [cons_append]
     -- ⊢ length (a :: (as ++ ys)) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length (as ++ ys)) = length (a :: as) + length ys
-    rw [HI]
+    rw [IH]
     -- ⊢ Nat.succ (length as + length ys) = length (a :: as) + length ys
     rw [length_cons]
     -- ⊢ Nat.succ (length as + length ys) = Nat.succ (length as) + length ys
     linarith
 
--- 12ª demostración
--- ===============
+-- Proof 11
+-- ========
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 length_append xs ys
 
--- 13ª demostración
--- ===============
+-- Proof 12
+-- ========
 
 example :
   length (xs ++ ys) = length xs + length ys :=
 by simp
 
--- Lemas usados
--- ============
+-- Used lemmas
+-- ===========
 
 -- variable (m n p : ℕ)
 -- variable (x : α)

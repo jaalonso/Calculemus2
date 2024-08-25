@@ -1,33 +1,35 @@
-(* Pruebas_de_length(xs_@_ys)_Ig_length_xs+length_ys.thy
--- Pruebas de length(xs @ ys) = length(xs) + length(ys)
--- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 7-agosto-2024
+(* Proofs_of_the_equality_length(xs++ys)_Eq_length(xs)+length(ys).thy
+-- Proofs of the equality length(xs ++ ys) = length(xs) + length(ys).
+-- José A. Alonso <https://jaalonso.github.io>
+-- Seville, August 7, 2024
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
--- En Lean están definidas las funciones
+-- In Isabelle/HOL, the functions
 --    length :: 'a list \<Rightarrow> nat
 --    (@)    :: 'a list \<Rightarrow> 'a list \<Rightarrow> 'a list
--- tales que
--- + (length xs) es la longitud de xs. Por ejemplo,
+-- are defined such that
+-- + (length xs) is the length of xs. For example,
 --      length [2,3,5,3] = 4
--- + (xs @ ys) es la lista obtenida concatenando xs e ys. Por ejemplo.
+-- + (xs @ ys) is the list obtained by concatenating xs and ys. For
+--   example.
 --      [1,2] @ [2,3,5,3] = [1,2,2,3,5,3]
--- Dichas funciones están caracterizadas por los siguientes lemas:
+--
+-- These functions are characterized by the following lemmas:
 --    list.size(3) : length [] = 0
 --    list.size(4) : length (x # xs) = length xs + 1
 --    append_Nil   : [] @ ys = ys
 --    append_Cons  : (x # xs) @ y = x # (xs @ ys)
 --
--- Demostrar que
+-- To prove that
 --    length (xs @ ys) = length xs + length ys
 -- ------------------------------------------------------------------ *)
 
-theory "Pruebas_de_length(xs_++_ys)_Ig_length_xs+length_ys"
+theory "Proofs_of_the_equality_length(xs++ys)_Eq_length(xs)+length(ys)"
 imports Main
 begin
 
-(* 1\<ordfeminine> demostración *)
+(* Proof 1 *)
 
 lemma "length (xs @ ys) = length xs + length ys"
 proof (induct xs)
@@ -56,7 +58,7 @@ next
     by simp
 qed
 
-(* 2\<ordfeminine> demostración *)
+(* Proof 2 *)
 
 lemma "length (xs @ ys) = length xs + length ys"
 proof (induct xs)
@@ -69,7 +71,7 @@ next
     by simp
 qed
 
-(* 3\<ordfeminine> demostración *)
+(* Proof 3 *)
 
 lemma "length (xs @ ys) = length xs + length ys"
 proof (induct xs)
@@ -80,16 +82,16 @@ next
   then show ?case by simp
 qed
 
-(* 4\<ordfeminine> demostración *)
+(* Proof 4 *)
 
 lemma "length (xs @ ys) = length xs + length ys"
 by (induct xs) simp_all
 
-(* 5\<ordfeminine> demostración *)
+(* Proof 5 *)
 
 lemma "length (xs @ ys) = length xs + length ys"
 by (fact length_append)
 
-(* Nota: Auto_solve sugiere la demostración anterior. *)
+(* Note: Auto_solve suggests the previous proof. *)
 
 end
