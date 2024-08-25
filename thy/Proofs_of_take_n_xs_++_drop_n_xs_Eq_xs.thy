@@ -1,18 +1,18 @@
-(* Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs.lean
--- Pruebas de take' n xs @ drop' n xs = xs
--- José A. Alonso Jiménez
--- Sevilla, 13 de agosto de 2024
+(* Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.thy
+-- Proofs of take n xs ++ drop n xs = xs
+-- José A. Alonso https://jaalonso.github.io
+-- Seville, August 14, 2024
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------
--- En Isabelle/HOL está definida la función
+-- In Isabelle/HOL the function
 --    primrec append :: "'a list ⇒ 'a list ⇒ 'a list" (infixr "@" 65) where
 --    append_Nil: "[] @ ys = ys" |
 --    append_Cons: "(x#xs) @ ys = x # xs @ ys"
--- tal que (xs @ ys) es la lista obtenida concatenando xs e ys. Por
--- ejemplo.
+-- is defined such that (xs @ ys) is the list obtained by concatenating
+--  xs and ys. For example,
 --      [3,5] @ [1,9,7] = [3,5,1,9,7]
--- Además, se definen las funciones
+-- Furthermore, the functions
 --    fun take' :: "nat ⇒ 'a list ⇒ 'a list" where
 --      "take' n []           = []"
 --    | "take' 0 xs           = []"
@@ -22,19 +22,19 @@
 --      "drop' n []           = []"
 --    | "drop' 0 xs           = xs"
 --    | "drop' (Suc n) (x#xs) = drop' n xs"
--- tales que
--- + (take' n xs) es la lista formada por los n primeros elementos de
---   xs. Por ejemplo,
+-- are defined such that
+-- + (take' n xs) is the list formed by the first n elements of xs. For
+--   example,
 --      take' 2 [3,5,1,9,7] = [3,5]
--- + (drop' n xs) es la lista formada drop'ndo los n primeros elementos
---   de xs. Por ejemplo,
+-- + (drop' n xs) is the list formed by dropping the first n elements
+--   of xs. For example,
 --      drop' 2 [3,5,1,9,7] = [1,9,7]
 --
--- Demostrar que
+-- To prove that
 --    take' n xs @ drop' n xs = xs
 -- ------------------------------------------------------------------ *)
 
-theory "Pruebas_de_take_n_xs_++_drop_n_xs_Ig_xs"
+theory "Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs"
 imports Main
 begin
 
@@ -48,7 +48,7 @@ fun drop' :: "nat ⇒ 'a list ⇒ 'a list" where
 | "drop' 0 xs           = xs"
 | "drop' (Suc n) (x#xs) = drop' n xs"
 
-(* 1ª demostración *)
+(* Proof 1 *)
 
 lemma "take' n xs @ drop' n xs = xs"
 proof (induct rule: take'.induct)
@@ -88,7 +88,7 @@ next
     by this
 qed
 
-(* 2ª demostración *)
+(* Proof 2 *)
 
 lemma "take' n xs @ drop' n xs = xs"
 proof (induct rule: take'.induct)
@@ -102,7 +102,7 @@ next
   then show ?case by simp
 qed
 
-(* 3ª demostración *)
+(* Proof 3 *)
 
 lemma "take' n xs @ drop' n xs = xs"
 by (induct rule: take'.induct) simp_all
