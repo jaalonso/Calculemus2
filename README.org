@@ -1,4 +1,5 @@
 #+TITLE: Calculemus (Proof exercises in Lean4 and Isabelle/HOL)
+#+OPTIONS: toc:nil
 
 This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] blog.

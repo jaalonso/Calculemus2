@@ -1,32 +1,8 @@
-
-# &Iacute;ndice
-
-1.  [Latest exercises](#orgff102f4)
-2.  [Old exercises](#org122b374)
-    1.  [Demostraciones de una propiedad de los números enteros](#org6de540f)
-    2.  [Propiedades elementales de los números reales](#org8cbfe78)
-    3.  [Propiedades elementales de los monoides](#org47c62cf)
-    4.  [Propiedades elementales de los grupos](#org7eb13c8)
-    5.  [Propiedades elementales de los anillos](#orgd04b970)
-    6.  [Propiedades de orden en los números reales](#org855c190)
-    7.  [Divisibilidad](#orgfeb5625)
-    8.  [Retículos](#org3cf001a)
-    9.  [Relaciones de orden](#org640e07e)
-    10. [Relaciones de equivalencia](#orgd1bd061)
-    11. [Anillos ordenados](#org6c648c7)
-    12. [Espacios métricos](#orga423d6f)
-    13. [Funciones reales](#org6b5e865)
-    14. [Teoría de conjuntos](#org741e13c)
-    15. [Lógica](#org65d0c67)
-    16. [Límites de sucesiones](#org828e6a6)
-
 This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) blog.
 
 The solutions have been verified with [version 4.11.0-rc2 of Lean](https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc2).
 
-
-<a id="orgff102f4"></a>
 
 # Latest exercises
 
@@ -57,19 +33,13 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [La equipotencia es una relación transitiva](./textos/La_equipotencia_es_una_relacion_transitiva.md) (En [Lean](./src/La_equipotencia_es_una_relacion_transitiva.lean) y en [Isabelle](./thy/La_equipotencia_es_una_relacion_transitiva.thy)).
 
 
-<a id="org122b374"></a>
-
 # Old exercises
 
-
-<a id="org6de540f"></a>
 
 ## Demostraciones de una propiedad de los números enteros
 
 -   [∀ m n ∈ ℕ, Even n → Even (m \* n)](./textos/El_producto_por_un_par_es_par.md) (En [Lean4](./src/El_producto_por_un_par_es_par.lean)).
 
-
-<a id="org8cbfe78"></a>
 
 ## Propiedades elementales de los números reales
 
@@ -91,8 +61,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [En ℝ, |a| = |a - b + b|](./textos/Demostracion_por_congruencia.md) (En [Lean4](./src/Demostracion_por_congruencia.lean)).
 
 
-<a id="org47c62cf"></a>
-
 ## Propiedades elementales de los monoides
 
 -   [En los monoides, los inversos a la izquierda y a la derecha son iguales](./textos/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.md) (En [Lean](./src/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.lean) y en [Isabelle](./thy/En_los_monoides_los_inversos_a_la_izquierda_y_a_la_derecha_son_iguales.thy)).
@@ -104,8 +72,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Los monoides booleanos son conmutativos](./textos/Los_monoides_booleanos_son_conmutativos.md) (En [Lean](./src/Los_monoides_booleanos_son_conmutativos.lean) y en [Isabelle](./thy/Los_monoides_booleanos_son_conmutativos.thy)).
 
 
-<a id="org7eb13c8"></a>
-
 ## Propiedades elementales de los grupos
 
 -   [Unicidad del elemento neutro en los grupos](./textos/Unicidad_del_elemento_neutro_en_los_grupos.md) (En [Lean](./src/Unicidad_del_elemento_neutro_en_los_grupos.lean) y en [Isabelle](./thy/Unicidad_del_elemento_neutro_en_los_grupos.thy)).
@@ -116,8 +82,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a](./textos/Inverso_de_inverso_en_grupos.md) (En [Lean](./src/Inverso_del_inverso_en_grupos.lean) y en [Isabelle](./thy/Inverso_del_inverso_en_grupos.thy)).
 -   [Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c](./textos/Propiedad_cancelativa_en_grupos.md) (En [Lean](./src/Propiedad_cancelativa_en_grupos.lean) y en [Isabelle](./thy/Propiedad_cancelativa_en_grupos.thy)).
 
-
-<a id="orgd04b970"></a>
 
 ## Propiedades elementales de los anillos
 
@@ -138,8 +102,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [En los anillos, 1 + 1 = 2](./textos/Uno_mas_uno_es_dos.md) (En [Lean4](./src/Uno_mas_uno_es_dos.lean)).
 -   [Si R es un anillo y a ∈ R, entonces 2a = a+a](./textos/Producto_por_dos.md) (En [Lean4](./src/Producto_por_dos.lean)).
 
-
-<a id="org855c190"></a>
 
 ## Propiedades de orden en los números reales
 
@@ -181,8 +143,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y](./textos/Propiedad_de_la_densidad_de_los_reales.md) (En [Lean](./src/Propiedad_de_la_densidad_de_los_reales.lean) y en [Isabelle](./thy/Propiedad_de_la_densidad_de_los_reales.thy)).
 
 
-<a id="orgfeb5625"></a>
-
 ## Divisibilidad
 
 -   [Si x, y, z ∈ ℕ, entonces x divide a yxz](./textos/Divisibilidad_de_producto.md) (En [Lean4](./src/Divisibilidad_de_producto.lean)).
@@ -200,8 +160,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Un número es par si y solo si lo es su cuadrado](./textos/Un_numero_es_par_syss_lo_es_su_cuadrado.md) (En [Lean](./src/Un_numero_es_par_syss_lo_es_su_cuadrado.lean) y en [Isabelle](./thy/Un_numero_es_par_syss_lo_es_su_cuadrado.thy)).
 
 
-<a id="org3cf001a"></a>
-
 ## Retículos
 
 -   [En los retículos, x ⊓ y = y ⊓ x](./textos/Conmutatividad_del_infimo.md) (En [Lean4](./src/Conmutatividad_del_infimo.lean)).
@@ -214,8 +172,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [En los retículos, una distributiva del supremos implica la otra](./textos/Propiedad_distributiva_2.md) (En [Lean4](./src/Propiedad_distributiva_2.lean)).
 
 
-<a id="org640e07e"></a>
-
 ## Relaciones de orden
 
 -   [En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b](./textos/Caracterizacion_de_menor_en_ordenes_parciales.md) (En [Lean4](./src/Caracterizacion_de_menor_en_ordenes_parciales.lean)).
@@ -223,14 +179,10 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Si ≤ es un preorden, entonces < es transitiva](./textos/Preorden_transitiva.md) (En [Lean4](./src/Preorden_transitiva.lean)).
 
 
-<a id="orgd1bd061"></a>
-
 ## Relaciones de equivalencia
 
 -   [La congruencia módulo 2 es una relación de equivalencia](./textos/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.md) (En [Lean](./src/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.lean) y en [Isabelle](./thy/La_congruencia_modulo_2_es_una_relacion_de_equivalencia.thy)).
 
-
-<a id="org6c648c7"></a>
 
 ## Anillos ordenados
 
@@ -239,14 +191,10 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc](./textos/Ejercicio_sobre_anillos_ordenados_3.md) (En [Lean4](./src/Ejercicio_sobre_anillos_ordenados_3.lean)).
 
 
-<a id="orga423d6f"></a>
-
 ## Espacios métricos
 
 -   [En los espacios métricos, dist(x,y) ≥ 0](./textos/Ejercicio_en_espacios_metricos.md) (En [Lean4](./src/Ejercicio_en_espacios_metricos.lean)).
 
-
-<a id="org6b5e865"></a>
 
 ## Funciones reales
 
@@ -283,8 +231,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [Las funciones con inversa por la izquierda son inyectivas](./textos/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.md) (En [Lean](./src/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.lean) y en [Isabelle](./thy/Las_funciones_con_inversa_por_la_izquierda_son_inyectivas.thy)).
 -   [Si g ∘ f es inyectiva, entonces f es inyectiva](./textos/Inyectiva_si_lo_es_la_composicion.md) (En [Lean4](./src/Inyectiva_si_lo_es_la_composicion.lean) y en [Isabelle](./thy/Inyectiva_si_lo_es_la_composicion.thy)).
 
-
-<a id="org741e13c"></a>
 
 ## Teoría de conjuntos
 
@@ -349,8 +295,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [La composición de funciones biyectivas es biyectiva](./textos/La_composicion_de_funciones_biyectivas_es_biyectiva.md) (En [Lean](./src/La_composicion_de_funciones_biyectivas_es_biyectiva.lean) y en [Isabelle](./thy/La_composicion_de_funciones_biyectivas_es_biyectiva.thy)).
 
 
-<a id="org65d0c67"></a>
-
 ## Lógica
 
 -   [Si ¬(∃x)P(x), entonces (∀x)¬P(x)](./textos/Para_todo_no_de_no_existe.md) (En [Lean4](./src/Para_todo_no_de_no_existe.lean)).
@@ -362,8 +306,6 @@ The solutions have been verified with [version 4.11.0-rc2 of Lean](https://githu
 -   [(P → Q) ↔ ¬P ∨ Q](./textos/Implicacion_mediante_disyuncion_y_negacion.md) (En [Lean4](./src/Implicacion_mediante_disyuncion_y_negacion.lean)).
 -   [La paradoja del barbero](./textos/La_paradoja_del_barbero.md) (En [Lean](./src/La_paradoja_del_barbero.lean) y en [Isabelle](./thy/La_paradoja_del_barbero.thy)).
 
-
-<a id="org828e6a6"></a>
 
 ## Límites de sucesiones
 
