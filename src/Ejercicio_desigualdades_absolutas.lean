@@ -74,10 +74,10 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
   constructor
   { have h1 : a * b * 2 ≤ a ^ 2 + b ^ 2 := aux1 a b
     show a * b ≤ (a ^ 2 + b ^ 2) / 2
-    exact (le_div_iff h).mpr h1 }
+    exact (le_div_iff₀ h).mpr h1 }
   { have h2 : -(a * b) * 2 ≤ a ^ 2 + b ^ 2 := aux2 a b
     show -(a * b) ≤ (a ^ 2 + b ^ 2) / 2
-    exact (le_div_iff h).mpr h2 }
+    exact (le_div_iff₀ h).mpr h2 }
 
 -- 2ª demostración
 -- ===============
@@ -86,8 +86,8 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
   have h : (0 : ℝ) < 2 := by norm_num
   apply abs_le'.mpr
   constructor
-  { exact (le_div_iff h).mpr (aux1 a b) }
-  { exact (le_div_iff h).mpr (aux2 a b) }
+  { exact (le_div_iff₀ h).mpr (aux1 a b) }
+  { exact (le_div_iff₀ h).mpr (aux2 a b) }
 
 -- 3ª demostración
 -- ===============
@@ -96,9 +96,9 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
   have h : (0 : ℝ) < 2 := by norm_num
   apply abs_le'.mpr
   constructor
-  { rw [le_div_iff h]
+  { rw [le_div_iff₀ h]
     apply aux1 }
-  { rw [le_div_iff h]
+  { rw [le_div_iff₀ h]
     apply aux2 }
 
 -- Lemas usados
@@ -106,5 +106,5 @@ example : |a * b| ≤ (a ^ 2 + b ^ 2) / 2 := by
 
 -- variable (c : ℝ)
 -- #check (abs_le' : |a| ≤ b ↔ a ≤ b ∧ -a ≤ b)
--- #check (le_div_iff : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
+-- #check (le_div_iff₀ : 0 < c → (a ≤ b / c ↔ a * c ≤ b))
 -- #check (pow_two_nonneg a : 0 ≤ a ^ 2)
