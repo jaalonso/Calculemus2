@@ -6,6 +6,7 @@ The solutions have been verified with the [version 4.11.0-rc2](https://github.co
 
 # Latest exercises
 
+-   [Proofs that the mirror function of binary trees is involutive](https://jaalonso.github.io/calculemus/posts/2024/08/26-proofs_that_the_mirror_function_of_binary_trees_is_involutive) (In [Lean4](file:///home/jalonso/alonso/estudio/Calculemus2/src/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.lean) and [Isabelle](file:///home/jalonso/alonso/estudio/Calculemus2/thy/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.thy)).
 -   [Equivalence of reverse definitions](https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/) (In [Lean](./src/Equivalence_of_reverse_definitions.lean) and [Isabelle](./thy/Equivalence_of_reverse_definitions.thy)).
 -   [Proofs of take n xs ++ drop n xs = xs](https://jaalonso.github.io/calculemus/posts/2024/08/14-proofs_of_take_n_xs_%2B%2B_drop_n_xs_eq_xs/) (In [Lean](./src/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.lean) and [Isabelle](./thy/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.thy)).
 -   [Proofs of the equality length(xs ++ ys) = length(xs) + length(ys)](https://jaalonso.github.io/calculemus/posts/2024/08/07-proofs_of_the_equality_lengthxs%2B%2Bys_eq_lengthxs%2Blengthys) (In [Lean](./src/Proofs_of_the_equality_length(xs++ys)_Eq_length(xs)+length(ys).lean) and [Isabelle](./thy/Proofs_of_the_equality_length(xs++ys)_Eq_length(xs)+length(ys).thy)).
