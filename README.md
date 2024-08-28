@@ -6,7 +6,7 @@ The solutions have been verified with the [version 4.11.0-rc2](https://github.co
 
 # Latest exercises
 
--   [Proofs of "flatten (mirror a) = reverse (flatten a)"](./textos/Flatten_of_mirror.md) (In [Lean4](./src/Flatten_of_mirror.lean) and [Isabelle](./thy/Flatten_of_mirror.thy)).
+-   [Proofs of "flatten (mirror a) = reverse (flatten a)"](https://jaalonso.github.io/calculemus/posts/2024/08/28-flatten_of_mirror) (In [Lean4](./src/Flatten_of_mirror.lean) and [Isabelle](./thy/Flatten_of_mirror.thy)).
 -   [Proofs that the mirror function of binary trees is involutive](https://jaalonso.github.io/calculemus/posts/2024/08/26-proofs_that_the_mirror_function_of_binary_trees_is_involutive) (In [Lean4](./src/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.lean) and [Isabelle](./thy/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.thy)).
 -   [Equivalence of reverse definitions](https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/) (In [Lean](./src/Equivalence_of_reverse_definitions.lean) and [Isabelle](./thy/Equivalence_of_reverse_definitions.thy)).
 -   [Proofs of "take n xs ++ drop n xs = xs"](https://jaalonso.github.io/calculemus/posts/2024/08/14-proofs_of_take_n_xs_%2B%2B_drop_n_xs_eq_xs/) (In [Lean](./src/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.lean) and [Isabelle](./thy/Proofs_of_take_n_xs_++_drop_n_xs_Eq_xs.thy)).
