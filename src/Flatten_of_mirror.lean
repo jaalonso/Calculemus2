@@ -148,19 +148,26 @@ by
     -- Hr : flatten (mirror r) = reverse (flatten r)
     -- ⊢ flatten (mirror (Node x l r)) = reverse (flatten (Node x l r))
     rw [mirror_2]
-    -- ⊢ flatten (Node x (mirror r) (mirror l)) = reverse (flatten (Node x l r))
+    -- ⊢ flatten (Node x (mirror r) (mirror l))
+    --   = reverse (flatten (Node x l r))
     rw [flatten_2]
-    -- ⊢ flatten (mirror r) ++ [x] ++ flatten (mirror l) = reverse (flatten (Node x l r))
+    -- ⊢ flatten (mirror r) ++ [x] ++ flatten (mirror l)
+    --   = reverse (flatten (Node x l r))
     rw [Hl, Hr]
-    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l) = reverse (flatten (Node x l r))
+    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l)
+    --   = reverse (flatten (Node x l r))
     rw [flatten_2]
-    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l) = reverse (flatten l ++ [x] ++ flatten r)
+    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l)
+    --   = reverse (flatten l ++ [x] ++ flatten r)
     rw [reverse_append]
-    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l) = reverse (flatten r) ++ reverse (flatten l ++ [x])
+    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l)
+    --   = reverse (flatten r) ++ reverse (flatten l ++ [x])
     rw [reverse_append]
-    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l) = reverse (flatten r) ++ (reverse [x] ++ reverse (flatten l))
+    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l)
+    --   = reverse (flatten r) ++ (reverse [x] ++ reverse (flatten l))
     rw [reverse_singleton]
-    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l) = reverse (flatten r) ++ ([x] ++ reverse (flatten l))
+    -- ⊢ reverse (flatten r) ++ [x] ++ reverse (flatten l)
+    --   = reverse (flatten r) ++ ([x] ++ reverse (flatten l))
     rw [append_assoc]
 
 -- Proof 2
@@ -198,14 +205,17 @@ by
        _ = (reverse (flatten r) ++ [x]) ++ reverse (flatten l)
              := congrArg ((reverse (flatten r) ++ [x]) ++ .) Hl
        _ = (reverse (flatten r) ++ reverse [x]) ++ reverse (flatten l)
-             := congrArg (fun y => (reverse (flatten r) ++ y) ++ reverse (flatten l))
+             := congrArg (fun y => (reverse (flatten r) ++ y)
+                                   ++ reverse (flatten l))
                          (reverse_singleton x).symm
        _ = reverse ([x] ++ flatten r) ++ reverse (flatten l)
-             := congrArg (. ++ reverse (flatten l)) (reverse_append [x] (flatten r)).symm
+             := congrArg (. ++ reverse (flatten l))
+                         (reverse_append [x] (flatten r)).symm
        _ = reverse (flatten l ++ ([x] ++ flatten r))
              := (reverse_append (flatten l) ([x] ++ flatten r)).symm
        _ = reverse ((flatten l ++ [x]) ++ flatten r)
-             := congr_arg reverse (append_assoc (flatten l) [x] (flatten r)).symm
+             := congr_arg reverse
+                          (append_assoc (flatten l) [x] (flatten r)).symm
        _ = reverse (flatten (Node x l r))
              := congr_arg reverse (flatten_2 l r x)
 
@@ -264,8 +274,8 @@ by
     -- ⊢ flatten (mirror (Leaf x)) = reverse (flatten (Leaf x))
     calc flatten (mirror (Leaf x))
          = flatten (Leaf x)           := by simp
-       _ = [x]                       := by simp
-       _ = reverse [x]               := by simp
+       _ = [x]                        := by simp
+       _ = reverse [x]                := by simp
        _ = reverse (flatten (Leaf x)) := by simp
   | Node x l r Hl Hr =>
     -- x : α
@@ -348,5 +358,6 @@ end Tree'
 -- variable (x : α)
 -- variable (xs ys zs : List α)
 -- #check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
--- #check (reverse_append xs ys : reverse (xs ++ ys) = reverse ys ++ reverse xs)
+-- #check (reverse_append xs ys : reverse (xs ++ ys)
+--                                = reverse ys ++ reverse xs)
 -- #check (reverse_singleton x : reverse [x] = [x])
