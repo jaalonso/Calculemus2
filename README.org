@@ -7,6 +7,7 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 The solutions have been verified with the [[https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc2][version 4.11.0-rc2]] of Lean.
 
 * Latest exercises
++ [[./textos/Fibonacci.md][Equivalence of definitions of the Fibonacci function]] (In [[./src/Fibonacci.lean][Lean4]] and [[./thy/Fibonacci.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/08/28-flatten_of_mirror][Proofs of "flatten (mirror a) = reverse (flatten a)"]] (In [[./src/Flatten_of_mirror.lean][Lean4]] and [[./thy/Flatten_of_mirror.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/08/26-proofs_that_the_mirror_function_of_binary_trees_is_involutive][Proofs that the mirror function of binary trees is involutive]] (In [[./src/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.lean][Lean4]] and [[./thy/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/][Equivalence of reverse definitions]] (In [[./src/Equivalence_of_reverse_definitions.lean][Lean]] and [[./thy/Equivalence_of_reverse_definitions.thy][Isabelle]]).
