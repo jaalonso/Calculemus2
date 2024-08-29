@@ -55,7 +55,7 @@ by
   let S := {i | i ∉ f i}
   unfold Surjective at hf
   -- hf : ∀ (b : Set α), ∃ a, f a = b
-  cases' hf S with j hj
+  rcases hf S with ⟨j, hj⟩
   -- j : α
   -- hj : f j = S
   by_cases h: j ∈ S
@@ -84,7 +84,7 @@ by
   -- hf : Surjective f
   -- ⊢ False
   let S := {i | i ∉ f i}
-  cases' hf S with j hj
+  rcases hf S with ⟨j, hj⟩
   -- j : α
   -- hj : f j = S
   by_cases h: j ∈ S
@@ -106,7 +106,7 @@ by
   -- hf : Surjective f
   -- ⊢ False
   let S := {i | i ∉ f i}
-  cases' hf S with j hj
+  rcases hf S with ⟨j, hj⟩
   -- j : α
   -- hj : f j = S
   have h : (j ∈ S) = (j ∉ S) :=

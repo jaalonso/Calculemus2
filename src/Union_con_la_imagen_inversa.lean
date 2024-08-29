@@ -45,7 +45,7 @@ by
   -- x : α
   -- hx : x ∈ s ∪ f ⁻¹' v
   -- ⊢ x ∈ f ⁻¹' (f '' s ∪ v)
-  cases' hx with xs xv
+  rcases hx with xs | xv
   . -- xs : x ∈ s
     have h1 : f x ∈ f '' s := mem_image_of_mem f xs
     have h2 : f x ∈ f '' s ∪ v := mem_union_left v h1
@@ -68,7 +68,7 @@ by
   -- ⊢ x ∈ f ⁻¹' (f '' s ∪ v)
   rw [mem_preimage]
   -- ⊢ f x ∈ f '' s ∪ v
-  cases' hx with xs xv
+  rcases hx with xs | xv
   . -- xs : x ∈ s
     apply mem_union_left
     -- ⊢ f x ∈ f '' s
@@ -91,7 +91,7 @@ by
   -- x : α
   -- hx : x ∈ s ∪ f ⁻¹' v
   -- ⊢ x ∈ f ⁻¹' (f '' s ∪ v)
-  cases' hx with xs xv
+  rcases hx with xs | xv
   . -- xs : x ∈ s
     rw [mem_preimage]
     -- ⊢ f x ∈ f '' s ∪ v
