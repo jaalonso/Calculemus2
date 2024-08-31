@@ -6,6 +6,8 @@ The solutions have been verified with the [version 4.11.0-rc2](https://github.co
 
 # Latest exercises
 
+-   [If x is the supremum of set A, then ∀ y, y < x → ∃ a ∈ A, y < a](./textos/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.md) (In [Lean](./src/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.lean) and [Isabelle](./thy/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.thy)).
+-   [Equivalence of definitions of the Fibonacci function](./textos/Fibonacci.md) (In [Lean4](./src/Fibonacci.lean) and [Isabelle](./thy/Fibonacci.thy)).
 -   [Proofs of "flatten (mirror a) = reverse (flatten a)"](https://jaalonso.github.io/calculemus/posts/2024/08/28-flatten_of_mirror) (In [Lean4](./src/Flatten_of_mirror.lean) and [Isabelle](./thy/Flatten_of_mirror.thy)).
 -   [Proofs that the mirror function of binary trees is involutive](https://jaalonso.github.io/calculemus/posts/2024/08/26-proofs_that_the_mirror_function_of_binary_trees_is_involutive) (In [Lean4](./src/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.lean) and [Isabelle](./thy/Proofs_that_the_mirror_function_of_binary_trees_is_involutive.thy)).
 -   [Equivalence of reverse definitions](https://jaalonso.github.io/calculemus/posts/2024/08/19-equivalence_of_reverse_definitions/) (In [Lean](./src/Equivalence_of_reverse_definitions.lean) and [Isabelle](./thy/Equivalence_of_reverse_definitions.thy)).
