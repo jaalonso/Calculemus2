@@ -1,11 +1,12 @@
 This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) blog.
 
-The solutions have been verified with the [version 4.11.0-rc3](https://github.com/leanprover/lean4/releases/tag/v4.11.0-rc3) of Lean.
+The solutions have been verified with the [version 4.11.0](https://github.com/leanprover/lean4/releases/tag/v4.11.0) of Lean.
 
 
 # Latest exercises
 
+-   [If (∀ ε > 0, y ≤ x + ε), then y ≤ x](https://jaalonso.github.io/calculemus/posts/2024/09/02-le_of_forall_pos_le_add) (In [Lean4](./src/le_of_forall_pos_le_add.lean) and [Isabelle](./thy/le_of_forall_pos_le_add.thy)).
 -   [If x is the supremum of set A, then ∀ y, y < x → ∃ a ∈ A, y < a](https://jaalonso.github.io/calculemus/posts/2024/08/31-if_x_is_the_supremum_of_set_a_then_forall_y_y_lt_x_to_exists_a_in_a_y_lt_a/) (In [Lean](./src/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.lean) and [Isabelle](./thy/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.thy)).
 -   [Equivalence of definitions of the Fibonacci function](./textos/Fibonacci.md) (In [Lean4](./src/Fibonacci.lean) and [Isabelle](./thy/Fibonacci.thy)).
 -   [Proofs of "flatten (mirror a) = reverse (flatten a)"](https://jaalonso.github.io/calculemus/posts/2024/08/28-flatten_of_mirror) (In [Lean4](./src/Flatten_of_mirror.lean) and [Isabelle](./thy/Flatten_of_mirror.thy)).
