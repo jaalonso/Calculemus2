@@ -69,6 +69,9 @@
 -- =================
 
 import Mathlib.Data.List.Basic
+
+set_option pp.fieldNotation false
+
 open List
 
 variable {α : Type}
@@ -101,14 +104,16 @@ lemma reverse2_cons :
 example :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
+  induction xs generalizing ys with
+  | nil =>
+    -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     calc reverseAux [] ys
          = ys                         := reverseAux_nil
        _ = [] ++ ys                   := (nil_append ys).symm
        _ = reverse2 [] ++ ys          := congrArg (. ++ ys) reverse2_nil.symm
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -126,14 +131,16 @@ by
 example :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
+  induction xs generalizing ys with
+  | nil =>
+    -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     calc reverseAux [] ys
          = ys                         := by rw [reverseAux_nil]
        _ = [] ++ ys                   := by rw [nil_append]
        _ = reverse2 [] ++ ys          := by rw [reverse2_nil]
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -151,14 +158,16 @@ by
 example :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
+  induction xs generalizing ys with
+  | nil =>
+     -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     calc reverseAux [] ys
          = ys                := rfl
        _ = [] ++ ys          := by rfl
        _ = reverse2 [] ++ ys := rfl
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -176,14 +185,16 @@ by
 example :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
+  induction xs generalizing ys with
+  | nil =>
+    -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     calc reverseAux [] ys
          = ys                         := by simp
        _ = [] ++ ys                   := by simp
        _ = reverse2 [] ++ ys          := by simp
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -201,11 +212,13 @@ by
 example :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
+  induction xs generalizing ys with
+  | nil =>
+    -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     simp
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -218,42 +231,20 @@ by
 -- Proof 6 of the auxiliary lemma
 -- ==============================
 
-example :
+lemma reverse2_equiv :
   reverseAux xs ys = (reverse2 xs) ++ ys :=
 by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
-    -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
-    simp
-  . -- a : α
-    -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+  induction xs generalizing ys with
+  | nil =>
     -- ys : List α
-    -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
-    simp [HI (a :: ys)]
-
--- Proof 7 of the auxiliary lemma
--- ==============================
-
-example :
-  reverseAux xs ys = (reverse2 xs) ++ ys :=
-by induction' xs generalizing ys <;> simp [*]
-
--- Proof 8 of the auxiliary lemma
--- ==============================
-
-example :
-  reverseAux xs ys = (reverse2 xs) ++ ys :=
-by
-  induction' xs with a as HI generalizing ys
-  . -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     rw [reverseAux_nil]
     -- ⊢ ys = reverse2 [] ++ ys
     rw [reverse2_nil]
     -- ⊢ ys = [] ++ ys
     rw [nil_append]
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
@@ -268,38 +259,14 @@ by
     -- ⊢ reverse2 as ++ a :: ys = reverse2 as ++ ([a] ++ ys)
     rw [singleton_append]
 
--- Proof 9 of the auxiliary lemma
--- ==============================
-
-@[simp]
-lemma reverse2_equiv :
-  ∀ xs : List α, ∀ ys, reverseAux xs ys = (reverse2 xs) ++ ys
-| []         => by simp
-| (a :: as)  => by simp [reverse2_equiv as]
-
--- Proofs of the main lemma
+-- Proof of the main lemma
 -- ========================
-
--- Proof 1
--- =======
 
 example : reverse xs = reverse2 xs :=
 calc reverse xs
      = reverseAux xs []  := rfl
    _ = reverse2 xs ++ [] := by rw [reverse2_equiv]
    _ = reverse2 xs       := by rw [append_nil]
-
--- Proof 2
--- =======
-
-example : reverse xs = reverse2 xs :=
-by simp [reverse2_equiv, reverse]
-
--- Proof 3
--- =======
-
-example : reverse xs = reverse2 xs :=
-by simp [reverse]
 
 -- Used lemmas
 -- ===========
