@@ -6,6 +6,7 @@ The solutions have been verified with the [version 4.11.0](https://github.com/le
 
 # Latest exercises
 
+-   [If x is the limit of u and y is an upper bound of u, then x ≤ y](https://jaalonso.github.io/calculemus/posts/2024/09/03-limits_are_less_than_or_equal_to_upper_bounds) (En [Lean](./src/Limits_are_less_than_or_equal_to_upper_bounds.lean) y en [Isabelle](./thy/Limits_are_less_than_or_equal_to_upper_bounds.thy)).
 -   [If (∀ ε > 0, y ≤ x + ε), then y ≤ x](https://jaalonso.github.io/calculemus/posts/2024/09/02-le_of_forall_pos_le_add) (In [Lean4](./src/le_of_forall_pos_le_add.lean) and [Isabelle](./thy/le_of_forall_pos_le_add.thy)).
 -   [If x is the supremum of set A, then ∀ y, y < x → ∃ a ∈ A, y < a](https://jaalonso.github.io/calculemus/posts/2024/08/31-if_x_is_the_supremum_of_set_a_then_forall_y_y_lt_x_to_exists_a_in_a_y_lt_a/) (In [Lean](./src/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.lean) and [Isabelle](./thy/If_x_is_the_supremum_of_set_A_then_forall_y_y_lt_x_to_exists_a_in_A_y_lt_a.thy)).
 -   [Equivalence of definitions of the Fibonacci function](./textos/Fibonacci.md) (In [Lean4](./src/Fibonacci.lean) and [Isabelle](./thy/Fibonacci.thy)).

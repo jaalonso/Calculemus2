@@ -42,7 +42,7 @@
 --    (∀ xs, ys)[reverseAux xs ys = (reverse2 xs) ++ ys]
 -- Indeed,
 --    reverse xs = reverseAux xs []
---               = reverse2 xs ++ []    [por el lema auxiliar]
+--               = reverse2 xs ++ []    [by el lema auxiliar]
 --               = reverse2 xs
 --
 -- The auxiliary lemma is proven by induction on xs.
@@ -59,7 +59,7 @@
 -- Then,
 --    reverseAux xs ys = reverseAux (a :: as) ys
 --                     = reverseAux as (a :: ys)
---                     = reverse2 as ++ (a :: ys)   [por HI]
+--                     = reverse2 as ++ (a :: ys)   [by IH]
 --                     = reverse2 as ++ ([a] ++ ys)
 --                     = (reverse2 as ++ [a]) ++ ys
 --                     = reverse2 (a :: as) ++ ys
@@ -112,15 +112,15 @@ by
          = ys                         := reverseAux_nil
        _ = [] ++ ys                   := (nil_append ys).symm
        _ = reverse2 [] ++ ys          := congrArg (. ++ ys) reverse2_nil.symm
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
          = reverseAux as (a :: ys)    := reverseAux_cons
-       _ = reverse2 as ++ (a :: ys)   := (HI (a :: ys))
+       _ = reverse2 as ++ (a :: ys)   := (IH (a :: ys))
        _ = reverse2 as ++ ([a] ++ ys) := congrArg (reverse2 as ++ .) singleton_append
        _ = (reverse2 as ++ [a]) ++ ys := (append_assoc (reverse2 as) [a] ys).symm
        _ = reverse2 (a :: as) ++ ys   := congrArg (. ++ ys) (reverse2_cons a as).symm
@@ -139,15 +139,15 @@ by
          = ys                         := by rw [reverseAux_nil]
        _ = [] ++ ys                   := by rw [nil_append]
        _ = reverse2 [] ++ ys          := by rw [reverse2_nil]
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
          = reverseAux as (a :: ys)    := by rw [reverseAux_cons]
-       _ = reverse2 as ++ (a :: ys)   := by rw [(HI (a :: ys))]
+       _ = reverse2 as ++ (a :: ys)   := by rw [(IH (a :: ys))]
        _ = reverse2 as ++ ([a] ++ ys) := by rw [singleton_append]
        _ = (reverse2 as ++ [a]) ++ ys := by rw [append_assoc]
        _ = reverse2 (a :: as) ++ ys   := by rw [reverse2_cons]
@@ -166,15 +166,15 @@ by
          = ys                := rfl
        _ = [] ++ ys          := by rfl
        _ = reverse2 [] ++ ys := rfl
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
          = reverseAux as (a :: ys)    := rfl
-       _ = reverse2 as ++ (a :: ys)   := (HI (a :: ys))
+       _ = reverse2 as ++ (a :: ys)   := (IH (a :: ys))
        _ = reverse2 as ++ ([a] ++ ys) := rfl
        _ = (reverse2 as ++ [a]) ++ ys := by rw [append_assoc]
        _ = reverse2 (a :: as) ++ ys   := rfl
@@ -193,15 +193,15 @@ by
          = ys                         := by simp
        _ = [] ++ ys                   := by simp
        _ = reverse2 [] ++ ys          := by simp
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
          = reverseAux as (a :: ys)    := by simp
-       _ = reverse2 as ++ (a :: ys)   := (HI (a :: ys))
+       _ = reverse2 as ++ (a :: ys)   := (IH (a :: ys))
        _ = reverse2 as ++ ([a] ++ ys) := by simp
        _ = (reverse2 as ++ [a]) ++ ys := by simp
        _ = reverse2 (a :: as) ++ ys   := by simp
@@ -217,15 +217,15 @@ by
     -- ys : List α
     -- ⊢ reverseAux [] ys = reverse2 [] ++ ys
     simp
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     calc reverseAux (a :: as) ys
          = reverseAux as (a :: ys)    := by simp
-       _ = reverse2 as ++ (a :: ys)   := (HI (a :: ys))
+       _ = reverse2 as ++ (a :: ys)   := (IH (a :: ys))
        _ = reverse2 (a :: as) ++ ys   := by simp
 
 -- Proof 6 of the auxiliary lemma
@@ -243,15 +243,15 @@ by
     rw [reverse2_nil]
     -- ⊢ ys = [] ++ ys
     rw [nil_append]
-  | cons a as HI =>
+  | cons a as IH =>
     -- a : α
     -- as : List α
-    -- HI : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
+    -- IH : ∀ (ys : List α), reverseAux as ys = reverse2 as ++ ys
     -- ys : List α
     -- ⊢ reverseAux (a :: as) ys = reverse2 (a :: as) ++ ys
     rw [reverseAux_cons]
     -- ⊢ reverseAux as (a :: ys) = reverse2 (a :: as) ++ ys
-    rw [(HI (a :: ys))]
+    rw [(IH (a :: ys))]
     -- ⊢ reverse2 as ++ a :: ys = reverse2 (a :: as) ++ ys
     rw [reverse2_cons]
     -- ⊢ reverse2 as ++ a :: ys = (reverse2 as ++ [a]) ++ ys
