@@ -4,8 +4,6 @@
 This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] blog.
 
-The solutions have been verified with the [[https://github.com/leanprover/lean4/releases/tag/v4.11.0][version 4.11.0]] of Lean.
-
 * Latest exercises
 + [[https://jaalonso.github.io/calculemus/posts/2024/09/03-limits_are_less_than_or_equal_to_upper_bounds][If x is the limit of u and y is an upper bound of u, then x ≤ y]] (En [[./src/Limits_are_less_than_or_equal_to_upper_bounds.lean][Lean]] y en [[./thy/Limits_are_less_than_or_equal_to_upper_bounds.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/09/02-le_of_forall_pos_le_add][If (∀ ε > 0, y ≤ x + ε), then y ≤ x]] (In [[./src/le_of_forall_pos_le_add.lean][Lean4]] and [[./thy/le_of_forall_pos_le_add.thy][Isabelle]]).

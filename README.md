@@ -1,8 +1,6 @@
 This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) blog.
 
-The solutions have been verified with the [version 4.11.0](https://github.com/leanprover/lean4/releases/tag/v4.11.0) of Lean.
-
 
 # Latest exercises
 
