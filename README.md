@@ -4,6 +4,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
+-   [Proofs of "0 + 1 + 2 + 3 + ··· + n = n × (n + 1)/2"](https://jaalonso.github.io/calculemus/posts/2024/09/05-sum_of_the_first_n_natural_numbers) (In [Lean](./src/Sum_of_the_first_n_natural_numbers.lean) and [Isabelle](./thy/Sum_of_the_first_n_natural_numbers.thy)).
 -   [If f is continuous at a and the limit of u(n) is a, then the limit of f(u(n)) is f(a)](https://jaalonso.github.io/calculemus/posts/2024/09/04-sufficient_condition_of_continuity/) (In [Lean](./src/Sufficient_condition_of_continuity.lean) and [Isabelle](./thy/Sufficient_condition_of_continuity.thy)).
 -   [If x is the limit of u and y is an upper bound of u, then x ≤ y](https://jaalonso.github.io/calculemus/posts/2024/09/03-limits_are_less_than_or_equal_to_upper_bounds) (In [Lean](./src/Limits_are_less_than_or_equal_to_upper_bounds.lean) and [Isabelle](./thy/Limits_are_less_than_or_equal_to_upper_bounds.thy)).
 -   [If (∀ ε > 0, y ≤ x + ε), then y ≤ x](https://jaalonso.github.io/calculemus/posts/2024/09/02-le_of_forall_pos_le_add) (In [Lean4](./src/le_of_forall_pos_le_add.lean) and [Isabelle](./thy/le_of_forall_pos_le_add.thy)).
