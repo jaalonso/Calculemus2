@@ -43,16 +43,16 @@
 -- Proofs with Lean4
 -- =================
 
-import Init.Data.Nat.Basic
+import Mathlib.Data.Nat.Defs
 import Mathlib.Tactic
 
 open Nat
 
-variable (n : Nat)
+variable (n : ℕ)
 
 set_option pp.fieldNotation false
 
-def sum : Nat → Nat
+def sum : ℕ → ℕ
   | 0      => 0
   | succ n => sum n + (n+1)
 
