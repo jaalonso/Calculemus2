@@ -30,7 +30,7 @@
 --
 -- Induction Step: Let n = m + 1 and assume the induction hypothesis
 -- (IH)
---    2s(m) = m
+--    2s(m) = m(m+1)
 -- Then,
 --    2s(n) = 2s(m+1)
 --          = 2(s(m) + (m+1))
@@ -125,8 +125,8 @@ by
     -- HI : 2 * sum n = n * (n + 1)
     -- ⊢ 2 * sum (n + 1) = (n + 1) * (n + 1 + 1)
     calc 2 * sum (n + 1)
-         = 2 * (sum n + (n + 1))    := rfl
-       _ = 2 * sum n + 2 * (n + 1)  := by ring
+         = 2 * (sum n + (n + 1))     := rfl
+       _ = 2 * sum n + 2 * (n + 1)   := by ring
        _ = n * (n + 1) + 2 * (n + 1) := by simp [HI]
        _ = (n + 1) * (n + 2)         := by ring
 
