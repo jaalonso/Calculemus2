@@ -29,14 +29,14 @@
 --
 -- Induction step: Let n = m+1 and assume the induction hypothesis
 -- (IH)
---    2s(m) = (m + 1)(2a + md)
+--    2s(a,d,m) = (m + 1)(2a + md)
 -- Then,
---    2s(n) = 2s(m+1)
---          = 2(s(a,d,m) + (a + (m + 1)d))
---          = 2s(a,d,m) + 2(a + (m + 1)d)
---          = ((m + 1)(2a + md)) + 2(a + (m + 1)d) [by IH]
---          = (m + 2)(2a + (m + 1)d)
---          = (n + 1)(2a + nd)
+--    2s(a,d,n) = 2s(a,d,m+1)
+--              = 2(s(a,d,m) + (a + (m + 1)d))
+--              = 2s(a,d,m) + 2(a + (m + 1)d)
+--              = ((m + 1)(2a + md)) + 2(a + (m + 1)d) [by IH]
+--              = (m + 2)(2a + (m + 1)d)
+--              = (n + 1)(2a + nd)
 
 -- Proof with Lean4
 -- ================
