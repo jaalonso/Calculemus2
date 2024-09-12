@@ -43,7 +43,7 @@ by
      _ ↔ (x ∈ s ∧ x ∉ t) ∨ x ∈ t           := by simp only [mem_diff x]
      _ ↔ (x ∈ s ∨ x ∈ t) ∧ (x ∉ t ∨ x ∈ t) := and_or_right
      _ ↔ (x ∈ s ∨ x ∈ t) ∧ True            := by simp only [em' (x ∈ t)]
-     _ ↔ x ∈ s ∨ x ∈ t                     := and_true_iff (x ∈ s ∨ x ∈ t)
+     _ ↔ x ∈ s ∨ x ∈ t                     := (and_true (x ∈ s ∨ x ∈ t)).to_iff
      _ ↔ x ∈ s ∪ t                         := (mem_union x s t).symm
 
 -- 2ª demostración

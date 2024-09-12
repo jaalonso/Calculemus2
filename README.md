@@ -4,6 +4,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
+-   [Proofs of (1+p)ⁿ ≥ 1+np](https://jaalonso.github.io/calculemus/posts/2024/09/12-proofs_of_1%2Bpn_ge_1%2Bnp) (In [Lean](./src/Proofs_of_(1+p)^n_ge_1+np.lean) and [Isabelle](./thy/Proofs_of_(1+p)^n_ge_1+np.thy)).
 -   [Proofs of 0³+1³+2³+3³+···+n³ = (n(n+1)/2)²](https://jaalonso.github.io/calculemus/posts/2024/09/10-sum_of_the_first_cubes/) (In [Lean](./src/Sum_of_the_first_cubes.lean) and [Isabelle](./thy/Sum_of_the_first_cubes.thy)).
 -   [Proofs of a+aq+aq²+···+aqⁿ = a(1-qⁿ⁺¹)/(1-q)](https://jaalonso.github.io/calculemus/posts/2024/09/09-sum_of_geometric_progresion/) (In [Lean](./src/Sum_of_geometric_progresion.lean) and [Isabelle](./thy/Sum_of_geometric_progresion.thy)).
 -   [Proofs of a+(a+d)+(a+2d)+···+(a+nd) = (n+1)(2a+nd)/2](https://jaalonso.github.io/calculemus/posts/2024/09/07-sum_of_arithmetic_progression/) (In [Lean](./src/Sum_of_arithmetic_progression.lean) and [Isabelle](./thy/Sum_of_arithmetic_progression.thy)).

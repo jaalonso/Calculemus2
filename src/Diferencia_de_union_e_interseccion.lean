@@ -64,8 +64,8 @@ by
        (True ∧ (x ∉ t ∨ x ∉ s)) :=
          by simp only [em (x ∈ s), em' (x ∈ t)]
    _ ↔ (x ∈ s ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s) :=
-         by simp only [and_true_iff (x ∈ s ∨ x ∈ t),
-                       true_and_iff (¬x ∈ t ∨ ¬x ∈ s)]
+         by simp only [and_true (x ∈ s ∨ x ∈ t),
+                       true_and (¬x ∈ t ∨ ¬x ∈ s)]
    _ ↔ (x ∈ s ∪ t) ∧ (x ∉ t ∨ x ∉ s) :=
          by simp only [mem_union]
    _ ↔ (x ∈ s ∪ t) ∧ (x ∉ s ∨ x ∉ t) :=
