@@ -56,8 +56,7 @@ by
   -- hz : z ∈ clase R y
   -- ⊢ z ∈ clase R x
   have hyz : R y z := hz
-  have htrans : Transitive R := Equivalence.transitive h
-  have hxz : R x z := htrans hxy hyz
+  have hxz : R x z := Equivalence.trans h hxy hyz
   exact hxz
 
 -- 2ª demostración del lema auxiliar
@@ -72,7 +71,7 @@ by
   -- z : X
   -- hz : z ∈ clase R y
   -- ⊢ z ∈ clase R x
-  exact (Equivalence.transitive h) hxy hz
+  exact (Equivalence.trans h) hxy hz
 
 -- 3ª demostración del lema auxiliar
 -- =================================
@@ -81,7 +80,7 @@ lemma aux
   (h : Equivalence R)
   (hxy : R x y)
   : clase R y ⊆ clase R x :=
-fun _ hz ↦ (Equivalence.transitive h) hxy hz
+fun _ hz ↦ (Equivalence.trans h) hxy hz
 
 -- A continuación se presentan varias demostraciones del ejercicio
 -- usando el lema auxiliar
@@ -96,8 +95,7 @@ example
 by
   apply le_antisymm
   . -- ⊢ clase R x ≤ clase R y
-    have hs : Symmetric R := Equivalence.symmetric h
-    have hyx : R y x := hs hxy
+    have hyx : R y x := Equivalence.symm h hxy
     exact aux h hyx
   . -- ⊢ clase R y ≤ clase R x
     exact aux h hxy
@@ -112,7 +110,7 @@ example
 by
   apply le_antisymm
   . -- ⊢ clase R x ≤ clase R y
-    exact aux h (Equivalence.symmetric h hxy)
+    exact aux h (Equivalence.symm h hxy)
   . -- ⊢ clase R y ≤ clase R x
     exact aux h hxy
 
@@ -123,12 +121,12 @@ example
   (h : Equivalence R)
   (hxy : R x y)
   : clase R x = clase R y :=
-le_antisymm (aux h (Equivalence.symmetric h hxy)) (aux h hxy)
+le_antisymm (aux h (Equivalence.symm h hxy)) (aux h hxy)
 
 -- Lemas usados
 -- ============
 
 -- variable (x y z : Set X)
--- #check (Equivalence.symmetric : Equivalence R → Symmetric R)
--- #check (Equivalence.transitive : Equivalence R → Transitive R)
+-- #check (Equivalence.symm : Equivalence R → ∀ {x y : X}, R x y → R y x)
+-- #check (Equivalence.trans : Equivalence R → ∀ {x y z : X}, R x y → R y z → R x z)
 -- #check (le_antisymm : x ≤ y → y ≤ x → x = y)
