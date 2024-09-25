@@ -4,6 +4,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
+-   [Brahmagupta-Fibonacci identity](https://jaalonso.github.io/calculemus/posts/2024/09/25-brahmagupta-fibonacci_identity/) (In [Lean](./src/Brahmagupta-Fibonacci_identity.lean) and [Isabelle](./thy/Brahmagupta-Fibonacci_identity.thy)).
 -   [Proofs of ∑k<n. 2<sup>k</sup> = 2<sup>n</sup>-1](https://jaalonso.github.io/calculemus/posts/2024/09/24-sum_of_powers_of_two/) (In [Lean](./src/Sum_of_powers_of_two.lean) and [Isabelle](./thy/Sum_of_powers_of_two.thy)).
 -   [Proofs of "∑i<n. i = n(n-1)/2"](https://jaalonso.github.io/calculemus/posts/2024/09/19-gausss_formula_for_summation) (In [Lean](./src/Gauss's_formula_for_summation.lean) and [Isabelle](./thy/Gauss's_formula_for_summation.thy)).
 -   [Proofs of "If p > -1, then (1+p)ⁿ ≥ 1+np"](./textos/Proofs_of_(1+p)^n_ge_1+np.md) (In [Lean](./src/Proofs_of_(1+p)^n_ge_1+np.lean) and [Isabelle](./thy/Proofs_of_(1+p)^n_ge_1+np.thy)).

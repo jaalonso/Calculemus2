@@ -94,9 +94,9 @@ example
   : f₁ = f₂ :=
 calc f₁ = id ∘ f₁         := (id_comp f₁).symm
  _ = (invFun g ∘ g) ∘ f₁  := congrArg (. ∘ f₁) (invFun_comp hg).symm
- _ = invFun g ∘ (g ∘ f₁)  := comp.assoc (invFun g) g f₁
+ _ = invFun g ∘ (g ∘ f₁)  := comp_assoc (invFun g) g f₁
  _ = invFun g ∘ (g ∘ f₂)  := congrArg (invFun g ∘ .) hgf
- _ = (invFun g ∘ g) ∘ f₂  := comp.assoc (invFun g) g f₂
+ _ = (invFun g ∘ g) ∘ f₂  := comp_assoc (invFun g) g f₂
  _ = id ∘ f₂              := congrArg (. ∘ f₂) (invFun_comp hg)
  _ = f₂                   := id_comp f₂
 
@@ -124,7 +124,7 @@ calc f₁ = id ∘ f₁        := by aesop
 -- variable (A B C D : Type _)
 -- variable (X' : Type)[Nonempty X']
 -- variable (f' : X' → Y)
--- #check (comp.assoc : ∀ (f : C → D) (g : B → C) (h : A → B), (f ∘ g) ∘ h = f ∘ (g ∘ h))
+-- #check (comp_assoc : ∀ (f : C → D) (g : B → C) (h : A → B), (f ∘ g) ∘ h = f ∘ (g ∘ h))
 -- #check (comp_apply : (g ∘ f) x = g (f x))
 -- #check (congrArg f₁ : x = y → f₁ x = f₁ y)
 -- #check (congr_fun : f₁ = f₂ → ∀ x, f₁ x = f₂ x)
