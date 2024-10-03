@@ -1,7 +1,7 @@
 -- Limite_multiplicado_por_una_constante.lean
 -- Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca
 -- José A. Alonso Jiménez
--- Sevilla, 13 de febrero de 2024
+-- Sevilla, 15 de febrero de 2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -135,7 +135,7 @@ by
     -- ⊢ |c * (u n - a)| < ε
     rw [abs_mul]
     -- ⊢ |c| * |u n - a| < ε
-    rw [← lt_div_iff' hc']
+    rw [← lt_div_iff₀' hc']
     -- ⊢ |u n - a| < ε / |c|
     exact hN
 
@@ -158,7 +158,7 @@ by
     intros n hn
     specialize hN n hn
     dsimp only
-    rw [← mul_sub, abs_mul, ← lt_div_iff' hc']
+    rw [← mul_sub, abs_mul, ← lt_div_iff₀' hc']
     exact hN
 
 -- Lemas usados
@@ -168,7 +168,7 @@ by
 -- #check (abs_mul a b : |a * b| = |a| * |b|)
 -- #check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
 -- #check (div_pos : 0 < a → 0 < b → 0 < a / b)
--- #check (lt_div_iff' : 0 < c → (a < b / c ↔ c * a < b))
+-- #check (lt_div_iff₀' : 0 < c → (a < b / c ↔ c * a < b))
 -- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
 -- #check (mul_lt_mul_left : 0 < a → (a * b < a * c ↔ b < c))
 -- #check (mul_sub a b c : a * (b - c) = a * b - a * c)
