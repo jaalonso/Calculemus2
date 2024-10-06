@@ -66,6 +66,30 @@ by
   rw [pow_two] at h
   -- h : 2 ∣ n * n
   have h2 : 2 ∣ n ∨ 2 ∣ n := (Nat.Prime.dvd_mul prime_two).mp h
+  cases h2 <;> assumption
+
+-- 4ª demostración
+-- ===============
+
+example
+  (h : 2 ∣ n ^ 2)
+  : 2 ∣ n :=
+by
+  rw [pow_two] at h
+  -- h : 2 ∣ n * n
+  have h2 : 2 ∣ n ∨ 2 ∣ n := (Nat.Prime.dvd_mul prime_two).mp h
+  tauto
+
+-- 5ª demostración
+-- ===============
+
+example
+  (h : 2 ∣ n ^ 2)
+  : 2 ∣ n :=
+by
+  rw [pow_two, Nat.prime_two.dvd_mul] at h
+  -- h : 2 ∣ n ∨ 2 ∣ n
+  -- ⊢ 2 ∣ n
   tauto
 
 -- Lemas usados
