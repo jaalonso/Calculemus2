@@ -5,6 +5,7 @@ This repository contains the solutions in Lean4 and Isabelle/HOL for the
 exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] blog.
 
 * Latest exercises
++ [[https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/][Pigeonhole principle]] (En [[./src/Pigeonhole_principle.lean][Lean4]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/10/04-if_ff_is_biyective_then_f_is_biyective/][If f ∘ f is biyective, then f is biyective]] (In [[./src/If_ff_is_biyective_then_f_is_biyective.lean][Lean]] and [[./thy/If_ff_is_biyective_then_f_is_biyective.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/09/25-brahmagupta-fibonacci_identity/][Brahmagupta-Fibonacci identity]] (In [[./src/Brahmagupta-Fibonacci_identity.lean][Lean]] and [[./thy/Brahmagupta-Fibonacci_identity.thy][Isabelle]]).
 + [[https://jaalonso.github.io/calculemus/posts/2024/09/24-sum_of_powers_of_two/][Proofs of ∑k<n. 2^k = 2^n-1]] (In [[./src/Sum_of_powers_of_two.lean][Lean]] and [[./thy/Sum_of_powers_of_two.thy][Isabelle]]).
