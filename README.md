@@ -4,7 +4,8 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
--   [Pigeonhole principle](https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/) (En [Lean4](./src/Pigeonhole_principle.lean)).
+-   [If u(n) tends to a, then 7u(n) tends to 7a](./textos/Limit_of_7u.md) (In [Lean4](./src/Limit_of_7u.lean)).
+-   [Pigeonhole principle](https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/) (In [Lean4](./src/Pigeonhole_principle.lean)).
 -   [If f ∘ f is biyective, then f is biyective](https://jaalonso.github.io/calculemus/posts/2024/10/04-if_ff_is_biyective_then_f_is_biyective/) (In [Lean](./src/If_ff_is_biyective_then_f_is_biyective.lean) and [Isabelle](./thy/If_ff_is_biyective_then_f_is_biyective.thy)).
 -   [Brahmagupta-Fibonacci identity](https://jaalonso.github.io/calculemus/posts/2024/09/25-brahmagupta-fibonacci_identity/) (In [Lean](./src/Brahmagupta-Fibonacci_identity.lean) and [Isabelle](./thy/Brahmagupta-Fibonacci_identity.thy)).
 -   [Proofs of ∑k<n. 2<sup>k</sup> = 2<sup>n</sup>-1](https://jaalonso.github.io/calculemus/posts/2024/09/24-sum_of_powers_of_two/) (In [Lean](./src/Sum_of_powers_of_two.lean) and [Isabelle](./thy/Sum_of_powers_of_two.thy)).
