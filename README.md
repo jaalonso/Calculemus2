@@ -4,6 +4,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
+-   [If the limit of the sequence u(n) is a and c ∈ ℝ, then the limit of u(n)c is ac](./textos/Limit_multiplied_by_a_constant_2.md) (En [Lean](./src/Limit_multiplied_by_a_constant_2.lean)).
 -   [If u(n) tends to a, then 7u(n) tends to 7a](./textos/Limit_of_7u.md) (In [Lean4](./src/Limit_of_7u.lean)).
 -   [Pigeonhole principle](https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/) (In [Lean4](./src/Pigeonhole_principle.lean)).
 -   [If f ∘ f is biyective, then f is biyective](https://jaalonso.github.io/calculemus/posts/2024/10/04-if_ff_is_biyective_then_f_is_biyective/) (In [Lean](./src/If_ff_is_biyective_then_f_is_biyective.lean) and [Isabelle](./thy/If_ff_is_biyective_then_f_is_biyective.thy)).
@@ -329,7 +330,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 -   [Si la sucesión s converge a b y la t a c, entonces s+t converge a b+c](./textos/Convergencia_de_la_suma.md) (En [Lean4](./src/Convergencia_de_la_suma.lean) y en [Isabelle](./thy/Limite_de_la_suma_de_sucesiones_convergentes.thy)).
 -   [Unicidad del límite de las sucesiones convergentes](./textos/Unicidad_del_limite_de_las_sucesiones_convergentes.md) (En [Lean4](./src/Unicidad_del_limite_de_las_sucesiones_convergentes.lean) y en [Isabelle](./thy/Unicidad_del_limite_de_las_sucesiones_convergentes.thy)).
 -   [Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de uₙ+c es a+c](./textos/Limite_cuando_se_suma_una_constante.md) (En [Lean](./src/Limite_cuando_se_suma_una_constante.lean) y en [Isabelle](./thy/Limite_cuando_se_suma_una_constante.thy)).
--   [Si el límite de la sucesión u(n) es a y c ∈ ℝ, entonces el límite de cu(n) es ca](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Limite_multiplicado_por_una_constante.md) (En [Lean](./src/Limite_multiplicado_por_una_constante.lean) y en [Isabelle](./thy/Limite_multiplicado_por_una_constante.thy)).
+-   [Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Limite_multiplicado_por_una_constante.md) (En [Lean](./src/Limite_multiplicado_por_una_constante.lean) y en [Isabelle](./thy/Limite_multiplicado_por_una_constante.thy)).
 -   [El límite de u es a syss el de u-a es 0](./textos/El_limite_de_u_es_a_syss_el_de_u-a_es_0.md) (En [Lean](./src/El_limite_de_u_es_a_syss_el_de_u-a_es_0.lean) y en [Isabelle](./thy/El_limite_de_u_es_a_syss_el_de_u-a_es_0.thy)).
 -   [Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0](./textos/Producto_de_sucesiones_convergentes_a_cero.md) (En [Lean](./src/Producto_de_sucesiones_convergentes_a_cero.lean) y en [Isabelle](./thy/Producto_de_sucesiones_convergentes_a_cero.thy)).
 -   [Teorema del emparedado](file:///home/jalonso/alonso/estudio/Calculemus2/textos/Teorema_del_emparedado.md) (En [Lean](./src/Teorema_del_emparedado.lean) y en [Isabelle](./thy/Teorema_del_emparedado.thy)).
