@@ -4,7 +4,8 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 # Latest exercises
 
--   [If the limit of the sequence u(n) is a and c ∈ ℝ, then the limit of u(n)c is ac](./textos/Limit_multiplied_by_a_constant_2.md) (En [Lean](./src/Limit_multiplied_by_a_constant_2.lean)).
+-   [If uₙ tends to a y vₙ tends to b, then uₙvₙ tends to ab](./textos/TendsTo_mul.md) (In [Lean4](./src/TendsTo_mul.lean)).
+-   [If the limit of the sequence u(n) is a and c ∈ ℝ, then the limit of u(n)c is ac](./textos/Limit_multiplied_by_a_constant_2.md) (In [Lean](./src/Limit_multiplied_by_a_constant_2.lean)).
 -   [If u(n) tends to a, then 7u(n) tends to 7a](./textos/Limit_of_7u.md) (In [Lean4](./src/Limit_of_7u.lean)).
 -   [Pigeonhole principle](https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/) (In [Lean4](./src/Pigeonhole_principle.lean)).
 -   [If f ∘ f is biyective, then f is biyective](https://jaalonso.github.io/calculemus/posts/2024/10/04-if_ff_is_biyective_then_f_is_biyective/) (In [Lean](./src/If_ff_is_biyective_then_f_is_biyective.lean) and [Isabelle](./thy/If_ff_is_biyective_then_f_is_biyective.thy)).
