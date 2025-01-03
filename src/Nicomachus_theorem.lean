@@ -10,6 +10,7 @@
 -- equal to the square of the sum of the first n natural numbers; that
 -- is, for any natural number n we have
 --    1³ + 2³ + ... + n³ = (1 + 2 + ... + n)²
+-- ---------------------------------------------------------------------
 
 -- Proof in natural language
 -- =========================
@@ -42,7 +43,7 @@
 -- Lemma 2 is equivalent to
 --    4(1³ + 2³ + ... + n³) = (n(n+1))²
 -- which is proved by induction:
-
+--
 -- Base case: For n = 0, the sum is 0 and
 --    4·0 = (0(0+1))²
 -- Inductive step: Assume the inductive hypothesis:
@@ -156,7 +157,7 @@ by
 -- Proof 4 of Lemma 1
 -- ==================
 
-lemma formula_suma :
+lemma sum_formula :
   2 * sum n = n * (n + 1) :=
 by
   induction n with
@@ -200,7 +201,7 @@ by
 -- Proof 2 of Lemma 2
 -- ==================
 
-lemma formula_sumCubes :
+lemma sumCubes_formula :
   4 * sumCubes n = (n*(n+1))^2 :=
 by
   induction n with
@@ -223,8 +224,8 @@ example :
 by
   have h1 : 4 * sumCubes n = 4 * (sum n)^2 :=
     calc 4 * sumCubes n
-       = (n*(n+1))^2    := by simp only [formula_sumCubes]
-     _ = (2 * sum n)^2 := by simp only [formula_suma]
+       = (n*(n+1))^2    := by simp only [sumCubes_formula]
+     _ = (2 * sum n)^2 := by simp only [sum_formula]
      _ = 4 * (sum n)^2 := by ring
   linarith
 
