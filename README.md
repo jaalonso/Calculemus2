@@ -10,6 +10,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 
 ### January 2025
 
+-   21 [Praeclarum theorema](https://jaalonso.github.io/calculemus/posts/2025/01/21-praeclarum_theorema) (In [Lean4](./src/Praeclarum_theorema.lean) and [Isabelle](./thy/Praeclarum_theorema.thy)).
 -   03 [Nicomachus’s theorem](https://jaalonso.github.io/calculemus/posts/2025/01/03-nicomachus_theorem/) (In [Lean4](./src/Nicomachus_theorem.lean) and [Isabelle](./thy/Nicomachus_theorem.thy)).
 
 
@@ -26,7 +27,7 @@ exercises proposed in the [Calculemus](https://jaalonso.github.io/calculemus) bl
 -   29 [If the limit of the sequence u(n) is a and c ∈ ℝ, then the limit of u(n)c is ac](https://jaalonso.github.io/calculemus/posts/2024/11/29-limit_multiplied_by_a_constant_2/) (In [Lean](./src/Limit_multiplied_by_a_constant_2.lean)).
 
 
-### October
+### October 2024
 
 -   10 [If u(n) tends to a, then 7u(n) tends to 7a](https://jaalonso.github.io/calculemus/posts/2024/11/10-limit_of_7u/) (In [Lean4](./src/Limit_of_7u.lean)).
 -   07 [Pigeonhole principle](https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/) (In [Lean4](./src/Pigeonhole_principle.lean)).

@@ -9,6 +9,7 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 ** 2025
 
 *** January 2025
++ 21 [[https://jaalonso.github.io/calculemus/posts/2025/01/21-praeclarum_theorema][Praeclarum theorema]] (In [[./src/Praeclarum_theorema.lean][Lean4]] and [[./thy/Praeclarum_theorema.thy][Isabelle]]).
 + 03 [[https://jaalonso.github.io/calculemus/posts/2025/01/03-nicomachus_theorem/][Nicomachus’s theorem]] (In [[./src/Nicomachus_theorem.lean][Lean4]] and [[./thy/Nicomachus_theorem.thy][Isabelle]]).
 
 ** 2024
@@ -19,7 +20,7 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 *** November 2024
 + 29 [[https://jaalonso.github.io/calculemus/posts/2024/11/29-limit_multiplied_by_a_constant_2/][If the limit of the sequence u(n) is a and c ∈ ℝ, then the limit of u(n)c is ac]] (In [[./src/Limit_multiplied_by_a_constant_2.lean][Lean]]).
 
-*** October
+*** October 2024
 + 10 [[https://jaalonso.github.io/calculemus/posts/2024/11/10-limit_of_7u/][If u(n) tends to a, then 7u(n) tends to 7a]] (In [[./src/Limit_of_7u.lean][Lean4]]).
 + 07 [[https://jaalonso.github.io/calculemus/posts/2024/10/07-pigeonhole_principle/][Pigeonhole principle]] (In [[./src/Pigeonhole_principle.lean][Lean4]]).
 + 04 [[https://jaalonso.github.io/calculemus/posts/2024/10/04-if_ff_is_biyective_then_f_is_biyective/][If f ∘ f is biyective, then f is biyective]] (In [[./src/If_ff_is_biyective_then_f_is_biyective.lean][Lean]] and [[./thy/If_ff_is_biyective_then_f_is_biyective.thy][Isabelle]]).
