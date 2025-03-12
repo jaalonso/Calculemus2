@@ -327,8 +327,9 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 *** February 2020
 + 24 [[./textos/2020/02/24-Praeclarum_theorema.md][Praeclarum theorema]] (En [[./thy/Praeclarum_theorema.thy][Isabelle]]).
 
-*** January 2020
-+ 01 [[https://jaalonso.github.io/calculemus/posts/2025/01/03-nicomachus_theorem/][Nicomachus’s theorem]] (In [[./src/Nicomachus_theorem.lean][Lean4]] and [[./thy/Nicomachus_theorem.thy][Isabelle]]).
+*** Enero 2020
++ 30 [[https://jaalonso.github.io/calculemus/posts/2020/01/30-teorema_de_nicomaco/][Teorema de Nicómaco]] (En [[./thy/A2020/M01/Teorema_de_Nicomaco.thy][Isabelle]]).
++ 14 [[https://jaalonso.github.io/calculemus/posts/2020/01/14-celebracion_del_dia_mundial_de_la_logica][Celebración del día mundial de la lógica]] (En [[./thy/A2020/M01/Celebracion_del_DML.thy][Isabelle]]).
 
 * Exercises organized by topics
 
