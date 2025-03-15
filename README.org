@@ -324,7 +324,10 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 
 ** 2020
 
-*** February 2020
+*** Marzo 2020
++ 05 [[./thy/A2020/M03/El_problema_logico_del_mal.thy][El problema lógico del mal]].
+
+*** Febrero 2020
 + 24 [[./textos/2020/02/24-Praeclarum_theorema.md][Praeclarum theorema]] (En [[./thy/Praeclarum_theorema.thy][Isabelle]]).
 
 *** Enero 2020
