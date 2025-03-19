@@ -324,7 +324,15 @@ exercises proposed in the [[https://jaalonso.github.io/calculemus][Calculemus]] 
 
 ** 2020
 
+*** Abril 2020
+
++ 08 [[~/alonso/estudio/Calculemus2/thy/A2020/M04/Las_reflexivas_circulares_son_simetricas.thy][Las reflexivas circulares son simétricas]].
+
 *** Marzo 2020
+
++ 31 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/El_problema_del_barbero.thy][El problema del barbero]].
++ 19 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/El_problema_de_los_infectados.thy][El problema de los infectados]].
++ 12 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/La_dama_o_el_tigre.thy][La dama o el tigre]].
 + 05 [[./thy/A2020/M03/El_problema_logico_del_mal.thy][El problema lógico del mal]].
 
 *** Febrero 2020
