@@ -9,20 +9,26 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 ** 2020
 
 *** Enero 2020
++ 14 [[https://jaalonso.github.io/calculemus/posts/2020/01/14-celebracion_del_dia_mundial_de_la_logica][Celebración del día mundial de la lógica]] (En [[./thy/A2020/M01/Celebracion_del_DML.thy][Isabelle]]).
++ 24 [[https://jaalonso.github.io/calculemus/posts/2020/01/24-reto/][Reto f(f(f(b))) = f(b)]] (En [[./thy/A2020/M01/reto.thy][Isabelle]]).
++ 30 [[https://jaalonso.github.io/calculemus/posts/2020/01/30-teorema_de_nicomaco/][Teorema de Nicómaco]] (En [[./thy/A2020/M01/Teorema_de_Nicomaco.thy][Isabelle]]).
 
 *** Febrero 2020
-+ 14 [[https://jaalonso.github.io/calculemus/posts/2020/01/14-celebracion_del_dia_mundial_de_la_logica][Celebración del día mundial de la lógica]] (En [[./thy/A2020/M01/Celebracion_del_DML.thy][Isabelle]]).
-+ 30 [[https://jaalonso.github.io/calculemus/posts/2020/01/30-teorema_de_nicomaco/][Teorema de Nicómaco]] (En [[./thy/A2020/M01/Teorema_de_Nicomaco.thy][Isabelle]]). 2020
-+ 24 [[./textos/2020/02/24-Praeclarum_theorema.md][Praeclarum theorema]] (En [[./thy/Praeclarum_theorema.thy][Isabelle]]).
++ 24 [[https://jaalonso.github.io/calculemus/posts/2020/02/24-praeclarum_theorema/][Praeclarum theorema]] (En [[./thy/A2020/M02/Praeclarum_theorema.thy][Isabelle]]).
 
 *** Marzo 2020
-+ 05 [[./thy/A2020/M03/El_problema_logico_del_mal.thy][El problema lógico del mal]].
-+ 12 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/La_dama_o_el_tigre.thy][La dama o el tigre]].
-+ 19 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/El_problema_de_los_infectados.thy][El problema de los infectados]].
-+ 31 [[~/alonso/estudio/Calculemus2/thy/A2020/M03/El_problema_del_barbero.thy][El problema del barbero]].
++ 05 [[https://jaalonso.github.io/calculemus/posts/2020/03/05-el_problema_logico_del_mal/][El problema lógico del mal]] (En [[./thy/A2020/M03/El_problema_logico_del_mal.thy][Isabelle]]).
++ 12 [[https://jaalonso.github.io/calculemus/posts/2020/03/12-la_dama_o_el_tigre/][La dama o el tigre]] (En [[./thy/A2020/M03/La_dama_o_el_tigre.thy][Isabelle]]).
++ 19 [[https://jaalonso.github.io/calculemus/posts/2020/03/19-el_problema_de_los_infectados/][El problema de los infectados]] (En [[./thy/A2020/M03/El_problema_de_los_infectados.thy][Isabelle]]).
++ 31 [[https://jaalonso.github.io/calculemus/posts/2020/03/31-el_problema_del_barbero/][El problema del barbero]] (En [[./thy/A2020/M03/El_problema_del_barbero.thy][Isabelle]]).
 
 *** Abril 2020
-+ 08 [[~/alonso/estudio/Calculemus2/thy/A2020/M04/Las_reflexivas_circulares_son_simetricas.thy][Las reflexivas circulares son simétricas]].
++ 08 [[https://jaalonso.github.io/calculemus/posts/2020/04/08-las_reflexivas_circulares_son_simetricas/][Las relaciones reflexivas y circulares son simétricas]] (En [[./thy/A2020/M04/Las_reflexivas_circulares_son_simetricas.thy][Isabelle]]).
+
+** 2021
+
+*** Mayo 2021
++ 17 [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Propiedad de monotonía de la intersección]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
 
 ** 2023
 
