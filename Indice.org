@@ -1,0 +1,216 @@
+#+TITLE: Índice de Calculemus2
+
+|------------+--------------------------------------------------------------------------------------------------------------------------------------------|
+| 10/07/2023 | ∀ m n : ℕ, Even n → Even (m * n)                                                                                                           |
+| 11/07/2023 | ∀ a b c ∈ ℝ, (ab)c = b(ac)                                                                                                                 |
+| 12/07/2023 | ∀ a b c ∈ ℝ, (cb)a = b(ac)                                                                                                                 |
+| 13/07/2023 | ∀ a b c ∈ ℝ, a(bc) = b(ac)                                                                                                                 |
+| 14/07/2023 | Si ab = cd y e = f, entonces a(be) = c(df)                                                                                                 |
+| 17/07/2023 | Si bc = ef, entonces ((ab)c)d = ((ae)f)d                                                                                                   |
+| 18/07/2023 | Si c = ba-d y d = ab, entonces c = 0                                                                                                       |
+| 19/07/2023 | (a + b)(a + b) = aa + 2ab + bb                                                                                                             |
+| 20/07/2023 | (a + b) (c + d) = ac + ad + bc + bd                                                                                                        |
+| 21/07/2023 | (a+b)(a-b) = a²-b²                                                                                                                         |
+| 24/07/2023 | Si c = da+b y b = ad, entonces c = 2ad                                                                                                     |
+| 25/07/2023 | Si a+b = c, entonces (a+b)(a+b) = ac+ bc                                                                                                   |
+| 26/07/2023 | Si R es un anillo y a ∈ R, entonces a + 0 = a                                                                                              |
+| 27/07/2023 | Si R es un anillo y a ∈ R, entonces a + -a = 0                                                                                             |
+| 28/07/2023 | Si R es un anillo y a, b ∈ R, entonces -a + (a + b) = b                                                                                    |
+| 31/07/2023 | Si R es un anillo y a, b ∈ R, entonces (a + b) + -b = a                                                                                    |
+| 01/08/2023 | Si R es un anillo y a, b, c ∈ R tales que a+b=a+c, entonces b=c                                                                            |
+| 02/08/2023 | Si R es un anillo y a, b, c ∈ R tales que a+b=c+b, entonces a=c                                                                            |
+| 03/08/2023 | Si R es un anillo y a ∈ R, entonces a.0 = 0                                                                                                |
+| 04/08/2023 | Si R es un anillo y a ∈ R, entonces 0.a = 0                                                                                                |
+| 07/08/2023 | Si R es un anillo y a, b ∈ R tales que a+b=0, entonces -a=b                                                                                |
+| 08/08/2023 | Si R es un anillo y a, b ∈ R tales que a+b=0, entonces a=-b                                                                                |
+| 09/08/2023 | Si R es un anillo, entonces -0 = 0                                                                                                         |
+| 10/08/2023 | Si R es un anillo y a ∈ R, entonces -(-a) = a                                                                                              |
+| 11/08/2023 | Si R es un anillo y a, b ∈ R, entonces a – b = a + -b                                                                                      |
+| 14/08/2023 | Si R es un anillo y a ∈ R, entonces a – a = 0                                                                                              |
+| 15/08/2023 | En los anillos, 1 + 1 = 2                                                                                                                  |
+| 16/08/2023 | Si R es un anillo y a ∈ R, entonces 2a = a+a                                                                                               |
+| 17/08/2023 | Si G es un grupo y a ∈ G, entonces aa⁻¹ = 1                                                                                                |
+| 18/08/2023 | Si G es un grupo y a ∈ G, entonces a·1 = a                                                                                                 |
+| 21/08/2023 | Si G es un grupo y a, b ∈ G, tales que ab = 1 entonces a⁻¹ = b                                                                             |
+| 22/08/2023 | Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹                                                                                      |
+| 23/08/2023 | En ℝ, si a ≤ b, b < c, c ≤ d y d < e, entonces a < e                                                                                       |
+| 24/08/2023 | En ℝ, si 2a ≤ 3b, 1 ≤ a y c = 2, entonces c + a ≤ 5b                                                                                       |
+| 25/08/2023 | En ℝ, si 1 ≤ a y b ≤ d, entonces 2 + a + eᵇ ≤ 3a + eᵈ                                                                                      |
+| 28/08/2023 | En ℝ, si a ≤ b y c < d, entonces a + eᶜ + f ≤ b + eᵈ + f                                                                                   |
+| 29/08/2023 | En ℝ, si d ≤ f, entonces c + e^(a + d) ≤ c + e^(a + f)                                                                                     |
+| 30/08/2023 | En ℝ, si a ≤ b, entonces log(1+e^a) ≤ log(1+e^b)                                                                                           |
+| 31/08/2023 | En ℝ, si a ≤ b entonces c – e^b ≤ c – e^a                                                                                                  |
+| 01/09/2023 | En ℝ, 2ab ≤ a² + b²                                                                                                                        |
+| 04/09/2023 | En ℝ, abs(ab) ≤ (a²+b²)/2                                                                                                                  |
+| 05/09/2023 | En ℝ, min(a,b) = min(b,a)                                                                                                                  |
+| 06/09/2023 | En ℝ, max(a,b) = max(b,a)                                                                                                                  |
+| 07/09/2023 | En ℝ, min(min(a,b),c) = min(a,min(b,c))                                                                                                    |
+| 08/09/2023 | En ℝ, min(a,b)+c = min(a+c,b+c)                                                                                                            |
+| 11/09/2023 | En ℝ, abs(a) - abs(b) ≤ abs(a - b)                                                                                                         |
+| 12/09/2023 | Si x, y, z ∈ ℕ, entonces x divide a yxz                                                                                                    |
+| 13/09/2023 | Si x divide a w, entonces también divide a y(xz)+x²+w²                                                                                     |
+| 14/09/2023 | Conmutatividad del máximo común divisor                                                                                                    |
+| 15/09/2023 | En los retículos, x ⊓ y = y ⊓ x                                                                                                            |
+| 18/09/2023 | En los retículos, x ⊔ y = y ⊔ x                                                                                                            |
+| 19/09/2023 | En los retículos, (x ⊓ y) ⊓ z = x ⊓ (y ⊓ z)                                                                                                |
+| 20/09/2023 | En los retículos, (x ⊔ y) ⊔ z = x ⊔ (y ⊔ z)                                                                                                |
+| 21/09/2023 | En los retículos, x ⊓ (x ⊔ y) = x                                                                                                          |
+| 22/09/2023 | En los retículos, x ⊔ (x ⊓ y) = x                                                                                                          |
+| 25/09/2023 | En los retículos, una distributiva del ínfimo implica la otra                                                                              |
+| 26/09/2023 | En los retículos, una distributiva del supremo implica la otra                                                                             |
+| 27/09/2023 | En los anillos ordenados, a ≤ b → 0 ≤ b – a                                                                                                |
+| 28/09/2023 | En los anillos ordenados, 0 ≤ b – a → a ≤ b                                                                                                |
+| 29/09/2023 | En los anillos ordenados, {a ≤ b, 0 ≤ c} ⊢ ac ≤ bc                                                                                         |
+| 02/10/2023 | En los espacios métricos, d(x,y) ≥ 0                                                                                                       |
+| 03/10/2023 | En ℝ, {0 < ε, ε ≤ 1, abs(x) < ε, abs(y) < ε} ⊢ abs(xy) < ε                                                                                 |
+| 04/10/2023 | La suma de una cota superior de f y una cota superior de g es una cota superior de f+g                                                     |
+| 05/10/2023 | La suma de una cota inferior de f y una cota inferior de g es una cota inferior de f+g                                                     |
+| 06/10/2023 | El producto de funciones no negativas es no negativo                                                                                       |
+| 09/10/2023 | Si a es una cota superior no negativa de f y b es es una cota superior de la función no negativa g, entonces ab es una cota superior de fg |
+| 10/10/2023 | La suma de dos funciones monótonas es monótona                                                                                             |
+| 11/10/2023 | Si c es no negativo y f es monótona, entonces cf es monótona                                                                               |
+| 12/10/2023 | La composición de dos funciones monótonas es monótona                                                                                      |
+| 13/10/2023 | La suma de dos funciones pares es par                                                                                                      |
+| 16/10/2023 | El producto de dos funciones impares es par                                                                                                |
+| 17/10/2023 | El producto de una función par por una impar es impar                                                                                      |
+| 18/10/2023 | Si f es par y g es impar, entonces (f ∘ g) es par                                                                                          |
+| 19/10/2023 | Para cualquier conjunto s, s ⊆ s                                                                                                           |
+| 20/10/2023 | Si r ⊆ s y s ⊆ t, entonces r ⊆ t                                                                                                           |
+| 23/10/2023 | Si a es una cota superior de s y a ≤ b, entonces b es una cota superior de s                                                               |
+| 24/10/2023 | La función (x ↦ x + c) es inyectiva                                                                                                        |
+| 25/10/2023 | Si c ≠ 0, entonces la función (x ↦ cx) es inyectiva                                                                                        |
+| 26/10/2023 | La composición de funciones inyectivas es inyectiva                                                                                        |
+| 27/10/2023 | Hay algún número real entre 2 y 3                                                                                                          |
+| 30/10/2023 | La suma de dos funciones acotadas superiormente también lo está                                                                            |
+| 31/10/2023 | La suma de dos funciones acotadas inferiormente también lo está                                                                            |
+| 01/11/2023 | Si a es una cota superior de f y c ≥ 0, entonces ca es una cota superior de cf                                                             |
+| 02/11/2023 | Si c ≥ 0 y f está acotada superiormente, entonces c·f también lo está                                                                      |
+| 03/11/2023 | Si x e y son sumas de dos cuadrados, entonces xy también lo es                                                                             |
+| 06/11/2023 | Transitividad de la divisibilidad                                                                                                          |
+| 07/11/2023 | Si a divide a b y a c, entonces divide a b+c                                                                                               |
+| 08/11/2023 | La función (x ↦ x + c) es suprayectiva                                                                                                     |
+| 09/11/2023 | Si c ≠ 0, entonces la función (x ↦ cx) es suprayectiva                                                                                     |
+| 10/11/2023 | Si c ≠ 0, entonces la función (x ↦ cx + d) es suprayectiva                                                                                 |
+| 13/11/2023 | Si f: ℝ → ℝ es suprayectiva, entonces ∃x ∈ ℝ tal que f(x)² = 9                                                                             |
+| 14/11/2023 | La composición de funciones suprayectivas es suprayectiva                                                                                  |
+| 15/11/2023 | En ℝ, a < b → ¬(b < a)                                                                                                                     |
+| 16/11/2023 | Si para cada a existe un x tal que f(x) > a, entonces f no tiene cota superior                                                             |
+| 17/11/2023 | Si para cada a existe un x tal que f(x) < a, entonces f no tiene cota inferior                                                             |
+| 20/11/2023 | La función identidad no está acotada superiormente                                                                                         |
+| 21/11/2023 | Si f es monótona y f(a) < f(b), entonces a < b                                                                                             |
+| 22/11/2023 | Si a, b ∈ ℝ tales que a ≤ b y f(b) < f(a), entonces f no es monótona                                                                       |
+| 23/11/2023 | No para toda f : ℝ → ℝ monótona, (∀a,b)[f(a) ≤ f(b) → a ≤ b]                                                                               |
+| 24/11/2023 | Si (∀ε > 0)[x ≤ ε], entonces x ≤ 0                                                                                                         |
+| 27/11/2023 | Si ¬(∃x)P(x), entonces (∀x)¬P(x)                                                                                                           |
+| 28/11/2023 | Si (∀x)¬P(x), entonces ¬(∃x)P(x)                                                                                                           |
+| 29/11/2023 | Si ¬(∀x)P(x), entonces (∃x)¬P(x)                                                                                                           |
+| 30/11/2023 | Si (∃x)¬P(x), entonces ¬(∀x)P(x)                                                                                                           |
+| 01/12/2023 | ¬¬P → P                                                                                                                                    |
+| 04/12/2023 | P → ¬¬P                                                                                                                                    |
+| 05/12/2023 | Si f no está acotada superiormente, entonces (∀a)(∃x)[f(x) > a]                                                                            |
+| 06/12/2023 | Si ¬(∀a)(∃x)[f(x) > a]​, entonces f está acotada superiormente                                                                              |
+| 07/12/2023 | Si f no es monótona, entonces ∃x∃y[x ≤ y ∧ f(y) < f(x)]                                                                                    |
+| 08/12/2023 | Si 0 < 0, entonces a > 37 para cualquier número a                                                                                          |
+| 11/12/2023 | {x ≤ y, y ≰ x} ⊢ x ≤ y ∧ x ≠ y                                                                                                             |
+| 12/12/2023 | x ≤ y ∧ x ≠ y ⊢ y ≰ x                                                                                                                      |
+| 13/12/2023 | Si (m ∣ n ∧ m ≠ n), entonces (m ∣ n ∧ ¬(n ∣ m))                                                                                            |
+| 14/12/2023 | (∃x ∈ ℝ)[2 < x < 3]                                                                                                                        |
+| 15/12/2023 | Si (∃z ∈ ℝ)[x < z < y], entonces x < y                                                                                                     |
+| 18/12/2023 | Existen números primos m y n tales que 4 < m < n < 10                                                                                      |
+| 25/12/2023 | En ℝ, x ≤ y ∧ x ≠ y → x ≤ y ∧ y ≰ x                                                                                                        |
+| 26/12/2023 | En ℝ, si x ≤ y, entonces y ≰ x ↔ x ≠ y                                                                                                     |
+| 27/12/2023 | En ℝ, x² + y² = 0 ↔ x = 0 ∧ y = 0                                                                                                          |
+| 28/12/2023 | Si abs(x + 3) < 5, entonces -8 < x < 2                                                                                                     |
+| 29/12/2023 | 3 divide al máximo común divisor de 6 y 15                                                                                                 |
+| 01/01/2024 | f: ℝ → ℝ no es monótona syss (∃x,y)[x ≤ y ∧ f(x) > f(y)]                                                                                   |
+| 02/01/2024 | La función x ↦ -x no es monótona creciente                                                                                                 |
+| 03/01/2024 | En los órdenes parciales, a < b ↔ a ≤ b ∧ a ≠ b                                                                                            |
+| 04/01/2024 | Si ≤ es un preorden, entonces < es irreflexiva                                                                                             |
+| 05/01/2024 | Si ≤ es un preorden, entonces < es transitiva                                                                                              |
+| 08/01/2024 | En ℝ, y > x² ⊢ y > 0 ∨ y < -1                                                                                                              |
+| 09/01/2024 | En ℝ, -y > x² + 1 ⊢ y > 0 ∨ y < -1                                                                                                         |
+| 10/01/2024 | En ℝ, si x < < abs(y), entonces x < y ó x < -y                                                                                             |
+| 11/01/2024 | En ℝ, x ≤ abs(x)                                                                                                                           |
+| 12/01/2024 | En ℝ, -x ≤ abs(x)                                                                                                                          |
+| 15/01/2024 | En ℝ, abs(x + y) ≤ abs(x) + abs(y)                                                                                                         |
+| 16/01/2024 | En ℝ, si x ≠ 0 entonces x < 0 ó x > 0                                                                                                      |
+| 17/01/2024 | Si m divide a n o a k, entonces m divide a nk                                                                                              |
+| 18/01/2024 | Si (∃ x, y ∈ ℝ)[z = x² + y² ∨ z = x² + y² + 1], entonces z ≥ 0                                                                             |
+| 19/01/2024 | En ℝ, si x² = 1 entonces x = 1 ó x = -1                                                                                                    |
+| 22/01/2024 | En ℝ, x² = y² → x = y ∨ x = -y                                                                                                             |
+| 23/01/2024 | ¬¬P → P                                                                                                                                    |
+| 24/01/2024 | (P → Q) ↔ ¬P ∨ Q                                                                                                                           |
+| 25/01/2024 | Existen infinitos números primos                                                                                                           |
+| 26/01/2024 | Si n² es par, entonces n es par                                                                                                            |
+| 29/01/2024 | La raíz cuadrada de 2 es irracional                                                                                                        |
+| 30/01/2024 | Las funciones f(x,y) = (x + y)² y g(x,y) = x² + 2xy + y² son iguales                                                                       |
+| 31/01/2024 | En ℝ, abs(a) = abs(a – b + b)                                                                                                                                    |
+| 01/02/2024 | En ℝ, si 1 < a, entonces a < aa                                                                                                            |
+| 02/02/2024 | La sucesión constante sₙ = c converge a c                                                                                                  |
+| 05/02/2024 | Si la sucesión u converge a a y la v a b, entonces u+v converge a a+b                                                                      |
+| 06/02/2024 | Unicidad del límite de las sucesiones convergentes                                                                                         |
+| 12/02/2024 | Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de uₙ+c es a+c                                                             |
+| 15/02/2024 | Si el límite de la sucesión uₙ es a y c ∈ ℝ, entonces el límite de cuₙ es ca                                                               |
+| 16/02/2024 | El límite de uₙ es a syss el de uₙ-a es 0                                                                                                  |
+| 17/02/2024 | Si uₙ y vₙ convergen a 0, entonces uₙvₙ converge a 0                                                                                       |
+| 18/02/2024 | s ∩ (s ∪ t) = s                                                                                                                            |
+| 19/02/2024 | Teorema del emparedado                                                                                                                     |
+| 20/02/2024 | Si s ⊆ t, entonces s ∩ u ⊆ t ∩ u                                                                                                           |
+| 21/02/2024 | s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)                                                                                                            |
+| 22/02/2024 | (s \ t) \ u ⊆ s \ (t ∪ u)                                                                                                                  |
+| 23/02/2024 | (s ∩ t) ∪ (s ∩ u) ⊆ s ∩ (t ∪ u)                                                                                                            |
+| 26/02/2024 | s \ (t ∪ u) ⊆ (s \ t) \ u                                                                                                                  |
+| 27/02/2024 | s ∩ t = t ∩ s                                                                                                                              |
+| 29/02/2024 | s ∪ (s ∩ t) = s                                                                                                                            |
+| 01/03/2024 | (s \ t) ∪ t = s ∪ t                                                                                                                        |
+| 04/03/2024 | (s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)                                                                                                      |
+| 05/03/2024 | Pares ∪ Impares = Naturales                                                                                                                |
+| 06/03/2024 | Los primos mayores que 2 son impares                                                                                                       |
+| 07/03/2024 | s ∩ (⋃ᵢ Aᵢ) = ⋃ᵢ (Aᵢ ∩ s)                                                                                                                  |
+| 08/03/2024 | ⋂ᵢ (Aᵢ ∩ Bᵢ) = (⋂ᵢ Aᵢ) ∩ (⋂ᵢ Bᵢ)                                                                                                           |
+| 11/03/2024 | s ∪ ⋂ i, A i = ⋂ i, (A i ∪ s)                                                                                                              |
+| 12/03/2024 | f⁻¹[u ∩ v] = f⁻¹[u] ∩ f⁻¹[v]                                                                                                               |
+| 13/03/2024 | f[s ∪ t] = f[s] ∪ f[t]                                                                                                                     |
+| 14/03/2024 | s ⊆ f⁻¹[f[s]​]                                                                                                                              |
+| 15/03/2024 | f[s] ⊆ u ↔ s ⊆ f⁻¹[u]                                                                                                                      |
+| 18/03/2024 | Si f es inyectiva, entonces f⁻¹[f[s]​] ⊆ s                                                                                                  |
+| 19/03/2024 | f[f⁻¹[u]] ⊆ u                                                                                                                              |
+| 02/04/2024 | Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]]                                                                                               |
+| 03/04/2024 | Si s ⊆ t, entonces f[s] ⊆ f[t]                                                                                                             |
+| 04/04/2024 | Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]                                                                                                         |
+| 06/04/2024 | f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]                                                                                                               |
+| 12/04/2024 | f[s ∩ t] ⊆ f[s] ∩ f[t]                                                                                                                     |
+| 15/04/2024 | Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]                                                                                         |
+| 16/04/2024 | f[s] \ f[t] ⊆ f[s \ t]                                                                                                                     |
+| 17/04/2024 | f[s] ∩ t = f[s ∩ f⁻¹[t]]                                                                                                                   |
+| 22/04/2024 | Unión con la imagen                                                                                                                        |
+| 23/04/2024 | Intersección con la imagen                                                                                                                 |
+| 24/04/2024 | Unión con la imagen inversa                                                                                                                |
+| 25/04/2024 | Imagen de la unión general                                                                                                                 |
+| 26/04/2024 | Imagen de la intersección general                                                                                                          |
+| 29/04/2024 | Imagen de la interseccion general mediante aplicaciones inyectivas                                                                         |
+| 30/04/2024 | Imagen inversa de la unión general                                                                                                         |
+| 01/05/2024 | Imagen inversa de la intersección general                                                                                                  |
+| 02/05/2024 | Teorema de Cantor                                                                                                                          |
+| 03/05/2024 | En los monoides, los inversos a la izquierda y a la derecha son iguales                                                                    |
+| 06/05/2024 | Producto de potencias de la misma base en monoides                                                                                         |
+| 07/05/2024 | Equivalencia de inversos iguales al neutro                                                                                                 |
+| 08/05/2024 | Unicidad de inversos en monoides                                                                                                           |
+| 09/05/2024 | Caracterización de producto igual al primer factor                                                                                         |
+| 10/05/2024 | Unicidad del elemento neutro en los grupos                                                                                                 |
+| 13/05/2024 | Unicidad de los inversos en los grupos                                                                                                     |
+| 14/05/2024 | Si G es un grupo y a, b ∈ G, entonces (ab)⁻¹ = b⁻¹a⁻¹                                                                                      |
+| 15/05/2024 | Si G un grupo y a ∈ G, entonces (a⁻¹)⁻¹ = a                                                                                                |
+| 16/05/2024 | Si G es un grupo y a, b, c ∈ G tales que a·b = a·c, entonces b = c                                                                         |
+| 17/05/2024 | Si M es un monoide, a ∈ M y m, n ∈ ℕ, entonces a^(m·n) = (a^m)^n                                                                           |
+| 20/05/2024 | Los monoides booleanos son conmutativos                                                                                                    |
+| 21/05/2024 | La composición de una función creciente y una decreciente es decreciente                                                                   |
+| 22/05/2024 | Si una función es creciente e involutiva, entonces es la identidad                                                                         |
+| 23/05/2024 | Si `f(x) ≤ f(y) → x ≤ y`, entonces f es inyectiva                                                                                          |
+| 24/05/2024 | Los supremos de las sucesiones crecientes son sus límites                                                                                  |
+| 27/05/2024 | Un número es par si y solo si lo es su cuadrado                                                                                            |
+| 28/05/2024 | Las sucesiones convergentes están acotadas                                                                                                 |
+| 29/05/2024 | La paradoja del barbero                                                                                                                    |
+| 30/05/2024 | Si x, y ∈ ℝ tales que (∀ z)[y < z → x ≤ z], entonces x ≤ y                                                                                 |
+| 31/05/2024 | Si (∀n)[uₙ ≤ vₙ], entonces lim uₙ ≤ lim vₙ                                                                                                 |
+|------------+--------------------------------------------------------------------------------------------------------------------------------------------|
