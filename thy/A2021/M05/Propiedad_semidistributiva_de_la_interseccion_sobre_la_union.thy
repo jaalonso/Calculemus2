@@ -1,6 +1,6 @@
 (* Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.thy
--- Propiedad semidistributiva de la intersección sobre la unión
--- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)
+-- José A. Alonso Jiménez
 -- Sevilla, 18-mayo-2021
 -- ---------------------------------------------------------------------
 *)

@@ -28,7 +28,8 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 ** 2021
 
 *** Mayo 2021
-+ 17 [[./textos/Propiedad_de_monotonia_de_la_interseccion.md][Propiedad de monotonía de la intersección]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
++ 17 [[https://jaalonso.github.io/calculemus/posts/2021/05/17-propiedad_de_monotonia_de_la_interseccion/][Propiedad de monotonía de la intersección]] (En [[./src/Propiedad_de_monotonia_de_la_interseccion.lean][Lean]] y en [[./thy//Propiedad_de_monotonia_de_la_interseccion.thy][Isabelle]]).
++ 18 [[https://jaalonso.github.io/calculemus/posts/2021/05/18-propiedad_semidistributiva_de_la_interseccion_sobre_la_union][Propiedad semidistributiva de la intersección sobre la unión]] (En [[./src/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean][Lean]] y en [[./thy/Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.thy][Isabelle]]).
 
 ** 2023
 

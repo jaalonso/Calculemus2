@@ -1,6 +1,6 @@
 -- Propiedad_semidistributiva_de_la_interseccion_sobre_la_union.lean
 -- s ∩ (t ∪ u) ⊆ (s ∩ t) ∪ (s ∩ u)
--- José A. Alonso <https://jaalonso.github.io>
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
 -- Sevilla, 18-mayo-2021
 -- ---------------------------------------------------------------------
 
