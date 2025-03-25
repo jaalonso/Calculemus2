@@ -1,8 +1,9 @@
 (* Interseccion_con_su_union.thy
--- s \<inter> (s \<union> t) = s
--- José A. Alonso <https://jaalonso.github.io>
--- Sevilla, 25-mayo-2021
--- ------------------------------------------------------------------- *)
+   s \<inter> (s \<union> t) = s
+   José A. Alonso Jiménez
+   Sevilla, 28 de febrero de 2024
+   ---------------------------------------------------------------------
+*)
 
 (* ---------------------------------------------------------------------
 -- Demostrar que
@@ -15,7 +16,7 @@ begin
 
 (* 1\<ordfeminine> demostración *)
 lemma "s \<inter> (s \<union> t) = s"
-proof (rule equalityI)
+proof (rule  equalityI)
   show "s \<inter> (s \<union> t) \<subseteq> s"
   proof (rule subsetI)
     fix x

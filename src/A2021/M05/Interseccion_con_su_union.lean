@@ -1,7 +1,7 @@
 -- Interseccion_con_su_union.lean
 -- s ∩ (s ∪ t) = s
--- José A. Alonso <https://jaalonso.github.io>
--- Sevilla, 25-mayo-2021
+-- José A. Alonso Jiménez <https://jaalonso.github.io>
+-- Sevilla, 28-febrero-2024
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -9,8 +9,8 @@
 --    s ∩ (s ∪ t) = s
 -- ----------------------------------------------------------------------
 
--- Demostración en lenguaje natural
--- ================================
+-- Demostación en lenguaje natural
+-- ===============================
 
 -- Tenemos que demostrar que
 --    (∀ x)[x ∈ s ∩ (s ∪ t) ↔ x ∈ s]
