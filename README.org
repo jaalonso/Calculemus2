@@ -40,6 +40,11 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 28 [[https://jaalonso.github.io/calculemus/posts/2025/03/29-ejercicio-29-mayo-21/][Demostraciones de "(s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)"]] (En [[./src/A2021/M05/Diferencia_de_union_e_interseccion.lean][Lean]] y en [[./thy/A2021/M05/Diferencia_de_union_e_interseccion.thy][Isabelle]]).
 + 31 [[https://jaalonso.github.io/calculemus/posts/2021/05/31-union_de_pares_e_impares/][Unión de los conjuntos de los pares e impares]] (En [[./src/A2021/M05/Union_de_pares_e_impares.lean][Lean]] y en [[./thy/A2021/M05/Union_de_pares_e_impares.thy][Isabelle]]).
 
+*** Junio 2021
++ 01 [[https://jaalonso.github.io/calculemus/posts/2021/06/01-interseccion_de_los_primos_y_los_mayores_que_dos/][Intersección de los primos y los mayores que dos]] (En [[./src/A2021/M06/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/A2021/M06/Interseccion_de_los_primos_y_los_mayores_que_dos.thy][Isabelle]]).
++ 02 [[https://jaalonso.github.io/calculemus/posts/2021/06/02-distributiva_de_la_interseccion_respecto_de_la_union_general/][s ∩ ⋃_i A(i) = ⋃_i (A(i) ∩ s)]] (En [[./src/A2021/M06/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean]] y en [[./thy/A2021/M06/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy][Isabelle]]).
++ 03 [[https://jaalonso.github.io/calculemus/posts/2021/06/03-interseccion_de_intersecciones/][⋂_i, (A(i) ∩ B(i)) = (⋂_i, A(i)) ∩ (⋂_i, B(i))]] (En [[./src/A2021/M06/Interseccion_de_intersecciones.lean][Lean]] y en [[./thy/A2021/M06/Interseccion_de_intersecciones.thy][Isabelle]]).
+
 ** 2023
 
 *** Julio 2023
