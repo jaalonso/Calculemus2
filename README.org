@@ -46,6 +46,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 03 [[https://jaalonso.github.io/calculemus/posts/2021/06/03-interseccion_de_intersecciones/][⋂_i, (A(i) ∩ B(i)) = (⋂_i, A(i)) ∩ (⋂_i, B(i))]] (En [[./src/A2021/M06/Interseccion_de_intersecciones.lean][Lean]] y en [[./thy/A2021/M06/Interseccion_de_intersecciones.thy][Isabelle]]).
 + 04 [[https://jaalonso.github.io/calculemus/posts/2021/06/04-union_con_interseccion_general/][s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)]] (En [[./src/A2021/M06/Union_con_interseccion_general.lean][Lean]] y en [[./thy/A2021/M06/Union_con_interseccion_general.thy][Isabelle]]).
 + 05 [[https://jaalonso.github.io/calculemus/posts/2021/06/05-imagen_inversa_de_la_interseccion/][f⁻¹(u ∩ v) = f⁻¹(u) ∩ f⁻¹(v)]] (En [[./src/A2021/M06/Imagen_inversa_de_la_interseccion.lean][Lean]] y en [[./thy/A2021/M06/Imagen_inversa_de_la_interseccion.thy][Isabelle]]).
++ 06 [[https://jaalonso.github.io/calculemus/posts/2021/06/06-imagen_de_la_union/][f(s ∪ t) = f(s) ∪ f(t)]] (En [[./src/A2021/M06/Imagen_de_la_union.lean][Lean]] y en [[./thy/A2021/M06/Imagen_de_la_union.thy][Isabelle]]).
 
 ** 2023
 
