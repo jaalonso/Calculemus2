@@ -43,7 +43,7 @@ example
   : e = 1 :=
 by
   have h1 : e = e * e := (h e).symm
-  exact self_eq_mul_left.mp h1
+  exact right_eq_mul.mp h1
 
 -- 3ª demostración
 -- ===============
@@ -52,7 +52,7 @@ example
   (e : G)
   (h : ∀ x, x * e = x)
   : e = 1 :=
-self_eq_mul_left.mp (h e).symm
+right_eq_mul.mp (h e).symm
 
 -- 4ª demostración
 -- ===============

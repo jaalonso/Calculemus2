@@ -78,7 +78,7 @@ calc a * b = a
 -- ===============
 
 example : a * b = a ↔ b = 1 :=
-mul_right_eq_self
+mul_eq_left
 
 -- 4ª demostración
 -- ===============

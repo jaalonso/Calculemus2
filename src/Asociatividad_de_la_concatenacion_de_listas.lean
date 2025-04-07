@@ -56,9 +56,9 @@ by
          = ys ++ zs                := nil_append (ys ++ zs)
        _ = ([] ++ ys) ++ zs        := congrArg (. ++ zs) (nil_append ys).symm
   . calc (a :: as) ++ (ys ++ zs)
-         = a :: (as ++ (ys ++ zs)) := cons_append a as (ys ++ zs)
+         = a :: (as ++ (ys ++ zs)) := cons_append
        _ = a :: ((as ++ ys) ++ zs) := congrArg (a :: .) HI
-       _ = (a :: (as ++ ys)) ++ zs := (cons_append a (as ++ ys) zs).symm
+       _ = (a :: (as ++ ys)) ++ zs := cons_append.symm
 
 -- 2ª demostración
 -- ===============
@@ -157,7 +157,7 @@ by
         = a :: (as ++ (ys ++ zs)) := by rw [cons_append]
       _ = a :: ((as ++ ys) ++ zs) := by rw [HI]
       _ = (a :: (as ++ ys)) ++ zs := by rw [cons_append]
-      _ = ((a :: as) ++ ys) ++ zs := congrArg (. ++ zs) (cons_append a as ys)
+      _ = ((a :: as) ++ ys) ++ zs := congrArg (. ++ zs) cons_append
 
 -- 8ª demostración
 -- ===============

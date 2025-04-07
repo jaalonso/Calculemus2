@@ -58,7 +58,7 @@
 -- Proofs with Lean4
 -- =================
 
-import Mathlib.Data.Nat.Defs
+import Mathlib.Algebra.Group.Nat.Defs
 import Mathlib.Tactic
 
 open Nat

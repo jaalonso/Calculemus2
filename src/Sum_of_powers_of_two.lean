@@ -43,7 +43,7 @@ variable (n : ℕ)
 -- =======
 
 example :
-  ∑ k in range n, 2^k = 2^n - 1 :=
+  ∑ k ∈ range n, 2^k = 2^n - 1 :=
 by
   induction n with
   | zero =>
@@ -58,8 +58,8 @@ by
     have h1 : (2^m - 1) + 2^m = (2^m + 2^m) - 1 := by
       have h2 : 2^m ≥ 1 := Nat.one_le_two_pow
       omega
-    calc ∑ k in range (m + 1), 2^k
-       = ∑ k in range m, (2^k) + 2^m
+    calc ∑ k ∈ range (m + 1), 2^k
+       = ∑ k ∈ range m, (2^k) + 2^m
            := sum_range_succ (2 ^ .) m
      _ = (2^m - 1) + 2^m
            := congrArg (. + 2^m) HI
@@ -72,7 +72,7 @@ by
 -- =======
 
 example :
-  ∑ k in range n, 2^k = 2^n - 1 :=
+  ∑ k ∈ range n, 2^k = 2^n - 1 :=
 by
   induction n with
   | zero =>
@@ -85,8 +85,8 @@ by
     have h1 : (2^m - 1) + 2^m = (2^m + 2^m) - 1 := by
       have h2 : 2^m ≥ 1 := Nat.one_le_two_pow
       omega
-    calc ∑ k in range (m + 1), 2^k
-       = ∑ k in range m, (2^k) + 2^m := sum_range_succ (2 ^ .) m
+    calc ∑ k ∈ range (m + 1), 2^k
+       = ∑ k ∈ range m, (2^k) + 2^m := sum_range_succ (2 ^ .) m
      _ = (2^m - 1) + 2^m             := by linarith
      _ = (2^m + 2^m) - 1             := h1
      _ = 2^(m + 1) - 1               := by omega

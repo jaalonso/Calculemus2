@@ -55,7 +55,7 @@ by
     card t + card u
       = card (t ∪ u) + card (t ∩ u) := (card_union_add_card_inter t u).symm
     _ = card (t ∪ u) + 0            := congrArg (card (t ∪ u) + .) h2
-    _ = card (t ∪ u)                := add_zero (card (t ∪ u))
+    _ = card (t ∪ u)                := Nat.add_zero (card (t ∪ u))
     _ ≤ card s                      := card_le_card (union_subset hts hus)
 
 -- Proof 2
@@ -77,7 +77,7 @@ by
     _ = card (t ∪ u) + 0 :=
           congrArg (card (t ∪ u) + .) (card_eq_zero.mpr (not_nonempty_iff_eq_empty.mp hstu))
     _ = card (t ∪ u) :=
-          add_zero (card (t ∪ u))
+          Nat.add_zero (card (t ∪ u))
     _ ≤ card s :=
           card_le_card (union_subset hts hus)
 

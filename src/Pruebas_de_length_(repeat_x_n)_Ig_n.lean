@@ -37,7 +37,6 @@
 -- ========================
 
 import Mathlib.Data.List.Basic
-open Nat
 open List
 
 variable {α : Type}
@@ -55,8 +54,8 @@ by
           = length []                   := rfl
         _ = 0                           := length_nil
   . calc length (replicate (n+1) x)
-         = length (x :: replicate n x)  := congr_arg length (replicate_succ x n)
-       _ = length (replicate n x) + 1   := length_cons x (replicate n x)
+         = length (x :: replicate n x)  := by congr
+       _ = length (replicate n x) + 1   := length_cons
        _ = n + 1                        := congrArg (. + 1) HI
 
 -- 2ª demostración
@@ -102,7 +101,7 @@ by induction' n <;> simp [*]
 -- ===============
 
 example : length (replicate n x) = n :=
-length_replicate n x
+length_replicate
 
 -- 7ª demostración
 -- ===============
@@ -125,7 +124,7 @@ by
     length (replicate  (n + 1) x)
       = length (x :: replicate n x) := by simp only [replicate_succ]
     _ = length (replicate n x) + 1  := by simp only [length_cons]
-    _ = n + 1                       := by simp only [succ_eq_add_one, HI]
+    _ = n + 1                       := by simp only [Nat.succ_eq_add_one, HI]
 
 -- 9ª demostración
 -- ===============

@@ -210,9 +210,9 @@ by
                          (reverse_singleton x).symm
        _ = reverse ([x] ++ flatten r) ++ reverse (flatten l)
              := congrArg (. ++ reverse (flatten l))
-                         (reverse_append [x] (flatten r)).symm
+                         reverse_append.symm
        _ = reverse (flatten l ++ ([x] ++ flatten r))
-             := (reverse_append (flatten l) ([x] ++ flatten r)).symm
+             := reverse_append.symm
        _ = reverse ((flatten l ++ [x]) ++ flatten r)
              := congr_arg reverse
                           (append_assoc (flatten l) [x] (flatten r)).symm

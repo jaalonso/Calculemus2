@@ -75,15 +75,15 @@ by
            := congrArg (. + length ys) length_nil.symm
   . calc length ((a :: as) ++ ys)
          = length (a :: (as ++ ys))
-           := congr_arg length (cons_append a as ys)
+           := congr_arg length cons_append
        _ = length (as ++ ys) + 1
-           := length_cons a (as ++ ys)
+           := length_cons
        _ = (length as + length ys) + 1
            := congrArg (. + 1) IH
        _ = (length as + 1) + length ys
            := (Nat.succ_add (length as) (length ys)).symm
        _ = length (a :: as) + length ys
-           := congrArg (. + length ys) (length_cons a as).symm
+           := congrArg (. + length ys) length_cons.symm
 
 -- Proof 2
 -- =======
@@ -109,7 +109,7 @@ by
        _ = (length as + 1) + length ys
            := (Nat.succ_add (length as) (length ys)).symm
        _ = length (a :: as) + length ys
-           := congrArg (. + length ys) (length_cons a as).symm
+           := congrArg (. + length ys) length_cons.symm
 
 -- Proof 3
 -- =======
@@ -265,7 +265,7 @@ by
 
 example :
   length (xs ++ ys) = length xs + length ys :=
-length_append xs ys
+length_append
 
 -- Proof 12
 -- ========

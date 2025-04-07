@@ -132,7 +132,7 @@ by
 example
   (h : ∀ z, y < z → x ≤ z) :
   x ≤ y :=
-le_of_forall_le_of_dense h
+le_of_forall_gt_imp_ge_of_dense h
 
 -- Lemas usados
 -- ============
