@@ -47,7 +47,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 04 [[https://jaalonso.github.io/calculemus/posts/2021/06/04-union_con_interseccion_general/][s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)]] (En [[./src/A2021/M06/Union_con_interseccion_general.lean][Lean]] y en [[./thy/A2021/M06/Union_con_interseccion_general.thy][Isabelle]]).
 + 05 [[https://jaalonso.github.io/calculemus/posts/2021/06/05-imagen_inversa_de_la_interseccion/][f⁻¹(u ∩ v) = f⁻¹(u) ∩ f⁻¹(v)]] (En [[./src/A2021/M06/Imagen_inversa_de_la_interseccion.lean][Lean]] y en [[./thy/A2021/M06/Imagen_inversa_de_la_interseccion.thy][Isabelle]]).
 + 06 [[https://jaalonso.github.io/calculemus/posts/2021/06/06-imagen_de_la_union/][f(s ∪ t) = f(s) ∪ f(t)]] (En [[./src/A2021/M06/Imagen_de_la_union.lean][Lean]] y en [[./thy/A2021/M06/Imagen_de_la_union.thy][Isabelle]]).
-+ 07 [[./textos/Imagen_inversa_de_la_imagen.md][??? s ⊆ f⁻¹(f(s))]] (En [[./src/A2021/M06/Imagen_inversa_de_la_imagen.lean][Lean]] y en [[./thy/A2021/M06/Imagen_inversa_de_la_imagen.thy][Isabelle]]).
++ 07 [[https://jaalonso.github.io/calculemus/posts/2021/06/07-imagen_inversa_de_la_imagen/][s ⊆ f⁻¹(f(s))]] (En [[./src/A2021/M06/Imagen_inversa_de_la_imagen.lean][Lean]] y en [[./thy/A2021/M06/Imagen_inversa_de_la_imagen.thy][Isabelle]]).
 
 ** 2023
 
