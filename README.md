@@ -63,7 +63,7 @@ ejercicios propuestos en el blog [Calculemus](https://jaalonso.github.io/calcule
 -   08 [f(s) ⊆ u ↔ s ⊆ f⁻¹(u)](https://jaalonso.github.io/calculemus/posts/2021/06/08-subconjunto_de_la_imagen_inversa/) (En [Lean](./src/A2021/M06/Subconjunto_de_la_imagen_inversa.lean) y en [Isabelle](./thy/A2021/M06/Subconjunto_de_la_imagen_inversa.thy)).
 -   09 [Si f es inyectiva, entonces f⁻¹(f(s)) ⊆ s](https://jaalonso.github.io/calculemus/posts/2021/06/09-imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas/) (En [Lean](./src/A2021/M06/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean) y en [Isabelle](./thy/A2021/M06/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy)).
 -   10 [f[f⁻¹[u]​] ⊆ u](https://jaalonso.github.io/calculemus/posts/2021/06/10-imagen_de_la_imagen_inversa/) (En [Lean](./src/A2021/M06/Imagen_de_la_imagen_inversa.lean) y en [Isabelle](./thy/A2021/M06/Imagen_de_la_imagen_inversa.thy)).
--   11 [Imagen de imagen inversa de aplicaciones suprayectivas](./textos/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.md) (En [Lean](./src/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean) y en [Isabelle](./thy/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy)).
+-   11 [Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​](https://jaalonso.github.io/calculemus/posts/2021/06/11-imagen_de_imagen_inversa_de_aplicaciones_suprayectivas/) (En [Lean](./src/A2021/M06/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean) y en [Isabelle](./thy/A2021/M06/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy)).
 
 
 ## 2023
