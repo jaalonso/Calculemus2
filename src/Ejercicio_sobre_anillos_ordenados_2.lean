@@ -27,7 +27,7 @@
 -- ========================
 
 import Mathlib.Algebra.Order.Ring.Defs
-variable {R : Type _} [StrictOrderedRing R]
+variable {R : Type _} [Ring R] [PartialOrder R] [IsStrictOrderedRing R]
 variable (a b c : R)
 
 -- 1ª demostración

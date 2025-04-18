@@ -64,6 +64,10 @@ ejercicios propuestos en el blog [Calculemus](https://jaalonso.github.io/calcule
 -   09 [Si f es inyectiva, entonces f⁻¹(f(s)) ⊆ s](https://jaalonso.github.io/calculemus/posts/2021/06/09-imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas/) (En [Lean](./src/A2021/M06/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.lean) y en [Isabelle](./thy/A2021/M06/Imagen_inversa_de_la_imagen_de_aplicaciones_inyectivas.thy)).
 -   10 [f[f⁻¹[u]​] ⊆ u](https://jaalonso.github.io/calculemus/posts/2021/06/10-imagen_de_la_imagen_inversa/) (En [Lean](./src/A2021/M06/Imagen_de_la_imagen_inversa.lean) y en [Isabelle](./thy/A2021/M06/Imagen_de_la_imagen_inversa.thy)).
 -   11 [Si f es suprayectiva, entonces u ⊆ f[f⁻¹[u]​]​](https://jaalonso.github.io/calculemus/posts/2021/06/11-imagen_de_imagen_inversa_de_aplicaciones_suprayectivas/) (En [Lean](./src/A2021/M06/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.lean) y en [Isabelle](./thy/A2021/M06/Imagen_de_imagen_inversa_de_aplicaciones_suprayectivas.thy)).
+-   12 [Si s ⊆ t, entonces f[s] ⊆ f[t]​](https://jaalonso.github.io/calculemus/posts/2021/06/12-monotonia_de_la_imagen_de_conjuntos/) (En [Lean](./src/A2021/M06/Monotonia_de_la_imagen_de_conjuntos.lean) y en [Isabelle](./thy/A2021/M06/Monotonia_de_la_imagen_de_conjuntos.thy)).
+-   13 [Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]​](https://jaalonso.github.io/calculemus/posts/2021/06/13-monotonia_de_la_imagen_inversa/) (En [Lean](./src/A2021/M06/Monotonia_de_la_imagen_inversa.lean) y en [Isabelle](./thy/A2021/M06/Monotonia_de_la_imagen_inversa.thy)).
+-   14 [f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]​](https://jaalonso.github.io/calculemus/posts/2021/06/14-imagen_inversa_de_la_union/) (En [Lean](./src/A2021/M06/Imagen_inversa_de_la_union.lean) y en [Isabelle](./thy/A2021/M06/Imagen_inversa_de_la_union.thy)).
+-   15 [f[s ∩ t] ⊆ f[s] ∩ f[t]​](https://jaalonso.github.io/calculemus/posts/2021/06/15-imagen_de_la_interseccion/) (En [Lean](./src/A2021/M06/Imagen_de_la_interseccion.lean) y en [Isabelle](./thy/A2021/M06/Imagen_de_la_interseccion.thy)).
 
 
 ## 2023
