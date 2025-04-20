@@ -56,6 +56,8 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 13 [[https://jaalonso.github.io/calculemus/posts/2021/06/13-monotonia_de_la_imagen_inversa/][Si u ⊆ v, entonces f⁻¹[u] ⊆ f⁻¹[v]​]] (En [[./src/A2021/M06/Monotonia_de_la_imagen_inversa.lean][Lean]] y en [[./thy/A2021/M06/Monotonia_de_la_imagen_inversa.thy][Isabelle]]).
 + 14 [[https://jaalonso.github.io/calculemus/posts/2021/06/14-imagen_inversa_de_la_union/][f⁻¹[A ∪ B] = f⁻¹[A] ∪ f⁻¹[B]​]] (En [[./src/A2021/M06/Imagen_inversa_de_la_union.lean][Lean]] y en [[./thy/A2021/M06/Imagen_inversa_de_la_union.thy][Isabelle]]).
 + 15 [[https://jaalonso.github.io/calculemus/posts/2021/06/15-imagen_de_la_interseccion/][f[s ∩ t] ⊆ f[s] ∩ f[t]​]] (En [[./src/A2021/M06/Imagen_de_la_interseccion.lean][Lean]] y en [[./thy/A2021/M06/Imagen_de_la_interseccion.thy][Isabelle]]).
++ 16 [[https://jaalonso.github.io/calculemus/posts/2021/06/16-imagen_de_la_interseccion_de_aplicaciones_inyectivas/][Si f es inyectiva, entonces f[s] ∩ f[t] ⊆ f[s ∩ t]​]] (En [[./src/A2021/M06/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.lean][Lean]] y en [[./thy/A2021/M06/Imagen_de_la_interseccion_de_aplicaciones_inyectivas.thy][Isabelle]]).
++ 17 [[https://jaalonso.github.io/calculemus/posts/2021/06/17-imagen_de_la_diferencia_de_conjuntos/][f[s] \ f[t] ⊆ f[s \ t]​]] (En [[./src/A2021/M06/Imagen_de_la_diferencia_de_conjuntos.lean][Lean]] y en [[./thy/A2021/M06/Imagen_de_la_diferencia_de_conjuntos.thy][Isabelle]]).
 
 ** 2023
 
