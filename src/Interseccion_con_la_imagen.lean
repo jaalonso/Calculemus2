@@ -1,7 +1,7 @@
 -- Interseccion_con_la_imagen.lean
 -- f[s] ∩ t = f[s ∩ f⁻¹[t]].
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 18-abril-2024
+-- Sevilla, 22-abril-2025
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------

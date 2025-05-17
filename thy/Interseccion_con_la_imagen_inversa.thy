@@ -1,7 +1,7 @@
 (* Interseccion_con_la_imagen.thy
--- Intersección con la imagen.
+-- f[s] ∩ v = f[s ∩ f⁻¹[v]]
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 23-abril-2024
+-- Sevilla, 21-junio-2021
 -- ------------------------------------------------------------------ *)
 
 (* ---------------------------------------------------------------------

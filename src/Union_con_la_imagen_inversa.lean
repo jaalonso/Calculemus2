@@ -1,7 +1,7 @@
 -- Union_con_la_imagen_inversa.lean
--- Unión con la imagen inversa
+-- s ∪ f⁻¹[v] ⊆ f⁻¹[f[s] ∪ v]
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 24-abril-2024
+-- Sevilla, 22-junio-2021
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------

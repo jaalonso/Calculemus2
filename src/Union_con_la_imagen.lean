@@ -1,7 +1,7 @@
 -- Union_con_la_imagen.lean
--- Unión con la imagen
+-- f[s ∪ f⁻¹[v]] ⊆ f[s] ∪ v
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 22-abril-2024
+-- Sevilla, 23-abril-2025
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
