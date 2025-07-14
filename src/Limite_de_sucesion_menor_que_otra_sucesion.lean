@@ -173,7 +173,7 @@ example
   (huv : ∀ n, u n ≤ v n)
   : a ≤ c :=
 by
-  apply le_of_not_lt
+  apply le_of_not_gt
   -- ⊢ ¬c < a
   intro hca
   -- hca : c < a

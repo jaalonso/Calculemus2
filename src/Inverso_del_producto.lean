@@ -58,7 +58,7 @@ by
   have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
     aux a b
   show (a * b)⁻¹ = b⁻¹ * a⁻¹
-  simp [h1]
+  simp
 
 -- 3ª demostración
 -- ===============
@@ -67,7 +67,7 @@ example : (a * b)⁻¹ = b⁻¹ * a⁻¹ :=
 by
   have h1 : (a * b) * (b⁻¹ * a⁻¹) = 1 :=
     aux a b
-  simp [h1]
+  simp
 
 -- 4ª demostración
 -- ===============

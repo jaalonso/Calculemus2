@@ -89,7 +89,7 @@ example : length (replicate n x) = n :=
 by
   induction' n with n HI
   . simp
-  . simp [HI]
+  . simp
 
 -- 5ª demostración
 -- ===============
@@ -124,7 +124,7 @@ by
     length (replicate  (n + 1) x)
       = length (x :: replicate n x) := by simp only [replicate_succ]
     _ = length (replicate n x) + 1  := by simp only [length_cons]
-    _ = n + 1                       := by simp only [Nat.succ_eq_add_one, HI]
+    _ = n + 1                       := by simp only [HI]
 
 -- 9ª demostración
 -- ===============
@@ -149,7 +149,7 @@ lemma length_replicate_3 n (x : α) :
   length (replicate n x) = n :=
 by induction n with
   | zero      => simp
-  | succ n HI => simp only [HI, replicate_succ, length_cons, Nat.succ_eq_add_one]
+  | succ n HI => simp only [HI, replicate_succ, length_cons]
 
 -- 11ª demostración
 -- ===============

@@ -44,7 +44,7 @@ variable (a b c : α)
 
 example : a < b → b < c → a < c :=
 by
-  simp only [lt_iff_le_not_le]
+  simp only [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a → b ≤ c ∧ ¬c ≤ b → a ≤ c ∧ ¬c ≤ a
   rintro ⟨h1 : a ≤ b, _h2 : ¬b ≤ a⟩ ⟨h3 : b ≤ c, h4 : ¬c ≤ b⟩
   -- ⊢ a ≤ c ∧ ¬c ≤ a
@@ -62,7 +62,7 @@ by
 
 example : a < b → b < c → a < c :=
 by
-  simp only [lt_iff_le_not_le]
+  simp only [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a → b ≤ c ∧ ¬c ≤ b → a ≤ c ∧ ¬c ≤ a
   rintro ⟨h1 : a ≤ b, _h2 : ¬b ≤ a⟩ ⟨h3 : b ≤ c, h4 : ¬c ≤ b⟩
   -- ⊢ a ≤ c ∧ ¬c ≤ a
@@ -81,7 +81,7 @@ by
 
 example : a < b → b < c → a < c :=
 by
-  simp only [lt_iff_le_not_le]
+  simp only [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a → b ≤ c ∧ ¬c ≤ b → a ≤ c ∧ ¬c ≤ a
   rintro ⟨h1 : a ≤ b, _h2 : ¬b ≤ a⟩ ⟨h3 : b ≤ c, h4 : ¬c ≤ b⟩
   -- ⊢ a ≤ c ∧ ¬c ≤ a
@@ -96,7 +96,7 @@ by
 
 example : a < b → b < c → a < c :=
 by
-  simp only [lt_iff_le_not_le]
+  simp only [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a → b ≤ c ∧ ¬c ≤ b → a ≤ c ∧ ¬c ≤ a
   rintro ⟨h1 : a ≤ b, _h2 : ¬b ≤ a⟩ ⟨h3 : b ≤ c, h4 : ¬c ≤ b⟩
   -- ⊢ a ≤ c ∧ ¬c ≤ a
@@ -107,7 +107,7 @@ by
 
 example : a < b → b < c → a < c :=
 by
-  simp only [lt_iff_le_not_le]
+  simp only [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a → b ≤ c ∧ ¬c ≤ b → a ≤ c ∧ ¬c ≤ a
   exact fun ⟨h1, _h2⟩ ⟨h3, h4⟩ ↦ ⟨le_trans h1 h3,
                                   fun h5 ↦ h4 (le_trans h5 h1)⟩
@@ -121,6 +121,6 @@ example : a < b → b < c → a < c :=
 -- Lemas usados
 -- ============
 
--- #check (lt_iff_le_not_le : a < b ↔ a ≤ b ∧ ¬b ≤ a)
+-- #check (lt_iff_le_not_ge : a < b ↔ a ≤ b ∧ ¬b ≤ a)
 -- #check (le_trans : a ≤ b → b ≤ c → a ≤ c)
 -- #check (lt_trans : a < b → b < c → a < c)

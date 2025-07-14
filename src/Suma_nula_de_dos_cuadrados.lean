@@ -68,8 +68,7 @@ by
   have h' : x^2 = 0 := by
   { apply le_antisymm
     . show x ^ 2 ≤ 0
-      calc x ^ 2 ≤ x^2 + y^2 := by simp [le_add_of_nonneg_right,
-                                         pow_two_nonneg]
+      calc x ^ 2 ≤ x^2 + y^2 := by simp [pow_two_nonneg]
                _ = 0         := by exact h
     . show 0 ≤ x ^ 2
       apply pow_two_nonneg }
@@ -86,8 +85,7 @@ by
   have h' : x^2 = 0 := by
   { apply le_antisymm
     . -- ⊢ x ^ 2 ≤ 0
-      calc x ^ 2 ≤ x^2 + y^2 := by simp [le_add_of_nonneg_right,
-                                         pow_two_nonneg]
+      calc x ^ 2 ≤ x^2 + y^2 := by simp [pow_two_nonneg]
                _ = 0         := by exact h
     . -- ⊢ 0 ≤ x ^ 2
       apply pow_two_nonneg }

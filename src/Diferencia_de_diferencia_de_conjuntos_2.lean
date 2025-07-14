@@ -31,6 +31,7 @@
 -- ========================
 
 import Mathlib.Data.Set.Basic
+import Mathlib.Order.BooleanAlgebra.Set
 open Set
 
 variable {α : Type}

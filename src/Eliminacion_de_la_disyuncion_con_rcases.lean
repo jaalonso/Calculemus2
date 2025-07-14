@@ -58,7 +58,7 @@ by
 example
   (h : x ≠ 0)
   : x < 0 ∨ x > 0 :=
-Ne.lt_or_lt h
+Ne.lt_or_gt h
 
 -- 3ª demostración
 -- ===============

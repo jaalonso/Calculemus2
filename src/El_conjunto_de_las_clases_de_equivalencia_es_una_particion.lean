@@ -108,7 +108,7 @@ by
     have h1 : x ∈ clase R x := h.1 x
     rw [←hx] at h1
     -- h1 : x ∈ ∅
-    exact Set.not_mem_empty x h1
+    exact Set.notMem_empty x h1
 
 -- 2ª demostración
 -- ===============
@@ -146,11 +146,11 @@ by
     have h1 : x ∈ clase R x := h.1 x
     rw [←hx] at h1
     -- h1 : x ∈ ∅
-    exact Set.not_mem_empty x h1
+    exact Set.notMem_empty x h1
 
 -- Lemas usados
 -- ============
 
 -- variable (A B : Set X)
--- #check (Set.not_mem_empty x : x ∉ ∅)
+-- #check (Set.notMem_empty x : x ∉ ∅)
 -- #check (le_antisymm : A ≤ B → B ≤ A → A = B)

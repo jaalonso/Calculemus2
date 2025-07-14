@@ -54,7 +54,7 @@ by
     have hzy : R z y := h.2 hyz
     have hxy2 : R x y := h.3 hxz hzy
     exact hxy hxy2
-  exact Set.eq_empty_iff_forall_not_mem.mpr h1
+  exact Set.eq_empty_iff_forall_notMem.mpr h1
 
 -- 2ª demostración
 -- ===============
@@ -79,7 +79,7 @@ by
     push_neg
     push_neg at h1
     -- h1 : ∀ (z : X), ¬z ∈ clase R x ∩ clase R y
-    exact Set.eq_empty_iff_forall_not_mem.mpr h1
+    exact Set.eq_empty_iff_forall_notMem.mpr h1
   rcases h2 with ⟨z, hxz, hyz⟩
   -- z : X
   -- hxz : z ∈ clase R x
@@ -104,7 +104,7 @@ by
   -- h1 : ¬clase R x ∩ clase R y = ∅
   -- ⊢ False
   have h2 : ∃ z, z ∈ clase R x ∩ clase R y
-  . aesop (add norm Set.eq_empty_iff_forall_not_mem)
+  . aesop (add norm Set.eq_empty_iff_forall_notMem)
   apply hxy
   -- ⊢ R x y
   rcases h2 with ⟨z, hxz, hyz⟩
@@ -117,4 +117,4 @@ by
 -- ============
 
 -- variable (s : Set X)
--- #check (Set.eq_empty_iff_forall_not_mem : s = ∅ ↔ ∀ x, x ∉ s)
+-- #check (Set.eq_empty_iff_forall_notMem : s = ∅ ↔ ∀ x, x ∉ s)

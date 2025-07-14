@@ -140,7 +140,7 @@ by
   { have h1 : a + c ≤ b + c := add_le_add_right h c
     calc min a b + c = a + c               := by simp [min_eq_left h]
                    _ = min (a + c) (b + c) := by simp [min_eq_left h1]}
-  { have h2: b ≤ a := le_of_not_le h
+  { have h2: b ≤ a := le_of_not_ge h
     have h3 : b + c ≤ a + c := add_le_add_right h2 c
     calc min a b + c = b + c               := by simp [min_eq_right h2]
                    _ = min (a + c) (b + c) := by simp [min_eq_right h3]}

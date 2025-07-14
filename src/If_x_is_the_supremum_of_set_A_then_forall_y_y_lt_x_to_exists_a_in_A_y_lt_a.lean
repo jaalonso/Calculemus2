@@ -77,7 +77,7 @@ by
   push_neg at h
   -- h : ∀ a ∈ A, a ≤ y
   have h1 : x ≤ y := hx.2 y h
-  replace h1 : ¬(y < x) := not_lt_of_le h1
+  replace h1 : ¬(y < x) := not_lt_of_ge h1
   exact h1 hy
 
 -- Proof 3
@@ -98,7 +98,7 @@ by
   -- h : ∀ a ∈ A, a ≤ y
   apply absurd hy
   -- ⊢ ¬y < x
-  apply not_lt_of_le
+  apply not_lt_of_ge
   -- ⊢ x ≤ y
   apply hx.2 y
   -- ⊢ is_upper_bound A y
@@ -120,7 +120,7 @@ by
   -- ⊢ False
   push_neg at h
   -- h : ∀ a ∈ A, a ≤ y
-  exact absurd hy (not_lt_of_le (hx.2 y h))
+  exact absurd hy (not_lt_of_ge (hx.2 y h))
 
 -- Proof 5
 -- =======
@@ -235,4 +235,4 @@ fun _ hy ↦ (lt_isLUB_iff hx).mp hy
 -- #check (absurd : p → ¬p → q)
 -- #check (lt_isLUB_iff : IsLUB A a → (b < a ↔ ∃ c ∈ A, b < c))
 -- #check (not_le : ¬a ≤ b ↔ b < a)
--- #check (not_lt_of_le : a ≤ b → ¬b < a)
+-- #check (not_lt_of_ge : a ≤ b → ¬b < a)

@@ -200,7 +200,7 @@ by
   replace h3 : 0 < z - x := sub_pos.mpr h3
   replace h1 : y ≤ x + (z - x) := h1 (z - x) h3
   replace h1 : y ≤ z := by linarith
-  have h4 : y < y := gt_of_gt_of_ge h4 h1
+  have h4 : y < y := lt_of_le_of_lt h1 h4
   exact absurd h4 (irrefl y)
 
 -- Proof 9

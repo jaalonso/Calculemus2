@@ -90,7 +90,7 @@ example :
 by
   induction' m with m HI
   . calc x^(0 + n)
-       = x^n             := by simp [Nat.zero_add]
+       = x^n             := by simp
      _ = 1 * x^n         := by simp
      _ = x^0 * x^n       := by simp
   . calc x^(succ m + n)

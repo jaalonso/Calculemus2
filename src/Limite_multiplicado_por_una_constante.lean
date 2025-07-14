@@ -147,18 +147,36 @@ example
   : limite (fun n ↦ c * (u n)) (c * a) :=
 by
   by_cases hc : c = 0
-  . subst hc
+  . -- hc : c = 0
+    subst hc
+    -- ⊢ limite (fun n => 0 * u n) (0 * a)
     intros ε hε
+    -- ε : ℝ
+    -- hε : ε > 0
+    -- ⊢ ∃ N, ∀ n ≥ N, |(fun n => 0 * u n) n - 0 * a| < ε
     aesop
-  . intros ε hε
+  . -- hc : ¬c = 0
+    intros ε hε
+    -- ε : ℝ
+    -- hε : ε > 0
+    -- ⊢ ∃ N, ∀ n ≥ N, |(fun n => c * u n) n - c * a| < ε
     have hc' : 0 < |c| := by aesop
     have hεc : 0 < ε / |c| := div_pos hε hc'
-    cases' h (ε/|c|) hεc with N hN
+    rcases h (ε/|c|) hεc with ⟨N, hN⟩
+    -- N : ℕ
+    -- hN : ∀ n ≥ N, |u n - a| < ε / |c|
     use N
+    -- ⊢ ∀ n ≥ N, |(fun n => c * u n) n - c * a| < ε
     intros n hn
+    -- n : ℕ
+    -- hn : n ≥ N
+    -- ⊢ |(fun n => c * u n) n - c * a| < ε
     specialize hN n hn
+    -- hN : |u n - a| < ε / |c|
     dsimp only
+    -- ⊢ |c * u n - c * a| < ε
     rw [← mul_sub, abs_mul, ← lt_div_iff₀' hc']
+    -- ⊢ |u n - a| < ε / |c|
     exact hN
 
 -- Lemas usados

@@ -84,7 +84,7 @@ example : a^(m * n) = (a^m)^n :=
 by
   induction' n with n HI
   . calc a^(m * 0)
-         = a^0             := by simp [Nat.mul_zero]
+         = a^0             := by simp
        _ = 1               := by simp
        _ = (a^m)^0         := by simp
   . calc a^(m * succ n)
@@ -99,7 +99,7 @@ by
 example : a^(m * n) = (a^m)^n :=
 by
   induction' n with n HI
-  . simp [Nat.mul_zero]
+  . simp
   . simp [Nat.mul_succ,
           pow_add,
           HI,

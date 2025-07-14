@@ -42,7 +42,7 @@ variable (a b : α)
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   constructor
   . -- ⊢ a ≤ b ∧ ¬b ≤ a → a ≤ b ∧ a ≠ b
@@ -75,7 +75,7 @@ by
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   constructor
   . -- ⊢ a ≤ b ∧ ¬b ≤ a → a ≤ b ∧ a ≠ b
@@ -103,7 +103,7 @@ by
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   constructor
   . -- ⊢ a ≤ b ∧ ¬b ≤ a → a ≤ b ∧ a ≠ b
@@ -128,7 +128,7 @@ by
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   constructor
   . -- ⊢ a ≤ b ∧ ¬b ≤ a → a ≤ b ∧ a ≠ b
@@ -145,7 +145,7 @@ by
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   constructor
   . -- ⊢ a ≤ b ∧ ¬b ≤ a → a ≤ b ∧ a ≠ b
@@ -158,7 +158,7 @@ by
 
 example : a < b ↔ a ≤ b ∧ a ≠ b :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ a ≤ b ∧ ¬b ≤ a ↔ a ≤ b ∧ a ≠ b
   exact ⟨fun ⟨h1, h2⟩ ↦ ⟨h1, fun h3 ↦ h2 (le_of_eq h3.symm)⟩,
          fun ⟨h4, h5⟩ ↦ ⟨h4, fun h6 ↦ h5 (le_antisymm h4 h6)⟩⟩
@@ -204,5 +204,5 @@ example : a < b ↔ a ≤ b ∧ a ≠ b :=
 -- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
 -- #check (le_of_eq : a = b → a ≤ b)
 -- #check (lt_iff_le_and_ne : a < b ↔ a ≤ b ∧ a ≠ b)
--- #check (lt_iff_le_not_le : a < b ↔ a ≤ b ∧ ¬b ≤ a)
+-- #check (lt_iff_le_not_ge : a < b ↔ a ≤ b ∧ ¬b ≤ a)
 -- #check (lt_of_le_of_ne : a ≤ b → a ≠ b → a < b)

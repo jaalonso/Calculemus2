@@ -86,7 +86,7 @@ by
     calc u k  - a ≤ |u k - a| := by exact le_abs_self (u k - a)
                 _ < u n - a   := hm k h2
                 _ ≤ u k - a   := sub_le_sub_right (h' n k h1) a
-  exact gt_irrefl (u k - a) h3
+  exact lt_irrefl (u k - a) h3
 
 -- 2ª demostración
 -- ===============
@@ -154,7 +154,7 @@ by
 
 -- variable (b : ℝ)
 -- #check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
--- #check (gt_irrefl a : ¬(a > a))
+-- #check (lt_irrefl a : ¬(a > a))
 -- #check (le_abs_self a : a ≤ |a|)
 -- #check (le_max_left a b : a ≤ max a b)
 -- #check (le_max_right a b : b ≤ max a b)

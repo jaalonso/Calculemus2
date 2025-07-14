@@ -31,7 +31,7 @@ variable (a : α)
 
 example : ¬a < a :=
 by
-  rw [lt_iff_le_not_le]
+  rw [lt_iff_le_not_ge]
   -- ⊢ ¬(a ≤ a ∧ ¬a ≤ a)
   rintro ⟨h1, h2⟩
   -- h1 : a ≤ a
@@ -49,5 +49,5 @@ example : ¬a < a :=
 -- ============
 
 -- variable (b : α)
--- #check (lt_iff_le_not_le : a < b ↔ a ≤ b ∧ ¬b ≤ a)
+-- #check (lt_iff_le_not_ge : a < b ↔ a ≤ b ∧ ¬b ≤ a)
 -- #check (irrefl a : ¬a < a)
