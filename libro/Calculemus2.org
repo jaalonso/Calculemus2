@@ -11,30 +11,26 @@
 
 * Introducción
 
-Este libro es una recopilación de los ejercicios de demostración con
-Lean4 que se han ido publicando, desde el 10 de julio de 20023, en el
-blog [[https://www.glc.us.es][Calculemus]].
+Este libro recopila los ejercicios de demostración con Lean4 que se han
+publicado desde el 10 de julio de 2023 en el blog [[https://jaalonso.github.io/calculemus][Calculemus]].
 
-La ordenación de los ejercicios es simplemente temporal según su fecha
-de publicación en Calculemus y el orden de los ejercicios en Calculemus
-responde a los que me voy encontrando en mis [[https://github.com/jaalonso/Lecturas_GLC][lecturas]].
+Cada ejercicio comienza proponiendo soluciones en lenguaje natural y, a
+continuación, presenta distintas demostraciones con Lean4 ordenadas de
+las más detalladas a las más automáticas. Al final de cada ejercicio se
+incluye un enlace para interactuar con sus soluciones en [[https://lean.math.hhu.de/][Lean4 Web]].
 
-En cada ejercicio, se comienza proponiendo soluciones en lenguaje
-natural y, a continuación, se exponen distintas demostraciones con Lean4
-ordenadas desde las más detalladas a las más automáticas. Al final de
-cada ejercicio hay un enlace para interactuar con sus soluciones en
-[[https://lean.math.hhu.de/][Lean4 Web]].
+Las soluciones del libro están disponibles en [[https://github.com/jaalonso/Calculemus2][este repositorio de
+GitHub]].
 
-Las soluciones del libro están en [[https://github.com/jaalonso/Calculemus2][este repositorio de GitHub]].
+El libro se actualizará periódicamente con los nuevos ejercicios que se
+propongan en [[https://jaalonso.github.io/calculemus/][Calculemus]].
 
-El libro se irá actualizando periódicamente con los nuevos ejercicios que se
-proponen diariamente en [[https://www.glc.us.es][Calculemus]].
+Esta obra constituye una continuación de:
 
-Este libro es una continuación de
-+ [[https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/DAO_con_Lean.pdf][DAO (Demostración Asistida por Ordenador) con Lean]] que es una
-  introducción a la demostración con Lean3 y
-+ [[https://raw.githubusercontent.com/jaalonso/Calculemus/master/Calculemus.pdf][Calculemus (Vol. 1: Demostraciones con Isabelle/HOL y Lean3)]] que es la
-  recopilación de la primera parte de los ejercicios del blog con
+- [[https://raw.githubusercontent.com/jaalonso/DAO_con_Lean/master/DAO_con_Lean.pdf][DAO (Demostración Asistida por Ordenador) con Lean]], una introducción a
+  la demostración con Lean3.
+- [[https://raw.githubusercontent.com/jaalonso/Calculemus/master/Calculemus.pdf][Calculemus (Vol. 1: Demostraciones con Isabelle/HOL y Lean3)]], que
+  recopila la primera parte de los ejercicios del blog con
   demostraciones en Isabelle/HOL y Lean3.
 
 * Demostraciones de una propiedad de los números enteros
@@ -974,9 +970,5 @@ Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#u
 Se puede interactuar con las pruebas anteriores en [[https://lean.math.hhu.de/#url=https://raw.githubusercontent.com/jaalonso/Calculemus2/main/src/Limite_de_la_opuesta.lean][Lean 4 Web]].
 
 #+LATEX: \input Calculemus2_bibliografia
-
-#+LATEX: \chapter*{Lemas usados}
-#+LATEX: \addcontentsline{toc}{chapter}{Lemas usados}
-#+INCLUDE: "../src/Lemas_usados.lean" src lean :lines "7-"
 
 #+LATEX: \end{document}
