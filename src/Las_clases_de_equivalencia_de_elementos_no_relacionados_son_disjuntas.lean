@@ -76,7 +76,6 @@ by
   . contrapose h1
     -- h1 : ¬∃ z, z ∈ clase R x ∩ clase R y
     -- ⊢ ¬¬clase R x ∩ clase R y = ∅
-    push_neg
     push_neg at h1
     -- h1 : ∀ (z : X), ¬z ∈ clase R x ∩ clase R y
     exact Set.eq_empty_iff_forall_notMem.mpr h1
@@ -116,5 +115,5 @@ by
 -- Lemas usados
 -- ============
 
--- variable (s : Set X)
--- #check (Set.eq_empty_iff_forall_notMem : s = ∅ ↔ ∀ x, x ∉ s)
+variable (s : Set X)
+#check (Set.eq_empty_iff_forall_notMem : s = ∅ ↔ ∀ x, x ∉ s)

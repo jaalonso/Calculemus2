@@ -66,7 +66,7 @@ by
   have h4 : a + exp c < b + exp d :=
     add_lt_add_of_le_of_lt h1 h3
   show a + exp c + f < b + exp d + f
-  exact add_lt_add_right h4 f
+  exact (add_lt_add_iff_right f).mpr h4
 
 -- 2ª demostración
 example
@@ -95,8 +95,8 @@ by
 -- Lemas usados
 -- ============
 
--- #check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
--- #check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
--- #check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
--- #check (exp_lt_exp : exp a < exp b ↔ a < b)
--- #check (le_refl a : a ≤ a)
+#check (add_lt_add_iff_right a : b + a < c + a ↔ b < c)
+#check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+#check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+#check (exp_lt_exp : exp a < exp b ↔ a < b)
+#check (le_refl a : a ≤ a)

@@ -38,7 +38,7 @@ by
   intro h
   calc
     a = 0 + a       := (zero_add a).symm
-    _ ≤ (b - a) + a := add_le_add_right h a
+    _ ≤ (b - a) + a := add_le_add_left h a
     _ = b           := sub_add_cancel b a
 
 -- 2ª demostración
@@ -57,7 +57,7 @@ by simp
 -- Lemas usados
 -- ============
 
--- #check (zero_add a : 0 + a = a)
--- #check (add_le_add_right : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
--- #check (sub_add_cancel a b : a - b + b = a)
--- #check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)
+#check (zero_add a : 0 + a = a)
+#check (add_le_add_left : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
+#check (sub_add_cancel a b : a - b + b = a)
+#check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)

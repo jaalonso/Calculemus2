@@ -73,9 +73,11 @@ lemma aux1
   : ∀ n, n ≤ φ n :=
 by
   intro n
-  induction' n with m HI
-  . exact Nat.zero_le (φ 0)
-  . apply Nat.succ_le_of_lt
+  induction n with
+  | zero =>
+    exact Nat.zero_le (φ 0)
+  | succ m HI =>
+    apply Nat.succ_le_of_lt
     calc m ≤ φ m        := HI
          _ < φ (succ m) := h m (m+1) (lt_add_one m)
 
@@ -106,7 +108,7 @@ by
   -- hφ2 : limite (u ∘ φ) a
   unfold limite at hφ2
   -- hφ2 : ∀ (ε : ℝ), ε > 0 → ∃ n, ∀ (k : ℕ), k ≥ n → |(u ∘ φ) k - a| < ε
-  cases' hφ2 ε hε with n' hn'
+  rcases hφ2 ε hε with ⟨n', hn'⟩
   -- n' : ℕ
   -- hn' : ∀ (k : ℕ), k ≥ n' → |(u ∘ φ) k - a| < ε
   rcases aux2 hφ1 n n' with ⟨m, hm, hm'⟩
@@ -138,7 +140,7 @@ by
   -- φ : ℕ → ℕ
   -- hφ1 : extraccion φ
   -- hφ2 : limite (u ∘ φ) a
-  cases' hφ2 ε hε with n' hn'
+  rcases hφ2 ε hε with ⟨n', hn'⟩
   -- n' : ℕ
   -- hn' : ∀ (k : ℕ), k ≥ n' → |(u ∘ φ) k - a| < ε
   rcases aux2 hφ1 n n' with ⟨m, hm, hm'⟩
@@ -165,7 +167,7 @@ by
   -- φ : ℕ → ℕ
   -- hφ1 : extraccion φ
   -- hφ2 : limite (u ∘ φ) a
-  cases' hφ2 ε hε with n' hn'
+  rcases hφ2 ε hε with ⟨n', hn'⟩
   -- n' : ℕ
   -- hn' : ∀ (k : ℕ), k ≥ n' → |(u ∘ φ) k - a| < ε
   rcases aux2 hφ1 n n' with ⟨m, hm, hm'⟩
@@ -190,7 +192,7 @@ by
   -- φ : ℕ → ℕ
   -- hφ1 : extraccion φ
   -- hφ2 : limite (u ∘ φ) a
-  cases' hφ2 ε hε with n' hn'
+  rcases hφ2 ε hε with ⟨n', hn'⟩
   -- n' : ℕ
   -- hn' : ∀ (k : ℕ), k ≥ n' → |(u ∘ φ) k - a| < ε
   rcases aux2 hφ1 n n' with ⟨m, hm, hm'⟩
@@ -204,10 +206,10 @@ by
 -- Lemas usados
 -- ============
 
--- variable (m n x y z : ℕ)
--- #check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
--- #check (Nat.zero_le n : 0 ≤ n)
--- #check (le_max_left m n : m ≤ max m n)
--- #check (le_max_right m n : n ≤ max m n)
--- #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
--- #check (lt_add_one n : n < n + 1)
+variable (m n x y z : ℕ)
+#check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
+#check (Nat.zero_le n : 0 ≤ n)
+#check (le_max_left m n : m ≤ max m n)
+#check (le_max_right m n : n ≤ max m n)
+#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+#check (lt_add_one n : n < n + 1)

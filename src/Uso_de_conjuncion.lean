@@ -71,7 +71,7 @@ example
   (h : m ∣ n ∧ m ≠ n)
   : m ∣ n ∧ ¬ n ∣ m :=
 by
-  cases' h with h1 h2
+  rcases h with ⟨h1, h2⟩
   -- h1 : m ∣ n
   -- h2 : m ≠ n
   constructor

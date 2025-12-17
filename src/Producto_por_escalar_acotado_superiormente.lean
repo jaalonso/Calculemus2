@@ -37,7 +37,7 @@ example
   (hc : c ≥ 0)
   : acotadaSup (fun x ↦ c * f x) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
   -- ha : CotaSuperior f a
   have h1 : CotaSuperior (fun x ↦ c * f x) (c * a) :=
@@ -53,7 +53,7 @@ example
   (hc : c ≥ 0)
   : acotadaSup (fun x ↦ c * f x) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
   -- ha : CotaSuperior f a
   use c * a
@@ -90,4 +90,5 @@ fun ⟨a, ha⟩ ↦ ⟨c * a, CotaSuperior_mul ha hc⟩
 -- Lemas usados
 -- ============
 
--- #check (CotaSuperior_mul : CotaSuperior f a → c ≥ 0 → CotaSuperior (fun x ↦ c * f x) (c * a))
+variable (a : ℝ)
+#check (CotaSuperior_mul : CotaSuperior f a → c ≥ 0 → CotaSuperior (fun x ↦ c * f x) (c * a))

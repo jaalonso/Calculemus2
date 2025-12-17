@@ -62,7 +62,7 @@ by
   -- x : ℝ
   -- ⊢ f x = id x
   have h : f (f x) = x := hi x
-  cases' (le_total (f x) x) with h1 h2
+  rcases (le_total (f x) x) with h1 | h2
   . -- h1 : f x ≤ x
     have h1a : f (f x) ≤ f x := hc h1
     have h1b : x ≤ f x := by rwa [h] at h1a
@@ -88,7 +88,7 @@ by
   -- ⊢ f x = id x
   unfold id
   -- ⊢ f x = x
-  cases' (le_total (f x) x) with h1 h2
+  rcases (le_total (f x) x) with h1 | h2
   . -- h1 : f x ≤ x
     apply antisymm h1
     -- ⊢ x ≤ f x
@@ -115,7 +115,7 @@ by
   funext x
   -- x : ℝ
   -- ⊢ f x = id x
-  cases' (le_total (f x) x) with h1 h2
+  rcases (le_total (f x) x) with h1 | h2
   . -- h1 : f x ≤ x
     apply antisymm h1
     -- ⊢ x ≤ f x
@@ -136,7 +136,7 @@ by
   funext x
   -- x : ℝ
   -- ⊢ f x = id x
-  cases' (le_total (f x) x) with h1 h2
+  rcases (le_total (f x) x) with h1 | h2
   . -- h1 : f x ≤ x
     apply antisymm h1
     -- ⊢ x ≤ f x
@@ -153,6 +153,6 @@ by
 -- Lemas usados
 -- ============
 
--- variable (a b : ℝ)
--- #check (le_total a b : a ≤ b ∨ b ≤ a)
--- #check (antisymm : a ≤ b → b ≤ a → a = b)
+variable (a b : ℝ)
+#check (le_total a b : a ≤ b ∨ b ≤ a)
+#check (antisymm : a ≤ b → b ≤ a → a = b)

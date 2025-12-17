@@ -71,7 +71,7 @@ by
      = |7 * (u n - a)|    := by rw [← mul_sub]
    _ = |7| * |u n - a|    := by rw [abs_mul]
    _ = 7 * |u n - a|      := by congr ; simp [Nat.abs_ofNat]
-   _ < 7 * (ε / 7)        := by simp [Nat.ofNat_pos, mul_lt_mul_left, hN]
+   _ < 7 * (ε / 7)        := by simp [Nat.ofNat_pos, hN]
    _ = ε                  := mul_div_cancel₀ ε (OfNat.zero_ne_ofNat 7).symm
 
 -- Proof 2
@@ -137,10 +137,9 @@ by
 -- Used lemmas
 -- ===========
 
--- variable (b c : ℝ)
--- variable (n : ℕ)
--- #check (abs_mul a b : |a * b| = |a| * |b|)
--- #check (abs_of_nonneg : 0 ≤ a → |a| = a)
--- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
--- #check (mul_lt_mul_left : 0 < a → (a * b < a * c ↔ b < c))
--- #check (mul_sub a b c : a * (b - c) = a * b - a * c)
+variable (b c : ℝ)
+variable (n : ℕ)
+#check (abs_mul a b : |a * b| = |a| * |b|)
+#check (abs_of_nonneg : 0 ≤ a → |a| = a)
+#check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
+#check (mul_sub a b c : a * (b - c) = a * b - a * c)

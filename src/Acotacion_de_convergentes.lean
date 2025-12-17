@@ -65,8 +65,8 @@ by
   -- ⊢ |u n| ≤ 1 + |a|
   calc |u n|
        = |u n - a + a|   := congr_arg abs (eq_add_of_sub_eq rfl)
-     _ ≤ |u n - a| + |a| := abs_add (u n - a) a
-     _ ≤ 1 + |a|         := add_le_add_right h |a|
+     _ ≤ |u n - a| + |a| := abs_add_le (u n - a) a
+     _ ≤ 1 + |a|         := add_le_add_left h |a|
 
 -- 2ª demostración
 -- ===============
@@ -91,14 +91,14 @@ by
   -- h : |u n - a| ≤ 1
   calc |u n|
        = |u n - a + a|   := by ring_nf
-     _ ≤ |u n - a| + |a| := abs_add (u n - a) a
+     _ ≤ |u n - a| + |a| := abs_add_le (u n - a) a
      _ ≤ 1 + |a|         := by linarith
 
 -- Lemas usados
 -- ============
 
--- variable (a b c : ℝ)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (add_le_add_right : b ≤ c → ∀ a,  b + a ≤ c + a)
--- #check (eq_add_of_sub_eq :  a - c = b → a = b + c)
--- #check (zero_lt_one : 0 < 1)
+variable (a b c : ℝ)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (add_le_add_left : b ≤ c → ∀ a,  b + a ≤ c + a)
+#check (eq_add_of_sub_eq :  a - c = b → a = b + c)
+#check (zero_lt_one : 0 < 1)

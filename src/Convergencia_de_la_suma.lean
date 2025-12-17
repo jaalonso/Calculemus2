@@ -93,7 +93,7 @@ by
   calc |(u + v) n - (a + b)|
        = |(u n + v n) - (a + b)|  := rfl
      _ = |(u n - a) + (v n - b)|  := by { congr; ring }
-     _ ≤ |u n - a| + |v n - b|    := by apply abs_add
+     _ ≤ |u n - a| + |v n - b|    := by apply abs_add_le
      _ < ε / 2 + ε / 2            := by linarith [hNu, hNv]
      _ = ε                        := by apply add_halves
 
@@ -117,7 +117,7 @@ by
   calc |(u + v) n - (a + b)|
        = |(u n + v n) - (a + b)|  := by rfl
      _ = |(u n - a) + (v n -  b)| := by {congr; ring}
-     _ ≤ |u n - a| + |v n -  b|   := by apply abs_add
+     _ ≤ |u n - a| + |v n -  b|   := by apply abs_add_le
      _ < ε / 2 + ε / 2            := by linarith
      _ = ε                        := by apply add_halves
 
@@ -147,7 +147,7 @@ by
   calc |(u + v) n - (a + b)|
        = |(u n + v n) - (a + b)| := by rfl
      _ = |(u n - a) + (v n - b)| := by { congr; ring }
-     _ ≤ |u n - a| + |v n - b|   := by apply abs_add
+     _ ≤ |u n - a| + |v n - b|   := by apply abs_add_le
      _ < ε                       := by linarith
 
 -- 4ª demostración
@@ -167,7 +167,7 @@ by
   calc |(u + v) n - (a + b)|
        = |u n + v n - (a + b)|   := by rfl
      _ = |(u n - a) + (v n - b)| := by { congr; ring }
-     _ ≤ |u n - a| + |v n - b|   := by apply abs_add
+     _ ≤ |u n - a| + |v n - b|   := by apply abs_add_le
      _ < ε/2 + ε/2               := add_lt_add (hNu n hn₁) (hNv n hn₂)
      _ = ε                       := by simp
 
@@ -188,7 +188,7 @@ by
   calc |(u + v) n - (a + b)|
        = |u n + v n - (a + b)|   := by rfl
      _ = |(u n - a) + (v n - b)| := by { congr; ring }
-     _ ≤ |u n - a| + |v n - b|   := by apply abs_add
+     _ ≤ |u n - a| + |v n - b|   := by apply abs_add_le
      _ < ε                       := by linarith [hNu n (by linarith), hNv n (by linarith)]
 
 -- 6ª demostración
@@ -212,20 +212,20 @@ by
   calc |(u + v) n - (a + b)|
        = |(u n + v n) - (a + b)|   := by rfl
      _ = |(u n - a) + (v n - b)|   := by {congr; ring }
-     _ ≤ |(u n - a)| + |(v n - b)| := by apply abs_add
+     _ ≤ |(u n - a)| + |(v n - b)| := by apply abs_add_le
      _ < ε/2 + ε/2                 := by linarith
      _ = ε                         := by ring
 
 -- Lemas usados
 -- ============
 
--- variable (d : ℝ)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (add_halves a : a / 2 + a / 2 = a)
--- #check (add_lt_add : a < b → c < d → a + c < b + d)
--- #check (half_pos : a > 0 → a / 2 > 0)
--- #check (le_max_left a b : a ≤ max a b)
--- #check (le_max_right a b : b ≤ max a b)
--- #check (le_of_max_le_left : max a b ≤ c → a ≤ c)
--- #check (le_of_max_le_right : max a b ≤ c → b ≤ c)
--- #check (max_le_iff : max a b ≤ c ↔ a ≤ c ∧ b ≤ c)
+variable (d : ℝ)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (add_halves a : a / 2 + a / 2 = a)
+#check (add_lt_add : a < b → c < d → a + c < b + d)
+#check (half_pos : a > 0 → a / 2 > 0)
+#check (le_max_left a b : a ≤ max a b)
+#check (le_max_right a b : b ≤ max a b)
+#check (le_of_max_le_left : max a b ≤ c → a ≤ c)
+#check (le_of_max_le_right : max a b ≤ c → b ≤ c)
+#check (max_le_iff : max a b ≤ c ↔ a ≤ c ∧ b ≤ c)

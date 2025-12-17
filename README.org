@@ -379,6 +379,9 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 03 [[https://jaalonso.github.io/calculemus/posts/2025/01/03-nicomachus_theorem/][Nicomachus’s theorem]] (In [[./src/Nicomachus_theorem.lean][Lean4]] and [[./thy/Nicomachus_theorem.thy][Isabelle]]).
 + 21 [[https://jaalonso.github.io/calculemus/posts/2025/01/21-praeclarum_theorema][Praeclarum theorema]] (In [[./src/Praeclarum_theorema.lean][Lean4]] and [[./thy/Praeclarum_theorema.thy][Isabelle]]).
 
+*** Septiembre 2025
+
+
 * Ejercicios ordenados por tema
 
 En [[./Ejercicios_por_temas.org][este enlace]] se encuentran los ejercicios anteriores clasificados por

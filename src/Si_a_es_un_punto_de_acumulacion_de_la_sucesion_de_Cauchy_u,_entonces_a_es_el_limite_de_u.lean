@@ -143,9 +143,9 @@ by
   -- hN' : |u N' - a| < ε / 2
   calc   |u n - a|
        = |(u n - u N') + (u N' - a)| := by ring_nf
-     _ ≤ |u n - u N'| + |u N' - a|   := abs_add (u n - u N') (u N' - a)
-     _ < ε/2 + |u N' - a|            := add_lt_add_right (hN n hn N' hNN') _
-     _ < ε/2 + ε/2                   := add_lt_add_left hN' (ε / 2)
+     _ ≤ |u n - u N'| + |u N' - a|   := abs_add_le (u n - u N') (u N' - a)
+     _ < ε/2 + |u N' - a|            := add_lt_add_left (hN n hn N' hNN') _
+     _ < ε/2 + ε/2                   := add_lt_add_right hN' (ε / 2)
      _ = ε                           := add_halves ε
 
 -- 2ª demostración
@@ -177,22 +177,22 @@ by
   -- hN' : |u N' - a| < ε / 2
   calc  |u n - a|
       = |(u n - u N') + (u N' - a)| := by ring_nf
-    _ ≤ |u n - u N'| + |u N' - a|   := abs_add (u n - u N') (u N' - a)
+    _ ≤ |u n - u N'| + |u N' - a|   := abs_add_le (u n - u N') (u N' - a)
     _ < ε                           := by linarith [hN n hn N' hNN']
 
 -- Lemas usados
 -- ============
 
--- variable (m n x y z : ℕ)
--- variable (b c : ℝ)
--- #check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
--- #check (Nat.zero_le n : 0 ≤ n)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (add_halves a : a / 2 + a / 2 = a)
--- #check (add_lt_add_left : b < c → ∀ (a : ℝ), a + b < a + c)
--- #check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
--- #check (half_pos : 0 < a → 0 < a / 2)
--- #check (le_max_left m n : m ≤ max m n)
--- #check (le_max_right m n : n ≤ max m n)
--- #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
--- #check (lt_add_one n : n < n + 1)
+variable (m n x y z : ℕ)
+variable (b c : ℝ)
+#check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
+#check (Nat.zero_le n : 0 ≤ n)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (add_halves a : a / 2 + a / 2 = a)
+#check (add_lt_add_right : b < c → ∀ (a : ℝ), a + b < a + c)
+#check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
+#check (half_pos : 0 < a → 0 < a / 2)
+#check (le_max_left m n : m ≤ max m n)
+#check (le_max_right m n : n ≤ max m n)
+#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+#check (lt_add_one n : n < n + 1)

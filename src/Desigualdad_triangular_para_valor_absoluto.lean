@@ -88,17 +88,17 @@ example : |x + y| ≤ |x| + |y| := by
 -- ===============
 
 example : |x + y| ≤ |x| + |y| :=
-  abs_add x y
+  abs_add_le x y
 
 -- Lemas usados
 -- ============
 
--- variable (a b c d : ℝ)
--- #check (abs_add x y : |x + y| ≤ |x| + |y|)
--- #check (abs_of_neg : x < 0 → |x| = -x)
--- #check (abs_of_nonneg : 0 ≤ x → |x| = x)
--- #check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
--- #check (le_abs_self a : a ≤ |a|)
--- #check (le_or_gt x y : x ≤ y ∨ x > y)
--- #check (neg_add x y : -(x + y) = -x + -y)
--- #check (neg_le_abs x : -x ≤ |x|)
+variable (a b c d : ℝ)
+#check (abs_add_le x y : |x + y| ≤ |x| + |y|)
+#check (abs_of_neg : x < 0 → |x| = -x)
+#check (abs_of_nonneg : 0 ≤ x → |x| = x)
+#check (add_le_add : a ≤ b → c ≤ d → a + c ≤ b + d)
+#check (le_abs_self a : a ≤ |a|)
+#check (le_or_gt x y : x ≤ y ∨ x > y)
+#check (neg_add x y : -(x + y) = -x + -y)
+#check (neg_le_abs x : -x ≤ |x|)

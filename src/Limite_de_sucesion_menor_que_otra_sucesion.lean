@@ -88,9 +88,9 @@ by
   have hac1 : a - c < a - c := by
     calc a - c
          = (a - u k) + (u k - c)   := by ring
-       _ ≤ (a - u k) + (v k - c)   := add_le_add_left hk (a - u k)
+       _ ≤ (a - u k) + (v k - c)   := add_le_add_right hk (a - u k)
        _ ≤ |(a - u k) + (v k - c)| := le_abs_self ((a - u k) + (v k - c))
-       _ ≤ |a - u k| + |v k - c|   := abs_add (a - u k) (v k - c)
+       _ ≤ |a - u k| + |v k - c|   := abs_add_le (a - u k) (v k - c)
        _ = |u k - a| + |v k - c|   := by simp only [abs_sub_comm]
        _ < ε + ε                   := add_lt_add ha hc
        _ = a - c                   := add_halves (a - c)
@@ -121,9 +121,9 @@ by
   have hac1 : a - c < a -c := by
     calc a - c
          = (a - u k) + (u k - c)   := by ring
-       _ ≤ (a - u k) + (v k - c)   := add_le_add_left hk (a - u k)
+       _ ≤ (a - u k) + (v k - c)   := add_le_add_right hk (a - u k)
        _ ≤ |(a - u k) + (v k - c)| := le_abs_self ((a - u k) + (v k - c))
-       _ ≤ |a - u k| + |v k - c|   := abs_add (a - u k) (v k - c)
+       _ ≤ |a - u k| + |v k - c|   := abs_add_le (a - u k) (v k - c)
        _ = |u k - a| + |v k - c|   := by simp only [abs_sub_comm]
        _ < ε + ε                   := add_lt_add ha hc
        _ = a - c                   := add_halves (a - c)
@@ -154,9 +154,9 @@ by
   have hac1 : a - c < a -c := by
     calc a - c
          = (a - u k) + (u k - c)   := by ring
-       _ ≤ (a - u k) + (v k - c)   := add_le_add_left hk (a - u k)
+       _ ≤ (a - u k) + (v k - c)   := add_le_add_right hk (a - u k)
        _ ≤ |(a - u k) + (v k - c)| := by simp [le_abs_self]
-       _ ≤ |a - u k| + |v k - c|   := by simp [abs_add]
+       _ ≤ |a - u k| + |v k - c|   := by simp [abs_add_le]
        _ = |u k - a| + |v k - c|   := by simp [abs_sub_comm]
        _ < ε + ε                   := add_lt_add ha hc
        _ = a - c                   := by simp [hε]
@@ -199,19 +199,19 @@ by
 -- Lemas usados
 -- ============
 
--- variable (b d : ℝ)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
--- #check (abs_sub_comm a b : |a - b| = |b - a|)
--- #check (add_halves a : a / 2 + a / 2 = a)
--- #check (add_le_add_left : b ≤ c → ∀ a, a + b ≤ a + c)
--- #check (add_lt_add : a < b → c < d → a + c < b + d)
--- #check (half_pos : 0 < a → 0 < a / 2)
--- #check (le_abs_self a : a ≤ |a|)
--- #check (le_max_left a b : a ≤ max a b)
--- #check (le_max_right a b : b ≤ max a b)
--- #check (le_of_not_lt :  ¬b < a → a ≤ b)
--- #check (lt_irrefl a : ¬a < a)
--- #check (not_le : ¬a ≤ b ↔ b < a)
--- #check (sub_le_sub_right : a ≤ b → ∀ c, a - c ≤ b - c)
--- #check (sub_pos : 0 < a - b ↔ b < a)
+variable (b d : ℝ)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
+#check (abs_sub_comm a b : |a - b| = |b - a|)
+#check (add_halves a : a / 2 + a / 2 = a)
+#check (add_le_add_right : b ≤ c → ∀ a, a + b ≤ a + c)
+#check (add_lt_add : a < b → c < d → a + c < b + d)
+#check (half_pos : 0 < a → 0 < a / 2)
+#check (le_abs_self a : a ≤ |a|)
+#check (le_max_left a b : a ≤ max a b)
+#check (le_max_right a b : b ≤ max a b)
+#check (le_of_not_gt :  ¬b < a → a ≤ b)
+#check (lt_irrefl a : ¬a < a)
+#check (not_le : ¬a ≤ b ↔ b < a)
+#check (sub_le_sub_right : a ≤ b → ∀ c, a - c ≤ b - c)
+#check (sub_pos : 0 < a - b ↔ b < a)

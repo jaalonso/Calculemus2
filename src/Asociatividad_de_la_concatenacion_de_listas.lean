@@ -51,11 +51,18 @@ variable (xs ys zs : List α)
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
-  . calc [] ++ (ys ++ zs)
+  induction xs with
+  | nil =>
+    -- ⊢ [] ++ (ys ++ zs) = ([] ++ ys) ++ zs
+    calc [] ++ (ys ++ zs)
          = ys ++ zs                := nil_append (ys ++ zs)
        _ = ([] ++ ys) ++ zs        := congrArg (. ++ zs) (nil_append ys).symm
-  . calc (a :: as) ++ (ys ++ zs)
+  | cons a as HI =>
+    -- a : α
+    -- as : List α
+    -- HI : as ++ (ys ++ zs) = as ++ ys ++ zs
+    -- ⊢ a :: as ++ (ys ++ zs) = (a :: as ++ ys) ++ zs
+    calc (a :: as) ++ (ys ++ zs)
          = a :: (as ++ (ys ++ zs)) := cons_append
        _ = a :: ((as ++ ys) ++ zs) := congrArg (a :: .) HI
        _ = (a :: (as ++ ys)) ++ zs := cons_append.symm
@@ -66,11 +73,18 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
-  . calc [] ++ (ys ++ zs)
+  induction xs with
+  | nil =>
+    -- ⊢ [] ++ (ys ++ zs) = ([] ++ ys) ++ zs
+    calc [] ++ (ys ++ zs)
          = ys ++ zs                := by rw [nil_append]
        _ = ([] ++ ys) ++ zs        := by rw [nil_append]
-  . calc (a :: as) ++ (ys ++ zs)
+  | cons a as HI =>
+    -- a : α
+    -- as : List α
+    -- HI : as ++ (ys ++ zs) = as ++ ys ++ zs
+    -- ⊢ a :: as ++ (ys ++ zs) = a :: as ++ ys ++ zs
+    calc (a :: as) ++ (ys ++ zs)
          = a :: (as ++ (ys ++ zs)) := by rw [cons_append]
        _ = a :: ((as ++ ys) ++ zs) := by rw [HI]
        _ = (a :: (as ++ ys)) ++ zs := by rw [cons_append]
@@ -82,11 +96,18 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
-  . calc [] ++ (ys ++ zs)
+  induction xs with
+  | nil =>
+    -- ⊢ [] ++ (ys ++ zs) = [] ++ ys ++ zs
+    calc [] ++ (ys ++ zs)
          = ys ++ zs                := by exact rfl
        _ = ([] ++ ys) ++ zs        := by exact rfl
-  . calc (a :: as) ++ (ys ++ zs)
+  | cons a as HI =>
+    -- a : α
+    -- as : List α
+    -- HI : as ++ (ys ++ zs) = as ++ ys ++ zs
+    -- ⊢ a :: as ++ (ys ++ zs) = a :: as ++ ys ++ zs
+    calc (a :: as) ++ (ys ++ zs)
          = a :: (as ++ (ys ++ zs)) := rfl
        _ = a :: ((as ++ ys) ++ zs) := by rw [HI]
        _ = (a :: (as ++ ys)) ++ zs := rfl
@@ -98,11 +119,18 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
-  . calc [] ++ (ys ++ zs)
+  induction xs with
+  | nil =>
+    -- ⊢ [] ++ (ys ++ zs) = [] ++ ys ++ zs
+    calc [] ++ (ys ++ zs)
          = ys ++ zs                := by simp
        _ = ([] ++ ys) ++ zs        := by simp
-  . calc (a :: as) ++ (ys ++ zs)
+  | cons a as HI =>
+    -- a : α
+    -- as : List α
+    -- HI : as ++ (ys ++ zs) = as ++ ys ++ zs
+    -- ⊢ a :: as ++ (ys ++ zs) = a :: as ++ ys ++ zs
+    calc (a :: as) ++ (ys ++ zs)
          = a :: (as ++ (ys ++ zs)) := by simp
        _ = a :: ((as ++ ys) ++ zs) := congrArg (a :: .) HI
        _ = (a :: (as ++ ys)) ++ zs := by simp
@@ -114,9 +142,9 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as
-  . simp
-  . exact (append_assoc (a :: as) ys zs).symm
+  induction xs with
+  | nil => simp
+  | cons a as => exact (append_assoc (a :: as) ys zs).symm
 
 -- 6ª demostración
 -- ===============
@@ -124,12 +152,14 @@ by
 example :
   xs ++ (ys ++ zs) = (xs ++ ys) ++ zs :=
 by
-  induction' xs with a as HI
-  . -- ⊢ [] ++ (ys ++ zs) = ([] ++ ys) ++ zs
+  induction xs with
+  | nil =>
+    -- ⊢ [] ++ (ys ++ zs) = ([] ++ ys) ++ zs
     rw [nil_append]
     -- ⊢ ys ++ zs = ([] ++ ys) ++ zs
     rw [nil_append]
-  . -- a : α
+  | cons a as HI =>
+    -- a : α
     -- as : List α
     -- HI : as ++ (ys ++ zs) = as ++ ys ++ zs
     -- ⊢ (a :: as) ++ (ys ++ zs) = ((a :: as) ++ ys) ++ zs
@@ -176,8 +206,7 @@ by simp
 -- Lemas usados
 -- ============
 
--- variable (x : α)
--- #check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
--- #check (cons_append x xs ys : (x :: xs) ++ ys = x :: (xs ++ ys))
--- #check (cons_inj x : x :: xs = x :: ys ↔ xs = ys)
--- #check (nil_append xs : [] ++ xs = xs)
+variable (x : α)
+#check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
+#check (cons_append : (x :: xs) ++ ys = x :: (xs ++ ys))
+#check (nil_append xs : [] ++ xs = xs)

@@ -50,25 +50,25 @@ example
   : c + exp (a + d) ≤ c + exp (a + f) :=
 by
   have h1 : a + d ≤ a + f :=
-    add_le_add_left h a
+    add_le_add_right h a
   have h2 : exp (a + d) ≤ exp (a + f) :=
     exp_le_exp.mpr h1
   show c + exp (a + d) ≤ c + exp (a + f)
-  exact add_le_add_left h2 c
+  exact add_le_add_right h2 c
 
 -- 2ª demostración
 example
   (h : d ≤ f)
   : c + exp (a + d) ≤ c + exp (a + f) :=
 by
-  apply add_le_add_left
+  apply add_le_add_right
   apply exp_le_exp.mpr
-  apply add_le_add_left
+  apply add_le_add_right
   exact h
 
 -- Lemas usados
 -- ============
 
--- variable (b : ℝ)
--- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
--- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+variable (b : ℝ)
+#check (add_le_add_right : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+#check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)

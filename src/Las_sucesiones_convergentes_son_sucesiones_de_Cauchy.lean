@@ -92,7 +92,7 @@ by
   -- ⊢ |u p - u q| < ε
   calc |u p - u q|
        = |(u p - a) + (a - u q)| := by ring_nf
-     _ ≤ |u p - a|  + |a - u q|  := abs_add (u p - a) (a - u q)
+     _ ≤ |u p - a|  + |a - u q|  := abs_add_le (u p - a) (a - u q)
      _ = |u p - a|  + |u q - a|  := congrArg (|u p - a| + .) (abs_sub_comm a (u q))
      _ < ε/2 + ε/2               := add_lt_add (hN p hp) (hN q hq)
      _ = ε                       := add_halves ε
@@ -125,7 +125,7 @@ by
   -- ⊢ |u p - u q| < ε
   calc |u p - u q|
        = |(u p - a) + (a - u q)| := by ring_nf
-     _ ≤ |u p - a|  + |a - u q|  := abs_add (u p - a) (a - u q)
+     _ ≤ |u p - a|  + |a - u q|  := abs_add_le (u p - a) (a - u q)
      _ = |u p - a|  + |u q - a|  := congrArg (|u p - a| + .) (abs_sub_comm a (u q))
      _ < ε/2 + ε/2               := add_lt_add (hN p hp) (hN q hq)
      _ = ε                       := add_halves ε
@@ -161,7 +161,7 @@ by
   clear hN hp hq
   calc |u p - u q|
        = |(u p - a) + (a - u q)| := by ring_nf
-     _ ≤ |u p - a|  + |a - u q|  := abs_add (u p - a) (a - u q)
+     _ ≤ |u p - a|  + |a - u q|  := abs_add_le (u p - a) (a - u q)
      _ = |u p - a|  + |u q - a|  := by rw [abs_sub_comm a (u q)]
      _ < ε                       := by linarith
 
@@ -193,7 +193,7 @@ by
   -- ⊢ |u p - u q| < ε
   calc |u p - u q|
        = |(u p - a) + (a - u q)| := by ring_nf
-     _ ≤ |u p - a|  + |a - u q|  := abs_add (u p - a) (a - u q)
+     _ ≤ |u p - a|  + |a - u q|  := abs_add_le (u p - a) (a - u q)
      _ = |u p - a|  + |u q - a|  := by rw [abs_sub_comm a (u q)]
      _ < ε                       := by linarith [hN p hp, hN q hq]
 
@@ -224,18 +224,18 @@ by
   -- ⊢ |u p - u q| < ε
   calc |u p - u q|
        = |(u p - a) + (a - u q)| := by ring_nf
-     _ ≤ |u p - a|  + |a - u q|  := abs_add (u p - a) (a - u q)
+     _ ≤ |u p - a|  + |a - u q|  := abs_add_le (u p - a) (a - u q)
      _ = |u p - a|  + |u q - a|  := by simp [abs_sub_comm]
      _ < ε                       := by linarith [hN p hp, hN q hq]
 
 -- Lemas usados
 -- ============
 
--- variable (a b c d x y : ℝ)
--- variable (f : ℝ → ℝ)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (abs_sub_comm a b : |a - b| = |b - a|)
--- #check (add_halves a : a / 2 + a / 2 = a)
--- #check (add_lt_add : a < b → c < d → a + c < b + d)
--- #check (congrArg f : x = y → f x = f y)
--- #check (half_pos : 0 < a → 0 < a / 2)
+variable (a b c d x y : ℝ)
+variable (f : ℝ → ℝ)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (abs_sub_comm a b : |a - b| = |b - a|)
+#check (add_halves a : a / 2 + a / 2 = a)
+#check (add_lt_add : a < b → c < d → a + c < b + d)
+#check (congrArg f : x = y → f x = f y)
+#check (half_pos : 0 < a → 0 < a / 2)

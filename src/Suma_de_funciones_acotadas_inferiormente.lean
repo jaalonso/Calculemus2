@@ -19,7 +19,7 @@
 -- Puesto que f está acotada inferiormente, tiene una cota inferior. Sea
 -- a una de dichas cotas. Análogamentte, puesto que g está acotada
 -- inferiormente, tiene una cota inferior. Sea b una de dichas
--- cotas. Por el lema FnLb_add, a+b es una cota inferior de f+g. Por
+-- cotas. Por el lema CotaInferior_add, a+b es una cota inferior de f+g. Por
 -- consiguiente, f+g está acotada inferiormente.
 
 -- Demostraciones con Lean4
@@ -38,10 +38,10 @@ example
   (hg : acotadaInf g)
   : acotadaInf (f + g) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
   -- ha : CotaInferior f a
-  cases' hg with b hb
+  rcases hg with ⟨b, hb⟩
   -- b : ℝ
   -- hb : CotaInferior g b
   have h1 : CotaInferior (f + g) (a + b) := sumaCotaInf ha hb
@@ -56,14 +56,14 @@ example
   (hg : acotadaInf g)
   : acotadaInf (f + g) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
-  -- ha : FnLb f a
-  cases' hg with b hgb
+  -- ha : CotaInferior f a
+  rcases hg with ⟨b, hgb⟩
   -- b : ℝ
-  -- hgb : FnLb g b
+  -- hgb : CotaInferior g b
   use a + b
-  -- ⊢ FnLb (f + g) (a + b)
+  -- ⊢ CotaInferior (f + g) (a + b)
   apply sumaCotaInf ha hgb
 
 -- 3ª demostración
@@ -74,10 +74,10 @@ example
 by
   rcases hf with ⟨a, ha⟩
   -- a : ℝ
-  -- ha : FnLb f a
+  -- ha : CotaInferior f a
   rcases hg with ⟨b, hb⟩
   -- b : ℝ
-  -- hb : FnLb g b
+  -- hb : CotaInferior g b
   exact ⟨a + b, sumaCotaInf ha hb⟩
 
 -- 4ª demostración
@@ -86,9 +86,9 @@ example :
 by
   rintro ⟨a, ha⟩ ⟨b, hb⟩
   -- a : ℝ
-  -- ha : FnLb f a
+  -- ha : CotaInferior f a
   -- b : ℝ
-  -- hb : FnLb g b
+  -- hb : CotaInferior g b
   exact ⟨a + b, sumaCotaInf ha hb⟩
 
 -- 5ª demostración
@@ -99,4 +99,5 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaInf ha hb⟩
 -- Lemas usados
 -- ============
 
--- #check (sumaCotaInf : FnLb f a → FnLb g b → FnLb (f + g) (a + b))
+variable (a b : ℝ)
+#check (sumaCotaInf : CotaInferior f a → CotaInferior g b → CotaInferior (f + g) (a + b))

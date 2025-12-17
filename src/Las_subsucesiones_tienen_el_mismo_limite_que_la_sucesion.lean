@@ -76,9 +76,15 @@ lemma aux
   : ∀ n, n ≤ φ n :=
 by
   intro n
-  induction' n with m HI
-  . exact Nat.zero_le (φ 0)
-  . apply Nat.succ_le_of_lt
+  induction n with
+  | zero =>
+    -- ⊢ 0 ≤ φ 0
+    exact Nat.zero_le (φ 0)
+  | succ m HI =>
+    -- m : ℕ
+    -- HI : m ≤ φ m
+    -- ⊢ m + 1 ≤ φ (m + 1)
+    apply Nat.succ_le_of_lt
     calc m ≤ φ m        := HI
          _ < φ (succ m) := h m (m+1) (lt_add_one m)
 
@@ -98,7 +104,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   use N
@@ -129,7 +135,7 @@ by
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
   unfold limite at ha
   -- ha : ∀ (ε : ℝ), ε > 0 → ∃ N, ∀ (k : ℕ), k ≥ N → |u k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   use N
@@ -163,7 +169,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   use N
@@ -194,7 +200,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   use N
@@ -223,7 +229,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   rcases hv with ⟨φ, hφ1, hφ2⟩
@@ -248,7 +254,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ (k : ℕ), k ≥ N → |v k - a| < ε
-  cases' ha ε hε with N hN
+  rcases ha ε hε with ⟨N, hN⟩
   -- N : ℕ
   -- hN : ∀ (k : ℕ), k ≥ N → |u k - a| < ε
   rcases hv with ⟨φ, hφ1, hφ2⟩
@@ -262,8 +268,8 @@ by
 -- Lemas usados
 -- ============
 
--- variable (m n x y z : ℕ)
--- #check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
--- #check (Nat.zero_le n : 0 ≤ n)
--- #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
--- #check (lt_add_one n : n < n + 1)
+variable (m n x y z : ℕ)
+#check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
+#check (Nat.zero_le n : 0 ≤ n)
+#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+#check (lt_add_one n : n < n + 1)

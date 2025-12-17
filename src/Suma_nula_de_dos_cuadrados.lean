@@ -73,7 +73,7 @@ by
     . show 0 ≤ x ^ 2
       apply pow_two_nonneg }
   show x = 0
-  exact pow_eq_zero h'
+  exact eq_zero_of_pow_eq_zero h'
 
 -- 2ª demostración lema auxiliar
 -- =============================
@@ -89,7 +89,7 @@ by
                _ = 0         := by exact h
     . -- ⊢ 0 ≤ x ^ 2
       apply pow_two_nonneg }
-  exact pow_eq_zero h'
+  exact eq_zero_of_pow_eq_zero h'
 
 -- 3ª demostración lema auxiliar
 -- =============================
@@ -98,7 +98,7 @@ lemma aux
   (h : x^2 + y^2 = 0)
   : x = 0 :=
   have h' : x ^ 2 = 0 := by linarith [pow_two_nonneg x, pow_two_nonneg y]
-  pow_eq_zero h'
+  eq_zero_of_pow_eq_zero h'
 
 -- 1ª demostración
 -- ===============
@@ -178,8 +178,8 @@ example : x ^ 2 + y ^ 2 = 0 ↔ x = 0 ∧ y = 0 := by
 -- Lemas usados
 -- ============
 
--- #check (add_comm x y : x + y = y + x)
--- #check (le_add_of_nonneg_right : 0 ≤ y → x ≤ x + y)
--- #check (le_antisymm : x ≤ y → y ≤ x → x = y)
--- #check (pow_eq_zero : ∀ {n : ℕ}, x ^ n = 0 → x = 0)
--- #check (pow_two_nonneg x : 0 ≤ x ^ 2)
+#check (add_comm x y : x + y = y + x)
+#check (le_add_of_nonneg_right : 0 ≤ y → x ≤ x + y)
+#check (le_antisymm : x ≤ y → y ≤ x → x = y)
+#check (eq_zero_of_pow_eq_zero : ∀ {n : ℕ}, x ^ n = 0 → x = 0)
+#check (pow_two_nonneg x : 0 ≤ x ^ 2)

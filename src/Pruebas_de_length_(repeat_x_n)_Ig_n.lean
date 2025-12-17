@@ -49,11 +49,17 @@ variable (n : ℕ)
 example :
   length (replicate n x) = n :=
 by
-  induction' n with n HI
-  . calc length (replicate 0 x)
+  induction n with
+  | zero =>
+    -- ⊢ (replicate 0 x).length = 0
+    calc length (replicate 0 x)
           = length []                   := rfl
         _ = 0                           := length_nil
-  . calc length (replicate (n+1) x)
+  | succ n HI =>
+    -- n : ℕ
+    -- HI : (replicate n x).length = n
+    -- ⊢ (replicate (n + 1) x).length = n + 1
+    calc length (replicate (n+1) x)
          = length (x :: replicate n x)  := by congr
        _ = length (replicate n x) + 1   := length_cons
        _ = n + 1                        := congrArg (. + 1) HI
@@ -64,11 +70,17 @@ by
 example :
   length (replicate n x) = n :=
 by
-  induction' n with n HI
-  . calc length (replicate 0 x)
+  induction n with
+  | zero =>
+    -- ⊢ (replicate 0 x).length = 0
+    calc length (replicate 0 x)
           = length []                   := rfl
         _ = 0                           := rfl
-  . calc length (replicate (n+1) x)
+  | succ n HI =>
+    -- n : ℕ
+    -- HI : (replicate n x).length = n
+    -- ⊢ (replicate (n + 1) x).length = n + 1
+    calc length (replicate (n+1) x)
          = length (x :: replicate n x)  := rfl
        _ = length (replicate n x) + 1   := rfl
        _ = n + 1                        := by rw [HI]
@@ -78,24 +90,24 @@ by
 
 example : length (replicate n x) = n :=
 by
-  induction' n
-  . rfl
-  . simp
+  induction n with
+  | zero => rfl
+  | succ => simp
 
 -- 4ª demostración
 -- ===============
 
 example : length (replicate n x) = n :=
 by
-  induction' n with n HI
-  . simp
-  . simp
+  induction n with
+  | zero => simp
+  | succ => simp
 
 -- 5ª demostración
 -- ===============
 
 example : length (replicate n x) = n :=
-by induction' n <;> simp [*]
+by induction n <;> simp [*]
 
 -- 6ª demostración
 -- ===============
@@ -162,10 +174,9 @@ lemma length_replicate_4 :
 -- Lemas usados
 -- ============
 
--- variable (xs : List α)
--- #check (length_cons x xs : length (x :: xs) = length xs + 1)
--- #check (length_nil : length [] = 0)
--- #check (length_replicate n x : length (replicate n x) = n)
--- #check (replicate_succ x n : replicate (n + 1) x = x :: replicate n x)
--- #check (replicate_zero x : replicate 0 x = [])
--- #check (succ_eq_add_one n : succ n = n + 1)
+variable (xs : List α)
+#check (length_cons : length (x :: xs) = length xs + 1)
+#check (length_nil : length [] = 0)
+#check (length_replicate : length (replicate n x) = n)
+#check (replicate_succ : replicate (n + 1) x = x :: replicate n x)
+#check (replicate_zero : replicate 0 x = [])

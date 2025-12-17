@@ -147,7 +147,7 @@ by
     calc |c * u n - c * a|
          = |c * (u n - a)| := congr_arg abs (mul_sub c (u n) a).symm
        _ = |c| * |u n - a| := abs_mul c  (u n - a)
-       _ < |c| * (ε / |c|) := (mul_lt_mul_left hc').mpr hN
+       _ < |c| * (ε / |c|) := (mul_lt_mul_iff_of_pos_left hc').mpr hN
        _ = ε               := mul_div_cancel₀ ε (ne_of_gt hc')
 
 -- Lemma 4. If uₙ tends to a and c ∈ ℝ, then uₙc tends to ac. (See
@@ -201,7 +201,7 @@ by
   calc |(u + v) n - (a + b)|
        = |(u n + v n) - (a + b)|  := rfl
      _ = |(u n - a) + (v n - b)|  := by { congr; ring }
-     _ ≤ |u n - a| + |v n - b|    := by apply abs_add
+     _ ≤ |u n - a| + |v n - b|    := by apply abs_add_le
      _ < ε / 2 + ε / 2            := by linarith [hNu, hNv]
      _ = ε                        := by apply add_halves
 
@@ -315,24 +315,24 @@ by
 -- Used lemmas
 -- ===========
 
--- variable (p q : Prop)
--- variable (c d x y: ℝ)
--- variable (f : ℝ → ℝ)
--- #check (abs_add a b : |a + b| ≤ |a| + |b|)
--- #check (abs_mul a b : |a * b| = |a| * |b|)
--- #check (abs_nonneg a : 0 ≤ |a|)
--- #check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
--- #check (add_halves a : a / 2 + a / 2 = a)
--- #check (congr_arg f : x = y → f x = f y)
--- #check (div_pos : 0 < a → 0 < b → 0 < a / b)
--- #check (iff_eq_eq : (p ↔ q) = (p = q))
--- #check (le_of_max_le_left : max a b ≤ c → a ≤ c)
--- #check (le_of_max_le_right : max a b ≤ c → b ≤ c)
--- #check (mul_comm a b : a * b = b * a)
--- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
--- #check (mul_lt_mul'' : a < c → b < d → 0 ≤ a → 0 ≤ b → a * b < c * d)
--- #check (mul_lt_mul_left : 0 < a → (a * b < a * c ↔ b < c))
--- #check (mul_one a : a * 1 = a)
--- #check (mul_sub a b c : a * (b - c) = a * b - a * c)
--- #check (ne_of_gt : b < a → a ≠ b)
--- #check (zero_lt_one : 0 < 1)
+variable (p q : Prop)
+variable (c d x y: ℝ)
+variable (f : ℝ → ℝ)
+#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+#check (abs_mul a b : |a * b| = |a| * |b|)
+#check (abs_nonneg a : 0 ≤ |a|)
+#check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
+#check (add_halves a : a / 2 + a / 2 = a)
+#check (congr_arg f : x = y → f x = f y)
+#check (div_pos : 0 < a → 0 < b → 0 < a / b)
+#check (iff_eq_eq : (p ↔ q) = (p = q))
+#check (le_of_max_le_left : max a b ≤ c → a ≤ c)
+#check (le_of_max_le_right : max a b ≤ c → b ≤ c)
+#check (mul_comm a b : a * b = b * a)
+#check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
+#check (mul_lt_mul'' : a < c → b < d → 0 ≤ a → 0 ≤ b → a * b < c * d)
+#check (mul_lt_mul_iff_of_pos_left : 0 < a → (a * b < a * c ↔ b < c))
+#check (mul_one a : a * 1 = a)
+#check (mul_sub a b c : a * (b - c) = a * b - a * c)
+#check (ne_of_gt : b < a → a ≠ b)
+#check (zero_lt_one : 0 < 1)

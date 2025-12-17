@@ -34,7 +34,7 @@ by
   intro h1
   -- h1 : x < |y|
   -- ⊢ x < y ∨ x < -y
-  cases' le_or_gt 0 y with h2 h3
+  rcases (le_or_gt 0) y with h2 | h3
   . -- h2 : 0 ≤ y
     left
     -- ⊢ x < y
@@ -53,7 +53,7 @@ lt_abs.mp
 -- Lemas usados
 -- ============
 
--- #check (le_or_gt x y : x ≤ y ∨ x > y)
--- #check (abs_of_nonneg : 0 ≤ x → abs x = x)
--- #check (abs_of_neg : x < 0 → abs x = -x)
--- #check (lt_abs : x < |y| ↔ x < y ∨ x < -y)
+#check (le_or_gt x y : x ≤ y ∨ x > y)
+#check (abs_of_nonneg : 0 ≤ x → abs x = x)
+#check (abs_of_neg : x < 0 → abs x = -x)
+#check (lt_abs : x < |y| ↔ x < y ∨ x < -y)

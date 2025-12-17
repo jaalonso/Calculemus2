@@ -46,7 +46,7 @@ by
     _ < a := h
   show a < a * a
   calc a = 1 * a := (one_mul a).symm
-       _ < a * a := (mul_lt_mul_right h1).mpr h
+       _ < a * a := mul_lt_mul_of_pos_right h h1
 
 -- Comentarios: La táctica (convert e) genera nuevos subojetivos cuya
 -- conclusiones son las diferencias entre el tipo de e y la conclusión.
@@ -58,7 +58,7 @@ example
   (h : 1 < a)
   : a < a * a :=
 by
-  convert (mul_lt_mul_right _).2 h
+  convert (mul_lt_mul_of_pos_right h) _
   . -- ⊢ a = 1 * a
     rw [one_mul]
   . -- ⊢ 0 < a
@@ -67,8 +67,8 @@ by
 -- Lemas usados
 -- ============
 
--- variables (a b c : ℝ)
--- #check (mul_lt_mul_right : 0 < a → (b * a < c * a ↔ b < c))
--- #check (one_mul a : 1 * a = a)
--- #check (lt_trans : a < b → b < c → a < c)
--- #check (zero_lt_one : 0 < 1)
+variable (a b c : ℝ)
+#check (mul_lt_mul_of_pos_right : b < c ->  0 < a -> b * a < c * a)
+#check (one_mul a : 1 * a = a)
+#check (lt_trans : a < b → b < c → a < c)
+#check (zero_lt_one : 0 < 1)

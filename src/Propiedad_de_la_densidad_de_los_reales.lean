@@ -43,7 +43,7 @@ by
   -- ⊢ False
   have hxy : x > y := not_le.mp h1
   -- ⊢ ¬x > y
-  cases' (exists_between hxy) with a ha
+  rcases (exists_between hxy) with ⟨a, ha⟩
   -- a : ℝ
   -- ha : y < a ∧ a < x
   apply (lt_irrefl a)
@@ -64,7 +64,7 @@ by
   intro hxy
   -- hxy : x > y
   -- ⊢ False
-  cases' (exists_between hxy) with a ha
+  rcases (exists_between hxy) with ⟨a, ha⟩
   -- a : ℝ
   -- ha : y < a ∧ a < x
   apply (lt_irrefl a)
@@ -85,7 +85,7 @@ by
   intro hxy
   -- hxy : x > y
   -- ⊢ False
-  cases' (exists_between hxy) with a ha
+  rcases (exists_between hxy) with ⟨a, ha⟩
   -- ha : y < a ∧ a < x
   apply (lt_irrefl a)
   -- ⊢ a < a
@@ -103,7 +103,7 @@ by
   intro hxy
   -- hxy : x > y
   -- ⊢ False
-  cases' (exists_between hxy) with a ha
+  rcases (exists_between hxy) with ⟨a, ha⟩
   -- a : ℝ
   -- ha : y < a ∧ a < x
   exact (lt_irrefl a) (lt_of_lt_of_le ha.2 (h a ha.1))
@@ -137,10 +137,10 @@ le_of_forall_gt_imp_ge_of_dense h
 -- Lemas usados
 -- ============
 
--- variable (z : ℝ)
--- #check (exists_between : x < y → ∃ z, x < z ∧ z < y)
--- #check (le_of_forall_le_of_dense : (∀ z, y < z → x ≤ z) → x ≤ y)
--- #check (le_of_not_gt : ¬x > y → x ≤ y)
--- #check (lt_irrefl x : ¬x < x)
--- #check (lt_of_lt_of_le : x < y → y ≤ z → x < z)
--- #check (not_le : ¬x ≤ y ↔ y < x)
+variable (z : ℝ)
+#check (exists_between : x < y → ∃ z, x < z ∧ z < y)
+#check (le_of_forall_gt_imp_ge_of_dense : (∀ z, y < z → x ≤ z) → x ≤ y)
+#check (le_of_not_gt : ¬x > y → x ≤ y)
+#check (lt_irrefl x : ¬x < x)
+#check (lt_of_lt_of_le : x < y → y ≤ z → x < z)
+#check (not_le : ¬x ≤ y ↔ y < x)

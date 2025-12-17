@@ -33,7 +33,7 @@ example
   : ¬ y ≤ x :=
 by
   intro h1
-  cases' h with h2 h3
+  rcases h with ⟨h2, h3⟩
   -- h2 : x ≤ y
   -- h3 : x ≠ y
   have h4 : x = y := le_antisymm h2 h1
@@ -92,7 +92,7 @@ example
   (h : x ≤ y ∧ x ≠ y)
   : ¬ y ≤ x :=
 by
-  cases' h with h1 h2
+  rcases h with ⟨h1, h2⟩
   -- h1 : x ≤ y
   -- h2 : x ≠ y
   contrapose! h2
@@ -121,4 +121,4 @@ fun ⟨h1, h2⟩ h' ↦ h2 (le_antisymm h1 h')
 -- Lemas usados
 -- ============
 
--- #check (le_antisymm : x ≤ y → y ≤ x → x = y)
+#check (le_antisymm : x ≤ y → y ≤ x → x = y)

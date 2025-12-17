@@ -48,7 +48,7 @@ example
 by
   have h1 : -y > 1 := by
     calc -y > x^2 + 1 := by exact h
-          _ ≥ 0 + 1   := add_le_add_right (pow_two_nonneg x) 1
+          _ ≥ 0 + 1   := add_le_add_left (pow_two_nonneg x) 1
           _ = 1       := zero_add 1
   have h2: y < -1 := lt_neg.mp h1
   show y > 0 ∨ y < -1
@@ -99,8 +99,8 @@ by { right ; linarith [pow_two_nonneg x] }
 -- Lemas usados
 -- ============
 
--- variable (a b c : ℝ)
--- #check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
--- #check (lt_neg : a < -b ↔ b < -a)
--- #check (pow_two_nonneg a : 0 ≤ a ^ 2)
--- #check (zero_add a : 0 + a = a)
+variable (a b c : ℝ)
+#check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+#check (lt_neg : a < -b ↔ b < -a)
+#check (pow_two_nonneg a : 0 ≤ a ^ 2)
+#check (zero_add a : 0 + a = a)

@@ -72,32 +72,27 @@ example
 by
   set P := {a : Set X | ∃ s : X, a = clase R s}
   constructor
-  . -- ⊢ (∀ x, ∃ B, B ∈ P) ∧ x ∈ B ∧ (∀ C, C ∈ P → x ∈ C → B = C)
+  . -- ⊢ ∀ (x : X), ∃ B ∈ P, x ∈ B ∧ ∀ C ∈ P, x ∈ C → B = C
     simp [P]
-    -- ⊢ (∀ x, ∃ B, (∃ s, B = clase R s)) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
+    -- ⊢ ∀ (x : X), ∃ s, x ∈ clase R s ∧ ∀ (a : X), x ∈ clase R a → clase R s = clase R a
     intro x
     -- x : X
-    -- ⊢ ∃ B, (∃ s, B = clase R s) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
-    use (clase R x)
+    -- ⊢ ∃ s, x ∈ clase R s ∧ ∀ (a : X), x ∈ clase R a → clase R s = clase R a
+    use x
     -- ⊢ (∃ s, clase R x = clase R s) ∧ x ∈ clase R x ∧ (∀ a, y ∈ clase R a → clase R x = clase R a)
     constructor
-    . -- ⊢ ∃ s, clase R x = clase R s
-      use x
-    . --   x ∈ clase R x ∧
-      --   ∀ a, x ∈ clase R a → clase R x = clase R a
-      constructor
-      . -- ⊢ x ∈ clase R x
-        exact h.1 x
-      . -- ∀ a, x ∈ clase R a → clase R x = clase R a
-        intros a ha
-        -- a : X
-        -- ha : x ∈ clase R a
-        -- ⊢ clase R x = clase R a
-        apply le_antisymm
-        . -- ⊢ clase R x ≤ clase R a
-          exact aux h ha
-        . -- ⊢ clase R a ≤ clase R x
-          exact aux h (h.2 ha)
+    . -- ⊢ x ∈ clase R x
+      exact h.1 x
+    . --   ∀ a, x ∈ clase R a → clase R x = clase R a
+      intros a ha
+      -- a : X
+      -- ha : x ∈ clase R a
+      -- ⊢ clase R x = clase R a
+      apply le_antisymm
+      . -- ⊢ clase R x ≤ clase R a
+        exact aux h ha
+      . -- ⊢ clase R a ≤ clase R x
+        exact aux h (h.2 ha)
   . -- ⊢ ¬∅ ∈ P
     simp [P]
     -- ⊢ ∀ (x : X), ¬∅ = clase R x
@@ -119,14 +114,14 @@ example
 by
   set P := {a : Set X | ∃ s : X, a = clase R s}
   constructor
-  . -- ⊢ (∀ x, ∃ B, B ∈ P) ∧ x ∈ B ∧ (∀ C, C ∈ P → x ∈ C → B = C)
+  . -- ⊢ ∀ (x : X), ∃ B ∈ P, x ∈ B ∧ ∀ C ∈ P, x ∈ C → B = C
     simp [P]
-    -- ⊢ (∀ x, ∃ B, (∃ s, B = clase R s)) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
+    -- ⊢ ∀ (x : X), ∃ s, x ∈ clase R s ∧ ∀ (a : X), x ∈ clase R a → clase R s = clase R a
     intro x
     -- x : X
-    -- ⊢ ∃ B, (∃ s, B = clase R s) ∧ x ∈ B ∧ (∀ a, x ∈ clase R a → B = clase R a)
-    use (clase R x)
-    -- ⊢ (∃ s, clase R x = clase R s) ∧ x ∈ clase R y ∧ (∀ a, x ∈ clase R a → clase R x = clase R a)
+    -- ⊢ ∃ s, x ∈ clase R s ∧ ∀ (a : X), x ∈ clase R a → clase R s = clase R a
+    use x
+    -- ⊢ x ∈ clase R x ∧ ∀ (a : X), x ∈ clase R a → clase R x = clase R a
     repeat' constructor
     . -- ⊢ x ∈ clase R x
       exact h.1 x
@@ -151,6 +146,6 @@ by
 -- Lemas usados
 -- ============
 
--- variable (A B : Set X)
--- #check (Set.notMem_empty x : x ∉ ∅)
--- #check (le_antisymm : A ≤ B → B ≤ A → A = B)
+variable (A B : Set X)
+#check (Set.notMem_empty x : x ∉ ∅)
+#check (le_antisymm : A ≤ B → B ≤ A → A = B)

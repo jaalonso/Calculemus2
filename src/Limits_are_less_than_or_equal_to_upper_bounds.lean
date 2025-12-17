@@ -105,7 +105,7 @@ by
   apply le_of_lt
   -- ⊢ x < y + ε
   calc x < u k + ε := neg_lt_sub_iff_lt_add'.mp (neg_lt_of_abs_lt hk)
-       _ ≤ y + ε   := add_le_add_right (hy k) ε
+       _ ≤ y + ε   := add_le_add_left (hy k) ε
 
 -- Proof 3
 -- =======
@@ -132,12 +132,12 @@ by
 -- Used lemmas
 -- ===========
 
--- variable (n : ℕ)
--- variable (a b c d : ℝ)
--- #check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
--- #check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
--- #check (le_of_lt : a < b → a ≤ b)
--- #check (le_refl n : n ≤ n)
--- #check (lt_add_of_lt_add_right : a < b + c → b ≤ d → a < d + c)
--- #check (neg_lt_of_abs_lt : |a| < b → -b < a)
--- #check (neg_lt_sub_iff_lt_add' : -b < a - c ↔ c < a + b)
+variable (n : ℕ)
+variable (a b c d : ℝ)
+#check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+#check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
+#check (le_of_lt : a < b → a ≤ b)
+#check (le_refl n : n ≤ n)
+#check (lt_add_of_lt_add_right : a < b + c → b ≤ d → a < d + c)
+#check (neg_lt_of_abs_lt : |a| < b → -b < a)
+#check (neg_lt_sub_iff_lt_add' : -b < a - c ↔ c < a + b)

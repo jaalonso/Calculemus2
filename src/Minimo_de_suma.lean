@@ -66,11 +66,11 @@ by
   have h1 : min a b ≤ a :=
     min_le_left a b
   have h2 : min a b + c ≤ a + c :=
-    add_le_add_right h1 c
+    by exact  add_le_add_left h1 c
   have h3 : min a b  ≤ b :=
     min_le_right a b
   have h4 : min a b + c ≤ b + c :=
-    add_le_add_right h3 c
+    by exact add_le_add_left h3 c
   show min a b + c ≤ min (a + c) (b + c)
   exact le_min h2 h4
 
@@ -79,16 +79,16 @@ example :
   min a b + c ≤ min (a + c) (b + c) :=
 by
   apply le_min
-  { apply add_le_add_right
+  { apply add_le_add_left
     exact min_le_left a b }
-  { apply add_le_add_right
+  { apply add_le_add_left
     exact min_le_right a b }
 
 -- 3ª demostración de aux1
 example :
   min a b + c ≤ min (a + c) (b + c) :=
-le_min (add_le_add_right (min_le_left a b) c)
-       (add_le_add_right (min_le_right a b) c)
+le_min (add_le_add_left (min_le_left a b) c)
+       (add_le_add_left (min_le_right a b) c)
 
 -- 1ª demostración de aux2
 lemma aux2 :
@@ -137,11 +137,11 @@ le_antisymm aux1 aux2
 example : min a b + c = min (a + c) (b + c) :=
 by
   by_cases h : a ≤ b
-  { have h1 : a + c ≤ b + c := add_le_add_right h c
+  { have h1 : a + c ≤ b + c := add_le_add_left h c
     calc min a b + c = a + c               := by simp [min_eq_left h]
                    _ = min (a + c) (b + c) := by simp [min_eq_left h1]}
   { have h2: b ≤ a := le_of_not_ge h
-    have h3 : b + c ≤ a + c := add_le_add_right h2 c
+    have h3 : b + c ≤ a + c := add_le_add_left h2 c
     calc min a b + c = b + c               := by simp [min_eq_right h2]
                    _ = min (a + c) (b + c) := by simp [min_eq_right h3]}
 
@@ -152,12 +152,12 @@ example : min a b + c = min (a + c) (b + c) :=
 -- Lemas usados
 -- ============
 
--- #check (add_le_add_right : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
--- #check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
--- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
--- #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
--- #check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
--- #check (min_eq_left : a ≤ b → min a b = a)
--- #check (min_eq_right : b ≤ a → min a b = b)
--- #check (min_le_left a b : min a b ≤ a)
--- #check (min_le_right a b : min a b ≤ b)
+#check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+#check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
+#check (le_antisymm : a ≤ b → b ≤ a → a = b)
+#check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+#check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
+#check (min_eq_left : a ≤ b → min a b = a)
+#check (min_eq_right : b ≤ a → min a b = b)
+#check (min_le_left a b : min a b ≤ a)
+#check (min_le_right a b : min a b ≤ b)

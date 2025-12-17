@@ -77,7 +77,7 @@ by
          = (x + y) / 2
               := by ring_nf
        _ < (y + y) / 2
-              := div_lt_div_of_pos_right (add_lt_add_right h y)
+              := div_lt_div_of_pos_right (add_lt_add_left h y)
                                          zero_lt_two
        _ = (2 * y) / 2
               := congrArg (. / 2) (two_mul y).symm
@@ -142,7 +142,11 @@ by
   -- ⊢ (y - x) / 2 > 0 ∧ x + (y - x) / 2 < y
   constructor
   . -- ⊢ (y - x) / 2 > 0
-    field_simp [h]
+    field_simp
+    -- ⊢ 0 * 2 < y - x
+    norm_num
+    -- ⊢ x < y
+    exact h
   . -- ⊢ x + (y - x) / 2 < y
     exact add_sub_div_two_lt h
 
@@ -237,20 +241,20 @@ le_of_forall_pos_le_add
 -- Used lemmas
 -- ===========
 
--- variable (a b c : ℝ)
--- variable (p q : Prop)
--- #check (absurd : p → ¬p → q)
--- #check (add_lt_add_right : b < c → ∀ (a : ℝ), b + a < c + a)
--- #check (add_sub_div_two_lt: a < b → a + (b - a) / 2 < b)
--- #check (div_lt_div_of_pos_right : a < b → 0 < c → a / c < b / c)
--- #check (exists_between : a < b → ∃ c, a < c ∧ c < b)
--- #check (gt_of_gt_of_ge : a > b → b ≥ c → a > c)
--- #check (half_pos : 0 < a → 0 < a / 2)
--- #check (irrefl a : ¬a < a)
--- #check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
--- #check (lt_irrefl a : ¬a < a)
--- #check (mul_div_cancel_left₀ b : a ≠ 0 → a * b / a = b)
--- #check (not_le : ¬a ≤ b ↔ b < a)
--- #check (sub_pos : 0 < a - b ↔ b < a)
--- #check (two_mul a : 2 * a = a + a)
--- #check (zero_lt_two : 0 < 2)
+variable (a b c : ℝ)
+variable (p q : Prop)
+#check (absurd : p → ¬p → q)
+#check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
+#check (add_sub_div_two_lt: a < b → a + (b - a) / 2 < b)
+#check (div_lt_div_of_pos_right : a < b → 0 < c → a / c < b / c)
+#check (exists_between : a < b → ∃ c, a < c ∧ c < b)
+#check (lt_of_lt_of_le' : a > b → b ≥ c → a > c)
+#check (half_pos : 0 < a → 0 < a / 2)
+#check (irrefl a : ¬a < a)
+#check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
+#check (lt_irrefl a : ¬a < a)
+#check (mul_div_cancel_left₀ b : a ≠ 0 → a * b / a = b)
+#check (not_le : ¬a ≤ b ↔ b < a)
+#check (sub_pos : 0 < a - b ↔ b < a)
+#check (two_mul a : 2 * a = a + a)
+#check (zero_lt_two : 0 < 2)

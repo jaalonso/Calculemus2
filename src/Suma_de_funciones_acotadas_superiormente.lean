@@ -40,10 +40,10 @@ example
   (hg : acotadaSup g)
   : acotadaSup (f + g) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
   -- ha : CotaSuperior f a
-  cases' hg with b hb
+  rcases hg with ⟨b, hb⟩
   -- b : ℝ
   -- hb : CotaSuperior g b
   have h1 : CotaSuperior (f + g) (a + b) :=
@@ -59,10 +59,10 @@ example
   (hg : acotadaSup g)
   : acotadaSup (f + g) :=
 by
-  cases' hf with a ha
+  rcases hf with ⟨a, ha⟩
   -- a : ℝ
   -- ha : FnUb f a
-  cases' hg with b hb
+  rcases hg with ⟨b, hb⟩
   -- b : ℝ
   -- hb : FnUb g b
   use a + b
@@ -93,4 +93,5 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaSup ha hb⟩
 -- Lemas usados
 -- ============
 
--- #check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))
+variable (a b : ℝ)
+#check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))
