@@ -186,7 +186,7 @@ by
        _ = [x]
              := flatten_1 x
        _ = reverse [x]
-             := reverse_singleton x
+             := by exact reverse_singleton
        _ = reverse (flatten (Leaf x))
              := congr_arg reverse (flatten_1 x).symm
   | Node x l r Hl Hr =>
@@ -207,7 +207,7 @@ by
        _ = (reverse (flatten r) ++ reverse [x]) ++ reverse (flatten l)
              := congrArg (fun y => (reverse (flatten r) ++ y)
                                    ++ reverse (flatten l))
-                         (reverse_singleton x).symm
+                         (by exact reverse_singleton)
        _ = reverse ([x] ++ flatten r) ++ reverse (flatten l)
              := congrArg (. ++ reverse (flatten l))
                          reverse_append.symm
@@ -355,9 +355,8 @@ end Tree'
 -- Used lemmas
 -- ===========
 
--- variable (x : α)
--- variable (xs ys zs : List α)
--- #check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
--- #check (reverse_append xs ys : reverse (xs ++ ys)
---                                = reverse ys ++ reverse xs)
--- #check (reverse_singleton x : reverse [x] = [x])
+variable (x : α)
+variable (xs ys zs : List α)
+#check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
+#check (reverse_append : reverse (xs ++ ys)= reverse ys ++ reverse xs)
+#check (reverse_singleton : reverse [x] = [x])

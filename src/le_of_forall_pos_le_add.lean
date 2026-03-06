@@ -104,7 +104,7 @@ by
          = (x + y) / 2   := by ring_nf
        _ < (y + y) / 2   := by linarith
        _ = (2 * y) / 2   := by ring_nf
-       _ = y             := by ring_nf
+       _ = y             := by field_simp
 
 -- Proof 4
 -- =======
