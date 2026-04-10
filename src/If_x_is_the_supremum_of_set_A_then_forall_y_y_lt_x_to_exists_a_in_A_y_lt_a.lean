@@ -53,7 +53,7 @@ by
   by_contra h
   -- h : ¬∃ a ∈ A, y < a
   -- ⊢ False
-  push_neg at h
+  push Not at h
   -- h : ∀ a ∈ A, a ≤ y
   have h1 : is_upper_bound A y := h
   have h2 : x ≤ y := hx.2 y h1
@@ -74,7 +74,7 @@ by
   by_contra h
   -- h : ¬∃ a ∈ A, y < a
   -- ⊢ False
-  push_neg at h
+  push Not at h
   -- h : ∀ a ∈ A, a ≤ y
   have h1 : x ≤ y := hx.2 y h
   replace h1 : ¬(y < x) := not_lt_of_ge h1
@@ -94,7 +94,7 @@ by
   by_contra h
   -- h : ¬∃ a ∈ A, y < a
   -- ⊢ False
-  push_neg at h
+  push Not at h
   -- h : ∀ a ∈ A, a ≤ y
   apply absurd hy
   -- ⊢ ¬y < x
@@ -118,7 +118,7 @@ by
   by_contra h
   -- h : ¬∃ a ∈ A, y < a
   -- ⊢ False
-  push_neg at h
+  push Not at h
   -- h : ∀ a ∈ A, a ≤ y
   exact absurd hy (not_lt_of_ge (hx.2 y h))
 
@@ -136,9 +136,9 @@ by
   contrapose hy
   -- hy : ¬∃ a ∈ A, y < a
   -- ⊢ ¬y < x
-  push_neg at hy
+  push Not at hy
   -- hy : ∀ a ∈ A, a ≤ y
-  push_neg
+  push Not
   -- ⊢ x ≤ y
   unfold is_supremum at hx
   -- hx : is_upper_bound A x ∧ ∀ (y : ℝ), is_upper_bound A y → x ≤ y
@@ -164,9 +164,9 @@ by
   contrapose hy
   -- hy : ¬∃ a ∈ A, y < a
   -- ⊢ ¬y < x
-  push_neg at hy
+  push Not at hy
   -- hy : ∀ a ∈ A, a ≤ y
-  push_neg
+  push Not
   -- ⊢ x ≤ y
   rcases hx with ⟨-, h2⟩
   -- h2 : ∀ (y : ℝ), is_upper_bound A y → x ≤ y
@@ -186,9 +186,9 @@ by
   contrapose hy
   -- hy : ¬∃ a ∈ A, y < a
   -- ⊢ ¬y < x
-  push_neg at hy
+  push Not at hy
   -- hy : ∀ a ∈ A, a ≤ y
-  push_neg
+  push Not
   -- ⊢ x ≤ y
   exact hx.right y hy
 

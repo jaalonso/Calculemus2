@@ -98,7 +98,7 @@ example
   (h : ¬ ∃ x, P x)
   : ∀ x, ¬ P x :=
 by
-  push_neg at h
+  push Not at h
   exact h
 
 -- 7ª demostración

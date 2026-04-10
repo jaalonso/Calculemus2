@@ -60,8 +60,8 @@ def particion (P : Set (Set X)) : Prop :=
 
 example
   (h : particion P)
-  : Transitive (relacion P) :=
-by
+  : IsTrans X (relacion P) :=
+⟨by
   rintro x y z ⟨B1,hB1P,hxB1,hyB1⟩ ⟨B2,hB2P,hyB2,hzB2⟩
   -- x y z : X
   -- B1 : Set X
@@ -87,16 +87,15 @@ by
   . -- ⊢ z ∈ B1
     rw [h1]
     -- ⊢ z ∈ B2
-    exact hzB2
+    exact hzB2⟩
 
 -- 2ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Transitive (relacion P) :=
-by
-  unfold Transitive
+  : IsTrans X (relacion P) :=
+⟨by
   -- ⊢ ∀ ⦃x y z : X⦄, relacion P x y → relacion P y z → relacion P x z
   intros x y z h1 h2
   -- x y z : X
@@ -132,15 +131,15 @@ by
     -- hB : ∀ (C : Set X), C ∈ P → y ∈ C → B = C
     have hBB1 : B = B1 := hB B1 hB1P hyB1
     have hBB2 : B = B2 := hB B2 hB2P hyB2
-    exact Eq.trans hBB1.symm hBB2
+    exact Eq.trans hBB1.symm hBB2⟩
 
 -- 3ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Transitive (relacion P) :=
-by
+  : IsTrans X (relacion P) :=
+⟨by
   rintro x y z ⟨B1,hB1P,hxB1,hyB1⟩ ⟨B2,hB2P,hyB2,hzB2⟩
   -- x y z : X
   -- B1 : Set X
@@ -165,15 +164,15 @@ by
     rcases (h.1 y) with ⟨B, -, -, hB⟩
     -- B : Set X
     -- hB : ∀ (C : Set X), C ∈ P → y ∈ C → B = C
-    exact Eq.trans (hB B1 hB1P hyB1).symm (hB B2 hB2P hyB2)
+    exact Eq.trans (hB B1 hB1P hyB1).symm (hB B2 hB2P hyB2)⟩
 
 -- 4ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Transitive (relacion P) :=
-by
+  : IsTrans X (relacion P) :=
+⟨by
   rintro x y z ⟨B1,hB1P,hxB1,hyB1⟩ ⟨B2,hB2P,hyB2,hzB2⟩
   -- x y z : X
   -- B1 : Set X
@@ -190,7 +189,7 @@ by
               by { convert hzB2
                    rcases (h.1 y) with ⟨B, -, -, hB⟩
                    exact Eq.trans (hB B1 hB1P hyB1).symm
-                                  (hB B2 hB2P hyB2) }⟩⟩
+                                  (hB B2 hB2P hyB2) }⟩⟩⟩
 
 -- Lemas usados
 -- ============

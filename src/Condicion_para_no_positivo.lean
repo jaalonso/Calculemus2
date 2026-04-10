@@ -43,7 +43,7 @@ by
   -- ⊢ False
   apply absurd h
   -- ⊢ ¬∀ (ε : ℝ), ε > 0 → x ≤ ε
-  push_neg
+  push Not
   -- ⊢ ∃ ε, ε > 0 ∧ ε < x
   use x /2
   -- ⊢ x / 2 > 0 ∧ x / 2 < x

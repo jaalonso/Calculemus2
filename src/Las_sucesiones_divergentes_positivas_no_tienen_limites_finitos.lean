@@ -67,7 +67,7 @@ example
   (h : diverge_positivamente u)
   : ¬(∃ a, limite u a) :=
 by
-  push_neg
+  push Not
   -- ⊢ ∀ (a : ℝ), ¬limite u a
   intros a ha
   -- a : ℝ
@@ -98,7 +98,7 @@ example
   (h : diverge_positivamente u)
   : ¬(∃ a, limite u a) :=
 by
-  push_neg
+  push Not
   -- ⊢ ∀ (a : ℝ), ¬limite u a
   intros a ha
   -- a : ℝ
@@ -127,7 +127,7 @@ example
   (h : diverge_positivamente u)
   : ¬(∃ a, limite u a) :=
 by
-  push_neg
+  push Not
   -- ⊢ ∀ (a : ℝ), ¬limite u a
   intros a ha
   -- a : ℝ

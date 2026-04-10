@@ -70,7 +70,7 @@ example
 by
   have h1 : 1 - q ≠ 0 := by exact sub_ne_zero_of_ne (id (Ne.symm h))
   suffices h : (1 - q) * sumGP a q n = a * (1 - q ^ (n + 1))
-    from by exact CancelDenoms.cancel_factors_eq_div h h1
+    from by exact EuclideanDomain.eq_div_of_mul_eq_right h1 h
   induction n with
   | zero =>
     -- ⊢ (1 - q) * sumGP a q 0 = a * (1 - q ^ (0 + 1))
@@ -102,7 +102,7 @@ example
 by
   have h1 : 1 - q ≠ 0 := by exact sub_ne_zero_of_ne (id (Ne.symm h))
   suffices h : (1 - q) * sumGP a q n = a * (1 - q ^ (n + 1))
-    from by exact CancelDenoms.cancel_factors_eq_div h h1
+    from by exact EuclideanDomain.eq_div_of_mul_eq_right h1 h
   induction n with
   | zero =>
     -- ⊢ (1 - q) * sumGP a q 0 = a * (1 - q ^ (0 + 1))

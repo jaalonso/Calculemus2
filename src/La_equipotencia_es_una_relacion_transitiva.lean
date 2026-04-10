@@ -37,46 +37,38 @@ local infixr:50 " ⋍ " => es_equipotente
 -- 1ª demostración
 -- ===============
 
-example : Transitive (. ⋍ .) :=
-by
-  intro X Y Z hXY hYZ
-  -- X Y Z : Type ?u.8772
-  -- hXY : X ⋍ Y
-  -- hYZ : Y ⋍ Z
-  -- ⊢ X ⋍ Z
-  unfold es_equipotente at *
-  -- hXY : ∃ g, Bijective g
-  -- hYZ : ∃ g, Bijective g
-  -- ⊢ ∃ g, Bijective g
-  cases' hXY with f hf
-  -- f : X → Y
-  -- hf : Bijective f
-  cases' hYZ with g hg
-  -- g : Y → Z
-  -- hg : Bijective g
-  use (g ∘ f)
-  -- ⊢ Bijective (g ∘ f)
-  exact Bijective.comp hg hf
+example : IsTrans _ (. ⋍ .) :=
+⟨fun X Y Z hXY hYZ => by
+   -- X Y Z : Type ?u.8772
+   -- hXY : X ⋍ Y
+   -- hYZ : Y ⋍ Z
+   -- ⊢ X ⋍ Z
+   unfold es_equipotente at *
+   -- hXY : ∃ g, Bijective g
+   -- hYZ : ∃ g, Bijective g
+   -- ⊢ ∃ g, Bijective g
+   cases' hXY with f hf
+   -- f : X → Y
+   -- hf : Bijective f
+   cases' hYZ with g hg
+   -- g : Y → Z
+   -- hg : Bijective g
+   use (g ∘ f)
+   -- ⊢ Bijective (g ∘ f)
+   exact Bijective.comp hg hf⟩
 
 -- 2ª demostración
 -- ===============
 
-example : Transitive (. ⋍ .) :=
-by
-  rintro X Y Z ⟨f, hf⟩ ⟨g, hg⟩
-  -- X Y Z : Type ?u.8990
-  -- f : X → Y
-  -- hf : Bijective f
-  -- g : Y → Z
-  -- hg : Bijective g
-  -- ⊢ X ⋍ Z
-  exact ⟨g ∘ f, Bijective.comp hg hf⟩
+example : IsTrans _ (. ⋍ .) :=
+⟨fun _ _ _ ⟨f, hf⟩ ⟨g, hg⟩ =>
+  ⟨g ∘ f, Bijective.comp hg hf⟩⟩
 
 -- 3ª demostración
 -- ===============
 
-example : Transitive (. ⋍ .) :=
-fun _ _ _ ⟨f, hf⟩ ⟨g, hg⟩ ↦ ⟨g ∘ f, Bijective.comp hg hf⟩
+example : IsTrans _ (. ⋍ .) :=
+⟨fun _ _ _ ⟨f, hf⟩ ⟨g, hg⟩ ↦ ⟨g ∘ f, Bijective.comp hg hf⟩⟩
 
 -- Lemas usados
 -- ============

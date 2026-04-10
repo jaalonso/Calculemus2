@@ -51,7 +51,7 @@ example :
 by
   rw [Monotone]
   -- ⊢ (¬∀ ⦃a b : ℝ⦄, a ≤ b → f a ≤ f b) ↔ ∃ x y, x ≤ y ∧ f x > f y
-  push_neg
+  push Not
   -- ⊢ (Exists fun ⦃a⦄ => Exists fun ⦃b⦄ => a ≤ b ∧ f b < f a) ↔ ∃ x y, x ≤ y ∧ f x > f y
   rfl
 

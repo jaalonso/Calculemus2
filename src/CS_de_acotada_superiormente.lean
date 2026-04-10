@@ -41,7 +41,7 @@ by
   -- ⊢ ∃ a, CotaSuperior f a
   unfold CotaSuperior
   -- ⊢ ∃ a, ∀ (x : ℝ), f x ≤ a
-  push_neg at h
+  push Not at h
   -- h : ∃ a, ∀ (x : ℝ), f x ≤ a
   exact h
 
@@ -54,7 +54,7 @@ example
 by
   unfold acotadaSup CotaSuperior
   -- ⊢ ∃ a, ∀ (x : ℝ), f x ≤ a
-  push_neg at h
+  push Not at h
   -- h : ∃ a, ∀ (x : ℝ), f x ≤ a
   exact h
 
@@ -65,6 +65,6 @@ example
   (h : ¬∀ a, ∃ x, f x > a)
   : acotadaSup f :=
 by
-  push_neg at h
+  push Not at h
   -- h : ∃ a, ∀ (x : ℝ), f x ≤ a
   exact h

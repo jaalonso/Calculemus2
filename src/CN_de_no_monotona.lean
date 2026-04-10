@@ -66,7 +66,7 @@ example
 by
   simp only [Monotone] at h
   -- h : ¬∀ ⦃a b : ℝ⦄, a ≤ b → f a ≤ f b
-  push_neg at h
+  push Not at h
   -- h : Exists fun ⦃a⦄ => Exists fun ⦃b⦄ => a ≤ b ∧ f b < f a
   exact h
 

@@ -121,7 +121,7 @@ by
   -- h : ¬∃ a, CotaSuperior f a
   unfold CotaSuperior at h
   -- h : ¬∃ a, ∀ (x : ℝ), f x ≤ a
-  push_neg at h
+  push Not at h
   -- ∀ (a : ℝ), ∃ x, f x > a
   exact h
 
@@ -134,7 +134,7 @@ example
 by
   simp only [acotadaSup, CotaSuperior] at h
   -- h : ¬∃ a, ∀ (x : ℝ), f x ≤ a
-  push_neg at h
+  push Not at h
   -- ∀ (a : ℝ), ∃ x, f x > a
   exact h
 
@@ -148,7 +148,7 @@ by
   contrapose h
   -- h : ¬∀ (a : ℝ), ∃ x, f x > a
   -- ⊢ ¬¬acotadaSup f
-  push_neg at *
+  push Not at *
   -- h : ∃ a, ∀ (x : ℝ), f x ≤ a
   -- ⊢ acotadaSup f
   exact h

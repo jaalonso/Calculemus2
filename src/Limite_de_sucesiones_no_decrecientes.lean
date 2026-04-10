@@ -73,7 +73,7 @@ by
   by_contra H
   -- H : ¬u n ≤ a
   -- ⊢ False
-  push_neg at H
+  push Not at H
   -- H : a < u n
   replace H : u n - a > 0 := sub_pos.mpr H
   cases' h (u n - a) H with m hm
@@ -102,7 +102,7 @@ by
   by_contra H
   -- H : ¬u n ≤ a
   -- ⊢ False
-  push_neg at H
+  push Not at H
   -- H : a < u n
   replace H : u n - a > 0 := sub_pos.mpr H
   cases' h (u n - a) H with m hm
@@ -136,7 +136,7 @@ by
   by_contra H
   -- H : ¬u n ≤ a
   -- ⊢ False
-  push_neg at H
+  push Not at H
   -- H : a < u n
   cases' h (u n - a) (by linarith) with m hm
   -- m : ℕ
