@@ -38,28 +38,26 @@ local infixr:50 " ⋍ " => es_equipotente
 -- 1ª demostración
 -- ===============
 
-example : Reflexive (. ⋍ .) :=
-by
-  intro X
-  -- ⊢ X ⋍ X
+example : Std.Refl (. ⋍ .) :=
+⟨fun X => by
   use id
   -- ⊢ Bijective id
-  exact bijective_id
+  exact bijective_id⟩
+
 
 -- 2ª demostración
 -- ===============
 
-example : Reflexive (. ⋍ .) :=
-by
-  intro X
+example : Std.Refl (. ⋍ .) :=
+⟨fun X => by
   -- ⊢ X ⋍ X
-  exact ⟨id, bijective_id⟩
+  exact ⟨id, bijective_id⟩⟩
 
 -- 3ª demostración
 -- ===============
 
-example : Reflexive (. ⋍ .) :=
-fun _ ↦ ⟨id, bijective_id⟩
+example : Std.Refl (. ⋍ .) :=
+⟨fun _ ↦ ⟨id, bijective_id⟩⟩
 
 -- Lemas usados
 -- ============

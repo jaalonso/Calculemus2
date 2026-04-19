@@ -379,6 +379,31 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 03 [[https://jaalonso.github.io/calculemus/posts/2025/01/03-nicomachus_theorem/][Nicomachus’s theorem]] (In [[./src/Nicomachus_theorem.lean][Lean4]] and [[./thy/Nicomachus_theorem.thy][Isabelle]]).
 + 21 [[https://jaalonso.github.io/calculemus/posts/2025/01/21-praeclarum_theorema][Praeclarum theorema]] (In [[./src/Praeclarum_theorema.lean][Lean4]] and [[./thy/Praeclarum_theorema.thy][Isabelle]]).
 
+*** Abril 2025
++ 11 [[https://jaalonso.github.io/calculemus/posts/2025/04/11-imagen_de_la_imagen_inversa/][Demostraciones de "f(f⁻¹(u)) ⊆ u"]]
++ 13 [[https://jaalonso.github.io/calculemus/posts/2025/04/13-imagen_de_imagen_inversa_de_aplicaciones_suprayectivas/][Si f es suprayectiva, entonces u ⊆ f(f⁻¹(u)​)]]
++ 15 [[https://jaalonso.github.io/calculemus/posts/2025/04/15-monotonia_de_la_imagen_de_conjuntos/][Monotonía de la imagen de conjuntos]]
++ 17 [[https://jaalonso.github.io/calculemus/posts/2025/04/17-monotonia_de_la_imagen_inversa/][Monotonía de la imagen inversa]]
++ 18 [[https://jaalonso.github.io/calculemus/posts/2025/04/18-imagen_inversa_de_la_union/][Demostraciones de "f⁻¹(A ∪ B) = f⁻¹(A) ∪ f⁻¹(B)​"]]
++ 19 [[https://jaalonso.github.io/calculemus/posts/2025/04/19-imagen_de_la_interseccion/][Demostraciones de "f(s ∩ t) ⊆ f(s) ∩ f(t)​"]]
++ 20 [[https://jaalonso.github.io/calculemus/posts/2025/04/20-imagen_de_la_interseccion_de_aplicaciones_inyectivas/][Si f es inyectiva, entonces f(s) ∩ f(t) ⊆ f(s ∩ t)]]
++ 21 [[https://jaalonso.github.io/calculemus/posts/2025/04/21-imagen_de_la_diferencia_de_conjuntos/][Demostraciones de "f(s) \\ f(t) ⊆ f(s \\ t)"]]
++ 22 [[https://jaalonso.github.io/calculemus/posts/2025/04/22-interseccion_con_la_imagen/][Demostraciones de "f(s) ∩ t = f(s ∩ f⁻¹(t))"]]
++ 23 [[https://jaalonso.github.io/calculemus/posts/2025/04/23-union_con_la_imagen/][Demostraciones de "f(s ∪ f⁻¹(v)) ⊆ f(s) ∪ v"]]
++ 24 [[https://jaalonso.github.io/calculemus/posts/2025/04/24-interseccion_con_la_imagen_inversa/][Demostraciones de "f(s) ∩ v = f(s ∩ f⁻¹(v)​)​"]]
++ 25 [[https://jaalonso.github.io/calculemus/posts/2025/04/25-union_con_la_imagen_inversa/][Demostraciones de "s ∪ f⁻¹(v) ⊆ f⁻¹(f(s) ∪ v)"]]
+
+*** Diciembre 2025
++ 23 [[https://jaalonso.github.io/calculemus/posts/2025/12/23-convergencia_de_la_sucesion_constante_v2/][La sucesión constante aₙ = L converge a L]]
+
+** 2026
+
+*** Enero 2026
++ 10 [[https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/][Propiedad arquimediana de los números reales]]
+
+*** Abril 2026
++ 11 [[https://jaalonso.github.io/calculemus/posts/2026/04/11-convergencia_de_la_sucesion_1_div_n/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
+
 * Ejercicios ordenados por tema
 
 En [[./Ejercicios_por_temas.org][este enlace]] se encuentran los ejercicios anteriores clasificados por

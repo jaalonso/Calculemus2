@@ -48,29 +48,23 @@ def particion (P : Set (Set X)) : Prop :=
 
 example
   (h : particion P)
-  : Reflexive (relacion P) :=
-by
-  intro x
+  : Std.Refl (relacion P) :=
+⟨fun x => by
   -- x : X
   -- ⊢ relacion P x x
   rcases h.1 x with ⟨A, hAP, hxA, -⟩
   -- A : Set X
   -- hAP : A ∈ P
   -- hxA : x ∈ A
-  exact ⟨A, hAP, hxA, hxA⟩
+  exact ⟨A, hAP, hxA, hxA⟩⟩
 
 -- 2ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Reflexive (relacion P) :=
-by
-  unfold Reflexive
-  -- ⊢ ∀ (x : X), relacion P x x
-  intro x
-  -- x : X
-  -- ⊢ relacion P x x
+  : Std.Refl (relacion P) :=
+⟨fun x => by
   unfold relacion
   -- ⊢ ∃ A, A ∈ P ∧ x ∈ A ∧ x ∈ A
   unfold particion at h
@@ -80,36 +74,31 @@ by
   -- A : Set X
   -- hAP : A ∈ P
   -- hxA : x ∈ A
-  use A
+  use A⟩
 
 -- 3ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Reflexive (relacion P) :=
-by
-  intro x
-  -- ⊢ relacion P x x
+  : Std.Refl (relacion P) :=
+⟨fun x => by
   replace h : ∃ A ∈ P, x ∈ A ∧ ∀ B ∈ P, x ∈ B → A = B := h.1 x
   rcases h with ⟨A, hAP, hxA, -⟩
   -- A : Set X
   -- hAP : A ∈ P
   -- hxA : x ∈ A
-  use A
+  use A⟩
 
 -- 4ª demostración
 -- ===============
 
 example
   (h : particion P)
-  : Reflexive (relacion P) :=
-by
-  intro x
-  -- x : X
-  -- ⊢ relacion P x x
+  : Std.Refl (relacion P) :=
+⟨fun x => by
   rcases (h.1 x) with ⟨A, hAP, hxA, -⟩
   -- A : Set X
   -- hAP : A ∈ P
   -- hxA : x ∈ A
-  use A
+  use A⟩
