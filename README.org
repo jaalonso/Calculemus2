@@ -403,6 +403,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 
 *** Abril 2026
 + 11 [[https://jaalonso.github.io/calculemus/posts/2026/04/11-convergencia_de_la_sucesion_1_div_n/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
++ 21 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][La sucesión 1, -1, 1, -1, ... no es convergente]] (en [[./src/No_convergencia_(-1)^n.lean][Lean4]]).
 
 * Ejercicios ordenados por tema
 
