@@ -121,7 +121,7 @@ by
 -- 2ª demostración
 -- ===============
 
-lemma L2'
+lemma L6
   {n : ℕ}
   : |1 / (n : ℝ)| = 1 / n :=
 by
@@ -129,7 +129,7 @@ by
   -- ⊢ 0 ≤ 1 / ↑n
   positivity
 
-lemma L3'
+lemma L7
   (hε : ε > 0)
   (hN : 1 / ε < N)
   : 0 < (N : ℝ) :=
@@ -137,7 +137,7 @@ by calc
   (0 : ℝ) < 1 / ε := by positivity
   _       < N     := hN
 
-lemma L4'
+lemma L8
   (hε : ε > 0)
   {n : ℕ}
   (hN : 1 / ε < N)
@@ -150,7 +150,7 @@ by
   · -- ⊢ ↑N ≤ ↑n
     gcongr
 
-lemma L5'
+lemma L9
   (hε : ε > 0)
   (hN : 1 / ε < N)
   : 1 / (N : ℝ) < ε :=
@@ -184,9 +184,9 @@ by
   calc |a n - 0|
        = |a n|         := by norm_num
      _ = |1 / (n : ℝ)| := by rw [ha]
-     _ = 1 / n         := L2'
-     _ ≤ 1 / N         := L4' hε hN hn
-     _ < ε             := L5' hε hN
+     _ = 1 / n         := L6
+     _ ≤ 1 / N         := L8 hε hN hn
+     _ < ε             := L9 hε hN
 
 -- Lemas usados
 -- ============
