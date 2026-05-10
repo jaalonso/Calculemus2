@@ -39,97 +39,16 @@ def LimSuc (a : ℕ → ℝ) (L : ℝ) : Prop :=
 
 lemma L1
   {n : ℕ}
-  : 0 ≤ 1 / (n : ℝ) :=
-by
-  -- ⊢ 0 ≤ 1 / ↑n
-  apply div_nonneg
-  · -- ⊢ 0 ≤ 1
-    exact zero_le_one
-  · -- ⊢ 0 ≤ ↑n
-    exact Nat.cast_nonneg n
-
-lemma L2
-  {n : ℕ}
-  : |1 / (n : ℝ)| = 1 / n :=
-by
-  apply abs_of_nonneg
-  -- ⊢ 0 ≤ 1 / ↑n
-  exact L1
-
-variable {ε : ℝ}
-variable {N : ℕ}
-
-lemma L3
-  (hε : ε > 0)
-  (hN : 1 / ε < N)
-  : 0 < (N : ℝ) :=
-by calc
-  (0 : ℝ) < 1 / ε := one_div_pos.mpr hε
-  _       < N     := hN
-
-lemma L4
-  (hε : ε > 0)
-  {n : ℕ}
-  (hN : 1 / ε < N)
-  (hn : n ≥ N)
-  : 1 / (n : ℝ) ≤ 1 / (N : ℝ) :=
-by
-  apply one_div_le_one_div_of_le
-  · -- ⊢ 0 < ↑N
-    exact L3 hε hN
-  · -- ⊢ ↑N ≤ ↑n
-    exact Nat.cast_le.mpr hn
-
-lemma L5
-  (hε : ε > 0)
-  (hN : 1 / ε < N)
-  : 1 / (N : ℝ) < ε :=
-by
-  apply (one_div_lt _ _).mp
-  · -- ⊢ 1 / ε < ↑N
-    exact RCLike.ofReal_lt_ofReal.mp hN
-  · -- ⊢ 0 < ε
-    exact RCLike.ofReal_pos.mp hε
-  · -- ⊢ 0 < ↑N
-    exact L3 hε hN
-
-example
-  (ha : ∀ n, a n = 1 / n)
-  : LimSuc a 0 :=
-by
-  intro ε hε
-  -- ε : ℝ
-  -- hε : ε > 0
-  -- ⊢ ∃ N, ∀ n ≥ N, |a n - 0| < ε
-  have h1 : ∃ (N : ℕ), 1 / ε < N := exists_nat_gt (1 / ε)
-  choose N hN using h1
-  -- N : ℕ
-  -- hN : 1 / ε < ↑N
-  use N
-  -- ⊢ ∀ n ≥ N, |a n - 0| < ε
-  intro n hn
-  -- n : ℕ
-  -- hn : n ≥ N
-  -- ⊢ |a n - 0| < ε
-  calc |a n - 0|
-       = |a n|         := by simp [sub_zero]
-     _ = |1 / (n : ℝ)| := by rw [ha]
-     _ = 1 / n         := L2
-     _ ≤ 1 / N         := L4 hε hN hn
-     _ < ε             := L5 hε hN
-
--- 2ª demostración
--- ===============
-
-lemma L6
-  {n : ℕ}
   : |1 / (n : ℝ)| = 1 / n :=
 by
   apply abs_of_nonneg
   -- ⊢ 0 ≤ 1 / ↑n
   positivity
 
-lemma L7
+variable {ε : ℝ}
+variable {N : ℕ}
+
+lemma L2
   (hε : ε > 0)
   (hN : 1 / ε < N)
   : 0 < (N : ℝ) :=
@@ -137,7 +56,7 @@ by calc
   (0 : ℝ) < 1 / ε := by positivity
   _       < N     := hN
 
-lemma L8
+lemma L3
   (hε : ε > 0)
   {n : ℕ}
   (hN : 1 / ε < N)
@@ -146,11 +65,11 @@ lemma L8
 by
   apply one_div_le_one_div_of_le
   · -- ⊢ 0 < ↑N
-    exact L3 hε hN
+    exact L2 hε hN
   · -- ⊢ ↑N ≤ ↑n
     gcongr
 
-lemma L9
+lemma L4
   (hε : ε > 0)
   (hN : 1 / ε < N)
   : 1 / (N : ℝ) < ε :=
@@ -161,7 +80,7 @@ by
   · -- ⊢ 0 < ε
     gcongr
   · -- ⊢ 0 < ↑N
-    exact L3 hε hN
+    exact L2 hε hN
 
 example
   (ha : ∀ n, a n = 1 / n)
@@ -184,9 +103,90 @@ by
   calc |a n - 0|
        = |a n|         := by norm_num
      _ = |1 / (n : ℝ)| := by rw [ha]
-     _ = 1 / n         := L6
-     _ ≤ 1 / N         := L8 hε hN hn
-     _ < ε             := L9 hε hN
+     _ = 1 / n         := L1
+     _ ≤ 1 / N         := L3 hε hN hn
+     _ < ε             := L4 hε hN
+
+-- 2ª demostración
+-- ===============
+
+lemma L0
+  {n : ℕ}
+  : 0 ≤ 1 / (n : ℝ) :=
+by
+  -- ⊢ 0 ≤ 1 / ↑n
+  apply div_nonneg
+  · -- ⊢ 0 ≤ 1
+    exact zero_le_one
+  · -- ⊢ 0 ≤ ↑n
+    exact Nat.cast_nonneg n
+
+lemma L1'
+  {n : ℕ}
+  : |1 / (n : ℝ)| = 1 / n :=
+by
+  apply abs_of_nonneg
+  -- ⊢ 0 ≤ 1 / ↑n
+  exact L0
+
+lemma L2'
+  (hε : ε > 0)
+  (hN : 1 / ε < N)
+  : 0 < (N : ℝ) :=
+by calc
+  (0 : ℝ) < 1 / ε := one_div_pos.mpr hε
+  _       < N     := hN
+
+lemma L3'
+  (hε : ε > 0)
+  {n : ℕ}
+  (hN : 1 / ε < N)
+  (hn : n ≥ N)
+  : 1 / (n : ℝ) ≤ 1 / (N : ℝ) :=
+by
+  apply one_div_le_one_div_of_le
+  · -- ⊢ 0 < ↑N
+    exact L2' hε hN
+  · -- ⊢ ↑N ≤ ↑n
+    exact Nat.cast_le.mpr hn
+
+lemma L4'
+  (hε : ε > 0)
+  (hN : 1 / ε < N)
+  : 1 / (N : ℝ) < ε :=
+by
+  apply (one_div_lt _ _).mp
+  · -- ⊢ 1 / ε < ↑N
+    exact RCLike.ofReal_lt_ofReal.mp hN
+  · -- ⊢ 0 < ε
+    exact RCLike.ofReal_pos.mp hε
+  · -- ⊢ 0 < ↑N
+    exact L2' hε hN
+
+example
+  (ha : ∀ n, a n = 1 / n)
+  : LimSuc a 0 :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |a n - 0| < ε
+  have h1 : ∃ (N : ℕ), 1 / ε < N := exists_nat_gt (1 / ε)
+  choose N hN using h1
+  -- N : ℕ
+  -- hN : 1 / ε < ↑N
+  use N
+  -- ⊢ ∀ n ≥ N, |a n - 0| < ε
+  intro n hn
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |a n - 0| < ε
+  calc |a n - 0|
+       = |a n|         := by simp [sub_zero]
+     _ = |1 / (n : ℝ)| := by rw [ha]
+     _ = 1 / n         := L1'
+     _ ≤ 1 / N         := L3' hε hN hn
+     _ < ε             := L4' hε hN
 
 -- Lemas usados
 -- ============
