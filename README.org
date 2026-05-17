@@ -399,7 +399,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 ** 2026
 
 *** Enero 2026
-+ 10 [[https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/][Propiedad arquimediana de los números reales]]
++ 10 [[https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/][Propiedad arquimediana de los números reales]]  (en [[./src/Propiedad_arquimediana.lean][Lean4]]).
 
 *** Abril 2026
 + 11 [[https://jaalonso.github.io/calculemus/posts/2026/04/11-convergencia_de_la_sucesion_1_div_n/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
