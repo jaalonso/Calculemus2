@@ -196,8 +196,8 @@ by
 
 end Solucion2
 
--- 3ª solución (Anónima)
--- =====================
+-- 3ª solución
+-- ===========
 
 namespace Solucion3
 
@@ -467,8 +467,8 @@ by
 
 end Solucion6
 
--- 7ª solución (xPrivo)
--- ====================
+-- 7ª solución
+-- ===========
 
 namespace Solucion7
 
@@ -570,8 +570,8 @@ by
 
 end Solucion9
 
--- 10ª solución (Aristotle)
--- =======================
+-- 10ª solución
+-- ============
 
 namespace Solucion10
 
@@ -593,8 +593,8 @@ by
 
 end Solucion10
 
--- 11ª solución (refactorización de la 8ª)
--- ======================================
+-- 11ª solución (refactorización de la 10ª)
+-- ========================================
 
 namespace Solucion11
 
@@ -604,25 +604,3 @@ example
   fun ε hε => ⟨⌊ε⁻¹⌋₊ + 1, fun n hn => by simpa [abs_inv, ha] using inv_lt_of_inv_lt₀ hε <| Nat.lt_of_floor_lt hn⟩
 
 end Solucion11
-
--- Comentarios
--- ===========
-
--- + Las soluciones 1 y 2 demuestran explícitamente la propiedad
---   arquimediana desde cero. Son muy completas, pero extensas
---   (especialmente la 1).
--- + Las soluciones 3 a 6 usan exists_nat_gt.
--- + Las soluciones 7 a 9 usan exists_nat_one_div_lt que es más directa
---   para este problema. La 9 es muy clara, concisa y bien estructurada.
--- + Las soluciones 10 y 11 usan ⌊ε⁻¹⌋₊ (suelo natural de 1/ε) y el lema
---   inv_lt_of_inv_lt₀. La 11 es extremadamente compacta la 11, pero
---   pueden ser crípticas para principiantes.
-
--- Observaciones sobre estilos
--- ===========================
-
--- + La solución 11 es la más impresionante técnicamente.
--- + La solución 9 es la más didáctica para estudiantes intermedios
--- + La solución 2 tiene el mejor balance entre rigor y uso de la
---   biblioteca.
--- + La solución 1 es útil para demostrar la propiedad arquimediana.
