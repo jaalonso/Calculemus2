@@ -1,4 +1,4 @@
--- Reto_1_Soluciones.lean
+-- Reto_2.lean
 -- Soluciones de reto 2 (del 17 de mayo de 2026)
 -- ---------------------------------------------------------------------
 
@@ -89,8 +89,8 @@ by
     _ = 1                                          := by grind
   linarith
 
--- 2ª demostración
--- ===============
+-- 2ª demostración (refactorización de la 1ª)
+-- ==========================================
 
 variable {x y z x' y' : ℝ}
 variable {m n k : ℕ}
