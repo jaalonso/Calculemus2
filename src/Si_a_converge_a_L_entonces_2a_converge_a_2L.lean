@@ -1,7 +1,7 @@
 -- Si_a_converge_a_L_entonces_2a_converge_a_2L.lean
 -- Si a(n) converge a L, entonces 2a(n) converge a 2L
 -- José A. Alonso Jiménez <https://jaalonso.github.io>
--- Sevilla, 1-mayo-2026
+-- Sevilla, 21-mayo-2026
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -33,64 +33,15 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
-variable {a b : ℕ → ℝ}
-variable {L : ℝ}
+variable {a : ℕ → ℝ}
 
 def LimSuc (a : ℕ → ℝ) (L : ℝ) : Prop :=
   ∀ ε > 0, ∃ N : ℕ, ∀ n ≥ N, |a n - L| < ε
 
+def SucConv (a : ℕ → ℝ) : Prop :=
+  ∃ L, LimSuc a L
+
 -- 1ª demostración
--- ===============
-
-example
-  (ha : LimSuc a L)
-  (hb : ∀ n, b n = 2 * a n)
-  : LimSuc b (2 * L) :=
-by
-  intro ε hε
-  -- ε : ℝ
-  -- hε : ε > 0
-  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
-  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
-  -- N : ℕ
-  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
-  use N
-  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
-  intro n hn
-  -- n : ℕ
-  -- hn : n ≥ N
-  -- ⊢ |b n - 2 * L| < ε
-  grind
-
--- 2ª demostración
--- ===============
-
-example
-  (ha : LimSuc a L)
-  (hb : ∀ n, b n = 2 * a n)
-  : LimSuc b (2 * L) :=
-by
-  intro ε hε
-  -- ε : ℝ
-  -- hε : ε > 0
-  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
-  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
-  -- N : ℕ
-  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
-  use N
-  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
-  intro n hn
-  -- n : ℕ
-  -- hn : n ≥ N
-  -- ⊢ |b n - 2 * L| < ε
-  calc |b n - 2 * L|
-       = |2 * a n - 2 * L| := by grind
-     _ = |2 * (a n - L)|   := by grind
-     _ = 2 * |a n - L|     := by grind
-     _ < 2 * ε / 2         := by grind
-     _ = ε                 := by grind
-
--- 3ª demostración
 -- ===============
 
 example
@@ -119,7 +70,7 @@ by
      _ < 2 * (ε / 2)       := by simp only [ mul_lt_mul_of_pos_left, hN n hn, two_pos]
      _ = ε                 := by rw [mul_div_cancel₀ ε two_ne_zero]
 
--- 4ª demostración
+-- 2ª demostración
 -- ===============
 
 example
@@ -148,12 +99,142 @@ by
      _ < 2 * (ε / 2)       := mul_lt_mul_of_pos_left (hN n hn) two_pos
      _ = ε                 := mul_div_cancel₀ ε two_ne_zero
 
+-- 3ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  use N
+  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
+  intro n hn
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |b n - 2 * L| < ε
+  calc |b n - 2 * L|
+       = |2 * a n - 2 * L| := by grind
+     _ = |2 * (a n - L)|   := by grind
+     _ = 2 * |a n - L|     := by grind
+     _ < 2 * ε / 2         := by grind
+     _ = ε                 := by grind
+
+-- 4ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  use N
+  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
+  intros n hn
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |b n - 2 * L| < ε
+  rw [hb]
+  -- ⊢ |2 * a n - 2 * L| < ε
+  exact abs_lt.mpr ⟨by linarith [abs_lt.mp (hN n hn)],
+                    by linarith [abs_lt.mp (hN n hn)]⟩
+
+-- 5ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  refine ⟨N, fun n hn => ?_⟩
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |b n - 2 * L| < ε
+  rw [hb,
+      show 2 * a n - 2 * L = 2 * (a n - L) from by ring,
+      abs_mul,
+      abs_of_pos zero_lt_two]
+  -- ⊢ 2 * |a n - L| < ε
+  linarith [hN n hn]
+
+-- 6ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  exact ⟨N, fun n hn => calc
+    |b n - 2 * L|
+      = 2 * |a n - L| := by
+          rw [hb,
+             show 2 * a n - 2 * L = 2 * (a n - L) from by ring,
+             abs_mul,
+             abs_of_pos zero_lt_two]
+    _ < 2 * (ε / 2) := by linarith [hN n hn]
+    _ = ε := mul_div_cancel₀ ε two_ne_zero⟩
+
+-- 7ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  use N
+  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
+  intro n hn
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |b n - 2 * L| < ε
+  grind
+
 -- Lemas usados
 -- ============
 
 variable (x y z : ℝ)
 
+#check (abs_lt :|x| < y ↔ -y < x ∧ x < y)
 #check (abs_mul x y : |x * y| = |x| * |y|)
+#check (abs_of_pos : 0 < x → |x| = x)
 #check (abs_two : |(2 : ℝ)| = 2)
 #check (half_pos : 0 < x → 0 < x / 2)
 #check (mul_div_cancel₀ x : y ≠ 0 → y * (x / y) = x)

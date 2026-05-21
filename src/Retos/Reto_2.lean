@@ -1,5 +1,6 @@
 -- Reto_2.lean
--- Soluciones de reto 2 (del 17 de mayo de 2026)
+-- Soluciones del 17-May-26: La sucesión 1, -1, 1, -1,... no es
+-- convergente.
 -- ---------------------------------------------------------------------
 
 -- ---------------------------------------------------------------------
@@ -61,6 +62,8 @@ def SucConv (a : ℕ → ℝ) : Prop :=
 -- 1ª demostración
 -- ===============
 
+namespace Solucion1
+
 example
   (ha : ∀ n, a n = (-1) ^ n)
   : ¬ SucConv a :=
@@ -89,8 +92,12 @@ by
     _ = 1                                          := by grind
   linarith
 
+end Solucion1
+
 -- 2ª demostración (refactorización de la 1ª)
 -- ==========================================
+
+namespace Solucion2
 
 variable {x y z x' y' : ℝ}
 variable {m n k : ℕ}
@@ -193,3 +200,5 @@ by
     _ = 1 := add_halves 1
   have h2 : (1:ℝ) < 1 := lt_trans one_lt_two h1
   exact (lt_irrefl 1) h2
+
+end Solucion2
