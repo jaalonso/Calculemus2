@@ -49,7 +49,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
-  obtain  ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
+  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
   -- N : ℕ
   -- hN : ∀ n ≥ N, |a n - L| < ε / 2
   use N
@@ -58,44 +58,9 @@ by
   -- n : ℕ
   -- hn : n ≥ N
   -- ⊢ |b n - 2 * L| < ε
-  calc |b n - 2 * L|
-       = |2 * a n - 2 * L| := by rw [hb n]
-     _ = |2 * (a n - L)|   := by simp only [mul_sub]
-     _ = |2| * |a n - L|   := by simp only [abs_mul]
-     _ = 2 * |a n - L|     := by simp only [abs_two]
-     _ < 2 * (ε / 2)       := by simp only [ mul_lt_mul_of_pos_left, hN n hn, two_pos]
-     _ = ε                 := by rw [mul_div_cancel₀ ε two_ne_zero]
+  grind
 
 -- 2ª demostración
--- ===============
-
-example
-  (ha : LimSuc a L)
-  (hb : ∀ n, b n = 2 * a n)
-  : LimSuc b (2 * L) :=
-by
-  intro ε hε
-  -- ε : ℝ
-  -- hε : ε > 0
-  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
-  obtain  ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
-  -- N : ℕ
-  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
-  use N
-  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
-  intro n hn
-  -- n : ℕ
-  -- hn : n ≥ N
-  -- ⊢ |b n - 2 * L| < ε
-  calc |b n - 2 * L|
-       = |2 * a n - 2 * L| := congr_arg (|· - 2 * L|) (hb n)
-     _ = |2 * (a n - L)|   := congr_arg abs (mul_sub 2 (a n) L).symm
-     _ = |2| * |a n - L|   := abs_mul 2 (a n - L)
-     _ = 2 * |a n - L|     := congr_arg (· * |a n - L|) abs_two
-     _ < 2 * (ε / 2)       := mul_lt_mul_of_pos_left (hN n hn) two_pos
-     _ = ε                 := mul_div_cancel₀ ε two_ne_zero
-
--- 3ª demostración
 -- ===============
 
 example
@@ -123,7 +88,7 @@ by
      _ < 2 * ε / 2         := by grind
      _ = ε                 := by grind
 
--- 4ª demostración
+-- 3ª demostración
 -- ===============
 
 example
@@ -149,7 +114,7 @@ by
   exact abs_lt.mpr ⟨by linarith [abs_lt.mp (hN n hn)],
                     by linarith [abs_lt.mp (hN n hn)]⟩
 
--- 5ª demostración
+-- 4ª demostración
 -- ===============
 
 example
@@ -175,7 +140,7 @@ by
   -- ⊢ 2 * |a n - L| < ε
   linarith [hN n hn]
 
--- 6ª demostración
+-- 5ª demostración
 -- ===============
 
 example
@@ -200,6 +165,35 @@ by
     _ < 2 * (ε / 2) := by linarith [hN n hn]
     _ = ε := mul_div_cancel₀ ε two_ne_zero⟩
 
+-- 6ª demostración
+-- ===============
+
+example
+  (ha : LimSuc a L)
+  (hb : ∀ n, b n = 2 * a n)
+  : LimSuc b (2 * L) :=
+by
+  intro ε hε
+  -- ε : ℝ
+  -- hε : ε > 0
+  -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
+  obtain  ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
+  -- N : ℕ
+  -- hN : ∀ n ≥ N, |a n - L| < ε / 2
+  use N
+  -- ⊢ ∀ n ≥ N, |b n - 2 * L| < ε
+  intro n hn
+  -- n : ℕ
+  -- hn : n ≥ N
+  -- ⊢ |b n - 2 * L| < ε
+  calc |b n - 2 * L|
+       = |2 * a n - 2 * L| := by rw [hb n]
+     _ = |2 * (a n - L)|   := by simp only [mul_sub]
+     _ = |2| * |a n - L|   := by simp only [abs_mul]
+     _ = 2 * |a n - L|     := by simp only [abs_two]
+     _ < 2 * (ε / 2)       := by simp only [mul_lt_mul_of_pos_left, hN n hn, two_pos]
+     _ = ε                 := by rw [mul_div_cancel₀ ε two_ne_zero]
+
 -- 7ª demostración
 -- ===============
 
@@ -212,7 +206,7 @@ by
   -- ε : ℝ
   -- hε : ε > 0
   -- ⊢ ∃ N, ∀ n ≥ N, |b n - 2 * L| < ε
-  obtain  ⟨N, hN⟩ := ha (ε / 2) (by grind)
+  obtain  ⟨N, hN⟩ := ha (ε / 2) (half_pos hε)
   -- N : ℕ
   -- hN : ∀ n ≥ N, |a n - L| < ε / 2
   use N
@@ -221,7 +215,13 @@ by
   -- n : ℕ
   -- hn : n ≥ N
   -- ⊢ |b n - 2 * L| < ε
-  grind
+  calc |b n - 2 * L|
+       = |2 * a n - 2 * L| := congr_arg (|· - 2 * L|) (hb n)
+     _ = |2 * (a n - L)|   := congr_arg abs (mul_sub 2 (a n) L).symm
+     _ = |2| * |a n - L|   := abs_mul 2 (a n - L)
+     _ = 2 * |a n - L|     := congr_arg (· * |a n - L|) abs_two
+     _ < 2 * (ε / 2)       := mul_lt_mul_of_pos_left (hN n hn) two_pos
+     _ = ε                 := mul_div_cancel₀ ε two_ne_zero
 
 -- Lemas usados
 -- ============
