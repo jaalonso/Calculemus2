@@ -408,6 +408,8 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 *** Mayo 2026
 + 01 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si a(n) converge a L, entonces 2a(n) converge a 2L]] (en [[./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean][Lean4]]).
 
+*** Junio 2026
++ 01 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si a(n) converge a L y b(n) a M, entonces a(n)+b(n) converge a L+M]] (en [[./src/Suma_de_sucesiones_convergentes.lean][Lean4]]).
 
 * Ejercicios ordenados por tema
 
