@@ -246,7 +246,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 01 [[./textos/Union_con_su_diferencia.md][(s \ t) ∪ t = s ∪ t]] (En [[./src/Union_con_su_diferencia.lean][Lean]] y en [[./thy/Union_con_su_diferencia.thy][Isabelle]]).
 + 04 [[./textos/Diferencia_de_union_e_interseccion.md][(s \ t) ∪ (t \ s) = (s ∪ t) \ (s ∩ t)]] (En [[./src/Diferencia_de_union_e_interseccion.lean][Lean]] y en [[./thy/Diferencia_de_union_e_interseccion.thy][Isabelle]]).
 + 05 [[./textos/Union_de_pares_e_impares.md][pares ∪ impares = naturales]] (En [[./src/Union_de_pares_e_impares.lean][Lean]] y en [[./thy/Union_de_pares_e_impares.thy][Isabelle]]).
-+ 06 [[./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md][Los primos mayores que 2 son impares]] (En [[./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/Interseccion_de_los_primos_y_los_mayores_que_dos.thy][Isabelle]]).
++ 06 [[./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md][Los primos mayores que 2 son impares]] (En [[./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean][Lean]] y en [[./thy/Interseccion_de_losp_rimos_y_los_mayores_que_dos.thy][Isabelle]]).
 + 07 [[./textos/Distributiva_de_la_interseccion_respecto_de_la_union_general.md][s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)]] (En [[./src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean][Lean]] y en [[./thy/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy][Isabelle]]).
 + 08 [[./textos/Interseccion_de_intersecciones.md][(⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)]] (En [[./src/Interseccion_de_intersecciones.lean][Lean]] y en [[./thy/Interseccion_de_intersecciones.thy][Isabelle]]).
 + 11 [[./textos/Union_con_interseccion_general.md][s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)]] (En [[./src/Union_con_interseccion_general.lean][Lean]] y en [[./thy/Union_con_interseccion_general.thy][Isabelle]]).
@@ -401,16 +401,18 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 *** Enero 2026
 + 10 [[https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/][Propiedad arquimediana de los números reales]]  (en [[./src/Propiedad_arquimediana.lean][Lean4]]).
 
-*** Abril 2026
-+ 11 [[https://jaalonso.github.io/calculemus/posts/2026/04/11-convergencia_de_la_sucesion_1_div_n/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
-+ 21 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][La sucesión 1, -1, 1, -1, ... no es convergente]] (en [[./src/No_convergencia_(-1)^n.lean][Lean4]]).
-
 *** Mayo 2026
-+ 01 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si a(n) converge a L, entonces 2a(n) converge a 2L]] (en [[./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean][Lean4]]).
++ 11 [[https://jaalonso.github.io/calculemus/posts/2026/05/10-la_sucesion_1_div_n_converge_a_0/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
++ 17 [[https://jaalonso.github.io/calculemus/posts/2026/05/17-no_convergencia_-1n/][La sucesión 1, -1, 1, -1, ... no es convergente]] (en [[./src/No_convergencia_(-1)^n.lean][Lean4]]).
++ 24 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si aₙ converge a L, entonces 2aₙ converge a 2L]] (en [[./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean][Lean4]]).
++ 31 [[./textos/Infinitud_de_primos.md][Existen infinitos números primos]] (En [[./src/Infinitud_de_primos_v2.lean][Lean4]]).
 
 *** Junio 2026
 + 01 [[https://jaalonso.github.io/calculemus/posts/2026/06/01-suma_de_sucesiones_convergentes/][Si a(n) converge a L y b(n) a M, entonces a(n)+b(n) converge a L+M]] (en [[./src/Suma_de_sucesiones_convergentes.lean][Lean4]]).
 + 03 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si a converge a L, entonces (∃ N)(∀ n ≥ N)[aₙ ≥ L - 1]​]] (en [[./src/Cota_inferior_de_sucesiones_convergentes.lean][Lean4]]).
++ 07 [[https://jaalonso.github.io/calculemus/posts/2026/06/07-52n_-_23n_es_divisible_por_17/][5²ⁿ - 2³ⁿ es divisible por 17]] (en [[./src/5²ⁿ_-_2³ⁿ_es_divisible_por_17.lean][Lean4]]).
++ 14 [[https://jaalonso.github.io/calculemus/posts/2026/06/14-teorema_del_emparedado][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado_v2.lean][Lean]]).
++ 21 [[https://jaalonso.github.io/calculemus/posts/2026/06/21-composicion_de_funciones_inyectivas/][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
 
 * Ejercicios ordenados por tema
 
