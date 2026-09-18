@@ -413,6 +413,14 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 07 [[https://jaalonso.github.io/calculemus/posts/2026/06/07-52n_-_23n_es_divisible_por_17/][5²ⁿ - 2³ⁿ es divisible por 17]] (en [[./src/5²ⁿ_-_2³ⁿ_es_divisible_por_17.lean][Lean4]]).
 + 14 [[https://jaalonso.github.io/calculemus/posts/2026/06/14-teorema_del_emparedado][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado_v2.lean][Lean]]).
 + 21 [[https://jaalonso.github.io/calculemus/posts/2026/06/21-composicion_de_funciones_inyectivas/][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
++ 28 [[https://jaalonso.github.io/calculemus/posts/2026/06/28-no_converge_a_limite_pequeno_si_infinitos_terminos_grandes/][Sucesiones con infinitos términos grandes no convergen a límites pequeños]] (En [[./src/No_converge_a_límite_pequeño_si_infinitos_términos_grandes.lean][Lean]]).
+
+*** Julio 2026
++ 06 [[https://jaalonso.github.io/calculemus/posts/2026/07/06-unicidad_del_limite_de_las_sucesiones_convergentes/][Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes_v2.lean][Lean4]]).
++ 13 [[https://jaalonso.github.io/calculemus/posts/2026/07/13-eventualmentemayorigmitadabslimitepos/][Eventualmente mayor o igual que la mitad del valor absoluto del límite]] (En [[./src/EventualmenteMayorIgMitadAbsLimitePos.lean][Lean4]]).
+
+*** Septiembre 2026
++ 07 [[https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/][Convergencia del producto de sucesiones convergentes]]. (En [[./src/Convergencia_producto.lean][Lean4]]).
 
 * Ejercicios ordenados por tema
 
