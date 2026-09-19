@@ -418,6 +418,7 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 *** Julio 2026
 + 06 [[https://jaalonso.github.io/calculemus/posts/2026/07/06-unicidad_del_limite_de_las_sucesiones_convergentes/][Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes_v2.lean][Lean4]]).
 + 13 [[https://jaalonso.github.io/calculemus/posts/2026/07/13-eventualmentemayorigmitadabslimitepos/][Eventualmente mayor o igual que la mitad del valor absoluto del límite]] (En [[./src/EventualmenteMayorIgMitadAbsLimitePos.lean][Lean4]]).
++ 18 [[https://jaalonso.github.io/calculemus/posts/2026/07/19-convergencia_abs/][Si aₙ converge a L, entonces |aₙ| converge a |L|]] (En [[./src/Convergencia_abs.lean][Lean4]]).
 
 *** Septiembre 2026
 + 07 [[https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/][Convergencia del producto de sucesiones convergentes]]. (En [[./src/Convergencia_producto.lean][Lean4]]).
