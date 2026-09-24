@@ -421,8 +421,13 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 18 [[https://jaalonso.github.io/calculemus/posts/2026/07/19-convergencia_abs/][Si aₙ converge a L, entonces |aₙ| converge a |L|]] (En [[./src/Convergencia_abs.lean][Lean4]]).
 + 27 [[https://jaalonso.github.io/calculemus/posts/2026/07/27-eventualmente_menor_de_limsuc_menor/][Si aₙ → L, bₙ → M y L < M, entonces eventualmente aₙ < bₙ]] (En [[./src/Eventualmente_menor_de_limsuc_menor.lean][Lean4]]).
 
+*** Agosto 2026
++ 03 [[https://jaalonso.github.io/calculemus/posts/2026/08/09-desigualdad_triangular_inversa/][Desigualdad triangular inversa: ||x| - |y|| ≤ |x - y|]] (En [[./src/Desigualdad_triangular_inversa.lean][Lean4]]).
++ 09 Para todo n ∈ ℕ, 2n + 9 ≤ 2ⁿ⁺⁴ (En [[./src/Dos_n_mas_nueve_acotado_por_potencia.lean][Lean 4]]).
+
 *** Septiembre 2026
 + 07 [[https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/][Convergencia del producto de sucesiones convergentes]]. (En [[./src/Convergencia_producto.lean][Lean4]]).
++ 16 [[https://jaalonso.github.io/calculemus/posts/2026/09/16-las_sucesiones_convergentes_son_sucesiones_de_cauchy_v2/][Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy_v2.lean][Lean4]]).
 
 * Ejercicios ordenados por tema
 
