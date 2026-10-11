@@ -402,33 +402,37 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 10 [[https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/][Propiedad arquimediana de los números reales]]  (en [[./src/Propiedad_arquimediana.lean][Lean4]]).
 
 *** Mayo 2026
-+ 11 [[https://jaalonso.github.io/calculemus/posts/2026/05/10-la_sucesion_1_div_n_converge_a_0/][La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
-+ 17 [[https://jaalonso.github.io/calculemus/posts/2026/05/17-no_convergencia_-1n/][La sucesión 1, -1, 1, -1, ... no es convergente]] (en [[./src/No_convergencia_(-1)^n.lean][Lean4]]).
-+ 24 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si aₙ converge a L, entonces 2aₙ converge a 2L]] (en [[./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean][Lean4]]).
-+ 31 [[./textos/Infinitud_de_primos.md][Existen infinitos números primos]] (En [[./src/Infinitud_de_primos_v2.lean][Lean4]]).
++ 11 [[https://jaalonso.github.io/calculemus/posts/2026/05/10-la_sucesion_1_div_n_converge_a_0/][Reto 1: La sucesión 1/n converge a 0]] (en [[./src/Convergencia_de_la_sucesion_1_div_n.lean][Lean4]]).
++ 17 [[https://jaalonso.github.io/calculemus/posts/2026/05/17-no_convergencia_-1n/][Reto 2: La sucesión 1, -1, 1, -1, ... no es convergente]] (en [[./src/No_convergencia_(-1)^n.lean][Lean4]]).
++ 24 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Reto 3: Si aₙ converge a L, entonces 2aₙ converge a 2L]] (en [[./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean][Lean4]]).
++ 31 [[./textos/Infinitud_de_primos.md][Reto 4: Existen infinitos números primos]] (En [[./src/Infinitud_de_primos_v2.lean][Lean4]]).
 
 *** Junio 2026
 + 01 [[https://jaalonso.github.io/calculemus/posts/2026/06/01-suma_de_sucesiones_convergentes/][Si a(n) converge a L y b(n) a M, entonces a(n)+b(n) converge a L+M]] (en [[./src/Suma_de_sucesiones_convergentes.lean][Lean4]]).
 + 03 [[https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/][Si a converge a L, entonces (∃ N)(∀ n ≥ N)[aₙ ≥ L - 1]​]] (en [[./src/Cota_inferior_de_sucesiones_convergentes.lean][Lean4]]).
-+ 07 [[https://jaalonso.github.io/calculemus/posts/2026/06/07-52n_-_23n_es_divisible_por_17/][5²ⁿ - 2³ⁿ es divisible por 17]] (en [[./src/5²ⁿ_-_2³ⁿ_es_divisible_por_17.lean][Lean4]]).
-+ 14 [[https://jaalonso.github.io/calculemus/posts/2026/06/14-teorema_del_emparedado][Teorema del emparedado]] (En [[./src/Teorema_del_emparedado_v2.lean][Lean]]).
-+ 21 [[https://jaalonso.github.io/calculemus/posts/2026/06/21-composicion_de_funciones_inyectivas/][La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
-+ 28 [[https://jaalonso.github.io/calculemus/posts/2026/06/28-no_converge_a_limite_pequeno_si_infinitos_terminos_grandes/][Sucesiones con infinitos términos grandes no convergen a límites pequeños]] (En [[./src/No_converge_a_límite_pequeño_si_infinitos_términos_grandes.lean][Lean]]).
++ 07 [[https://jaalonso.github.io/calculemus/posts/2026/06/07-52n_-_23n_es_divisible_por_17/][Reto 5: 5²ⁿ - 2³ⁿ es divisible por 17]] (en [[./src/5²ⁿ_-_2³ⁿ_es_divisible_por_17.lean][Lean4]]).
++ 14 [[https://jaalonso.github.io/calculemus/posts/2026/06/14-teorema_del_emparedado][Reto 6: Teorema del emparedado]] (En [[./src/Teorema_del_emparedado_v2.lean][Lean]]).
++ 21 [[https://jaalonso.github.io/calculemus/posts/2026/06/21-composicion_de_funciones_inyectivas/][Reto 7: La composición de funciones inyectivas es inyectiva]] (En [[./src/Composicion_de_funciones_inyectivas.lean][Lean4]]).
++ 28 [[https://jaalonso.github.io/calculemus/posts/2026/06/28-no_converge_a_limite_pequeno_si_infinitos_terminos_grandes/][Reto 8: Sucesiones con infinitos términos grandes no convergen a límites pequeños]] (En [[./src/No_converge_a_límite_pequeño_si_infinitos_términos_grandes.lean][Lean]]).
 
 *** Julio 2026
-+ 06 [[https://jaalonso.github.io/calculemus/posts/2026/07/06-unicidad_del_limite_de_las_sucesiones_convergentes/][Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes_v2.lean][Lean4]]).
-+ 13 [[https://jaalonso.github.io/calculemus/posts/2026/07/13-eventualmentemayorigmitadabslimitepos/][Eventualmente mayor o igual que la mitad del valor absoluto del límite]] (En [[./src/EventualmenteMayorIgMitadAbsLimitePos.lean][Lean4]]).
-+ 18 [[https://jaalonso.github.io/calculemus/posts/2026/07/19-convergencia_abs/][Si aₙ converge a L, entonces |aₙ| converge a |L|]] (En [[./src/Convergencia_abs.lean][Lean4]]).
-+ 27 [[https://jaalonso.github.io/calculemus/posts/2026/07/27-eventualmente_menor_de_limsuc_menor/][Si aₙ → L, bₙ → M y L < M, entonces eventualmente aₙ < bₙ]] (En [[./src/Eventualmente_menor_de_limsuc_menor.lean][Lean4]]).
++ 06 [[https://jaalonso.github.io/calculemus/posts/2026/07/06-unicidad_del_limite_de_las_sucesiones_convergentes/][Reto 9: Unicidad del límite de las sucesiones convergentes]] (En [[./src/Unicidad_del_limite_de_las_sucesiones_convergentes_v2.lean][Lean4]]).
++ 13 [[https://jaalonso.github.io/calculemus/posts/2026/07/13-eventualmentemayorigmitadabslimitepos/][Reto 10: Eventualmente mayor o igual que la mitad del valor absoluto del límite]] (En [[./src/EventualmenteMayorIgMitadAbsLimitePos.lean][Lean4]]).
++ 18 [[https://jaalonso.github.io/calculemus/posts/2026/07/19-convergencia_abs/][Reto 11: Si aₙ converge a L, entonces |aₙ| converge a |L|]] (En [[./src/Convergencia_abs.lean][Lean4]]).
++ 27 [[https://jaalonso.github.io/calculemus/posts/2026/07/27-eventualmente_menor_de_limsuc_menor/][Reto 12: Si aₙ → L, bₙ → M y L < M, entonces eventualmente aₙ < bₙ]] (En [[./src/Eventualmente_menor_de_limsuc_menor.lean][Lean4]]).
 
 *** Agosto 2026
-+ 03 [[https://jaalonso.github.io/calculemus/posts/2026/08/09-desigualdad_triangular_inversa/][Desigualdad triangular inversa: ||x| - |y|| ≤ |x - y|]] (En [[./src/Desigualdad_triangular_inversa.lean][Lean4]]).
-+ 09 [[https://jaalonso.github.io/calculemus/posts/2026/08/09-dos_n_mas_nueve_acotado_por_potencia/][Para todo n ∈ ℕ, 2n + 9 ≤ 2ⁿ⁺⁴]] (En [[./src/Dos_n_mas_nueve_acotado_por_potencia.lean][Lean 4]]).
-+ 18 [[https://jaalonso.github.io/calculemus/posts/2026/08/18-existe_k_cuadrado_acotado_por_potencia_de_dos/][Existe un k ∈ ℕ tal que, para todo n ∈ ℕ, (n + k)² ≤ 2ⁿ⁺ᵏ]] (En [[./src/Existe_k_cuadrado_acotado_por_potencia_de_dos.lean][Lean 4]]).
++ 03 [[https://jaalonso.github.io/calculemus/posts/2026/08/09-desigualdad_triangular_inversa/][Reto 13: Desigualdad triangular inversa: ||x| - |y|| ≤ |x - y|]] (En [[./src/Desigualdad_triangular_inversa.lean][Lean4]]).
++ 09 [[https://jaalonso.github.io/calculemus/posts/2026/08/09-dos_n_mas_nueve_acotado_por_potencia/][Reto 14: Para todo n ∈ ℕ, 2n + 9 ≤ 2ⁿ⁺⁴]] (En [[./src/Dos_n_mas_nueve_acotado_por_potencia.lean][Lean 4]]).
++ 18 [[https://jaalonso.github.io/calculemus/posts/2026/08/18-existe_k_cuadrado_acotado_por_potencia_de_dos/][Reto 15: Existe un k ∈ ℕ tal que, para todo n ∈ ℕ, (n + k)² ≤ 2ⁿ⁺ᵏ]] (En [[./src/Existe_k_cuadrado_acotado_por_potencia_de_dos.lean][Lean 4]]).
++ 24 [[https://jaalonso.github.io/calculemus/posts/2026/08/24-seis_divide_producto/][Reto 16: Para todo n ∈ N, n(n+1)(2n+1) es divisible por 6]]. (En [[./src/Seis_divide_producto.lean][Lean 4]]).
++ 30 [[https://jaalonso.github.io/calculemus/posts/2026/08/30-acotada_si_convergente/][Reto 17: Las sucesiones convergentes están acotadas]]. (En [[./src/Acotada_si_convergente.lean][Lean 4]]).
 
 *** Septiembre 2026
-+ 07 [[https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/][Convergencia del producto de sucesiones convergentes]]. (En [[./src/Convergencia_producto.lean][Lean4]]).
-+ 16 [[https://jaalonso.github.io/calculemus/posts/2026/09/16-las_sucesiones_convergentes_son_sucesiones_de_cauchy_v2/][Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy_v2.lean][Lean4]]).
++ 07 [[https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/][Reto 18: Convergencia del producto de sucesiones convergentes]]. (En [[./src/Convergencia_producto.lean][Lean4]]).
++ 19 [[https://jaalonso.github.io/calculemus/posts/2026/09/16-las_sucesiones_convergentes_son_sucesiones_de_cauchy_v2/][Reto 19: Las sucesiones convergentes son sucesiones de Cauchy]] (En [[./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy_v2.lean][Lean4]]).
++ 21 [[https://jaalonso.github.io/calculemus/posts/2026/09/21-limite_menor_que_cota/][Reto 20: Si aₙ → L y M es una cota superior de aₙ, entonces L ≤ M]]. (En [[./src/Limite_menor_que_cota.lean][Lean 4]]).
++ 28 [[https://jaalonso.github.io/calculemus/posts/2026/09/28-subsucesiones_convergentes/][Reto 21: Las subsucesiones tienen el mismo límite que la sucesión]]. (En [[./src/Subsucesiones_convergentes.lean][Lean 4]]). (Pdte. solución).
 
 * Ejercicios ordenados por tema
 
