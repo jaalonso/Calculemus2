@@ -278,7 +278,7 @@ ejercicios propuestos en el blog [Calculemus](https://jaalonso.github.io/calcule
 -   01 [(s \\ t) ∪ t = s ∪ t](./textos/Union_con_su_diferencia.md) (En [Lean](./src/Union_con_su_diferencia.lean) y en [Isabelle](./thy/Union_con_su_diferencia.thy)).
 -   04 [(s \\ t) ∪ (t \\ s) = (s ∪ t) \\ (s ∩ t)](./textos/Diferencia_de_union_e_interseccion.md) (En [Lean](./src/Diferencia_de_union_e_interseccion.lean) y en [Isabelle](./thy/Diferencia_de_union_e_interseccion.thy)).
 -   05 [pares ∪ impares = naturales](./textos/Union_de_pares_e_impares.md) (En [Lean](./src/Union_de_pares_e_impares.lean) y en [Isabelle](./thy/Union_de_pares_e_impares.thy)).
--   06 [Los primos mayores que 2 son impares](./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md) (En [Lean](./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean) y en [Isabelle](./thy/Interseccion_de_los_primos_y_los_mayores_que_dos.thy)).
+-   06 [Los primos mayores que 2 son impares](./textos/Interseccion_de_los_primos_y_los_mayores_que_dos.md) (En [Lean](./src/Interseccion_de_los_primos_y_los_mayores_que_dos.lean) y en [Isabelle](./thy/Interseccion_de_losp_rimos_y_los_mayores_que_dos.thy)).
 -   07 [s ∩ (⋃ i, A i) = ⋃ i, (A i ∩ s)](./textos/Distributiva_de_la_interseccion_respecto_de_la_union_general.md) (En [Lean](./src/Distributiva_de_la_interseccion_respecto_de_la_union_general.lean) y en [Isabelle](./thy/Distributiva_de_la_interseccion_respecto_de_la_union_general.thy)).
 -   08 [(⋂ i, A i ∩ B i) = (⋂ i, A i) ∩ (⋂ i, B i)](./textos/Interseccion_de_intersecciones.md) (En [Lean](./src/Interseccion_de_intersecciones.lean) y en [Isabelle](./thy/Interseccion_de_intersecciones.thy)).
 -   11 [s ∪ (⋂ i, A i) = ⋂ i, (A i ∪ s)](./textos/Union_con_interseccion_general.md) (En [Lean](./src/Union_con_interseccion_general.lean) y en [Isabelle](./thy/Union_con_interseccion_general.thy)).
@@ -462,25 +462,56 @@ ejercicios propuestos en el blog [Calculemus](https://jaalonso.github.io/calcule
 -   10 [Propiedad arquimediana de los números reales](https://jaalonso.github.io/calculemus/posts/2026/01/10-propiedad-arquimediana/)  (en [Lean4](./src/Propiedad_arquimediana.lean)).
 
 
-### Abril 2026
-
--   11 [La sucesión 1/n converge a 0](https://jaalonso.github.io/calculemus/posts/2026/04/11-convergencia_de_la_sucesion_1_div_n/) (en [Lean4](./src/Convergencia_de_la_sucesion_1_div_n.lean)).
--   21 [La sucesión 1, -1, 1, -1, &#x2026; no es convergente](https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/) (en [Lean4](./src/No_convergencia_(-1)^n.lean)).
-
-
 ### Mayo 2026
 
--   01 [Si a(n) converge a L, entonces 2a(n) converge a 2L](https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/) (en [Lean4](./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean)).
+-   11 [Reto 1: La sucesión 1/n converge a 0](https://jaalonso.github.io/calculemus/posts/2026/05/10-la_sucesion_1_div_n_converge_a_0/) (en [Lean4](./src/Convergencia_de_la_sucesion_1_div_n.lean)).
+-   17 [Reto 2: La sucesión 1, -1, 1, -1, &#x2026; no es convergente](https://jaalonso.github.io/calculemus/posts/2026/05/17-no_convergencia_-1n/) (en [Lean4](./src/No_convergencia_(-1)^n.lean)).
+-   24 [Reto 3: Si aₙ converge a L, entonces 2aₙ converge a 2L](https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/) (en [Lean4](./src/Si_a_converge_a_L_entonces_2a_converge_a_2L.lean)).
+-   31 [Reto 4: Existen infinitos números primos](./textos/Infinitud_de_primos.md) (En [Lean4](./src/Infinitud_de_primos_v2.lean)).
 
 
 ### Junio 2026
 
 -   01 [Si a(n) converge a L y b(n) a M, entonces a(n)+b(n) converge a L+M](https://jaalonso.github.io/calculemus/posts/2026/06/01-suma_de_sucesiones_convergentes/) (en [Lean4](./src/Suma_de_sucesiones_convergentes.lean)).
 -   03 [Si a converge a L, entonces (∃ N)(∀ n ≥ N)[aₙ ≥ L - 1]​](https://jaalonso.github.io/calculemus/posts/2026/04/27-no_convergencia_-1n/) (en [Lean4](./src/Cota_inferior_de_sucesiones_convergentes.lean)).
+-   07 [Reto 5: 5²ⁿ - 2³ⁿ es divisible por 17](https://jaalonso.github.io/calculemus/posts/2026/06/07-52n_-_23n_es_divisible_por_17/) (en [Lean4](./src/5²ⁿ_-_2³ⁿ_es_divisible_por_17.lean)).
+-   14 [Reto 6: Teorema del emparedado](https://jaalonso.github.io/calculemus/posts/2026/06/14-teorema_del_emparedado) (En [Lean](./src/Teorema_del_emparedado_v2.lean)).
+-   21 [Reto 7: La composición de funciones inyectivas es inyectiva](https://jaalonso.github.io/calculemus/posts/2026/06/21-composicion_de_funciones_inyectivas/) (En [Lean4](./src/Composicion_de_funciones_inyectivas.lean)).
+-   28 [Reto 8: Sucesiones con infinitos términos grandes no convergen a límites pequeños](https://jaalonso.github.io/calculemus/posts/2026/06/28-no_converge_a_limite_pequeno_si_infinitos_terminos_grandes/) (En [Lean](./src/No_converge_a_límite_pequeño_si_infinitos_términos_grandes.lean)).
+
+
+### Julio 2026
+
+-   06 [Reto 9: Unicidad del límite de las sucesiones convergentes](https://jaalonso.github.io/calculemus/posts/2026/07/06-unicidad_del_limite_de_las_sucesiones_convergentes/) (En [Lean4](./src/Unicidad_del_limite_de_las_sucesiones_convergentes_v2.lean)).
+-   13 [Reto 10: Eventualmente mayor o igual que la mitad del valor absoluto del límite](https://jaalonso.github.io/calculemus/posts/2026/07/13-eventualmentemayorigmitadabslimitepos/) (En [Lean4](./src/EventualmenteMayorIgMitadAbsLimitePos.lean)).
+-   18 [Reto 11: Si aₙ converge a L, entonces |aₙ| converge a |L|](https://jaalonso.github.io/calculemus/posts/2026/07/19-convergencia_abs/) (En [Lean4](./src/Convergencia_abs.lean)).
+-   27 [Reto 12: Si aₙ → L, bₙ → M y L < M, entonces eventualmente aₙ < bₙ](https://jaalonso.github.io/calculemus/posts/2026/07/27-eventualmente_menor_de_limsuc_menor/) (En [Lean4](./src/Eventualmente_menor_de_limsuc_menor.lean)).
+
+
+### Agosto 2026
+
+-   03 [Reto 13: Desigualdad triangular inversa: ||x| - |y|| ≤ |x - y|](https://jaalonso.github.io/calculemus/posts/2026/08/09-desigualdad_triangular_inversa/) (En [Lean4](./src/Desigualdad_triangular_inversa.lean)).
+-   09 [Reto 14: Para todo n ∈ ℕ, 2n + 9 ≤ 2ⁿ⁺⁴](https://jaalonso.github.io/calculemus/posts/2026/08/09-dos_n_mas_nueve_acotado_por_potencia/) (En [Lean 4](./src/Dos_n_mas_nueve_acotado_por_potencia.lean)).
+-   18 [Reto 15: Existe un k ∈ ℕ tal que, para todo n ∈ ℕ, (n + k)² ≤ 2ⁿ⁺ᵏ](https://jaalonso.github.io/calculemus/posts/2026/08/18-existe_k_cuadrado_acotado_por_potencia_de_dos/) (En [Lean 4](./src/Existe_k_cuadrado_acotado_por_potencia_de_dos.lean)).
+-   24 [Reto 16: Para todo n ∈ N, n(n+1)(2n+1) es divisible por 6](https://jaalonso.github.io/calculemus/posts/2026/08/24-seis_divide_producto/). (En [Lean 4](./src/Seis_divide_producto.lean)).
+-   30 [Reto 17: Las sucesiones convergentes están acotadas](https://jaalonso.github.io/calculemus/posts/2026/08/30-acotada_si_convergente/). (En [Lean 4](./src/Acotada_si_convergente.lean)).
+
+
+### Septiembre 2026
+
+-   07 [Reto 18: Convergencia del producto de sucesiones convergentes](https://jaalonso.github.io/calculemus/posts/2026/09/07-convergencia_producto/). (En [Lean4](./src/Convergencia_producto.lean)).
+-   19 [Reto 19: Las sucesiones convergentes son sucesiones de Cauchy](https://jaalonso.github.io/calculemus/posts/2026/09/16-las_sucesiones_convergentes_son_sucesiones_de_cauchy_v2/) (En [Lean4](./src/Las_sucesiones_convergentes_son_sucesiones_de_Cauchy_v2.lean)).
+-   21 [Reto 20: Si aₙ → L y M es una cota superior de aₙ, entonces L ≤ M](https://jaalonso.github.io/calculemus/posts/2026/09/21-limite_menor_que_cota/). (En [Lean 4](./src/Limite_menor_que_cota.lean)).
+-   28 [Reto 21: Las subsucesiones tienen el mismo límite que la sucesión](https://jaalonso.github.io/calculemus/posts/2026/09/28-subsucesiones_convergentes/). (En [Lean 4](./src/Subsucesiones_convergentes.lean)). (Pdte. solución).
+
+
+### Octubre 2026
+
+-   05 Reto 22: Subsucesiones con límites distintos implican no convergencia. (En [Lean 4](./src/CS_no_convergencia.lean)).
 
 
 # Ejercicios ordenados por tema
 
-En [este enlace](./Ejercicios_por_temas.md) se encuentran los ejercicios anteriores clasificados por
-tema.
+En [este enlace](./Ejercicios_por_temas.md) se encuentran algunos de los ejercicios anteriores
+clasificados por tema.
 

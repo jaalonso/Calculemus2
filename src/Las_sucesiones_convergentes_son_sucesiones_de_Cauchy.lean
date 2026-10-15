@@ -47,7 +47,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {u : ℕ → ℝ }
@@ -231,11 +233,11 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c d x y : ℝ)
-variable (f : ℝ → ℝ)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_sub_comm a b : |a - b| = |b - a|)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (congrArg f : x = y → f x = f y)
-#check (half_pos : 0 < a → 0 < a / 2)
+-- variable (a b c d x y : ℝ)
+-- variable (f : ℝ → ℝ)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_sub_comm a b : |a - b| = |b - a|)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (congrArg f : x = y → f x = f y)
+-- #check (half_pos : 0 < a → 0 < a / 2)

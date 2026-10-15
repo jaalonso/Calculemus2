@@ -19,8 +19,10 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
-import Mathlib.Data.Real.Basic
+import Mathlib.Basic.Real.Basic
 
 -- 1ª demostración
 example

@@ -29,6 +29,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 variable {X Y : Type _}

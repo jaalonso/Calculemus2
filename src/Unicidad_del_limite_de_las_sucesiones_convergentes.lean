@@ -46,7 +46,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {u : ℕ → ℝ}
@@ -138,19 +140,19 @@ le_antisymm (aux hb ha) (aux ha hb)
 -- Lemas usados
 -- ============
 
-variable (c d : ℝ)
-#check (not_le : ¬a ≤ b ↔ b < a)
-#check (sub_pos : 0 < a - b ↔ b < a)
-#check (half_pos : a > 0 → a / 2 > 0)
-#check (le_max_left a b : a ≤ max a b)
-#check (le_max_right a b : b ≤ max a b)
-#check (abs_lt : |a| < b ↔ -b < a ∧ a < b)
-#check (abs_of_pos : 0 < a → |a| = a)
-#check (add_zero a : a + 0 = a)
-#check (sub_self a : a - a = 0)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_sub_comm a b : |a - b| = |b - a|)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (lt_irrefl a : ¬a < a)
-#check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- variable (c d : ℝ)
+-- #check (not_le : ¬a ≤ b ↔ b < a)
+-- #check (sub_pos : 0 < a - b ↔ b < a)
+-- #check (half_pos : a > 0 → a / 2 > 0)
+-- #check (le_max_left a b : a ≤ max a b)
+-- #check (le_max_right a b : b ≤ max a b)
+-- #check (abs_lt : |a| < b ↔ -b < a ∧ a < b)
+-- #check (abs_of_pos : 0 < a → |a| = a)
+-- #check (add_zero a : a + 0 = a)
+-- #check (sub_self a : a - a = 0)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_sub_comm a b : |a - b| = |b - a|)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (lt_irrefl a : ¬a < a)
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)

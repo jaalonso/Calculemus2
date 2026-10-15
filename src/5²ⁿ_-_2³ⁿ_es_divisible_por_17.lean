@@ -85,6 +85,8 @@
 -- Demostraciones con Lean 4
 -- =========================
 
+module
+
 import Mathlib.Data.Nat.Basic
 import Mathlib.Tactic
 
@@ -441,28 +443,28 @@ end Demostracion10
 -- Lemas usados
 -- ============
 
-variable (a b c m k : ℕ)
-#check (Dvd.dvd.add : m ∣ n → m ∣ k → m ∣ n + k)
-#check (Dvd.dvd.mul_left : m ∣ n → ∀ k, m ∣ k * n)
-#check (Dvd.intro k : m * k = n → m ∣ n)
-#check (ModEq.pow m : a ≡ b [MOD n] → a ^ m ≡ b ^ m [MOD n])
-#check (ModEq.refl a : a ≡ a [MOD n])
-#check (ModEq.sub_right : a ≤ b → a ≤ c → b ≡ c [MOD n] → b - a ≡ c - a [MOD n])
-#check (Nat.add_sub_assoc : k ≤ m → ∀ n, n + m - k = n + (m - k))
-#check (Nat.mul_sub n m k : n * (m - k) = n * m - n * k)
-#check (Nat.mul_sub_left_distrib n m k : n * (m - k) = n * m - n * k)
-#check (Nat.pow_add_one n m : n ^ (m + 1) = n ^ m * n)
-#check (Nat.pow_le_pow_left : n ≤ m → ∀ k, n ^ k ≤ m ^ k)
-#check (Nat.sub_dvd_pow_sub_pow m k n : m - k ∣ m ^ n - k ^ n)
-#check (Nat.sub_eq_iff_eq_add : b ≤ a → (a - b = c ↔ a = c + b))
-#check (add_zero a : a + 0 = a)
-#check (dvd_add : m ∣ n → m ∣ k → m ∣ n + k)
-#check (dvd_mul_of_dvd_right : m ∣ n → ∀ k, m ∣ k * n)
-#check (dvd_mul_right m n : m ∣ m * n)
-#check (modEq_zero_iff_dvd : m ≡ 0 [MOD n] ↔ n ∣ m)
-#check (mul_add a b c : a * (b + c) = a * b + a * c)
-#check (mul_comm n m : n * m = m * n)
-#check (mul_le_mul_left k : n ≤ m → k * n ≤ k * m)
-#check (pow_add a m n : a ^ (m + n) = a ^ m * a ^ n)
-#check (pow_mul m n k : m ^ (n * k) = (m ^ n) ^ k)
-#check (right_distrib n m k : (n + m) * k = n * k + m * k)
+-- variable (a b c m k : ℕ)
+-- #check (Dvd.dvd.add : m ∣ n → m ∣ k → m ∣ n + k)
+-- #check (Dvd.dvd.mul_left : m ∣ n → ∀ k, m ∣ k * n)
+-- #check (Dvd.intro k : m * k = n → m ∣ n)
+-- #check (ModEq.pow m : a ≡ b [MOD n] → a ^ m ≡ b ^ m [MOD n])
+-- #check (ModEq.refl a : a ≡ a [MOD n])
+-- #check (ModEq.sub_right : a ≤ b → a ≤ c → b ≡ c [MOD n] → b - a ≡ c - a [MOD n])
+-- #check (Nat.add_sub_assoc : k ≤ m → ∀ n, n + m - k = n + (m - k))
+-- #check (Nat.mul_sub n m k : n * (m - k) = n * m - n * k)
+-- #check (Nat.mul_sub_left_distrib n m k : n * (m - k) = n * m - n * k)
+-- #check (Nat.pow_add_one n m : n ^ (m + 1) = n ^ m * n)
+-- #check (Nat.pow_le_pow_left : n ≤ m → ∀ k, n ^ k ≤ m ^ k)
+-- #check (Nat.sub_dvd_pow_sub_pow m k n : m - k ∣ m ^ n - k ^ n)
+-- #check (Nat.sub_eq_iff_eq_add : b ≤ a → (a - b = c ↔ a = c + b))
+-- #check (add_zero a : a + 0 = a)
+-- #check (dvd_add : m ∣ n → m ∣ k → m ∣ n + k)
+-- #check (dvd_mul_of_dvd_right : m ∣ n → ∀ k, m ∣ k * n)
+-- #check (dvd_mul_right m n : m ∣ m * n)
+-- #check (modEq_zero_iff_dvd : m ≡ 0 [MOD n] ↔ n ∣ m)
+-- #check (mul_add a b c : a * (b + c) = a * b + a * c)
+-- #check (mul_comm n m : n * m = m * n)
+-- #check (mul_le_mul_left k : n ≤ m → k * n ≤ k * m)
+-- #check (pow_add a m n : a ^ (m + n) = a ^ m * a ^ n)
+-- #check (pow_mul m n k : m ^ (n * k) = (m ^ n) ^ k)
+-- #check (right_distrib n m k : (n + m) * k = n * k + m * k)

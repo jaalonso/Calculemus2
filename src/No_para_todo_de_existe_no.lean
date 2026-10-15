@@ -19,6 +19,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 variable {α : Type _}
 variable (P : α → Prop)

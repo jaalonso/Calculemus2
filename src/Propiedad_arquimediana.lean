@@ -4,7 +4,9 @@
 -- Sevilla, 10-enero-2026
 -- ---------------------------------------------------------------------
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 -- ---------------------------------------------------------------------
@@ -102,8 +104,8 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c : ℝ)
-#check (Nat.le_ceil a : a ≤ ↑⌈a⌉₊)
-#check (exists_nat_gt (1 / ε) : ∃ n : ℕ, 1 / ε < ↑n)
-#check (lt_add_one a : a < a + 1)
-#check (lt_of_le_of_lt : a ≤ b → b < c → a < c)
+-- variable (a b c : ℝ)
+-- #check (Nat.le_ceil a : a ≤ ↑⌈a⌉₊)
+-- #check (exists_nat_gt (1 / ε) : ∃ n : ℕ, 1 / ε < ↑n)
+-- #check (lt_add_one a : a < a + 1)
+-- #check (lt_of_le_of_lt : a ≤ b → b < c → a < c)

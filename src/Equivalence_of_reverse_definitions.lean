@@ -68,6 +68,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Data.List.Basic
 
 set_option pp.fieldNotation false

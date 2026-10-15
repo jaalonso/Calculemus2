@@ -32,7 +32,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {u : ℕ → ℝ}
@@ -178,13 +180,13 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c d : ℝ)
-variable (f : ℝ → ℝ)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_sub_comm a b : |a - b| = |b - a|)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_left_cancel_iff : a + b = a + c ↔ b = c)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (congrArg f : a = b → f a = f b)
-#check (half_pos : 0 < a → 0 < a / 2)
-#check (sub_add_sub_cancel a b c : (a - b) + (b - c) = a - c)
+-- variable (a b c d : ℝ)
+-- variable (f : ℝ → ℝ)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_sub_comm a b : |a - b| = |b - a|)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_left_cancel_iff : a + b = a + c ↔ b = c)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (congrArg f : a = b → f a = f b)
+-- #check (half_pos : 0 < a → 0 < a / 2)
+-- #check (sub_add_sub_cancel a b c : (a - b) + (b - c) = a - c)

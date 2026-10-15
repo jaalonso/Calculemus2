@@ -25,6 +25,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Function
 import Mathlib.Tactic
 
@@ -60,7 +62,7 @@ by
     have h3 : y ∈ f '' t := by rwa [fxy] at h2
     show False
     exact ynft h3
-  have h4 : x ∈ s \ t := mem_diff_of_mem xs h1
+  have h4 : x ∈ s \ t := mem_sdiff_of_mem xs h1
   have h5 : f x ∈ f '' (s \ t) := mem_image_of_mem f h4
   show y ∈ f '' (s \ t)
   rwa [fxy] at h5
@@ -130,11 +132,11 @@ fun y ⟨⟨x, xs, fxy⟩, ynft⟩ ↦ ⟨x, by aesop⟩
 -- ===============
 
 example : f '' s \ f '' t ⊆ f '' (s \ t) :=
-subset_image_diff f s t
+subset_image_sdiff f s t
 
 -- Lemmas usados
 -- =============
 
 -- variable (x : α)
 -- #check (mem_image_of_mem f : x  ∈ s → f x ∈ f '' s)
--- #check (subset_image_diff f s t : f '' s \ f '' t ⊆ f '' (s \ t))
+-- #check (subset_image_sdiff f s t : f '' s \ f '' t ⊆ f '' (s \ t))

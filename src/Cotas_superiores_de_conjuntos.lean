@@ -9,6 +9,8 @@
 -- una cota superior de s.
 -- ----------------------------------------------------------------------
 
+module
+
 import Mathlib.Tactic
 
 variable {α : Type _} [PartialOrder α]

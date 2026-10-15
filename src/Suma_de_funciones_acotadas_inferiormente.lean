@@ -25,7 +25,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import src.Suma_de_cotas_inferiores
+module
+
+public import src.Suma_de_cotas_inferiores
 variable {f g : ℝ → ℝ}
 
 -- (acotadaInf f) afirma que f tiene cota inferior.
@@ -99,5 +101,5 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaInf ha hb⟩
 -- Lemas usados
 -- ============
 
-variable (a b : ℝ)
-#check (sumaCotaInf : CotaInferior f a → CotaInferior g b → CotaInferior (f + g) (a + b))
+-- variable (a b : ℝ)
+-- #check (sumaCotaInf : CotaInferior f a → CotaInferior g b → CotaInferior (f + g) (a + b))

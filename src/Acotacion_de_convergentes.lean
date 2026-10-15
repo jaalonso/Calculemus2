@@ -29,7 +29,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {u : ℕ → ℝ}
@@ -97,8 +99,8 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c : ℝ)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (add_le_add_left : b ≤ c → ∀ a,  b + a ≤ c + a)
-#check (eq_add_of_sub_eq :  a - c = b → a = b + c)
-#check (zero_lt_one : 0 < 1)
+-- variable (a b c : ℝ)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (add_le_add_left : b ≤ c → ∀ a,  b + a ≤ c + a)
+-- #check (eq_add_of_sub_eq :  a - c = b → a = b + c)
+-- #check (zero_lt_one : 0 < 1)

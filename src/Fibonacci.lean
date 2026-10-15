@@ -72,6 +72,8 @@
 -- Proof with Lean4
 -- ================
 
+module
+
 open Nat
 
 set_option pp.fieldNotation false

@@ -39,6 +39,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Algebra.Group.Basic
 
 variable {M : Type} [LeftCancelMonoid M]

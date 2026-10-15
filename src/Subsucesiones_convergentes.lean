@@ -29,7 +29,7 @@
 -- subsucesión de una sucesión convergente converge al mismo
 -- límite que la sucesión. Para ello, completar la siguiente
 -- teoría de Lean 4:
---    import Mathlib.Data.Real.Basic
+--    import Mathlib.Basic.Real.Basic
 --
 --    variable {u v : ℕ → ℝ}
 --    variable {a : ℝ}
@@ -83,7 +83,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 variable {u v : ℕ → ℝ}
 variable {a : ℝ}
@@ -222,6 +224,8 @@ by
 -- Lemas usados
 -- ============
 
+/-
 variable (m n x y z : ℕ)
 #check (Nat.zero_le n : 0 ≤ n)
 #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+-/

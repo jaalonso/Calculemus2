@@ -20,8 +20,12 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
+
+@[expose] public section
 
 def CotaSuperior (f : ℝ → ℝ) (a : ℝ) : Prop :=
   ∀ x, f x ≤ a

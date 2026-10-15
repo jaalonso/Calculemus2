@@ -47,7 +47,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 open Function
 
 variable (f : ℝ → ℝ)
@@ -153,6 +155,6 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b : ℝ)
-#check (le_total a b : a ≤ b ∨ b ≤ a)
-#check (antisymm : a ≤ b → b ≤ a → a = b)
+-- variable (a b : ℝ)
+-- #check (le_total a b : a ≤ b ∨ b ≤ a)
+-- #check (antisymm : a ≤ b → b ≤ a → a = b)

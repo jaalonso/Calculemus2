@@ -25,8 +25,14 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Basic
-import Mathlib.Data.Set.Lattice
+import Mathlib.Data.Set.Lattice.Bounded
+import Mathlib.Data.Set.Lattice.Disjoint
+import Mathlib.Data.Set.Lattice.Image
+import Mathlib.Data.Set.Lattice.Indexed
+import Mathlib.Data.Set.Lattice.Order
 import Mathlib.Tactic
 
 open Set

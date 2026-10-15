@@ -36,6 +36,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Topology.MetricSpace.Basic
 variable {X : Type _} [MetricSpace X]
 variable (x y : X)

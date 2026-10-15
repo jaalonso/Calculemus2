@@ -26,6 +26,8 @@
 -- Demostraciones con lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 open Function
 variable {α : Type _} {β : Type _} {γ : Type _}

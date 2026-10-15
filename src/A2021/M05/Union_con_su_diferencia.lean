@@ -24,6 +24,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Basic
 import Mathlib.Order.BooleanAlgebra.Set
 
@@ -42,7 +44,7 @@ by
   -- ⊢ x ∈ (s \ t) ∪ t ↔ x ∈ s ∪ t
   calc x ∈ (s \ t) ∪ t
        ↔ x ∈ s \ t ∨ x ∈ t                 := mem_union x (s \ t) t
-     _ ↔ (x ∈ s ∧ x ∉ t) ∨ x ∈ t           := by simp only [mem_diff x]
+     _ ↔ (x ∈ s ∧ x ∉ t) ∨ x ∈ t           := by simp only [mem_sdiff x]
      _ ↔ (x ∈ s ∨ x ∈ t) ∧ (x ∉ t ∨ x ∈ t) := and_or_right
      _ ↔ (x ∈ s ∨ x ∈ t) ∧ True            := by simp only [em' (x ∈ t)]
      _ ↔ x ∈ s ∨ x ∈ t                     := (and_true (x ∈ s ∨ x ∈ t)).to_iff
@@ -145,7 +147,7 @@ by
 -- ===============
 
 example : (s \ t) ∪ t = s ∪ t :=
-diff_union_self
+sdiff_union_self
 
 -- 5ª demostración
 -- ===============
@@ -170,7 +172,7 @@ by simp
 -- variable (x : α)
 -- #check (and_or_right : (a ∧ b) ∨ c ↔ (a ∨ c) ∧ (b ∨ c))
 -- #check (and_true_iff a : a ∧ True ↔ a)
--- #check (diff_union_self : (s \ t) ∪ t = s ∪ t)
+-- #check (sdiff_union_self : (s \ t) ∪ t = s ∪ t)
 -- #check (em' a : ¬a ∨ a)
--- #check (mem_diff x : x ∈ s \ t ↔ x ∈ s ∧ x ∉ t)
+-- #check (mem_sdiff x : x ∈ s \ t ↔ x ∈ s ∧ x ∉ t)
 -- #check (mem_union x s t : x ∈ s ∪ t ↔ x ∈ s ∨ x ∈ t)

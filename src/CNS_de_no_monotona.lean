@@ -19,7 +19,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+public import Mathlib.Basic.Real.Basic
 variable {f : ℝ → ℝ}
 
 -- 1ª demostración
@@ -58,7 +60,7 @@ by
 -- 4ª demostración
 -- ===============
 
-lemma not_Monotone_iff :
+public lemma not_Monotone_iff :
   ¬Monotone f ↔ ∃ x y, x ≤ y ∧ f x > f y :=
 by
   rw [Monotone]

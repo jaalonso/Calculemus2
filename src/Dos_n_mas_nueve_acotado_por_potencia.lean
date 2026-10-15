@@ -40,6 +40,8 @@
 -- Demostraciones con Lean 4
 -- =========================
 
+module
+
 import Mathlib.Tactic
 
 variable (n : ℕ)
@@ -139,12 +141,12 @@ by
 -- Lemas usados
 -- ============
 
-variable (k m : ℕ)
-#check (Nat.add_le_add_left : n ≤ m → ∀ k, k + n ≤ k + m)
-#check (Nat.add_le_add_right : n ≤ m → ∀ k, n + k ≤ m + k)
-#check (Nat.add_left_inj : m + n = k + n ↔ m = k)
-#check (Nat.le_add_left n m : n ≤ m + n)
-#check (Nat.pow_succ' : m ^ n.succ = m * m ^ n)
-#check (Nat.two_mul n : 2 * n = n + n)
-#check (one_le_two : 1 ≤ 2)
-#check (pow_le_pow_right'  : 1 ≤ k → n ≤ m → k ^ n ≤ k ^ m)
+-- variable (k m : ℕ)
+-- #check (Nat.add_le_add_left : n ≤ m → ∀ k, k + n ≤ k + m)
+-- #check (Nat.add_le_add_right : n ≤ m → ∀ k, n + k ≤ m + k)
+-- #check (Nat.add_left_inj : m + n = k + n ↔ m = k)
+-- #check (Nat.le_add_left n m : n ≤ m + n)
+-- #check (Nat.pow_succ' : m ^ n.succ = m * m ^ n)
+-- #check (Nat.two_mul n : 2 * n = n + n)
+-- #check (one_le_two : 1 ≤ 2)
+-- #check (pow_le_pow_right'  : 1 ≤ k → n ≤ m → k ^ n ≤ k ^ m)

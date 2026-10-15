@@ -26,6 +26,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import src.Suma_de_cotas_superiores
 
 variable {f g : ℝ → ℝ}
@@ -93,5 +95,5 @@ fun ⟨a, ha⟩ ⟨b, hb⟩ ↦ ⟨a + b, sumaCotaSup ha hb⟩
 -- Lemas usados
 -- ============
 
-variable (a b : ℝ)
-#check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))
+-- variable (a b : ℝ)
+-- #check (sumaCotaSup : CotaSuperior f a → CotaSuperior g b → CotaSuperior (f + g) (a + b))

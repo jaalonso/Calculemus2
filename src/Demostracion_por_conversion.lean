@@ -31,7 +31,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 variable {a : ℝ}
 
 -- 1ª demostración
@@ -67,8 +69,8 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c : ℝ)
-#check (mul_lt_mul_of_pos_right : b < c ->  0 < a -> b * a < c * a)
-#check (one_mul a : 1 * a = a)
-#check (lt_trans : a < b → b < c → a < c)
-#check (zero_lt_one : 0 < 1)
+-- variable (a b c : ℝ)
+-- #check (mul_lt_mul_of_pos_right : b < c ->  0 < a -> b * a < c * a)
+-- #check (one_mul a : 1 * a = a)
+-- #check (lt_trans : a < b → b < c → a < c)
+-- #check (zero_lt_one : 0 < 1)

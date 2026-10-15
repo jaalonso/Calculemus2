@@ -8,7 +8,7 @@
 -- una sucesión tiene dos subsucesiones con límites distintos,
 -- entonces la sucesión no es convergente. Para ello, completar la
 -- siguiente teoría:
---    import Mathlib.Data.Real.Basic
+--    import Mathlib.Basic.Real.Basic
 --    import Mathlib.Tactic
 --
 --    -- a converge a L
@@ -39,6 +39,8 @@
 --      : ¬SucConvergente a :=
 --    by sorry
 -- ---------------------------------------------------------------
+
+module
 
 import Mathlib.Tactic
 

@@ -28,6 +28,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 variable {X : Type}
@@ -115,5 +117,5 @@ by
 -- Lemas usados
 -- ============
 
-variable (s : Set X)
-#check (Set.eq_empty_iff_forall_notMem : s = ∅ ↔ ∀ x, x ∉ s)
+-- variable (s : Set X)
+-- #check (Set.eq_empty_iff_forall_notMem : s = ∅ ↔ ∀ x, x ∉ s)

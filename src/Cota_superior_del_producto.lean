@@ -35,7 +35,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 -- (CotaSuperior f a) se verifica si a es una cota superior de f.
 def CotaSuperior (f : ℝ → ℝ) (a : ℝ) : Prop :=

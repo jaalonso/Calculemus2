@@ -25,6 +25,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Function
 import Mathlib.Tactic
 
@@ -91,6 +93,6 @@ image_mono h
 -- Lemas usados
 -- ============
 
-variable (y : β)
-#check (mem_image f s y : y ∈ f '' s ↔ ∃ x, x ∈ s ∧ f x = y)
-#check (image_mono : s ⊆ t → f '' s ⊆ f '' t)
+-- variable (y : β)
+-- #check (mem_image f s y : y ∈ f '' s ↔ ∃ x, x ∈ s ∧ f x = y)
+-- #check (image_mono : s ⊆ t → f '' s ⊆ f '' t)

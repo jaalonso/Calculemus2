@@ -33,7 +33,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 variable (w x y z : ℕ)
 
 -- 1ª demostración

@@ -22,6 +22,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 variable {α : Type _} [Preorder α]
 variable (a : α)

@@ -39,6 +39,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Algebra.BigOperators.Intervals
 import Mathlib.Tactic
 

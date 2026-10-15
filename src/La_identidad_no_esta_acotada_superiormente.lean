@@ -20,7 +20,10 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import src.Funcion_no_acotada_superiormente
+module
+
+public import src.Funcion_no_acotada_superiormente
+import Mathlib.Tactic
 
 -- 1ª demostración
 example : ¬ acotadaSup (fun x ↦ x) :=

@@ -85,6 +85,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Tactic
 
 open List
@@ -355,8 +357,8 @@ end Tree'
 -- Used lemmas
 -- ===========
 
-variable (x : α)
-variable (xs ys zs : List α)
-#check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
-#check (reverse_append : reverse (xs ++ ys)= reverse ys ++ reverse xs)
-#check (reverse_singleton : reverse [x] = [x])
+-- variable (x : α)
+-- variable (xs ys zs : List α)
+-- #check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
+-- #check (reverse_append : reverse (xs ++ ys)= reverse ys ++ reverse xs)
+-- #check (reverse_singleton : reverse [x] = [x])

@@ -39,6 +39,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.List.Basic
 open List
 
@@ -206,7 +208,7 @@ by simp
 -- Lemas usados
 -- ============
 
-variable (x : α)
-#check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
-#check (cons_append : (x :: xs) ++ ys = x :: (xs ++ ys))
-#check (nil_append xs : [] ++ xs = xs)
+-- variable (x : α)
+-- #check (append_assoc xs ys zs : (xs ++ ys) ++ zs = xs ++ (ys ++ zs))
+-- #check (cons_append : (x :: xs) ++ ys = x :: (xs ++ ys))
+-- #check (nil_append xs : [] ++ xs = xs)

@@ -40,7 +40,9 @@
 -- Proof with Lean4
 -- ================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (u : ℕ → ℝ)
@@ -107,12 +109,12 @@ by
 -- Used lemmas
 -- ===========
 
-variable (b c : ℝ)
-#check (abs_mul a b : |a * b| = |a| * |b|)
-#check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
-#check (div_pos : 0 < a → 0 < b → 0 < a / b)
-#check (lt_div_iff₀' : 0 < c → (a < b / c ↔ c * a < b))
-#check (mul_comm a b : a * b = b * a)
-#check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
-#check (mul_lt_mul_iff_right₀ : 0 < a → (a * b < a * c ↔ b < c))
-#check (mul_sub a b c : a * (b - c) = a * b - a * c)
+-- variable (b c : ℝ)
+-- #check (abs_mul a b : |a * b| = |a| * |b|)
+-- #check (abs_pos.mpr : a ≠ 0 → 0 < |a|)
+-- #check (div_pos : 0 < a → 0 < b → 0 < a / b)
+-- #check (lt_div_iff₀' : 0 < c → (a < b / c ↔ c * a < b))
+-- #check (mul_comm a b : a * b = b * a)
+-- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
+-- #check (mul_lt_mul_iff_right₀ : 0 < a → (a * b < a * c ↔ b < c))
+-- #check (mul_sub a b c : a * (b - c) = a * b - a * c)

@@ -28,6 +28,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 
 open Real

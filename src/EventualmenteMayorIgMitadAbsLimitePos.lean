@@ -37,7 +37,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 def LimSuc (a : ℕ → ℝ) (L : ℝ) : Prop :=
@@ -165,12 +167,12 @@ by
 -- Lemas usados
 -- ============
 
-variable (x y z : ℝ)
-#check (abs_add_le x y : |x + y| ≤ |x| + |y|)
-#check (abs_neg x : |(-x)| = |x|)
-#check (abs_pos : 0 < |x| ↔ x ≠ 0)
-#check (add_le_add_right : y ≤ z → ∀ x, x + y ≤ x + z)
-#check (half_pos : 0 < x → 0 < x / 2)
-#check (neg_sub x y : -(x - y) = y - x)
-#check (sub_half x : x - x / 2 = x / 2)
-#check (tsub_le_iff_right : x - y ≤ z ↔ x ≤ z + y)
+-- variable (x y z : ℝ)
+-- #check (abs_add_le x y : |x + y| ≤ |x| + |y|)
+-- #check (abs_neg x : |(-x)| = |x|)
+-- #check (abs_pos : 0 < |x| ↔ x ≠ 0)
+-- #check (add_le_add_right : y ≤ z → ∀ x, x + y ≤ x + z)
+-- #check (half_pos : 0 < x → 0 < x / 2)
+-- #check (neg_sub x y : -(x - y) = y - x)
+-- #check (sub_half x : x - x / 2 = x / 2)
+-- #check (tsub_le_iff_right : x - y ≤ z ↔ x ≤ z + y)

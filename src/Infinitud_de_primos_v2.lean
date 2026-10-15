@@ -32,6 +32,8 @@
 -- Demostración con Lean4
 -- ======================
 
+module
+
 import Mathlib.Tactic
 import Mathlib.Data.Nat.Prime.Defs
 
@@ -98,16 +100,16 @@ exists_infinite_primes n
 -- Lemas usados
 -- ============
 
-variable (k m n : ℕ)
-#check (Nat.Prime.not_dvd_one : Nat.Prime n → ¬n ∣ 1)
-#check (Nat.dvd_add_iff_right : k ∣ m → (k ∣ n ↔ k ∣ m + n))
-#check (Nat.lt_add_of_pos_left : 0 < k → n < k + n)
-#check (Nat.ne_of_gt : k < n → n ≠ k)
-#check (dvd_factorial : 0 < k → k ≤ n → k ∣ n !)
-#check (exists_infinite_primes n : ∃ p, n ≤ p ∧ Nat.Prime p)
-#check (factorial_pos n: n ! > 0)
-#check (le_of_not_ge : ¬k ≥ n → k ≤ n)
-#check (minFac_dvd n : minFac n ∣ n)
-#check (minFac_pos n : 0 < minFac n)
-#check (minFac_prime : n ≠ 1 → Nat.Prime (minFac n))
-#check (succ_lt_succ : n < m → n + 1 < m + 1)
+-- variable (k m n : ℕ)
+-- #check (Nat.Prime.not_dvd_one : Nat.Prime n → ¬n ∣ 1)
+-- #check (Nat.dvd_add_iff_right : k ∣ m → (k ∣ n ↔ k ∣ m + n))
+-- #check (Nat.lt_add_of_pos_left : 0 < k → n < k + n)
+-- #check (Nat.ne_of_gt : k < n → n ≠ k)
+-- #check (dvd_factorial : 0 < k → k ≤ n → k ∣ n !)
+-- #check (exists_infinite_primes n : ∃ p, n ≤ p ∧ Nat.Prime p)
+-- #check (factorial_pos n: n ! > 0)
+-- #check (le_of_not_ge : ¬k ≥ n → k ≤ n)
+-- #check (minFac_dvd n : minFac n ∣ n)
+-- #check (minFac_pos n : 0 < minFac n)
+-- #check (minFac_prime : n ≠ 1 → Nat.Prime (minFac n))
+-- #check (succ_lt_succ : n < m → n + 1 < m + 1)

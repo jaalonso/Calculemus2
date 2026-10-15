@@ -51,6 +51,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 open Real
 variable (a b c d f : ℝ)
@@ -95,8 +97,8 @@ by
 -- Lemas usados
 -- ============
 
-#check (add_lt_add_iff_right a : b + a < c + a ↔ b < c)
-#check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
-#check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
-#check (exp_lt_exp : exp a < exp b ↔ a < b)
-#check (le_refl a : a ≤ a)
+-- #check (add_lt_add_iff_right a : b + a < c + a ↔ b < c)
+-- #check (add_lt_add_of_le_of_lt : a ≤ b → c < d → a + c < b + d)
+-- #check (add_lt_add_of_lt_of_le : a < b → c ≤ d → a + c < b + d)
+-- #check (exp_lt_exp : exp a < exp b ↔ a < b)
+-- #check (le_refl a : a ≤ a)

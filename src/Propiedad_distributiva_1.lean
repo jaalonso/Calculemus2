@@ -24,6 +24,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Order.Lattice
 variable {α : Type _} [Lattice α]
 variable (a b c : α)

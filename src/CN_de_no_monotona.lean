@@ -37,6 +37,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 variable (f : ℝ → ℝ)
 

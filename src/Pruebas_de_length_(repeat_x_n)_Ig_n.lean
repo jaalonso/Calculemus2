@@ -36,7 +36,10 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.List.Basic
+module
+
+public import Mathlib.Data.List.Basic
+
 open List
 
 variable {α : Type}
@@ -174,9 +177,9 @@ lemma length_replicate_4 :
 -- Lemas usados
 -- ============
 
-variable (xs : List α)
-#check (length_cons : length (x :: xs) = length xs + 1)
-#check (length_nil : length [] = 0)
-#check (length_replicate : length (replicate n x) = n)
-#check (replicate_succ : replicate (n + 1) x = x :: replicate n x)
-#check (replicate_zero : replicate 0 x = [])
+-- variable (xs : List α)
+-- #check (length_cons : length (x :: xs) = length xs + 1)
+-- #check (length_nil : length [] = 0)
+-- #check (length_replicate : length (replicate n x) = n)
+-- #check (replicate_succ : replicate (n + 1) x = x :: replicate n x)
+-- #check (replicate_zero : replicate 0 x = [])

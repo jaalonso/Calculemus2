@@ -25,7 +25,9 @@
 -- Demostraciones en Lean 4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (a b : ℕ → ℝ)
@@ -146,15 +148,15 @@ by
 -- Lemas usados
 -- ============
 
-variable (x y z : ℝ)
-
-#check (abs_lt :|x| < y ↔ -y < x ∧ x < y)
-#check (abs_mul x y : |x * y| = |x| * |y|)
-#check (abs_of_pos : 0 < x → |x| = x)
-#check (abs_two : |(2 : ℝ)| = 2)
-#check (half_pos : 0 < x → 0 < x / 2)
-#check (mul_div_cancel₀ x : y ≠ 0 → y * (x / y) = x)
-#check (mul_lt_mul_of_pos_left : x < y → 0 < z → z * x < z * y)
-#check (mul_sub x y z : x * (y - z) = x * y - x * z)
-#check (two_ne_zero : 2 ≠ 0)
-#check (zero_lt_two : 0 < 2)
+-- variable (x y z : ℝ)
+--
+-- #check (abs_lt :|x| < y ↔ -y < x ∧ x < y)
+-- #check (abs_mul x y : |x * y| = |x| * |y|)
+-- #check (abs_of_pos : 0 < x → |x| = x)
+-- #check (abs_two : |(2 : ℝ)| = 2)
+-- #check (half_pos : 0 < x → 0 < x / 2)
+-- #check (mul_div_cancel₀ x : y ≠ 0 → y * (x / y) = x)
+-- #check (mul_lt_mul_of_pos_left : x < y → 0 < z → z * x < z * y)
+-- #check (mul_sub x y z : x * (y - z) = x * y - x * z)
+-- #check (two_ne_zero : 2 ≠ 0)
+-- #check (zero_lt_two : 0 < 2)

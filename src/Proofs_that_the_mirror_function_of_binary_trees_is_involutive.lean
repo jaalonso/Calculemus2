@@ -71,6 +71,8 @@
 -- Proofs whith Lean4
 -- ==================
 
+module
+
 import Mathlib.Tactic
 
 variable {α : Type}

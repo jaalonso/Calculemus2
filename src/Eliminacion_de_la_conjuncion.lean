@@ -21,7 +21,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 variable {x y : ℝ}
 
@@ -121,4 +123,4 @@ fun ⟨h1, h2⟩ h' ↦ h2 (le_antisymm h1 h')
 -- Lemas usados
 -- ============
 
-#check (le_antisymm : x ≤ y → y ≤ x → x = y)
+-- #check (le_antisymm : x ≤ y → y ≤ x → x = y)

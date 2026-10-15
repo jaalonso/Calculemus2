@@ -23,7 +23,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 variable {x y : ℝ}
 
 -- 1ª demostración
@@ -53,7 +55,7 @@ lt_abs.mp
 -- Lemas usados
 -- ============
 
-#check (le_or_gt x y : x ≤ y ∨ x > y)
-#check (abs_of_nonneg : 0 ≤ x → abs x = x)
-#check (abs_of_neg : x < 0 → abs x = -x)
-#check (lt_abs : x < |y| ↔ x < y ∨ x < -y)
+-- #check (le_or_gt x y : x ≤ y ∨ x > y)
+-- #check (abs_of_nonneg : 0 ≤ x → abs x = x)
+-- #check (abs_of_neg : x < 0 → abs x = -x)
+-- #check (lt_abs : x < |y| ↔ x < y ∨ x < -y)

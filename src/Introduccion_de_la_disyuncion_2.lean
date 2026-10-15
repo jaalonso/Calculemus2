@@ -34,7 +34,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {x y : ℝ}
@@ -99,8 +101,8 @@ by { right ; linarith [pow_two_nonneg x] }
 -- Lemas usados
 -- ============
 
-variable (a b c : ℝ)
-#check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
-#check (lt_neg : a < -b ↔ b < -a)
-#check (pow_two_nonneg a : 0 ≤ a ^ 2)
-#check (zero_add a : 0 + a = a)
+-- variable (a b c : ℝ)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+-- #check (lt_neg : a < -b ↔ b < -a)
+-- #check (pow_two_nonneg a : 0 ≤ a ^ 2)
+-- #check (zero_add a : 0 + a = a)

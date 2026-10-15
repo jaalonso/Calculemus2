@@ -9,7 +9,7 @@
 -- consiste en demostrar que la sucesión definida por 1, -1, 1, -1,,,,
 -- no converge. Para ello, se propone completar la siguiente
 -- demostración en Lean 4:
---    import Mathlib.Data.Real.Basic
+--    import Mathlib.Basic.Real.Basic
 --    import Mathlib.Tactic
 --
 --    variable {a : ℕ → ℝ}
@@ -48,7 +48,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {a : ℕ → ℝ}
@@ -230,29 +232,29 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c d : ℝ)
-#check (Nat.le_add_right n k : n ≤ n + k)
-#check (Nat.mul_le_mul_right k : n ≤ m → n * k ≤ m * k)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_lt : |a| < b ↔ -b < a ∧ a < b)
-#check (abs_mul a b : |a * b| = |a| * |b|)
-#check (abs_neg a : |(-a)| = |a|)
-#check (abs_one : |(1 : ℝ)| = 1)
-#check (abs_two : |(2 : ℝ)| = 2)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (left_distrib a b c : a * (b + c) = a * b + a * c)
-#check (lt_asymm  : a < b → ¬b < a)
-#check (neg_mul a b : -a * b = -(a * b))
-#check (neg_mul_neg a b : -a * -b = a * b)
-#check (neg_neg a : - -a = a)
-#check (neg_one_sq : (-1) ^ 2 = 1)
-#check (one_add_one_eq_two : 1 + 1 = 2)
-#check (one_half_pos : (0 : ℝ) < 1 / 2)
-#check (one_lt_two : 1 < 2)
-#check (one_mul a : 1 * a = a)
-#check (one_pow n : 1 ^ n = 1)
-#check (pow_mul a m n : a ^ (m * n) = (a ^ m) ^ n)
-#check (pow_succ a n : a ^ (n + 1) = a ^ n * a)
-#check (sub_add_add_cancel a b c : a - c + (b + c) = a + b)
-#check (sub_eq_add_neg a b : a - b = a + -b)
+-- variable (a b c d : ℝ)
+-- #check (Nat.le_add_right n k : n ≤ n + k)
+-- #check (Nat.mul_le_mul_right k : n ≤ m → n * k ≤ m * k)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_lt : |a| < b ↔ -b < a ∧ a < b)
+-- #check (abs_mul a b : |a * b| = |a| * |b|)
+-- #check (abs_neg a : |(-a)| = |a|)
+-- #check (abs_one : |(1 : ℝ)| = 1)
+-- #check (abs_two : |(2 : ℝ)| = 2)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (left_distrib a b c : a * (b + c) = a * b + a * c)
+-- #check (lt_asymm  : a < b → ¬b < a)
+-- #check (neg_mul a b : -a * b = -(a * b))
+-- #check (neg_mul_neg a b : -a * -b = a * b)
+-- #check (neg_neg a : - -a = a)
+-- #check (neg_one_sq : (-1) ^ 2 = 1)
+-- #check (one_add_one_eq_two : 1 + 1 = 2)
+-- #check (one_half_pos : (0 : ℝ) < 1 / 2)
+-- #check (one_lt_two : 1 < 2)
+-- #check (one_mul a : 1 * a = a)
+-- #check (one_pow n : 1 ^ n = 1)
+-- #check (pow_mul a m n : a ^ (m * n) = (a ^ m) ^ n)
+-- #check (pow_succ a n : a ^ (n + 1) = a ^ n * a)
+-- #check (sub_add_add_cancel a b c : a - c + (b + c) = a + b)
+-- #check (sub_eq_add_neg a b : a - b = a + -b)

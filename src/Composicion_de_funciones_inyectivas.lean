@@ -43,6 +43,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 open Function
@@ -182,4 +184,4 @@ Injective.comp hg hf
 -- Lemas usados
 -- ============
 
-#check (Injective.comp : Injective g → Injective f → Injective (g ∘ f))
+-- #check (Injective.comp : Injective g → Injective f → Injective (g ∘ f))

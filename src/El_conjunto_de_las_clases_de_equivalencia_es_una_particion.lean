@@ -45,6 +45,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 variable {X : Type}
@@ -146,6 +148,6 @@ by
 -- Lemas usados
 -- ============
 
-variable (A B : Set X)
-#check (Set.notMem_empty x : x ∉ ∅)
-#check (le_antisymm : A ≤ B → B ≤ A → A = B)
+-- variable (A B : Set X)
+-- #check (Set.notMem_empty x : x ∉ ∅)
+-- #check (le_antisymm : A ≤ B → B ≤ A → A = B)

@@ -33,7 +33,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (x y : ℝ)
@@ -131,15 +133,15 @@ abs_abs_sub_abs_le x y
 -- Lemas usados
 -- ============
 
-variable (f : ℝ → ℝ)
-#check (abs_abs_sub_abs_le x y : |(|x| - |y|)| ≤ |x - y|)
-#check (abs_add_le x y : |x + y| ≤ |x| + |y|)
-#check (abs_le' : |x| ≤ y ↔ x ≤ y ∧ -x ≤ y)
-#check (abs_sub x y : |x - y| ≤ |x| + |y|)
-#check (add_sub_cancel_left x y : (x + y) - x = y)
-#check (add_sub_cancel_right x y : (x + y) - y = x)
-#check (congrArg f : x = y → f x = f y)
-#check (neg_sub x y : -(x - y) = y - x)
-#check (sub_add_cancel x y: (x - y) + y = x)
-#check (sub_le_sub_right : x ≤ y → ∀ z, x - z ≤ y - z)
-#check (sub_sub_self x y : x - (x - y) = y)
+-- variable (f : ℝ → ℝ)
+-- #check (abs_abs_sub_abs_le x y : |(|x| - |y|)| ≤ |x - y|)
+-- #check (abs_add_le x y : |x + y| ≤ |x| + |y|)
+-- #check (abs_le' : |x| ≤ y ↔ x ≤ y ∧ -x ≤ y)
+-- #check (abs_sub x y : |x - y| ≤ |x| + |y|)
+-- #check (add_sub_cancel_left x y : (x + y) - x = y)
+-- #check (add_sub_cancel_right x y : (x + y) - y = x)
+-- #check (congrArg f : x = y → f x = f y)
+-- #check (neg_sub x y : -(x - y) = y - x)
+-- #check (sub_add_cancel x y: (x - y) + y = x)
+-- #check (sub_le_sub_right : x ≤ y → ∀ z, x - z ≤ y - z)
+-- #check (sub_sub_self x y : x - (x - y) = y)

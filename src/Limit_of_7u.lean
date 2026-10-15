@@ -33,6 +33,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Tactic
 
 variable {u : ℕ → ℝ}
@@ -137,9 +139,9 @@ by
 -- Used lemmas
 -- ===========
 
-variable (b c : ℝ)
-variable (n : ℕ)
-#check (abs_mul a b : |a * b| = |a| * |b|)
-#check (abs_of_nonneg : 0 ≤ a → |a| = a)
-#check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
-#check (mul_sub a b c : a * (b - c) = a * b - a * c)
+-- variable (b c : ℝ)
+-- variable (n : ℕ)
+-- #check (abs_mul a b : |a * b| = |a| * |b|)
+-- #check (abs_of_nonneg : 0 ≤ a → |a| = a)
+-- #check (mul_div_cancel₀ a : b ≠ 0 → b * (a / b) = a)
+-- #check (mul_sub a b c : a * (b - c) = a * b - a * c)

@@ -27,7 +27,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 variable {x y : ℝ}
 
@@ -137,10 +139,10 @@ le_of_forall_gt_imp_ge_of_dense h
 -- Lemas usados
 -- ============
 
-variable (z : ℝ)
-#check (exists_between : x < y → ∃ z, x < z ∧ z < y)
-#check (le_of_forall_gt_imp_ge_of_dense : (∀ z, y < z → x ≤ z) → x ≤ y)
-#check (le_of_not_gt : ¬x > y → x ≤ y)
-#check (lt_irrefl x : ¬x < x)
-#check (lt_of_lt_of_le : x < y → y ≤ z → x < z)
-#check (not_le : ¬x ≤ y ↔ y < x)
+-- variable (z : ℝ)
+-- #check (exists_between : x < y → ∃ z, x < z ∧ z < y)
+-- #check (le_of_forall_gt_imp_ge_of_dense : (∀ z, y < z → x ≤ z) → x ≤ y)
+-- #check (le_of_not_gt : ¬x > y → x ≤ y)
+-- #check (lt_irrefl x : ¬x < x)
+-- #check (lt_of_lt_of_le : x < y → y ≤ z → x < z)
+-- #check (not_le : ¬x ≤ y ↔ y < x)

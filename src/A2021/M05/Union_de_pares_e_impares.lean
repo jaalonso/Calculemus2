@@ -29,6 +29,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 import Mathlib.Algebra.Ring.Parity
 
@@ -46,7 +48,7 @@ by
   ext n
   -- n : ℕ
   -- ⊢ n ∈ {n | Even n} ∪ {n | ¬Even n} ↔ n ∈ {n | True}
-  simp only [Set.mem_setOf_eq, iff_true]
+  simp only [Set.mem_ofPred_eq, iff_true]
   -- ⊢ n ∈ {n | Even n} ∪ {n | ¬Even n}
   exact em (Even n)
 

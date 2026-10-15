@@ -26,6 +26,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 open Function
@@ -61,10 +63,10 @@ by
 -- 1ª demostración
 -- ===============
 
-example : Symmetric (. ⋍ .) :=
+example : Std.Symm (. ⋍ .) :=
 by
-  unfold Symmetric
-  -- ⊢ ∀ ⦃x y : Type ?u.17753⦄, (fun x x_1 => x ⋍ x_1) x y → (fun x x_1 => x ⋍ x_1) y x
+  constructor
+  -- ⊢ ∀ (a b : Type u_1), a ⋍ b → b ⋍ a
   intros x y hxy
   -- x y : Type ?u.17753
   -- hxy : x ⋍ y
@@ -86,8 +88,10 @@ by
 -- 2ª demostración
 -- ===============
 
-example : Symmetric (. ⋍ .) :=
+example : Std.Symm (. ⋍ .) :=
 by
+  constructor
+  -- ⊢ ∀ (a b : Type u_1), a ⋍ b → b ⋍ a
   intros x y hxy
   -- x y : Type ?u.17965
   -- hxy : x ⋍ y
@@ -103,8 +107,10 @@ by
 -- 3ª demostración
 -- ===============
 
-example : Symmetric (. ⋍ .) :=
+example : Std.Symm (. ⋍ .) :=
 by
+  constructor
+  -- ⊢ ∀ (a b : Type u_1), a ⋍ b → b ⋍ a
   rintro x y ⟨f, hf⟩
   -- x y : Type ?u.18159
   -- f : x → y

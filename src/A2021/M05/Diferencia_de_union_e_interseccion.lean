@@ -32,6 +32,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Basic
 import Mathlib.Tactic
 
@@ -52,11 +54,11 @@ by
      ↔ x ∈ (s \ t) ∨ x ∈ (t \ s) :=
          by exact mem_union x (s \ t) (t \ s)
    _ ↔ (x ∈ s ∧ x ∉ t) ∨ x ∈ (t \ s) :=
-         by simp only [mem_diff]
+         by simp only [mem_sdiff]
    _ ↔ (x ∈ s ∨ x ∈ (t \ s)) ∧ (x ∉ t ∨ x ∈ (t \ s)) :=
          by exact and_or_right
    _ ↔ (x ∈ s ∨ (x ∈ t ∧ x ∉ s)) ∧ (x ∉ t ∨ (x ∈ t ∧ x ∉ s)) :=
-         by simp only [mem_diff]
+         by simp only [mem_sdiff]
    _ ↔ ((x ∈ s ∨ x ∈ t) ∧ (x ∈ s ∨ x ∉ s)) ∧
        ((x ∉ t ∨ x ∈ t) ∧ (x ∉ t ∨ x ∉ s)) :=
          by simp_all only [or_and_left]
@@ -75,7 +77,7 @@ by
    _ ↔ (x ∈ s ∪ t) ∧ ¬(x ∈ s ∩ t) :=
          by simp only [mem_inter_iff]
    _ ↔ x ∈ (s ∪ t) \ (s ∩ t)     :=
-         by simp only [mem_diff]
+         by simp only [mem_sdiff]
 
 -- 2ª demostración
 -- ===============
@@ -231,7 +233,7 @@ by
 -- variable (x : α)
 -- variable (a b c : Prop)
 -- #check (mem_union x s t : x ∈ s ∪ t ↔ x ∈ s ∨ x ∈ t)
--- #check (mem_diff x : x ∈ s \ t ↔ x ∈ s ∧ ¬x ∈ t)
+-- #check (mem_sdiff x : x ∈ s \ t ↔ x ∈ s ∧ ¬x ∈ t)
 -- #check (and_or_right : (a ∧ b) ∨ c ↔ (a ∨ c) ∧ (b ∨ c))
 -- #check (or_and_left : a ∨ (b ∧ c) ↔ (a ∨ b) ∧ (a ∨ c))
 -- #check (em a : a ∨ ¬ a)

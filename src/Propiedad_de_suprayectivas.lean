@@ -18,7 +18,9 @@
 -- Demostración con Lean4
 -- ======================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 open Function

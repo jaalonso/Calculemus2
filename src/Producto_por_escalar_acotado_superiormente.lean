@@ -22,6 +22,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import src.Cota_superior_de_producto_por_escalar
 
 variable {f : ℝ → ℝ}
@@ -90,5 +92,5 @@ fun ⟨a, ha⟩ ↦ ⟨c * a, CotaSuperior_mul ha hc⟩
 -- Lemas usados
 -- ============
 
-variable (a : ℝ)
-#check (CotaSuperior_mul : CotaSuperior f a → c ≥ 0 → CotaSuperior (fun x ↦ c * f x) (c * a))
+-- variable (a : ℝ)
+-- #check (CotaSuperior_mul : CotaSuperior f a → c ≥ 0 → CotaSuperior (fun x ↦ c * f x) (c * a))

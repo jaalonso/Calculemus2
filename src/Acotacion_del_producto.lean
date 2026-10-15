@@ -59,7 +59,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 -- 1ª demostración
 -- ===============
@@ -146,13 +148,13 @@ by
 -- Lemas usados
 -- ============
 
-variable (a b c : ℝ)
-#check (abs_mul a b : |a * b| = |a| * |b|)
-#check (abs_nonneg a : 0 ≤ |a|)
-#check (lt_of_le_of_ne : a ≤ b → a ≠ b → a < b)
-#check (mul_le_mul_iff_left₀ : 0 < a → (b * a ≤ c * a ↔ b ≤ c))
-#check (mul_lt_mul_iff_right₀ : 0 < a → (a * b < a * c ↔ b < c))
-#check (mul_lt_mul_iff_left₀ : 0 < a → (b * a < c * a ↔ b < c))
-#check (ne_comm : a ≠ b ↔ b ≠ a)
-#check (one_mul a : 1 * a = a)
-#check (zero_mul a : 0 * a = 0)
+-- variable (a b c : ℝ)
+-- #check (abs_mul a b : |a * b| = |a| * |b|)
+-- #check (abs_nonneg a : 0 ≤ |a|)
+-- #check (lt_of_le_of_ne : a ≤ b → a ≠ b → a < b)
+-- #check (mul_le_mul_iff_left₀ : 0 < a → (b * a ≤ c * a ↔ b ≤ c))
+-- #check (mul_lt_mul_iff_right₀ : 0 < a → (a * b < a * c ↔ b < c))
+-- #check (mul_lt_mul_iff_left₀ : 0 < a → (b * a < c * a ↔ b < c))
+-- #check (ne_comm : a ≠ b ↔ b ≠ a)
+-- #check (one_mul a : 1 * a = a)
+-- #check (zero_mul a : 0 * a = 0)

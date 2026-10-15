@@ -53,7 +53,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (u v : ℕ → ℝ)
@@ -199,19 +201,19 @@ by
 -- Lemas usados
 -- ============
 
-variable (b d : ℝ)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
-#check (abs_sub_comm a b : |a - b| = |b - a|)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_le_add_right : b ≤ c → ∀ a, a + b ≤ a + c)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (half_pos : 0 < a → 0 < a / 2)
-#check (le_abs_self a : a ≤ |a|)
-#check (le_max_left a b : a ≤ max a b)
-#check (le_max_right a b : b ≤ max a b)
-#check (le_of_not_gt :  ¬b < a → a ≤ b)
-#check (lt_irrefl a : ¬a < a)
-#check (not_le : ¬a ≤ b ↔ b < a)
-#check (sub_le_sub_right : a ≤ b → ∀ c, a - c ≤ b - c)
-#check (sub_pos : 0 < a - b ↔ b < a)
+-- variable (b d : ℝ)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_lt: |a| < b ↔ -b < a ∧ a < b)
+-- #check (abs_sub_comm a b : |a - b| = |b - a|)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_le_add_right : b ≤ c → ∀ a, a + b ≤ a + c)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (half_pos : 0 < a → 0 < a / 2)
+-- #check (le_abs_self a : a ≤ |a|)
+-- #check (le_max_left a b : a ≤ max a b)
+-- #check (le_max_right a b : b ≤ max a b)
+-- #check (le_of_not_gt :  ¬b < a → a ≤ b)
+-- #check (lt_irrefl a : ¬a < a)
+-- #check (not_le : ¬a ≤ b ↔ b < a)
+-- #check (sub_le_sub_right : a ≤ b → ∀ c, a - c ≤ b - c)
+-- #check (sub_pos : 0 < a - b ↔ b < a)

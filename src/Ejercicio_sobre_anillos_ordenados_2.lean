@@ -26,6 +26,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Algebra.Order.Ring.Defs
 variable {R : Type _} [Ring R] [PartialOrder R] [IsStrictOrderedRing R]
 variable (a b c : R)
@@ -57,7 +59,7 @@ by simp
 -- Lemas usados
 -- ============
 
-#check (zero_add a : 0 + a = a)
-#check (add_le_add_left : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
-#check (sub_add_cancel a b : a - b + b = a)
-#check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)
+-- #check (zero_add a : 0 + a = a)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : R),  b + a ≤ c + a)
+-- #check (sub_add_cancel a b : a - b + b = a)
+-- #check (sub_nonneg : 0 ≤ a - b ↔ b ≤ a)

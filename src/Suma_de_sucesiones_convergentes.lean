@@ -42,7 +42,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {a b c : ℕ → ℝ}
@@ -423,13 +425,13 @@ end Solucion9
 -- Lemas usados
 -- ============
 
-variable (x y z z' : ℝ)
-#check (abs_add_le x y : |x + y| ≤ |x| + |y|)
-#check (add_halves x : x / 2 + x / 2 = x)
-#check (add_lt_add : x < y → z < z' → x + z < y + z')
-#check (half_pos : x > 0 → x / 2 > 0)
-#check (le_max_left x y : x ≤ max x y)
-#check (le_max_right x y : y ≤ max x y)
-#check (le_of_max_le_left : max x y ≤ z → x ≤ z)
-#check (le_of_max_le_right : max x y ≤ z → y ≤ z)
-#check (max_le_iff : max x y ≤ z ↔ x ≤ z ∧ y ≤ z)
+-- variable (x y z z' : ℝ)
+-- #check (abs_add_le x y : |x + y| ≤ |x| + |y|)
+-- #check (add_halves x : x / 2 + x / 2 = x)
+-- #check (add_lt_add : x < y → z < z' → x + z < y + z')
+-- #check (half_pos : x > 0 → x / 2 > 0)
+-- #check (le_max_left x y : x ≤ max x y)
+-- #check (le_max_right x y : y ≤ max x y)
+-- #check (le_of_max_le_left : max x y ≤ z → x ≤ z)
+-- #check (le_of_max_le_right : max x y ≤ z → y ≤ z)
+-- #check (max_le_iff : max x y ≤ z ↔ x ≤ z ∧ y ≤ z)

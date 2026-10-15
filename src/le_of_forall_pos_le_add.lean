@@ -30,7 +30,9 @@
 -- Proofs whith Lean4
 -- ==================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {x y : ℝ}
@@ -241,20 +243,20 @@ le_of_forall_pos_le_add
 -- Used lemmas
 -- ===========
 
-variable (a b c : ℝ)
-variable (p q : Prop)
-#check (absurd : p → ¬p → q)
-#check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
-#check (add_sub_div_two_lt: a < b → a + (b - a) / 2 < b)
-#check (div_lt_div_of_pos_right : a < b → 0 < c → a / c < b / c)
-#check (exists_between : a < b → ∃ c, a < c ∧ c < b)
-#check (lt_of_lt_of_le' : a > b → b ≥ c → a > c)
-#check (half_pos : 0 < a → 0 < a / 2)
-#check (irrefl a : ¬a < a)
-#check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
-#check (lt_irrefl a : ¬a < a)
-#check (mul_div_cancel_left₀ b : a ≠ 0 → a * b / a = b)
-#check (not_le : ¬a ≤ b ↔ b < a)
-#check (sub_pos : 0 < a - b ↔ b < a)
-#check (two_mul a : 2 * a = a + a)
-#check (zero_lt_two : 0 < 2)
+-- variable (a b c : ℝ)
+-- variable (p q : Prop)
+-- #check (absurd : p → ¬p → q)
+-- #check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
+-- #check (add_sub_div_two_lt: a < b → a + (b - a) / 2 < b)
+-- #check (div_lt_div_of_pos_right : a < b → 0 < c → a / c < b / c)
+-- #check (exists_between : a < b → ∃ c, a < c ∧ c < b)
+-- #check (lt_of_lt_of_le' : a > b → b ≥ c → a > c)
+-- #check (half_pos : 0 < a → 0 < a / 2)
+-- #check (irrefl a : ¬a < a)
+-- #check (le_of_forall_pos_le_add : (∀ ε > 0, y ≤ x + ε) → y ≤ x)
+-- #check (lt_irrefl a : ¬a < a)
+-- #check (mul_div_cancel_left₀ b : a ≠ 0 → a * b / a = b)
+-- #check (not_le : ¬a ≤ b ↔ b < a)
+-- #check (sub_pos : 0 < a - b ↔ b < a)
+-- #check (two_mul a : 2 * a = a + a)
+-- #check (zero_lt_two : 0 < 2)

@@ -25,6 +25,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Basic
 import Mathlib.Tactic
 
@@ -153,9 +155,9 @@ by
 -- ===============
 
 example : (s \ t) \ u ⊆ s \ (t ∪ u) :=
-by rw [diff_diff]
+by rw [sdiff_sdiff]
 
 -- Lema usado
 -- ==========
 
--- #check (diff_diff : (s \ t) \ u = s \ (t ∪ u))
+-- #check (sdiff_sdiff : (s \ t) \ u = s \ (t ∪ u))

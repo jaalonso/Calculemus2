@@ -35,6 +35,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Algebra.Order.Ring.Defs
 variable {R : Type _} [Ring R] [PartialOrder R] [IsStrictOrderedRing R]
 variable (a b c : R)

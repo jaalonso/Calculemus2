@@ -33,7 +33,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 variable (a b : ℝ)
 
@@ -72,8 +74,8 @@ abs_sub_abs_le_abs_sub a b
 -- Lemas usados
 -- ============
 
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
-#check (add_sub_cancel_right a b : a + b - b = a)
-#check (sub_add_cancel a b : a - b + b = a)
-#check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (abs_sub_abs_le_abs_sub a b : |a| - |b| ≤ |a - b|)
+-- #check (add_sub_cancel_right a b : a + b - b = a)
+-- #check (sub_add_cancel a b : a - b + b = a)
+-- #check (sub_le_sub_right : a ≤ b → ∀ (c : ℝ), a - c ≤ b - c)

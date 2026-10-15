@@ -53,7 +53,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 open Nat
 
 variable {u v : ℕ → ℝ}
@@ -268,8 +270,8 @@ by
 -- Lemas usados
 -- ============
 
-variable (m n x y z : ℕ)
-#check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
-#check (Nat.zero_le n : 0 ≤ n)
-#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
-#check (lt_add_one n : n < n + 1)
+-- variable (m n x y z : ℕ)
+-- #check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
+-- #check (Nat.zero_le n : 0 ≤ n)
+-- #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+-- #check (lt_add_one n : n < n + 1)

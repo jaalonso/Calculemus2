@@ -30,7 +30,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 def LimSuc (a : ℕ → ℝ) (L : ℝ) : Prop :=
@@ -160,5 +162,5 @@ by
 -- Lemas usados
 -- ============
 
-variable (x y : ℝ)
-#check (abs_abs_sub_abs_le x y : |(|x|) - (|y|)| ≤ |x - y|)
+-- variable (x y : ℝ)
+-- #check (abs_abs_sub_abs_le x y : |(|x|) - (|y|)| ≤ |x - y|)

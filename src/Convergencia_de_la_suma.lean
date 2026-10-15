@@ -49,7 +49,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {s t : ℕ → ℝ} {a b c : ℝ}
@@ -219,13 +221,13 @@ by
 -- Lemas usados
 -- ============
 
-variable (d : ℝ)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_lt_add : a < b → c < d → a + c < b + d)
-#check (half_pos : a > 0 → a / 2 > 0)
-#check (le_max_left a b : a ≤ max a b)
-#check (le_max_right a b : b ≤ max a b)
-#check (le_of_max_le_left : max a b ≤ c → a ≤ c)
-#check (le_of_max_le_right : max a b ≤ c → b ≤ c)
-#check (max_le_iff : max a b ≤ c ↔ a ≤ c ∧ b ≤ c)
+-- variable (d : ℝ)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_lt_add : a < b → c < d → a + c < b + d)
+-- #check (half_pos : a > 0 → a / 2 > 0)
+-- #check (le_max_left a b : a ≤ max a b)
+-- #check (le_max_right a b : b ≤ max a b)
+-- #check (le_of_max_le_left : max a b ≤ c → a ≤ c)
+-- #check (le_of_max_le_right : max a b ≤ c → b ≤ c)
+-- #check (max_le_iff : max a b ≤ c ↔ a ≤ c ∧ b ≤ c)

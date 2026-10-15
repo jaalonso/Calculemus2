@@ -49,7 +49,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {a b c : ℝ}
@@ -152,12 +154,12 @@ example : min a b + c = min (a + c) (b + c) :=
 -- Lemas usados
 -- ============
 
-#check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
-#check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
-#check (le_antisymm : a ≤ b → b ≤ a → a = b)
-#check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
-#check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
-#check (min_eq_left : a ≤ b → min a b = a)
-#check (min_eq_right : b ≤ a → min a b = b)
-#check (min_le_left a b : min a b ≤ a)
-#check (min_le_right a b : min a b ≤ b)
+-- #check (add_le_add_left : b ≤ c → ∀ (a : ℝ),  b + a ≤ c + a)
+-- #check (add_neg_le_iff_le_add : a - b ≤ c ↔ a ≤ c + b)
+-- #check (le_antisymm : a ≤ b → b ≤ a → a = b)
+-- #check (le_min : c ≤ a → c ≤ b → c ≤ min a b)
+-- #check (min_add_add_right a b c : min (a + c) (b + c) = min a b + c)
+-- #check (min_eq_left : a ≤ b → min a b = a)
+-- #check (min_eq_right : b ≤ a → min a b = b)
+-- #check (min_le_left a b : min a b ≤ a)
+-- #check (min_le_right a b : min a b ≤ b)

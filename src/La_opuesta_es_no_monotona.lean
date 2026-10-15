@@ -21,7 +21,9 @@
 -- Demostración con Lean4
 -- ======================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 import src.CNS_de_no_monotona

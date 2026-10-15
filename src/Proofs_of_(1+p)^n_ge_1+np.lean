@@ -37,7 +37,9 @@
 -- Proof with Lean4
 -- ================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 open Nat
@@ -109,15 +111,15 @@ by
 -- Used lemmas
 -- ===========
 
-variable (a b c : ℝ)
-#check (add_zero a : a + 0 = a)
-#check (cast_nonneg n : 0 ≤ ↑n)
-#check (le_add_of_nonneg_right : 0 ≤ b → a ≤ a + b)
-#check (le_refl a : a ≤ a)
-#check (mul_le_mul_iff_of_pos_right : 0 < a → (b * a ≤ c * a ↔ b ≤ c))
-#check (mul_nonneg : 0 ≤ a → 0 ≤ b → 0 ≤ a * b)
-#check (mul_self_nonneg a : 0 ≤ a * a)
-#check (neg_lt_iff_pos_add' : -a < b ↔ 0 < a + b)
-#check (pow_succ a n : a ^ (n + 1) = a ^ n * a)
-#check (pow_zero a : a ^ 0 = 1)
-#check (zero_mul a : 0 * a = 0)
+-- variable (a b c : ℝ)
+-- #check (add_zero a : a + 0 = a)
+-- #check (cast_nonneg n : 0 ≤ ↑n)
+-- #check (le_add_of_nonneg_right : 0 ≤ b → a ≤ a + b)
+-- #check (le_refl a : a ≤ a)
+-- #check (mul_le_mul_iff_of_pos_right : 0 < a → (b * a ≤ c * a ↔ b ≤ c))
+-- #check (mul_nonneg : 0 ≤ a → 0 ≤ b → 0 ≤ a * b)
+-- #check (mul_self_nonneg a : 0 ≤ a * a)
+-- #check (neg_lt_iff_pos_add' : -a < b ↔ 0 < a + b)
+-- #check (pow_succ a n : a ^ (n + 1) = a ^ n * a)
+-- #check (pow_zero a : a ^ 0 = 1)
+-- #check (zero_mul a : 0 * a = 0)

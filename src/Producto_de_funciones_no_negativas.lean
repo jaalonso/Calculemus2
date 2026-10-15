@@ -28,7 +28,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 
 -- (CotaInferior f a) expresa que a es una cota inferior de f.
 def CotaInferior (f : ℝ → ℝ) (a : ℝ) : Prop :=

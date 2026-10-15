@@ -18,6 +18,8 @@
 -- Demostración con Lean4
 -- ======================
 
+module
+
 import Mathlib.Data.Nat.Prime.Defs
 import Mathlib.Tactic
 

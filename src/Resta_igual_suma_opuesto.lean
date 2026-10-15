@@ -17,6 +17,8 @@
 -- Demostración en Lean4
 -- =====================
 
+module
+
 import Mathlib.Algebra.Ring.Defs
 
 variable {R : Type _} [Ring R]

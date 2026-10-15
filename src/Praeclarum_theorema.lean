@@ -10,6 +10,8 @@
 --    (p → q) ∧ (r → s) → ((p ∧ r) → (q ∧ s))
 -- ---------------------------------------------------------------------
 
+module
+
 import Mathlib.Tactic
 
 variable (p q r s : Prop)

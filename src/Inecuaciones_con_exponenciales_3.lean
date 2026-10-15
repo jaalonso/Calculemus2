@@ -40,6 +40,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 open Real
 variable (a c d f : ℝ)
@@ -69,6 +71,6 @@ by
 -- Lemas usados
 -- ============
 
-variable (b : ℝ)
-#check (add_le_add_right : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
-#check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)
+-- variable (b : ℝ)
+-- #check (add_le_add_right : b ≤ c → ∀ (a : ℝ), a + b ≤ a + c)
+-- #check (exp_le_exp : exp a ≤ exp b ↔ a ≤ b)

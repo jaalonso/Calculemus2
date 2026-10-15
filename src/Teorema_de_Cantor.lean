@@ -37,6 +37,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Data.Set.Basic
 
 open Function
@@ -60,8 +62,6 @@ by
   -- hj : f j = S
   by_cases h: j ∈ S
   . -- h : j ∈ S
-    simp at h
-    -- h : ¬j ∈ f j
     apply h
     -- ⊢ j ∈ f j
     rw [hj]
@@ -111,7 +111,7 @@ by
   -- hj : f j = S
   have h : (j ∈ S) = (j ∉ S) :=
     calc  (j ∈ S)
-       = (j ∉ f j) := Set.mem_setOf_eq
+       = (j ∉ f j) := Set.mem_ofPred_eq
      _ = (j ∉ S)   := congrArg (j ∉ .) hj
   exact iff_not_self (iff_of_eq h)
 
@@ -124,10 +124,12 @@ cantor_surjective
 -- Lemas usados
 -- ============
 
--- variable (x : α)
--- variable (p : α → Prop)
--- variable (a b : Prop)
--- #check (Set.mem_setOf_eq : (x ∈ {y : α | p y}) = p x)
--- #check (iff_of_eq : a = b → (a ↔ b))
--- #check (iff_not_self : ¬(a ↔ ¬a))
--- #check (cantor_surjective : ∀ f : α → Set α, ¬ Surjective f)
+/-
+variable (x : α)
+variable (p : α → Prop)
+variable (a b : Prop)
+#check (Set.mem_ofPred_eq : (x ∈ {y : α | p y}) = p x)
+#check (iff_of_eq : a = b → (a ↔ b))
+#check (iff_not_self : ¬(a ↔ ¬a))
+#check (cantor_surjective : ∀ f : α → Set α, ¬ Surjective f)
+-/

@@ -29,6 +29,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 
 variable {X : Type}
@@ -40,8 +42,10 @@ def relacion (P : Set (Set X)) (x y : X) :=
 -- 1ª demostración
 -- ===============
 
-example : Symmetric (relacion P) :=
+example : Std.Symm (relacion P) :=
 by
+  constructor
+  -- ⊢ ∀ (a b : X), relacion P a b → relacion P b a
   intros x y hxy
   -- x y : X
   -- hxy : relacion P x y
@@ -55,10 +59,10 @@ by
 -- 2ª demostración
 -- ===============
 
-example : Symmetric (relacion P) :=
+example : Std.Symm (relacion P) :=
 by
-  unfold Symmetric
-  -- ⊢ ∀ ⦃x y : X⦄, relacion P x y → relacion P y x
+  constructor
+  -- ⊢ ∀ (a b : X), relacion P a b → relacion P b a
   intros x y hxy
   -- x y : X
   -- hxy : relacion P x y
@@ -76,8 +80,10 @@ by
 -- 3ª demostración
 -- ===============
 
-example : Symmetric (relacion P) :=
+example : Std.Symm (relacion P) :=
 by
+  constructor
+  -- ⊢ ∀ (a b : X), relacion P a b → relacion P b a
   intros x y hxy
   -- x y : X
   -- hxy : relacion P x y
@@ -92,8 +98,10 @@ by
 -- 4ª demostración
 -- ===============
 
-example : Symmetric (relacion P) :=
+example : Std.Symm (relacion P) :=
 by
+  constructor
+  -- ⊢ ∀ (a b : X), relacion P a b → relacion P b a
   intros x y hxy
   -- x y : X
   -- hxy : relacion P x y

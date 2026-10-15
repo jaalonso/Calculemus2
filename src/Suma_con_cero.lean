@@ -16,6 +16,8 @@
 --    a + 0 = 0 + a    [por la conmutativa de la suma]
 --          = a        [por el axioma del cero por la izquierda]
 
+module
+
 import Mathlib.Algebra.Ring.Defs
 
 variable {R : Type _} [Ring R]

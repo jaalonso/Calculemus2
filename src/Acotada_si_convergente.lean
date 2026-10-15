@@ -68,7 +68,9 @@
 -- Demostraciones en Lean 4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 open Finset
@@ -431,6 +433,7 @@ by
 -- Lemas usados
 -- ============
 
+/-
 variable (n m : ℕ)
 variable (x y z : ℝ)
 variable (f : ℝ → ℝ)
@@ -446,3 +449,4 @@ variable (s : Finset ℕ)
 #check (le_of_lt : x < y → x ≤ y)
 #check (mem_range : m ∈ range n ↔ m < n)
 #check (single_le_sum : (∀ i ∈ s, 0 ≤ a i) → ∀ i : ℕ, i ∈ s → a i ≤ ∑ x ∈ s, a x)
+-/

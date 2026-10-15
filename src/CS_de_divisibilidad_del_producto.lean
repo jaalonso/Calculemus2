@@ -30,6 +30,8 @@
 -- Demostraciones con Lean4
 -- ========================
 
+module
+
 import Mathlib.Tactic
 variable {m n k : ℕ}
 

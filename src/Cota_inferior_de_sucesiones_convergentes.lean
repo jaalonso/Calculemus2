@@ -28,7 +28,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable {a : ℕ → ℝ}
@@ -166,13 +168,13 @@ let ⟨N, hN⟩ := ha 1 (by grind)
 -- Lemas usados
 -- ============
 
-variable (x y z : ℝ)
-#check (abs_lt : |x| < y ↔ -y < x ∧ x < y)
-#check (add_lt_add_iff_right x : y + x < z + x ↔ y < z)
-#check (ge_iff_le : x ≥ y ↔ y ≤ x)
-#check (le_of_lt : x < y → x ≤ y)
-#check (neg_le_iff_add_nonneg : -x ≤ y ↔ 0 ≤ y + x)
-#check (neg_lt_iff_pos_add : -x < y ↔ 0 < y + x)
-#check (one_pos : 0 < 1)
-#check (sub_add x y z : x - y + z = x - (y - z))
-#check (sub_nonneg : 0 ≤ x - y ↔ y ≤ x)
+-- variable (x y z : ℝ)
+-- #check (abs_lt : |x| < y ↔ -y < x ∧ x < y)
+-- #check (add_lt_add_iff_right x : y + x < z + x ↔ y < z)
+-- #check (ge_iff_le : x ≥ y ↔ y ≤ x)
+-- #check (le_of_lt : x < y → x ≤ y)
+-- #check (neg_le_iff_add_nonneg : -x ≤ y ↔ 0 ≤ y + x)
+-- #check (neg_lt_iff_pos_add : -x < y ↔ 0 < y + x)
+-- #check (one_pos : 0 < 1)
+-- #check (sub_add x y z : x - y + z = x - (y - z))
+-- #check (sub_nonneg : 0 ≤ x - y ↔ y ≤ x)

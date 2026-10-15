@@ -17,7 +17,7 @@
 --
 -- Para ello, completar la siguiente teoría de Lean 4:
 --
--- import Mathlib.Data.Real.Basic
+-- import Mathlib.Basic.Real.Basic
 -- import Mathlib.Tactic
 --
 -- variable (a : ℕ → ℝ)
@@ -48,7 +48,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (a : ℕ → ℝ)

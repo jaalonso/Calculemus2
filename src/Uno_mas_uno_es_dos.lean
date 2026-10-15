@@ -17,6 +17,8 @@
 -- Demostración con Lean4
 -- ======================
 
+module
+
 import Mathlib.Algebra.Ring.Defs
 import Mathlib.Tactic
 variable {R : Type _} [Ring R]

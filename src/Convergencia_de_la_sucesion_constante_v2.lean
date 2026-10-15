@@ -23,7 +23,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 variable (a : ℕ → ℝ)
@@ -142,4 +144,4 @@ fun ε hε ↦ by aesop
 -- Lemas usados
 -- ============
 
-#check (sub_self a : a - a = 0)
+-- #check (sub_self a : a - a = 0)

@@ -28,6 +28,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Data.Finset.Card
 
 open Finset
@@ -110,11 +112,11 @@ inter_nonempty_of_card_lt_card_add_card hts hus hstu
 -- Used lemmas
 -- ===========
 
-variable (a : ℕ)
-#check (Nat.add_zero a : a + 0 = a)
-#check (card_eq_zero : card s = 0 ↔ s = ∅)
-#check (card_le_card : s ⊆ t → card s ≤ card t)
-#check (card_union_add_card_inter s t : card (s ∪ t) + card (s ∩ t) =card s + card t)
-#check (inter_nonempty_of_card_lt_card_add_card : t ⊆ s → u ⊆ s → card s < card t + card u → Finset.Nonempty (t ∩ u))
-#check (not_nonempty_iff_eq_empty : ¬Finset.Nonempty s ↔ s = ∅)
-#check (union_subset : s ⊆ u → t ⊆ u → s ∪ t ⊆ u)
+-- variable (a : ℕ)
+-- #check (Nat.add_zero a : a + 0 = a)
+-- #check (card_eq_zero : card s = 0 ↔ s = ∅)
+-- #check (card_le_card : s ⊆ t → card s ≤ card t)
+-- #check (card_union_add_card_inter s t : card (s ∪ t) + card (s ∩ t) =card s + card t)
+-- #check (inter_nonempty_of_card_lt_card_add_card : t ⊆ s → u ⊆ s → card s < card t + card u → Finset.Nonempty (t ∩ u))
+-- #check (not_nonempty_iff_eq_empty : ¬Finset.Nonempty s ↔ s = ∅)
+-- #check (union_subset : s ⊆ u → t ⊆ u → s ∪ t ⊆ u)

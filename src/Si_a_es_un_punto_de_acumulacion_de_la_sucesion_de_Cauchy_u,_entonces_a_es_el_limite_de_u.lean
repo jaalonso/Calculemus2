@@ -60,7 +60,9 @@
 -- Demostraciones con Lean4
 -- ========================
 
-import Mathlib.Data.Real.Basic
+module
+
+import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic
 
 open Nat
@@ -183,16 +185,16 @@ by
 -- Lemas usados
 -- ============
 
-variable (m n x y z : ℕ)
-variable (b c : ℝ)
-#check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
-#check (Nat.zero_le n : 0 ≤ n)
-#check (abs_add_le a b : |a + b| ≤ |a| + |b|)
-#check (add_halves a : a / 2 + a / 2 = a)
-#check (add_lt_add_right : b < c → ∀ (a : ℝ), a + b < a + c)
-#check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
-#check (half_pos : 0 < a → 0 < a / 2)
-#check (le_max_left m n : m ≤ max m n)
-#check (le_max_right m n : n ≤ max m n)
-#check (le_trans : x ≤ y → y ≤ z → x ≤ z)
-#check (lt_add_one n : n < n + 1)
+-- variable (m n x y z : ℕ)
+-- variable (b c : ℝ)
+-- #check (Nat.succ_le_of_lt : n < m → succ n ≤ m)
+-- #check (Nat.zero_le n : 0 ≤ n)
+-- #check (abs_add_le a b : |a + b| ≤ |a| + |b|)
+-- #check (add_halves a : a / 2 + a / 2 = a)
+-- #check (add_lt_add_right : b < c → ∀ (a : ℝ), a + b < a + c)
+-- #check (add_lt_add_left : b < c → ∀ (a : ℝ), b + a < c + a)
+-- #check (half_pos : 0 < a → 0 < a / 2)
+-- #check (le_max_left m n : m ≤ max m n)
+-- #check (le_max_right m n : n ≤ max m n)
+-- #check (le_trans : x ≤ y → y ≤ z → x ≤ z)
+-- #check (lt_add_one n : n < n + 1)

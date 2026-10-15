@@ -52,6 +52,8 @@
 -- Proofs with Lean4
 -- =================
 
+module
+
 import Mathlib.Tactic
 
 open List
