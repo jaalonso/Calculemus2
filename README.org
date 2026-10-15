@@ -434,7 +434,10 @@ ejercicios propuestos en el blog [[https://jaalonso.github.io/calculemus][Calcul
 + 21 [[https://jaalonso.github.io/calculemus/posts/2026/09/21-limite_menor_que_cota/][Reto 20: Si aₙ → L y M es una cota superior de aₙ, entonces L ≤ M]]. (En [[./src/Limite_menor_que_cota.lean][Lean 4]]).
 + 28 [[https://jaalonso.github.io/calculemus/posts/2026/09/28-subsucesiones_convergentes/][Reto 21: Las subsucesiones tienen el mismo límite que la sucesión]]. (En [[./src/Subsucesiones_convergentes.lean][Lean 4]]). (Pdte. solución).
 
+*** Octubre 2026
++ 05 Reto 22: Subsucesiones con límites distintos implican no convergencia. (En [[./src/CS_no_convergencia.lean][Lean 4]]).
+
 * Ejercicios ordenados por tema
 
-En [[./Ejercicios_por_temas.org][este enlace]] se encuentran los ejercicios anteriores clasificados por
-tema.
+En [[./Ejercicios_por_temas.org][este enlace]] se encuentran algunos de los ejercicios anteriores
+clasificados por tema.
