@@ -508,6 +508,7 @@ ejercicios propuestos en el blog [Calculemus](https://jaalonso.github.io/calcule
 ### Octubre 2026
 
 -   05 Reto 22: Subsucesiones con límites distintos implican no convergencia. (En [Lean 4](./src/CS_no_convergencia.lean)).
+-   12 Reto<sub>23</sub>: La sucesión constante aₙ = L converge a L. (En [Lean 4](./src/Limite_suc_constante.lean)).
 
 
 # Ejercicios ordenados por tema
